@@ -22,7 +22,7 @@ Kokeillaan _querySelector_:ia selaimessa. Avaa seuraava HTML-sivu selaimeen:
     <h1>Harjoitus 1</h1>
     <button>Heippanappi</button>
     <p class="message">Muuta tämä teksti</p>
-    <a href="http:is.fi">Iltasanomat</a>
+    <a id='info' href="http:is.fi">Iltasanomat</a>
 </body>
 </html>
 ```
