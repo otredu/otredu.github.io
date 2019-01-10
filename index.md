@@ -1,5 +1,5 @@
 
-## Welcome to GitHub Pages
+## Welcome to otredu
 
 You can use the [editor on GitHub](https://github.com/otredu/otredu.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
