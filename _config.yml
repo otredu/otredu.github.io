@@ -1,1 +1,6 @@
 theme: jekyll-theme-time-machine
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - index.md
