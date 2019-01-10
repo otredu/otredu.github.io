@@ -2,11 +2,11 @@
 
 Materiaalia, joka täydentyy kurssin edetessä...
 
-### Oppitunti 1
+Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja siinä olevat harjoitukset.
 
-Materiaali:
-- Esimerkit
-- Harjoitukset
+### JavaScript alkeita
+
+- [Osa 1](./alkeita.html)
 
 ```js
 const opiskeleJavaScript = (editori, aikaa, motivaatiota) => {
