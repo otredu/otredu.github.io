@@ -2,7 +2,7 @@
 
 Materiaalia, joka täydentyy kurssin edetessä...
 
-Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja siinä olevat harjoitukset.
+Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja teet siinä olevat harjoitukset.
 
 ### JavaScript alkeita
 
