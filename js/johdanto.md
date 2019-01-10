@@ -11,7 +11,7 @@ Tällä kurssilla opitaan alkeet JavaScript-ohjelmoinnista sekä siitä miten Ja
 
 Tällä kurssilla käsitellään kohtaa 1 ja mahdollisesti tutustutaan hieman kohdassa 2 mainittuun SPA-ohjelmointiin (jos ehditään).
 
-JavaScript on Ohjelmointiesimerkit tällä kurssilla käyttävät JavaScript:in versiota ES6 (ECMAScript 6 vuodelta 2015). JavaScript:in standardia päivitetään nykyisin joka vuosi.
+Ohjelmointiesimerkit tällä kurssilla käyttävät JavaScript:in versiota ES6 (ECMAScript 6 vuodelta 2015). JavaScript:in standardia päivitetään nykyisin joka vuosi ([ECMAScript2019]()).
 
 ### Kurssin työvälineet
 
@@ -26,6 +26,7 @@ Jotta esimerkit toimivat käytä uusinta Chrome-selainta, joka tukee hyvin ES6:s
 
 ### Materiaalia
 
-- JavaScript (manuaali): [MDM webdocs JavaScript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
-- DOM-rajapinta (manuaali): [MDM webdocs DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+- JavaScript (ohjeita): [MDM JS Guide](https://developer.mozilla.org/bm/docs/Web/JavaScript)
+- JavaScript (manuaali): [MDM JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+- DOM-rajapinta (manuaali): [MDM DOM interface](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - JavaScript-kirja: [Eloquent JavaScript](https://eloquentjavascript.net/)
