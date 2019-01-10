@@ -15,17 +15,17 @@ JavaScript on Ohjelmointiesimerkit tällä kurssilla käyttävät JavaScript:in 
 
 ### Kurssin työvälineet
 
-# Visual Studio Code
+#### Visual Studio Code
 Käytämme editorina ilmaista Visual Studio Code:ea (voit asentaa sen kotikoneelle [täältä](https://code.visualstudio.com/). 
 
-# Chrome-selain
+#### Chrome-selain
 Jotta esimerkit toimivat käytä uusinta Chrome-selainta, joka tukee hyvin ES6:sta (katso miten eri selaimet tukevat ES6:sta [täältä](https://kangax.github.io/compat-table/es6/)).
 
-# Codesandbox
+#### Codesandbox
 [Codesandbox.io](https://codesandbox.io/) on verkossa toimiva ohjelmointiympäristö, jonka avulla on helppo kokeilla selainohjelmointia. Toimii myös ilman tilin luomista. Käytämme tätä mahdollisesti kurssin loppupuolella.
 
 ### Materiaalia
 
-- JavaScript (manuaali): [MDM webdocs: JavaScript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
-- DOM-rajapinta (manuaali): [MDM webdocs: DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
+- JavaScript (manuaali): [MDM webdocs JavaScript](https://developer.mozilla.org/bm/docs/Web/JavaScript)
+- DOM-rajapinta (manuaali): [MDM webdocs DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - JavaScript-kirja: [Eloquent JavaScript](https://eloquentjavascript.net/)
