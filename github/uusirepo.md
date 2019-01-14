@@ -43,6 +43,7 @@ Jos *local*- ja *remote*-repo ovat olemassa, tiedostoja päivitetään Github:ii
         git commit -m "Second update"
         git push  
     ```
+
 ## Linkkejä
 
 [Start a new git repository](https://kbroman.org/github_tutorial/pages/init.html)
