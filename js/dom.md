@@ -10,7 +10,9 @@ Tässä esimerkkikuva Wikipediasta:
 
 Kuvassa olevia elementtejä kutsutaa _node_:ksi. _Parent_-nodella on _child_-nodeja (_decendant_-node), ja jos lapsia on useita ne ovat toisilleen _siblings_-node:ja. _Text_-node on oma tyyppinsä ja se sisältää tekstiä. Puuta voi selata järjestyksessä _root_-nodesta eteenpäin, kyselemällä aina seuraavaa jälkeläistä, sisarusta jne. Toinen, suorempi tapa, on etsiä elementtejä muokattavaksi niiden _CSS-selector_:eiden avulla. _querySelector_ etsii elementtejä tyypin (esim. "div", "h1"), luokan (esim. ".error") tai id:n (esim. "#info") avulla.  
 
-Kokeillaan _querySelector_:ia selaimessa. Avaa seuraava HTML-sivu selaimeen: 
+## Demo 1
+Kokeillaan _querySelector_:ia selaimessa. Avaa seuraava HTML-sivu selaimeen:
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -26,29 +28,40 @@ Kokeillaan _querySelector_:ia selaimessa. Avaa seuraava HTML-sivu selaimeen:
 </body>
 </html>
 ```
+
 Avaa selaimen kehittäjänäkymä painamalla **Ctrl+Shift+j** (valitse "Console"-välilehti ellei ole jo valittuna). 
 
-Kirjoita prompt:iin (> merkin jälkeen ja paina <enter>): 
+Kirjoita prompt:iin (> merkin jälkeen ja paina <enter>):
+
 ```js
 let myButton = document.querySelector("button");
 ```
+
 Nyt myButton:in pitäisi sisältää ko. elementti. Testaa se kirjoita prompt:iin:
+
 ```js
 myButton
 ```
-Tämä on ensimmäinen _button_:-elementti, joka dokumentista löytyi.
 
-Kirjoita prompt:iin ja testaa: 
+Tämä on ensimmäinen _button_:-elementti, joka dokumentista löytyi.
+![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_button.png)
+
+Kirjoita prompt:iin ja testaa:
+
 ```js
 let myMessage = document.querySelector("p.message");
 ```
+
 Tämä on ensimmäinen _.message_:luokkaan kuuluvan <p>-elementti, joka dokumentista löytyi.
 
-Kirjoita prompt:iin ja testaa: 
+![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_p.message.png)
+
+Kirjoita prompt:iin ja testaa:
+
 ```js
 let myLink = document.getElementById("info");
 ```
+
 Tämä on dokumentissa oleva elementti, jonka id:n arvo on _info_.
 
-
- 
+## Demo 2

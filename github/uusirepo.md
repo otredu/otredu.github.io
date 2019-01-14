@@ -1,0 +1,50 @@
+### Github-ohjeita
+
+## Uusi github repo
+
+1. Avaa [Git Bash](https://gitforwindows.org/). Tee projektillesi uusi kansio (mkdir), siirry sinne (cd) ja alusta git-versionhallinta ajamalla komento:
+
+    ```bash
+    git init
+    ```
+2. Luo uusi tiedosto *.gitignore*, johon määrittelet mitä tiedostoja ei siirretä Github:iin. Esim. node.js projektissa sen sisältö voisi olla [tällainen](https://github.com/otredu/jstesting/blob/master/.gitignore).
+3. Tee uusi tiedosto *read.me*, joka kertoo muille mitä repo:ssasi on. Tiedoston formaatti on markdown:ia:
+
+    ```md
+    # Projektin nimi
+    Projektin kuvaus
+    ```
+4. Lisää hakemistossa olevat tiedostot versionhallintaan ajamalla:
+
+    ```bash
+    git add ./*
+    git commit -m "First update"  
+    ```
+    *First update* on kuvaus päivityksen sisällöstä.
+5. Mene selaimen kautta Github:iin, ja luo itsellesi uusi repo, anna sille kuvaava nimi. Kopioi repon osoite:
+
+![Repon osoitteen kopiointi](img/new_repo_1.png)
+6. Liitä paikallinen repo (*origin*) Github:iin tekemääsi repoon *remote* ajamalla (käytä hiiren oikeaa painiketta):
+
+    ```bash
+        git remote add origin <liitä tähän kopioimasi github-repon osoite>
+    ```
+7. Siirrä tiedostot Githubiin komennolla:
+
+    ```bash
+        git push -u origin master
+    ```
+## Muutosten päivittäminen Github:iin
+
+Jos *local*- ja *remote*-repo ovat olemassa, tiedostoja päivitetään Github:iin ajamalla:
+
+    ```bash
+        git add ./*
+        git commit -m "Second update"
+        git push  
+    ```
+## Linkkejä
+
+[Start a new git repository](https://kbroman.org/github_tutorial/pages/init.html)
+[Github Help: Ignoring files](https://help.github.com/articles/ignoring-files/)
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
