@@ -39,11 +39,9 @@
 
 Jos *local*- ja *remote*-repo ovat olemassa, tiedostoja päivitetään Github:iin ajamalla:
 
-    ```bash
-        git add ./*
-        git commit -m "Second update"
-        git push  
-    ```
+    git add ./*
+    git commit -m "Second update"
+    git push
 
 ## Linkkejä
 
