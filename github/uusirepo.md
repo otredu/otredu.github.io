@@ -2,7 +2,7 @@
 
 ## Uusi github repo
 
-1. Avaa [Git Bash](https://gitforwindows.org/). Tee projektillesi uusi kansio (mkdir), siirry sinne (cd) ja alusta git-versionhallinta ajamalla komento:
+1. Avaa [Git Bash](https://gitforwindows.org/). Tee projektillesi uusi kansio (mkdir), siirry sinne (cd) ja alusta git-versionhallinta ajamalla komento (tekee uuden paikallisen repon, *local repository*):
 
     ```bash
     git init
@@ -14,17 +14,17 @@
     # Projektin nimi
     Projektin kuvaus
     ```
-4. Lisää hakemistossa olevat tiedostot versionhallintaan ajamalla:
+4. Lisää hakemistossa olevat tiedostot paikallisen repon versionhallintaan ajamalla:
 
     ```bash
     git add ./*
     git commit -m "First update"  
     ```
     *First update* on kuvaus päivityksen sisällöstä.
-5. Mene selaimen kautta Github:iin, ja luo itsellesi uusi repo, anna sille kuvaava nimi. Kopioi repon osoite:
+5. Mene selaimen kautta Github:iin, ja luo itsellesi uusi GitHub-repo (*remote repository*), ja anna sille kuvaava nimi. Kopioi repon osoite:
 
-![Repon osoitteen kopiointi](img/new_repo_1.png)
-6. Liitä paikallinen repo (*origin*) Github:iin tekemääsi repoon *remote* ajamalla (käytä hiiren oikeaa painiketta):
+    ![Repon osoitteen kopiointi](img/new_repo_1.png)
+6. Liitä paikallinen *local* repo Github:iin tekemääsi *remote* repoon ajamalla (käytä hiiren oikeaa painiketta repon osoiteen liittämiseen):
 
     ```bash
         git remote add origin <liitä tähän kopioimasi github-repon osoite>

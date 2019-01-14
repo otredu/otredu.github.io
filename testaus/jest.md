@@ -9,14 +9,15 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
     ```bash
     npm init
     ```
-    Vastaa kysymyksiin *yes* tai jätä ne tyhjäksi. Kohtaan *test command* kirjoita: **jest"**.
-2. Asenna NYT JEST ajamalla:
+    Vastaa kysymyksiin *yes* tai jätä ne tyhjäksi. Kohtaan *test command* kirjoita: **jest**.
+2. Asenna nyt JEST ajamalla:
 
     ```bash
     npm install --save-dev jest ​
     ```
-    *--save-dev* tallentaa jest:in tiedot package.json tiedostoon kohtaan, jossa listataan kehitysvaiheen riippuvuudet (*dependency*:t).
-    ### Ensimmäinen testi
+    --save-dev tallentaa jest:in tiedot package.json tiedostoon kohtaan, jossa listataan kehitysvaiheen riippuvuudet (*dependency*:t).
+
+### Ensimmäinen testi
 
 1. Käynnistä Visual Studio Code, tee uusi tiedosto *sum.js*, joka sisältää testattavan funktion **sum**:​
 
@@ -47,7 +48,7 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
     ```
     Nyt JEST ajaa kaikki testit, joita se löytää hakemistosta (testit sisältävän tiedoston nimessä tulee olla *.test.*).
 
-    ![Sum-testit](img/jest_pass_1.jpg)
+    ![Sum-testit](img/jest_pass_1.png)
 5. Tallenna GitHub:iin
 
     Tiedostot kannattaa tallentaa Github:iin. Tee projektille uusi Github-repo seuraamalla näitä [ohjeita](../github/uusirepo.html).
