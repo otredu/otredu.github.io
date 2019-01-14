@@ -52,5 +52,3 @@ Vielä parempi tapa olisi eriyttää JavaScript-koodi omaan tiedostoonsa. Siirr�
 ```html
   <script src="demo.js"></script>
 ```
-
-**Huom** Demo 1 ja 2 toimivat ilman webbipalvelintakin, demo3 vaatii palvelimen (magnesium/htdocs).

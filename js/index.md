@@ -7,10 +7,15 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 ### Kurssin sisältö ja aikataulu 2019
 
 1. Johdanto ja JS alkeita (vk 2)
+2. JS ja HTML, harjoituksia 1 (vk 3)
 2. DOM alkeita
 
 ### JavaScript alkeita
 
 - [Johdanto](./johdanto.html)
 - [JS alkeita](./alkeita.html)
+- [JS ja HTML](./js_html.html)
+
+- [Harjoituksia 1](./harjoituksia1.html)
+
 - [DOM alkeita](./dom.html)
