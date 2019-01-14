@@ -24,7 +24,6 @@ npm install --save-dev jest ​
 function sum(a, b) { ​
 return a + b; ​
 } ​
-
 module.exports = sum;
 ```
 
@@ -34,8 +33,8 @@ module.exports = sum;
 const sum = require('./sum'); ​
 
 test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3); }​
-);​
+    expect(sum(1, 2)).toBe(3);
+}​);​
 ```
 
 3. Lisää seuraava koodi package.json-tiedostoon (tiedosto sisältää kaikki projektin *dependency*:t sekä skriptit):​
