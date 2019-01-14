@@ -48,7 +48,7 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
     ```
     Nyt JEST ajaa kaikki testit, joita se löytää hakemistosta (testit sisältävän tiedoston nimessä tulee olla *.test.*).
 
-    ![Sum-testit](img/jest_pass_1.PNG)
+    ![Sum-testit](img/jest_pass_1.png)
 5. Tallenna GitHub:iin
 
     Tiedostot kannattaa tallentaa Github:iin. Tee projektille uusi Github-repo seuraamalla näitä [ohjeita](../github/uusirepo.html).
