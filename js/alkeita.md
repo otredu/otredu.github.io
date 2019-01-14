@@ -51,10 +51,10 @@ const info = "Soita 112";
 
 Aritmeettiset operaattorit operoivat luvuilla:
 
-| Operaattori    | Esimerkkejä      | 
-| ------------- |:-------------:| 
-| + (yhteenlasku)    | ```4 + 5 ``` | 
-| - (vähennyslasku)     | ```4.5 - 3.1 ``` |
+| Operaattori    | Esimerkkejä    | 
+| --------------------- |:-------------:| 
+| + (yhteenlasku) | ```4 + 5 ``` | 
+| - (vähennyslasku) | ```4.5 - 3.1 ``` |
 | * (kertolasku)| ```90 * 0.23``` |
 | / (jakolasku) | ```3 / 20``` |
 | ** (potenssiin korotus) | ``` 2 ** 10``` |
