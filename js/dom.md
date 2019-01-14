@@ -44,7 +44,7 @@ myButton
 ```
 
 Tämä on ensimmäinen _button_:-elementti, joka dokumentista löytyi.
-![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_button.png)
+![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_button.PNG)
 
 Kirjoita prompt:iin ja testaa:
 
@@ -54,7 +54,7 @@ let myMessage = document.querySelector("p.message");
 
 Tämä on ensimmäinen _.message_:luokkaan kuuluvan <p>-elementti, joka dokumentista löytyi.
 
-![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_p.message.png)
+![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_p.message.PNG)
 
 Kirjoita prompt:iin ja testaa:
 
