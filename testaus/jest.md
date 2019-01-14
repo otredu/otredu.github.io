@@ -26,7 +26,6 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
     } ​
     module.exports = sum;
     ```
-
 2. Tee uusi tiedosto *sum.test.js*, joka sisältää yhden testin:
 
     ```js
@@ -36,16 +35,14 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
         expect(sum(1, 2)).toBe(3);
     }​);​
     ```
-
 3. Lisää seuraava koodi package.json-tiedostoon (tiedosto sisältää kaikki projektin *dependency*:t sekä skriptit):​
 
     ```js
-        { "scripts": { "test": "jest" } }​
+    { "scripts": { "test": "jest" } }​
     ```
-
 4. Käynnistä testit CMD:n kautta:​
 
     ```bash
-        npm run test​
+    npm run test​
     ```
 Nyt JEST ajaa kaikki testit, joita se löytää hakemistosta (testit sisältävän tiedoston nimessä tulee olla *.test.*).
