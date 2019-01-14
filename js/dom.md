@@ -10,7 +10,7 @@ Tässä esimerkkikuva Wikipediasta:
 
 Kuvassa olevia elementtejä kutsutaa _node_:ksi. _Parent_-nodella on _child_-nodeja (_decendant_-node), ja jos lapsia on useita ne ovat toisilleen _siblings_-node:ja. _Text_-node on oma tyyppinsä ja se sisältää tekstiä. Puuta voi selata järjestyksessä _root_-nodesta eteenpäin, kyselemällä aina seuraavaa jälkeläistä, sisarusta jne. Toinen, suorempi tapa, on etsiä elementtejä muokattavaksi niiden _CSS-selector_:eiden avulla. _querySelector_ etsii elementtejä tyypin (esim. "div", "h1"), luokan (esim. ".error") tai id:n (esim. "#info") avulla.  
 
-## Demo 1: Elementtien etsintä
+### Demo 1: Elementtien etsintä
 Kokeillaan _querySelector_:ia selaimessa. Avaa seuraava HTML-sivu selaimeen:
 
 ```html
@@ -67,9 +67,9 @@ Tämä on dokumentissa oleva elementti, jonka id:n arvo on _info_.
 Vinkki: Voit katsella DOM-elementtirakennetta, kun valitset *element* välilehden.
 ![Elementtirakenne](img/element_view.PNG)
 
-## Demo 2: Elementtien muuttaminen
+### Demo 2: Elementtien muuttaminen
 
-Myt käytetään hyväksi demo 1:ssä tallennettuja elementtejä, ja muutetaan niiden attribuutteja.
+Nyt käytetään hyväksi demo 1:ssä tallennettuja elementtejä, ja muutetaan niiden attribuutteja.
 
 Vaihdetaan napin tekstiksi "Paina tästä". Koska teksti on html-tagien välissä siihen viitataan attribuutilla *.innerHTML*:
 
@@ -97,7 +97,7 @@ Koko dokumentin CSS-tyyliin pääsee käsiksi näin:
 document.body.style.backgroundColor = "pink";
 ```
 
-## Demo 3: Elementtien luominen
+### Demo 3: Elementtien luominen
 
 Koko HTML-dokumentin voi rakentaa käyttämällä JavaScriptiä. Aloitetaan siis lähes puhtaalta pöydältä, avaa tämä tyhjä dokumentti selaimeen:
 
@@ -129,7 +129,7 @@ Tutki miltä DOM-puu näyttää nyt. Sivulle ei tule mitään näkyviin ennen ku
 
 ![Elementtien lisääminen](img/hello_world.PNG)
 
-## Demo 4
+### Demo 4
 
 Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittää script-tagien avulla suoraan HTML-sivulle. Tässä demo 2:n heippanapin tekstin muuttaminen on paketoitu funktioksi *klikkaus*, ja sitä kutsutaan kun nappia painetaan (katso button:in *onclick*).
 
