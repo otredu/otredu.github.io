@@ -34,6 +34,7 @@
     ```bash
         git push -u origin master
     ```
+
 ## Muutosten päivittäminen Github:iin
 
 Jos *local*- ja *remote*-repo ovat olemassa, tiedostoja päivitetään Github:iin ajamalla:
@@ -46,6 +47,9 @@ Jos *local*- ja *remote*-repo ovat olemassa, tiedostoja päivitetään Github:ii
 
 ## Linkkejä
 
-[Start a new git repository](https://kbroman.org/github_tutorial/pages/init.html)
-[Github Help: Ignoring files](https://help.github.com/articles/ignoring-files/)
-[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- Uusi repo
+    [Start a new git repository](https://kbroman.org/github_tutorial/pages/init.html)
+- .gitignore
+    [Github Help: Ignoring files](https://help.github.com/articles/ignoring-files/)
+- Markdown
+    [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
