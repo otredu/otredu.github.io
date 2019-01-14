@@ -5,7 +5,6 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
 ### JEST:in asentaminen
 
 1. Avaa CMD, tee uusi projektikansio (mkdir), siirry siihen (cd) ja alusta uusi node.js projekti ajamalla:
-
 ​
 ```bash
 npm init
