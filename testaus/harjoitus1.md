@@ -8,7 +8,7 @@ Käydään kertaamalla läpi [JavaScriptin perusrakenteet]("../js/alkeita.html")
 
 ### Demo 1: Sum-funktion parantelu
 
-Korjataan sum-funktiota niin että se toipuu vääränlaisesta syötteestä (käsittelee merkkijonot oikein) ja lisätään testitapauksia.
+Lisätään testitapauksia.sum-funktiolle, korjataan sitä niin että se toipuu vääränlaisesta syötteestä (käsittelee merkkijonot oikein).
 
 ### Demo 2: Tutustutaan jest expect:iin
 
