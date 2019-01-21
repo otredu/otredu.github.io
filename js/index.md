@@ -8,7 +8,7 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 1. Johdanto ja JS alkeita (vk 2)
 2. JS ja HTML, harjoituksia 1 (vk 3)
-2. DOM alkeita
+2. DOM alkeita (vk 4)
 
 ### JavaScript alkeita
 
@@ -17,5 +17,6 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - [JS ja HTML](./js_html.html)
 
 - [Harjoituksia 1](./harjoituksia1.html)
-
+---
 - [DOM alkeita](./dom.html)
+- [Harjoituksia 2](./harjoituksia2.html)
