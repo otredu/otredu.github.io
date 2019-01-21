@@ -2,13 +2,13 @@
 
 ### Mikä on DOM?
 
-JavaScript:in avulla voidaan muokata dynaamisesti selaimessa auki olevaa HTML-sivua. Muokkaaminen tapahtuu DOM-rajapinnan kautta (Document Object Model Interface). DOM esittää HTML-dokumentin puumaisena rakenteena, jonka juuressa (root) on HTML-elementti.  
+JavaScript:in avulla voidaan muokata dynaamisesti selaimessa auki olevaa HTML-sivua. Muokkaaminen tapahtuu DOM-rajapinnan kautta (Document Object Model Interface). DOM esittää HTML-dokumentin puumaisena rakenteena, jonka juuressa (root) on _HTML_-elementti.  
 
 Tässä esimerkkikuva Wikipediasta:
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/428px-DOM-model.svg.png)
 
-Kuvassa olevia elementtejä kutsutaa _node_:ksi. _Parent_-nodella on _child_-nodeja (_decendant_-node), ja jos lapsia on useita ne ovat toisilleen _siblings_-node:ja. _Text_-node on oma tyyppinsä ja se sisältää tekstiä. Puuta voi selata järjestyksessä _root_-nodesta eteenpäin, kyselemällä aina seuraavaa jälkeläistä, sisarusta jne. Toinen, suorempi tapa, on etsiä elementtejä muokattavaksi niiden _CSS-selector_:eiden avulla. _querySelector_ etsii elementtejä tyypin (esim. "div", "h1"), luokan (esim. ".error") tai id:n (esim. "#info") avulla.  
+DOM muodostuu _node_:ista. _Parent_-nodella on _child_-nodeja (_decendant_-node), ja jos lapsia on useita ne ovat toisilleen _siblings_-node:ja. _Text_-node on oma tyyppinsä ja se sisältää tekstiä. Puuta voi selata järjestyksessä _root_-nodesta eteenpäin, kyselemällä aina seuraavaa jälkeläistä, sisarusta jne. Sellaisia _node_ja, joilla on oma _HTML_taginsä kutsutaan _elementeiksi_. Elementtejä voidaan etsiä muokattavaksi niiden _CSS-selector_:eiden avulla. _querySelector_ etsii elementtejä niiden tyypin (esim. "div", "h1"), luokan (esim. ".error") tai id:n (esim. "#info") avulla.  
 
 ### Demo 1: Elementtien etsintä
 Kokeillaan _querySelector_:ia selaimessa. Avaa seuraava HTML-sivu selaimeen:
@@ -43,7 +43,7 @@ Nyt myButton:in pitäisi sisältää ko. elementti. Testaa se kirjoita prompt:ii
 myButton
 ```
 
-Tämä on ensimmäinen _button_:-elementti, joka dokumentista löytyi.
+Tämä on ensimmäinen _button_-elementti, joka dokumentista löytyi.
 ![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_button.PNG)
 
 Kirjoita prompt:iin ja testaa:
@@ -52,17 +52,15 @@ Kirjoita prompt:iin ja testaa:
 let myMessage = document.querySelector("p.message");
 ```
 
-Tämä on ensimmäinen _.message_:luokkaan kuuluvan <p>-elementti, joka dokumentista löytyi.
+Tämä on ensimmäinen _.message_-luokkaan kuuluvan p-elementti, joka dokumentista löytyi.
 
 ![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_p.message.PNG)
 
-Kirjoita prompt:iin ja testaa:
+Jos elementillä on _id_ sitä voidaan etsiä suoraan _getElementById_:in avulla. Kirjoita prompt:iin ja testaa:
 
 ```js
 let myLink = document.getElementById("info");
 ```
-
-Tämä on dokumentissa oleva elementti, jonka id:n arvo on _info_.
 
 Vinkki: Voit katsella DOM-elementtirakennetta, kun valitset *element* välilehden.
 ![Elementtirakenne](img/element_view.PNG)
@@ -119,12 +117,14 @@ Luodaan h1-elementti, ja sen tekstiä varten oma *textnode*.
 let myHeader = document.createElement("H1")
 let myText = document.createTextNode("Hello World");
 ```
+
 Liitätään tekstiä sisältävä *node* h1-elementin lapseksi, ja koko paketti body-elementin lapseksi:
 
 ```js
 myHeader.appendChild(myText);
 document.body.appendChild(myHeader);
 ```
+
 Tutki miltä DOM-puu näyttää nyt. Sivulle ei tule mitään näkyviin ennen kuin lapsielementit on liitetty *body*-elementtiin.
 
 ![Elementtien lisääminen](img/hello_world.PNG)
@@ -137,24 +137,42 @@ Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittä
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>DOM demo</title>
+  <meta charset="UTF-8">
+  <title>DOM demo</title>
 </head>
 <body>
-	<script>
-		function klikkaus(){
-			let myButton = document.querySelector("button");
-			myButton.innerHTML = "Paina tästä";	
-		}
-	</script>
-    <h1 style="display: none">Harjoitus 1</h1>
-    <button onclick="klikkaus()">Heippanappi</button>
-    <p class="message">Muuta tämä teksti</p>
-    <a id='info' href="http://is.fi">Iltasanomat</a>
+  <script>
+    function klikkaus(){
+      let myButton = document.querySelector("button");
+      myButton.innerHTML = "Paina tästä";
+    }
+  </script>
+  <h1 style="display: none">Harjoitus 1</h1>
+  <button onclick="klikkaus()">Heippanappi</button>
+  <p class="message">Muuta tämä teksti</p>
+  <a id='info' href="http://is.fi">Iltasanomat</a>
 </body>
 </html>
 ```
+
 Muuta nyt demo 2:n tekstin värin vaihtaminen funktioksi ja liitä sen p-elementin *onclick*-attribuuttiin.
+
+### Demo 5: Input-kentän lukeminen
+
+Tähän asti olemme saaneet käyttäjän antamat syötteet _prompt_:in kautta. Voimme toki lukea tiedot myös _input_-elementistä. Lisätään edelliseen harjoitukseen _input_-kenttä nimelle:
+
+```html
+<input id="hello" type="text" name="firstname" value="">
+```
+
+Input kenttään annettu teksti voidaan lukea muuttujaan _myName_:
+
+```js
+let nameElem = document.getElementById("hello");
+let myName = nameElem.value;
+```
+
+Lisää nyt nappi, joka tervehtii käyttäjää nimeltä (lisää _body_:n uusi _p_-elementti, jolla on lapsena _text_-node. ks. demo 3).
 
 ## Linkkejä
 

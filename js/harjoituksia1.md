@@ -12,10 +12,10 @@ Tee funktio, joka kysy käyttäjältä (prompt:in avulla) kaksi merkkijonoa (esi
 ### Tehtävä 2: Yhteenlasku
 Tee funktio, joka kysyy käyttäjältä kaksi numeroa ja laskee ne yhteen, sekä ilmoittaa vastauksen console.log:illa kehittäjänäkymässä. Käynnistys uudesta napista. Voit lisätä myös alert-viestin, joka antaa ohjeet kehittäjänäkymän avaamiselle.
 
-### Harjoitus 3. Laskuri
+### Tehtävä 3. Laskuri
 Tee nappi, jota painamalla kehittäjänäkymän konsolille tulostuu luku, joka kasvaa yhdellä joka painalluksella (aloittaa nollasta). Voit tehdä myös vähentävän napin.
 
-### Harjoitus 4. Suurempi luku (ehtolause)
+### Tehtävä 4. Suurempi luku (ehtolause)
 Tee funktio, joka kysyy kahta lukua ja ilmoita niistä suuremman käyttäen alert:ia. Käynnistä tämäkin napista.
 
 ### Tehtävä 5. Täysi-ikäisyys (ehtolause)
