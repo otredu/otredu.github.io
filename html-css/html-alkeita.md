@@ -92,7 +92,7 @@ HTML-dokumenttiin liitetään kuva *img*-tagin avulla. Tagin *src*-attribuutissa
 Dokumentissa oleva linkki voi johtaa sivuston ulkopuolelle tai se voi olla sivun sisäinen linkki. *a*-tagi sisältää aina vähintään yhden attribuutin *href*, joka kertoo URL-osoitteen, joka linkkiin liittyy. Alku- ja lopputagien väliin tulee ruudulla näytettävä teksti, tässä "Google". Linkki voi olla myös suhteellinen ja viedä samassa hakemistossa palvelimella olevalle toiselle sivulle.
 
 ```html
-<a href="c://www.google.fi">Google</a>
+<a href="http://www.google.fi">Google</a>
 <a href="toinensivu.html">Toinen sivu</a>
 ```
 
