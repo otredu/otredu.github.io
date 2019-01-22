@@ -9,9 +9,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 - [Testaaminen ja testiympäristöt](./testaus/index.html)
 - [Julkiset tietoverkot](./html-css/index.html)
 
-### Leenan kurssimateriaalit 
-- [Julkiset tietoverkot](http://www.leeniemi.net/julkiset18/)
-- [Tietokantojen perusteet](http://www.leeniemi.net/tietokanta18/)
+### Leenan kurssimateriaalit
 - [Leenan materiaalien pääsivut](https://leeniemi.net)
 
 ### Muuta
