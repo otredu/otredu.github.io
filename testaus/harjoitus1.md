@@ -12,7 +12,7 @@ Lisätään testitapauksia.sum-funktiolle, korjataan sitä niin että se toipuu 
 
 ### Demo 2: Tutustutaan jest expect:iin
 
-Katsotaan miten eri tyyppistä tietoa testaan expect:in avulla. [Jest expect]("https://jestjs.io/docs/en/expect").
+Katsotaan miten eri tyyppistä tietoa testaan expect:in avulla. [Jest expect](./jest-alkeet.html).
 
 ### 1. Täysi-ikäisyys
 
