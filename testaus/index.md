@@ -10,5 +10,5 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 - [JS kertausta](../js/alkeita.html)
 - [JEST:in asennus](./jest.html)
-- [JEST alkeita](,/jest-alkeet.html)
-- [Harjoituksia](./harjoitus1.html)
+- [JEST alkeita](./jest-alkeet.html)
+- [Harjoitukset 1](./harjoitus1.html)
