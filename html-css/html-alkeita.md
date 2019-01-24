@@ -169,7 +169,7 @@ Edellinen esimerkki toteutettuna *style*-tageillä:
 Kaikkein paras tapa, olisi kuitenkin erottaa CSS-määrittelyt kokonaan omaan tiedostoonsa ja lisätä HTML-dokumenttiin *style*-tagi, joka kertoo CSS-tiedoston nimen ja sijainnin palvelimella:
 
 ```html
-<style src="tyylitiedosto.css"></style>
+<link rel="stylesheet" type="text/css" href="tyylit.css">
 ```
 
 ## Lisätietoa:
