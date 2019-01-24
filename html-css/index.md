@@ -13,8 +13,13 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 - [Johdanto](./johdanto.html)
 - [HTML alkeita](./html-alkeita.html)
-- [Harjoituksia 1](./html-harjoituksia.md)
+- [Harjoituksia 1](./html-harjoituksia.html)
+- [CSS alkeita](./css-alkeita.html)
 
 ---
 
-<!-- - [CSS alkeita](./css-alkeita.html) -->
+### Linkkejä hyödyllisiin materiaaleihin
+
+- HTML-videotutoriaali [HTML Crash Course For Absolute Beginners](https://youtu.be/UB1O30fR-EE)
+
+- CSS-videotutoriaali [CSS Crash Course For Absolute Beginners](https://youtu.be/yfoY53QXEnI)
