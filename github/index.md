@@ -8,4 +8,4 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 ## Hyödyllisiä linkkejä
 
-- [An Introduction to Git and GitHub by Brian Yu](https://youtu.be/MJUJ4wbFm_A)
+- Videotutoriaali Git:in ja GitHub:in käytöstä [An Introduction to Git and GitHub by Brian Yu](https://youtu.be/MJUJ4wbFm_A)
