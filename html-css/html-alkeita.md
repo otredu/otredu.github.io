@@ -129,6 +129,12 @@ Teksti ulkoasu määritellään täysin käyttämällä CSS:ää, joten erilaise
 
 **Huom** Vaikka selaimessa on näille omat *default*-tyylinsä, CSS:n avulla ne voidaan määritellä paremmin.
 
+Toinen tapa merkitä teksti, jolle halutaan kohdistaa jokin tietty tyyli, on liittää siihen *span*-tag. Tämän tagi ei vaikuta tekstin asemointiin, eli se toimii ns. *inline*:
+
+```html
+Tässä on jotakin <span class="important">todella tärkeää</span>, joka halutaan muotoilla omalla tyylillään.
+```
+
 ### Sivun asettelu
 
 Jotta tekstin osia saisi aseteltua sivulle, kannattaa ryhmitellä elementtejä käyttämällä *div*-tagejä. Jotta CSS-määrittelyjä saa ohjattua tietyille *div*-elementeille, niille kannattaa antaa niiden tarkoitusta kuvaavat *id*. Usein *id*:einä käytetään *header*, *footer* tai *sidebar*. CSS-tyylin voi liittää myös luokkaan, jolloin se lisätään *class*-attribuuttiin kuten  *navbar*. Ero näiden kahden välillä on se, että luokkaan voi kuulua monta elementtiä, *id* on uniikki.

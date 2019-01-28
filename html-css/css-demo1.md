@@ -1,6 +1,10 @@
-## CSS-alkeita
+## CSS-demo 1
 
-### Demo 1
+CSS-määrittelyt tehdään yleensä omaan tiedostoonsa. Tässä harjoituksessa emme muokkaa HTML:ää ollenkaan vaan muotoilemma valmista HTML-dokumenttipohjaa CSS:n avulla.
+
+Kopioi oheinen HTML-dokumentti ja tallenna se omaan kansioonsa *demo1*. Anna sille nimeksi esim. css_demo.html. Tee myös uusi CSS-tiedosto, anna sille nimeksi css_demo.css. Dokumentille on luotu korkeantason rakenne käyttämällä HTML:in *div* tagejä. Jotta niihin on helpompi viitata CSS-määrittelyissä niille on annettu *id* ja *class* attribuutteja. Dokumentti koostuu kahdesta pääosiosta (*div*:stä), joille on annettu id:t *header* ja *main*. *main*:in sisällä on kolme *div*:iä joille on myös annettu *id*:t. *main* toimii tässä ns. *flexbox container*:ina ja sen sisällä olevat *div*:t ovat *flex item*:eja ([lue lisää flex-box:ista](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)). Flex-boxin avulla saamme aseteltua sisältöä sivulle vierekkäin, allekkain jne. *header*:in sisällä on toinen *flexbox container*: *navbar*. Sen sisällä on *navbutton*:eja. Nämä on määritelty *id*:n sijaan *class*:in avulla, eivätkä ne ole *div*:ejä vaan *ul*- ja *li*-tagejä. *flexbox container*:in tai *flex item*:in ei siis tarvitse aina olla *div* (kuvassa siniset elementit ovat *div*:ejä, vrt. kuvaa alla olevaan koodiin).
+
+![sivuston rakenne](./img/demo1_rakenne_nuolet.PNG)
 
 ```html
 <!DOCTYPE html>
@@ -60,3 +64,11 @@
     </body>
 </html>
 ```
+
+### Tekstien muotoilu
+
+### div:ien muotoilu
+
+### Flexbox:in avulla sivulle asettelu
+
+### Navbar:in muotoilu
