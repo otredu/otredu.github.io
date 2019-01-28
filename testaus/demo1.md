@@ -28,7 +28,7 @@ test('syötteet numeromaisia merkkijonoja', () => {
 
 Kun testi ajetaan (npm run test), konsolille tulee ilmoitus siitä, että testi ei mene läpi. Tämä on hyvä asia, nyt tiedämme että testi on kirjoitettu oikein ja se toimii niin kuin sen pitääkin.
 
-![Test fail](./img/jest_fail1.png)
+![Test fail](./img/jest_fail1.PNG)
 
 Nyt palataan *sum* funktioon ja korjataan se:
 
@@ -53,7 +53,7 @@ test('syötteet merkkijonoja, heitetään poikkeus', () => {
 ```
 
 Testi toimii hyvin, koska saamme *fail*:
-![No throw](./img/no_throw.png)
+![No throw](./img/no_throw.PNG)
 
 Nyt korjataan *sum*-funktio, niin että testi menee läpi:
 
@@ -84,7 +84,7 @@ test('parametrit puuttuvat, heitetään poikkeus', () => {
 ```
 
 Nämäkin testit toimivat hyvin, koska saamme *fail*.
-![Fail 2](./img/jest_fail_2.png)
+![Fail 2](./img/jest_fail_2.PNG)
 
 Korjataan koodia niin, että nämäkin testit menevät läpi. Lisätään *default*-arvo b:lle (b=0), ja heitetään poikkeus, jos a:n arvokin on määrittelemätön.
 
