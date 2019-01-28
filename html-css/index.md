@@ -14,6 +14,7 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - [Johdanto](./johdanto.html)
 - [HTML alkeita](./html-alkeita.html)
 - [Harjoituksia 1](./html-harjoituksia.html)
+- [CSS demo 1](./css-demo1.html)
 - [CSS alkeita](./css-alkeita.html)
 
 ---
