@@ -14,3 +14,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 
 ### Muuta
 - [Github-ohjeita](./github/index.html)
+
+### Tredun OPS
+
+[Tieto- ja viestintätekniikan perustutkinto](http://www.leeniemi.net/liitteet/TVT_pt_2018.pdf)
