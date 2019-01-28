@@ -67,8 +67,105 @@ Kopioi oheinen HTML-dokumentti ja tallenna se omaan kansioonsa *demo1*. Anna sil
 
 ### Tekstien muotoilu
 
-### div:ien muotoilu
+Annetaan h1-tason otsikolle väri ja fonttityyppi. Jos h1-tason otsikko kuuluu lisäksi luokkaan *.header*, sille annetaan oma tyylimäärittelynsä (h1.header).
+Jos samat määrittelyt toimivat useammalle tagille (td, th, p) ne voidaan antaa samalla kertaa (erotellaan pilkuilla):
+
+```css
+h1 {
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1.header {
+    color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+td, th, p {
+    color: aqua;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+```
+
+### Taulukon muotoilu
+
+Lisätään taulukolle taustaväri sekä reunaviivat, *collapse* liittää erilliset "laatikot" yhteen.
+
+```js
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background: purple;
+}
+```
 
 ### Flexbox:in avulla sivulle asettelu
 
+Flexbox-asettelu otetaan käytöön määrittelemällä *container*:ille:
+
+```js
+#main {
+    display: flex;
+}
+```
+
+Nyt *container*:in sisällä olevat osiot siirtyvät vierekkäin (oletusasetus).
+
+### div:ien muotoilu
+
+Asetellaan *flex item*:it vierekkäin 1/3 leveydelle kukin, lisätään taustaväri, reunaviiva, ja reunan pyöristys sekä padding (ettei teksti ole reunassa kiinni). Tehdään vastaavia muokkauksia *#header div*:ille:
+
+```js
+#basicinfo, #topten, #data {
+    width: 33%;
+    height: auto;
+    background-color: aquamarine;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+#header {
+    background-color: paleturquoise;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+```
+
+### Dynaaminen kuvan leveys
+
+Jotta kuva seuraa *div*:iä, jonka sisällä se on lisätään:
+
+```js
+img {
+
+    max-width: 100%;
+    ma
+    x-height: 100%;
+}
+```
+
 ### Navbar:in muotoilu
+
+Lopuksi muotoillaan tavallisesta *ul*-listasta navigointinappeja. Otetaan käytöön *flexbox*, nyt *navbar*-luokka on *flexbox-container*. Lisätään listan alkioille padding:iä, taustaväri, reunaviiva sekä poistetaan listamerkit (*list-style-type: none*) sekä linkin alleviivaus (*text-decoration: none*):
+
+```js
+.navbar {
+    display: flex;
+    list-style-type: none;
+
+}
+
+.navbutton {
+    display:inline-block;
+    padding: 10px;
+    background-color: pink;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    text-decoration: none;
+}
+```
