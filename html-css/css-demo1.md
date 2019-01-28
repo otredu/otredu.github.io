@@ -156,7 +156,6 @@ Lopuksi muotoillaan tavallisesta *ul*-listasta navigointinappeja. Otetaan k채yt�
 .navbar {
     display: flex;
     list-style-type: none;
-
 }
 
 .navbutton {
@@ -167,5 +166,17 @@ Lopuksi muotoillaan tavallisesta *ul*-listasta navigointinappeja. Otetaan k채yt�
     border-style: solid;
     border-radius: 25px;
     text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+### Navbutton:in v채rin vaihtaminen dynaamisesti
+
+Jos halutaan, ett채 napin ulkon채k철 muuttuu, kun hiiri tuodaan sen p채채lle voidaan lis채t채 *hoover*-m채채rittely, *active*-m채채rittely on jo valitulle:
+
+```js
+.navbutton:hover, .navbutton:active {
+    background-color: red;
 }
 ```
