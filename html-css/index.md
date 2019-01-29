@@ -16,6 +16,7 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - [Harjoituksia 1](./html-harjoituksia.html)
 - [CSS demo 1](./css-demo1.html)
 - [CSS alkeita](./css-alkeita.html)
+- [CSS asettelut](./css-asettelu.html)
 
 ---
 
@@ -24,3 +25,5 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - HTML-videotutoriaali [HTML Crash Course For Absolute Beginners](https://youtu.be/UB1O30fR-EE)
 
 - CSS-videotutoriaali [CSS Crash Course For Absolute Beginners](https://youtu.be/yfoY53QXEnI)
+
+- Ilmainen HTML + CSS - kirja [Interneting is hard](https://internetingishard.com/html-and-css/)

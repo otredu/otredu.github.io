@@ -91,7 +91,7 @@ td, th, p {
 
 Lisätään taulukolle taustaväri sekä reunaviivat, *collapse* liittää erilliset "laatikot" yhteen.
 
-```js
+```css
 table, td, th {
     border: 1px solid black;
     border-collapse: collapse;
@@ -103,7 +103,7 @@ table, td, th {
 
 Flexbox-asettelu otetaan käytöön määrittelemällä *container*:ille:
 
-```js
+```css
 #main {
     display: flex;
 }
@@ -115,7 +115,7 @@ Nyt *container*:in sisällä olevat osiot siirtyvät vierekkäin (oletusasetus).
 
 Asetellaan *flex item*:it vierekkäin 1/3 leveydelle kukin, lisätään taustaväri, reunaviiva, ja reunan pyöristys sekä padding (ettei teksti ole reunassa kiinni). Tehdään vastaavia muokkauksia *#header div*:ille:
 
-```js
+```css
 #basicinfo, #topten, #data {
     width: 33%;
     height: auto;
@@ -139,7 +139,7 @@ Asetellaan *flex item*:it vierekkäin 1/3 leveydelle kukin, lisätään taustav�
 
 Jotta kuva seuraa *div*:iä, jonka sisällä se on lisätään:
 
-```js
+```css
 img {
 
     max-width: 100%;
@@ -152,7 +152,7 @@ img {
 
 Lopuksi muotoillaan tavallisesta *ul*-listasta navigointinappeja. Otetaan käytöön *flexbox*, nyt *navbar*-luokka on *flexbox-container*. Lisätään listan alkioille padding:iä, taustaväri, reunaviiva sekä poistetaan listamerkit (*list-style-type: none*) sekä linkin alleviivaus (*text-decoration: none*):
 
-```js
+```css
 .navbar {
     display: flex;
     list-style-type: none;
@@ -175,7 +175,7 @@ Lopuksi muotoillaan tavallisesta *ul*-listasta navigointinappeja. Otetaan käyt�
 
 Jos halutaan, että napin ulkonäkö muuttuu, kun hiiri tuodaan sen päälle voidaan lisätä *hoover*-määrittely, *active*-määrittely on jo valitulle:
 
-```js
+```css
 .navbutton:hover, .navbutton:active {
     background-color: red;
 }

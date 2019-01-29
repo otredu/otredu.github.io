@@ -27,8 +27,7 @@ HTML-dokumentin perusrakenteet muodostuvat: *html*-, *head*- ja *body*-tageistä
 
 ### Otsikot ja kappaleet
 
-Sivun teksti jaotellaan kappaleisiin, jotka merkitään *p*-tagillä, ja otsikot *h1*, *h2*, *h3* -tageillä (*h1* on pääotsikko, ja seuraavat aliotsikoita). 
-
+Sivun teksti jaotellaan kappaleisiin, jotka merkitään *p*-tagillä, ja otsikot *h1*, *h2*, *h3* -tageillä (*h1* on pääotsikko, ja seuraavat aliotsikoita).
 
 ```html
     <h1>Pääotsikko</h1>
@@ -112,6 +111,12 @@ Kuvasta voi tehdä linkin lisäämällä *img*-tagin linkkitagin sisään:
 </a>
 ```
 
+Jos linkistä halutaan avautuvan uuden ikkunan siihen voi lisätä attribuutin:
+
+```js
+target="_blank"
+```
+
 ### Tekstityylit
 
 Teksti ulkoasu määritellään täysin käyttämällä CSS:ää, joten erilaiset tekstityypit merkitään tekstiin niiden merkityksen mukaan: lyhyt lainaus (*q*), pitkä lainaus (*blockquote*) merkitty (*mark*), tärkeä (*strong*) tai painotettu (*em*) teksti. Myös alaindeksi (*sub*) ja yläindeksi (*sup*) voidaan merkitä omilla tageillään samoin koodiesimerkki (*code*).
@@ -134,6 +139,22 @@ Toinen tapa merkitä teksti, jolle halutaan kohdistaa jokin tietty tyyli, on lii
 ```html
 Tässä on jotakin <span class="important">todella tärkeää</span>, joka halutaan muotoilla omalla tyylillään.
 ```
+
+### HTML-entiteetit
+
+Vaikka käyttämällä UTF-8 enkoodausta voidaan HTML-dokumenttiin lisätä lähes mitä tahansa erikoismerkkejä sellaisenaan, jotkut merkit ovat varattuja HTML-syntaksin esittämiseen. Näitä ovat: < ja > -merkki sekä & - merkki. Ne täytyy esittää *HTML entiteettinä*:
+
+| Merkki    |  HTML entiteetti      |
+| ------------- |:-------------:|
+|  <  | \&lt; |
+|  >  |  \&gt;  |  
+|  &  | \&amp; |
+
+Joskus on tarvetta myös joillekin muille erikoismerkeille, joita ei löydy näppäimistöltä. Niitä voit etsiä [täältä](https://dev.w3.org/html5/html-author/charref).
+
+### Rivinvaihto, väliviiva
+
+HTML:ssa on tagit rivinvaihdolle \<br> (*line break*) sekä väliviivalle \<hr> (*horizontal rule*). Näitä voidaan käyttää, jos dokumentin rakenteessa on niille järkevä merkitys, mutta tekstin asetteluun tai ulkonäöllisistä syistä niitä pitäisi käytää. Tällaiset säädöt on parempi tehdä CSS:llä.
 
 ### Sivun asettelu
 
@@ -177,6 +198,10 @@ Kaikkein paras tapa, olisi kuitenkin erottaa CSS-määrittelyt kokonaan omaan ti
 ```html
 <link rel="stylesheet" type="text/css" href="tyylit.css">
 ```
+
+### Tiedostojen nimeäminen
+
+HTML-dokumentin sekä siihen liittyvien tiedostojen nimissä ei pitäisi käyttää välilyöntejä, erikoismerkkejä tai ääkkösiä. Välilyönnin tilalla voi käyttää väliviivaa. Myös kansioiden ja tiedostojen nimien olisi hyvä olla aina pienillä kirjaimilla kirjoitettuja.
 
 ## Lisätietoa:
 
