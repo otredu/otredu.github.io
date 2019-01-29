@@ -6,19 +6,20 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 ### Kurssin sisältö ja aikataulu 2019
 
-1. HTML ja CSS alkeita (vk 3)
-2. Harjoituksia 1 (vk 4)
+1. HTML alkeet (vk 3)
+2. Harjoituksia 1 ja CSS demo 1 (vk 4)
+3. Harjoituksia 1 jatkuu (vk 5)
 
 ### HTML ja CSS alkeita
 
 - [Johdanto](./johdanto.html)
 - [HTML alkeita](./html-alkeita.html)
-- [Harjoituksia 1](./html-harjoituksia.html)
-- [CSS demo 1](./css-demo1.html)
 - [CSS alkeita](./css-alkeita.html)
-- [CSS asettelut](./css-asettelu.html)
+- [CSS demo 1](./css-demo1.html)
+- [Harjoituksia 1](./html-harjoituksia.html)
 
 ---
+<!-- - [CSS asettelut](./css-asettelu.html) -->
 
 ### Linkkejä hyödyllisiin materiaaleihin
 
