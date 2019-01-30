@@ -8,6 +8,10 @@ Tee HTML-dokumentti, jossa esitellään yksi valtio. Kerro siitä perustiedot es
 
 Ryhmittele edellinen harjoituksen osat *div*-tagien avulla loogisiksi osiksi. Anna osille niiden tarkoitusta kuvaavat *id*:t, esim. *header*, *info*, *nature*, *cities* etc.
 
+### HTML-validointi
+
+Tässä vaiheessa aja HTML-validaattori koodillesi. Se löytyy [täältä](https://validator.w3.org/) (lataa koodi sivulle, aja validointi ja korjaa HTML:ää niin kauan, että se menee läpi). Kun HTML-on kunnossa jatka tehtävään 3.
+
 ### Tehtävä 3: CSS-määrittelyt
 
 Tee sivullesi CSS-tiedosto ja muotoile se niin, että eri osiot erottuvat sivulla omissa laatikoissaan (käytä flex-boxia). Lisää värejä, fontteja, katso ohjeita [CSS-demo 1](css-demo1.html):stä.
