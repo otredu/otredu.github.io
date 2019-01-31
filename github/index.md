@@ -3,7 +3,7 @@
 Materiaalia, joka täydentyy kurssin edetessä...
 
 - [Uuden repon luominen](./uusirepo.html)
-- [Muutosten päivittäminen Githubiin](./muutostenpaivitus.html)
+- [Muutosten päivittäminen Githubiin](./muutostenpaivitys.html)
 - [Repon kloonaus](./kloonaus.html)
 
 ## Hyödyllisiä linkkejä
