@@ -9,9 +9,11 @@
 Periaatteessa riittää, että *flex container*:lle määritellään:
 
 ```css
-#main {
+.main {
     display: flex;
 }
 ```
+
+Tämän jälkeen kaikki sen lapset ovat automaattisesti *flex-item*:eja. 
 
 [Lue lisää flex-box:ista](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
