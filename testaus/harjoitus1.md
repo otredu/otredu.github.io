@@ -19,7 +19,7 @@ Tee funktio, joka palauttaa oikean bussilipun hinnan, kun funktio saa paramatrin
 | Ikä/lippukategoria:    | Hinta:  |
 | ------------- |:-------------:|
 | alle 7v     | ilmainen |
-| alle 16v koululaislippu     |  1€  |  
+| alle 16v koululaislippu     |  1€  |
 | 16-25 nuorisolippu | 1.50€ |
 | yli 25 aikuinen | 3€ |
 | yli 65 seniori |  1.5€ |
@@ -28,15 +28,15 @@ Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vä
 
 ### 4. Kolmion pinta-ala
 
-Tee funktio, joka laskee kolmion pinta-alan ja pyöristää sen kahden desimaalin tarkkuuteen (Math.floor). Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista, negatiivisesta sivun pituudesta jne). Testaa kaikkien ehtolauseiden haarat.
+Tee funktio, joka laskee kolmion pinta-alan ja pyöristää sen kahden desimaalin tarkkuuteen (esim. Math.floor). Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista, negatiivisesta sivun pituudesta jne). Testaa kaikkien ehtolauseiden haarat.
 
 ### 5. Tuotteen hinta
 
 Tee funktio, joka laskee tuotteen kokonaishinnan, kun sen parametrit ovat hinta ja ALV-prosentti (desimaalilukuna). Ennen ALV:in lisäämistä hinnasta vähennetään alennus seuraavien ehtojen mukaisesti:
 
-- hinta on 100 - 200 alennus 5%
-- hinta 201 - 500 alennus 10%
-- hinta on 500 alennus 15%
+- hinta on 100 - 200€ alennus 5%
+- hinta 201 - 500€ alennus 10%
+- hinta on 500€ alennus 15%
 
 Testaa kaikkien ehtolauseiden haarat.
 
