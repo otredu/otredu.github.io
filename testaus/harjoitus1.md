@@ -16,13 +16,14 @@ Tee funktio, joka palauttaa kahden luvun (a ja b) osamäärän. Laadi funktiolle
 
 Tee funktio, joka palauttaa oikean bussilipun hinnan, kun funktio saa paramatrinaan henkilön iän. Bussilippujen hinnat:
 
-| Ikä/lippukategoria:    | Hinta:      |
+| Ikä/lippukategoria:    | Hinta:  |
 | ------------- |:-------------:|
 | alle 7v     | ilmainen |
 | alle 16v koululaislippu     |  1€  |  
 | 16-25 nuorisolippu | 1.50€ |
 | yli 25 aikuinen | 3€ |
 | yli 65 seniori |  1.5€ |
+
 Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista). Testaa kaikki ehtolauseiden reuna-alueet. *Vinkki:* käytä else if rakennetta.
 
 ### 4. Kolmion pinta-ala
