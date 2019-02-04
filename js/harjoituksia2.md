@@ -27,21 +27,23 @@ Tee funktio, joka lisää oheiselle HTML-sivulle tervehdyksen, joka käyttää _
 </html>
 ```
 
-### Tehtävä 2: Iän tarkistus 1
+### Tehtävä 2: Iän tarkistus
 
-Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (otsikko) ja sen alle uusi _input_-kenttä, jossa kysytään käyttäjän ikää. Lisää myös uusi GO!-nappi. Tee funktio, joka tutkii onko annettu ikä alle 16, jos se on sivulle pitäisi ilmestyä teksti: "olet liian nuori pelaamaan tätä peliä". Muuten se ilmoittaa, "hyvä, jatketaan".
+Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (h1-otsikko) ja sen alle uusi _input_-kenttä, jossa kysytään käyttäjän ikää. Lisää myös uusi GO!-nappi. Tee funktio, joka tutkii onko annettu ikä alle 16, jos se on sivulle pitäisi ilmestyä teksti: "olet liian nuori pelaamaan tätä peliä". Muuten se ilmoittaa, "hyvä, jatketaan".
 
 ### Tehtävä 3. Arvaa mitä numeroa ajattelen
 
-Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (otsikko) ja sen alle kolme _input_-kenttää, joissa kahdessa ensimmäisessä kysytään lukualueen ala- ja ylärajaa (esim. "Anna alaraja:") jo kolmannessa pyydetään arvaamaan kokonaislukua, jota ohjelma ajattelee. Lisää myös uusi GO!-nappi. Tee funktio, joka arpoo luvun annetulta väliltä ja tutkii onko se sama jota käyttäjä on arvannut. Jos arvaus ei mennyt oikein ilmoita sivulla: "Väärin meni. Ajattelin lukua: ... ". Jos arvaus meni oikein, ilmoita: "Oikein! Kannattaisiko lotota?".
+Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (otsikko) ja sen alle kolme _input_-kenttää, joissa kahdessa ensimmäisessä kysytään lukualueen ala- ja ylärajaa kokonaislukuina (esim. "Anna alaraja:") ja kolmannessa pyydetään arvaamaan kokonaislukua, jota ohjelma ajattelee. Lisää myös uusi GO!-nappi. Tee funktio, joka arpoo kokonaisluvun annetulta väliltä ja tutkii onko se sama, jota käyttäjä on arvannut. Jos arvaus ei mennyt oikein ilmoita sivulla: "Väärin meni. Ajattelin lukua: ... ". Jos arvaus meni oikein, ilmoita: "Oikein! Kannattaisiko lotota?".
 
 ### Tehtävä 4. Värin vaihtoa
 
-Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (otsikko) ja sen alle lista funktioista, joita olet käyttänyt DOM:in muokkaamiseen näissä harjoituksissa (esim. QuerySelector). Lisää kaksi nappia jokaisen lista-elementin viereen. Toisesta napista ko. lista-elementti muuttuu vihreäksi ("olen käyttänyt" ja toisesta punaiseksi ("en ole käyttänyt"). Vinkki: Käytä _lista_-elementeissä id-kenttää.
+Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (h1-otsikko). Tee tämä kaikki muu käyttäen JavaScript:iä:
 
-### Lisätehtävä 1: Parempi iän tarkistus
+ Luo lista (ul, li) funktioista, joita olet käyttänyt DOM:in muokkaamiseen näissä harjoituksissa (esim. QuerySelector, GetElementById jne). Lisää jokaiselle listan alkiolle callback-funktio (onClick), joka vaihtaa sen värin sitä klikattaessa. Ensimmäisellä klikkauksella väri vaihtuu vihreäksi, toisella punaiseksi jne.
 
-Korjaa tehtävä 3:n funktiota niin, että se ei hyväksy järjettömiä vastauksia (negatiivista ikää, merkkijonoa jota ei voi muuttaa luvuksi jne.). Anna järkevä virheilmoitus ja tyhjennä _input_-kenttä. Lisää uusi ilmoitus mahdollisen vanhan tilalle (ei perään).
+### Lisätehtävä 1: Parempi arvauspeli
+
+Korjaa tehtävän 3:n funktiota niin, että se ei hyväksy järjettömiä lähtöarvoja (alarajaa joka on suurempi kuin yläraja, tai arvausta joka ei edes osu lukuvälille jne.). Anna järkevä virheilmoitus. Lisää uusi ilmoitus mahdollisen vanhan tilalle (ei perään).
 
 ### Lisätehtävä 2: Parempi "arvaa mitä numeroa ajattelen"
 
