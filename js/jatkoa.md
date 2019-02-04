@@ -5,32 +5,32 @@
 Taulukkoon voi tallentaa erilaista tietoa: lukuja, merkkijonoja, totuusarvoja, toisia taulukoita, olioita tai jopa funktioita. Tieto sijaitsee taulukossa järjestyksessä, eli taulukon alkioihin voi viitata niiden sijaintiin liittyvällä indeksillä (kokonaisluku, indeksointi alkaa nollasta).
 
 ```js
-let randomList = ["milk", 303, true, [1, 2, 3]];
+let myList = ["milk", 303, true, [1, 2, 3]];
 ```
 
 Tämän taulukon toinen alkio (luku 303) saataisiin kirjoittamalla:
 
 ```js
-randomList[1];
+myList[1];
 ```
 
 Taulukon alkion voi korvata sijoittamalla ko. indeksiin jotain muuta:
 
 ```js
-randomList[1] = "uusi arvo";
+myList[1] = "uusi arvo";
 ```
 
 Taulukon pituus voi vaihdella, siihen voi lisätä uusia alkoita *push*:in avulla (palauttaa lisätyn alkion indeksin ja lisää uuden alkion taulukon loppuun). Alkioita voi poistaa taulukosta *pop*:in avulla (palauttaa taulukon viimeisen alkion, ja poistaa sen samalla taulukosta).
 
 ```js
-randomList.push("butter");
-randomList.pop();
+myList.push("butter");
+myList.pop();
 ```
 
 Listan pituuden saa selville *length*:in avulla.
 
 ```js
-randomList.length;
+myList.length;
 ```
 
 ### Olio (object)
@@ -38,32 +38,32 @@ randomList.length;
 Myös olio (*object*) koostuu joukosta ominaisuuksia (*properties*), joihin pääsee käsiksi niihin liitetyn nimen avulla. Ominaisuudet voivat olla tyypiltään merkkijonoja, lukuja, totuusarvoja, taulukoita, toisia olioita tai funktioita.
 
 ```js
-let randomObject = {name: "Shopping day", buy: ["milk", "butter", "bread"], car: true, cash: 150}
+let myObject = {name: "Shopping day", buy: ["milk", "butter", "bread"], car: true, cash: 150}
 ```
 
 Tämän olion *cash*-ominaisuuteen pääsee käsiksi kahdella eri tavalla. Joko viittaamalla siihen pistenotaation avulla:
 
 ```js
-randomObject.cash
+myObject.cash
 ```
 
 tai käyttämällä ominaisuuden nimeä indeksin tyyliin:
 
 ```js
-randomObject["cash"]
+myObject["cash"]
 ```
 
 Olion ominaisuuden voi muuttaa sijoittamalla uuden arvon vanhan tilalle:
 
 ```js
-randomObject.cash = 100;
-randomObject["cash"] = 10;
+myObject.cash = 100;
+myObject["cash"] = 10;
 ```
 
 Olioon voi myös lisätä uusia ominaisuuksia. Vanhan olion ominaisuudet kopiodaan mukaan käyttämällä *spread*-operaattoria (...):
 
 ```js
-randomObject = {...randomObject, new: 122}
+myObject = {...myObject, new: 122}
 ```
 
 ### For-loop
@@ -72,8 +72,8 @@ randomObject = {...randomObject, new: 122}
 taulukoita. *for*-silmukka toistaa sen sisään kirjoitettua koodia, kunnes sen ehtona oleva lauseke ei enää ole totta. *for*-lauseessa ensin alustetaan silmukka (esim. *let i=0*), sitten kirjoitetaan ehto, joka pitää silmukan toiminnassa, ja lopuksi lauseke, joka päivittää silmukan tilaa (esim. *i++*):
 
 ```js
-for(let i=0; i < randomList.length; i++){
-    console.log(randomList[i]);
+for(let i=0; i < myList.length; i++){
+    console.log(myList[i]);
 }
 ```
 
@@ -103,4 +103,3 @@ JavaScript tukee seuraavia lyhennemerkintöjä:
 | i /= 10 | i = i / 10 |
 | i %= 5 | i = i % 5 |
 | i **= 3 | i = i ** 3 |
-
