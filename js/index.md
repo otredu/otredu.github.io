@@ -20,4 +20,9 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 ---
 
 - [DOM alkeita](./dom.html)
+- [JS jatkoa](./jatkoa.html)
 - [Harjoituksia 2](./harjoituksia2.html)
+
+---
+
+<!-- - [DOM jatkoa](./dom2.html) -->

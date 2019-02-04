@@ -65,6 +65,12 @@ let myLink = document.getElementById("info");
 Vinkki: Voit katsella DOM-elementtirakennetta, kun valitset *element* välilehden.
 ![Elementtirakenne](img/element_view.PNG)
 
+Jos haluttan hakea kaikki tietyntyyppiset elementit, voidaan käyttää *querySelectorAll*:ia, joka palauttaa kaikki löydetyt elementit taulukon muodossa:
+
+```js
+let myDivs = document.querySelectorAll("div");
+```
+
 ### Demo 2: Elementtien muuttaminen
 
 Nyt käytetään hyväksi demo 1:ssä tallennettuja elementtejä, ja muutetaan niiden attribuutteja.
@@ -128,6 +134,12 @@ document.body.appendChild(myHeader);
 Tutki miltä DOM-puu näyttää nyt. Sivulle ei tule mitään näkyviin ennen kuin lapsielementit on liitetty *body*-elementtiin.
 
 ![Elementtien lisääminen](img/hello_world.PNG)
+
+Jos haluat vielä muuttaa tekstiä (*Hello World*), se onnistuu näin (muuttujassa myText on tallessa luomamme *TextNode*):
+
+```js
+myText.textContent = "Ihan parasta!";
+```
 
 ### Demo 4
 

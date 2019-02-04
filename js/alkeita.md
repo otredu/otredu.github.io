@@ -16,6 +16,7 @@ Kokeile kirjoittaa nyt auenneeseen promptiin:
 1 + 2
 "testi"
 ```
+
 ![Selaimen konsoli](img/console.PNG)
 
 ### Tietotyypit
