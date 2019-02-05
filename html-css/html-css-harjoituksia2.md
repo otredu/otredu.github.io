@@ -4,7 +4,7 @@
 
 Tutustu sivun asetteluun *grid*:in avulla. Voit ottaa pohjaksi *css-demo2*:in koodin ja kokeilla siihen *grid*-asettelua:
 
-![GRID:in käyttö](https://css-tricks.com/snippets/css/complete-guide-grid/)
+[GRID:in käyttö](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 ### Tehtävä 2: Ravintolan sivut
 
