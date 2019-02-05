@@ -17,11 +17,11 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - [HTML alkeita](./html-alkeita.html)
 - [CSS alkeita](./css-alkeita.html)
 - [CSS demo 1](./css-demo1.html)
-- [Harjoituksia 1](./html-harjoituksia1.html)
+- [Harjoituksia 1](./html-css-harjoituksia1.html)
 
 ---
 - [CSS demo 2](./css-demo2.html)
-- [Harjoituksia 2](./html-harjoituksia2.html)
+- [Harjoituksia 2](./html-css-harjoituksia2.html)
 
 <!-- 
 - [HTML lomakkeet](./html-lomakkeet.html) 
