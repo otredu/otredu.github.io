@@ -9,6 +9,7 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 1. HTML alkeet (vk 3)
 2. Harjoituksia 1 ja CSS demo 1 (vk 4)
 3. Harjoituksia 1 jatkuu (vk 5)
+4. Harjoituksia 1 ja CSS demo 2 (vk 6)
 
 ### HTML ja CSS alkeita
 
@@ -16,10 +17,19 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - [HTML alkeita](./html-alkeita.html)
 - [CSS alkeita](./css-alkeita.html)
 - [CSS demo 1](./css-demo1.html)
-- [Harjoituksia 1](./html-harjoituksia.html)
+- [Harjoituksia 1](./html-harjoituksia1.html)
 
 ---
-<!-- - [CSS asettelut](./css-asettelu.html) -->
+- [CSS demo 2](./css-demo2.html)
+- [Harjoituksia 2](./html-harjoituksia2.html)
+
+<!-- 
+- [HTML lomakkeet](./html-lomakkeet.html) 
+- [HTML semantic/structural element](aside, main, footer, header, nav...)
+- CSS animointi
+- CSS @media
+- Canva
+-->
 
 ### Linkkejä hyödyllisiin materiaaleihin
 
