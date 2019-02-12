@@ -25,4 +25,4 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 ---
 
-<!-- - [DOM jatkoa](./dom2.html) -->
+- [Pure JS - demo](./eventit.html)
