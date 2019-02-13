@@ -22,9 +22,9 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 ---
 - [Harjoituksia 2](./html-css-harjoituksia2.html)
+- [HTML lomakkeet](./html-lomakkeet.html)
 
 <!-- 
-- [HTML lomakkeet](./html-lomakkeet.html) 
 - [HTML semantic/structural element](aside, main, footer, header, nav...)
 - CSS animointi
 - CSS @media

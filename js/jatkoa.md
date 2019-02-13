@@ -68,13 +68,31 @@ myObject = {...myObject, new: 122}
 
 ### For-loop
 
-*for*-silmukan avulla voidaan toteuttaa toistoa vaativia toimenpiteitä esim. käydä läpi
-taulukoita. *for*-silmukka toistaa sen sisään kirjoitettua koodia, kunnes sen ehtona oleva lauseke ei enää ole totta. *for*-lauseessa ensin alustetaan silmukka (esim. *let i=0*), sitten kirjoitetaan ehto, joka pitää silmukan toiminnassa, ja lopuksi lauseke, joka päivittää silmukan tilaa (esim. *i++*):
+*for*-silmukan avulla voidaan toteuttaa toistoa vaativia toimenpiteitä esim. käydä läpi taulukoita. *for*-silmukka toistaa sen sisään kirjoitettua koodia, kunnes sen ehtona oleva lauseke ei enää ole totta. *for*-lauseessa ensin alustetaan silmukka (esim. *let i=0*), sitten kirjoitetaan ehto, joka pitää silmukan toiminnassa, ja lopuksi lauseke, joka päivittää silmukan tilaa (esim. *i++*):
 
 ```js
 for(let i=0; i < myList.length; i++){
     console.log(myList[i]);
 }
+```
+
+### map ja foreach
+
+*map* ja *foreach* ovat metodeja, jotka toimivat taulukoille. Niiden avulla voidaan toteuttaa toistoa vaativia operaatioita helposti (ilman *for*-looppia). Nämä funktiot ovat ns. *higher order*-funktioita, mikä tarkoittaa, että niille annetaan parametrina funktio.
+
+Näissä esimerkeissä funktio on annettu nuolifunktiona (lyhyempi):
+
+```js
+let list = [1, 2, 3, 4];
+let newList = list.map(item => 10 * item);
+newList.forEach(item => console.log(item));
+```
+
+Näissä esimerkeissä funktion on annettu perinteisessä muodossa (samat kuin yllä):
+
+```js
+let newList = a.map(function(item){ return 10 * item });
+newList.forEach(function(item){ console.log(item) });
 ```
 
 ### Boolen operaattorit: and, or ja not

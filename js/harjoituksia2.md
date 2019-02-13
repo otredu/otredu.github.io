@@ -35,12 +35,6 @@ Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (h1-otsikko) ja sen a
 
 Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (otsikko) ja sen alle kolme _input_-kenttää, joissa kahdessa ensimmäisessä kysytään lukualueen ala- ja ylärajaa kokonaislukuina (esim. "Anna alaraja:") ja kolmannessa pyydetään arvaamaan kokonaislukua, jota ohjelma ajattelee. Lisää myös uusi GO!-nappi. Tee funktio, joka arpoo kokonaisluvun annetulta väliltä ja tutkii onko se sama, jota käyttäjä on arvannut. Jos arvaus ei mennyt oikein ilmoita sivulla: "Väärin meni. Ajattelin lukua: ... ". Jos arvaus meni oikein, ilmoita: "Oikein! Kannattaisiko lotota?".
 
-### Tehtävä 4. Värin vaihtoa
-
-Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (h1-otsikko). Tee tämä kaikki muu käyttäen JavaScript:iä:
-
- Luo lista (ul, li) funktioista, joita olet käyttänyt DOM:in muokkaamiseen näissä harjoituksissa (esim. QuerySelector, GetElementById jne). Lisää jokaiselle listan alkiolle callback-funktio (onClick), joka vaihtaa sen värin sitä klikattaessa. Ensimmäisellä klikkauksella väri vaihtuu vihreäksi, toisella punaiseksi jne.
-
 ### Lisätehtävä 1: Parempi arvauspeli
 
 Korjaa tehtävän 3:n funktiota niin, että se ei hyväksy järjettömiä lähtöarvoja (alarajaa joka on suurempi kuin yläraja, tai arvausta joka ei edes osu lukuvälille jne.). Anna järkevä virheilmoitus. Lisää uusi ilmoitus mahdollisen vanhan tilalle (ei perään).
