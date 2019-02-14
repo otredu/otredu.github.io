@@ -1,4 +1,4 @@
-## HTML-harjoituksia 1
+## HTML- ja CSS-harjoituksia 1
 
 ### Tehtävä 1: HTML-sivu
 
