@@ -14,7 +14,7 @@ Jos sivulla on jotain lisätietoa, joka on irrallaan sivun rakenteesta se erotet
 
 Navigointitoiminnot sijoitetaan \<nav>:in sisälle.
 
-![Semanttiset elementit](./img/semantic.PNG)
+![Semanttiset elementit](./img/semantic.png)
 
 Muita semanttisia elementtejä ovat: \<details>,
 \<figcaption>, \<figure>,  \<mark>,\<summary> ja \<time>.

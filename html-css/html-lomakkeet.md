@@ -28,12 +28,19 @@ Tietoa voi kirjoittaa \<input>-kenttään. Kentän toimintaa voi säätää mä�
 
 Lähetysnapin saa tehtyä kun *type*-attribuutin asettaa arvoon "submit".
 
+#### text-input
+
+Tavallisen tekstikentän saa, kun *type*-attribuutiksi asettaa "text":
+
 ```html
 Etunimi: <input type="text" name="firstname" value="John" maxlength=30>
 Ikä: <input type="number" name="age">
 <input type="submit" value="Lähetä">
 ```
-*radio*-tyyppiset *input*-kentät ryhmittyvät yhteen, kun niille antaa saman nimen, yhden kentän voi määritellä valmiiksi valituksi (*checked*).
+
+#### radio-input
+
+Radionappi-tyyppisen valinnan saa aikaan asettamalla *type*:ksi "radio". Eri valinnat ryhmittyvät yhteen, kun niille antaa saman nimen, yhden kentän voi lisäksi määritellä valmiiksi valituksi (*checked*).
 
 ```html
   <input type="radio" name="gender" value="man">Mies<br>
@@ -41,7 +48,9 @@ Ikä: <input type="number" name="age">
   <input type="radio" name="gender" value="other" checked>Muu<br>
 ```
 
-*checkbox*-tyyppiset *input*-kentät ryhmitellään vastaavalla tavalla:
+#### checkbox-input
+
+Valintaruutu-tyyppisen valinnan saa aikaan asettamalla *type*:ksi "checkbox". *checkbox*-tyyppiset *input*-kentät ryhmitellään myös *name*-attribuutin avulla. Myös tässä valittu arvo on "checked":
 
 ```html
 <input type="checkbox" name="transport1" value="bike"> Tulen kouluun pyörällä<br>
@@ -49,6 +58,8 @@ Ikä: <input type="number" name="age">
 <input type="checkbox" name="transport3" value="buss"> Tulen kouluun bussilla<br>
 <input type="checkbox" name="transport4" value="onfoot" checked> Tulen kouluun kävellen<br>
 ```
+
+#### Muut input-tyypit
 
 *input*-tyyppejä on muitakin. kokeile näitä:
 
