@@ -21,11 +21,11 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - [Harjoituksia 1](./html-css-harjoituksia1.html)
 
 ---
-- [Harjoituksia 2](./html-css-harjoituksia2.html)
+- [Semanttiset elementit](./semanttiset.html)
 - [HTML lomakkeet](./html-lomakkeet.html)
+- [Harjoituksia 2](./html-css-harjoituksia2.html)
 
 <!-- 
-- [HTML semantic/structural element](aside, main, footer, header, nav...)
 - CSS animointi
 - CSS @media
 - Canva
