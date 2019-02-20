@@ -50,7 +50,7 @@ Toinen vaihtoehto on lähteä liikkeelle tästä HTML-koodista:
 
 *Tehtävä muokattu Leena Järvenkylä-Niemen tehtävästä*
 
-Laadi lappilaista ruokaa tarjoavalle ravintola Oulalle viikon lounaslistasivu. Alimpana tällä sivulla on suunnitelma viikon ruokalistasta.
+Laadi lappilaista ruokaa tarjoavalle ravintola Lapintaialle viikon lounaslistasivu. Alimpana tällä sivulla on suunnitelma viikon ruokalistasta.
 
 Laadi sivu käyttäen HTML:ää, validoi se ja tee muotoilut käyttäen CSS:ää. Voit halutessasi jatkaa tehtävässä 1 tehdyllä pohjalla tai luoda täysin uuden rakenteen.
 
@@ -67,12 +67,12 @@ Sijoita ruokalista suurin piirtein keskelle sivua. Lisää sivun alareunaan eri 
 
 #### Yhteystiedot ja aukioloajat:
 
-Ravintola Oula,
-Hallituskatu 12,
-96200 ROVANIEMI
+Ravintola Lapintaika,
+Ravintolakatu 2,
+98765 LAPINMAA
 
-Puh. (016) 555 4755
-Sähköposti: ravintola.oula@oulanet.fi
+Puh. (012) 345 6789
+Sähköposti: varaukset@jokuposti.net
 
 aukioloajat: ma - pe, 10:30 - 15:00
 
