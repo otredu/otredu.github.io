@@ -22,12 +22,13 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 ---
 - [Semanttiset elementit](./semanttiset.html)
-- [HTML lomakkeet](./html-lomakkeet.html)
+- [HTML-lomakkeet](./html-lomakkeet.html)
+- [Responsiivisuus](./responsiivisuus.html)
 - [Harjoituksia 2](./html-css-harjoituksia2.html)
 
 <!-- 
-- CSS animointi
-- Canva
+- CSS animointi ja canvas
+- Bootstrap
 -->
 
 ### Linkkejä hyödyllisiin materiaaleihin
