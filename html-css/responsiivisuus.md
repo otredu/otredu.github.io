@@ -54,3 +54,9 @@ Voit kokeilla miltä sivusi näyttää eri laitteilla, vaaka- ja pystyasennossa:
 ![iPhone-pysty](./img/resp_iphone_pysty.PNG)
 
 ![iPhone-vaaka](./img/resp_iphone_vaaka.PNG)
+
+### Lisätietoa
+
+- Tutustu @media-säännön käyttöön [@media w3school](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
+- Video @media-säännön käytöstä  
+[HTML5 and CSS3 Responsive design with media queries](https://www.youtube.com/watch?v=fA1NW-T1QXc)
