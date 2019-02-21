@@ -14,14 +14,14 @@ Joskus muutoksia tulee useammalta *local*-repository:ltä. Silloin *remote* ja k
 
 Jos unohdat tehdä *pull*:in ja aloitat koodaamisen, teet *commit*:eja, *local*-repoosi, *push*-operaatio ei enää onnistukaan, koska *local* ja *remote* ovat nyt epäsynkassa.
 
-!["Push failed"](img/git_fail_fetch.png)
+!["Push failed"](img/git_fail_fetch.PNG)
 
 Hae ensin muutokset *remote*-reposta:
 
     git fetch
     git status
 
-!["Git status"](img/git_pull_to_merge.png)
+!["Git status"](img/git_pull_to_merge.PNG)
 
 Tässä vaiheessa git *status* ilmoittaa, että *remote*-repo on sinua edellä *ahead* ja sinun tulee yhdistää ne tekemällä *pull*:in.
 
@@ -29,10 +29,10 @@ Tässä vaiheessa git *status* ilmoittaa, että *remote*-repo on sinua edellä *
 
 *auto-merge* ei aina onnistu, varsinkaan jos muutokset ovat samassa tiedostostossa. Jos gitbash ilmoittaa kohdanneensa *merge conflict*:in, sinun pitää ne korjata konfliktit itse. 
 
-!["Merge conflicts"](img/automerge_fail.png)
+!["Merge conflicts"](img/automerge_fail.PNG)
 
 Avaa ko. tiedosto VSCode:lla. Valitse vertailu, niin muutosten editointi on helpompaa.
 
-!["Merge + CSCode"](img/merge_conflict_vscode.png)
+!["Merge + CSCode"](img/merge_conflict_vscode.PNG)
 
 Lopuksi muutokset pitää *push*:ata *remote*-repoon (add-commit-push).
