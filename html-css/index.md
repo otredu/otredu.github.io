@@ -27,7 +27,6 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 <!-- 
 - CSS animointi
-- CSS @media
 - Canva
 -->
 

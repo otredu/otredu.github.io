@@ -114,10 +114,12 @@ Tee ravintolalle asiakaspalautelomake, jossa kysytään mahdollisimma monipuolis
 
 - Tutustu [lomakekenttiin](./html-lomakkeet.html)
 
-### Lisätehtävä: Mobiiliversio
+### Tehtävä 4: Ravintolasivun mobiiliversio
 
-Tee ravintolan pääsivun ulkonäöstä (rakenne, väritys, sisältö) dynaaminen, niin että mobiililaitteilla katsottuna sen ulkonäkö on erilainen (ei taustakuvaa, ei vierekkäin olevia alueita jne.). Sivun tulee reagoida myös siihen kun laite käännetään pysty- tai vaaka-asentoon. Käytä *@media*-sääntöä CSS:ssä. Jos haluat jättää kokonaan jonkun osan näyttämättä, sen *display*-attribuutin voi asettaa arvoon *none*.
+Tee ravintolan pääsivun ulkonäöstä (rakenne, väritys, sisältö) dynaaminen, niin että mobiililaitteilla katsottuna sen ulkonäkö on erilainen (ei taustakuvaa, ei vierekkäin olevia alueita, mahdollisesti grid-asettelu vaihtuu flex-box-asetteluun jne.). Sivun tulee reagoida myös siihen kun laite käännetään pysty- tai vaaka-asentoon. Käytä *@media*-sääntöä CSS:ssä. Jos haluat jättää kokonaan jonkun osan näyttämättä, sen *display*-attribuutin voi asettaa arvoon *none*.
 
-Tutustu responsiivisen sivun tekemiseen [@media-säännön avulla](responsiivisuus.html).
+Tutustu responsiivisen sivun tekemiseen [@media-säännön avulla](responsiivisuus.html). Harjoittele ensin tehtävän 1 grid-pohjalla.
 
-Testaa myös lomakkeen toimiminen mobiililaitteella.
+### Lisätehtävä: Asiakaspalautesivun mobiiliversio
+
+Testaa myös lomakkeen toimiminen mobiililaitteella ja korjaa tarvittaessa CSS:ää.
