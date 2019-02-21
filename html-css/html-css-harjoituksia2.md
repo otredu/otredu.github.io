@@ -119,5 +119,6 @@ Tee ravintolalle asiakaspalautelomake, jossa kysytään mahdollisimma monipuolis
 Tee ravintolan pääsivun ulkonäöstä (rakenne, väritys, sisältö) dynaaminen, niin että mobiililaitteilla katsottuna sen ulkonäkö on erilainen (ei taustakuvaa, ei vierekkäin olevia alueita jne.). Sivun tulee reagoida myös siihen kun laite käännetään pysty- tai vaaka-asentoon. Käytä *@media*-sääntöä CSS:ssä. Jos haluat jättää kokonaan jonkun osan näyttämättä, sen *display*-attribuutin voi asettaa arvoon *none*.
 
 - Tutustu @media-säännön käyttöön [@media w3school](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
+- Video @media-säännön käytöstä [https://www.youtube.com/watch?v=fA1NW-T1QXc]
 
 Testaa myös lomakkeen toimiminen mobiililaitteella.
