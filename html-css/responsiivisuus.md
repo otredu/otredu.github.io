@@ -56,7 +56,9 @@ Jotta sivun elementit eivät kutistu aivan älyttömiksi ruudun leveyden kaventu
 
 ### Mitat
 
-Sivuston asettelun lisäksi on syytä tarkistaa sivulla käytetyt mitat kuten fonttien koko, margin ja padding asetukset jne. Vaikka @media-säännöllä voidaan määritellä eri kokoisia fontteja ei näytöille, jotta kovin montaa kohtaa koodissa ei joutuisi säätämään, kannattaa määritellä sivun perusfonttikoko (*body*-tagissä) ja viitata tähän kaikissa muissa mitoissa käyttämällä *em* yksikköä, jonka koko määrittyy suhteessa sivun perusfonttikokoon.
+Sivuston asettelun lisäksi on syytä tarkistaa sivulla käytetyt mitat kuten fonttien koko, *margin* ja *padding* asetukset jne. Vaikka @media-säännöllä voidaan määritellä eri kokoisia fontteja eri näytöille, kannattaa sivun mitat määritellä suhteessa sivun perusfonttikokoon, joka annetaan  *body*-tagissä. Kaikki muut mitat annetaan käyttämällä *em*-yksikköä, joka suhteutuu sivun perusfonttikokoon. Näin saadaan kätevästi kaikki sivun mitat säätymään automaatisesti suhteessa sivun perusfonttikokoon, mikä vähentää tarvetta säätää joka mittaa erikseen eri kokoisille näytöille.
+
+Toinen dynaamisuutta lisäävä käytänne on käyttää pikseleiden tilalla prosentteja.
 
 ```css
 body{
