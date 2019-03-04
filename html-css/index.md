@@ -28,9 +28,12 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - [Responsiivisuus](./responsiivisuus.html)
 - [Harjoituksia 2](./html-css-harjoituksia2.html)
 
+---
+- [Bootstrap](./bootstrap.html)
+- [Github.io](./githubpages.html)
+
 <!-- 
 - CSS animointi ja canvas
-- Bootstrap
 -->
 
 ### Linkkejä hyödyllisiin materiaaleihin
