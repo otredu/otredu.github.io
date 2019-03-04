@@ -8,10 +8,13 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 1. Johdanto ja JS alkeita (vk 2)
 2. JS ja HTML, harjoituksia 1 (vk 3)
-2. DOM alkeita (vk 4)
-5. Harjoituksia 2 (vk 5)
-6. Harjoituksia 2 (vk 6)
-7. Pure JS - demo (vk 7)
+3. DOM alkeita (vk 4)
+4. Harjoituksia 2 (vk 5)
+5. Harjoituksia 2 (vk 6)
+6. Pure JS - demo (vk 7)
+7. Harjoituksia 3 (vk 8)
+- hiihtoloma
+8. Harjoituksia 3 (vk 9)
 
 ### JavaScript alkeita
 
