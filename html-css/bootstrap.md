@@ -94,6 +94,7 @@ Bootstrap sisältää paljon erilaisia valmiita komponentteja, joiden avulla net
 - [Collapse](https://getbootstrap.com/docs/4.3/components/collapse/)
 - [Dropdown](https://getbootstrap.com/docs/4.3/components/dropdowns/)
 - [Navbar](https://getbootstrap.com/docs/4.3/components/navbar/)
+- [Collapse](https://getbootstrap.com/docs/4.3/components/collapse/)
 
 ### Valmiit sivupohjat
 

@@ -30,7 +30,7 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 ---
 - [Bootstrap](./bootstrap.html)
-- [Github.io](./githubio.html)
+- [Harjoituksia 3](./html-css-harjoituksia3.html)
 
 <!-- 
 - CSS animointi ja canvas
