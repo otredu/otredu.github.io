@@ -33,3 +33,8 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 - [Pure JS - demo](./eventit.html)
 - [Harjoituksia 3](./harjoituksia3.html)
+
+---
+
+- [jQuery](./jquery.html)
+- [Harjoituksia 4](./harjoituksia4.html)
