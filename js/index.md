@@ -38,3 +38,8 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 - [jQuery](./jquery.html)
 - [Harjoituksia 4](./harjoituksia4.html)
+
+---
+
+Lisäharjoituksia, jotka voi tehdä haluamallaan tekniikalla:
+- [Harjoituksia 5](./harjoituksia5.html)
