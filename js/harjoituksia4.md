@@ -1,6 +1,6 @@
 ## Harjoituksia 4
 
-Tee seuraavat harjoitukset käyttäen jQuery-kirjastoa. Yritä tehdä harjoitukset pelkällä JavaScriptillä, pidä HTML ja JavaScript omissa tiedostoissaan.
+Tee seuraavat harjoitukset käyttäen jQuery-kirjastoa. Tee vain pyydetyt osiot HTML:llä ja loput pelkällä JavaScriptillä, pidä HTML ja JavaScript omissa tiedostoissaan.
 
 ### Tehtävä 1
 
@@ -14,7 +14,7 @@ Tee HTML:n avulla sivu, jolla on kolme div:iä, joissa kussakin on teksti ja sii
 
 ### Tehtävä 3
 
-Tee html-sivu, jossa on input-tekstikenttä sekä nappi. Nappia painettaessa luodaan uusi tekstikappale (p) johon sijoitetaan tekstikentässä ollut teksti.
+Tee html-sivu, jossa on input-tekstikenttä sekä nappi. Nappia painettaessa luodaan uusi tekstikappale (p) johon sijoitetaan tekstikentässä ollut teksti (esim. yksinkertainen muistilista).
 
 - Luo uusi p-elementti
 - Lisää tekstiä elementille
