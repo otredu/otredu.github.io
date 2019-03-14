@@ -112,6 +112,20 @@ $(".harj4").show();
 $(".harj4").remove()
 ```
 
+### val
+
+*input*-elementtien *value*-kenttään pääsee käsiksi näin *val*-metodin kautta. Saman metodin avulla arvon voi myös asettaa:
+
+```js
+if($("input").val() === ""){
+  $("input").val("uusi arvo");
+}
+```
+
+### closest, next, parent
+
+Usein on tarve löytää jonkun elementin lähellä oleva elementti. *closest* palauttaa lähimmän elementin, joka täsmää hakuehtoihin selattaessa puuta ylöspäin. *next* palauttaa ensimmäisen hakuehtoihin täsmäävän elementin selattaesa puuta eteenpäin (sama kuin seuraava *sibling*).*parent*:in avulla saadaa suoraan ko. elementin *parent*.
+
 ### addClass, removeClass
 
 Näiden funktioiden avulla voidaan ohjata CSS-animaatioita päälle ja pois. Animaatio määritellään jollekin CSS-luokalle, joka käynnistetään JavaScript:in avulla lisäämällä ko. luokka elementille. Animaatio saadaan loppumaan poistamalla ko. luokka animaatiolta.

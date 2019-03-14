@@ -10,18 +10,12 @@ Lisää nappi joka palauttaa alkutilanteen (.show()), lisää siis sillekin tapa
 
 ### Tehtävä 2
 
-Tee HTML:n avulla sivu, jolla on kolme div:iä, joissa kussakin on teksti ja siihen liityvä kuva. Tee jQueryn avulla ohjelma, joka piilottaa sivulla näkyvät kuvat, ja näyttää ne vasta kun käyttäjä vie hiiren kuvaan liittyvän tekstin päälle.
+Tee JavaScriptin avulla sivu, jolla on kolme div:iä, joissa kussakin on teksti ja siihen liityvä kuva. Tee jQueryn avulla ohjelma, joka piilottaa sivulla näkyvät kuvat, ja näyttää ne vasta kun käyttäjä vie hiiren kuvaan liittyvän tekstin päälle.
 
 ### Tehtävä 3
 
-Tee html-sivu, jossa on input-tekstikenttä sekä nappi. Nappia painettaessa luodaan uusi tekstikappale (p) johon sijoitetaan tekstikentässä ollut teksti (esim. yksinkertainen muistilista).
-
-- Luo uusi p-elementti
-- Lisää tekstiä elementille
-- Lisää uusi elementti painikkeen jälkeen ($(this).after(uusi))
-
-Katso mallia [täältä](http://www.w3schools.com/jquery/jquery_dom_add.asp).
+Tee JavaScriptin avulla input-tekstikenttä sekä nappi. Nappia painettaessa luodaan napin alapuolelle uusi tekstikappale (p), johon sijoitetaan tekstikentässä ollut teksti (esim. yksinkertainen muistilista).
 
 ### Tehtävä 4
 
-Tee HTML-sivu, jolla on lomake, jossa kysytään: nimi, sähköpostiosoite ja puhelin. Lisää siihen myös lähetä-nappi. Kun nappia painetaan tarkista, että kaikissa kentissä on tekstiä, jos ei ole ilmoita siitä käyttäjälle, jos kaikki on kunnossa piilota lomake, ja kiitä käyttäjää.
+Tee JavaScriptin avulla lomake, jossa kysytään: nimi, sähköpostiosoite ja puhelin. Lisää siihen myös lähetä-nappi. Kun nappia painetaan tarkista, että kaikissa kentissä on tekstiä, jos ei ole ilmoita siitä käyttäjälle (esim. alertin avulla), jos kaikki on kunnossa piilota lomake, ja kiitä käyttäjää.
