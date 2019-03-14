@@ -1,7 +1,5 @@
 ## Julkiset tietoverkot
 
-Materiaalia, joka täydentyy kurssin edetessä...
-
 Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja teet siinä olevat harjoitukset.
 
 ### Kurssin sisältö ja aikataulu 2019
@@ -12,6 +10,8 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 4. Harjoituksia 1 ja CSS demo 2 (vk 6)
 5. Semanttiset elementit ja grid, Harjoituksia 2 (vk 7)
 6. Responsiivisuus, Harjoituksia 2 jatkuu (vk 8)
+7. Boostrap, Harjoituksia 3 (vk 10, 11)
+8. CSS:animaatiot (vk 12)
 
 ### HTML ja CSS alkeita
 
@@ -32,9 +32,10 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 - [Bootstrap](./bootstrap.html)
 - [Harjoituksia 3](./html-css-harjoituksia3.html)
 
-<!-- 
-- CSS animointi ja canvas
--->
+---
+Lisätehtäviä:
+- [CSS-animaatiot](./animaatiot.html)
+- [Harjoituksia 4](./html-css-harjoituksia4.html)
 
 ### Linkkejä hyödyllisiin materiaaleihin
 
