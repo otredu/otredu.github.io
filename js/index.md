@@ -15,6 +15,9 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 7. Harjoituksia 3 (vk 8)
 - hiihtoloma
 8. Harjoituksia 3 (vk 9)
+9. JQuery-demo (vk 10)
+10. JQuery-demo loppuun, harjoituksia 4 (vk 11)
+11. Harjoituksia 4 (vk 12)
 
 ### JavaScript alkeita
 
