@@ -102,5 +102,6 @@ Lisätestit tehtäisiin kuten *@test* kohdan funktiossa, voit itse keksiä testi
 ### Lisätietoa
 
 - [Headless testing with Selenium webdriver](http://pragmatictestlabs.com/2017/11/16/headless-testing-selenium-webdriver/)
+- [ChromeDriver class](https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/chrome/ChromeDriver.html)
 - [How to run Selenium tests with JUnit](https://www.blazemeter.com/blog/how-to-run-a-selenium-test-with-junit)
 - [Introduction to Unit Testing Using JUnit4 on NetBeans IDE](https://dzone.com/articles/introduction-to-the-unit-testing-technique-using-j)
