@@ -1,22 +1,5 @@
 ## JavaScript jatkoa
 
-### Switch
-
-*switch*-rakenteen avulla voidaan valita suoritettava koodilohko:
-
-```js
-switch(language) {
-  case "swedish":
-    console.log("God dag!")
-    break;
-  case "finnish":
-    console.log("Päivää!")
-    break;
-  default:
-    console.log("Hello!")
-}
-```
-
 ### Taulukko (array)
 
 Taulukkoon voi tallentaa erilaista tietoa: lukuja, merkkijonoja, totuusarvoja, toisia taulukoita, olioita tai jopa funktioita. Tieto sijaitsee taulukossa järjestyksessä, eli taulukon alkioihin voi viitata niiden sijaintiin liittyvällä indeksillä (kokonaisluku, indeksointi alkaa nollasta).
@@ -138,3 +121,20 @@ JavaScript tukee seuraavia lyhennemerkintöjä:
 | i /= 10 | i = i / 10 |
 | i %= 5 | i = i % 5 |
 | i **= 3 | i = i ** 3 |
+
+### Switch
+
+*switch*-rakenteen avulla voidaan valita suoritettava koodilohko:
+
+```js
+switch(language) {
+  case "swedish":
+    console.log("God dag!")
+    break;
+  case "finnish":
+    console.log("Päivää!")
+    break;
+  default:
+    console.log("Hello!")
+}
+```
