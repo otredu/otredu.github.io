@@ -1,6 +1,6 @@
 ## JavaScript HTML-sivulla
 
-### Demo 1
+### Esimerkki 1
 JavaScript:iä voi lisätä HTML-koodin sisään. Avaa seuraava HTML-sivu selaimeen ja paina Testinappia:
 
 ```html
@@ -18,7 +18,7 @@ JavaScript:iä voi lisätä HTML-koodin sisään. Avaa seuraava HTML-sivu selaim
 
 Tässä JavaScript:in *alert()*-funktiota on liitetty suoraan nappiin. 
 
-### Demo 2
+### Esimerkki 2
 
 Edellinen tapa ei sovellu pitkille koodin pätkille, joten toinen tapa on kirjoittaa JavaScript-funktioita *script*-tagien väliin.
 
@@ -45,7 +45,7 @@ Kun painat kyselynappia, *kysely()*-nimistä JavaScript-funktiota kutsutaan. Tä
 
 Jatka koodia niin, että se kysyy myös käyttäjän ikää, ja tervehtimisen lisäksi kertoo kuinka vanha hän on.
 
-## Demo 3
+### Esimerkki 3
 
 Vielä parempi tapa olisi eriyttää JavaScript-koodi omaan tiedostoonsa. Siirrä edellisen kohdan JavaScript-koodi omaan tiedostoonsa *demo.js* ja tallenna se samaan hakemistoon html-tiedoston kanssa. Muuta html-tiedoston *script*-tagi nyt tähän muotoon:
 

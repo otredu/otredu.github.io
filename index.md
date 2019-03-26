@@ -5,6 +5,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 
 ### Kurssit 2019
 
+- [Asiointipalvelujen rakentamisen tekniikka](./js-php/index.html)
 - [Asiointipalvelujen rakentamisen tekniikka JS](./js/index.html)
 - [Testaaminen ja testiympäristöt](./testaus/index.html)
 - [Julkiset tietoverkot](./html-css/index.html)

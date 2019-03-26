@@ -116,13 +116,13 @@ Number("kolme") + 10
 
 ### Merkkijonot
 
-Pidempiä merkkijonoja voidaan muodostaan yhdistelemällä lyhyempiä. Lausekkeessa voi olla mukana muuttujia sekä lukuja. Usein merkkijonoja tulostetaan kosolille:
+Pidempiä merkkijonoja voidaan muodostaan yhdistelemällä lyhyempiä. Lausekkeessa voi olla mukana muuttujia sekä lukuja. Usein merkkijonoja tulostetaan konsolille:
 
 ```js
 console.log("Tämän ohjelman nimi on: " + name);
 ```
 
-Toinen debuggaustapa on käyttää alert-ikkunaa:
+Selaimessa toimii myös alert-ikkuna (ei toimi node.js:n kanssa):
 
 ```js
 alert('Soita numeroon ' + number);
