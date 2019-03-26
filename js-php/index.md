@@ -4,9 +4,9 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 ## Johdatus ohjelmointiin JavaScriptin avulla
 
-- [Johdanto](./johdanto.html)
-- [JS alkeita](./alkeita.html)
-- [JS jatkoa](./jatkoa.html)
+- [Johdanto](../js/johdanto.html)
+- [JS alkeita](../js/alkeita.html)
+- [JS jatkoa](../js/jatkoa.html)
 - [Harjoitukset 1](./harjoitukset1.html)
 
 ## PHP-alkeet
