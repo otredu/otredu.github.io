@@ -69,9 +69,34 @@ Korjaa edellisiä funktioita niin, että ne tarkistavat kaikki saamansa syöttee
  throw new Error('ei lukuja');
 ```
 
+Kun käytät tällaista funktiota, joka heittää poikkeuksen, kutsu sitä try-cacth-lauseen sisältä:
+
+
+
 ### Lisätehtävä 2
 
 Asenna JEST-yksikkötestaus kirjasto ja kirjoita yksikkötestit em. funktioille.
+
+Testit kirjoitetaan erilliseen tiedostoon, jonka nimen pitää olla muotoa *.test.js.
+
+Testattava koodi on oma moduulinsa, jonka funktiot pitää *export*:ata
+
+```js
+  module.exports = { summa, ikatesti };
+```
+
+Testitiedostossa ne otetaan käyttöön *require*:n avulla:
+
+```js
+const { summa, ikatesti } = require('./harjoitukset1'); 
+
+test('yhteenlasku kokonaisluvuilla', () => {
+    const tulos = summa(2, 3);
+    expect(tulos).toBe(5);
+  });
+```
+
+Katso tarkemmat ohjeet JEST:in asennuksesta ja ajamisesta:
 
 - [JEST:in asennus](../testaus/jest.html)
 - [JEST alkeet](../testaus/jest-alkeet.html)
