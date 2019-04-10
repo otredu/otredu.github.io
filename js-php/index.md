@@ -9,6 +9,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [JS alkeita](../js/alkeita.html)
 - [JS jatkoa](../js/jatkoa.html)
 - [Harjoitukset 1](./harjoituksia1.html)
+- [Harjoitukset 2](./harjoituksia2.html)
 
 ## PHP-alkeet
 

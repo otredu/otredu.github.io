@@ -33,9 +33,9 @@ Listan pituuden saa selville *length*:in avulla.
 myList.length;
 ```
 
-### Olio (object)
+### Olio (object), assosiatiivinen taulukko (associative array)
 
-Myös olio (*object*) koostuu joukosta ominaisuuksia (*properties*), joihin pääsee käsiksi niihin liitetyn nimen avulla. Ominaisuudet voivat olla tyypiltään merkkijonoja, lukuja, totuusarvoja, taulukoita, toisia olioita tai funktioita.
+JavaScriptin taulukko on itseasiassa JavaScript-olio. JavaScript on oliokieli, joten lähes kaikki rakenteet ovat olioita, poislukien luvut, totuusarvot, merkkijonot, *null* sekä *undefined*. Myös funktiot ovat olioita. Taulukko on JavaScript:in määrittelemä olio, mutta käyttäjä voi luoda myös omia olioita. Olio (*object*) koostuu joukosta ominaisuuksia (*properties*), joihin pääsee käsiksi niihin liitetyn nimen avulla. Ominaisuudet voivat olla tyypiltään merkkijonoja, lukuja, totuusarvoja, taulukoita, toisia olioita tai funktioita. Tällaista rakennetta, jossa nimeen liitetään arvo, kutsutaan ohjelmoinnissa myös assosiatiiviseksi taulukoksi (*associative array*).
 
 ```js
 let myObject = {name: "Shopping day", buy: ["milk", "butter", "bread"], car: true, cash: 150}
@@ -64,6 +64,27 @@ Olioon voi myös lisätä uusia ominaisuuksia. Vanhan olion ominaisuudet kopioda
 
 ```js
 myObject = {...myObject, new: 122}
+```
+
+Funktioita, jotka on liitetty johonkin olioon kutsutaan *metodeiksi*. Metodit käsittelevät yleensä juuri siihen olioon liittyviä tietoja. Niihin pääsee käsiksi *this*:in avulla. *this* viittaa siihen olioon, johon metodi on liitetty. Lisätään *myObject*:iin uusi metodi eli funktio nimeltä *debug*.
+
+```js
+myObject = {...myObject, debug: function(){
+  console.log(this.name, this.cash, this.car, this.buy);
+  }
+};
+```
+
+Nyt uutta metodia (funktiota, joka on liitetty olioon) voidaan kutsua:
+
+```js
+myObject.debug();
+```
+
+JavaScript-oliot saavat automaattisesti joitakin metodeja *perittynä* niiden prototyypiltä. Esim. jokaisen olion voi tulostaa merkkijonoksi sen JavaScript-olion *toString()*-metodin avulla:
+
+```js
+myObject.toString();
 ```
 
 ### For-loop
@@ -137,4 +158,20 @@ switch(language) {
   default:
     console.log("Hello!")
 }
+```
+
+### Muuttajaan viittaaminen merkkijonon sisällä (Template literals)
+
+JavaScriptissä voidaan viitata muuttujan arvoon suoraan merkkijonon sisältä, kun merkkijono muodostetaan takakenolla heittomerkillä eli *back-tick*:illä: ` . Muuttujanimen eteen pitää lisäksi lisätä dollarimerkki: $ ja muuttujanimen ympärille aaltosulut: {}.
+
+```js
+let name = "Jussi;
+let question = `Hei ${name}, kävisitkö kaupassa?`;
+```
+
+Muuttuja johon viitataan voi olla myös taulukko tai olio.
+
+```js
+let shoppinglist = ["maitoa", "leipää", "juustoa"];
+let message =  `Ostaisitko: ${shoppinglist[0]}, ${shoppinglist[1]} ja ${shoppinglist[2]}?`;
 ```

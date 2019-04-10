@@ -71,8 +71,6 @@ Korjaa edellisiä funktioita niin, että ne tarkistavat kaikki saamansa syöttee
 
 Kun käytät tällaista funktiota, joka heittää poikkeuksen, kutsu sitä try-cacth-lauseen sisältä:
 
-
-
 ### Lisätehtävä 2
 
 Asenna JEST-yksikkötestaus kirjasto ja kirjoita yksikkötestit em. funktioille.
