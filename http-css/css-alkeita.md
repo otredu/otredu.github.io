@@ -1,5 +1,0 @@
-## CSS-alkeita
-
-### Syntaksi
-
-Tulossa...
