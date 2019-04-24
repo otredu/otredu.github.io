@@ -27,6 +27,8 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 ## PHP-alkeet
 
+- [PHP-alkeet](./php-alkeet.html)
+
 ## Lisämateriaalia
 
 - [Java MOOC](./javamooc.html)
