@@ -21,7 +21,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 ## Tietokanta (MySQL) ja PHP:in PDO-rajapinta
 
 - [MySQL komentorividemo](./mysql.html)
-- [PHP:n PDO-rajapinta](./PDO.html)
+<!-- - [PHP:n PDO-rajapinta](./PDO.html) -->
 
 ## JavaScript selaimessa
 

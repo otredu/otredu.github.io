@@ -44,3 +44,9 @@ Lisätehtäviä:
 - CSS-videotutoriaali [CSS Crash Course For Absolute Beginners](https://youtu.be/yfoY53QXEnI)
 
 - Ilmainen HTML + CSS - kirja [Interneting is hard](https://internetingishard.com/html-and-css/)
+
+- Flexbox - sammakkopeli [Flexbox Froggy](https://flexboxfroggy.com/)
+
+- Flexbox Defense- peli [Flexbox Defense](http://www.flexboxdefense.com/)
+
+- Grid Garden - peli [Grid Garden](https://cssgridgarden.com/)
