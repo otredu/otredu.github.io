@@ -28,6 +28,8 @@ Materiaalia, joka täydentyy kurssin edetessä...
 ## PHP-alkeet
 
 - [PHP-alkeet](./php-alkeet.html)
+- [Harjoitukset 3](./harjoituksia3.html)
+- [HArjoitukset 4](./harjoituksia4.html)
 
 ## Lisämateriaalia
 
