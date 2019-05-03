@@ -107,7 +107,7 @@ PHP:ssa näin saatuja arvoja kutsutaan superglobaaleiksi muuttujiksi. Ne tallent
 
 ```php
 <?php  
-    echo "Hello, " .  $_GET['name']; 
+    echo "Hello, " .  $_GET['name'];
 ?>
 ```
 
@@ -323,13 +323,14 @@ function add_alv2($price, $alv){
 }
 ```
 
-Tätä kutsuttaisiin näin (ainoa ero on pisteen muuttuminen pilkuksi):
+Tätä kutsuttaisiin näin:
 
 ```php
 <?php
 require 'functions.php';
 
-echo "Hinta + alv: ", add_alv(40, 0.24);
+echo "Hinta + alv: ";
+add_alv2(40, 0.24);
 ```
 
 ### Funktioita merkkijonojen muokkaamiseen
