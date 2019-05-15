@@ -37,7 +37,7 @@ Tehtävä: Tee käyttöliittymäsuunnitelma
 
 ### Harjoitus 3
 
-Tee PHP-ohjelma, joka saa osoiterivillä (*submit form*:in kautta) parametrinaan, joko puhelinnumeron tai nimen. Sivulle palautetaan haetun henkilön nimi ja puhelinnumero. Tallenna nimet ja numerot assosiatiiviseen taulukkoon. Käytä ehtolausetta kun tarkistat kumpi parametri on annettu  (*$_GET*).
+Tee PHP-ohjelma, joka saa osoiterivillä (*submit form*:in kautta) parametrinaan, joko puhelinnumeron tai nimen. Sivulle palautetaan haetun henkilön nimi ja puhelinnumero. Tallenna nimet ja numerot assosiatiiviseen taulukkoon. Käytä ehtolausetta kun tarkistat kumpi parametri on annettu  (*$_GET*). Voit etsiä parametrin arvoa *array_search*-funktion avulla.
 Tulostus voisi näyttää tältä:
 
 ---
