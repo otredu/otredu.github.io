@@ -134,7 +134,7 @@ class Task {
 }
 ```
 
-Luokka sisältää muuttujat *$description* sekä *$completed*, jonka alkuarvo on *false*. Luokan rakentaja (*__construct*) on funktio, joka saa parametrin *desc*, joka tallennetaan sisäiseen muuttujaan *this->$description*.
+Luokka sisältää muuttujat *$description* sekä *$completed*, jonka alkuarvo on *false*. Luokan rakentaja (*__construct*) on funktio, joka saa parametrin *desc*, joka tallennetaan sisäiseen muuttujaan *$this->description*.
 
 ```php
     public function __construct($desc)
