@@ -65,3 +65,15 @@ Alennus: -25%
 ### Harjoitus 5
 
 Tee harjoitus 2 käyttäen olioita (*class*). Katso mallia [täältä](https://otredu.github.io/js-php/php-jatko.html).
+
+### Lisäharjoitus 1
+
+Luo XAMPP:in MySQL:ään ToDo-tietokanta (database), sinne taulu (table) ja tauluun tietueita (record), joko [MySQL-demon](https://otredu.github.io/js-php/mysql.html) tyylillä tai phpMyAdmin:in kautta. Kysy tietueet tietokannata php:n PDO-luokan avulla [katso ohje PDP:n käytöstä](http://www.leeniemi.net/sasp18/index.php?sivu=phpm15) ja esitä ne sivullasi (kuten tehtävässä 2).
+
+[Leenan PDO-esimerkki tietokannan tietueiden lukemisesta](http://www.leeniemi.net/sasp18/index.php?sivu=pdemo14)
+
+### Lisäharjoitus 2
+
+Tee lomake, jonka kautta voit tallentaa tietokantaan uusia ToDo-tehtäviä.
+
+[Leenan PDO-esimerkki tietueiden lisäämisestä tietokantataan](http://www.leeniemi.net/sasp18/index.php?sivu=pdemo15)
