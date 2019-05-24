@@ -43,6 +43,16 @@ Jos *local*- ja *remote*-repo ovat olemassa, tiedostoja päivitetään Github:ii
     git commit -m "Second update"
     git push
 
+## Repon poistaminen
+
+Joskus asiat menevät pieleen, ja on tarpeen poistaa lokaalirepo. Sen voi tehdä poistamalla CMD:n kautta kansion jonka nimi on *.git* (piilotettu kansio):
+
+```cmd
+rm -rf .git
+```
+
+Remote repon voi poistaa *github.com*-sivuston kautta.
+
 ## Linkkejä
 
 - Uusi repo

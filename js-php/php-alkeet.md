@@ -58,6 +58,8 @@ Voit myös käynnistää php:n sisäänrakennetun web-palvelimen:
 
 Kirjoita selaimen osoitekenttään: localhost:8888 ja kirjoittamasi koodi ilmestyy selainikkunaan.
 
+*Huom* Jos PHP:ta ei löydy, aseta se [polkuun näillä ohjeilla](env-path.html).
+
 ### PHP ja HTML
 
 PHP-kieli on suunniteltu HTML-sivujen luomiseen dynaamisesti. Sitä voidaan liittää sivulle HTML-koodin sekaan käyttäen *<?php* -tägiä. Sivulla voi olla käytössä myös *.css*-tiedosto.
