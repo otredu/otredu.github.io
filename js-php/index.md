@@ -40,6 +40,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 ## Lisämateriaalia
 
 - [Java MOOC](./javamooc.html)
+- [Freecodecamp - JavaScript](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/​)
 
 ## Hyödyllisiä linkkejä
 
