@@ -15,8 +15,9 @@
 
 3. Valitse Path -> Muokkaa
 
-4. Valitse Uusi ja kirjoita c:\xampp\php -> OK -> OK
 ![Path](img/env3.png)
+
+4. Valitse Uusi ja kirjoita c:\xampp\php -> OK -> OK
 
 ![Path](img/env4.png)
 
