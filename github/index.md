@@ -5,7 +5,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [Uuden repon luominen](./uusirepo.html)
 - [Muutosten päivittäminen Githubiin](./muutostenpaivitys.html)
 - [Repon kloonaus](./kloonaus.html)
-- [Kahden eri tilin käyttäminen samalta koneelta](./useampitili.md)
+- [Github:in käyttäminen kahdella tai useammalla eri käyttäjätilillä samalta koneelta](./useampitili.md)
 
 ## Hyödyllisiä linkkejä
 

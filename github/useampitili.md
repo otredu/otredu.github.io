@@ -1,6 +1,6 @@
-## Useamman tilin käyttäminen
+## Useamman käyttäjätilin käyttäminen
 
-Joskus on tarpeen käyttää kahta käyttäjätiliä Github:in kanssa samalta koneelta. Näitä ohjeita seuraamalla liittää yhden repositoryn toiseen Github-tiliin.
+Joskus on tarpeen käyttää kahta tai useampaa Github-käyttäjätiliä samalla koneella. Näitä ohjeita seuraamalla voit liittää repositoryn haluaamaasi Github-tiliin.
 
 ### SSH-avainten luominen
 
@@ -22,13 +22,13 @@ Tämän jälkeen em. kansiossa pitäisi olla kaksi tiedostoa, toisessa on *priva
 
 ### SSH-avaimen tallentaminen Github:iin
 
-Avaa edellisessä luotu *public key* tiedosto esim. Notepad++ ohjelmalla ja kopioi sen sisältämä avain. Kirjaudu Github.com:iin ja valitse: *Settings -> SSH and GPG keys -> Add new key* ja liitä kopioimasi avain tähän ja tallenna.
+Avaa edellisessä luotu *public key* - tiedosto esim. Notepad++ - ohjelmalla ja kopioi sen sisältämä avain. Kirjaudu Github.com:iin ja valitse: *Settings -> SSH and GPG keys -> Add new key* ja liitä kopioimasi avain tähän ja tallenna.
 
 ### Git config
 
-Jotta Gitbash tietää etsiä *private key*:tä oikeasta paikasta ja käyttää oikeaa käyttäjätiliä Github:in kanssa lisää seuraavat rivit *.git/config* - tiedostoon. 
+Jotta Gitbash tietää etsiä *private key* tiedostoa oikeasta paikasta ja käyttää oikeaa käyttäjätiliä Github:in kanssa, lisää seuraavat rivit *.git* - kansiossa sijaitsevaan *config* - tiedostoon.
 
-Huom! .git - kansio on normaalisti piilotettu, joten jos et näe sitä ota piilotetut kansiot näkyviin resurssien hallinnassa:
+Huom! *.git* - kansio on normaalisti piilotettu, joten jos et näe sitä ota piilotetut kansiot näkyviin resurssienhallinnassa:
 
 ![piilotetut kansiot](img/hiddenfiles.PNG)
 
@@ -46,7 +46,7 @@ Lisää seuraavat rivit repositoriosi *.git/config* -tiedostoon (esim. Notepad++
 
 Tämän jälkeen repon käyttö pitäisi onnistua normaalisti eli seuraa [uuden repon ohjeita](./uusirepo.md).
 
-Huom! Tämä vaihtaa käyttäjätilin vain kyseiselle repolle, muut repot toimivat kuten ennenkin.
+Huom! Tämä vaihtaa käyttäjätilin vain ko. repolle, muut repot toimivat kuten ennenkin.
 
 ## Lisätietoa
 
