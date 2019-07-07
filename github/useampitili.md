@@ -10,10 +10,10 @@ Avaa CMD ja luo ensin uusi pari SSH-avaimia:
 > ssh-keygen -t rsa -C “your_email_address”
 ```
 
-Ohjelma kysyy kohdetiedostoa, kopioi ehdotettu polku ja nimeä tiedosto järkevästi esim.
+Ohjelma kysyy kohdetiedostoa, kopioi ehdotettu polku ja nimeä tiedosto järkevästi esim. käytä käyttämäsi koneen nimeä:
 
 ```cmd
-/c/Users/your_username/.ssh/id_rsa_GOODNAME
+/c/Users/your_username/.ssh/id_rsa_KOTIKONE
 ```
 
 Ohjelma kysyy myös *passphrase* - salasanaa, jonka voit jättää halutessasi myös tyhjäksi.
@@ -26,7 +26,7 @@ Avaa edellisessä luotu *public key* - tiedosto esim. Notepad++ - ohjelmalla ja 
 
 ### Git config
 
-Jotta Gitbash tietää etsiä *private key* tiedostoa oikeasta paikasta ja käyttää oikeaa käyttäjätiliä Github:in kanssa, lisää seuraavat rivit *.git* - kansiossa sijaitsevaan *config* - tiedostoon.
+Jotta Gitbash tietää etsiä *private key* - tiedostoa oikeasta paikasta ja käyttää oikeaa käyttäjätiliä Github:in kanssa, lisää seuraavat rivit *.git* - kansiossa sijaitsevaan *config* - tiedostoon.
 
 Huom! *.git* - kansio on normaalisti piilotettu, joten jos et näe sitä ota piilotetut kansiot näkyviin resurssienhallinnassa:
 
@@ -36,7 +36,7 @@ Lisää seuraavat rivit repositoriosi *.git/config* -tiedostoon (esim. Notepad++
 
 ```cmd
 [core]
-	sshCommand = ssh -i ~/.ssh/id_rsa_GOODNAME
+	sshCommand = ssh -i ~/.ssh/id_rsa_KOTIKONE
 [remote "origin"]
 	url = git@github.com:your_username/your_repository.git
 [user]
