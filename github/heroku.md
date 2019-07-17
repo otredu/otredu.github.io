@@ -41,4 +41,4 @@ Asenna konelle [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). T
 > heroku create my_project_name
 ```
 
-Avaa projekti Heroku.com:in kautta, valitse *Deploy*-välilehdeltä *Deployment method: Github*. Kirjaudu github-tilillesi ja anna Herokulle lupa Github:in käyttöön. Kirjoita *deploy*:ttavan repon nimi ja valitse *search*. Valitse *Deploy manually* ja avaa sovelluksesi linkistä. Voit halutessasi aktivoida automaattiset päivitykset (*Enable automatic deploys*).
+Avaa projekti Heroku.com:in kautta, valitse *Deploy*-välilehdeltä *Deployment method: Github*. Kirjaudu github-tilillesi ja anna Herokulle lupa Github:in käyttöön. Kirjoita *deploy*:ttavan repon nimi ja valitse *search*. Valitse *Manual deploy*-kohdan alta *Deploy branch*. Nyt sovelluksesi on verkossa ja voit avata sen linkin kautta. Voit halutessasi aktivoida automaattiset päivitykset (*Enable automatic deploys*).
