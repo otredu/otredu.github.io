@@ -6,6 +6,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [Muutosten päivittäminen Githubiin](./muutostenpaivitys.html)
 - [Repon kloonaus](./kloonaus.html)
 - [Github:in käyttäminen kahdella tai useammalla eri käyttäjätilillä samalta koneelta](./useampitili.md)
+- [Github:in liittäminen Heroku:un](./heroku.md)
 
 ## Hyödyllisiä linkkejä
 
