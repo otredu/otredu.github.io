@@ -2,16 +2,16 @@
 
 Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja teet siinä olevat harjoitukset.
 
-### Kurssin sisältö ja aikataulu syksy 2019
+### Kurssin sisältö ja aikataulu 2019
 
-1. HTML alkeet (vk 33)
-<!-- 2. Harjoituksia 1 ja CSS demo 1 (vk 4)
+1. HTML alkeet (vk 3)
+2. Harjoituksia 1 ja CSS demo 1 (vk 4)
 3. Harjoituksia 1 jatkuu (vk 5)
 4. Harjoituksia 1 ja CSS demo 2 (vk 6)
 5. Semanttiset elementit ja grid, Harjoituksia 2 (vk 7)
 6. Responsiivisuus, Harjoituksia 2 jatkuu (vk 8)
 7. Boostrap, Harjoituksia 3 (vk 10, 11)
-8. CSS:animaatiot (vk 12) -->
+8. CSS:animaatiot (vk 12)
 
 ### HTML ja CSS alkeita
 
