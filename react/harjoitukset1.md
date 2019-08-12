@@ -13,7 +13,7 @@ Tee uusi React-sovellus ajamalla create-react-app:
 
 Tee uusi komponentti, joka tulostaa ruudulle ensimmäisellä tunnilla opitut uudet asiat ranskalaisina viivoina.
 
-Refaktoroi koodi niin, että listaelementti tehdään apukomponentin avulla (käytä parametreja props).
+Muuta komponentti ottamaan sen sisältämät tiedot parametreina eli propseina. Välitä tiedot app-tasolta komponenttitasolle. Tuo opitutasiat taulukkomuodossa ja käytä map:ia.
 
 ### Tehtävä 1
 
@@ -25,7 +25,7 @@ Tee komponentti, joka tulostaa ruudulle parametreina (props) annetut tiedot. Kut
 
 Tee komponentti, joka tulostaa ruudulle taulukon muodossa parametrina annetun listan (array) kurssiolioita.
 
-Vinkki: tee alikomponentti, joka tekee yhden rivin.
+Vinkki: tee alikomponentti, joka tekee yhden rivin ja kutsu sitä map:in avulla.
 
 ![tehtävä 2](./img/kurssit.PNG)
 
