@@ -15,28 +15,32 @@ Tee uusi komponentti, joka tulostaa ruudulle ensimmäisellä tunnilla opitut uud
 
 Refaktoroi koodi niin, että listaelementti tehdään apukomponentin avulla (käytä parametreja props).
 
-### Harjoitus 1
+### Tehtävä 1
 
 Tee komponentti, joka tulostaa ruudulle parametreina (props) annetut tiedot. Kutsu komponenttia kaksi kertaa eri tiedoilla.
 
-![harjoitus1](./img/tiedot.PNG)
+![tehtävä 1](./img/tiedot.PNG)
 
-### Harjoitus 2
+### Tehtävä 2
 
 Tee komponentti, joka tulostaa ruudulle taulukon muodossa parametrina annetun listan (array) kurssiolioita.
 
 Vinkki: tee alikomponentti, joka tekee yhden rivin.
 
-![harjoitus2](./img/kurssit.PNG)
+![tehtävä 2](./img/kurssit.PNG)
 
-### Harjoitukset 3
+### Tehtävä 3
 
 Tee komponentti, joka tulostaa ruudulle alekkain parametrina annetut taidot (array). Sijoita ylimmäiseksi input-kenttä, jonka avulla voi lisätä uuden taidon listaan viimeiseksi.
 
-![harjoitus3](./img/oppinut.PNG)
+![tehtävä 3](./img/oppinut.PNG)
 
-### Harjoitukset 4
+### Tehtävä 4
 
 Lisää sivulle napit, joita painamalla tehtävä osion saa piiloon/näkyville.
 
-![harjoitus4](./img/piilota.PNG)
+![tehtävä 4](./img/piilota.PNG)
+
+### Tehtävä 5
+
+Muokkaa .css - tiedostoa, että elementit myös näyttävät hyvältä.

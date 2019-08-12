@@ -14,6 +14,9 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [Komponentin tila ja tapahtuman käsittely](https://fullstackopen.com/osa1/komponentin_tila_ja_tapahtumankasittely)
 - [Monimutkaisempi tila, debuggaus](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus)
 
+---
+- [Harjoituksia 1](./harjoitukset1.html)
+
 ### Palvelimen kanssa kommunikointi
 
 - [Kokoelmien renderöinti ja moduulit](https://fullstackopen.com/osa2/kokoelmien_renderointi_ja_moduulit)
