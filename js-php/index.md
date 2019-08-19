@@ -23,19 +23,23 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [MySQL komentorividemo](./mysql.html)
 <!-- - [PHP:n PDO-rajapinta](./PDO.html) -->
 
+---
+
 ## JavaScript selaimessa
 
 - [JavaScript selaimessa](../js/js_html.html)
+
 - [JS selaimessa harjoitukset 1](../js/harjoituksia1.html)
 
 - [DOM alkeet](../js/dom.html)
+
 - [JS selaimessa harjoitukset 2](../js/harjoituksia2.html)
 
-## JavaScript lisäpuuhaa
-
 - [Maa-demo (callback-funktiot ja tapahtumakuuntelijat)](../js/eventit.html)
+
 - [JQuery](../js/jquery.html)
-- [JQuery harjoituksia](../js/harjoituksia3.html)
+
+- [JS selaimessa harjoitukset 3](../js/harjoituksia4.html)
 
 ## Lisämateriaalia
 
