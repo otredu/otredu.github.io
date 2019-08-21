@@ -10,11 +10,11 @@ HTML-dokumentti aloitetaan aina kertomalla sen tyyppi. Tämä on tärkeä tieto 
 
 HTML-dokumentti rakennetaan *tag*:ien avulla. Alku-tagi on suljettava loppu-tagillä, ellei kyseinen tagi ole ns.*void* eli tyhjä, jolloin sen sisään ei koskaan tulekaan mitään.
 
-HTML-dokumentin perusrakenteet muodostuvat: *html*-, *head*- ja *body*-tageistä, joilla kaikilla on alku- ja lopputagit. *head*:in sisällä on yksi *void*-tagi, *meta*, joka kertoo mitä enkoodausta dokumentin tekstissä käytetään. UTF-8 enkoodaus on tarpeen skandinaavisten merkkien kanssa, ilman sitä ääkköset näkyvät väärin.
+HTML-dokumentin perusrakenteet muodostuvat: *html*-, *head*- ja *body*-tageistä, joilla kaikilla on alku- ja lopputagit. *head*:in sisällä on yksi *void*-tagi, *meta*, joka kertoo mitä enkoodausta dokumentin tekstissä käytetään. UTF-8 enkoodaus on tarpeen skandinaavisten merkkien kanssa, ilman sitä ääkköset näkyvät väärin. *html*-tagissä pitää olla tieto sivustolla käytetystä kielestä.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="fi">
     <head>
         <meta charset="UTF-8">
         <title>Sivuston nimi</title>

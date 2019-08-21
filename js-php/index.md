@@ -18,10 +18,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [Harjoitukset 3](./harjoituksia3.html)
 - [Harjoitukset 4](./harjoituksia4.html)
 
-## Tietokanta (MySQL) ja PHP:in PDO-rajapinta
 
-- [MySQL komentorividemo](./mysql.html)
-<!-- - [PHP:n PDO-rajapinta](./PDO.html) -->
 
 ---
 
@@ -40,6 +37,11 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [JQuery](../js/jquery.html)
 
 - [JS selaimessa harjoitukset 3](../js/harjoituksia4.html)
+
+## Tietokanta (MySQL) ja PHP:in PDO-rajapinta
+
+- [MySQL komentorividemo](./mysql.html)
+<!-- - [PHP:n PDO-rajapinta](./PDO.html) -->
 
 ## Lisämateriaalia
 
