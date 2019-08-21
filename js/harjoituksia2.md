@@ -41,9 +41,9 @@ Lisää edelliseen _html_-dokumenttiin uusi harjoitus osio (div+otsikko) ja sen 
 
 Nyt sivulle ilmestyy jokaisesta vastauksesta uusi elementti (uusi teksti). Koodissa on myös paljon toistoa. Korjaa (restrukturoi) koodisi:
 
-- siirrä *createTextNode* ja *createElement* erilliseen *makeTextNode*-funktion, joka tekee uuden elementin sekä sille uuden teksti-noden ja liittää ne yhteen (*appendChild*). Funktio saa parametrinaan tekstin ja palauttaa tehdyn elementin, aseta elementin luokaksi "answer")
+- siirrä *createTextNode* ja *createElement* erilliseen *makeTextNode*-funktion, joka tekee uuden elementin sekä sille uuden *textNode*:n ja liittää ne yhteen (*appendChild*). Funktio saa parametrinaan tekstin ja palauttaa tehdyn elementin, aseta elementin luokaksi *answer*)
 
-- lisää ehtolause, joka testaa onko "answer" elementti, jo olemassa, jos ei ole kutsutaan makeTextNode:a, jos on, sijoitetaan uusi viesti jo olemassa olevaan elementtiin  
+- lisää ehtolause, joka testaa onko *answer* - elementti, jo olemassa, jos ei ole kutsutaan *makeTextNode*:a, jos on, sijoitetaan uusi viesti jo olemassa olevaan elementtiin  
 
 ### Lisätehtävä 1: Parempi arvauspeli
 
