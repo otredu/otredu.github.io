@@ -7,9 +7,11 @@ Ennen tehtäviä käy läpi [JS alkeet](./alkeita.html) ja [JS ja HTML](./js_htm
 Tallenna harjoitukset omaan kansioosi magnesium-palvelimelle (tee uusi kansio javascript, jos ei ole jo tehtynä). Muista tallentaa kaikki harjoitukset tunnin lopuksi. Voit tehdä kaikki tehtävät samaan tiedostoon (tai kahteen erilliseen tiedostoon .html ja .js).
 
 ### Tehtävä 1: Merkkijonojen yhdistäminen
+
 Tee funktio, joka kysy käyttäjältä (prompt:in avulla) kaksi merkkijonoa (esim. nimi ja viikonpäivä). Tervehdi käyttäjää alert:in avulla, liitä saadut merkkijonot yhteen järkeväksi viestiksi. Käynnistä napista.
 
 ### Tehtävä 2: Yhteenlasku
+
 Tee funktio, joka kysyy käyttäjältä kaksi numeroa ja laskee ne yhteen, sekä ilmoittaa vastauksen console.log:illa kehittäjänäkymässä. Käynnistys uudesta napista. Voit lisätä myös alert-viestin, joka antaa ohjeet kehittäjänäkymän avaamiselle.
 
 ### Tehtävä 3. Laskuri

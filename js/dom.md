@@ -141,6 +141,12 @@ Jos haluat vielä muuttaa tekstiä (*Hello World*), se onnistuu näin (muuttujas
 myText.textContent = "Ihan parasta!";
 ```
 
+Huom. *textContent* toimii sekä *element*:lle että *textNode*:lle. Tämä toimii vain *textNode*:lle: 
+
+```js
+myText.nodeValue = "Ei toimi vain textNodelle";
+```
+
 ### Demo 4
 
 Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittää script-tagien avulla suoraan HTML-sivulle. Tässä demo 2:n heippanapin tekstin muuttaminen on paketoitu funktioksi *klikkaus*, ja sitä kutsutaan kun nappia painetaan (katso button:in *onclick*).
@@ -185,6 +191,16 @@ let myName = nameElem.value;
 ```
 
 Lisää nyt nappi, joka tervehtii käyttäjää nimeltä (lisää _body_:n uusi _p_-elementti, jolla on lapsena _text_-node. ks. demo 3).
+
+### Hyödyllisiä vinkkejä
+
+Elementille voi lisätä luokan:
+
+```js
+nameElem.classList.add("alert");
+```
+
+
 
 ## Linkkejä
 
