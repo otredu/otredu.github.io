@@ -13,7 +13,7 @@ Vastaa Word-dokkariin, palauta Github-classroomiin.
 
 ### Alkutoimet
 
-Käynnistä MySQL-serveri ja PHPMyAdmin, jos tietokoneeseen ne on asennettuna (XAMPP). Jos ei ole käynnistä ne Dockerin avulla [ohje](../docker/index.html).
+Käynnistä MySQL ja PHPMyAdmin Dockerin avulla [ohje](../docker/index.html).
 
 ### Tietokannan luominen (PHPMyAdmin)
 

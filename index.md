@@ -19,6 +19,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 
 - [Github-ohjeita](./github/index.html)
 - [Visual Studio Code - ohjeita](./vscode/index.html)
+- [Docker-ohjeita](./docker/index.html)
 
 ### Tredun OPS
 
