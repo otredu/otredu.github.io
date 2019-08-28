@@ -23,7 +23,7 @@ Tee selaimessa W3School:in SQL-harjoituksia [ohje](http://www.leeniemi.net/tieto
 
 #### a) PHPMyAdmin (MySQL)
 
-Tee PHPMyAdmin-ohjelmalla seuraava harjoitus (ohje)[http://www.leeniemi.net/tietokanta18/index.php?sivu=sql_harjoituksia3]
+Tee PHPMyAdmin-ohjelmalla seuraava harjoitus [ohje](http://www.leeniemi.net/tietokanta18/index.php?sivu=sql_harjoituksia3)
 
 #### b) PHPPGAdmin (Postgres)
 
