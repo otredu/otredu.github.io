@@ -1,5 +1,9 @@
 ## Tietokannat
 
+### Tietokantojen alkeet
+
+Rästitehtävät viime keväältä [ohje](pohjatiedot.html).
+
 ### MySQL ja PHPMyAdmin
 
 - Harjoitus 1 [ohje](harjoitus1.html)
