@@ -13,7 +13,7 @@ Käynnistä CMD ja kirjoita:
 ```cmd
 docker pull mysql:8.0.1
 
-docker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=mypass123 -d mysql:8.0.1
+docker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=mypass123 -p 3306:3306 -d mysql:8.0.1
 ```
 
 2. Asenna koneellesi PHPMyAdmin-ohjelma käyttäen Docker:ia:
@@ -85,6 +85,7 @@ docker restart my_container
 docker container prune
 ```
 
+*Huom!* Tämä tyhjentää tietokannan, eli jos haluat palauttaa tietokannan scheman ja sen datan tee tietokannasta *dump*-tiedosto (Vienti->Tuonti, Export->Import). Muista luoda tietokanta ennen import:ia (Luo tietokanta, Create database).
 <!-- ---
 https://stackoverflow.com/questions/25540711/docker-postgres-pgadmin-local-connection
 docker network create --driver bridge postgres-network

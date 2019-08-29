@@ -4,7 +4,7 @@ Nämä tehtävät ovat viime keväältä 2019. Tee nämä jos et ole vielä tehn
 
 ### Tietokantayhteys komentorivin kautta (MySQL)
 
-Tutustu MySQL-serveriin komentorividemon avulla [ohje](https://otredu.github.io/js-php/mysql.html).
+Tutustu MySQL-serveriin komentorividemon avulla [ohje](./mysql.html).
 
 ### SQL-kielen varatut sanat
 

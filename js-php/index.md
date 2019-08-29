@@ -13,8 +13,8 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 ## PHP-ohjelmointia
 
-- [PHP-alkeet](./php-alkeet.html)
-- [PHP-jatko](./php-jatko.html)
+- [PHP-alkeita](./php-alkeet.html)
+- [PHP-jatkoa](./php-jatko.html)
 - [Harjoitukset 3](./harjoituksia3.html)
 - [Harjoitukset 4](./harjoituksia4.html)
 
@@ -30,16 +30,16 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 - [JS selaimessa harjoitukset 2](../js/harjoituksia2.html)
 
-- [Maa-demo (callback-funktiot ja tapahtumakuuntelijat)](../js/eventit.html)
+- [JS selaimessa harjoitukset 3: Maa-demo](../js/eventit.html)
 
 - [JQuery](../js/jquery.html)
 
-- [JS selaimessa harjoitukset 3](../js/harjoituksia4.html)
+- [JS selaimessa harjoitukset 4](../js/harjoituksia4.html)
 
 ## Tietokanta (MySQL) ja PHP:in PDO-rajapinta
 
-- PHP-luokat [](./phpluokat.html)
-- PDO-rajapinta [](./pdo.html)
+- [PHP-oliot ja -luokat](./php-luokat.html)
+- [PDO-rajapinta](./pdo-rajapinta.html)
 
 ## Lisämateriaalia
 

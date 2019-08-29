@@ -2,7 +2,7 @@
 
 Tutustu materiaalin PHP-alkeet osioon ja tee nämä tehtävät.
 
-### Harjoitus 1
+### Tehtävä 1
 
 Tee to-do-lista, joka tulostetaan ruudulle. Jokainen tehtävä (task) on assosiatiivinen taulukko, jossa avaimina on "tehtävä", "deadline", "vastuuhenkilö", "valmis" (true/false). Tee yksi tehtävä ja tulosta se sivulle. Muuta totuusarvo merkkijonoksi ennen tulostamista. Tulostus voisi näyttää tältä:
 
@@ -15,7 +15,7 @@ Tee to-do-lista, joka tulostetaan ruudulle. Jokainen tehtävä (task) on assosia
 
 ---
 
-### Harjoitus 2
+### Tehtävä 2
 
 Jatka edellistä harjoitusta ja tee taulukko, jossa on monta tehtävää ja tulosta ne sivulle silmukassa (*foreach* tai *for*). Muuta valmis/kesken tekstin tilalle ikoni [katso esimerkki](https://www.w3schools.com/charsets/ref_utf_dingbats.asp). Tulostus voisi näytää tältä:
 
@@ -35,7 +35,7 @@ Tehtävä: Tee käyttöliittymäsuunnitelma
 
 ---
 
-### Harjoitus 3
+### Tehtävä 3
 
 Tee PHP-ohjelma, joka saa osoiterivillä (*submit form*:in kautta) parametrinaan, joko puhelinnumeron tai nimen. Sivulle palautetaan haetun henkilön nimi ja puhelinnumero. Tallenna nimet ja numerot assosiatiiviseen taulukkoon. Käytä ehtolausetta kun tarkistat kumpi parametri on annettu  (*$_GET*). Voit etsiä parametrin arvoa *array_search*-funktion avulla.
 Tulostus voisi näyttää tältä:
@@ -47,7 +47,7 @@ Puhelinnumero: 010-10101010
 
 ---
 
-### Harjoitus 4
+### Tehtävä 4
 
 Tee PHP-ohjelma, joka kysyy lomakkeen avulla alennusprosentin ja laskee assosiatiiviseen taulukoon tallennetuille tuotteille uudet alennetut hinnat. Ohjelma tulostaa tiedot taulukon muodossa. Tulostus voisi näyttää tältä:
 
@@ -62,17 +62,17 @@ Alennus: -25%
 
 ---
 
-### Harjoitus 5
+### Lisätehtävä 1
 
-Tee harjoitus 2 käyttäen olioita (*class*). Katso mallia [täältä](https://otredu.github.io/js-php/php-jatko.html).
+Tee harjoitus 2 käyttäen olioita (*class*). Katso mallia [täältä](./php-luokat.html).
 
-### Lisäharjoitus 1
+### Lisätehtävä 2
 
-Luo XAMPP:in MySQL:ään ToDo-tietokanta (database), sinne taulu (table) ja tauluun tietueita (record), joko [MySQL-demon](https://otredu.github.io/js-php/mysql.html) tyylillä tai phpMyAdmin:in kautta. Kysy tietueet tietokannata php:n PDO-luokan avulla [katso ohje PDP:n käytöstä](http://www.leeniemi.net/sasp18/index.php?sivu=phpm15) ja esitä ne sivullasi (kuten tehtävässä 2).
+Luo XAMPP:in MySQL:ään ToDo-tietokanta (database), sinne taulu (table) ja tauluun tietueita (record), joko [MySQL-demon](https://otredu.github.io/js-php/mysql.html) tyylillä tai phpMyAdmin:in kautta. Kysy tietueet tietokannata PHP:n PDO-luokan avulla [katso ohje PDO:n käytöstä](http://www.leeniemi.net/sasp18/index.php?sivu=phpm15) ja esitä ne sivullasi (kuten tehtävässä 2).
 
 [Leenan PDO-esimerkki tietokannan tietueiden lukemisesta](http://www.leeniemi.net/sasp18/index.php?sivu=pdemo14)
 
-### Lisäharjoitus 2
+### Lisätehtävä 3
 
 Tee lomake, jonka kautta voit tallentaa tietokantaan uusia ToDo-tehtäviä.
 

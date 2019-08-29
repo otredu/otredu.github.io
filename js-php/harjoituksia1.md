@@ -1,5 +1,7 @@
 ## Harjoitukset 1
 
+**Ennen näitä harjoituksia tutustu materiaaliin [JavaScript-alkeita](../js/alkeita.html).**
+
 Tee Visual Studio Code:lla uusi tiedosto, nimeä se *harjoitukset1.js*. Avaa VS:n terminaali ja aja koodi kirjoittamalla konsoliin: *node harjoitukset1.js*.
 
 ### Tehtävä 1: Merkkijonojen yhdistäminen

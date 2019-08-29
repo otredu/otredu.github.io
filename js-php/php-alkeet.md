@@ -1,4 +1,4 @@
-## PHP-alkeet
+## PHP-alkeita
 
 ### PHP-syntaksi
 
