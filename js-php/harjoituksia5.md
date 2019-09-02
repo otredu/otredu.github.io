@@ -1,6 +1,6 @@
 ## Uutiset
 
-**Ennen näitä harjoituksia tutustu materiaaliin [PDP-rajapinta](./pdo-rajapinta.html).**
+**Ennen näitä harjoituksia tutustu materiaaliin [PDO-rajapinta](./pdo-rajapinta.html).**
 
 ### Tehtävä 1: Sivuston rakenne ja HTML-lomake
 

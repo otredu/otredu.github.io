@@ -1,6 +1,6 @@
 ## PDO harjoituksia
 
-**Ennen näitä harjoituksia tutustu materiaaliin [PDP-rajapinta](./pdo-rajapinta.html) ja [PHP-oliot ja -luokat](./php-luokat.html).**
+**Ennen näitä harjoituksia tutustu materiaaliin [PDO-rajapinta](./pdo-rajapinta.html) ja [PHP-oliot ja -luokat](./php-luokat.html).**
 
 ### Tehtävä 1
 
