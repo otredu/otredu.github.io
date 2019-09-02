@@ -1,29 +1,31 @@
-## PDO harjoituksia
+## Uutiset
 
-Tutustu [PHP-olioihin ja -luokkiin](./php-luokat.html)
+**Ennen näitä harjoituksia tutustu materiaaliin [PDP-rajapinta](./pdo-rajapinta.html).**
 
-### Tehtävä 1
+### Tehtävä 1: Sivuston rakenne ja HTML-lomake
 
-Tee to-do-lista, joka tulostetaan ruudulle. Jokainen tehtävä (task) on assosiatiivinen taulukko, jossa avaimina on "tehtävä", "deadline", "vastuuhenkilö", "valmis" (true/false). Tee yksi tehtävä ja tulosta se sivulle. Muuta totuusarvo merkkijonoksi ennen tulostamista. Tulostus voisi näyttää tältä:
+Tee kolmen sivun sivusto: pääsivu (index.php),lue uutiset (uutiset.php) sekä lisää uutinen (uusi_uutinen.php) -sivut. Jaa koodi niin, että *head.php* sisältää sivuston otsikon sekä navikointipalkin ja *footer.php* kaikille sivuille yhteisen sivun alareunan. Katso mallia [täältä](./php-jatko.html).
 
----
+Muotoile sivu käyttämällä *.css*:ää, katso mallia [täältä](../html-css/css-demo1.html).
 
-- Tehtävä: Suunnittele tietokanta
-- Deadline: 2.5.2019
-- Vastuuhenkilö: Maija Mikkola
-- Valmis: valmis
+Tee lomake, jonka avulla voi lisätä uuden uutisen. Tee lomakkeen käsittelijä, joka tulostaa tiedot selaimen ikkunaan.
 
----
-Tee harjoitus 2 käyttäen olioita (*class*). Katso mallia [täältä](https://otredu.github.io/js-php/php-jatko.html).
+![uutiset sivusto](./img/uutiset_kuva.PNG)
 
-### Tehtävä 2
+### Tehtävä 2: Tietokantayhteyden muodostaminen ja kaikkien uutisten hakeminen
 
-Luo XAMPP:in MySQL:ään ToDo-tietokanta (database), sinne taulu (table) ja tauluun tietueita (record), joko [MySQL-demon](https://otredu.github.io/js-php/mysql.html) tyylillä tai phpMyAdmin:in kautta. Kysy tietueet tietokannata php:n PDO-luokan avulla [katso ohje PDP:n käytöstä](http://www.leeniemi.net/sasp18/index.php?sivu=phpm15) ja esitä ne sivullasi (kuten tehtävässä 2).
+Liitä sivustosi käyttämään tietokantaa. Hae kaikki uutiset tietokannasta ja tulosta ne "lue uutiset"-sivulle.
 
-[Leenan PDO-esimerkki tietokannan tietueiden lukemisesta](http://www.leeniemi.net/sasp18/index.php?sivu=pdemo14)
+Jaa koodisi kahteen osaan: *uutinen.php* sisältää tietokantaan liittyvät toiminnot ja *uutinen.view.php* muotoilee sivun ulkonäön.
 
-### Lisätehtävä 3
+### Tehtävä 3: Lisää uusi uutinen
 
-Tee lomake, jonka kautta voit tallentaa tietokantaan uusia ToDo-tehtäviä.
+Liitä lomakkeesi tietokantaan niin, että sen avulla voi lisätä uuden uutisen tietokantaan. Muista sanitoida syötteet.
 
-[Leenan PDO-esimerkki tietueiden lisäämisestä tietokantataan](http://www.leeniemi.net/sasp18/index.php?sivu=pdemo15)
+### Tehtävä 4: Uutisen poistaminen sekä muokkaminen
+
+Lisää uutisen yhteyteen linkki, jonka avulla sen voi poistaa ja toinen linkki, jonka avulla sitä saa muokattua (aukeaa lomakkeeseen).
+
+### Tehtävä 5: Lisää kirjautuminen
+
+Lisää sivustolle rekisteröityminen sekä kirjautuminen. Päästä vain kirjautuneet käyttäjät lisäämään, poistamaan sekä muokkamaan uutisia.

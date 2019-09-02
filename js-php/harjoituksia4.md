@@ -1,6 +1,6 @@
 ## Harjoitukset 4
 
-Tutustu materiaalin PHP-alkeet osioon ja tee nämä tehtävät.
+**Ennen näitä harjoituksia tutustu materiaaliin [PHP-alkeita](./php-alkeet.html) ja [PHP-jatkoa](./php-jatko.html).**
 
 ### Tehtävä 1
 

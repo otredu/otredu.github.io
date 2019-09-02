@@ -1,11 +1,12 @@
 ## Visual Studio Code 
 
-### Koodin kopiointi, leikkaaminen, liittäminen ja tallentaminen
+### Koodin kopiointi, leikkaaminen, liittäminen, palautus ja tallentaminen
 
 ```
 Ctrl + C
 Ctrl + X
 Ctrl + V
+Ctrl + Z
 Ctrl + S
 ```
 
@@ -14,6 +15,12 @@ Ctrl + S
 ```cmd
 Ctrl + A
 Ctrl + K, Ctrl + F
+```
+
+### Automaattinen tekstin rivitys
+
+```cmd
+ALT + Z
 ```
 
 ### Koodin kommentointi, kommentoimisen poistaminen
