@@ -78,22 +78,24 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table, $myclass)
     {
-        $statement = $this->pdo->prepare("select * from ($table)");
-        $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+        $statement = $this->pdo->prepare("select * from $table");
+        $statement->setFetchMode(PDO::FETCH_CLASS, $myclass);
+        $all = $statement->fetchAll();
+        return $all;
     }
 }
 
 ```
 
-Nyt *index.php*:ssa tiedot voidaan hakea näin:
+Nyt *index.php*:ssa tiedot voidaan hakea näin suoraan itse määrittämäämme luokkaan 'Task':
 
 ```php
 $pdo = Connection::make();
-$query = new QueryBuilder($pdo);
-$tasks = $query->selectAll('tasks');
+$queryB = new QueryBuilder($pdo);
+$alltasks = $queryB->selectAll('tasks', 'Task');
+cleanDump($alltasks);
 ```
 
 ### Tiedostojen sijainnit
