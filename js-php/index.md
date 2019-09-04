@@ -41,6 +41,8 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [PHP-oliot ja -luokat](./php-luokat.html)
 - [PDO-rajapinta](./pdo-rajapinta.html)
 - [Tietokannat ja oliot](./tietokannat-oliot.html)
+- [Ympäristömuuttujien käyttäminen](./env.html)
+- [Reititys](./router.html)
 
 - [Harjoitukset 5](./harjoituksia5.html)
 - [Harjoitukset 6](./harjoituksia6.html)
