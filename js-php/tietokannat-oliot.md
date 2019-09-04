@@ -6,8 +6,8 @@ PDO-rajapinta voi palauttaa tietokannan antamat tiedot monessa eri muodossa. Jos
 
 ```php
 class Task {
-    public $description;
-    public $completed = false;
+    private $description;
+    private $completed = false;
 
     public function isComplete(){
          return $this->completed;
