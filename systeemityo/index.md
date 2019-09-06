@@ -17,6 +17,6 @@ Materiaali täydentyy kurssin edetessä
 
 - [Toiminnallinen määrittely](toiminnallinen.html)
 
-- [Ketterä ohjelmistotuotanto](kettera.html)
+- [Ketterä ohjelmistokehitys](kettera.html)
 
 - [Projektityöskentely: toteutus](toteutus.html)
