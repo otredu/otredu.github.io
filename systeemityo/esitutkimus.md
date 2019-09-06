@@ -7,7 +7,9 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
 - Protoilu [PDF](http://www.leeniemi.net/syst19/materiaali/protoilu.pdf)
 - Sivun suunnittelu [PDF](http://www.leeniemi.net/syst19/materiaali/Kayt_websivu.pdf)
 - AdobeXD - prototyyppiharjoitus [ohje](http://www.leeniemi.net/syst19/index.php?sivu=xd)
+
 ---
+
 Harjoitukset (palauta kohdat 4 ja 5 Github-classroomiin):
 
 1. Käsitteanalyysi
