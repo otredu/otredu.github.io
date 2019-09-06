@@ -16,16 +16,16 @@ Tehtävät:
 
 1. ER-käsitekaavio ja näyttökartta
 
-Tee järjestelmälle ER-käsitekaavio sekä näyttökartta. Voit tehdä näitä molempia rinnakkain.
+    Tee järjestelmälle ER-käsitekaavio sekä näyttökartta. Voit tehdä näitä molempia rinnakkain.
 
 2. MockUP
 
-Tee käyttökartan perusteella MockUp AdobeXD-ohjelmalla (navigointi, kaikki kentät, kaikki sivut).
+    Tee käyttökartan perusteella MockUp AdobeXD-ohjelmalla (navigointi, kaikki kentät, kaikki sivut).
 
 3. Tyyliopas
 
-Tee sivustolle MockUp:in pohjalta tyyliopas (HTML,CSS). [HSL-esimerkki](https://www.hsl.fi/tyyliopas)
+    Tee sivustolle MockUp:in pohjalta tyyliopas (HTML,CSS). [HSL-esimerkki](https://www.hsl.fi/tyyliopas)
 
 4. Kokoa suunnitteludokumentiksi
 
-Kokoa edelliset tehtävät yhdeksi dokumentiksi ja palauta (MockUP linkkinä Adobe-cloundin kautta, tyyliopas linkkinä github-pagesin kautta).
+    Kokoa edelliset tehtävät yhdeksi dokumentiksi ja palauta (MockUP linkkinä Adobe-cloundin kautta, tyyliopas linkkinä github-pagesin kautta).
