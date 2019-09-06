@@ -50,9 +50,17 @@ Harjoitukset (palautus Github-classroomiin)
 
 3. Esitutkimus (Word-dokumentti), jossa kuvataan järjestelmän vaatimukset, käyttötapaukset ja käyttöliittymäkuvat.
 
-Nyt tehdään:
+Esiselvitysdokumentissa on vain nämä:
 - Tuoteidea
 - Tuotteen tausta ja hyödyt
 - Tavoitteet ja vaatimukset (toiminnalliset vaatimukset, ei-toiminnalliset vaatimukset)
-Liitteet: käsitteistö, käyttötapauskaavio, MockUP-kuvat
+
+Liitteet: 
+- käsitteistö
+- käyttötapauskaavio
+- käyttöliittymäkuvat (MockUP)
+
+4. Vertaisarviointi 
+
+- Arvioi toisen opiskelijan tekemä esiselvity, käytä tätä [pohjaa](http://www.leeniemi.net/syst19/materiaali/Vertaisarviointi.dotx)
 ---
