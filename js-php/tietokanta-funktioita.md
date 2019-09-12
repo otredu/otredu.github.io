@@ -123,3 +123,32 @@ function login($pdo, $user){
     }
 }
 ```
+
+Tässä esimerkki miten login-funktiota voi käyttää. Tämä toiminnallisuus löytyy tyypillisesti kontrollerista (esim. controllers/login.php):
+
+```php
+require "database/database.php";
+
+if(isset($_POST['username'], $_POST['password'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $pdo = connectDB();
+
+    $result = login($pdo,[   
+        "username" => $username,
+        "password" => $password]);
+    if($result){
+        $_SESSION["userid"] = $username;
+        $_SESSION["istuntoid"] = session_id();
+        $_SESSION["salasana"]=$salasana;
+
+        header("Location: /"); // forward eli uudelleenohjaus
+    } else {
+        //echo "Et pääse sisään";
+        require "views/login.view.php";
+    }
+} else {
+    require "views/login.view.php";
+}
+```
