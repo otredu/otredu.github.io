@@ -139,7 +139,6 @@ if(isset($_POST['username'], $_POST['password'])){
         "password" => $password]);
     if($result){
         //echo "Tervetuloa";
-        $_SESSION["userid"] = $username;
         require "views/uusi_uutinen.view.php";
     } else {
         //echo "Et pääse sisään";
