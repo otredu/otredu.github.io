@@ -108,9 +108,9 @@ try {
 Tämä funktio testaa löytyykö käyttäjää tietokannasta, ja täsmääkö tietokannassa oleva ($hashedpassword) annetun salasanan kanssa.
 
 ```php
-function login($pdo, $user){
-    $cleanusername = cleanUp($user["username"]);
-    $statement = $pdo->prepare("select password from users where username = ?");
+function login($pdo, $table, $user){
+    $cleanusername = cleanUp($user["username"]);  
+    $statement = $pdo->prepare("select password from $table where username = ?");
     $statement->execute([$cleanusername]);
     $hashedpassword = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -134,7 +134,7 @@ if(isset($_POST['username'], $_POST['password'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     $pdo = connectDB();
-    $result = login($pdo,[
+    $result = login($pdo, 'users', [
         "username" => $username,
         "password" => $password]);
     if($result){
@@ -148,3 +148,5 @@ if(isset($_POST['username'], $_POST['password'])){
     require "views/login.view.php";
 }
 ```
+
+*Huom!* Tässä ei ole otettu huomioon vielä sessiota!
