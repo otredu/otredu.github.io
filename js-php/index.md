@@ -38,11 +38,14 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 ## Tietokanta (MySQL) ja PHP:in PDO-rajapinta
 
+- [PDO-tietokantarajapinta](./pdo-rajapinta.html)
 - [PHP-oliot ja -luokat](./php-luokat.html)
-- [PDO-rajapinta](./pdo-rajapinta.html)
 - [Tietokannat ja oliot](./tietokannat-oliot.html)
 - [Ympäristömuuttujien käyttäminen](./env.html)
 - [Reititys](./router.html)
+- [Tietokantafunktioita](./tietokanta-funktioita.html)
+- [Rekisteröityminen, login/logout ja sessiot](./register-login.html)
+- [Heroku ja Postgres](./heroku-postgres.html)
 
 - [Harjoitukset 5](./harjoituksia5.html)
 - [Harjoitukset 6](./harjoituksia6.html)
