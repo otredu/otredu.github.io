@@ -129,21 +129,18 @@ Tässä esimerkki miten login-funktiota voi käyttää. Tämä toiminnallisuus l
 ```php
 require "database/database.php";
 
+require "database/database.php";
 if(isset($_POST['username'], $_POST['password'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
-
     $pdo = connectDB();
-
-    $result = login($pdo,[   
+    $result = login($pdo,[
         "username" => $username,
         "password" => $password]);
     if($result){
+        //echo "Tervetuloa";
         $_SESSION["userid"] = $username;
-        $_SESSION["istuntoid"] = session_id();
-        $_SESSION["salasana"]=$salasana;
-
-        header("Location: /"); // forward eli uudelleenohjaus
+        require "views/uusi_uutinen.view.php";
     } else {
         //echo "Et pääse sisään";
         require "views/login.view.php";
