@@ -81,8 +81,6 @@ try {
     echo "Virhe uutista poistettaessa: " . $e->getMessage();
 }
 
-$allnews = getAllNews($pdo);
-
 header("location: /uutiset");
 exit;
 ```
