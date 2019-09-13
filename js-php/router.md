@@ -65,3 +65,24 @@ private function formatRoute($route)
     return $pieces[1];
   }
 ```
+
+Kontrollerissa käytetään em. id:tä:
+
+```php
+<?php
+
+require "database/database.php";
+$pdo = connectDB();
+
+try {
+    deleteFrom($pdo, 'uutinen', ["id_name" => "uutinenID", "id_value" => $id]);
+    echo "Uutinen poistettu";
+} catch (PDOException $e){
+    echo "Virhe uutista poistettaessa: " . $e->getMessage();
+}
+
+$allnews = getAllNews($pdo);
+
+header("location: /uutiset");
+exit;
+```
