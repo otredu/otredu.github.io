@@ -16,6 +16,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 ---
 - [Harjoituksia 1](./harjoitukset1.html)
+- [Harjoituksia 2](./harjoitukset2.html)
 
 ### Palvelimen kanssa kommunikointi
 

@@ -10,15 +10,17 @@ Tee projektisi juureen tiedosto, jonka nimi on *Procfile*. Kirjoita siihen ohje,
 web: node index.js
 ```
 
-PHP-projektille esim:
+PHP-projektille esim. jossa palvelin käynnistetään hakemistossa *public*:
 
 ```cmd
-web: vendor/bin/heroku-php-apache2
+web: vendor/bin/heroku-php-apache2 public/
 ```
 
 ### Github
 
-Lisää koodiin *.gitignore* tiedosto. Tee uusi github-repo, ja päivitä koodi siihen aivan normaalisti. Esim. *node.js* projektin *.gitignore* sisältäisi ainakin:
+Lisää koodiin *.gitignore* tiedosto. Tee uusi github-repo, ja päivitä koodi siihen aivan normaalisti.
+
+Esim. *node.js* projektin *.gitignore* sisältäisi ainakin:
 
 ```cmd
 # dependencies
@@ -28,10 +30,25 @@ Lisää koodiin *.gitignore* tiedosto. Tee uusi github-repo, ja päivitä koodi 
 /coverage
 
 # env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env
+.env.localhost
+.env.heroku
+
+```
+
+PHP-projektissa *.gitignore* sisältäisi ehkä:
+
+```cmd
+# dependencies
+/vendor
+
+# testing
+/coverage
+
+# env
+.env
+.env.localhost
+.env.heroku
 ```
 
 ### Heroku
@@ -48,8 +65,46 @@ Huom! Jos koneella ei ole Heroku CLI -ohjelmaa, voit alustaa projektin myös kok
 
 Avaa projekti Heroku.com:in kautta, valitse *Deploy*-välilehdeltä *Deployment method: Github*. Kirjaudu Github-tilillesi (ellet jo ole kirjautuneena) ja anna Herokulle lupa Github:in käyttöön. Kirjoita repon nimi ja valitse *search* ja sitten *Manual deploy*-kohdan alta *Deploy branch*. Nyt sovelluksesi on verkossa ja voit avata sen linkin kautta. Voit halutessasi aktivoida automaattiset päivitykset (*Enable automatic deploys*).
 
-### Relaatiotietokanta
+### Relaatiotietokanta ja .env
 
-Jos ohjelmasi käyttää relaatiotietokantaa, voit ottaa käyttöön Herokun PostGRE-tietokannan (valitse *Data*. Koodi löytää tietokannan ympäristömuutujien avulla. Jotta koodisi toimisi myös kehitysympäristössä, käytä joko *.env* tai *env.example.php*-tiedostoa johon tallennat kehitysaikaiset ympäristömuuttujat. Koska nämä tiedot sisältävät salasanoja, näitä tietostoja ei saa tallentaa github:iin vaan ne pitää muistaa jättää pois käyttämällä *.gitignore*-tiedostoa.
+Jos ohjelmasi käyttää relaatiotietokantaa, voit ottaa käyttöön Herokun PostgreSQL-tietokannan (valitse *Data*. Koodi löytää tietokannan ympäristömuutujan *DATABASE_URL* avulla (muuttuja on siis automaattisesti asetettuna Heroku-ympäristössä).
 
-Lisää tietoa PHP:n ympäristömuuttujista: [How to create an environment variable file...](https://medium.com/@hfally/how-to-create-an-environment-variable-file-like-laravel-symphonys-env-37c20fc23e72).
+Jotta koodisi toimisi myös kehitysympäristössä, käytä *.env*-tiedostoa, johon tallennat kehitysaikaiset ympäristömuuttujat. Koska nämä ympäristötiedot sisältävät salasanoja, näitä tietostoja ei saa tallentaa github:iin vaan ne pitää muistaa jättää pois käyttämällä *.gitignore*-tiedostoa. Github:iin olisi hyvä tallentaa .env-mallitiedostot (ilman oikeita käyttäjätunnuksia ja salasanoja).
+
+Esim. .env-tiedosto, joka toimii lokaalisti (kirjautumistiedot paikalliseen MySQL-tietokantaan):
+
+```cmd
+###############################################
+# Configuration for localhost hosting MySQL   #
+###############################################
+
+DB_DBTYPE = "MySql"
+DB_HOST = "localhost"
+DB_USERNAME = "root"
+DB_PASSWORD = "mypass123"
+DB_NAME = "news"
+DB_PORT = "3306"
+```
+
+Esim. .env-tiedosto, joka toimii lokaalisti (kirjautumistiedot paikalliseen PostgreSQL-tietokantaan):
+
+```
+####################################################
+# Configuration for localhost hosting PostgreSQL   #
+####################################################
+
+DB_DBTYPE = "Postgre"
+DB_HOST = "localhost"
+DB_USERNAME = "postgre"
+DB_PASSWORD = "mysecretpassword"
+DB_NAME = "news"
+DB_PORT = "5432"
+```
+
+### Ympäristömuuttujien toiminta PHP:ssa
+
+Jotta .env-tiedostosta voidaan lukea muuttujia PHP:n ympäristömuuttujiin tarvitaan jokin apukirjasto (esim. PHPdotenv):
+- [PHPdotenv-dokumentaatio](https://github.com/vlucas/phpdotenv)
+
+Toinen vaihtoehto on käyttää *env.php*-tiedostoa: 
+- [How to create an environment variable file...](https://medium.com/@hfally/how-to-create-an-environment-variable-file-like-laravel-symphonys-env-37c20fc23e72).
