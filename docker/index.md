@@ -56,7 +56,7 @@ Nyt voit käyttää PostgreSQL-tietokantaa:
 
 [Tarkemmat ohjeet](https://hub.docker.com/r/dockage/phppgadmin/)
 
-### PHPPGMyAdmin. remote database (Heroku)
+### PHPPGMyAdmin (Heroku)
 
 PHPPGAdmin:in avulla voidaan ottaa yhteys myös jollakin ulkoisella palvelimella tai pilvipalvelussa toimivaan tietokantaan. Silloin docker:in käynnistyskomentoon sijoitetaan ko. tietokannan url sekä tietokannan nimi.
 
