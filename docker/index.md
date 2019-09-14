@@ -4,7 +4,7 @@
 
 Docker:in avulla voit käynnistää koneellesi kehitysympäristön ilman, että asennat ohjelmia. Eli voit esim. pyörittää  haluaamaasi MySQL- tai PostgreSQL-tietokantaa.
 
-### MySQL ja PHPAdmin
+### MySQL ja PHPAdmin (localhost)
 
 1. Asenna konellesi MySQL-tietokanta käyttäen Docker:ia:
 
