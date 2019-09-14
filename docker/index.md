@@ -94,8 +94,6 @@ Docker-container:it voidaan pysäyttää, uudelleen käynnistää ja poistaa kon
     docker restart my_container
     ```
 
----
-
 4. Kaikki Docker-containerit, jotka eivät ole käynnissä voi poistaa:
 
     ```cmd
