@@ -32,7 +32,7 @@ docker run --name my-own-phpmyadmin -d --link my-own-mysql:db -p 8081:80 phpmyad
 
 [Tarkemmat ohjeet](https://medium.com/@migueldoctor/run-mysql-phpmyadmin-locally-in-3-steps-using-docker-74eb735fa1fc)
 
-### PostgreSQL ja PHPPGAdmin
+### PostgreSQL ja PHPPGAdmin (localhost)
 
 1. Asenna koneellesi PostgreSQL-ohjelma Dockerin avulla:
 
@@ -55,6 +55,22 @@ Nyt voit käyttää PostgreSQL-tietokantaa:
 - salasana: mysecretpassword
 
 [Tarkemmat ohjeet](https://hub.docker.com/r/dockage/phppgadmin/)
+
+### PHPPGMyAdmin. remote database (Heroku)
+
+PHPPGAdmin:in avulla voidaan ottaa yhteys myös jollakin ulkoisella palvelimella tai pilvipalvelussa toimivaan tietokantaan. Silloin docker:in käynnistyskomentoon sijoitetaan ko. tietokannan url sekä tietokannan nimi.
+
+Esim. jos haluat ottaa yhteyden Herokussa sijaitsevaan PostgreSQL-tietokantaan, kopioi tietokannan url ja nimi (löytyvät Herokusta kohdasta: *Settings: database credentials*) seuraavaan docker käynnistyskomentoon:
+
+```php
+docker run --name=phppgadmin -d --publish=81:80 -e PHP_PG_ADMIN_SERVER_HOST=\<your_db_url_from_heroku\> -e PHP_PG_ADMIN_SERVER_DEFAULT_DB=\<your_db_name_from_heroku\> -e PHP_PG_ADMIN_OWNED_ONLY=true dockage/phppgadmin:latest
+```
+
+Nyt voit käyttää Heroku:n PostgreSQL-tietokantaa kirjautumalla Herokusta poimituilla käyttäjänimellä sekä salasanalla:
+
+- käynnistä localhost:81
+- käyttäjätunnus: <your_db_user_name_from_heroku>
+- salasana: <your_db_password_from_heroku>
 
 ### Docker-container:eiden hallinta
 
@@ -86,10 +102,5 @@ docker container prune
 ```
 
 *Huom!* Tämä tyhjentää tietokannan, eli jos haluat palauttaa tietokannan scheman ja sen datan tee tietokannasta *dump*-tiedosto (Vienti->Tuonti, Export->Import). Muista luoda tietokanta ennen import:ia (Luo tietokanta, Create database).
-<!-- ---
-https://stackoverflow.com/questions/25540711/docker-postgres-pgadmin-local-connection
-docker network create --driver bridge postgres-network
 
-docker run --name postgres1 --network postgres-network -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 
-docker run --name=phppgadmin --network postgres-network -d --publish=80:80 dockage/phppgadmin:latest  -->
