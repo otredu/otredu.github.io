@@ -62,15 +62,15 @@ PHPPGAdmin:in avulla voidaan ottaa yhteys myös jollakin ulkoisella palvelimella
 
 Esim. jos haluat ottaa yhteyden Herokussa sijaitsevaan PostgreSQL-tietokantaan, kopioi tietokannan url ja nimi (löytyvät Herokusta kohdasta: *Settings: database credentials*) seuraavaan docker käynnistyskomentoon:
 
-```php
-docker run --name=phppgadmin-heroku -d --publish=81:80 -e PHP_PG_ADMIN_SERVER_HOST=\<your_db_url_from_heroku\> -e PHP_PG_ADMIN_SERVER_DEFAULT_DB=\<your_db_name_from_heroku\> -e PHP_PG_ADMIN_OWNED_ONLY=true dockage/phppgadmin:latest
+```cmd
+docker run --name=phppgadmin-heroku -d --publish=81:80 -e PHP_PG_ADMIN_SERVER_HOST=<your_db_url_from_heroku> -e PHP_PG_ADMIN_SERVER_DEFAULT_DB=<your_db_name_from_heroku> -e PHP_PG_ADMIN_OWNED_ONLY=true dockage/phppgadmin:latest
 ```
 
 Nyt voit käyttää Heroku:n PostgreSQL-tietokantaa kirjautumalla Herokusta poimituilla käyttäjänimellä sekä salasanalla:
 
 - käynnistä localhost:81
-- käyttäjätunnus: <your_db_user_name_from_heroku>
-- salasana: <your_db_password_from_heroku>
+- käyttäjätunnus: \<your_db_user_name_from_heroku\>
+- salasana: \<your_db_password_from_heroku\>
 
 ### Docker-container:eiden hallinta
 
