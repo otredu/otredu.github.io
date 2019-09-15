@@ -77,21 +77,21 @@ phinx.yml
 
 ### Heroku
 
-Tee itsellesi käyttäjätili [Heroku.com](http://heroku.com):iin.
+- Tee itsellesi käyttäjätili [Heroku.com](http://heroku.com):iin. 
 
-Asenna konelle [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). Tee sen avulla uusi projekti Herokuun, kirjoita Bash:iin:
+- Luo uusi sovellus Heroku.com:in kautta (*Create new app*).
+
+- Valitse *Deploy*-välilehdeltä *Deployment method: Github*. Kirjaudu Github-tilillesi (ellet jo ole kirjautuneena) ja anna Herokulle lupa Github:in käyttöön. Kirjoita repon nimi ja valitse *search* ja sitten *Manual deploy*-kohdan alta *Deploy branch*. Nyt sovelluksesi on verkossa ja voit avata sen linkin kautta. Voit halutessasi aktivoida automaattiset päivitykset (*Enable automatic deploys*).
+
+*Huom* Jos koneelle on asennettu [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). Voit tehdä Heroku-sovelluksen myös sen kautta suoraan (bash):
 
 ```cmd
 > heroku create my_project_name
 ```
 
-Huom! Jos koneella ei ole Heroku CLI -ohjelmaa, voit alustaa projektin myös kokonaan Heroku.com:in kautta (*Create new app*).
-
-Avaa projekti Heroku.com:in kautta, valitse *Deploy*-välilehdeltä *Deployment method: Github*. Kirjaudu Github-tilillesi (ellet jo ole kirjautuneena) ja anna Herokulle lupa Github:in käyttöön. Kirjoita repon nimi ja valitse *search* ja sitten *Manual deploy*-kohdan alta *Deploy branch*. Nyt sovelluksesi on verkossa ja voit avata sen linkin kautta. Voit halutessasi aktivoida automaattiset päivitykset (*Enable automatic deploys*).
-
 ### Relaatiotietokanta ja .env
 
-Jos ohjelmasi käyttää relaatiotietokantaa, voit ottaa käyttöön Herokun PostgreSQL-tietokannan (valitse *Data*. Koodi löytää tietokannan ympäristömuutujan *DATABASE_URL* avulla (muuttuja on siis automaattisesti asetettuna Heroku-ympäristössä).
+Jos ohjelmasi käyttää relaatiotietokantaa, voit ottaa käyttöön Herokun PostgreSQL-tietokannan (valitse *Data*). Koodi löytää tietokannan ympäristömuutujan *DATABASE_URL* avulla (muuttuja on siis automaattisesti asetettuna Heroku-ympäristössä).
 
 Jotta koodisi toimisi myös kehitysympäristössä, käytä *.env*-tiedostoa, johon tallennat kehitysaikaiset ympäristömuuttujat. Koska nämä ympäristötiedot sisältävät salasanoja, näitä tietostoja ei saa tallentaa github:iin vaan ne pitää muistaa jättää pois käyttämällä *.gitignore*-tiedostoa. Github:iin olisi hyvä tallentaa .env-mallitiedostot (ilman oikeita käyttäjätunnuksia ja salasanoja).
 
