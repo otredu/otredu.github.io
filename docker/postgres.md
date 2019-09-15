@@ -1,4 +1,4 @@
-### PostgreSQL ja PHPPGAdmin (localhost)
+## PostgreSQL ja PHPPGAdmin (localhost)
 
 1. Asenna koneellesi PostgreSQL-ohjelma Dockerin avulla:
 
@@ -20,4 +20,8 @@ Nyt voit käyttää PostgreSQL-tietokantaa:
 - käyttäjätunnus: postgres
 - salasana: mysecretpassword
 
-[Tarkemmat ohjeet](https://hub.docker.com/r/dockage/phppgadmin/)
+### Lisätietoa
+
+- [Dockerhub - dokumentaatio](https://hub.docker.com/r/dockage/phppgadmin/)
+
+- [Connect From Your Local Machine to a PostgreSQL Database in Docker](https://medium.com/better-programming/connect-from-local-machine-to-postgresql-docker-container-f785f00461a7)

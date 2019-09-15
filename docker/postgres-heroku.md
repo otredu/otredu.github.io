@@ -13,3 +13,7 @@ Nyt voit käyttää Heroku:n PostgreSQL-tietokantaa kirjautumalla Herokusta poim
 - käynnistä localhost:81
 - käyttäjätunnus: \<your_db_user_name_from_heroku\>
 - salasana: \<your_db_password_from_heroku\>
+
+### Lisätietoa
+
+- [Getting Started with Heroku, Postgres and PgAdmin](https://medium.com/@vapurrmaid/getting-started-with-heroku-postgres-and-pgadmin-run-on-part-2-90d9499ed8fb)

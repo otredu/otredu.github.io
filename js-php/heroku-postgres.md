@@ -2,13 +2,27 @@
 
 ### Heroku
 
-Herokun avulla voidaan käynnistää (*deploy*) palvelinkoodia (esim. PHP tai node.js). Koodin voi imuroida sinne suoraan omasta Github-repostansa.
+Herokun avulla voidaan käynnistää (*deploy*) palvelinkoodia (esim. PHP tai node.js). Koodin voi imuroida sinne suoraan omasta Github-repostansa. 
+
+Luo itsellesi uusi Heroku-sovellus näiden ohjeiden mukaisesti:
 
 - [Heroku-ohjeet](../github/heroku.html)
 
-Herokussa ei ole MySQL-tietokantaa automaattisesti, joten käytämme PostgreSQL:ää sen tilalla. Kooditasolla muutoksia ei pitäisi tulla muualle kuin kohtaan, jossa otetaan yhteys tietokantaan. Erona on siis erilainen *connection string*, sekä eri kirjautumistiedot. Heroku:ssa kirjautumistiedot saadaan DATABASE_URL:sta (ei .env-tiedostosta).
+### PostgreSQL
 
-Muuta siis tietokantayhteyden ottamiseen tarkoitettu koodi haarautumaan sen perusteella onko ympäristömuuttuja *DATABASE_URL* olemassa:
+Herokussa ei ole MySQL-tietokantaa automaattisesti, joten käytämme PostgreSQL:ää sen tilalla.
+
+Lisää sovellukselle tietokanta [Postgres Database On Heroku](https://docs.appery.io/docs/apiexpress-databaseconnection-heroku-postgres). Postgres-tietokannan lisääminen tapahtuu sovelluksen välilehdellä *Resources*, *More add-ons* ja etsimällä hakusanalla *postgres* (valitse ja asenna *Heroku Postgres*). Valitse sovellus, johon lisäät tietokannan.
+
+Voit ottaa yhteyden Herokun Postgres-tietokantaan [PHPPGAdmin](../docker/heroku-postgres.md)-ohjelmalla.
+
+Löydät tarvittavast kirjatumistiedot (url, database name, username, password) avaamalla *Heroku Postgres*-tietokannan ja sen alta kohdan *Settings* -> *Database credentials*.
+
+### Ympäristömuuttujien hallinta Herokussa
+
+Heroku:ssa tietokannan kirjautumistiedot saadaan suoraan ympäristömuuttujan *DATABASE_URL* avulla eli siellä ei tarvita erillistä *.env*-tiedostostoa.
+
+Tämä pitää ottaa huomioon kooditasolla, kun otetaan yhteys tietokantaan. Muuta siis tietokantayhteyden ottamiseen tarkoitettu koodi haarautumaan sen perusteella onko ympäristömuuttuja *DATABASE_URL* olemassa:
 
 ```php
 if(getenv("DATABASE_URL")){
@@ -29,16 +43,6 @@ if(getenv("DATABASE_URL")){
               $connectionString = "mysql:host=$host;dbname=$dbname;port=$port;charset=utf8";
           }
 ```
-
-### PostgreSQL
-
-Lisää sovellukselle tietokanta [Postgres Database On Heroku](https://docs.appery.io/docs/apiexpress-databaseconnection-heroku-postgres). Postgres-tietokannan lisääminen tapahtuu sovelluksen välilehdellä *Resources*, *More add-ons* ja etsimällä hakusanalla *postgres* (valitse ja asenna *Heroku Postgres*). Valitse sovellus, johon lisäät tietokannan.
-
-- [Heroku Postgres-documentation](https://devcenter.heroku.com/articles/heroku-postgresql)
-
-Voit ottaa yhteyden Herokun Postgres-tietokantaan [PHPPGAdmin](../docker/heroku-postgres.md)-ohjelmalla. 
-
-Löydät tarvittavast kirjatumistiedot (url, database name, username, password) avaamalla *Heroku Postgres*-tietokannan ja sen alta kohdan *Settings* -> *Database credentials*.
 
 ### Tietokantaskeman luominen ja päivittäminen (database migrations)
 
@@ -130,7 +134,7 @@ vendor/bin/phinx status -e production
 
 Jos kaikki menee hyvin, näet ruudulla:
 
-![Migration](img/db_migration.png)
+![Migration](img/db_migration.PNG)
 
 Voit tarkistaa tietokannan rakenteen ottamalla [PHPPGAdmin-yhteyden](../docker/heroku-postgres.md) Herokuun.
 
@@ -140,14 +144,8 @@ Jos tietokannan rakenne ei ole haluttu, voit aina ottaa takapakkia:
 vendor/bin/phinx rollback -e production
 ```
 
-Lisätietoa:
-- [CakePHP Phinx](https://book.cakephp.org/3.0/en/phinx)
-- [Phinx: AbstractMigration-class](http://docs.phinx.org/en/latest/migrations.html#the-abstractmigration-class)
-
 ### Lisätietoa
 
-PGAdmin Docker:in avulla:
-- [Connect From Your Local Machine to a PostgreSQL Database in Docker](https://medium.com/better-programming/connect-from-local-machine-to-postgresql-docker-container-f785f00461a7)
-
-PGAdmin asennettuna:
-- [Getting Started with Heroku, Postgres and PgAdmin](https://medium.com/@vapurrmaid/getting-started-with-heroku-postgres-and-pgadmin-run-on-part-2-90d9499ed8fb)
+- [Heroku Postgres-documentation](https://devcenter.heroku.com/articles/heroku-postgresql)
+- [CakePHP Phinx](https://book.cakephp.org/3.0/en/phinx)
+- [Phinx: AbstractMigration-class](http://docs.phinx.org/en/latest/migrations.html#the-abstractmigration-class)
