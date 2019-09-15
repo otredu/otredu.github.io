@@ -1,6 +1,6 @@
 ## Heroku ja Github
 
-Herokuun voi *deploy*:ata node.js tai PHP-projekteja suoraan github-reposta.
+Herokuun voi käynnistää (*deploy*) node.js tai PHP-projekteja suoraan github-reposta.
 
 ### Procfile
 
@@ -14,6 +14,32 @@ PHP-projektille esim. jossa palvelin käynnistetään hakemistossa *public*:
 
 ```cmd
 web: vendor/bin/heroku-php-apache2 public/
+```
+
+### .htaccess (PHP)
+
+Jos olet käynnistämässä PHP-projektia Herokussa, ja käytät Apache-palvelinta, lisää projektisi *public*-kansioon *.htaccess*-tiedosto. Tämän tiedoston avulla ohjataan kaikki HTTP-protokollan pyynnöt ohjelmasi *index.php*-tiedostolle (reitittimelle).
+
+```cmd
+# This file configures the Apache web server such that:
+#  - index.php is served
+#  - any other request is rerouted to index.php.
+
+RewriteEngine On
+RewriteRule ^/index\.php$ - [L,NC]
+
+RewriteRule . index.php [L]
+```
+
+Jotta myös *css*-tiedostot toimivat, tee niille oma kansio *css* *public*-kansion sisälle ja luo sinne toinen *.htaccess*-tiedosto:
+
+```cmd
+# This file configures the Apache web server so that all files in this directory are accessible
+
+RewriteEngine Off
+Allow From All
+Satisfy Any
+Options -Indexes
 ```
 
 ### Github
@@ -31,9 +57,6 @@ Esim. *node.js* projektin *.gitignore* sisältäisi ainakin:
 
 # env
 .env
-.env.localhost
-.env.heroku
-
 ```
 
 PHP-projektissa *.gitignore* sisältäisi ehkä:
@@ -47,15 +70,16 @@ PHP-projektissa *.gitignore* sisältäisi ehkä:
 
 # env
 .env
-.env.localhost
-.env.heroku
+
+# database migrations
+phinx.yml
 ```
 
 ### Heroku
 
 Tee itsellesi käyttäjätili [Heroku.com](http://heroku.com):iin.
 
-Asenna konelle [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). Tee sen avulla uusi projekti Herokuun, kirjoita komentoriville (pyytää kirjautumista Herokuun):
+Asenna konelle [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). Tee sen avulla uusi projekti Herokuun, kirjoita Bash:iin:
 
 ```cmd
 > heroku create my_project_name
@@ -88,7 +112,7 @@ DB_PORT = "3306"
 
 Esim. .env-tiedosto, joka toimii lokaalisti (kirjautumistiedot paikalliseen PostgreSQL-tietokantaan):
 
-```
+```cmd
 ####################################################
 # Configuration for localhost hosting PostgreSQL   #
 ####################################################
