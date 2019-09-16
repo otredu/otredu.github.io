@@ -14,7 +14,7 @@ Herokussa ei ole MySQL-tietokantaa automaattisesti, joten käytämme PostgreSQL:
 
 Lisää sovellukselle tietokanta [Postgres Database On Heroku](https://docs.appery.io/docs/apiexpress-databaseconnection-heroku-postgres). Postgres-tietokannan lisääminen tapahtuu sovelluksen välilehdellä *Resources*, *More add-ons* ja etsimällä hakusanalla *postgres* (valitse ja asenna *Heroku Postgres*). Valitse sovellus, johon lisäät tietokannan.
 
-Voit ottaa yhteyden Herokun Postgres-tietokantaan [PHPPGAdmin](../docker/heroku-postgres.md)-ohjelmalla.
+Voit ottaa yhteyden Herokun Postgres-tietokantaan [PHPPGAdmin](../docker/postgres-heroku.html)-ohjelmalla.
 
 Löydät tarvittavast kirjatumistiedot (url, database name, username, password) avaamalla *Heroku Postgres*-tietokannan ja sen alta kohdan *Settings* -> *Database credentials*.
 
