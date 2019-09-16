@@ -86,8 +86,17 @@ environments:
         port: 3306
         charset: utf8
 
+    developmentpg:
+        adapter: pgsql
+        host: localhost
+        name: news
+        user: postgre
+        pass: mysecretpassword
+        port: 5432
+        charset: utf8
+
 version_order: creation
-``` 
+```
 
 #### Tietokantataulujen luominen
 
@@ -134,14 +143,38 @@ vendor/bin/phinx status -e production
 
 Jos kaikki menee hyvin, näet ruudulla:
 
-![Migration](img/db_migration.PNG)
+![Migration status](img/db_migration.PNG)
 
-Voit tarkistaa tietokannan rakenteen ottamalla [PHPPGAdmin-yhteyden](../docker/heroku-postgres.md) Herokuun.
+Jos saat seuraavan PDO-virheen:
+
+![PDO virhe](img/PDO_pg_error.PNG)
+
+Koneessasi olevaan PHP:hen ei ole aktivoituna PostgreSQL-tukea. Tämän voi lisätä poistamalla ";" merkin tiedostosta *c:/xampp/php/php.ini* siltä riviltä, jossa otetaan käyttöön *PDO_pgsql ekstensio* (4. rivi kuvassa):
+
+![PDO_pgsql aktivointi](img/php_ini_pg.PNG)
+
+Nyt voit ajaa uuden tietokantaversion Herokuun asti *migrate*-komennolla:
+
+```bash
+vendor/bin/phinx migrate -e production
+```
+
+Jos tämä onnistui, status pitäisi olla nyt *up*.
+
+![Migration ok](img/migration_ok.PNG)
+
+Voit nyt tarkistaa tietokannan rakenteen ottamalla [PHPPGAdmin-yhteyden](../docker/heroku-postgres.md) Herokuun.
 
 Jos tietokannan rakenne ei ole haluttu, voit aina ottaa takapakkia:
 
 ```bash
 vendor/bin/phinx rollback -e production
+```
+
+Jos haluat tehdä muutoksia lokaaliin Postgre - tietokantaan kirjoita:
+
+```bash
+vendor/bin/phinx migrate -e productionpg
 ```
 
 ### Lisätietoa
