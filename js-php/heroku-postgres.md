@@ -86,7 +86,7 @@ environments:
         port: 3306
         charset: utf8
 
-    developmentpg:
+    development_pg:
         adapter: pgsql
         host: localhost
         name: news
@@ -171,10 +171,10 @@ Jos tietokannan rakenne ei ole haluttu, voit aina ottaa takapakkia:
 vendor/bin/phinx rollback -e production
 ```
 
-Jos haluat tehdä muutoksia lokaaliin Postgre - tietokantaan kirjoita:
+Jos haluat testata tietokannan hallintaa lokaalilla Postgres-tietokannalla, käynnistä ensin sellainen [PostgreSQL Dockerin avulla](../docker/postgres.html) ja aja sitten:
 
 ```bash
-vendor/bin/phinx migrate -e productionpg
+vendor/bin/phinx migrate -e development_pg
 ```
 
 ### Lisätietoa
