@@ -171,7 +171,7 @@ Jos tietokannan rakenne ei ole haluttu, voit aina ottaa takapakkia:
 vendor/bin/phinx rollback -e production
 ```
 
-Jos haluat testata tietokannan hallintaa lokaalilla Postgres-tietokannalla, käynnistä ensin sellainen [PostgreSQL Dockerin avulla](../docker/postgres.html) ja aja sitten:
+Jos haluat testata tietokannan hallintaa lokaalilla Postgres-tietokannalla, käynnistä ensin sellainen [PostgreSQL Dockerin avulla](../docker/postgres.html) ja luo sinne tyhjä tietokanta (esim. *news*, UTF-8 encoding) käyttäen PHPPGAdmin-ohjelmaa ja aja sitten:
 
 ```bash
 vendor/bin/phinx migrate -e development_pg
