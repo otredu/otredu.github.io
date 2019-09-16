@@ -20,7 +20,9 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [Monimutkaisempi tila, debuggaus](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus)
 - [Kokoelmien renderöinti ja moduulit](https://fullstackopen.com/osa2/kokoelmien_renderointi_ja_moduulit)
 - [Lomakkeiden käsittely](https://fullstackopen.com/osa2/lomakkeiden_kasittely)
+
 ---
+
 - [Harjoituksia 1](./harjoitukset1.html)
 - [Harjoituksia 2](./harjoitukset2.html)
 
