@@ -90,7 +90,7 @@ environments:
         adapter: pgsql
         host: localhost
         name: news
-        user: postgre
+        user: postgres
         pass: mysecretpassword
         port: 5432
         charset: utf8
