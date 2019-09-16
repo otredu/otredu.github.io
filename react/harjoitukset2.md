@@ -12,7 +12,7 @@ Tehtävänä on suunnitella prototyyppi fanikaupalle. Fanikauppa on ReactJS:llä
 
 1. Tuotteiden selailu
 
-    Käyttäjä voi selailla myynnissä olevia tuotteita. Tuotteista näytetään kuva, lyhyt nimi sekä kappalehinta (euroissa). Tuotelistaa pitää voida selata, sekä tutustua tuotteen tarkempiin tietoihin (tarkemmat tuotetiedot avautuvat otsikkoa klikkaamalla tai niin että kerrallaan näytetään vain yksi tuote ("karuselli"-tyylinen selaaminen). Voit siis itse valita millä tavoin tuotteiden selailu tapahtuisi, pyri kiinnittämään huomiota sovelluksesi käytettävyyteen. Prototyypissä tulisi olla vähintään kolme tuotetta.
+    Käyttäjä voi selailla myynnissä olevia tuotteita. Tuotteista näytetään kuva, lyhyt nimi sekä kappalehinta (euroissa). Tuotelistaa pitää voida selata, sekä tutustua tuotteen tarkempiin tietoihin (tarkemmat tuotetiedot avautuvat otsikkoa klikkaamalla) tai niin että kerrallaan näytetään vain yksi tuote ("karuselli"-tyylinen selaaminen). Voit siis itse valita millä tavoin tuotteiden selailu tapahtuisi, pyri kiinnittämään huomiota sovelluksesi käytettävyyteen. Prototyypissä tulisi olla vähintään kolme tuotetta.
     Tuotteita voisivat olla...
 
     - Muki
