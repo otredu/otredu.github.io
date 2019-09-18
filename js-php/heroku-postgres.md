@@ -177,6 +177,20 @@ Jos haluat testata tietokannan hallintaa lokaalilla Postgres-tietokannalla, käy
 vendor/bin/phinx migrate -e development_pg
 ```
 
+### .htaccess
+
+```cmd
+# This file configures the Apache web server such that:
+#  - index.php is served
+#  - any other request is rerouted to index.php. 
+
+RewriteEngine On
+RewriteRule ^/index\.php$ - [L,NC]
+
+RewriteRule . index.php [L]
+```
+
+
 ### Lisätietoa
 
 - [Heroku Postgres-documentation](https://devcenter.heroku.com/articles/heroku-postgresql)
