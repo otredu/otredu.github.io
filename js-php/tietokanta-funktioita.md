@@ -150,3 +150,83 @@ if(isset($_POST['username'], $_POST['password'])){
 ```
 
 *Huom!* Tässä ei ole otettu huomioon vielä sessiota!
+
+### SelectFrom
+
+Tämän funktion avulla voi kysyä tietokannalta yhtä tietuetta id:n avulla:
+
+```php
+function selectFrom($pdo, $table, $id_data){
+    $id_name =  $id_data['id_name'];
+    $id_value =  $id_data['id_value'];
+    if(getenv('DB_DBTYPE') == 'MySql'){
+        $statement = $pdo->prepare("select * from $table where $id_name=?");
+    } else {
+        $statement = $pdo->prepare("select * from $table where \"$id_name\"=?");
+    }
+  
+    $statement->execute([$id_value]);
+    $all = $statement->fetch(PDO::FETCH_ASSOC);
+    return $all;
+}
+```
+
+### Update
+
+Tämän funktion avulla voi päivittää tiedot tietokantaan id:n avulla:
+
+```php
+function update($pdo, $table, $data, $id_data){
+    $id_name =  $id_data['
+    id_name'];
+    $id_value =  $id_data['id_value'];
+    $columns = array_keys($data);
+    $columns_string = implode('= ?, ', $columns) . "=?";
+    if(getenv('DB_DBTYPE') == 'MySql'){
+        $sql = "UPDATE $table SET $columns_string WHERE $id_name=?";
+    } else {
+        $sql = "UPDATE $table SET $columns_string WHERE \"$id_name\"=?";
+    }
+
+    $statement = $pdo->prepare($sql);
+    $values =  array_values($data);
+    $cleanvalues = array_map('cleanUp', $values);
+    $mergevalues = array_merge($cleanvalues, [$id_value]);
+    $statement->execute($mergevalues);
+
+    if($statement != FALSE) {
+        echo "Update onnistui";
+    } else {
+        echo "Update meni pieleen";
+    }
+}
+```
+
+Tässä esimerkki miten *selectFrom* ja *update*-funktioita voi käyttää (esim. *paivita_uutinen.php*-kontrollerista):
+
+```php
+require "database/database.php";
+$pdo = connectDB();
+
+try {
+    $news = selectFrom($pdo, 'uutinen', ["id_name" => "uutinenID", "id_value" => $id]);
+    echo "Muokkaa uutista";
+} catch (PDOException $e){
+    echo "Virhe uutista haettaessa: " . $e->getMessage();
+}
+
+if($news){
+    $id = $news['uutinenID'];
+    $title = $news['otsikko'];
+    $text = $news['sisalto'];
+    $writer = $news['kirjoittaja'];
+    $dbtime = $news['kirjoituspvm'];
+    $time = implode("T", explode(" ",$dbtime));
+    $removetime = $news['poistamispvm'];
+
+    require "views/paivita_uutinen.view.php";
+} else {
+  header("location: /uutiset");
+  exit;
+}
+```
