@@ -40,7 +40,11 @@ if(getenv("DATABASE_URL")){
               $dbname = getenv('DB_NAME');
               $user = getenv('DB_USERNAME');
               $password = getenv('DB_PASSWORD');
-              $connectionString = "mysql:host=$host;dbname=$dbname;port=$port;charset=utf8";
+              if (getenv('DB_DBTYPE') === "MySql"){
+                $connectionString = "mysql:host=$host;dbname=$dbname;port=$port;charset=utf8";
+              } else {
+                $connectionString = "pgsql:host=$host;dbname=$dbname;port=$port";
+              }
           }
 ```
 

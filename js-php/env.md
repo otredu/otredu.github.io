@@ -37,7 +37,7 @@ DB_NAME = "todos"
 DB_PORT = "3306"
 ```
 
-Ota se käyttöön aivan koodisi alussa, esim. *boostrap.php* - tiedostossa:
+Ota se käyttöön aivan koodisi alussa, esim. *env.php* - tiedostossa:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';

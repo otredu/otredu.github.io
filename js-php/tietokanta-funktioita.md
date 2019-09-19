@@ -84,7 +84,12 @@ Tämän funktion avulla voit poistaa tietokantataulusta tietueen. Funktio kannat
 function deleteFrom($pdo, $table, $id_data){
     $id_name =  $id_data['id_name'];
     $id_value =  $id_data['id_value'];
-    $statement = $pdo->prepare("delete from $table where $id_name = ?");
+    if(getenv('DB_DBTYPE') === 'MySql'){
+        $statement = $pdo->prepare("delete from $table where $id_name = ?");
+    } else {
+        $statement = $pdo->prepare("delete from $table where \"$id_name\" = ?");
+    }
+
     $statement->execute([$id_value]);
 }
 ```
@@ -210,7 +215,7 @@ function update($pdo, $table, $data, $id_data){
     $id_value =  $id_data['id_value'];
     $columns = array_keys($data);
     $columns_string = implode('= ?, ', $columns) . "=?";
-    if(getenv('DB_DBTYPE') == 'MySql'){
+    if(getenv('DB_DBTYPE') === 'MySql'){
         $sql = "UPDATE $table SET $columns_string WHERE $id_name=?";
     } else {
         $sql = "UPDATE $table SET $columns_string WHERE \"$id_name\"=?";
@@ -229,6 +234,7 @@ function update($pdo, $table, $data, $id_data){
     }
 }
 ```
+
 Tässä esimerkki miten *update*-funktiota voi käyttää (esim. *paivita_uutinen_db.php*-kontrollerista):
 
 ```php
@@ -241,26 +247,24 @@ if(isset($_POST['newstitle'], $_POST['newstext'], $_POST['writer'], $_POST['news
     $writer = $_POST['writer'];
     $time = $_POST['newstime'];
     $removetime = $_POST['removedate'];
-    
+
     try{
         update(
-            $pdo, 
-            'uutinen', 
-            [   "otsikko" => $title, 
+            $pdo,
+            'uutinen',
+            [   "otsikko" => $title,
                 "sisalto" => $text,
                 "kirjoittaja" => $writer,
                 "kirjoituspvm" => $time,
                 "poistamispvm" => $removetime],
             ["id_name" => "uutinenID", "id_value" => $id]);
             //echo "update ok";
-            header("Location: /");    
+            header("Location: /");
     } catch (PDOException $e){
             echo "Virhe uutista päivitettäessä: " . $e->getMessage();
     }
 } else {
     header("location: /uutiset");
     exit;
-  }
+}
 ```
-
-

@@ -45,6 +45,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [Reititys](./router.html)
 - [Tietokantafunktioita](./tietokanta-funktioita.html)
 - [Rekisteröityminen, login/logout ja sessiot](./register-login.html)
+- [JavaScriptin lisääminen PHP:n sekaan](./js-php-mix.html)
 - [Heroku ja Postgres](./heroku-postgres.html)
 
 - [Harjoitukset 5](./harjoituksia5.html)
