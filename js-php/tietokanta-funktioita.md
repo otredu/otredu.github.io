@@ -171,38 +171,7 @@ function selectFrom($pdo, $table, $id_data){
 }
 ```
 
-### Update
-
-Tämän funktion avulla voi päivittää tiedot tietokantaan id:n avulla:
-
-```php
-function update($pdo, $table, $data, $id_data){
-    $id_name =  $id_data['
-    id_name'];
-    $id_value =  $id_data['id_value'];
-    $columns = array_keys($data);
-    $columns_string = implode('= ?, ', $columns) . "=?";
-    if(getenv('DB_DBTYPE') == 'MySql'){
-        $sql = "UPDATE $table SET $columns_string WHERE $id_name=?";
-    } else {
-        $sql = "UPDATE $table SET $columns_string WHERE \"$id_name\"=?";
-    }
-
-    $statement = $pdo->prepare($sql);
-    $values =  array_values($data);
-    $cleanvalues = array_map('cleanUp', $values);
-    $mergevalues = array_merge($cleanvalues, [$id_value]);
-    $statement->execute($mergevalues);
-
-    if($statement != FALSE) {
-        echo "Update onnistui";
-    } else {
-        echo "Update meni pieleen";
-    }
-}
-```
-
-Tässä esimerkki miten *selectFrom* ja *update*-funktioita voi käyttää (esim. *paivita_uutinen.php*-kontrollerista):
+Tässä esimerkki miten *selectFrom*-funktioita voi käyttää (esim. *paivita_uutinen.php*-kontrollerista):
 
 ```php
 require "database/database.php";
@@ -230,3 +199,68 @@ if($news){
   exit;
 }
 ```
+
+### Update
+
+Tämän funktion avulla voi päivittää tiedot tietokantaan id:n avulla:
+
+```php
+function update($pdo, $table, $data, $id_data){
+    $id_name =  $id_data['id_name'];
+    $id_value =  $id_data['id_value'];
+    $columns = array_keys($data);
+    $columns_string = implode('= ?, ', $columns) . "=?";
+    if(getenv('DB_DBTYPE') == 'MySql'){
+        $sql = "UPDATE $table SET $columns_string WHERE $id_name=?";
+    } else {
+        $sql = "UPDATE $table SET $columns_string WHERE \"$id_name\"=?";
+    }
+
+    $statement = $pdo->prepare($sql);
+    $values =  array_values($data);
+    $cleanvalues = array_map('cleanUp', $values);
+    $mergevalues = array_merge($cleanvalues, [$id_value]);
+    $statement->execute($mergevalues);
+
+    if($statement != FALSE) {
+        echo "Update onnistui";
+    } else {
+        echo "Update meni pieleen";
+    }
+}
+```
+Tässä esimerkki miten *update*-funktiota voi käyttää (esim. *paivita_uutinen_db.php*-kontrollerista):
+
+```php
+require_once "database/database.php";
+$pdo = connectDB();
+
+if(isset($_POST['newstitle'], $_POST['newstext'], $_POST['writer'], $_POST['newstime'], $_POST['removedate'], $id)){
+    $title = $_POST['newstitle'];
+    $text = $_POST['newstext'];
+    $writer = $_POST['writer'];
+    $time = $_POST['newstime'];
+    $removetime = $_POST['removedate'];
+    
+    try{
+        update(
+            $pdo, 
+            'uutinen', 
+            [   "otsikko" => $title, 
+                "sisalto" => $text,
+                "kirjoittaja" => $writer,
+                "kirjoituspvm" => $time,
+                "poistamispvm" => $removetime],
+            ["id_name" => "uutinenID", "id_value" => $id]);
+            //echo "update ok";
+            header("Location: /");    
+    } catch (PDOException $e){
+            echo "Virhe uutista päivitettäessä: " . $e->getMessage();
+    }
+} else {
+    header("location: /uutiset");
+    exit;
+  }
+```
+
+
