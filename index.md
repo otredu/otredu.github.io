@@ -10,6 +10,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 - [React](./react/index.html)
 - [Systeemityö](./systeemityo/index.html)
 - [Tietokannat](./tietokannat/index.html)
+- [Asiointipalveluprojekti](./asiointipalveluprojekti/index.html)
 
 ### Leenan kurssimateriaalit
 
