@@ -50,6 +50,7 @@ Kuten grid:in ja flex-boxin kanssa, Bootstrap:issä pitää määritellä *conta
     <div class="col-8">
       1. rivin leveämpi div
     </div>
+  </div>
   <div class="row">
     <div class="col-2">
       2. rivin pieni div
