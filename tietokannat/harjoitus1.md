@@ -25,7 +25,7 @@ Tallenna tietokannan rakenne: Export-toiminnon avulla ja palauta Github-classroo
 
 Tallenna tietokannan tiedot: Export-toiminnon avulla ja palauta Github-classroomiin.
 
-![Database](./img/uml_music.png)
+![Database](./img/uml_music.PNG)
 
 ### Tietokannan testaaminen (PHPMyAdmin)
 
