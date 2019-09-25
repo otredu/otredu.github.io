@@ -18,7 +18,9 @@ Harjoitukset (palauta kohdat 4 ja 5 Github-classroomiin):
 
 2. Käyttötapaukset
 
-    Poimi järjestelmän toteutukselta vaaditut käyttötapaukset ja kokoa ne *UML use case* - malliksi.[Leenan ohje](http://www.leeniemi.net/syst19/index.php?sivu=hartyo3)
+    Poimi järjestelmän toteutukselta vaaditut käyttötapaukset ja kokoa ne *UML use case* - malliksi.
+
+    - ![UML käyttötapauskaavio - esimerkki](./img/uml_usecase.jpg)
 
 3. Käyttöliittymäehdotus
 

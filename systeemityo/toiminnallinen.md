@@ -14,18 +14,27 @@
 --- 
 Tehtävät:
 
-1. ER-käsitekaavio ja näyttökartta
+1. Tietokantasuunnitelma
 
-    Tee järjestelmälle ER-käsitekaavio sekä näyttökartta. Voit tehdä näitä molempia rinnakkain.
+    Tee järjestelmälle ER-käsitekaavio (Visio: Chen) sekä tietokantamalli (Visio: UML database). Suunnittele tietotyypit sekä tietokannan testaaminen.
 
-2. MockUP
+    - ![ER kaavio - esimerkki](./img/er_kaavio.jpg)
+    - ![UML tietokanta - esimerkki](img/uml_database.jpg)
+    - Tietokannan suunnitteludokumentti - malli
 
-    Tee käyttökartan perusteella MockUp AdobeXD-ohjelmalla (navigointi, kaikki kentät, kaikki sivut).
+2. Käyttöliittymän toiminnallinen suunnittelu
 
-3. Tyyliopas
+    Suunnittele käyttöliittymän toiminta näyttörakennekaavion avulla:
+    - ![UML näyttökartta - esimerkki](img/uml_nayttokaavio.jpg)
+
+3. Käyttöliittymän ulkoasun suunnittelu
 
     Tee sivustolle MockUp:in pohjalta tyyliopas (HTML,CSS). [HSL-esimerkki](https://www.hsl.fi/tyyliopas)
 
-4. Kokoa suunnitteludokumentiksi
+4. Ohjelmiston arkkitehtuurin suunnittelu
 
-    Kokoa edelliset tehtävät yhdeksi dokumentiksi ja palauta (MockUP linkkinä Adobe-cloundin kautta, tyyliopas linkkinä github-pagesin kautta).
+    Kuvaa ohjelmiston arkkitehtuuri (moduulit) korkealla tasolla.
+
+5. Kokoa suunnitteludokumentiksi
+
+    Kokoa edelliset tehtävät yhdeksi dokumentiksi ja palauta.
