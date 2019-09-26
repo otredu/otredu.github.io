@@ -10,7 +10,7 @@ Projektin aikataulu:
 
 Projektin suunnittelu
 
-### Esitutkimus
+### Esitutkimus ja projektisuunnitelma
 
 - projektin kuvaus
 - vaatimukset
@@ -30,6 +30,8 @@ Projektin suunnittelu
 ### Toteutus
 
 - Projektiryhmä toteuttaa oman suunnitelmansa mukaan käyttötapauksia ohjelmoimalla käyttöliittymäkoodia (frontend) sekä tietokantatoimintoja (backend)
+
+Osatehtävät jokaiseen käyttötapaukseet liittyen:
 
 - Tietokannan toteutus ja testaus
 - Tietokantaliittymän toteutus ja testaus
