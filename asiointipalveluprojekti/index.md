@@ -2,14 +2,6 @@
 
 Materiaali täydentyy kurssin edetessä
 
-[Leenan kevään kurssin sivut](http://www.leeniemi.net/proj19/)
-
-Osatehtäviin jakaminen ja GANTT (excel):
-
-Projektin aikataulu:
-
-Projektin suunnittelu
-
 ### Esitutkimus ja projektisuunnitelma
 
 - projektin kuvaus
@@ -31,7 +23,7 @@ Projektin suunnittelu
 
 - Projektiryhmä toteuttaa oman suunnitelmansa mukaan käyttötapauksia ohjelmoimalla käyttöliittymäkoodia (frontend) sekä tietokantatoimintoja (backend)
 
-Osatehtävät jokaiseen käyttötapaukseet liittyen:
+#### Osatehtävät jokaiseen käyttötapaukseet liittyen:
 
 - Tarkempi suunnittelu
 - Tietokannan toteutus ja testaus
@@ -56,3 +48,7 @@ Projektista kirjoitetaan raportti ja projektityöskentelystä itsearviointi.
 
 Esimerkkikuva projektin aikataulutuksesta:
 - ![Projekti GANTT](./img/gantt_excel.PNG)
+
+---
+
+[Leenan kevään kurssin sivut](http://www.leeniemi.net/proj19/)
