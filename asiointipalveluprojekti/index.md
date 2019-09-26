@@ -33,17 +33,26 @@ Projektin suunnittelu
 
 Osatehtävät jokaiseen käyttötapaukseet liittyen:
 
+- Tarkempi suunnittelu
 - Tietokannan toteutus ja testaus
-- Tietokantaliittymän toteutus ja testaus
+- Käyttötapaukseen liittyvä tietokantaliittymän toteutus ja testaus
 - Käyttöliittymän toteutus ja testaus
-- Systeemitestaus (koko järjestelmän testaus)
+- Integrointitestaus (kaikkien toteutettujen osien testaus yhdessä)
 
-- Projektiryhmässä jokainen testaa oman osuutensa toiminnan, päivittää koodin omaan haaraansa (branch), lisää sen yhteiseen repoon eli tekee pullrequestin, katselmoi toistensa koodia ja testaa integroidun koodin toiminnan
+### Testaus ja loppuraportti
+
+Lopussa toteutetaan systeemitestaus eli koko järjestelmän testaus loppukäyttäjän näkökulmasta.
+
+Projektista kirjoitetaan raportti ja projektityöskentelystä itsearviointi.
 
 ### Projektin hallinnasta
 
-- Tunnit kirjataan tuntiraportointi Exceliin
+- Tunnit kirjataan joka päivä tuntiraportointi-Exceliin
 
-- Projektipäällikkö seuraa tehtävien etenemistä, ja vastaa siitä, että kaikilla on tekemistä
+- Projektipäällikkö seuraa tehtävien etenemistä (Excel tai Trello), ja vastaa siitä, että kaikilla on tekemistä (projektipäällikkö voi vaihtua viikottain). Projektin etenemisestä tehdään raportti kerran viikossa.
 
+- Kaikki koodi tallennetaan säännöllisesti github:iin, jokainen projektin jäsen työskentelee omassa haarassaan ja integrointi tehdään hallitusti (PR ja koodikatselmointi)
+-[Ohjeet github:in käyttöön projektissa](https://otredu.github.io/github/projektityo.html)
+
+Esimerkkikuva projektin aikataulutuksesta:
 - ![Projekti GANTT](./img/gantt_excel.PNG)
