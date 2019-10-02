@@ -1,7 +1,5 @@
 ## Github-ohjeita
 
-Materiaalia, joka täydentyy kurssin edetessä...
-
 - [Uuden repon luominen](./uusirepo.html)
 - [Muutosten päivittäminen Githubiin](./muutostenpaivitys.html)
 - [Repon kloonaus](./kloonaus.html)

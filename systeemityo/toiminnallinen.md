@@ -30,8 +30,6 @@ Tehtävät:
 
     Tee sivustolle MockUp:in pohjalta tyyliopas (HTML,CSS). [HSL-esimerkki](https://www.hsl.fi/tyyliopas)
 
----
-
 4. Ohjelmiston arkkitehtuurin suunnittelu
 
     Kuvaa ohjelmiston arkkitehtuuri (komponentti-/moduulirakenne) korkealla tasolla.
@@ -39,7 +37,6 @@ Tehtävät:
     [Ohjeet](./sw_architecture.html)
 
     Kuvaa (komponentti-/moduulirakenne) toiminta sekvenssidiagrammien avulla.
-
 
 5. Kokoa suunnitteludokumentiksi
 

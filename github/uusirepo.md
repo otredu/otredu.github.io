@@ -7,7 +7,9 @@
     ```bash
     git init
     ```
+
 2. Luo uusi tiedosto *.gitignore*, johon määrittelet mitä tiedostoja ei siirretä Github:iin. Esim. node.js projektissa sen sisältö voisi olla [tällainen](https://github.com/otredu/jstesting/blob/master/.gitignore).
+
 3. Tee uusi tiedosto *read.me*, joka kertoo muille mitä repo:ssasi on. Tiedoston formaatti on markdown:ia:
 
     ```md
