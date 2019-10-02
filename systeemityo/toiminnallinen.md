@@ -34,7 +34,7 @@ Tehtävät:
 
     Kuvaa ohjelmiston arkkitehtuuri (komponentti-/moduulirakenne) korkealla tasolla.
 
-    [Ohjeet](./sw_architecture.html)
+    [Ohjeet](./arkkitehtuuri.html)
 
     Kuvaa (komponentti-/moduulirakenne) toiminta sekvenssidiagrammien avulla.
 
