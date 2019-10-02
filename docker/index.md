@@ -9,6 +9,7 @@ Docker:in avulla voit käynnistää koneellesi kehitysympäristön ilman, että 
 - [MySQL ja PHPMyAdmin, localhost](mysql.html)
 - [PostgreSQL ja PHPPGAdmin, localhost](postgres.html)
 - [PHPPGAdmin, Heroku PostgreSQL](postgres-heroku.html)
+- [PHPMyAdmin, Azure](phpmyadmin-remote.html)
 
 ### Docker-container:eiden hallinta
 

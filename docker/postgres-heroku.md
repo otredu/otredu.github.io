@@ -8,6 +8,9 @@ Esim. jos haluat ottaa yhteyden Herokussa sijaitsevaan PostgreSQL-tietokantaan, 
 docker run --name=phppgadmin-heroku -d --publish=81:80 -e PHP_PG_ADMIN_SERVER_HOST=<your_db_url_from_heroku> -e PHP_PG_ADMIN_SERVER_DEFAULT_DB=<your_db_name_from_heroku> -e PHP_PG_ADMIN_OWNED_ONLY=true dockage/phppgadmin:latest
 ```
 
+*Huom.* Jos portti on joku muu kuin 5432, se pitää antaa lisäksi:
+esimerkiksi näin: -e PHP_PG_ADMIN_SERVER_PORT=82.
+
 Nyt voit käyttää Heroku:n PostgreSQL-tietokantaa kirjautumalla Herokusta poimituilla käyttäjänimellä sekä salasanalla:
 
 - käynnistä localhost:81
