@@ -2,7 +2,7 @@
 
 Ohjelmistotuotannossa käytetään erilaisia korkeantason arkkitehtuurikuvia esittämään järjestelmän riippuvuuksia. 
 
-### Web-infratruktuuri
+### Web-infrastruktuuri (Web infrastructure)
 
 Web-sovellukset koostuvat yleensä useista eri palveluista, ja niiden suhdetta toisiinsa voidaan kuvata Web-infrastruktuurikuvalla.
 
@@ -14,7 +14,7 @@ Vastaava kuva voidaan piirtää kehitysympäristöstä (*Development*). Tässä 
 
 ![Infra development](./img/devinfra.jpg)
 
-### SW Architecture
+### Ohjelmistoarkkitehtuuri (SW Architecture)
 
 Ohjelmistoarkkitehtuurikuva kertoo ohjelmiston sisäisestä rakenteesta. Tästä kuvasta selviää ohjelmiston sisäinen rakenne sekä sen käyttämät ulkoiset palvelut.
 
