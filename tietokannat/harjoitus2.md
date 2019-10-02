@@ -1,35 +1,38 @@
-## Uutiset
+## Tietokannan luominen ja käyttäminen hallintaohjelmalla (musicdb)
 
-Tee seuraava tietokanta PostgresSQL:n ja PHPPGAdmin:in avulla [katso käynnistysohje](../docker/index.html).
+### Alkutoimet
 
-### CREATE
+Käynnistä MySQL ja PHPMyAdmin Dockerin avulla [ohje](../docker/index.html).
 
-Luo taulu "uutinen", jossa ovat kentät otsikko, sisalto, kirjoituspvm, poistamispvm, kirjoittaja.
+### Tietokannan luominen (PHPMyAdmin)
 
-Muista laittaa kaikille tauluille avainkentät, muuten kyselyitä ei pysty tekemään.
+1. Tee oheisen tietokantamallin mukainen tietokanta PHPMyAdmin-ohjelmalla. Anna tietokannalle nimeksi "musicdb".
 
-Viisasta on myös määritellä merkistö (UTF-8, esim. swedish).
+Tallenna tietokannan rakenne: Export-toiminnon avulla ja palauta Github-classroomiin.
 
-### INSERT INTO
+2. Syötä testitietoa (vähintään kolme manageria, esiintyjää, musiikkityyliä, asiakasta sekä yksi mennyt keikka sekä yksi tuleva keikka per esiintyjä).
 
-Lisää uutisiin tietoja: neljä vanhaa (poistamispvm on mennyt jo), kolme uutta (ajankohtaista) uutista, laita kaksi eri kirjoittajaa.
+Tallenna tietokannan tiedot: Export-toiminnon avulla ja palauta Github-classroomiin.
 
-### SELECT FROM
+![Database](./img/uml_music.PNG)
 
-- Hae kaikki uutiset
-- Hae uutisista kaikki vanhat uutiset.
-- Hae uutisista toisen kirjoittajan kaikki ajankohtaiset uutiset
-- Hae kaikki uutiset kirjoitusjärjestyksessä
-- Hae kaikki uutiset kirjoittajan ja poistamispäivän mukaan järjestettynä
+### Tietokannan testaaminen (PHPMyAdmin)
 
-### DELETE
+1. Tee kysely, jonka avulla saat selville kaikkien managerien tiedot nimien mukaisessa aakkosjärjestyksessä (sukunimi ensisijainen ja etunimi toissijainen lajittelukenttä).
+2. Tee kysely, jolla saat selville kaikkien esiintyjien menneet keikat. Kyselyn tuloksessa pitää näkyä myös esiintyjien nimet.
+3. Tee kysely, jonka avulla saat selville kaikki rokkariesiintyjät. Huom! Rock on musiikkityylin nimi.
+4. Tee kysely, jonka avulla saat selville, kuinka monta asiakasta tietokannassa on.
+5. Tee kysely, jonka avulla saat selville, kuinka monta asiakasta kullakin managerilla on.
+6. Millaisella kyselyllä saat lisättyä tietokantaan uuden keikan?
+7. Millaisella kyselyllä saat poistettua tietokannasta tietyn nimisen asiakkaan?
+8. Millaisella kyselyllä saat muutettua tietyn nimisen managerin puhelinnumeron?
 
-Poista toisen kirjoittajan vanhat uutiset
+Palauta SQL-lauseet tiedostona Github-classroomiin.
 
-### UPDATE
+### UML-mallinnus
 
-Muuta jäljelläolevat vanhat uutiset vanhenemaan vasta helmikuun vaihteessa
+Harjoittele Vision UML-työkalun käyttämistä ja tee oheinen tietokantakuva itse. UML-mallissa laatikot mallintavat luokkia. Luokilla voi olla erilaisia yhteyksiä toisiinsa (relaatioita). Jos kahden asian (luokan) välillä on tavallinen relaatio, se merkitään viivalla ja asiaankuuluvilla lukumäärillä molemmissa viivan päissä. Jos asia (luokka) koostuu muista luokista se merkitään salmiakilla. Salmiakki on musta, jos määrä on täsmälleen yksi, valkoinen, jos sallitaan vaihteleva määrä jäseniä (0..n tai 0..1). Ääretön määrä merkitään siis *n*-kirjaimella.
 
-### Palautus
+Lisää UML-kuvaan relaatioihin liittyvät lukumäärää ilmoittavat merkinnät (1, 0..1 tai 0..n) sekä relaation tyyppiin (viiva, musta tai valkoinen salmiakki) liittyvät merkinnät.
 
-Vie kaikki tiedot SQL-muodossa Github:iin 
+- [Database Modeling in UML](https://www.eetimes.com/document.asp?doc_id=1255046)

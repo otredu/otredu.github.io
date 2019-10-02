@@ -11,16 +11,15 @@
 - [Logo- ja tyyliopas](http://www.leeniemi.net/syst19/materiaali/Kayt_logo_tyyliopas.pdf)
 - [Suunnittelun vaiheet](http://www.leeniemi.net/syst19/materiaali/Kayt_webvaiheistus.pdf)
 
---- 
+---
+
 Tehtävät:
 
 1. Tietokantasuunnitelma
 
     Tee järjestelmälle ER-käsitekaavio (Visio: Chen) sekä tietokantamalli (Visio: UML database). Suunnittele tietotyypit sekä tietokannan testaaminen.
 
-    - ![ER kaavio - esimerkki](./img/er_kaavio.jpg)
-    - ![UML tietokanta - esimerkki](img/uml_database.jpg)
-    - Tietokannan suunnitteludokumentti - malli
+    [Ohjeet tietokantakurssin materiaalissa ->](../tietokannat/db_suunnittelu.html)
 
 2. Käyttöliittymän toiminnallinen suunnittelu
 
@@ -31,9 +30,16 @@ Tehtävät:
 
     Tee sivustolle MockUp:in pohjalta tyyliopas (HTML,CSS). [HSL-esimerkki](https://www.hsl.fi/tyyliopas)
 
+---
+
 4. Ohjelmiston arkkitehtuurin suunnittelu
 
-    Kuvaa ohjelmiston arkkitehtuuri (moduulit) korkealla tasolla.
+    Kuvaa ohjelmiston arkkitehtuuri (komponentti-/moduulirakenne) korkealla tasolla.
+
+    [Ohjeet](./sw_architecture.html)
+
+    Kuvaa (komponentti-/moduulirakenne) toiminta sekvenssidiagrammien avulla.
+
 
 5. Kokoa suunnitteludokumentiksi
 

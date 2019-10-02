@@ -2,7 +2,7 @@
 
 Jos *local*- ja *remote*-repo ovat olemassa (tehty uusi [repo]("./uusirepo.html") tai [kloonattu vanha]("./kloonaus.html")), tiedostoja päivitetään Github:iin ajamalla:
 
-    git add ./*
+    git add *
     git commit -m "Second update"
     git push
 

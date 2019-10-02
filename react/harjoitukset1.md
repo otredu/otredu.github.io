@@ -6,7 +6,7 @@ Tee uusi React-sovellus ajamalla create-react-app:
 
 ```cmd
 > cd c:/users/oma.nimi/documents/react/
-> nmp create-react-app harj1
+> npx create-react-app harj1
 > cd harj1
 > npm start
 ```
@@ -52,5 +52,9 @@ Lisää sivulle kuvia, kuvatekstejä sekä kuvan otsikkoja. Tallenna yhteen kuva
 Vinkki: Tee komponentti, joka näyttää yhden kuvan tiedot ja toinen komponentti, joka näyttää kaikkien kuvien tiedot (kutsuu ensimmäistä map:in avulla). Lisää toiminnallisuus, että ensin näytetään vain kuvan otsikko ja otsikkoa klikkaamalla näytetään kuva ja kuvateksti. Otsikkoa uudelleenklikkaamalla ne piilotetetaan.
 
 ### Tehtävä 6
+
+Lisää tykkäys-nappi kuvan yhteyteen. Näytä tykkäysten määrä kuvan yhteydessä. Voit tallentaa tykkäysten määrän samaan tilamuuttujaan muiden tietojen kanssa.
+
+### Tehtävä 7
 
 Muokkaa .css - tiedostoa, että elementit myös näyttävät hyvältä.

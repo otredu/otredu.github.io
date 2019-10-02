@@ -4,22 +4,27 @@
 
 Rästitehtävät viime keväältä [ohje](pohjatiedot.html).
 
-### MySQL ja PHPMyAdmin
+### Tietokantataulun luominen ja SQL-kyselyt (newsdb)
+
+Luodaan yksi taulu, siihen testidataa ja suoritetaan SQL-kyselyt.
 
 - Harjoitus 1 [ohje](harjoitus1.html)
 
-### PostgreSQL ja PHPPGAdmin
+### Relaatioiden luominen ja niitä hyödyntävät kyselyt (musicdb)
 
-- Harjoitus 2
+Luodaan monta taulua, niiden välille relaatioita ja suoritetaan SQL-kyselyt.
 
-### ER ja tietokantamalli
+- Harjoitus 2 [ohje](harjoitus2.html)
 
-Tutustu ER-malliin
+### Tietokantasuunnittelu ja tietokannan testaaminen (apartmentdb)
 
-- [ER-malli](http://appro.mit.jyu.fi/tiedonhallinta/luennot/luento2/#TOC1)
+Suunnitellaan tietokanta, luodaan se ja testataan sen toiminta käyttäen testidataa
 
-- [ER-diagrams](https://creately.com/blog/diagrams/er-diagrams-tutorial/)
+- ER-malli sekä tietokantakaavio[ohje](db_suunnittelu.html)
+- Tietokannan testaaminen [ohje]()
 
----
 - Harjoitus 3 [ohje](harjoitus3.html)
+
+### Tietokantasuunnittelu ja tietokannan testaaminen sekä JSON-rajapinta (storedb)
+
 - Harjoitus 4 [ohje](harjoitus4.html)

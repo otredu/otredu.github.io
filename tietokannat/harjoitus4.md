@@ -1,40 +1,69 @@
-## Asunnonvuokraus
+## Verkkokaupan tietokanta
 
-### Lähtökohta
+Tehtävänäsi on suunnitella verkkokauppaa varten relaatiotietokanta, joka toteutetaan MySQL:llä tai PostgreSQL:llä. Sille tehdään myöhemmin JSON-rajapinta (*node.js*).
 
-Tämä tietokanta liittyy Systeemityö-kurssilla tehtävään isompaan työhön. Tietokannat-kurssilla on tarkoitus suunnitella tietokantaosuus.
+Tehtävästä syntyy pikkuhiljaa Wordilla tehty tietokantadokumentti (siis vain 1 tiedosto). Työ palautetaan github-classroomiin: tietokannat-repoon.
 
-### Tietokannan suunnittelu
+### Tietokannan suunnittelun vaiheet
 
-Tässä vaiheessa tehdään vanhan kaavan mukaan
-ER-kaavio (Chen's Database Notation)
-tietokannan rakenteen kuvaus, kenttämääritykset (Crow's Foot Database) sekä viite-eheysmääritykset
+#### ER-kaavio ja tietokantakaavio
 
-Esittele suunnitelmasi ennen toteutusta. Suunnittelun osuus tulee liittymään Systeemityön kurssiin ja käytät niitä osana toiminnallista määrittelyä.
+1. Mieti ensin, mitä tietoja verkkokaupassa tarvitaan (pelkät tuotteet eivät riitä). Tee ER-kaavio suunnittelemasi tietokannan käsitteistöstä.
 
-### Toteutus
+2. Tee tietokannan rakenteen kuvaus (Visio: Software/UML Database Notation). Muista lisätä myös tietotyypit jokaiselle kentälle.
+ 
+3. Esittele suunnitelmasi opelle ja korjaa tarvittaessa ennen seuraavaan vaiheeseen siirtymistä.
 
-Voit toteuttaa tietokannan MySQL:llä tai PostgresSQL:llä. Syötä hieman tietoa tietokantaan sen jälkeen kun olet määritellyt taulujen yhteydet.
+#### SQL-toteutus
 
-### Kyselyt
+1. Luo taulukot SQL-tietokantaan. Tee luontilausekkeet (SHOW CREATE TABLE taulukon_nimi).
 
-- Näytä kaikki tällä hetkellä olevat avoimet vuokrattavat kohteet, järjestä postinumeron ja sitten lähiosoitteen mukaiseen järjestykseen.
-- Näytä kaikki tietyn kohteen seuraavalle näytölle ilmoittautuneet henkilöt, järjestä ilmoittautumisajan mukaiseen järjestykseen.
-- Näytä kaikki asunnon hakuilmoitukset järjestettynä päivämäärän mukaiseen järjestykseen (vanhin ilmoitus ensimmäisenä).
-- Näytä kaikki tehdyt sopimukset vuokranantajan nimen mukaan järjestettynä.
+*Huom! Taulukot kannattaa nimetä niin, että jokaisen edessä on jokin sama tunniste, joka kertoo, että ne kuuluvat juuri tähän tietokantaan. (esimerkiksi "vk_asiakkaat")*
+ 
+2. Luo yhteydet ja viite-eheydet (kun jokin tietue poistetaan, poistetaan samalla siihen kuuluvat tietueet toisesta taulusta). Tulosta (*export*) tietokannastasi luontilauseet vasta viite-eheyden lisäämisen jälkeen.
 
-### Palautus
+3. Syötä jonkin verran dataa tietokantaan.
 
-Työstä kootaan MS Word-asiakirja jossa on mukana 
+#### Testitapaukset ja tietokannan testaaminen
 
-Suunnittelu:
-- ER-kaavio
-- tietokannan rakenne
+Laaditaan yksinkertainen testauslomake ja siihen SQL-kyselyitä, joilla kokeillaan tietokannan käyttämistä. Pyri miettimään tyypillisiä käyttötapoja tietokannallesi. Tarkoitus on, että mukana on vähintään yksi SELECT, DELETE yms. -kysely. Kaikissa tauluissa ei tarvitse olla kaikkia tyyppejä mutta kaikkia tauluja tulisi testata jotenkin.
 
-Toteutus:
-- CREATE TABLE-lauseet
-- testidata
-- testikyselyt
+![Testit](img/tietokantatesti.PNG)
 
-Testaus: 
-- testauslomake
+- Insert
+- Delete Huom.! Viite-eheyden testaus
+- Update
+- Select
+- Select useampaan taulukkoon
+
+Suorita suunnittelemasi testit tietokannallesi, korjaa virheet.
+
+## Verkkokaupan toiminnalliset vaatimukset
+
+### Asiakas: 
+
+- voi lukea tiedotteita
+- voi selailla kaupan tuotteita ja tuoteryhmiä
+- voi rekisteröityä
+- voi tilata ja valita maksutavan
+- voi seurata ostoskoriaan
+- voi seurata teknisiä vaiheita ostoprosessissa (teknisillä vaiheilla tarkoitetaan rekisteröitymistä, tuotteiden keräämistä ostoskoriin ja tilauksen hyväksymistä)
+- saa vahvistuksen kaupasta yhteystietoineen, peruuttamis- ja palauttamisohjeineen
+- voi peruuttaa missä vaiheessa tahansa tilauksen
+- voi antaa palautetta palautelomakkeella
+
+### Lisäksi asiakas:
+
+- voi lukea kuluttajansuojalain mukaiset yrityksen yhteystiedot (kuvitellussa yrityksessäkin on oltava merkittynä paikka, jossa rekisteritunnukset ovat)
+- voi varmistaa, että henkilötietojen käsittely on tietosuojavaltuutetun ohjeiden mukaista – esimerkki lain vaatimat rekisteriselosteet
+- voi lukea sopimusehdot ennen tilauksen hyväksymistä
+- voi lukea kaupan peruuttamisohjeet
+
+### Kaupan ylläpitäjä:
+
+- voi lisätä, päivittää ja poistaa tuoteryhmiä ja tuotteita tuotetietoineen ja kuvineen (muista myös linkit valmistajan kotisivustolle)
+- päivittää tiedotteita sivustolla
+- hallinnoida (seurata, päivittää ja poistaa) tilauksia
+- hallinnoida (seurata, päivittää ja poistaa) rekisteröityneitä asiakkaita
+- lukea seurantaraportteja (esim. toteutuneista kaupoista jne.)
+- lukea ja antaa vastauksia asiakaspalautteisiin
