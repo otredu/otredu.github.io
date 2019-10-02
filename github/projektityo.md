@@ -59,3 +59,17 @@ Voit silti tehdä *Pull request*:in. Tässä vaihessa joko sinä itse tai joku m
 Tämä tehdään käsin poistamalla turhat koodirivit, sekä editorin lisäämät merkit <<<<< ===== >>>>>, jotka auttavat näkemään missä muutokset ovat. Tee vielä *commit*. Jos teit tämän itse, toisen projektihenkilön pitää se hyväksyä.
 
 ![edit conflicts](./img/edit_conflicts.PNG)
+
+Jos konflikteja on liikaa, github ilmoittaa, että *merge* pitää tehdä komentoriviltä. Mene siis omaan haaraasi, ja hae muiden tekemät muutokset github:ista:
+
+```cmd
+git merge origin/master
+```
+
+Avaa sitten VSCode, valitse *incoming change* tai *current change*. Lisää muutokset painamalla + merkkiä VS Codessa (tai "git add \*" bash:issä). Tee *commit* ja testaa koodisi toiminta. Jos kaikki toimii tee *push*.
+
+Huom! Jotta git:iä voi käyttää *merge conflict*:ien ratkaisussa, se pitää löytyä PATH:ista. Lisää siis PATH:iin "C:\Program Files\Git\cmd".
+
+Voit katsoa koodihaaroja ja niiden etenemistä github:in *Insights* välilehden *Network*-osasta. Tässä esimerkkikuvassa alimman haaran *merge* ei onnistu, koska sen haarautumisen jälkeen on muutettu samoja tiedostoja.
+
+![Merge conflict](./img/merge_conflict_SNOIK.PNG)
