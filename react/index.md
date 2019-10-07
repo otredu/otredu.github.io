@@ -8,8 +8,8 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - React-komponentti, props:it, map (vk 33)
 - Props:ien destrukturointi, keys-props (vk 34)
 - Eventhandlers/callbacks, tila (state, useState) (vk 35)
-- Kertausta ja harjoituksia 1 loppuun (vk 37)
-- Harjoituksia 2 (vk 38 ->)
+- Kertausta ja harjoituksia 1 loppuun (vk 37-38)
+- Harjoituksia 2 (vk 39 -> 41)
 
 ### React
 
