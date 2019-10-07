@@ -8,6 +8,10 @@ Tehtävänä on suunnitella prototyyppi fanikaupalle. Fanikauppa on ReactJS:llä
 
 *Huom!* Käytä vain sellaisia tuotekuvia, joiden käyttöehdot sallivat uudelleen käytön ja julkaisemisen (projekti käynnistetään Herokussa).
 
+Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn ennen harjoituksen tekemistä:
+
+- [Tilamuuttujien käsittely](./immutable-state.html).
+
 ### Toiminnot
 
 1. Tuotteiden selailu
