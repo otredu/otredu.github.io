@@ -54,4 +54,6 @@ Vinkkejä:
 
 - [Kuvien pienentäminen Photoshopilla](./images.html)
 
+- [CPANEL-ohjeet](./cpanel.html)
+
 - [Leenan kevään kurssin sivut](http://www.leeniemi.net/proj19/)
