@@ -21,3 +21,18 @@ Ota yhteys palvelimeen ja siirrä kaikki PHP-tiedostot sub-domain-kansioosi.
 ### Document root:in muuttaminen
 
 Muuta domain:isi *document root* vastaamaan sitä kansiota, jossa *index.php* on (esim. my_domain/public). Tämä tehdään *Domain*-kohdassa.
+
+### .htaccess
+
+Jotta kaikki HTTP-pyynnöt ohjautuisivat reitittimellemme eli ohjelmamme *index.php*-tiedostolle, lisäämme *public*-kansioon vielä *.htaccess*-tiedoston, joka konffaa Apache-palvelimen toiminnan halutuksi.  
+
+```cmd
+# This file configures the Apache web server such that:
+#  - index.php is served
+#  - any other request is rerouted to index.php.
+
+RewriteEngine On
+RewriteRule ^/index\.php$ - [L,NC]
+
+RewriteRule . index.php [L]
+```
