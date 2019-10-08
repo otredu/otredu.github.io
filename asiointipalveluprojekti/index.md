@@ -50,5 +50,8 @@ Esimerkkikuva projektin aikataulutuksesta:
 - ![Projekti GANTT](./img/gantt_excel.PNG)
 
 ---
+Vinkkejä:
 
-[Leenan kevään kurssin sivut](http://www.leeniemi.net/proj19/)
+- [Kuvien pienentäminen Photoshopilla](./images.html)
+
+- [Leenan kevään kurssin sivut](http://www.leeniemi.net/proj19/)
