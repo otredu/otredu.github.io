@@ -12,12 +12,18 @@ Materiaali täydentyy kurssin edetessä
 - projektin jakaminen osatehtäviin (määritellään mitä toimii ohjelman ensimmäisessä  versiossa, toisessa versiossa, kolmannessa versiossa)
 - projektin aikataulutus ja työnjako (kuka tekee mitäkin ohjelman ensimmäisen version toteutuksessa jne)
 
+Tarkempia [ohjeita esitutkimukseen](./systeemityo/esitutkimus.html).
+
+Esimerkkidokumentti [projektisuunnitelmaksi](http://www.leeniemi.net/proj19/apumateriali/WebMagiaProjektisuunnitelma.pdf).
+
 ### Toiminnallinen suunnittelu
 
 - ER-malli (Visio: Chen) ja tietokantamalli (Visio: UML)
 - näyttörakennekaavio (Visio: UML luokkakaavio)
 - arkkitehtuuri (korkealla tasolla)
 - tyyliopas (HTML + CSS)
+
+Tarkempia [ohjeita toiminnalliseen suunnitteluun](./systeemityo/toiminnallinen.html).
 
 ### Toteutus
 
@@ -35,7 +41,9 @@ Materiaali täydentyy kurssin edetessä
 
 Lopussa toteutetaan systeemitestaus eli koko järjestelmän testaus loppukäyttäjän näkökulmasta.
 
-Projektista kirjoitetaan raportti ja projektityöskentelystä itsearviointi.
+Projektista kirjoitetaan [raportti](http://www.leeniemi.net/proj19/apumateriali/WebMagiaProjektin_loppuraportti.pdf) ja projektityöskentelystä [itsearviointi sekä vertaisarviointi](https://omaareena-my.sharepoint.com/:w:/g/personal/tiina_partanen_edu_tampere_fi/ETibQLkTNhRFrbnSgoavirABFVuNBW6edN2IRveorX6G6A?e=kcKW8v).
+
+Ohjeita [systeemitestaukseen](./testaus/index.html).
 
 ### Projektin hallinnasta
 

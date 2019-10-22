@@ -1,21 +1,37 @@
 ## Testaus ja testausympäristöt
 
 Materiaalia, joka täydentyy kurssin edetessä...
-### Kurssin sisältö ja aikataulu 2019
-1. Orientaatioharjoituksia testaamiseen (vk 2)
-2. Testaamisen tasot: yksikkötestaus, JEST:in asennus (vk 3)
-3. JS-yksikkötestausta JEST:in avulla, demo 1 (vk 4)
-4. JS-yksikkötestausta Harjoitukset 1 (vk 5)
-5. Systeemitestaus, testaussuunnitelma, testitapaukset, testausraportti (vk 6, 7)
-7. Selenium IDE, headless brower ja JUnit (vk12)
 
-### Yksikkötestaus (JavaScript)
+### Kurssin sisältö
+
+1. Systeemitestaus: testaussuunnitelma, testitapaukset, testausraportti
+2. Yksikkötestausta JEST:in avulla
+3. Moduulitestausta JEST:in avulla
+
+Lisätehtäviä:
+4. Selenium IDE, headless brower ja JUnit
+
+### Ohjelmistotestaus
+
+- [Yleisesti testaamisesta](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/Eb9bvYGiIK5KrFuQjAacLfgB1hVKoGgMj3_i5q0r8ILNvg?e=our80G)
+
+### Systeemitestaus
+
+- [Systeemitestausharjoitus-parityö](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/EVcFsHwxFt1JsOYPfrlHh0MB5NhwviBWBF0yNiIHNJNrgw?e=xRviFA​)
+- [Testaussuunnitelma-esimerkki](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/Ebhc3Pds6NFNkRajTTIz21IBlpDcv47UgIQRXIFGNCfo4g?e=Asdxca​)
+- [Testitapaukset-esimerkki](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/EaZiI2KLSIlCqpHimQ1DjrcB1HTXfF5R1ZPDGmxuND9-eQ?e=BODpNU​)
+
+### Yksikkötestaus (JS)
 
 - [JS kertausta](../js/alkeita.html)
 - [JEST:in asennus](./jest.html)
 - [JEST alkeita](./jest-alkeet.html)
 - [JEST demo 1](./demo1.html)
 - [Harjoitukset 1](./harjoitus1.html)
+
+### Moduulitestaus (JS)
+
+- Tulossa
 
 ### Automatisoitu selaintestaus (Java)
 - [Selenium IDE](./seleniumide.html)
