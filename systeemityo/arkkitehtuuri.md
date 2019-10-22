@@ -4,7 +4,13 @@ Ohjelmistotuotannossa käytetään erilaisia korkeantason arkkitehtuurikuvia esi
 
 ### Web-infrastruktuuri (Web infrastructure)
 
-Web-sovellukset koostuvat yleensä useista eri palveluista, ja niiden suhdetta toisiinsa voidaan kuvata Web-infrastruktuurikuvalla.
+Web-sovellukset toimivat joko yhdessä kaiken sisältävässä webhosting palvelusta tai se koostetaan useammasta eri mikropalveluista. Näiden palvelujen suhdetta toisiinsa voidaan kuvata Web-infrastruktuurikuvalla.
+
+Tässä kuvassa on cpanelin avulla toteutettu web-hosting palvelu:
+
+![webhotel](./img/webhotel.jpg)
+
+Mikropalveluista koostuvassa web-sovelluksessa on useita servereitä, jotka toteuttavat eri toiminnallisuudet.
 
 *Production* kuvaa tässä lopullista sovelluksen toimintaympäristöä ns. tuotantoympäristöä. ja *Deployment* sitä kun sovellus asennetaan/käynnistetään tuotantoympäristöön.
 
