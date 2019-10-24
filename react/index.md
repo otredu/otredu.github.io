@@ -23,11 +23,15 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 ---
 
-- [Harjoituksia 1](./harjoitukset1.html)
-- [Harjoituksia 2](./harjoitukset2.html)
+- [Harjoituksia 1](./harjoitukset1.html), tehdään yhdessä demona
+- [Harjoituksia 2](./harjoitukset2.html), tehdään itsenäisesti
 
 ### Palvelimen kanssa kommunikointi
 
 - [Palvelimella olevan datan hakeminen](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen)
 - [Palvelimella olevan datan muokkaaminen](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen)
 - [Tyylien lisääminen react sovellukseen](https://fullstackopen.com/osa2/tyylien_lisaaminen_react_sovellukseen)
+
+---
+
+- [Harjoituksia 3](./harjoitukset3.html), tehdään yhdessä demona
