@@ -11,6 +11,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 - [Systeemityö](./systeemityo/index.html)
 - [Tietokannat](./tietokannat/index.html)
 - [Asiointipalveluprojekti](./asiointipalveluprojekti/index.html)
+- [Testaaminen ja testiympäristöt](./testaus/index_K2019.html)
 
 ### Leenan kurssimateriaalit
 
@@ -30,5 +31,5 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 ## Menneet kurssit:
 
 - [Asiointipalvelujen rakentamisen tekniikka JS (kevät 2019)](./js/index.html)
-- [Testaaminen ja testiympäristöt (kevät 2019)](./testaus/index.html)
+- [Testaaminen ja testiympäristöt (kevät 2019)](./testaus/index_K2019.html)
 - [Julkiset tietoverkot (kevät 2019)](./html-css/index_k2019.html)
