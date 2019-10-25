@@ -22,8 +22,8 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
 1. Käynnistä Visual Studio Code, tee uusi tiedosto *sum.js*, joka sisältää testattavan funktion **sum**:​
 
     ```js
-    function sum(a, b) { ​
-    return a + b; ​
+    const sum = (a, b) => { ​
+        return a + b; ​
     } ​
     module.exports = sum;
     ```

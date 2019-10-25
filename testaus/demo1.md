@@ -11,7 +11,7 @@ Lisätään sum-funktiolle uusi testitapaus, joka testaa toipuuko funktio siitä
 Testattava funktio (omassa *.js tiedostossaan):
 
 ```js
-function sum(a, b) {
+const sum = (a, b) => {
     const result = a + b;
     return result;
 }
@@ -33,7 +33,7 @@ Kun testi ajetaan (npm run test), konsolille tulee ilmoitus siitä, että testi 
 Nyt palataan *sum* funktioon ja korjataan se:
 
 ```js
-function sum(a, b) {
+const sum = (a, b) => {
     const result = Number(a) + Number(b);
     return result;
 }
@@ -58,7 +58,7 @@ Testi toimii hyvin, koska saamme *fail*:
 Nyt korjataan *sum*-funktio, niin että testi menee läpi:
 
 ```js
-function sum(a, b) {
+const sum = (a, b) => {
     const result = Number(a) + Number(b);
     console.log(result);
     if(Number.isNaN(result)){
@@ -89,7 +89,7 @@ Nämäkin testit toimivat hyvin, koska saamme *fail*.
 Korjataan koodia niin, että nämäkin testit menevät läpi. Lisätään *default*-arvo b:lle (b=0), ja heitetään poikkeus, jos a:n arvokin on määrittelemätön.
 
 ```js
-function sum(a, b=0) {
+const sum = (a, b=0) => {
     if(a === undefined || a === null){
         throw new Error('ei parametreja');
     }
@@ -102,6 +102,16 @@ function sum(a, b=0) {
 module.exports = sum;
 ```
 
+Kun samassa tiedostossa on useita testattavia funktioita, ne exportataan ja importataan listana:
+
+```js
+// kooditiedostossa:
+module.exports = {sum, division};
+
+// testitiedostossa:
+const {sum, division} = require('./sum'); ​
+```
+
 ### Yhteenveto
 
 Yksikkötestien avulla ohjelmoija testaa oman koodinsa oikean toiminnan kaikissa tapauksissa, myös mahdollisilla väärillä syötteillä. Jos koodissa on ehtolause, sen jokainen haara pitää testata jne. Testin testaaminen on tärkeä välivaihe, että voidaan olla varmoja siitä, että virhe on testattavassa koodissa eikä itse testissä.
@@ -112,6 +122,6 @@ Nyt kun nämä testit toimivat ja jatkat [harjoituksia 1](harjoitus1.html), voit
 
 ```js
 describe.skip('sum-testit', () => {
-    ...kaikki tässä oleva skipataan...
-}
+    //...kaikki tässä oleva skipataan...
+})
 ```
