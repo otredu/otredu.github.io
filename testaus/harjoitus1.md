@@ -1,6 +1,6 @@
 # Yksikkötestaus: JEST
 
-## Harjoitukset
+## Harjoitukset 1
 
 Ennen harjoitusten tekemistä, asenna [JEST](jest.html), tutustu siihen miten erityyppistä tietoa testataan [expect](./jest-alkeet.html):in avulla. Katso mallia tunnilla käydystä [demo 1](./demo.html):stä.
 
