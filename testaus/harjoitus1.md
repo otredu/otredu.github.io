@@ -6,29 +6,33 @@ Ennen harjoitusten tekemistä, asenna [JEST](jest.html), tutustu siihen miten er
 
 ### 1. Täysi-ikäisyys
 
-Tee funktio, joka testaa onko henkilö täysi-ikäinen (*input*: ikä, *output*: totuusarvo). Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkojonoista). Syötteestä josta ei voi toimia, heitä poikkeus. Muista testata kaikki ehtolauseen haarat.
+Tee funktio, joka testaa onko henkilö täysi-ikäinen (*input*: ikä, *output*: totuusarvo). Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista). Syötteestä josta ei voi toimia, heitä poikkeus. Muista testata kaikki ehtolauseen haarat.
 
 ### 2. Osamäärä
 
-Tee funktio, joka palauttaa kahden luvun (a ja b) osamäärän. Laadi funktiolle testitapaukset, joissa testaat onnistuuko jakaminen. Funktion tulee toipua vääränlaisesta syötteestä (merkkijono, nollalla jakaminen) ja antaa järkevä paluuarvo. Testaa kaikkien ehtolauseiden haarat.
+Tee funktio, joka palauttaa kahden luvun (a ja b) osamäärän. Laadi funktiolle testitapaukset, joissa testaat onnistuuko jakaminen. Funktion tulee toipua vääränlaisesta syötteestä (merkkijono, ei anneta jakajaa) ja heittää virhe, jos yritetään jakaa nollalla. Testaa kaikkien ehtolauseiden haarat.
 
 ### 3. Bussilipun hinta
 
-Tee funktio, joka palauttaa oikean bussilipun hinnan, kun funktio saa paramatrinaan henkilön iän. Bussilippujen hinnat:
+Tee funktio, joka palauttaa oikean bussilipun hinnan (lukuarvona, ei merkkijonona), kun funktio saa paramatrinaan henkilön iän. Bussilippujen hinnat:
 
-| Ikä/lippukategoria:    | Hinta:  |
+| Ikä/lippukategoria:    | Hinta (€):  |
 | ------------- |:-------------:|
-| alle 7v     | ilmainen |
-| alle 16v koululaislippu     |  1€  |
-| 16-25 nuorisolippu | 1.50€ |
-| yli 25 aikuinen | 3€ |
-| yli 65 seniori |  1.5€ |
+| alle 7v     | 0 |
+| alle 16v koululaislippu     |  1  |
+| 16-25 nuorisolippu | 1.5 |
+| yli 25 aikuinen | 3 |
+| yli 65 seniori |  1.5 |
 
-Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista). Testaa kaikki ehtolauseiden reuna-alueet. *Vinkki:* käytä else if rakennetta.
+Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista). Testaa kaikki ehtolauseiden reuna-alueet.
+
+*Vinkki:* käytä else if rakennetta.
 
 ### 4. Kolmion pinta-ala
 
-Tee funktio, joka laskee kolmion pinta-alan ja pyöristää sen kahden desimaalin tarkkuuteen (esim. Math.floor). Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista, negatiivisesta sivun pituudesta jne). Testaa kaikkien ehtolauseiden haarat.
+Tee funktio, joka laskee kolmion pinta-alan ja pyöristää sen kahden desimaalin tarkkuuteen (esim. Math.round). Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista, negatiivisesta sivun pituudesta jne). Testaa kaikkien ehtolauseiden haarat.
+
+*Vinkki:* kerro pyöristettävä luku ensin sadalla, pyöristä se ja jaa se sitten sadalla (näin saat pyöristysen 2 desimaalin tarkkuuteen).
 
 ### 5. Tuotteen hinta
 

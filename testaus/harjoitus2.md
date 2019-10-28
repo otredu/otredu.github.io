@@ -27,11 +27,11 @@ Testaa funktion toiminta erilaisilla syötteillä.
 Tee funktio, joka palauttaa uuden yhteystieto-olion (contact), jossa on seuraavat kentät:
 
 - firstname
-- lasname
+- lastname
 - phonenumber
 - id
 
-Vain etunimi ja sukunimi ovat pakollisia kenttiä (heittää virheen, jos ei ole annettu), jos puhelinnumero on anettu tarkista sen oikea muoto tehtävän 1 funktion avulla.
+Vain etunimi ja sukunimi ovat pakollisia kenttiä (heittää virheen, jos ei ole annettu), jos puhelinnumero on annettu tarkista sen oikea muoto tehtävän 1 funktion avulla. Arvo id:ksi jokin kokonaisluku (*Math.random*).
 
 Testaa funktion toiminta erilaisilla syötteillä.
 
