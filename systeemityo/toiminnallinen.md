@@ -28,7 +28,7 @@ Tehtävät:
 
 3. Käyttöliittymän ulkoasun suunnittelu
 
-    Tee sivustolle MockUp:in pohjalta tyyliopas (HTML,CSS). [HSL-esimerkki](https://www.hsl.fi/tyyliopas)
+    Tee sivustolle MockUp:in pohjalta tyyliopas (HTML,CSS). [HSL-esimerkki](https://www.hsl.fi/tyyliopas). Tyylioppaan voi laajentaa myös toimivaksi demoksi (sisältäen pääsivun ja toimivat linkit, mutta ei muuta toiminnallisuutta).
 
 4. Ohjelmiston arkkitehtuurin suunnittelu
 
