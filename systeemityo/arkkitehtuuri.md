@@ -8,7 +8,7 @@ Web-sovellukset toimivat joko yhdessä kaiken sisältävässä webhosting palvel
 
 Tässä kuvassa on cpanelin avulla toteutettu web-hosting palvelu:
 
-![webhotel](./img/webhotel.jpg)
+![webhotel](./img/webhotel.png)
 
 Mikropalveluista koostuvassa web-sovelluksessa on useita servereitä, jotka toteuttavat eri toiminnallisuudet.
 
