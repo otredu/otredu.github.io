@@ -18,9 +18,10 @@ Luodaan monta taulua, niiden välille relaatioita ja suoritetaan SQL-kyselyt.
 
 ### Tietokantasuunnittelu ja tietokannan testaaminen (apartmentdb)
 
-Suunnitellaan tietokanta, luodaan se ja testataan sen toiminta käyttäen testidataa
+Suunnitellaan tietokanta asunnonvuokrausjärjestelmälle, luodaan se käyttämällä *migrations*-työkalua (JS) ja testataan sen toiminta käyttäen *seeds*-testidataa sekä ajamalla SQL-lauseita.
 
-- ER-malli sekä tietokantakaavio[ohje](db_suunnittelu.html)
+- ER-malli sekä tietokantakaavio [ohje](db_suunnittelu.html)
+- Tietokannan luominen [Knex migrations - ohjeet](./migrations.html)
 - Tietokannan testaaminen [ohje]()
 
 - Harjoitus 3 [ohje](harjoitus3.html)
