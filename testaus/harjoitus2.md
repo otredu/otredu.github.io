@@ -68,13 +68,13 @@ Testaa funktion toiminta erilaisilla syötteillä.
 
 ---
 
-Käytä tästä eteenpäin testipuhelinluetteloa, jonka yhteystiedoissa on uniikit id-kentät. Voit lisätä uuden kentän ajamalla vanhan puhelinluettelon map:in läpi.
+Käytä tästä eteenpäin testipuhelinluetteloa, jonka yhteystiedoissa on uniikit id-kentät (voit käyttää *Math.random* -funktiota). Voit lisätä uuden kentän ajamalla vanhan puhelinluettelon map:in läpi.
 
 --- 
 
 ### Tehtävä 6
 
-Tee funktio, jonka avulla annetun puhelinluettelon yhteystieto voidaan päivittää annetun id:n ja uuden puhelinnumeron avulla. Puhelinnumeron on oltava validi. Funktio palatutaa uuden päivitetyn puhelinluettelon tai heittää virheen, jos yhteystietoa ei löydy.
+Tee funktio, jonka avulla annetun puhelinluettelon yhteystieto voidaan päivittää annetun id:n ja uuden puhelinnumeron avulla. Puhelinnumeron on oltava validi. Funktio palauttaa uuden päivitetyn puhelinluettelon tai heittää virheen, jos yhteystietoa ei löydy.
 
 Testaa funktion toiminta erilaisilla syötteillä.
 
@@ -92,13 +92,13 @@ Testaa funktion toiminta erilaisilla syötteillä.
 
 ### Tehtävä 9
 
-Tee funktio, joka käy läpi puhelinluettelon, ja lisää yhteystieto-olioon kentän *missed calls* ja asettaa sen arvon nollaksi. Jos kenttä on jo olemassa, se asetetaan nollaksi.
+Tee funktio, joka käy läpi puhelinluettelon, ja lisää yhteystieto-olioon kentän *missed calls* ja asettaa sen arvon nollaksi. Jos kenttä on jo olemassa, se asetetaan nollaksi. Funktio palauttaa uuden puhelinluettelon.
 
 Testaa funktion toiminta.
 
 ### Tehtävä 10
 
-Tee funktio, joka kasvattaa *missed calls* kenttää yhdellä, kun yhteystiedon id annetaan parametrina.
+Tee funktio, joka kasvattaa *missed calls* kenttää yhdellä, kun yhteystiedon id annetaan parametrina. Funktio palauttaa uuden puhelinluettelon.
 
 Testaa funktion toiminta.
 
@@ -110,7 +110,7 @@ Testaa funktion toiminta.
 
 ### Tehtävä 12
 
-Tee funktio, joka laskee yhden puhelun keston, kun se saa parametrina *callLog*-olion, joka kuvaavaa soitetun puhelun tietoja:
+Tee funktio, joka laskee yhden puhelun keston, kun se saa parametrina *callLog*-olion, joka kuvaavaa yhden soitetun puhelun tietoja:
 
 - yhteystiedon id johon soitettu
 - puhelun alkuaika *datetime*
@@ -120,7 +120,7 @@ Testaa funktion toiminta.
 
 ### Tehtävä 13
 
-Tee funktio, joka laskee kaikkien soitettujen puheluiden yhteiskeston sekunteina.
+Tee funktio, joka laskee kaikkien soitettujen puheluiden yhteiskeston sekunteina, kun se saa taulukon, jossa on useita *callLog*-olioita.
 
 Testaa funktion toiminta.
 
