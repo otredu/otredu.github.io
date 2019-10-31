@@ -68,9 +68,9 @@ Testaa funktion toiminta erilaisilla syötteillä.
 
 ---
 
-Käytä tästä eteenpäin testipuhelinluetteloa, jonka yhteystiedoissa on uniikit id-kentät (voit käyttää *Math.random* -funktiota). Voit lisätä uuden kentän ajamalla vanhan puhelinluettelon map:in läpi.
+Käytä tästä eteenpäin testipuhelinluetteloa, jonka yhteystiedoissa on uniikit id-kentät.
 
---- 
+---
 
 ### Tehtävä 6
 
