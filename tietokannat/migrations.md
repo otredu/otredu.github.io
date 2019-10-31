@@ -13,13 +13,13 @@ npm init
 npm install knex --save-dev
 ```
 
-Aja *knex*-init, joka luo konffaustiedoston *knexfile.js*:
+Aja *knex*-init, joka luo konffaustiedoston *knexfile.js*. Anna projektille nimeksi esim. "vuokraus" ja paina *enter*-muihin kohtiin.
 
 ```cmd
-knex init
+npx knex init
 ```
 
-*knexfile.js:ssä pitäisi olla vähintään kirjautumistiedot localhost-mysql-tietokannan käyttöön:
+*knexfile.js:ssä pitäisi olla vähintään kirjautumistiedot localhost-mysql-tietokannan käyttöön. Päivitä *development* -tiedot seuraaviksi:
 
 ```js
 module.exports = {
@@ -32,6 +32,12 @@ module.exports = {
 }
 ```
 
+Asenna vielä *mysql*:
+
+```cmd
+npm install mysql --save
+```
+
 Käynnistä MySQL ja PHPMyAdmin dockerilla ja luo *my_rentals*-tietokanta.
 
 ### Taulujen luominen
@@ -39,7 +45,7 @@ Käynnistä MySQL ja PHPMyAdmin dockerilla ja luo *my_rentals*-tietokanta.
 Luo uusi *migrations*-tiedosto:
 
 ```cmd
-knex migrate:make create_rental
+npx knex migrate:make create_rental
 ```
 
 Tämä tekee tyhjän migrations-tiedoston *migrations*-kansioon.
@@ -67,13 +73,13 @@ exports.up = function(knex, Promise) {
 Aja nyt ensimmäinen *migrations*:
 
 ```cmd
-knex migrate:latest
+npx knex migrate:latest
 ```
 
 Jos haluaa tehdä muutoksia, tämän *migrations*-version voi poistaa ajamalla:
 
 ```cmd
-knex migrate:rollback
+npx knex migrate:rollback
 ```
 
 Tässä esimerkissä on luotu toinen taulu, ja taulujen välille relaatio:
@@ -110,7 +116,7 @@ Huomaa, että taulut on luotava tässä järjestyksessä ja poistettava päinvas
 Luoduille tauluille voidaan ajaa testidataa *seeds.js*-tiedostoista. Luo ensin tyhjä *seeds*-tiedosto:
 
 ```cmd
-knex seed:make 01_users
+npx knex seed:make 01_users
 ```
 
 Tämä luo tyhjän 01_users.js *seeds*-kansioon. Tallenna siihen testidata:
@@ -134,7 +140,7 @@ exports.seed = function(knex, Promise) {
 Saat testidatan tietokantaan ajamalla:
 
 ```cmd
-knex seed:run
+npx knex seed:run
 ```
 
 Toiseen tauluun voidaan lisätä niinikään tietoja (02_appartments.js):
