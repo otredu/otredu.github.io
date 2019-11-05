@@ -22,7 +22,7 @@ Suunnitellaan tietokanta asunnonvuokrausjärjestelmälle, luodaan se käyttämä
 
 - ER-malli sekä tietokantakaavio [ohje](db_suunnittelu.html)
 - Tietokannan luominen [Knex migrations - ohjeet](./migrations.html)
-- Tietokannan testaaminen [ohje]()
+- Tietokannan testaaminen [ohje](./db-testing-knex.html)
 
 - Harjoitus 3 [ohje](harjoitus3.html)
 
