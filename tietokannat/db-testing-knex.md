@@ -81,6 +81,23 @@ knex.from('apartments').select('address', 'user_id').orderBy('address', 'asc')
     });
 ```
 
+### Inner join
+
+Kahden taulun tiedot voidaan yhdistää *from().join().select()*-metodeilla:
+
+```js
+knex.from('users')
+    .join('apartments', 'users.id', '=', 'apartments.user_id')
+    .select('users.id', 'users.username', 'apartments.address', 'users.email')
+    .then((rows) => {
+        console.log("inner join")
+        console.log(rows);
+    }).catch((err) => { console.log( err); throw err })
+    .finally(() => {
+        knex.destroy();
+    });
+```
+
 ### Insert
 
 Tietokantaan voi lisätä yhden tai useamman tietueen *insert*-metodin avulla:
