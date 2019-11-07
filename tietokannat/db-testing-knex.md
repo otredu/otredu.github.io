@@ -201,3 +201,11 @@ Huomaa, että mysql-kanta tallentaa päivämäärät ja ajat UTC-muodossa (*show
 ```js
 rows.forEach((row) => console.log(new Date(row['shows_showdate']).toLocaleDateString()))
 ```
+
+Tämä tulostaa päivämäärät seuraavassa muodossa:
+
+```cmd
+2019-11-7
+2019-12-7
+2019-10-7
+```
