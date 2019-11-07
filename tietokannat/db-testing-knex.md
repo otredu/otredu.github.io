@@ -14,6 +14,12 @@ node db_tests.js
 
 Voit tulostaa kyselyn tulokset konsolille (*console.log*). Voit halutessasi automatisoida tietokantatestit myös käyttäen JEST:iä.
 
+Voit tulostaa konsolille myös syntyneen SQL-lauseen (tämä lisätään ennen *query*:ä).
+
+```js
+knex.on('query', console.log);
+```
+
 ### Yhteyden muodotaminen tietokantaan
 
 Käynnistä MySQL ja PHPMyAdmin dockeriin. PHPMyAdmin:in avulla voit tarkistaa, että tietokannan sisältö muuttuu vastaavasti.
@@ -30,6 +36,8 @@ const options = {
 }
 
 const knex = require('knex')(options);
+
+knex.on('query', console.log);  // SQL-muoto
 ```
 
 ### Select *
@@ -74,23 +82,6 @@ Tietueet saadaan haluttuun järjestykseen *select().orderBy()*-metodien avulla:
 knex.from('apartments').select('address', 'user_id').orderBy('address', 'asc')
     .then((rows) => {
         console.log("ordered")
-        console.log(rows);
-    }).catch((err) => { console.log( err); throw err })
-    .finally(() => {
-        knex.destroy();
-    });
-```
-
-### Inner join
-
-Kahden taulun tiedot voidaan yhdistää *from().join().select()*-metodeilla:
-
-```js
-knex.from('users')
-    .join('apartments', 'users.id', '=', 'apartments.user_id')
-    .select('users.id', 'users.username', 'apartments.address', 'users.email')
-    .then((rows) => {
-        console.log("inner join")
         console.log(rows);
     }).catch((err) => { console.log( err); throw err })
     .finally(() => {
@@ -148,4 +139,65 @@ knex.from('apartments')
     .finally(() => {
         knex.destroy();
     });
+```
+
+### Inner join
+
+Kahden taulun tiedot voidaan yhdistää *from().join().select()*-metodeilla:
+
+```js
+knex.from('users')
+    .join('apartments', 'users.id', '=', 'apartments.user_id')
+    .select('users.id', 'users.username', 'apartments.address', 'users.email')
+    .then((rows) => {
+        console.log("inner join")
+        console.log(rows);
+    }).catch((err) => { console.log( err); throw err })
+    .finally(() => {
+        knex.destroy();
+    });
+```
+
+Jos tietokannassasi on tauluja, joiden nimet ovat samat (esim. *id*), JavaScript:in kanssa tulee *name collision*-ongelma, eli palautuvassa oliossa on vain yksi sen niminen kenttä. Tämän voi välttää käyttämällä *options*-asetuksia:
+
+```js
+    .options({ nestTables: "_"})
+    .options({ nestTables: true})
+```
+
+Ensimmäinen lisää syntyvän olion kentille *prefix*:inä taulun nimen, toinen luo sisäkkäisiä olioita.
+
+```js
+knex.from('shows')
+    .join('users', 'users.id', '=', 'shows.user_id')
+    .join('apartments', 'apartments.id', '=', 'shows.apartment_id')
+    .select('shows.id', 'apartments.id', 'shows.showdate', 'users.username', 'users.email', 'apartments.address')
+    .options({ nestTables: "_"})
+    .then((rows) => {
+        console.log("inner joins")
+        console.log(rows);
+        rows.forEach((row) => console.log(new Date(row['shows_showdate']).toLocaleDateString()))
+    }).catch((err) => { console.log( err); throw err })
+    .finally(() => {
+        knex.destroy();
+    });
+```
+
+Tämä kysely palauttaa siis:
+
+```js
+{
+    shows_id: 3,
+    apartments_id: 3,
+    shows_showdate: 2019-10-06T21:00:00.000Z,
+    users_username: 'fodark',
+    users_email: 'mock@email.com',
+    apartments_address: 'Koulutie 3'
+}
+```
+
+Huomaa, että mysql-kanta tallentaa päivämäärät ja ajat UTC-muodossa (*shows_showdate*), joten ne näyttävät hieman oudoilta *raw*-muodossa. Ajan saa muunnettua lokaaliksi luomalla *Date()*-olion ja tulostamalla sen *toLocaleDateString()*-metodin avulla:
+
+```js
+rows.forEach((row) => console.log(new Date(row['shows_showdate']).toLocaleDateString()))
 ```
