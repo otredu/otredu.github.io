@@ -38,8 +38,10 @@ Tätä yllä olevaa *callback:iä kutsutaan komponentista näin:
 
 ```js
 Anna nimi:
-<input type="text" 
-    value={newInfo.name} className="info" onChange={e=>changeHandler(e, 'name')}>
+<input type="text"
+    value={newInfo.name}
+    className="info"
+    onChange={e=>changeHandler(e, 'name')}>
 </input>
 
 Anna osoite:
@@ -78,7 +80,8 @@ const images = [
 
 const newImage =
     {
-        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png",        imgTitle: "Angular",
+        url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png",
+        imgTitle: "Angular",
         title: "Vue", 
         description: "Vue on JavaScript framework",
         id: 2,

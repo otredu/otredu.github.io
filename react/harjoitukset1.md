@@ -65,7 +65,7 @@ Muokkaa .css - tiedostoa, että elementit myös näyttävät hyvältä.
 
 ### Lisätehtävä 1
 
-Tee uusi komponentti, jonka avulla voi lisätä uuden kuvantiedot tykkäyslistalle.
+Tee uusi komponentti, jonka avulla voi lisätä uuden kuvan tiedot tykkäyslistalle.
 
 Vinkki: tilamuuttuja voi olla myös olio. Katso ohjeita olion käytöstä tilamuuttujana täältä:
 
