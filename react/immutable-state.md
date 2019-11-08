@@ -34,6 +34,23 @@ const infoChangeHandler = (event, field) => {
 };
 ```
 
+Tätä yllä olevaa *callback:iä kutsutaan komponentista näin:
+
+```js
+Anna nimi:
+<input type="text" 
+    value={newInfo.name} className="info" onChange={e=>changeHandler(e, 'name')}>
+</input>
+
+Anna osoite:
+<input
+    type="text"
+    value={newInfo.adress}
+    className="info"
+    onChange={e=>changeHandler(e, 'address')}>
+</input>​
+```
+
 ### Olioita sisältävä taulukko
 
 Kun käsitellään taulukkoa, joka sisältää olioita, *spread*-operaattorilla tehty kopiointi ei riitä, koska se kopioi taulukon mutta ei olioita sen sisällä. Tämän takia joudutaan tekemään hieman lisätyötä.

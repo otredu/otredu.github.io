@@ -57,8 +57,16 @@ Vinkki, tarvitset useamman tilamuuttujan (*useState*). Yhteen tallennetaan kaikk
 
 ### Tehtävä 7
 
-Lisää tykkäys-nappi kuvan yhteyteen (tehtävä 3 ja 5). Näytä tykkäysten määrä kuvan yhteydessä. Voit tallentaa tykkäysten määrän samaan tilamuuttujaan muiden tietojen kanssa.
+Lisää tykkäys-nappi kuvan yhteyteen (tehtävä 3 ja 5). Näytä tykkäysten määrä kuvan yhteydessä. Jos et ole vielä tallentanut kuvatietoja tilamuuttujaan, tee se nyt. Aseta tilamuuttujan alkuarvoksi kovakoodatut kuvatiedot (tehtävä 3). Lisää tykkäysten määrä kuvaolioon, että voit tallentaa tykkäysten määrän samaan paikkaan kuvan muiden tietojen kanssa.
 
 ### Tehtävä 8
 
 Muokkaa .css - tiedostoa, että elementit myös näyttävät hyvältä.
+
+### Lisätehtävä 1
+
+Tee uusi komponentti, jonka avulla voi lisätä uuden kuvantiedot tykkäyslistalle.
+
+Vinkki: tilamuuttuja voi olla myös olio. Katso ohjeita olion käytöstä tilamuuttujana täältä:
+
+- [Tilamuuttujien käsittely](./immutable-state.html)
