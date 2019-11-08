@@ -76,9 +76,7 @@ const images = [
         price: 1.5,
         amount: 0,
         alt: "angular logo"
-    }];
-
-const newImage =
+    },
     {
         url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png",
         imgTitle: "Angular",
@@ -88,12 +86,12 @@ const newImage =
         price: 2,
         amount: 0,
         alt: "vue logo"
-    };
+    }];
 
 const [myImages, setMyImages] = useState(images);
  ```
 
-Uuden olion lisääminen on helppoa:
+Uuden olion lisääminen on helppoa (*newImage* sisältää olion, jossa on uuden kuvan tiedot):
 
 ```js
 setMyImages(myImages.concat(newImage));
