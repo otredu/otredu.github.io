@@ -65,7 +65,8 @@ const images = [
         description: "React on JavaScript framework",
         id: 0,
         price: 1,
-        amount: 0
+        amount: 0,
+        alt: "reach logo"
     },
     {
         url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/800px-Angular_full_color_logo.svg.png",
@@ -73,7 +74,8 @@ const images = [
         description: "Angular on JavaScript framework",
         id: 1,
         price: 1.5,
-        amount: 0
+        amount: 0,
+        alt: "angular logo"
     }];
 
 const newImage =
@@ -84,7 +86,8 @@ const newImage =
         description: "Vue on JavaScript framework",
         id: 2,
         price: 2,
-        amount: 0
+        amount: 0,
+        alt: "vue logo"
     };
 
 const [myImages, setMyImages] = useState(images);
