@@ -41,16 +41,14 @@ Anna nimi:
 <input type="text"
     value={newInfo.name}
     className="info"
-    onChange={e=>changeHandler(e, 'name')}>
-</input>
+    onChange={e=>infoChangeHandler(e, 'name')} />
 
 Anna osoite:
 <input
     type="text"
     value={newInfo.adress}
     className="info"
-    onChange={e=>changeHandler(e, 'address')}>
-</input>​
+    onChange={e=>infoChangeHandler(e, 'address')} />
 ```
 
 ### Olioita sisältävä taulukko
