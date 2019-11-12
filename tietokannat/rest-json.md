@@ -36,9 +36,9 @@ Frontendin ja backendin välillä on ohjelmointirajapinta eli API (*Application 
 
 Mallinnamme yksinkertaisen verkkokaupan tietokannan:
 
-![ER-fanikauppa](./img/fanikauppa_ER.png)
+![ER-fanikauppa](./img/fanikauppa_er.png)
 
-![UML-fanikauppa](./img/fanikauppa_UML.png)
+![UML-fanikauppa](./img/fanikauppa_uml.png)
 
 ### Fanikaupan API (user)
 
@@ -53,7 +53,7 @@ Mallinnamme yksinkertaisen verkkokaupan tietokannan:
 | PUT | orders/:id | http://localhost:3001/orders/3 | muuttaa tilauksen sisältöä, esim. status kenttää, annetaan JSON-muodossa |
 | DELETE | orders/:id | http://localhost:3001/orders/3 | poistaa tilauksen |
 
-### JSON Server toteutus
+### JSON-server
 
 JSON serverin avulla voidaan toteuttaa yksinkertainen *REST*-API. Se tallentaa resurssit *json*-tiedostoon.
 
