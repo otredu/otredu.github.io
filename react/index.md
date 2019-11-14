@@ -36,3 +36,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 - [Harjoituksia 3](./harjoitukset3.html), tehdään yhdessä demona
 - [Harjoitukset 4](./harjoitukset4.html), tehdään itsenäisesti
+
+---
+
+- [React-boostrap - demo](./react-boostrap.html), voit käyttää boostrap-komponentteja harjoitusten tekemiseen, jos haluat
