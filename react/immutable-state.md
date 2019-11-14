@@ -114,11 +114,9 @@ Esim. jos yhden olion *amount*-kenttää kasvatetaan yhdellä, tehdä siitä ens
 const addLike = id => {
     const tempImages = images.map(img => {
         if(img.id === id){
-            const tempImg = {...img, amount: (img.amount + 1)};
-            return tempImg;
-        } else {
-            return img;
+            img = {...img, amount: (img.amount + 1)};
         }
+        return img;
     })
     updateImages(tempImages);
 }
@@ -129,8 +127,8 @@ Vastaavasti kaikkien *amount*-kenttien nollaaminen tapahtuu näin:
 ```js
 const setToZeros = () => {
     const tempImages = images.map(img => {
-        const tempImg = {...img, amount: 0};
-        return tempImg;
+        img = {...img, amount: 0};
+        return img;
     });
     setMyImages(tempImages);
 }
