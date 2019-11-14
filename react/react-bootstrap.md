@@ -1,6 +1,6 @@
 ## React bootstrap
 
-Voit käyttää React:in kanssa Bootstrap-kirjastoa, mutta sen on oltava React:ille suunniteltu versio siitä.
+Voit käyttää React:in kanssa [Bootstrap-kirjastoa](https://react-bootstrap.github.io/), mutta sen on oltava React:ille suunniteltu versio siitä.
 
 Asenna react-bootstrap projektisi juureen:
 
