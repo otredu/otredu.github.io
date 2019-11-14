@@ -39,4 +39,4 @@ Materiaalia, joka täydentyy kurssin edetessä...
 
 ---
 
-- [React-boostrap - demo](./react-boostrap.html), voit käyttää boostrap-komponentteja harjoitusten tekemiseen, jos haluat
+- [React-boostrap - demo](./react-bootstrap.html), voit käyttää boostrap-komponentteja harjoitusten tekemiseen, jos haluat
