@@ -40,3 +40,11 @@ Materiaalia, joka täydentyy kurssin edetessä...
 ---
 
 - [React-boostrap - demo](./react-bootstrap.html), voit käyttää boostrap-komponentteja harjoitusten tekemiseen, jos haluat
+
+---
+
+### Backend (node.js)
+
+Tähän asti olemme tehneet vain Frontend-koodia. Tässä demossa tehdään yksinkertainen web-palvelin node.js:n ja expressin avulla (harjoitukset 3:n muistiinpanosovelluksen backend).
+
+- [Node ja Express](https://fullstackopen.com/osa3/node_js_ja_express)
