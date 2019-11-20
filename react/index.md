@@ -48,3 +48,5 @@ Materiaalia, joka täydentyy kurssin edetessä...
 Tähän asti olemme tehneet vain Frontend-koodia. Tässä demossa tehdään yksinkertainen web-palvelin node.js:n ja expressin avulla (harjoitukset 3:n muistiinpanosovelluksen backend).
 
 - [Node ja Express](https://fullstackopen.com/osa3/node_js_ja_express)
+- [Sovelluksen siirtäminen internettiin](https://fullstackopen.com/osa3/sovellus_internetiin)
+- [Tietokannan (mongoDB) liittäminen backendiin](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#frontendin-ja-backendin-yhteistoiminnallisuuden-varmistaminen)
