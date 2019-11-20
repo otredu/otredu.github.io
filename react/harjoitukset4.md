@@ -1,8 +1,8 @@
 ### Harjoitukset 4
 
-Tee keikkainfo-sivusto, johon bändin edustaja voi kirjauduttuaan lisätä uusia keikkoja (artistin nimi, tapahtuman nimi, keikkamainoskuva, keikkakuvaus, keikkapäivä, alkamisaika, paikka, linkki lippujen myyntiin, artistin musiikkityylilajit, joiden avulla keikkaa voi etsiä, linkki artistin sivuille).
+Tee keikkainfo-sivusto, johon bändin edustaja voi kirjauduttuaan lisätä uusia keikkoja (artistin nimi, tapahtuman nimi, keikkamainoskuva, keikkakuvaus, keikkapäivä, alkamisaika, katuosoite, paikkakunta, linkki lippujen myyntiin, artistin musiikkityylilaji ja linkki artistin sivuille.
 
-Käyttäjä voi kirjautumatta selata keikkoja, tykätä menneistä keikoista (1-5 tähteä), etsiä keikkoja tyylilajien, paikkatunnan ja päivämäärien mukaan.
+Käyttäjä voi kirjautumatta selata keikkoja, tykätä menneistä keikoista (1-5 tähteä), etsiä keikkoja tyylilajin, paikkakunnan ja kuukauden mukaan.
 
 Keikat näkyvät *menneet keikat* -osiossa, jos niiden päivämäärä on mennyt ja *tulevat keikat* -osiossa, jos ne tapahtuvat tulevaisuudessa.
 
@@ -35,6 +35,12 @@ Vinkki: käytä *filter*-metodia keikkataulukolle.
 ### Tehtävä 4
 
 Tee komponentti, jonka avulla voi lisätä uuden keikan tiedot. Tallenna tiedot joko yhteen olio-muotoiseen tilamuuttujaan tai käytä jokaiselle kentälle omaa tilamuuttujaansa. Muista tehdä *input*-kentille *two-way-binding*. Tallenna uusi keikka *json-serverille* axioksen avulla (*handleSubmit*-callback kutsuu axiosta).
+
+### Tehtävä 5
+
+Lisää käyttöliittymään toiminnallisuus, jonka avulla käyttäjä voi valita filteröintiasetukset: paikkakunnat, kuukausi, tyylilaji (käytä esim. dropdown-valikkoa, valittavan listan ei tarvitse tulla tietokannasta). Valinnat tallennetaan tilamuuttujiin, joiden pohjalta näytölle rendeöitävä tieto filteröidään.
+
+Vinkki: käytä *filter*-metodia keikkataulukolle.
 
 ### Lisätehtävä 1
 
