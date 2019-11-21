@@ -18,12 +18,18 @@ Muuta fanikauppa hakemaan tuotetiedot fanikauppa-backendiltä axioksen avulla (G
 
 Muuta fanikauppasi lomakkeen käsittelijä tallentamaan käyttäjätiedot fanikauppa-backendille axioksen kautta (POST customers). Tallenna backend:in antama käyttäjä id, ja tallenna tilatut tuotteet (POST orders).
 
+### Tehtävä 4
+
+Toteuta fanikaupan backend käyttäen node/express:iä. Luo tietokantataulut MySQL:ään, toteuta edellä käytetyt GET (products) ja POST (users, orders), toiminnallisuudet.
+
+### Tehtävä 5
+
+Toteuta käyttäjän rekisteröityminen, login ja logout. Lisää backendiin reitit: register ja login. Rekisteröitymisessä tallennetaan käyttäjän kaikki tiedot lomakkeen avulla backendiin.
+
 ### Lisätehtävä 1
 
-Toteuta käyttäjän rekisteröityminen (tallenna jo tässä yhteydessä käyttäjän tiedot lomakkeen avulla backendiin). Toteuta kirjautuminen.
-
-Ohje [JSON-serverin käyttöön autentikoinnissa](https://www.npmjs.com/package/json-server-auth).
+Toteuta toiminnallisuus, jossa kirjautunut käyttäjä voi tarkastella aikaisemmin tekemiään tilauksia.
 
 ### Lisätehtävä 2
 
-Toteuta toiminnallisuus niin, että vain kirjautuneet käyttäjät voivat tilata tuotteita. Tallenna myös ostoskorin sisältö backendiin (tämä vaatii lisäyksiä myös db.json:iin).
+Tallenna myös ostoskorin sisältö backendiin niin, että käyttäjä voi myöhemmin jatkaa ostoksiaan.
