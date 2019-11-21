@@ -13,9 +13,11 @@ Asenna ja käynnistä json-serveri kansioon demo2.
 
 Avaa selaimella osoite: http://localhost:3001/notes.
 
-json-server toimii kehitysaikaisena "tietokantana" tallentaen tiedot json-tiedostoon levylle.
+json-server toimii kehitysaikaisena backendinä. Oikean tietokannan sijaan tiedot tallennetaan *json*-tiedostona levylle.
 
+*Huom!* Jos olet tehnyt toisella kurssilla notes-backendin, voit käyttää suoraan sitä JSON-serverin tilalla.
 
+Kun näissä tehtävissä viitataan *notes-backend*:iin, se tarkoittaa joko em. JSON-serveriä tai node/express:illä itse tehtyä backend:iä.
 
 ### Tehtävä 1
 
@@ -28,7 +30,7 @@ Tee uusi React-sovellus ajamalla create-react-app:
 > npm start
 ```
 
-Asenna *axios*-kirjasto ja hae sen avulla *notes*-tiedot json-serveriltä. Tulosta ne consolille.
+Asenna *axios*-kirjasto ja hae sen avulla *notes*-tiedot notes-backendiltä. Tulosta muistiinpanot consolille.
 
 ```cmd
 > npm install axios --save
@@ -40,7 +42,7 @@ Voit laittaa toistaiseksi kaiken axios-koodin *apps.js*-tiedostoon. [Ohjeet axio
 
 ### Tehtävä 2
 
-Tallenna axioksen avulla json-servejille uusi kovakoodattu muistiinpano (*notes*-olio). Katso json-serveriltä, että se ilmestyi myös sinne.
+Tallenna axioksen avulla json-servejille (tai notes-backendille) uusi kovakoodattu muistiinpano (*notes*-olio). Katso json-serveriltä, että se ilmestyi myös sinne.
 
 *Huom* id-tulee serveriltä, älä lähetä sitä.'
 
@@ -54,9 +56,9 @@ Tee uusi komponentti, joka tulostaa ruudulle kaikki muistiinpanot ranskalaisilla
 
 ### Tehtävä 4
 
-Tee lomakekomponentti, jonka avulla saadaan syötettyä uusi muistiinpano, sekä sen tärkeys (true/false). Tallenna lomakekentät tilamuuttujiin ja lähetä uusi *notes*-olio json-serverille kun lomake *submit*:oidaan.
+Tee lomakekomponentti, jonka avulla saadaan syötettyä uusi muistiinpano, sekä sen tärkeys (true/false) esim.*check-box*:in avulla. Tallenna lomakekentät tilamuuttujiin ja lähetä uusi *notes*-olio notes-backendille, kun lomake *submit*:oidaan.
 
-Muista päivittää myös *notes*-tilamuuttuja!
+Muista päivittää axis-kutsun jälkeen *notes*-tilamuuttuja, jotta ruutu päivittyy!
 
 ### Tehtävä 5
 
@@ -64,4 +66,4 @@ Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeä
 
 ### Tehtävä 6
 
-Lisää jokaiselle muistiinpanolle poista ja päivitä -napit ja toteuta toiminnallisuus. Muista päivittää json-serverin lisäksi *notes*-tilamuuttuja.
+Lisää jokaiselle muistiinpanolle poista- ja päivitä-napit ja toteuta toiminnallisuus. Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).

@@ -48,6 +48,8 @@ Lisätään käyttäjänhallinta (rekisteröityminen ja kirjautuminen). Toteuta 
 
 Huom! Tämä vaatii *users*-kokoelman lisääminen *json-serverille*.
 
+Katso ohje [täältä](https://www.npmjs.com/package/json-server-auth).
+
 ### Lisätehtävä 2
 
 Toteuta tähtien lisääminen.
