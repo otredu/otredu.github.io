@@ -76,25 +76,3 @@ Jotta voit tallentaa *HTTP*-kutsut luo ensin *collection*. Tee kutsut ja paina *
 [Linkki Postman-esimerkkeihin (vaatii Postman-pluginin)](https://www.getpostman.com/collections/15b27d53639e826c731e)
 
 ![Post order](./img/post_order.PNG)
-
-### Harjoituksia
-
-#### Tehtävä 1
-
-Lisää API:iin toiminnallisuus, joka toteuttaa ostonkorin (*cart*).
-
-#### Tehtävä 2
-
-Lisää API:iin *admin* toiminnallisuus, eli tuotetietojen lisääminen, poistaminen ja muokkaaminen.
-
-### Tehtävä 3
-
-Yhdistä *React*:illa koodaamasi frontend käyttämäämään tätä JSON-serveriä.
-
-### Tehtävä 4
-
-Lisää *admin* - toiminnallisuus frontendiin.
-
-### Tehtävä 5
-
-Suunnittele *REST API* vuokrausjärjestelmällesi.

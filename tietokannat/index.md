@@ -31,6 +31,7 @@ Suunnitellaan tietokanta asunnonvuokrausjärjestelmälle, luodaan se käyttämä
 Tutustu Rest API:n toimintaan ja tiedon välittämiseen *json*-muodossa. Toteuta fanikauppa API JSON-serverin avulla ja käytä sitä React-harjoitustyössäsi:
 
 - Rest API [ohjeet](rest-json.html)
+- Harjoituksia [ohje](json-harjoituksia.html)
 
 ### Tietokantasuunnittelu ja tietokannan testaaminen sekä JSON-rajapinta (storedb)
 
