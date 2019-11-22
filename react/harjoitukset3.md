@@ -67,3 +67,15 @@ Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeä
 ### Tehtävä 6
 
 Lisää jokaiselle muistiinpanolle poista- ja päivitä-napit ja toteuta toiminnallisuus. Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).
+
+### Lisätehtävä 1 (node/express -backend)
+
+Toteuta käyttäjän rekisteröityminen ja kirjautuminen. Vain kirjautunut käyttäjä voi lisätä, muokata tai poistaa muistiinpanoja. Muistiinpanoja voi lukea ilman kirjautumista.
+
+*Huom* Tämä vaatii lisää koodia myös backendiin sekä muutoksen tietokantaan.
+
+### Lisätehtävä 2 (node/express -backend)
+
+Lisää userid kenttä muistiinpanoon, niin että kirjatunut käyttäjä voi muokata ja poistaa vain omia muistiinpanojaan.
+
+*Huom* Tämä vaatii lisää koodia myös backendiin ja muutoksen tietokantaan.
