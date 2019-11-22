@@ -62,11 +62,11 @@ Muista päivittää axis-kutsun jälkeen *notes*-tilamuuttuja, jotta ruutu päiv
 
 ### Tehtävä 5
 
-Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
+Lisää jokaiselle muistiinpanolle poista- ja päivitä-napit ja toteuta toiminnallisuus. Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).
 
 ### Tehtävä 6
 
-Lisää jokaiselle muistiinpanolle poista- ja päivitä-napit ja toteuta toiminnallisuus. Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).
+Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
 
 ### Lisätehtävä 1 (node/express -backend)
 
