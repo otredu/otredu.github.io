@@ -38,20 +38,26 @@ Tee komponentti, jonka avulla voi lisätä uuden keikan tiedot. Tallenna tiedot 
 
 ### Tehtävä 5
 
+Ota käyttöön [React-router](https://reacttraining.com/react-router/web/guides/quick-start).
+
+Sijoita keikkojen katseluun liittyvät toiminnot omaan komponenttiinsa esim. *<Home />* ja keikkojen lisääminen omaan komponenttinsa esim. *<AddGig />*.
+
+### Tehtävä 6
+
 Lisää käyttöliittymään toiminnallisuus, jonka avulla käyttäjä voi valita filteröintiasetukset: paikkakunnat, kuukausi, tyylilaji (käytä esim. dropdown-valikkoa, valittavan listan ei tarvitse tulla tietokannasta). Valinnat tallennetaan tilamuuttujiin, joiden pohjalta näytölle rendeöitävä tieto filteröidään.
 
 Vinkki: käytä *filter*-metodia keikkataulukolle.
 
 ### Lisätehtävä 1
 
+Toteuta tähtien lisääminen.
+
+Huom! Tämä vaatii *likes*-kokoelman lisääminen *json*-serverille.
+
+### Lisätehtävä 2
+
 Lisätään käyttäjänhallinta (rekisteröityminen ja kirjautuminen). Toteuta keikkojen lisääminen niin, että vain kirjautunut käyttäjä voi lisätä keikkoja.
 
 Huom! Tämä vaatii *users*-kokoelman lisääminen *json-serverille*.
 
 Katso ohje [täältä](https://www.npmjs.com/package/json-server-auth).
-
-### Lisätehtävä 2
-
-Toteuta tähtien lisääminen.
-
-Huom! Tämä vaatii *likes*-kokoelman lisääminen *json*-serverille.
