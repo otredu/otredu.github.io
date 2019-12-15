@@ -16,17 +16,13 @@ Tehtävästä syntyy pikkuhiljaa Wordilla tehty tietokantadokumentti (siis vain 
 
 #### SQL-toteutus
 
-1. Luo taulukot SQL-tietokantaan. Tee luontilausekkeet (SHOW CREATE TABLE taulukon_nimi).
-
-*Huom! Taulukot kannattaa nimetä niin, että jokaisen edessä on jokin sama tunniste, joka kertoo, että ne kuuluvat juuri tähän tietokantaan. (esimerkiksi "vk_asiakkaat")*
+1. Luo taulut, niiden väliset relaatiot sekä määrittele viite-eheyssäännöt (migrations).
  
-2. Luo yhteydet ja viite-eheydet (kun jokin tietue poistetaan, poistetaan samalla siihen kuuluvat tietueet toisesta taulusta). Tulosta (*export*) tietokannastasi luontilauseet vasta viite-eheyden lisäämisen jälkeen.
-
-3. Syötä jonkin verran dataa tietokantaan.
+2. Syötä riittävä määärä dataa tietokantaan (seeds).
 
 #### Testitapaukset ja tietokannan testaaminen
 
-Laaditaan yksinkertainen testauslomake ja siihen SQL-kyselyitä, joilla kokeillaan tietokannan käyttämistä. Pyri miettimään tyypillisiä käyttötapoja tietokannallesi. Tarkoitus on, että mukana on vähintään yksi SELECT, DELETE yms. -kysely. Kaikissa tauluissa ei tarvitse olla kaikkia tyyppejä mutta kaikkia tauluja tulisi testata jotenkin.
+Laaditaan yksinkertainen testauslomake ja siihen tietokantakyselyitä, joilla testataan tietokannan toiminta. Pyri miettimään tyypillisiä käyttötapoja tietokannallesi. Tarkoitus on, että mukana on vähintään yksi SELECT, DELETE jne. -kysely per taulu.
 
 ![Testit](img/tietokantatesti.PNG)
 
@@ -34,13 +30,17 @@ Laaditaan yksinkertainen testauslomake ja siihen SQL-kyselyitä, joilla kokeilla
 - Delete Huom.! Viite-eheyden testaus
 - Update
 - Select
-- Select useampaan taulukkoon
+- Select useampaan taulukkoon (inner join)
 
-Suorita suunnittelemasi testit tietokannallesi, korjaa virheet.
+Suorita suunnittelemasi testit tietokannallesi, korjaa virheet tietokannan rakenteessa.
+
+### REST-rajapinta
+
+Suunnittele REST-rajapinta store-backendille. Määrittele HTTP-metodit ja tarvittavat endpointit, parametrit, headerit sekä json-data (request/response).
 
 ## Verkkokaupan toiminnalliset vaatimukset
 
-### Asiakas: 
+### Asiakas:
 
 - voi lukea tiedotteita
 - voi selailla kaupan tuotteita ja tuoteryhmiä

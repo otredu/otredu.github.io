@@ -33,6 +33,10 @@ Tutustu Rest API:n toimintaan ja tiedon välittämiseen *json*-muodossa. Toteuta
 - Rest API [ohjeet](rest-json.html)
 - Harjoituksia [ohje](json-harjoituksia.html)
 
+---
+
+## Lisätehtävä
+
 ### Tietokantasuunnittelu ja tietokannan testaaminen sekä JSON-rajapinta (storedb)
 
 - Harjoitus 4 [ohje](harjoitus4.html)
