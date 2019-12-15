@@ -16,11 +16,11 @@ Muuta fanikauppa hakemaan tuotetiedot fanikauppa-backendiltä axioksen avulla (G
 
 ### Tehtävä 3
 
-Muuta fanikauppasi lomakkeen käsittelijä tallentamaan käyttäjätiedot fanikauppa-backendille axioksen kautta (POST customers). Tallenna backend:in antama käyttäjä id, ja tallenna tilatut tuotteet (POST orders).
+Muuta fanikauppasi lomakkeen käsittelijä tallentamaan tilaustiedot (sisältää tilatut tuotteet ja niiden määrät sekä asiakkaan tiedot) fanikauppa-backendille axioksen kautta (POST orders).
 
 ### Tehtävä 4
 
-Toteuta fanikaupan backend käyttäen node/express:iä. Luo tietokantataulut MySQL:ään, toteuta edellä käytetyt GET (products) ja POST (users, orders), toiminnallisuudet.
+Toteuta fanikaupan backend käyttäen node/express:iä. Luo tietokantataulut MySQL:ään, toteuta edellä käytetyt GET (products) ja POST (orders), toiminnallisuudet.
 
 ### Tehtävä 5
 
