@@ -29,9 +29,9 @@ Tallenna tietokannan tiedot: Export-toiminnon avulla ja palauta Github-classroom
 
 Palauta SQL-lauseet tiedostona Github-classroomiin.
 
-### UML-mallinnus
+### UML-luokkakaavio tietokantamallina
 
-Harjoittele Vision UML-työkalun käyttämistä ja tee oheinen tietokantakuva itse. UML-mallissa laatikot mallintavat luokkia. Luokilla voi olla erilaisia yhteyksiä toisiinsa (relaatioita). Jos kahden asian (luokan) välillä on tavallinen relaatio, se merkitään viivalla ja asiaankuuluvilla lukumäärillä molemmissa viivan päissä. Jos asia (luokka) koostuu muista luokista se merkitään salmiakilla. Salmiakki on musta, jos määrä on täsmälleen yksi, valkoinen, jos sallitaan vaihteleva määrä jäseniä (0..n tai 0..1). Ääretön määrä merkitään siis *n*-kirjaimella.
+Harjoittele Vision UML-työkalun käyttämistä ja tee oheinen tietokantakuva itse. UML-mallissa laatikot mallintavat luokkia (ja tietokannan ollessa kyseessä tauluja). Luokilla voi olla erilaisia yhteyksiä toisiinsa (relaatioita). Jos kahden asian (luokan) välillä on tavallinen relaatio, se merkitään viivalla ja asiaankuuluvilla lukumäärillä molemmissa viivan päissä. Jos asia (luokka) koostuu muista luokista se merkitään salmiakilla. Salmiakki on musta, jos määrä on täsmälleen yksi, valkoinen, jos sallitaan vaihteleva määrä jäseniä (0..n tai 0..1). Ääretön määrä merkitään siis *n*-kirjaimella.
 
 Lisää UML-kuvaan relaatioihin liittyvät lukumäärää ilmoittavat merkinnät (1, 0..1 tai 0..n) sekä relaation tyyppiin (viiva, musta tai valkoinen salmiakki) liittyvät merkinnät.
 

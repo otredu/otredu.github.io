@@ -2,7 +2,7 @@
 
 ### Tietokannan suunnittelu
 
-Tehtävänäsi on suunnitella asunnonvuorkasujärjestelmää varten relaatiotietokanta, joka toteutetaan MySQL:llä tai PostgreSQL:llä.
+Tehtävänäsi on suunnitella asunnonvuorkasujärjestelmää varten relaatiotietokanta, joka toteutetaan MySQL:llä (tai PostgreSQL:llä).
 
 Tehtävästä syntyy pikkuhiljaa Wordilla tehty tietokantadokumentti (siis vain 1 tiedosto). Työ palautetaan github-classroomiin: tietokannat-repoon.
 
@@ -12,25 +12,25 @@ Tehtävästä syntyy pikkuhiljaa Wordilla tehty tietokantadokumentti (siis vain 
 
 1. Mieti ensin, mitä tietoja vuokrausjärjestelmässä tarvitaan. Tee ER-kaavio suunnittelemasi tietokannan käsitteistöstä.
 
-2. Tee tietokannan rakenteen kuvaus (Visio: Software/UML Database Notation). Muista lisätä myös tietotyypit jokaiselle kentälle. 
+2. Tee tietokannan rakenteen kuvaus (Visio: Software/UML Database Notation tai Crow's Foot Notation). Muista lisätä myös tietotyypit jokaiselle kentälle.
 
 *Huom* Vision UML notaatioon ei voi lisätä tietotyyppejä suoraan, joten käytä erillistä taulukkoa, johon kirjaat tietotyypit.
- 
+
 3. Esittele suunnitelmasi opelle ja korjaa tarvittaessa ennen seuraavaan vaiheeseen siirtymistä.
 
 #### SQL-toteutus
 
-1. Luo taulukot SQL-tietokantaan. Tee luontilausekkeet (SHOW CREATE TABLE taulukon_nimi).
+1. Luo taulukot SQL-tietokantaan. Tee luontilausekkeet mieluiten käyttäen jotain migrations-kirjastoa (esim. knex). Toinen vaihtoehto on luoda taulut SQL:llä (SHOW CREATE TABLE table_name).
 
-*Huom! Taulukot kannattaa nimetä niin, että jokaisen edessä on jokin sama tunniste, joka kertoo, että ne kuuluvat juuri tähän tietokantaan. (esimerkiksi "as_asunnot")*
+*Huom! Taulut kannattaa nimetä niin, että jokaisen edessä on jokin sama tunniste, joka kertoo, että ne kuuluvat juuri tähän tietokantaan. (esimerkiksi "stap_apartments")*
  
-2. Luo yhteydet ja viite-eheydet (kun jokin tietue poistetaan, poistetaan samalla siihen kuuluvat tietueet toisesta taulusta). Tulosta (*export*) tietokannastasi luontilauseet vasta viite-eheyden lisäämisen jälkeen.
+2. Luo yhteydet ja viite-eheyssäännöt. Muista että taulu pitää olla luotuna ennen kuin siihen voidaan viitata viiteavaimella (foreign key). Mieti mitkä tietueet liittyvät toisiinsa niin, että kun ne poistetaan, samalla tulee poistaa tietueita jotain muusta taulusta (ON DELETE CASCADE).
 
-3. Syötä jonkin verran dataa tietokantaan.
+3. Syötä riittävä määrä testidataa kaikkiin tietokannan tauluihin (seeds). Tietojen syöttö pitää tehdä ottaen huomioon viite-eheydet, eli vie testidata ensin tauluihin joihin viitataan viiteavaimella.
 
 #### Testitapaukset ja tietokannan testaaminen
 
-Laaditaan yksinkertainen testauslomake ja siihen SQL-kyselyitä, joilla kokeillaan tietokannan käyttämistä. Pyri miettimään tyypillisiä käyttötapoja tietokannallesi. Tarkoitus on, että mukana on vähintään yksi SELECT, DELETE yms. -kysely. Kaikissa tauluissa ei tarvitse olla kaikkia tyyppejä mutta kaikkia tauluja tulisi testata jotenkin.
+Laaditaan yksinkertainen testauslomake ja siihen tietokantakyselyitä, joilla testataan tietokannan toiminta. Pyri miettimään tyypillisiä käyttötapoja tietokannallesi. Tarkoitus on, että mukana on vähintään yksi SELECT, DELETE jne. -kysely per taulu.
 
 ![Testit](img/tietokantatesti.PNG)
 
@@ -38,11 +38,11 @@ Laaditaan yksinkertainen testauslomake ja siihen SQL-kyselyitä, joilla kokeilla
 - Delete Huom.! Viite-eheyden testaus
 - Update
 - Select
-- Select useampaan taulukkoon
+- Select useampaan taulukkoon (inner join)
 
-Suorita suunnittelemasi testit tietokannallesi, korjaa virheet.
+Suorita suunnittelemasi testit tietokannallesi, korjaa virheet tietokannan rakenteessa.
 
-#### Esimerkkikyselyjä 
+#### Esimerkkikyselyjä
 
 - Näytä kaikki tällä hetkellä olevat avoimet vuokrattavat kohteet, järjestä postinumeron ja sitten lähiosoitteen mukaiseen järjestykseen.
 - Näytä kaikki tietyn kohteen seuraavalle näytölle ilmoittautuneet henkilöt, järjestä ilmoittautumisajan mukaiseen järjestykseen.
@@ -51,16 +51,16 @@ Suorita suunnittelemasi testit tietokannallesi, korjaa virheet.
 
 ### Palautus
 
-Työstä kootaan MS Word-asiakirja jossa on mukana. Tämä osuus tulee liittymään Systeemityön kurssiin ja palautat ne osana toiminnallista määrittelyä.
+Työstä kootaan Word-dokumetti, johon kootaan tietokannan suunnitteluosuus (kuvat) sekä testausraportti. Työstä palautetaan myös migrations-, seeds- ja testaus-koodit (SQL tai JS). Tämä osuus tulee liittymään Systeemityön kurssiin ja palautat ne osana toiminnallista määrittelyä.
 
 Suunnittelu:
 - ER-kaavio
-- tietokannan rakenne
+- tietokannan rakenne (UML/Crow's foot)
 
 Toteutus:
-- CREATE TABLE-lauseet
-- testidata
-- testikyselyt
+- taulujen luominen (SQL CREATE TABLE tai JS migrations)
+- testidata (SQL INSERT tai JS seeds)
+- testikyselyt (SQL tai JS testikoodi)
 
 Testaus: 
-- testauslomake
+- testausraportti (mitä testattu, miten testattu)

@@ -2,7 +2,9 @@
 
 ### Alkutoimet
 
-Tee seuraava tietokanta PostgresSQL:n ja PHPPGAdmin:in avulla [katso käynnistysohje](../docker/index.html). Luo tietokanta *newsdb*.
+Käynnistä MySQL ja PHPMyAdmin Dockerin avulla [ohje](../docker/index.html).
+
+Luo tietokanta *newsdb*.
 
 ### CREATE
 
@@ -35,3 +37,9 @@ Muuta jäljelläolevat vanhat uutiset vanhenemaan vasta helmikuun vaihteessa
 ### Palautus
 
 Vie kaikki tiedot SQL-muodossa Github:iin
+
+---
+
+## Lisätehtävä
+
+Voit tehdä saman harjoituksen myös PostgresSQL:n ja PHPPGAdmin:in avulla [katso käynnistysohje](../docker/index.html).
