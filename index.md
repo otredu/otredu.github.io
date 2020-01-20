@@ -5,7 +5,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 
 ### Kurssit Kevät 2020
 
-- [Asiointipalvelujen rakentamisen tekniikka, JS](./js/index2020.html)
+- [Asiointipalvelujen rakentamisen tekniikka, JS](./js/index_2020.html)
 
 ### Kurssit syksy 2019
 
