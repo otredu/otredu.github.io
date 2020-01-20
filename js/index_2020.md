@@ -21,7 +21,7 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 - [Johdanto](./johdanto.html)
 - [JS alkeita](./alkeita.html)
-- [JS jatkoa](./)(./jatkoa.html)
+- [JS jatkoa](./jatkoa.html)
 - [Harjoituksia 1](../js-php/harjoituksia1.html)
 - [Harjoituksia 2](../js-php/harjoituksia2.html)
 
