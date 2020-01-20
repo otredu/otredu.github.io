@@ -53,10 +53,35 @@ DB_DATABASE=notes_db
 SECRET=tosisalainensalasanainen
 ```
 
-Otetaan käyttöön ympäristömuuttujat lisäämällä *app.js* tiedoston alkuun:
+Ympäristömuuttujat voidaan ottaa käyttöön lisäämällä tiedoston alkuun:
 
 ```js
 require('dotenv').config()
+```
+
+Tehdään vielä apukirjasto *./utils/config.js*, johon tallennetaan tietokantaparametrit *knex*:in vaatimassa muodossa (*DATABASE_OPTIONS*):
+
+```js
+require('dotenv').config()
+
+let PORT = process.env.PORT
+let SECRET = process.env.SECRET
+
+let DATABASE_OPTIONS = {
+    client: process.env.DB_TYPE,
+    connection: {
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASS,
+        database: process.env.DB_DATABASE
+    }
+}
+
+module.exports = {
+  DATABASE_OPTIONS,
+  PORT,
+  SECRET
+}
 ```
 
 ### Serverin käynnistys (nodemon)
