@@ -6,10 +6,10 @@ Tässä tehdaan perus *backend*, seuraten väljästi näitä [ohjeita](https://e
 
 ### Asennus
 
-Tee uusi projektikansio ja aja siellä *express-generator*. Tämä luo valmiin rungon webpalvelulle. Koska teemme frontin React:illa emme tarvitse *view*:tä (--no-view).
+Tee uusi projektikansio ja aja siellä *express-generator*. Tämä luo valmiin rungon webpalvelulle. Koska teemme frontin React:illa emme tarvitse *view*:tä (--no-view). Generoidaan myös .gitignore (--git).
 
 ```cmd
-npx express-generator --no-view
+npx express-generator --no-view --git
 ```
 
 Asenna nyt tarvittavat kirjastot:
@@ -29,10 +29,9 @@ npm install bcryptjs
 npm install jsonwebtoken
 ```
 
-Lisää juureen .gitignore, jossa on vähintään:
+Tarkista, että *.gitignore*:ssa, jossa on vähintään (lisää, jos ei ole):
 
 ```cmd
-/node_modules
 node_modules/
 *.env
 knexfile.js
@@ -40,7 +39,7 @@ knexfile.js
 
 ### .env:in konffaus
 
-Tee *.env*-tiedosto, jossa on kaikki ympäristömuuttujat:
+Tee *.env*-tiedosto, jossa on kaikki ympäristömuuttujat. DEBUG-muuttuja aktivoi *debug*-tulostukset.
 
 ```cmd
 PORT=3000
@@ -51,6 +50,8 @@ DB_PORT=3306
 DB_TYPE=mysql
 DB_DATABASE=notes_db
 SECRET=tosisalainensalasanainen
+
+DEBUG=notesmiddleware:*
 ```
 
 Ympäristömuuttujat voidaan ottaa käyttöön lisäämällä tiedoston alkuun:
@@ -86,22 +87,17 @@ module.exports = {
 
 ### Serverin käynnistys (nodemon)
 
-Testataan, että backend käynnistyy. *express-generaattori*:n tekemään koodiin pitää lisätä webserverin käynnistys. Lisää tiedosto *index.js*:
+Testataan, että backend käynnistyy. *express-generaattori* on luonut tiedoston */bin/www*, jonka voi käynnistää *nodemon*:illa. Lisää siihen *.env*.
 
 ```js
-let app = require('./app');
-
-require('dotenv').config()
-port=process.env.PORT;
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+require('dotenv').config()  
 ```
 
 Lisää myös *package.json* -tiedostoon backendin käynnistyskomennot:
 
 ```js
-    "start": "node index.js",
-    "watch": "nodemon index.js"
+    "start": "node /bin/www",
+    "watch": "nodemon /bin/www"
 ```
 
 Nyt kokeile käynnistää backend konsolilta:
@@ -114,7 +110,7 @@ Avaa selaimeen http://localhost:3000, ruudulla pitäisi selaimessa näkyä: *Exp
 
 ### Router:eiden käyttö
 
-Reititys (*router*) toimii niin, että *index.js* tiedostosta ohjataan pyynnöt tarkemmalle käsittelijälle, joka sijaitsee toisessa tiedostossa. Näin saadaan modulaarinen rakenne viestien käsittelyyn. Oikeastaan *router*:it ovat eräänlaisia *middleware*:ja, jotka ketjutetaan yhteen *next*:in avulla.
+Reititys (*router*) toimii niin, että *app.js* tiedostosta ohjataan pyynnöt tarkemmalle käsittelijälle, joka sijaitsee toisessa tiedostossa. Näin saadaan modulaarinen rakenne viestien käsittelyyn. Oikeastaan *router*:it ovat eräänlaisia *middleware*:ja, jotka ketjutetaan yhteen *next*:in avulla.
 
 Esimerkissä on valmiina kaksi *endpoint*:ia, jotka on tuotu *app.js* -tiedostoon.
 
@@ -131,7 +127,7 @@ router.get('/', function(req, res, next) {
 });
 ```
 
-### Notesdemo:n rework
+### Notesdemo:n
 
 Siirretään nyt *notesdemon* koodi erillisiin *router*-tiedostoihin. Rekisteröityminen *registerRouter.js*, kirjautuminen *loginRouter.js* ja muut tiedostoon *notesRouter.js*:
 
@@ -170,7 +166,7 @@ notesRouter.js sisältää nyt:
 var express = require('express'); //uusi
 var router = express.Router();  //uusi
 
-const config = require('../utils/config') 
+const config = require('../utils/config')
 const options = config.DATABASE_OPTIONS;
 const knex = require('knex')(options);
 
@@ -208,7 +204,7 @@ const config = require('../utils/config')
 const options = config.DATABASE_OPTIONS;
 const knex = require('knex')(options);
 
-// tähän app vaihdetaan router:iksi, lisätään next
+// app => router:iksi, lisätään next
 router.post('/', (request, response, next) => {
     const body = request.body
     knex.from('users').select("*").where('username', '=', body.username)
@@ -250,8 +246,8 @@ module.exports = router;
 ### registerRouter
 
 ```js
-var express = require('express'); //uusi
-var router = express.Router();  //uusi
+var express = require('express');
+var router = express.Router();
 
 const bcrypt = require('bcryptjs')
 const config = require('../utils/config')
@@ -289,11 +285,11 @@ module.exports = router;
 ### notesRouter
 
 ```js
-var express = require('express'); //uusi
-var router = express.Router();  //uusi
+var express = require('express');
+var router = express.Router();
 
-const config = require('../utils/config') 
-const jwt = require('jsonwebtoken') 
+const config = require('../utils/config')
+const jwt = require('jsonwebtoken')
 
 const options = config.DATABASE_OPTIONS;
 const knex = require('knex')(options);
@@ -450,4 +446,10 @@ Otetaan *auth*-middleware käyttöön notesRouter:ille:
 
 ```js
 app.use('/notes', isAuthenticated, notesRouter);
+```
+
+Otetaan *auth*-middleware käyttöön *notesRouter*:issa (poimitaan dekoodattu userId *response.locals.auth* - kentästä):
+
+```js
+     const userId = response.locals.auth.userId;
 ```
