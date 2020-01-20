@@ -15,6 +15,7 @@ Tee funktio, joka kysy käyttäjältä (prompt:in avulla) kaksi merkkijonoa (esi
 Tee funktio, joka kysyy käyttäjältä kaksi numeroa ja laskee ne yhteen, sekä ilmoittaa vastauksen console.log:illa kehittäjänäkymässä. Käynnistys uudesta napista. Voit lisätä myös alert-viestin, joka antaa ohjeet kehittäjänäkymän avaamiselle.
 
 ### Tehtävä 3. Laskuri
+
 Tee nappi, jota painamalla kehittäjänäkymän konsolille tulostuu luku, joka kasvaa yhdellä joka painalluksella (aloittaa nollasta). Voit tehdä myös vähentävän napin.
 
 ### Tehtävä 4. Suurempi luku (ehtolause)
