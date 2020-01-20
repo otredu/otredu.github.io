@@ -453,3 +453,21 @@ Otetaan *auth*-middleware käyttöön *notesRouter*:issa (poimitaan dekoodattu u
 ```js
      const userId = response.locals.auth.userId;
 ```
+
+### React-front (build)
+
+Notes-demo:ssa on tehty valmiiksi frontend, jonka avulla voi lisätä uusia muistiinpanoja, poistaa muistiinpanoja sekä muokata muistiinpanon tärkeyttä.
+
+Jotta React-front saataisiin toimimaan tehdyn backendin kanssa, siitä pitää tehdä *build*. Prosessissa *React*-koodi (JSX) muutetaan tavalliseksi HTML:ksi sekä javascriptiksi. Valmis build syntyy *build*-kansioon.
+
+Aja *notes*-frontend:in juuressa:
+
+```cmd
+npm run build
+```
+
+Kopioi nyt koko *build*-kansio *notesmiddleware*:n juureen. Jos *express*-reititys ei löydä annettua reittiä, se voidaan ohjata palauttamaan staattisia webbisivuja. Tämä saadaan aikaan ottamalla käytöön *express.static*-middleware (on valmiina express-generaattorin tekemässä koodissa), riittää, että muutat sen käyttämäksi kansioksi *build*:
+
+```js
+app.use(express.static(path.join(__dirname, 'build')));
+```
