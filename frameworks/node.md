@@ -410,3 +410,44 @@ router.put('/:id', (request, response, next) => {
 module.exports = router;
 
 ```
+
+### auth - middleware
+
+```js
+const jwt = require('jsonwebtoken')
+const config = require('../utils/config')
+
+const getTokenFrom = request => {
+    const authorization = request.get('authorization')
+    console.log(authorization);
+    if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
+      return authorization.substring(7)
+    }
+    return null
+  }
+
+const isAuthenticated = (request, response, next) => {
+        const token = getTokenFrom(request);
+
+        if(!token){
+            return response.status(401).json( {error: 'token missing'});
+        }
+
+        const decodedToken = jwt.verify(token, config.SECRET);
+
+        if(!decodedToken || !decodedToken.id){
+            return response.status(401).json( {error: 'token invalid'});
+        }
+
+        response.locals.auth = { userId: decodedToken.id }; //uusi
+        next()      //uusi
+}
+
+module.exports = isAuthenticated;
+```
+
+Otetaan *auth*-middleware käyttöön notesRouter:ille:
+
+```js
+app.use('/notes', isAuthenticated, notesRouter);
+```
