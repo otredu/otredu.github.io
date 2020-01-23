@@ -33,7 +33,10 @@ Tarkista, että *.gitignore*:ssa, jossa on vähintään (lisää, jos ei ole):
 
 ```cmd
 node_modules/
+/node_modules
 *.env
+/build
+build/
 knexfile.js
 ```
 
@@ -470,4 +473,77 @@ Kopioi nyt koko *build*-kansio *notesmiddleware*:n juureen. Jos *express*-reitit
 
 ```js
 app.use(express.static(path.join(__dirname, 'build')));
+```
+
+### REST-client
+
+Backend:in testaaminen voidaan tehdä Visual Studio code:n REST clientilla.
+
+Sen voi asentaa [täältä](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
+
+#### Register (rekisteröi käyttäjä)
+
+```js
+POST http://localhost:3000/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Tiina Testaaja",
+    "username": "tester1",
+    "password": "justTesting"
+}
+```
+
+#### Login (kirjaudu sisään)
+
+```js
+POST http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "tester1",
+    "password": "justTesting"
+}
+```
+
+#### GET (hae muistiinpanot)
+
+```js
+GET http://localhost:3000/notes HTTP/1.1
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6MSwiaWF0IjoxNTc5NTkwNTA2fQ.NT8I4Aueks1EvSRGIv8zloO8amAdUjrnhlQ-LL-mwHQ
+```
+
+#### POST (luo uusi muistiinpano)
+
+```js
+POST http://localhost:3000/notes HTTP/1.1
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6MSwiaWF0IjoxNTc5NTkwNTA2fQ.NT8I4Aueks1EvSRGIv8zloO8amAdUjrnhlQ-LL-mwHQ
+content-type: application/json
+
+{
+    "content":"uusi viesti",
+    "important": 1
+}
+
+```
+
+#### DELETE (muistiinpanon poisto)
+
+```js
+DELETE http://localhost:3000/notes/11 HTTP/1.1
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6MSwiaWF0IjoxNTc5NTkwNTA2fQ.NT8I4Aueks1EvSRGIv8zloO8amAdUjrnhlQ-LL-mwHQ
+```
+
+#### PUT (muistiinpanon muuttaminen)
+
+```js
+PUT http://localhost:3000/notes/11 HTTP/1.1
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6MSwiaWF0IjoxNTc5NTkwNTA2fQ.NT8I4Aueks1EvSRGIv8zloO8amAdUjrnhlQ-LL-mwHQ
+content-type: application/json
+
+{
+    "content":"uusi viesti, jota on muutettu",
+    "important": 0,
+    "date": "2020-01-21T07:41:23.000Z"
+}
 ```
