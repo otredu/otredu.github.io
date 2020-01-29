@@ -26,7 +26,7 @@ module.exports = {
       host: 127.0.0.1,
       database: user123_notes_db,
       user: user123_admin,
-      password: passwordForUser123
+      password: secretPassword
     },
     pool: {
       min: 2,
