@@ -37,6 +37,11 @@ Lue lisää:
 ---
 
 ### Framework - demot:
+
 - [node-express -demo](./node.html)
 
 - [React bootstrap](../react/react-boostrap)
+
+### Deployment - demot:
+
+- [React/node/MySql -sovelluksen siirtäminen Webhotelliin ](./deployment.html)
