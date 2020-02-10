@@ -53,13 +53,15 @@ Aloitusmaksu on 5,40€
 
 Tee funktio, joka pyöristää desimaaliluvun lähimpään kokonaislukuun "tie-breaking"-sääntönä "pyöristä nollasta poispäin": Kun x on positiivinen, pyöristetään alaspäin (floor) lauseke: (x + 0,5) ja kun x on negatiivinen, pyöristetään ylöspäin (ceiling) lauseke: (x – 0,5). Kutsu funktiota kolmella eri arvoilla ja tulosta tiedot konsolille.
 
+![pyöristysesimerkki](./img/floor_ceil_example.PNG)
+
 ### Tehtävä 10. Tuotteen hinta
 
 Tee funktio, joka laskee tuotteen kokonaishinnan, kun sen parametrit ovat hinta ja ALV-prosentti (desimaalilukuna). Ennen ALV:in lisäämistä hinnasta vähennetään alennus seuraavien ehtojen mukaisesti:
 
-- hinta on 100 - 200€ alennus 5%
-- hinta 201 - 500€ alennus 10%
-- hinta on 500€ alennus 15%
+- hinta on välillä 100 - 200€ alennus 5%
+- hinta on välillä 200 - 500€ alennus 10%
+- hinta on 500€ tai yli alennus 15%
 
 Kutsu funktiota kolme kertaa eri arvoilla ja tulosta tiedot konsolille.
 
