@@ -45,3 +45,7 @@ Lue lisää:
 ### Deployment - demot:
 
 - [React/node/MySql -sovelluksen siirtäminen Webhotelliin ](./deployment.html)
+
+### Proto- ja tuotantoversion
+
+- [Itsearviointilomake ja ohjeet raporttiin](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/EQ1N9q4_YO5JuF7UhNPsr_IBzlYhfzGu0KfOGpGI-nEFMg?e=UEMpMo)
