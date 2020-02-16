@@ -27,6 +27,7 @@ npm install mysql
 npm install knex
 npm install bcryptjs
 npm install jsonwebtoken
+npm install express-joi-validation @hapi/joi
 ```
 
 Tarkista, että *.gitignore*:ssa, jossa on vähintään (lisää, jos ei ole):
@@ -455,6 +456,54 @@ Otetaan *auth*-middleware käyttöön *notesRouter*:issa (poimitaan dekoodattu u
 
 ```js
      const userId = response.locals.auth.userId;
+```
+
+### JSON-body:n validointi
+
+Koska backendin pitää testata sille tuleva data (tietotyypit, kenttien pituudet yms.) kätevintä on käyttää siihen tarkoitettua middleware-kirjastoa (express-joi-validation). Kirjaston avulla voidaan tarkistaa myös request-parametrit, sekä query-parametrit.
+
+Jotta tarkistaminen voidaan tehdä pitää JSON-schemat määritellä. Tee uusi kansio *models* ja sinne seuraavat tiedosto:
+
+registerSchema.js ja loginSchema.js (ilman *name*:a)
+
+```js
+const Joi = require('@hapi/joi');
+
+const schema = Joi.object().keys({
+    username: Joi.string().required().min(6),
+    password: Joi.string().required().min(8),
+    name: Joi.string().required()
+});
+
+module.exports = schema;
+```
+
+notesSchema.js
+
+```js
+const schema = Joi.object().keys({
+    content: Joi.string().required(),
+    date: Joi.date(),
+    important: Joi.boolean().required() 
+});
+```
+
+Lisää seuraava *app.js*-tiedostoon:
+
+```js
+const Joi = require('@hapi/joi')
+const validator = require('express-joi-validation').createValidator({})
+
+const loginSchema = require('./models/loginSchema');
+const notesSchema = require('./models/notesSchema');
+const registerSchema = require('./models/registerSchema');
+```
+
+Lisää middleware kunkin *router*:in listaan:
+
+```js
+app.use('/login', validator.body(loginSchema), loginRouter)
+...
 ```
 
 ### React-front (build)
