@@ -1,4 +1,4 @@
-## Harjoituksia 1
+## JS alkeet selaimessa harjoitukset
 
 ### Ohjeet
 

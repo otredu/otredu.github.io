@@ -1,4 +1,4 @@
-## Harjoituksia 3
+## DOM jatkoharjoitukset
 
 ### Ohjeet
 
@@ -19,14 +19,24 @@ Katso mallia [Pure JS](./eventit.html). Käytä pelkästään JavaScriptiä, kai
 </html>
 ```
 
-### Tehtävä 1a. Värin vaihtoa
+### Tehtävä 1
 
-Lisää edelliseen _html_-dokumenttiin uusi harjoitusosio (*div*, jossa on *h1*-otsikko tekstillä "Tehtävä 1"). Luo *div*:in sisälle lista (ul, li) funktioista, joita olet käyttänyt DOM:in muokkaamiseen tässä kurssissa (esim. querySelector, getElementById jne). Lisää jokaiselle listan alkiolle tapahtumakäsittelijä ("click") sekä callback-funktio, joka vaihtaa tekstin värin sitä klikattaessa. Ensimmäisellä klikkauksella väri vaihtuu vihreäksi, toisella punaiseksi, kolmannella taas vihreäksi jne.
+Tee taulukko, joka sisältää koulun ruokalistan tälle viikolle. Yhden päivän ruokatiedot ovat oliossa, jossaon kentät: pääruoka, lisukkeet, kasvisruoka, juomat, päivämäärä, viikonpäivä, kuva (url).
 
-*Vinkki* Funktioiden nimet kannattaa sijoittaa merkkijonoina taulukkoon.
+Tulosta taulukon sisältö ruudulle käyttäen toistorakennetta. Muotoile sisältö div:in sisälle listaelementtien avulla, käytä ulkonäön muotoiluun CSS:ää.
 
-### Tehtävä 1b. Lisätieto
+### Tehtävä 2
 
-Jatka edellistä tehtävää ja lisää jokaisen funktion nimen perään "lisätietoja"-niminen linkki, josta pääsee ko. funktiota käsittelevälle sivulle esim. *w3school.com* -sivustolla (jokaisella funktiolla on eri linkki).
+Lisää koodiin toiminnallisuus, jossa ensin näet pelkän listan viikonpäivistä, ja päivää klikkaamalla, aukeaa ruokalistatiedot kuvineen. Otsikkoa klikkaamalla tiedot sulkeutuvat.
 
-*Vinkki* Muuta taulukossa olevat funktioiden nimet olioiksi. Olioilla voisi esim. olla ominaisuudet: "nimi" sekä "linkki".
+### Tehtävä 3
+
+Lisää tykkäysnappi avattuun ruokalistaan. Esitä tykäämisten määrä ruokalistan lisätietojen lopussa.
+
+### Lisätehtävä 1a. Värin vaihtoa
+
+Vaihda ruokalistan otsikon väriä kun 10 tykkäystä on tullut täyteen.
+
+### Tehtävä 1b. Palautekenttä
+
+Lisää palautekenttä, johon voi jättää palautetta, jonka voi lukea kun painaa "lue palautteet" napista (muuten suljettuna).

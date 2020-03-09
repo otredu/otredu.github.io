@@ -1,4 +1,4 @@
-## Lisäharjoituksia
+## JS lisäharjoituksia
 
 Tyyli vapaa, voit käyttää näissä kaikkea mitä olet tälla kurssilla oppinut.
 

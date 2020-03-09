@@ -1,4 +1,4 @@
-## Harjoituksia 2
+## DOM perusharjoitukset
 
 ### Ohjeet
 
