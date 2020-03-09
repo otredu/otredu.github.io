@@ -4,7 +4,6 @@ Materiaalia, joka täydentyy kurssin edetessä..
 
 Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja teet siinä olevat harjoitukset.
 
-
 ### JavaScript kertaus
 
 - [Johdanto](./johdanto.html)
@@ -17,7 +16,6 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 - [DOM alkeita](./dom.html)
 - [JS ja HTML](./js_html.html)
-- [JS jatkoa](./jatkoa.html)
 - [Harjoituksia 3](./harjoituksia2.html)
 
 --- 
