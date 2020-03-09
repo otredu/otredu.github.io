@@ -9,12 +9,12 @@ Katso mallia [Pure JS](./eventit.html). Käytä pelkästään JavaScriptiä, kai
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Harjoitukset 3</title>
+    <title>Harjoitukset 4</title>
 </head>
     <body>
-        <h1>Harjoitukset 3</h1>
+        <h1>Harjoitukset 4</h1>
         <div id="teht"></div>
-        <script type="module" src="harj3.js"></script>
+        <script type="module" src="harj4.js"></script>
     </body>
 </html>
 ```

@@ -4,7 +4,7 @@
 
 Ennen tehtäviä käy läpi [DOM alkeita](./dom.html).
 
-Tallenna harjoitukset omaan kansioosi magnesium-palvelimelle kansioon *javascript*. Tee sen sisään uusi kansio harj2, jos ei ole jo tehtynä. Muista tallentaa kaikki harjoitukset tunnin lopuksi. Tee kaikki tehtävät samoihin tiedostoihin (yksi .html ja yksi .js tiedosto).
+Tee kaikki tehtävät samoihin tiedostoihin (yksi .html ja yksi .js tiedosto).
 
 Tee jokaiselle tehtävälle oma *div*.
 
@@ -20,11 +20,13 @@ Tee funktio, joka lisää oheiselle HTML-sivulle tervehdyksen, joka käyttää _
     <title>Harjoitukset 2</title>
 </head>
 <body>
-  <script></script>
-  <h1>Tehtävä 1</h1>
-  <p>Anna nimesi: </p>
-  <input id="hello" type="text" name="firstname" value="">
-  <button onclick="">GO!</button>
+  <div id="teht1">
+    <h1>Tehtävä 1</h1>
+    <p>Anna nimesi: </p>
+    <input id="hello" type="text" name="firstname" value="">
+    <button id="go1">GO!</button>
+  </div>
+  <script src="harj3.js"></script>
 </body>
 </html>
 ```
