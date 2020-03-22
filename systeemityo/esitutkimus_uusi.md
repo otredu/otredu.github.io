@@ -32,6 +32,8 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
     - käsitteistö ja ER-kaavio
     - käyttöliittymäehdotus (kevyt MockUP), liitä kuvina, lisää myös linkki MockUP:iin
 
+    - esimerkkidokumentti [esitutkimuksesta](http://www.leeniemi.net/syst19/materiaali/WebMagiaEsitutkimus.pdf).
+
 5. Vertaisarviointi
 
     Arvioi toisen opiskelijan tekemä esitutkimus, käytä tätä [pohjaa](http://www.leeniemi.net/syst19/materiaali/Vertaisarviointi.dotx)
