@@ -2,18 +2,25 @@
 
 Materiaali täydentyy kurssin edetessä
 
-- Tutustu [projektikuvaukseen](https://teams.microsoft.com/l/file/DAEDA521-AF99-42FC-ACB0-ED7428513095?tenantId=f35cd033-1b97-4cd8-8de4-56fd482739e1&fileType=pdf&objectUrl=https%3A%2F%2Fomaareena.sharepoint.com%2Fsites%2FAsiointipalveluprojektiB%2FShared%20Documents%2FGeneral%2FTeht%C3%A4v%C3%A4nanto%20-%20kirpparisivusto.pdf&baseUrl=https%3A%2F%2Fomaareena.sharepoint.com%2Fsites%2FAsiointipalveluprojektiB&serviceName=teams&threadId=19:484c3a908d554947996b950cb00f029b@thread.tacv2&groupId=786bdb85-16cb-4215-97c9-a2e2da7ed882) ja tee sen pohjalta seuraavat suunnitelmat
+### Esitutkimus ja projektisuunnitelma
 
-### Esitutkimus
+- projektin kuvaus
+- vaatimukset
+- käyttötapauskaavio (Visio: UML usecase)
+- MockUp (AdobeXD)
+- käsiteluettelo
+- projektin jakaminen osatehtäviin (määritellään mitä toimii ohjelman ensimmäisessä  versiossa, toisessa versiossa, kolmannessa versiossa)
+- projektin aikataulutus ja työnjako (kuka tekee mitäkin ohjelman ensimmäisen version toteutuksessa jne)
 
-- [esitutkimusohje](../systeemityo/esitutkimus_uusi.md)
-- piirrä kaikki diagrammit tällä ohjelmalla: [draw.io](http://draw.io)
-- esimerkkidokumentti [esitutkimuksesta](http://www.leeniemi.net/syst19/materiaali/WebMagiaEsitutkimus.pdf).
+Tarkempia [ohjeita esitutkimukseen](../systeemityo/esitutkimus.html).
 
-<!-- ### Toiminnallinen suunnittelu
+Esimerkkidokumentti [projektisuunnitelmaksi](http://www.leeniemi.net/proj19/apumateriali/WebMagiaProjektisuunnitelma.pdf).
 
-- tietokantamalli (Visio: UML)
+### Toiminnallinen suunnittelu
+
+- ER-malli (Visio: Chen) ja tietokantamalli (Visio: UML)
 - näyttörakennekaavio (Visio: UML luokkakaavio)
+- arkkitehtuuri (korkealla tasolla)
 - tyyliopas (HTML + CSS)
 
 Tarkempia [ohjeita toiminnalliseen suunnitteluun](../systeemityo/toiminnallinen.html).
@@ -57,4 +64,4 @@ Vinkkejä:
 
 - [CPANEL-ohjeet](./cpanel.html)
 
-- [Leenan kevään kurssin sivut](http://www.leeniemi.net/proj19/) -->
+- [Leenan kevään kurssin sivut](http://www.leeniemi.net/proj19/)

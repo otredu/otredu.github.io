@@ -7,6 +7,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 
 - [Asiointipalvelujen rakentamisen tekniikka, JS](./js/index_2020.html)
 - [Tuotantoversion toteutus : webframeworks](./frameworks/index.html)
+- [Testaaminen ja testiympäristöt](./testaus/index.html)
 
 ### Kurssit syksy 2019
 
@@ -16,7 +17,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssi
 - [Systeemityö](./systeemityo/index.html)
 - [Tietokannat](./tietokannat/index.html)
 - [Asiointipalveluprojekti](./asiointipalveluprojekti/index.html)
-- [Testaaminen ja testiympäristöt](./testaus/index.html)
+- [Testaaminen ja testiympäristöt](./testaus/index_S2019.html)
 
 ### Leenan kurssimateriaalit
 
