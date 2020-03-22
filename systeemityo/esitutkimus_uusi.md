@@ -1,6 +1,6 @@
 ### Esitutkimus
 
-Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla. Tämän dokumentin tarkoitus on saada tuote myytyä asiakkaalle.
+Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla. Ymmärtää vaatimukset paremmin.
 
 ---
 1. Käyttötapaukset
@@ -30,7 +30,7 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
     Liitteiksi tulevat:
     - käyttötapauskaavio (UML use case)
     - käsitteistö ja ER-kaavio
-    - käyttöliittymäehdotus (kevyt MockUP)
+    - käyttöliittymäehdotus (kevyt MockUP), liitä kuvina, lisää myös linkki MockUP:iin
 
 5. Vertaisarviointi
 
