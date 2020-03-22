@@ -2,7 +2,7 @@
 
 Materiaali täydentyy kurssin edetessä
 
-- Tutustu [projektikuvaukseen](https://teams.microsoft.com/l/file/DAEDA521-AF99-42FC-ACB0-ED7428513095?tenantId=f35cd033-1b97-4cd8-8de4-56fd482739e1&fileType=pdf&objectUrl=https%3A%2F%2Fomaareena.sharepoint.com%2Fsites%2FAsiointipalveluprojektiB%2FShared%20Documents%2FGeneral%2FTeht%C3%A4v%C3%A4nanto%20-%20kirpparisivusto.pdf&baseUrl=https%3A%2F%2Fomaareena.sharepoint.com%2Fsites%2FAsiointipalveluprojektiB&serviceName=teams&threadId=19:484c3a908d554947996b950cb00f029b@thread.tacv2&groupId=786bdb85-16cb-4215-97c9-a2e2da7ed882) ja tee sen pohjalta seuraavat suunnitelmat
+- Tutustu [projektikuvaukseen](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/EVFbPKE62pRCvnffQl0XExsBYvsOqIbAeDwYFy5VaddycQ?e=3hA33J) ja tee sen pohjalta seuraavat suunnitelmat
 
 ### Esitutkimus
 
