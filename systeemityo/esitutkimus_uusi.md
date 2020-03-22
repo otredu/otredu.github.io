@@ -17,7 +17,7 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
 3. Käsitteanalyysi ja ER-diagrammi
      - Tee järjestelmään liittyvistä käsitteistä käsiteluettelo
      - Tee luettelon avulla järjestelmän [ER-malli](http://appro.mit.jyu.fi/tiedonhallinta/luennot/luento2/#TOC1)
-     ![ER-malli - esimerkki](./img/er_kaavio.jpg)
+     ![ER-malli - esimerkki](../tietokannat/img/er_kaavio.jpg)
 
 4. Kokoa dokumentiksi
 
