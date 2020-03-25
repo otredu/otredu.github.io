@@ -1,10 +1,37 @@
 ## Muutosten päivittäminen Github:iin
 
+### Muutokset Git Bash:illä
+
 Jos *local*- ja *remote*-repo ovat olemassa (tehty uusi [repo]("./uusirepo.html") tai [kloonattu vanha]("./kloonaus.html")), tiedostoja päivitetään Github:iin ajamalla:
 
     git add *
     git commit -m "Second update"
     git push
+
+### Muutokset VSCodesta
+
+Githubiin voi päivittää muutokset suoraan VSCodesta. Git:iin tallentamattomat muutokset näkyvät sinisenä numerona. Lisäksi tiedoston vieressä lukee muutoksen tyyppi:
+    - M (muutettu, modified)
+    - U (uusi tiedosto, untracked) - D (poistettu, deleted)
+
+1. Valitse vasemmalta versionhallinta (git-logo)
+
+![muutosten päivitys](./img/vscode_muutokset1.PNG)
+
+2. Tallentamattomat muutokset näkyvät kohdan "changes" alla. Jos ne eivät näy niin lisää ne painamalla + merkkiä tiedoston oikealla puolella.
+
+![muutosten päivitys](./img/vscode_muutokset2b.PNG)
+
+
+3. Kirjoita commit-viesti (kuvassa Harjoitukset 2 valmis) ja valitse commit (v-merkki):
+
+![muutosten päivitys](./img/vscode_muutokset3.PNG)
+
+4. Avaa valikko ... merkin alta ja valitse push:
+
+![muutosten päivitys](./img/vscode_muutokset4.PNG)
+
+![muutosten päivitys](./img/vscode_muutokset5.PNG)
 
 ## Epäsynkka *local*:in ja *remote*:n välillä
 

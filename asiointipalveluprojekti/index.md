@@ -8,7 +8,7 @@ Materiaali täydentyy kurssin edetessä
 
 - [esitutkimusohje](../systeemityo/esitutkimus_uusi.md)
 - piirrä kaikki diagrammit tällä ohjelmalla: [draw.io](http://draw.io)
-- esimerkkidokumentti [esitutkimuksesta](http://www.leeniemi.net/syst19/materiaali/WebMagiaEsitutkimus.pdf).
+
 
 <!-- ### Toiminnallinen suunnittelu
 
