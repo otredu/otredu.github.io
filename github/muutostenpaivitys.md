@@ -18,20 +18,32 @@ Githubiin voi päivittää muutokset suoraan VSCodesta. Git:iin tallentamattomat
 
 ![muutosten päivitys](./img/vscode_muutokset1.PNG)
 
-2. Tallentamattomat muutokset näkyvät kohdan "changes" alla. Jos ne eivät näy niin lisää ne painamalla + merkkiä tiedoston oikealla puolella.
+2. Tallentamattomat muutokset näkyvät kohdan "changes" alla.
 
 ![muutosten päivitys](./img/vscode_muutokset2b.PNG)
 
-
-3. Kirjoita commit-viesti (kuvassa Harjoitukset 2 valmis) ja valitse commit (v-merkki):
+3. Kirjoita *commit*-viesti (kuvassa Harjoitukset 2 valmis) ja valitse commit (v-merkki):
 
 ![muutosten päivitys](./img/vscode_muutokset3.PNG)
 
-4. Avaa valikko ... merkin alta ja valitse push:
+HUOM! Joskus VSCode "autostageing" ei toimi ja joudut lisäämään ne mukaan *commit*:iin (paina + merkkiä).
+
+![muutosten päivitys](./img/vscode_muutokset6.PNG)
+
+4. Tiedostot eivät vielä siirtyneet remote-palvelimelle, avaa valikko ... merkin alta ja valitse *push*:
 
 ![muutosten päivitys](./img/vscode_muutokset4.PNG)
 
 ![muutosten päivitys](./img/vscode_muutokset5.PNG)
+
+HUOM! Jos teet tätä ensimmäisen kerran uudella koneella, saatat saada virheen, jossa sanotaan että "username" puuttuu.
+
+Aja sen jälkeen gitbash:issä seuraavat komennot:
+
+```cmd
+git config --global user.name "oma nimi"
+git config --global user.email "oma.nimi@jokuposti.fi"
+```
 
 ## Epäsynkka *local*:in ja *remote*:n välillä
 
