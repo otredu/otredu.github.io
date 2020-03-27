@@ -8,6 +8,7 @@ Materiaali täydentyy kurssin edetessä
 
 - [esitutkimusohje](../systeemityo/esitutkimus_uusi.md)
 - piirrä kaikki diagrammit tällä ohjelmalla: [draw.io](http://draw.io)
+- piirrä MockUp - [AdobeXD](https://www.adobe.com/fi/products/xd.html):llä tai jos sen asentaminen ei onnistu [Figma](https://www.figma.com/):lla
 
 
 <!-- ### Toiminnallinen suunnittelu
