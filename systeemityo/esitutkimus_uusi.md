@@ -12,7 +12,7 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
 2. Käyttöliittymäehdotus
 
     Tee karkea hahmotelma sivuston käyttöliittymäideasta tietokoneella sekä mobiililaitteella. Tee nopeasti muutama suuntaa-antava käyttöliittymäkuva AdobeXD-ohjelmalla (ei toimivaa navigointia, ei tarvitse olla kaikkia kenttiä vielä, eikä kaikkia näkymiä).
-    - AdobeXD - prototyyppiharjoitus [ohje](http://www.leeniemi.net/syst19/index.php?sivu=xd)
+    - AdobeXD - prototyyppiharjoitus [ohje](http://www.leeniemi.net/syst19/index.php?sivu=xd), lataa kuvat [tästä](./img/xd_demo_kuvat.7z)
 
 3. Käsitteanalyysi ja ER-diagrammi
      - Tee järjestelmään liittyvistä käsitteistä käsiteluettelo
