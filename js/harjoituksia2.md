@@ -3,6 +3,7 @@
 ### Ohjeet
 
 Ennen tehtäviä käy läpi [DOM alkeita](./dom.html).
+Tutustu myös [domdemo1](./domdemo1.html)-koodiin.
 
 Tee kaikki tehtävät samoihin tiedostoihin (yksi .html ja yksi .js tiedosto).
 
