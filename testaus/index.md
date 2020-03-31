@@ -33,3 +33,10 @@ Lisäharjoituksia:
 
 - [Selenium IDE](./seleniumide.html)
 - [Headless browser ja JUnit](./headlessbrowser.html)
+
+---
+Linkkejä:
+
+- [Finnish SW Testing Board (FISTB)](http://www.fistb.fi/fi/etusivu)
+
+- [International SW Testing Qualifications Board (ISTQB) - materiaalit](http://www.fistb.fi/fi/tiedostot)
