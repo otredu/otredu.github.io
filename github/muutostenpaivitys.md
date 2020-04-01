@@ -8,43 +8,6 @@ Jos *local*- ja *remote*-repo ovat olemassa (tehty uusi [repo]("./uusirepo.html"
     git commit -m "Second update"
     git push
 
-### Muutokset VSCodesta
-
-Githubiin voi päivittää muutokset suoraan VSCodesta. Git:iin tallentamattomat muutokset näkyvät sinisenä numerona. Lisäksi tiedoston vieressä lukee muutoksen tyyppi:
-    - M (muutettu, modified)
-    - U (uusi tiedosto, untracked) - D (poistettu, deleted)
-
-1. Valitse vasemmalta versionhallinta (git-logo)
-
-![muutosten päivitys](./img/vscode_muutokset1.PNG)
-
-2. Tallentamattomat muutokset näkyvät kohdan "changes" alla.
-
-![muutosten päivitys](./img/vscode_muutokset2b.PNG)
-
-3. Kirjoita *commit*-viesti (kuvassa Harjoitukset 2 valmis) ja valitse commit (v-merkki):
-
-![muutosten päivitys](./img/vscode_muutokset3.PNG)
-
-HUOM! Joskus VSCode "autostageing" ei toimi ja joudut lisäämään ne mukaan *commit*:iin (paina + merkkiä).
-
-![muutosten päivitys](./img/vscode_muutokset6.PNG)
-
-4. Tiedostot eivät vielä siirtyneet remote-palvelimelle, avaa valikko ... merkin alta ja valitse *push*:
-
-![muutosten päivitys](./img/vscode_muutokset4.PNG)
-
-![muutosten päivitys](./img/vscode_muutokset5.PNG)
-
-HUOM! Jos teet tätä ensimmäisen kerran uudella koneella, saatat saada virheen, jossa sanotaan että "username" puuttuu.
-
-Aja sen jälkeen gitbash:issä seuraavat komennot:
-
-```cmd
-git config --global user.name "oma nimi"
-git config --global user.email "oma.nimi@jokuposti.fi"
-```
-
 ## Epäsynkka *local*:in ja *remote*:n välillä
 
 Joskus muutoksia tulee useammalta *local*-repository:ltä. Silloin *remote* ja koneesi *local*-repo ovat ns. epäsynkassa. Näin voi käydä jos vaikka teet töitä kahdella eri koneella, joissa on omat *local*-reponsa. Jos teet vaikka kotona töitä, ja teet *push*-operaation *remote*-repoon, seuraavan kerran kun aloitat työt koulun koneella lataa tekmäsi päitykset seuraavasti, ennen kuin jatkat hommia:

@@ -4,6 +4,8 @@
 
 Tee Visual Studio Code:lla uusi tiedosto, nimeä se *harjoitukset2.js*. Avaa VS:n terminaali ja aja koodi kirjoittamalla konsoliin: *node harjoitukset2.js*.
 
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/1a56fd4c-5818-4711-8e75-9338ed151660?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
 ### Tehtävä 1
 
 Tee taulukko (array), johon tallennat viisi muistettavaa asiaa (muistilista). Tallenna taulukko muuttujaan. Tulosta taulukon alkiot consolille kolmella eri tavalla:
@@ -15,6 +17,8 @@ Tee taulukko (array), johon tallennat viisi muistettavaa asiaa (muistilista). Ta
 ### Tehtävä 2
 
 Lisää edelliseen taulukkoon uusia muistettavia asioita (käytä *push()*-metodia) ja poista siitä ensimmäinen muistettava asia (käytä *pop()*-metodia). Tulosta muutettu taulukko jollakin harjoituksen 1 tyylillä.
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/61f62497-22ba-4333-acf9-164beac7b264?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 ### Tehtävä 3
 

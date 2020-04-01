@@ -10,7 +10,9 @@ Tässä esimerkkikuva Wikipediasta:
 
 DOM muodostuu _node_:ista. _Parent_-nodella on _child_-nodeja (_decendant_-node), ja jos lapsia on useita ne ovat toisilleen _siblings_-node:ja. _Text_-node on oma tyyppinsä ja se sisältää tekstiä. Puuta voi selata järjestyksessä _root_-nodesta eteenpäin, kyselemällä aina seuraavaa jälkeläistä, sisarusta jne. Sellaisia _node_ja, joilla on oma _HTML_taginsä kutsutaan _elementeiksi_. Elementtejä voidaan etsiä muokattavaksi niiden _CSS-selector_:eiden avulla. _querySelector_ etsii elementtejä niiden tyypin (esim. "div", "h1"), luokan (esim. ".error") tai id:n (esim. "#info") avulla.  
 
-### DOM-demo 1: alkeet
+### DOM-demo 1 (alku)
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/4c18b494-daab-4d09-8101-f18e7d484f17?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 #### Elementtien etsintä
 
@@ -21,7 +23,7 @@ Kokeillaan _querySelector_:ia selaimessa. Tallenna seuraava koodi tieodostoon *d
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>DOM demo 1 ja 2</title>
+    <title>DOM demo 1</title>
 </head>
 <body>
     <h1>Harjoitellaan elementtien käyttämistä</h1>
@@ -52,7 +54,7 @@ Tämä on ensimmäinen _button_-elementti, joka dokumentista löytyi.
 Kirjoita prompt:iin ja testaa:
 
 ```js
-let myMessage = document.querySelector(".message");
+let myText = document.querySelector(".message");
 ```
 
 Tämä on ensimmäinen _.message_-luokkaan kuuluvan elementti, joka dokumentista löytyi.
@@ -76,19 +78,19 @@ let myDivs = document.querySelectorAll("div");
 
 #### Elementtien muuttaminen
 
-Nyt käytetään hyväksi demo 1:ssä tallennettuja elementtejä, ja muutetaan niiden attribuutteja.
+Nyt käytetään hyväksi yllä tallennettuja elementtejä, ja muutetaan niiden attribuutteja.
 
-Vaihdetaan napin tekstiksi "Paina tästä". Tekstikenttään voidaan viitata attribuutilla *.innerText* tai *textContent*:
+Vaihdetaan napin tekstiksi "Paina tästä". Tekstikenttään voidaan viitata attribuutilla *innerText* tai *textContent*:
 
 ```js
 myButton.innerText = "Paina tästä";
 myButton.textContent = "Paina tästä";
 ```
 
-Vaihdetaan linkki osoittamaan osoitteeseen "https://startti.tredu.fi/". Uusi URL pitää tallentaa sekä attribuuttiin *href*, että *textContent*:iin. Miksi?
+Vaihdetaan linkki osoittamaan osoitteeseen "https://hs.fi/". Uusi URL pitää tallentaa sekä attribuuttiin *href*, että *textContent*:iin. Miksi?
 
 ```js
-myLink.href = "https://startti.tredu.fi/";
+myLink.href = "https://hs.fi/";
 ```
 
 Vaihda myös myMessage-elementin teksti.
@@ -96,7 +98,7 @@ Vaihda myös myMessage-elementin teksti.
 Voit myös muuttaa elementtien CSS-tyylejä. Tekstin värin vaihtaminen onnistuu näin:
 
 ```js
-myMessage.style.color = "red";
+myText.style.color = "red";
 ```
 
 Koko dokumentin CSS-tyyliin pääsee käsiksi näin:
@@ -105,9 +107,13 @@ Koko dokumentin CSS-tyyliin pääsee käsiksi näin:
 document.body.style.backgroundColor = "pink";
 ```
 
+### Dom-demo1 (loppu)
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c3387fd4-8ffa-486f-bf9c-c1c0cdb4fec2?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
 #### script-tagi
 
-Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittää script-tagien avulla suoraan HTML-sivulle. Tässä heippanapin tekstin muuttaminen on paketoitu funktioksi *klikkaus*, ja sitä kutsutaan kun nappia painetaan (katso button:in *onclick*).
+Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittää script-tagien avulla suoraan HTML-sivulle.
 
 ```html
 <!DOCTYPE html>
@@ -118,32 +124,62 @@ Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittä
 </head>
 <body>
   <script>
-    function klikkaus(){
       let myButton = document.querySelector("button");
       myButton.innerText = "Paina tästä";
-    }
+      let myText = document.querySelector(".message");
+      myText.style.color = "red";
   </script>
   <h1 style="display: none">Harjoitus 1</h1>
-  <button onclick="klikkaus()">Heippanappi</button>
+  <button>Heippanappi</button>
   <p class="message">Muuta tämä teksti</p>
   <a id='info' href="http://is.fi">Iltasanomat</a>
 </body>
 </html>
 ```
 
-Muuta nyt tekstin värin vaihtaminen funktioksi ja liitä sen p-elementin *onclick*-attribuuttiin.
-
 #### Erillinen .js-tiedosto
 
-Koska *script*-tagin sisältö paisuu isoksi, on parempi sijoittaa JavaScript-koodi omaan tiedostoonsa. Siirrä edellisen kohdan JavaScript omaan tiedostoonsa, ja nimeä se _dom-demo1.js_. Muuta script-tagi viittaamaan tähän tiedostoon:
+Koska *script*-tagin sisältö paisuu isoksi, on parempi sijoittaa JavaScript-koodi omaan tiedostoonsa. Siirrä edellisen kohdan JavaScript omaan tiedostoonsa, ja nimeä se _domdemo1.js_. Muuta script-tagi viittaamaan tähän tiedostoon:
 
 ```js
-<script src="dom-demo1.js"></script>
+<script src="domdemo1.js"></script>
 ```
 
 Tästä eteenpäin teemme kaiken JavaScriptin erillisiin tiedostoihin, ei HTML:n sekaan!
 
 HUOM! Script-tagi kannattaa sijoittaa aivan bodyn loppuun. Näin sivu latautuu nopeammin ja sivun DOM-rakenne on ehtinyt valmiiksi, ennen kuin JavaScript ajetaan.
+
+#### JavaScriptin kutsuminen nappia painamalla (event)
+
+Jotta saadaan toimintoja käynnistymään käyttöliittymästä esim. nappia painamalla, liitämme HTML-elementin johonkin *event*:iin sekä JavaScript-funktioon.
+
+Paketoidaan kutsuttava koodi funktioksi:
+
+```js
+function changeColor() {
+    myText.style.color="red";
+}
+```
+
+Lisätään button:ille HTML-dokumenttiin *onclick*-attribuutti, jossa on JavaScript-funktiokutsu:
+
+```html
+<button onclick="changeColor()">
+```
+
+#### Eventlistener ja callback
+
+ _button_:iin ja *changeColor*-funktion voi liittää toisiinsa myös *addEventListener*:in avulla suoraan .js-tiedostossakin (poista "onclick" button-tagistä):
+
+```js
+myButton.addEventListener("click", changeColor);
+```
+
+Tässä siis kerrotaan selaimelle, että kun kyseinen tapahtuma tapahtuu ("click"), haluamme, että tämä JavaScript-funktio ("changeColor") suoritetaan.
+
+Tässä *klikkaus*-funktio on nimeltään *callback*-funktio, koska sitä kutsutaan vasta kun tapahtuma (*event*) on tapahtunut.
+
+Valitse jompi kumpi tapa liittää funktiot ja eventit toisiinsa ja pysy siinä.
 
 #### input-kentän lukeminen
 
@@ -166,25 +202,7 @@ Tämä voidaan kirjoittaa myös putkeen:
 let myName = document.getElementById("hello").value;
 ```
 
-Lisää nyt nappi, joka tervehtii käyttäjää nimeltä (lisää _body_:n uusi _p_-elementti, ja kirjoita siihen tervehdys).
-
-#### Eventlistener ja callback
-
-Kutsuimme JavaScriptiä aikaisemmin suoraan HTML:stä laittamalla JavaScript-funktiokutsun "onclick"-attribuuttiin:
-
-```html
-<button onclick="klikkaus()">Heippanappi</button>
-```
-
-Tämän saman asian voi tehdä .js - tiedostossa, liittämällä _button_:iin *klikkaus*-funktion *addEventListener*:in avulla:
-
-```js
-myButton.addEventListener("click", klikkaus);
-```
-
-Tämän avulla kerrotaan selaimelle, että kun kyseinen tapahtuma tapahtuu ("click"), haluamme, että tämä JavaScript-funktio ("klikkaus") suoritetaan.
-
-Tässä *klikkaus*-funktio on nimeltään *callback*-funktio, koska sitä kutsutaan vasta kun tapahtuma (*event*) on tapahtunut.
+Lisää nyt nappi (id="go1"), joka tervehtii käyttäjää nimeltä (lisää _body_:n uusi _p_-elementti, ja kirjoita siihen tervehdys JavaScriptin avulla).
 
 ## Linkkejä
 

@@ -1,5 +1,6 @@
 ## Github-ohjeita
 
+- [Github classroom-palautusrepo ja VSCode:n käyttäminen](./githubpalautusrepo.md)
 - [Uuden repon luominen](./uusirepo.html)
 - [Muutosten päivittäminen Githubiin](./muutostenpaivitys.html)
 - [Repon kloonaus](./kloonaus.html)
