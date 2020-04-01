@@ -4,11 +4,15 @@ Kun olet saanut opettajalta kutsulinkin Github-classroomin palautusrepoon seuraa
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/30512e6a-29b0-48c0-81f4-af466c202513?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tarvitset:
+Kotikoneella tarvitset:
 
 - Git For Windows ohjelman [asenna tästä](https://gitforwindows.org/).
 
 - VSCode [asenna tästä](https://code.visualstudio.com/)
+
+Ensimmäisellä käyttökerralla Git bash vaatii lisäksi nämä asetukset:
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/bfbda2a1-725a-40de-ba15-05197fb4cdc8?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 ### Muutosten päivittäminen VSCodesta Github:iin
 
