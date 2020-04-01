@@ -34,6 +34,8 @@ Koodaa taulukon avulla funktio, joka päättelee aallonpituuden avulla mitä vä
 
 ![Värikartta](./img/robocolors.png)
 
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/a679cbf9-fb1a-4d87-b08d-bb50940faf98?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
 ### Tehtävä 8. Taksimatka
 
 Tee funktio, jonka avulla voit laskea taksimatkan suuruuden euroissa, kun tiedetään matkustajien määrä ja kuljetut kilometrit. Tarkista myös funktion saamat arvot, että ne ovat järkeviä ja jos ne eivät ole palauta "tarkista tiedot".
@@ -70,12 +72,20 @@ Kutsu funktiota kolme kertaa eri arvoilla ja tulosta tiedot konsolille.
 Korjaa edellisiä funktioita niin, että ne tarkistavat kaikki saamansa syötteet ja virhetilanteessa heittävät poikkeuksen (esim. nollalla ei saa jaakaa, syötteet eivät ole lukuja, liian vähän parametreja):
 
 ```js
- throw new Error('ei lukuja');
+ throw new Error('nollalla ei voi jakaa');
 ```
 
-Kun käytät tällaista funktiota, joka heittää poikkeuksen, kutsu sitä try-cacth-lauseen sisältä:
+Kun käytät tällaista funktiota, joka heittää poikkeuksen, kutsu sitä try-catch-lauseen sisältä:
 
-### Lisätehtävä 2
+```js
+try {
+  console.log(division(100, 0))
+}
+catch(err) {
+  console.log(err);
+}
+
+<!-- ### Lisätehtävä 2
 
 Asenna JEST-yksikkötestaus kirjasto ja kirjoita yksikkötestit em. funktioille.
 
@@ -102,4 +112,4 @@ Katso tarkemmat ohjeet JEST:in asennuksesta ja ajamisesta:
 
 - [JEST:in asennus](../testaus/jest.html)
 - [JEST alkeet](../testaus/jest-alkeet.html)
-- [JEST esimerkkikoodi](../testaus/demo1.html)
+- [JEST esimerkkikoodi](../testaus/demo1.html) -->
