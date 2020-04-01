@@ -19,6 +19,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [JEST alkeita](./jest-alkeet.html)
 - [JEST demo 1](./demo1.html)
 - [Harjoitukset 1](./harjoitus1.html)
+- [JEST bonustehtävät](./harjoitus_bonus.html)
 
 Lisäharjoituksia:
 - [Harjoitukset 2](./harjoitus2.html)

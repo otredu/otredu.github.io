@@ -57,4 +57,3 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
     Tiedostot kannattaa tallentaa Github:iin. Tee projektille uusi Github-repo seuraamalla näitä [ohjeita](../github/uusirepo.html).
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8e0d229c-49c4-418f-8a5d-63549dfb1c3b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
-
