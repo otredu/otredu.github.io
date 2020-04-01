@@ -6,12 +6,15 @@ JavaScript:in avulla voidaan muokata dynaamisesti selaimessa auki olevaa HTML-si
 
 Tässä esimerkkikuva Wikipediasta:
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/428px-DOM-model.svg.png)
+![DOM-kuva](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/428px-DOM-model.svg.png)
 
 DOM muodostuu _node_:ista. _Parent_-nodella on _child_-nodeja (_decendant_-node), ja jos lapsia on useita ne ovat toisilleen _siblings_-node:ja. _Text_-node on oma tyyppinsä ja se sisältää tekstiä. Puuta voi selata järjestyksessä _root_-nodesta eteenpäin, kyselemällä aina seuraavaa jälkeläistä, sisarusta jne. Sellaisia _node_ja, joilla on oma _HTML_taginsä kutsutaan _elementeiksi_. Elementtejä voidaan etsiä muokattavaksi niiden _CSS-selector_:eiden avulla. _querySelector_ etsii elementtejä niiden tyypin (esim. "div", "h1"), luokan (esim. ".error") tai id:n (esim. "#info") avulla.  
 
-### Demo 1: Elementtien etsintä
-Kokeillaan _querySelector_:ia selaimessa. Avaa seuraava HTML-sivu selaimeen:
+### DOM-demo 1: alkeet
+
+#### Elementtien etsintä
+
+Kokeillaan _querySelector_:ia selaimessa. Tallenna seuraava koodi tieodostoon *dom-demo1.html" ja avaa sivu Chrome-selaimessa:
 
 ```html
 <!DOCTYPE html>
@@ -49,10 +52,10 @@ Tämä on ensimmäinen _button_-elementti, joka dokumentista löytyi.
 Kirjoita prompt:iin ja testaa:
 
 ```js
-let myMessage = document.querySelector("p.message");
+let myMessage = document.querySelector(".message");
 ```
 
-Tämä on ensimmäinen _.message_-luokkaan kuuluvan p-elementti, joka dokumentista löytyi.
+Tämä on ensimmäinen _.message_-luokkaan kuuluvan elementti, joka dokumentista löytyi.
 
 ![QuerySelectorin kokeilua Chrome:n kehittäjänäkymässä](./img/queryselector_p.message.PNG)
 
@@ -71,17 +74,18 @@ Jos haluttan hakea kaikki tietyntyyppiset elementit, voidaan käyttää *querySe
 let myDivs = document.querySelectorAll("div");
 ```
 
-### Demo 2: Elementtien muuttaminen
+#### Elementtien muuttaminen
 
 Nyt käytetään hyväksi demo 1:ssä tallennettuja elementtejä, ja muutetaan niiden attribuutteja.
 
-Vaihdetaan napin tekstiksi "Paina tästä". Koska teksti on html-tagien välissä siihen viitataan attribuutilla *.innerHTML*:
+Vaihdetaan napin tekstiksi "Paina tästä". Tekstikenttään voidaan viitata attribuutilla *.innerText* tai *textContent*:
 
 ```js
-myButton.innerHTML = "Paina tästä";
+myButton.innerText = "Paina tästä";
+myButton.textContent = "Paina tästä";
 ```
 
-Vaihdetaan linkki osoittamaan osoitteeseen "https://startti.tredu.fi/". Uusi URL pitää tallentaa sekä attribuuttiin *href*, että *innerHTML*:ään. Miksi?
+Vaihdetaan linkki osoittamaan osoitteeseen "https://startti.tredu.fi/". Uusi URL pitää tallentaa sekä attribuuttiin *href*, että *textContent*:iin. Miksi?
 
 ```js
 myLink.href = "https://startti.tredu.fi/";
@@ -101,55 +105,9 @@ Koko dokumentin CSS-tyyliin pääsee käsiksi näin:
 document.body.style.backgroundColor = "pink";
 ```
 
-### Demo 3: Elementtien luominen
+#### script-tagi
 
-Koko HTML-dokumentin voi rakentaa käyttämällä JavaScriptiä. Aloitetaan siis lähes puhtaalta pöydältä, avaa tämä tyhjä dokumentti selaimeen:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>DOM demo 3</title>
-</head>
-<body>
-</body>
-</html>
-```
-
-Luodaan h1-elementti, ja sen tekstiä varten oma *textnode*.
-
-```js
-let myHeader = document.createElement("H1")
-let myText = document.createTextNode("Hello World");
-```
-
-Liitätään tekstiä sisältävä *node* h1-elementin lapseksi, ja koko paketti body-elementin lapseksi:
-
-```js
-myHeader.appendChild(myText);
-document.body.appendChild(myHeader);
-```
-
-Tutki miltä DOM-puu näyttää nyt. Sivulle ei tule mitään näkyviin ennen kuin lapsielementit on liitetty *body*-elementtiin.
-
-![Elementtien lisääminen](img/hello_world.PNG)
-
-Jos haluat vielä muuttaa tekstiä (*Hello World*), se onnistuu näin (muuttujassa myText on tallessa luomamme *TextNode*):
-
-```js
-myText.textContent = "Ihan parasta!";
-```
-
-Huom. *textContent* toimii sekä *element*:lle että *textNode*:lle. Tämä toimii vain *textNode*:lle: 
-
-```js
-myText.nodeValue = "Ei toimi vain textNodelle";
-```
-
-### Demo 4
-
-Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittää script-tagien avulla suoraan HTML-sivulle. Tässä demo 2:n heippanapin tekstin muuttaminen on paketoitu funktioksi *klikkaus*, ja sitä kutsutaan kun nappia painetaan (katso button:in *onclick*).
+Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittää script-tagien avulla suoraan HTML-sivulle. Tässä heippanapin tekstin muuttaminen on paketoitu funktioksi *klikkaus*, ja sitä kutsutaan kun nappia painetaan (katso button:in *onclick*).
 
 ```html
 <!DOCTYPE html>
@@ -162,7 +120,7 @@ Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittä
   <script>
     function klikkaus(){
       let myButton = document.querySelector("button");
-      myButton.innerHTML = "Paina tästä";
+      myButton.innerText = "Paina tästä";
     }
   </script>
   <h1 style="display: none">Harjoitus 1</h1>
@@ -173,11 +131,23 @@ Koodia on nyt ajettu kehittäjänäkymän kautta. Koodi voidaan tietysti liittä
 </html>
 ```
 
-Muuta nyt demo 2:n tekstin värin vaihtaminen funktioksi ja liitä sen p-elementin *onclick*-attribuuttiin.
+Muuta nyt tekstin värin vaihtaminen funktioksi ja liitä sen p-elementin *onclick*-attribuuttiin.
 
-### Demo 5: Input-kentän lukeminen
+#### Erillinen .js-tiedosto
 
-Tähän asti olemme saaneet käyttäjän antamat syötteet _prompt_:in kautta. Voimme toki lukea tiedot myös _input_-elementistä. Lisätään edelliseen harjoitukseen _input_-kenttä nimelle:
+Koska *script*-tagin sisältö paisuu isoksi, on parempi sijoittaa JavaScript-koodi omaan tiedostoonsa. Siirrä edellisen kohdan JavaScript omaan tiedostoonsa, ja nimeä se _dom-demo1.js_. Muuta script-tagi viittaamaan tähän tiedostoon:
+
+```js
+<script src="dom-demo1.js"></script>
+```
+
+Tästä eteenpäin teemme kaiken JavaScriptin erillisiin tiedostoihin, ei HTML:n sekaan!
+
+HUOM! Script-tagi kannattaa sijoittaa aivan bodyn loppuun. Näin sivu latautuu nopeammin ja sivun DOM-rakenne on ehtinyt valmiiksi, ennen kuin JavaScript ajetaan.
+
+#### input-kentän lukeminen
+
+Käyttäjän syötteitä voidaan saada JavaScriptiin _input_-elementin kautta. Lisätään edelliseen harjoitukseen _input_-kenttä nimelle:
 
 ```html
 <input id="hello" type="text" name="firstname" value="">
@@ -190,22 +160,34 @@ let nameElem = document.getElementById("hello");
 let myName = nameElem.value;
 ```
 
-Lisää nyt nappi, joka tervehtii käyttäjää nimeltä (lisää _body_:n uusi _p_-elementti, jolla on lapsena _text_-node. ks. demo 3).
-
-### Hyödyllisiä vinkkejä
-
-Elementille voi lisätä luokan:
+Tämä voidaan kirjoittaa myös putkeen:
 
 ```js
-nameElem.classList.add("alert");
+let myName = document.getElementById("hello").value;
 ```
 
+Lisää nyt nappi, joka tervehtii käyttäjää nimeltä (lisää _body_:n uusi _p_-elementti, ja kirjoita siihen tervehdys).
 
+#### Eventlistener ja callback
+
+Kutsuimme JavaScriptiä aikaisemmin suoraan HTML:stä laittamalla JavaScript-funktiokutsun "onclick"-attribuuttiin:
+
+```html
+<button onclick="klikkaus()">Heippanappi</button>
+```
+
+Tämän saman asian voi tehdä .js - tiedostossa, liittämällä _button_:iin *klikkaus*-funktion *addEventListener*:in avulla:
+
+```js
+myButton.addEventListener("click", klikkaus);
+```
+
+Tämän avulla kerrotaan selaimelle, että kun kyseinen tapahtuma tapahtuu ("click"), haluamme, että tämä JavaScript-funktio ("klikkaus") suoritetaan.
+
+Tässä *klikkaus*-funktio on nimeltään *callback*-funktio, koska sitä kutsutaan vasta kun tapahtuma (*event*) on tapahtunut.
 
 ## Linkkejä
 
 - elementin etsiminen [QuerySelector](https://www.w3schools.com/jsref/met_document_queryselector.asp)
 - elementin tyylin muuttaminen [Style Object](https://www.w3schools.com/jsref/dom_obj_style.asp)
 - elementin luominen [CreateElement](https://www.w3schools.com/jsref/met_document_createelement.asp)
-- lapsen lisääminen [AppendChild](https://www.w3schools.com/jsref/met_node_appendchild.asp)
-- lapsen lisääminen väliin [InsertBefore](https://www.w3schools.com/jsref/met_node_insertbefore.asp)

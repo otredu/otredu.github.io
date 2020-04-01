@@ -20,9 +20,9 @@ Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja tee
 
 --- 
 
-- [DOM jatko, maademo](./eventit.html)
+- [DOM jatko](./dom_jatko.html)
+- [Maademo](./eventit.html)
 - [Harjoituksia 4](./harjoituksia3.html)
-
 ---
 
 - [jQuery](./jquery.html)

@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>DOM demo 1 ja 2</title>
+    <title>DOM demo 1: alkeet</title>
 </head>
 <body>
     <h1>Harjoitellaan elementtien käyttämistä</h1>

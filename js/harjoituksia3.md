@@ -2,7 +2,7 @@
 
 ### Ohjeet
 
-Katso mallia [Pure JS](./eventit.html). Käytä pelkästään JavaScriptiä, kaikissa tehtävissä. Lähde liikkeelle tästä HTML-tiedostosta, ja lisää jokaiselle tehtävälle oma *div*:insä "teht"-*div*:n sisälle.
+Tutustu [Dom jatko](./dom_jatko.html) - ohjeisiin. Katso mallia myös [Maademosta](./eventit.html). Käytä pelkästään JavaScriptiä, kaikissa tehtävissä. Lähde liikkeelle tästä HTML-tiedostosta, ja lisää kaikki uudet elementit "teht"-*div*:n sisälle.
 
 ```html
 <!DOCTYPE html>

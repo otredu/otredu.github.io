@@ -56,7 +56,7 @@ Ohjelma antaa arvata useamman kerran sekä antaa vihjeen "lukuni on pienempi" ta
 
 ### Lisätehtävä 3. Parantele koodia
 
-Tee tämä tehtävä vain, jos teit HTML-elementit JavaScript:llä.
+Tee tämä tehtävä _vain_, jos teit HTML-elementit JavaScript:llä.
 
 Nyt sivulle ilmestyy jokaisesta vastauksesta uusi elementti (uusi teksti). Koodissa on myös paljon toistoa. Korjaa (restrukturoi) koodisi:
 
