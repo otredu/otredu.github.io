@@ -2,6 +2,8 @@
 
 Ennen tämän demon suorittamista, asenna [JEST](jest.html) ja tee em. ohjeiden mukainen testiympäristön testi (aja yksi testi *sum* funktiolle). Kertaa myös [JavaScriptin perusrakenteet](../js/alkeita.html).
 
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f6dfca06-a174-4663-93c2-4e24943457d6?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
 Seuraavassa demossa lisätään testitapauksia *sum*-funktiolle, ja korjataan sitä niin että se toipuu vääränlaisesta syötteestä (käsittelee numeromaiset merkkijonot oikein, toimii jos annetaan vain yksi parametri jne). Lisäksi sen pitäisi heittää poikkeus, jos tilanteesta ei voi toipua.
 
 ### Demo 1: Sum-funktion parantelu
@@ -125,3 +127,7 @@ describe.skip('sum-testit', () => {
     //...kaikki tässä oleva skipataan...
 })
 ```
+
+### Github:iin tallentaminen
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8e0d229c-49c4-418f-8a5d-63549dfb1c3b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>

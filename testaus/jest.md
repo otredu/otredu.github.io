@@ -2,8 +2,6 @@
 
 JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (funktiot, React-komponentit jne.). Tarkista, että [node.js](https://nodejs.org/en/) on asennettu ennen kuin jatkat.
 
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/f6dfca06-a174-4663-93c2-4e24943457d6?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
-
 ### JEST:in asentaminen
 
 1. Avaa CMD, tee uusi projektikansio (mkdir), siirry siihen (cd) ja alusta uusi node.js projekti ajamalla:
@@ -55,5 +53,3 @@ JEST:in avulla voidaan automatisoida yksikkötestit JavaScript-komponenteille (f
 5. Tallenna GitHub:iin
 
     Tiedostot kannattaa tallentaa Github:iin. Tee projektille uusi Github-repo seuraamalla näitä [ohjeita](../github/uusirepo.html).
-
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8e0d229c-49c4-418f-8a5d-63549dfb1c3b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
