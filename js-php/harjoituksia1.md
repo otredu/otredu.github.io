@@ -20,7 +20,8 @@ Tee funktio, joka saa parametrina iän ja palauttaa merkkijonon "täysi-ikäinen
 
 Tee funktio, joka joka saa kaksi lukua (x ja y) parametrina ja palauttaa merkkijonon "Annetuista luvuista x ja y, suurempi on ___". Kutsu funktiota kolme kertaa ja tulosta funktion palauttamat arvot konsolille.
 
-Esimerkkitulostus: </BR>
+Esimerkkitulostus:
+
 ![vertailu](./img/vertailutulostus.PNG)
 
 ### Tehtävä 5. Kolmion pinta-ala
@@ -30,7 +31,8 @@ Tee funktio, joka saa kaksi lukua parametrina (kanta ja korkeus) ja laskee ko. k
 Vihje 1: kanta kertaa korkeus jaettuna kahdella.
 Vihje 2: pyöristäminen kahden desimaalin tarkkuuteen: kerro pyöristettävä luku sadalla, pyöristä saatu luku (Math.round), jaa pyöristetty luku sadalla.
 
-![pyöristys](./img/round_example.PNG)
+<!-- ![pyöristys](./img/round_example.PNG) -->
+<img src="img/round_example.PNG" alt="pyöristys" width="150"/>
 
 ### Tehtävä 6. Osamäärä
 
