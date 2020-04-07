@@ -18,11 +18,19 @@ Tee funktio, joka saa parametrina iän ja palauttaa merkkijonon "täysi-ikäinen
 
 ### Tehtävä 4. Suurempi luku
 
-Tee funktio, joka joka saa kaksi lukua (x ja y) parametrina ja palauttaa merkkijonon "Annetuista luvuista x ja y suurempi on: ___". Kutsu funktiota kolme kertaa ja tulosta funktion palauttamat arvot konsolille.
+Tee funktio, joka joka saa kaksi lukua (x ja y) parametrina ja palauttaa merkkijonon "Annetuista luvuista x ja y, suurempi on ___". Kutsu funktiota kolme kertaa ja tulosta funktion palauttamat arvot konsolille.
+
+Esimerkkitulostus:
+![vertailu](./img/vertailutulostus.PNG)
 
 ### Tehtävä 5. Kolmion pinta-ala
 
-Tee funktio, joka saa kaksi lukua parametrina (kanta ja korkeus) ja laskee ko. kolmion pinta-alan. Pyöristä pinta-ala yhden desimaalin tarkkuuteen (Math.floor). Kutsu funktiota kaksilla eri arvoilla ja tulosta tiedot konsolille.
+Tee funktio, joka saa kaksi lukua parametrina (kanta ja korkeus) ja laskee ko. kolmion pinta-alan. Pyöristä pinta-ala yhden desimaalin tarkkuuteen. Kutsu funktiota kaksilla eri arvoilla ja tulosta tiedot konsolille.
+
+Vihje 1: kanta kertaa korkeus jaettuna kahdella.
+Vihje 2: pyöristäminen kahden desimaalin tarkkuuteen: kerro pyöristettävä luku sadalla, pyöristä saatu luku (Math.round), jaa pyöristetty luku sadalla.
+
+![pyöristys](./img/round_example.PNG)
 
 ### Tehtävä 6. Osamäärä
 
@@ -67,6 +75,20 @@ Tee funktio, joka laskee tuotteen kokonaishinnan, kun sen parametrit ovat hinta 
 
 Kutsu funktiota kolme kertaa eri arvoilla ja tulosta tiedot konsolille.
 
+Vihjeet:
+Alennuksen prosenttikertoimet laskeminen:
+- alennus on 10% --> prosenttikerroin on 0.9
+- alennus on 20% --> prosenttikerroin on 0.8
+jne
+
+Hinnan korotuksen prosenttikertoimen laskeminen:
+- jos alv on 24% --> prosenttikerroin on 1.24
+- jos alv on 19% --> prosenttikerroin on 1.19
+jne
+
+Lopullinen hinta lasketaan:
+hinta x alennuksen prosenttikerroin x alv:in prosenttikerroin
+
 ### Lisätehtävä 1
 
 Korjaa edellisiä funktioita niin, että ne tarkistavat kaikki saamansa syötteet ja virhetilanteessa heittävät poikkeuksen (esim. nollalla ei saa jaakaa, syötteet eivät ole lukuja, liian vähän parametreja):
@@ -84,6 +106,7 @@ try {
 catch(err) {
   console.log(err);
 }
+```
 
 <!-- ### Lisätehtävä 2
 

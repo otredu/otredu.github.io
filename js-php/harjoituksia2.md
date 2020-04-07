@@ -8,21 +8,27 @@ Tee Visual Studio Code:lla uusi tiedosto, nimeä se *harjoitukset2.js*. Avaa VS:
 
 ### Tehtävä 1
 
-Tee taulukko (array), johon tallennat viisi muistettavaa asiaa (muistilista). Tallenna taulukko muuttujaan. Tulosta taulukon alkiot consolille kolmella eri tavalla:
+Tee taulukko (array), johon tallennat viisi muistettavaa asiaa (muistilista). Tallenna taulukko muuttujaan. Tulosta taulukon alkiot ranskalaisin viivoin consolille kolmella eri tavalla:
 
-- taulukon alkiot yksi kerrallaan viittaamalla sen indeksiin (muotoile tulostus käyttämällä takakenoa heittomerkkiä)
-- foreach()-metodin tai for-loopin avulla
-- toString()-metodin avulla
+- taulukon alkiot yksi kerrallaan viittaamalla sen indeksiin
+- for-loopin avulla
+- foreach()-metodin avulla
+
+Tulostuksen malli: </br>
+![listamalli](./img/muistilista.PNG)
 
 ### Tehtävä 2
 
-Lisää edelliseen taulukkoon uusia muistettavia asioita (käytä *push()*-metodia) ja poista siitä ensimmäinen muistettava asia (käytä *pop()*-metodia). Tulosta muutettu taulukko jollakin harjoituksen 1 tyylillä.
+Lisää edelliseen taulukkoon kaksi uutta muistettavaa asiaa (käytä *push()*-metodia) ja poista siitä ensimmäinen muistettava asia (käytä *shift()*-metodia). Tulosta muutettu taulukko jokaisen muutoksen jälkeen jollakin harjoituksen 1 tyylillä.
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/61f62497-22ba-4333-acf9-164beac7b264?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 ### Tehtävä 3
 
-Tee olio, johon tallennat keksityn henkilön henkilötiedot: nimi, osoite, ikä, puhelinnumero ja sähköposti (esim. Aku Ankka). Tee funktio, joka ottaa parametrina henkilötieto-olion ja tulostaa konsolille sen sisältämät tiedot. Tulosta konsolille funktiosi avulla keksityn henkilön tiedot.
+Tee olio, johon tallennat keksityn henkilön henkilötiedot: nimi, osoite, ikä, puhelinnumero ja sähköposti (esim. Aku Ankka). Tee funktio, joka ottaa parametrina henkilötieto-olion ja tulostaa konsolille sen sisältämät tiedot. Tulosta konsolille funktiosi avulla keksityn henkilön tiedot. Vinkki: rivinvaihto on \n.
+
+Tulostuksen malli:
+![oliomalli](./img/oliotulostus.PNG)
 
 ### Tehtävä 4
 
