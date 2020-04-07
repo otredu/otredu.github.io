@@ -79,12 +79,13 @@ Tee funktio, joka laskee tuotteen kokonaishinnan, kun sen parametrit ovat hinta 
 Kutsu funktiota kolme kertaa eri arvoilla ja tulosta tiedot konsolille.
 
 Vihjeet:
+
 Alennuksen prosenttikertoimet laskeminen:
 - alennus on 10% --> prosenttikerroin on 0.9
 - alennus on 20% --> prosenttikerroin on 0.8
 jne
 
-Hinnan korotuksen prosenttikertoimen laskeminen:
+Hinnan korotuksen (alv nostaa hintaa) prosenttikertoimen laskeminen:
 - jos alv on 24% --> prosenttikerroin on 1.24
 - jos alv on 19% --> prosenttikerroin on 1.19
 jne
