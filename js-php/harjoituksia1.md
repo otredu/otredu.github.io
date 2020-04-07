@@ -20,7 +20,7 @@ Tee funktio, joka saa parametrina iän ja palauttaa merkkijonon "täysi-ikäinen
 
 Tee funktio, joka joka saa kaksi lukua (x ja y) parametrina ja palauttaa merkkijonon "Annetuista luvuista x ja y, suurempi on ___". Kutsu funktiota kolme kertaa ja tulosta funktion palauttamat arvot konsolille.
 
-Esimerkkitulostus:
+Esimerkkitulostus: </BR>
 ![vertailu](./img/vertailutulostus.PNG)
 
 ### Tehtävä 5. Kolmion pinta-ala
@@ -63,7 +63,8 @@ Aloitusmaksu on 5,40€
 
 Tee funktio, joka pyöristää desimaaliluvun lähimpään kokonaislukuun "tie-breaking"-sääntönä "pyöristä nollasta poispäin": Kun x on positiivinen, pyöristetään alaspäin (floor) lauseke: (x + 0,5) ja kun x on negatiivinen, pyöristetään ylöspäin (ceiling) lauseke: (x – 0,5). Kutsu funktiota kolmella eri arvoilla ja tulosta tiedot konsolille.
 
-![pyöristysesimerkki](./img/floor_ceil_example.PNG)
+<!-- ![pyöristysesimerkki](./img/floor_ceil_example.PNG) -->
+<img src="img/floor_ceil_example.PNG" alt="pyöristysesimerkki" width="150"/>
 
 ### Tehtävä 10. Tuotteen hinta
 
