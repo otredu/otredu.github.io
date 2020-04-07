@@ -33,11 +33,7 @@ Tulostuksen malli:
 
 ### Tehtävä 4
 
-Tee taulukko, jossa on useita henkilötieto-olioita (Hessu Hopo, Iines Ankka, Roope Ankka jne). Tulosta kaikkien tiedot konsolille käyttämällä harjoituksessa 3 tekemääsi funktiota. Tulosta tiedot kolmella eri tavalla:
-
-- yksikerrallaan viittaamalla sen indeksiin
-- for-loopin avulla
-- foreach()-metodin avulla
+Tee taulukko, jossa on useita henkilötieto-olioita (Hessu Hopo, Iines Ankka, Roope Ankka jne). Tulosta kaikkien tiedot konsolille käyttämällä harjoituksessa 3 tekemääsi funktiota. Käytä for-looppia tai foreach()-metodia.
 
 ### Lisätehtävä 1
 
