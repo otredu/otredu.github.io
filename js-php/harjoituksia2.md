@@ -14,7 +14,8 @@ Tee taulukko (array), johon tallennat viisi muistettavaa asiaa (muistilista). Ta
 - for-loopin avulla
 - foreach()-metodin avulla
 
-Tulostuksen malli: </br>
+Tulostuksen malli:
+
 ![listamalli](./img/muistilista.PNG)
 
 ### Tehtävä 2
