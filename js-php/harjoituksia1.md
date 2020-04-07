@@ -29,7 +29,7 @@ Esimerkkitulostus:
 Tee funktio, joka saa kaksi lukua parametrina (kanta ja korkeus) ja laskee ko. kolmion pinta-alan. Pyöristä pinta-ala yhden desimaalin tarkkuuteen. Kutsu funktiota kaksilla eri arvoilla ja tulosta tiedot konsolille.
 
 Vihje 1: kanta kertaa korkeus jaettuna kahdella.
-Vihje 2: pyöristäminen kahden desimaalin tarkkuuteen: kerro pyöristettävä luku sadalla, pyöristä saatu luku (Math.round), jaa pyöristetty luku sadalla.
+Vihje 2: pyöristäminen yhde desimaalin tarkkuuteen: kerro pyöristettävä luku kymmenellä, pyöristä saatu luku (Math.round), jaa pyöristetty luku kymmenellä.
 
 <!-- ![pyöristys](./img/round_example.PNG) -->
 <img src="img/round_example.PNG" alt="pyöristys" width="150"/>
