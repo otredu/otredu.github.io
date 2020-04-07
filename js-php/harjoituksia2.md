@@ -10,9 +10,9 @@ Tee Visual Studio Code:lla uusi tiedosto, nimeä se *harjoitukset2.js*. Avaa VS:
 
 Tee taulukko (array), johon tallennat viisi muistettavaa asiaa (muistilista). Tallenna taulukko muuttujaan. Tulosta taulukon alkiot ranskalaisin viivoin consolille kolmella eri tavalla:
 
-- taulukon alkiot yksi kerrallaan viittaamalla sen indeksiin
 - for-loopin avulla
 - foreach()-metodin avulla
+- toString() - metodin avulla
 
 Tulostuksen malli:
 
