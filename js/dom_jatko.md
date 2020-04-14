@@ -27,6 +27,8 @@ Koko HTML-dokumentin voi rakentaa käyttämällä JavaScriptiä. Aloitetaan siis
 
 Tee myös uusi JavaScript-tiedosto, *domdemo2.js*. Nyt luodaan JavaScript:in avulla uusi h1-elementti, ja sen tekstiä varten oma *textnode*.
 
+### Elementin ja tekstinoden luominen ja liittäminen sivulle
+
 ```js
 let myHeader = document.createElement("h1")
 let myText = document.createTextNode("Hello World");
@@ -73,12 +75,38 @@ function listItem(listText, parentElem){
 Tehdään lista jossa on halutut tekstit (myList), haetaan HTML-dokumentista kohta johon halutaan lisätä uusia elementtejä (myElem), ja kutsutaan *listItem*-funktiota silmukassa (forEach):
 
 ```js
-let myList = ["Tiina", "Janne", "Juuso", "Sirkka"];
+let names = ["Tiina", "Janne", "Juuso", "Sirkka"];
 
 let myElem = document.getElementById("namelist");
+let myList = document.createElement("ul")
 
-myList.forEach(item => {
-  listItem(item, myElem);
+names.forEach(name => {
+  listItem(name, myList);
+})
+```
+
+### Elementtien luominen silmukassa (toinen tapa)
+
+```js
+function newTextElem(text, type){
+    let myElem = document.createElement(type)
+    myElem.textContent = text;
+    return myElem
+  }
+```
+
+Tehdään lista jossa on halutut tekstit (myList), haetaan HTML-dokumentista kohta johon halutaan lisätä uusia elementtejä (myElem), ja kutsutaan *newTextElem*-funktiota silmukassa (forEach) ja lisätään luodut elementit sivulle (*appendChild*):
+
+```js
+let names = ["Tiina", "Janne", "Juuso", "Sirkka"];
+
+let myDiv = document.getElementById("namelist");
+let myList = document.createElement("ul")
+myDiv.appendChild(myList)
+
+names.forEach(name => {
+  let myElem = newTextElem(name, "li");
+  myList.appendChild(myElem);
 })
 ```
 
