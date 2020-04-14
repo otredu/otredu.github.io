@@ -88,7 +88,7 @@ Tämä demo tarvitsee toimiakseen webbiserverin, joten sinun täytyy asentaa kon
 
 Avaa XAMPP:in hallintapaneli ja sieltä *config*:in alta "httpd.config"-tiedosto. 
 
-![xamppconfig](./img/xampp_config.PNG)
+![xamppconfig](./img/xampp_config.png)
 
 Vaihda serverin *root*-kansioksi käyttämäsi koodikansio "kurssit" (kommentoi vanha *root* pois käytöstä #-merkillä):
 
