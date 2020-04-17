@@ -108,7 +108,7 @@ http://localhost:80
 
 ### Plan B (jos et saa XAMPP:ia toimimaan)
 
-HUOM! Jos et saa XAMPP:ia toimimaan, voit tehdä tämän demon myös ilman koodimoduleja. Kopioi *coutries*-taulukko suoraan countries.js-tiedoston alkuun (et siis tarvitse *coutries-data.js* - tiedostoa). Kommentoi pois *export* ja *import* osuudet koodista:
+HUOM! Jos et saa XAMPP:ia toimimaan, voit tehdä tämän demon myös ilman koodimoduleja. Kopioi *coutries*-taulukko suoraan countries.js-tiedoston alkuun (et siis tarvitse *countries-data.js* - tiedostoa). Kommentoi pois *export* ja *import* osuudet koodista:
 
 ```js
 /*export*/ let coutries = ...
@@ -121,6 +121,8 @@ Poista moduulit käytöstä myös *countries.html*-tiedostosta:
   <!-- <script type="module" src="countries-data.js"></script> -->
   <script src="countries.js"></script>
 ```
+
+Nyt voit avata *countries.html*-tiedoston suoraan levyltä selaimeen, etkä tarvitse webbiserveriä.
 
 ### Step 1:  Maiden nimet sivulle
 
