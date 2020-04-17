@@ -10,28 +10,27 @@ Materiaali täydentyy kurssin edetessä
 - piirrä kaikki diagrammit tällä ohjelmalla: [draw.io](http://draw.io)
 - piirrä MockUp - [AdobeXD](https://www.adobe.com/fi/products/xd.html):llä tai jos sen asentaminen ei onnistu [Figma](https://www.figma.com/):lla
 
-### Toiminnallinen suunnittelu
+### Tietokannan ja visuaalisen ilmeen suunnittelu ja toteutus
 
 - tietokantamalli (Visio: UML)
-- näyttörakennekaavio (Visio: UML luokkakaavio)
+- tietokannan toteutus ja testaus
 - tyyliopas (HTML + CSS)
 
 Tarkempia [ohjeita toiminnalliseen suunnitteluun](../systeemityo/toiminnallinen.html).
 
 ### Projektin jakaminen osaprojekteihin
 
-Tee projektisuunnitelma github:in *project*-välilehdelle. Jaa projektiosatehtäviin, ja pidä seinä aina ajantasalla siitä mitä on tekemättä, mitä on työnalla ja mitä on valmiina:
+Tee projektisuunnitelma github:in *project*-välilehdelle. Jaa projektiosatehtäviin, ja pidä seinä aina ajantasalla siitä mitä on tekemättä (todo), mitä on työnalla (in progress) ja mitä on valmiina (ready):
 
 ![kanba](./img/kanba.PNG)
 
 ### Toteutus
 
-- Projektiryhmä toteuttaa oman suunnitelmansa mukaan käyttötapauksia ohjelmoimalla käyttöliittymäkoodia (frontend) sekä tietokantatoimintoja (backend)
+- projekti toteutetaan oman suunnitelmansa mukaan käyttötapauksia ohjelmoimalla käyttöliittymäkoodia (frontend) sekä tietokantatoimintoja (backend)
 
 #### Osatehtävät jokaiseen käyttötapaukseet liittyen:
 
-- Tarkempi suunnittelu
-- Tietokannan toteutus ja testaus
+- Tarkempi suunnittelu (näyttörakennekaavio, UML luokkakaavio)
 - Käyttötapaukseen liittyvä tietokantaliittymän toteutus ja testaus
 - Käyttöliittymän toteutus ja testaus
 - Integrointitestaus (kaikkien toteutettujen osien testaus yhdessä)
@@ -46,14 +45,15 @@ Ohjeita [systeemitestaukseen](../testaus/index.html).
 
 ### Projektin hallinnasta
 
-- Tunnit kirjataan joka päivä tuntiraportointi-Exceliin
+- Ttnnit kirjataan joka päivä tuntiraportointi-Exceliin
+- tehtävien eteneminen rapoitoidaan github-projektiseinälle viikottain (siirretään tehtäviä työnalle ja valmiiksi)
 
-- Projektipäällikkö seuraa tehtävien etenemistä (Excel tai Trello), ja vastaa siitä, että kaikilla on tekemistä (projektipäällikkö voi vaihtua viikottain). Projektin etenemisestä tehdään raportti kerran viikossa.
+- kaikki koodi tallennetaan säännöllisesti github:iin
 
-- Kaikki koodi tallennetaan säännöllisesti github:iin, jokainen projektin jäsen työskentelee omassa haarassaan ja integrointi tehdään hallitusti (PR ja koodikatselmointi)
 -[Ohjeet github:in käyttöön projektissa](https://otredu.github.io/github/projektityo.html)
 
-Esimerkkikuva projektin aikataulutuksesta:
+Esimerkkikuva projektin korkeantason GANTT-aikataulusta projektisuunnitelmaan (ei pakollinen, tehty Excelillä):
+
 - ![Projekti GANTT](./img/gantt_excel.PNG)
 
 ---
@@ -62,5 +62,3 @@ Vinkkejä:
 - [Kuvien pienentäminen Photoshopilla](./images.html)
 
 - [CPANEL-ohjeet](./cpanel.html)
-
-- [Leenan kevään kurssin sivut](http://www.leeniemi.net/proj19/) -->
