@@ -106,6 +106,22 @@ Käynnistä Apache ja avaa sivusi webbiserverin kautta osoitteesta:
 http://localhost:80
 ```
 
+### Plan B (jos et saa XAMPP:ia toimimaan)
+
+HUOM! Jos et saa XAMPP:ia toimimaan, voit tehdä tämän demon myös ilman koodimoduleja. Kopioi *coutries*-taulukko suoraan countries.js-tiedoston alkuun (et siis tarvitse *coutries-data.js* - tiedostoa). Kommentoi pois *export* ja *import* osuudet koodista:
+
+```js
+/*export*/ let coutries = ...
+/*import { countries } from './countries-data.js';*/
+```
+
+Poista moduulit käytöstä myös *countries.html*-tiedostosta:
+
+```html
+  <!-- <script type="module" src="countries-data.js"></script> -->
+  <script src="countries.js"></script>
+```
+
 ### Step 1:  Maiden nimet sivulle
 
 Tämä harjoitus tehdään kokonaan kirjoittamalla JavaScript:iä. Emme siis muokkaa HTML-tiedostoa tai CSS-tiedostoa ollenkaan. Tieto pohjoismaista liitetään HTML-tiedostossa sijaitsevaan *div*:iin, jonka *id* on "countrylist". Tähän *div*:iin luodaan dynaamisesti riittää määrä pohjoismaiden tietoa sisältäviä *div*:ejä. Ensin haetaan ko. elementti ja tallennetaan se muuttujaan "countryList"
