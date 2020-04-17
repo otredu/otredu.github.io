@@ -10,14 +10,19 @@ Materiaali täydentyy kurssin edetessä
 - piirrä kaikki diagrammit tällä ohjelmalla: [draw.io](http://draw.io)
 - piirrä MockUp - [AdobeXD](https://www.adobe.com/fi/products/xd.html):llä tai jos sen asentaminen ei onnistu [Figma](https://www.figma.com/):lla
 
-
-<!-- ### Toiminnallinen suunnittelu
+### Toiminnallinen suunnittelu
 
 - tietokantamalli (Visio: UML)
 - näyttörakennekaavio (Visio: UML luokkakaavio)
 - tyyliopas (HTML + CSS)
 
 Tarkempia [ohjeita toiminnalliseen suunnitteluun](../systeemityo/toiminnallinen.html).
+
+### Projektin jakaminen osaprojekteihin
+
+Tee projektisuunnitelma github:in *project*-välilehdelle. Jaa projektiosatehtäviin, ja pidä seinä aina ajantasalla siitä mitä on tekemättä, mitä on työnalla ja mitä on valmiina:
+
+![kanba](./img/kanba.PNG)
 
 ### Toteutus
 
