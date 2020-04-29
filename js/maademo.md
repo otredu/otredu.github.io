@@ -1,5 +1,7 @@
 ## Pohjoismaat - demo
 
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/73ea182a-5c04-49fb-93d3-3e4b73faef3d?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
 ### Koodin jakaminen useampaan tiedostoon
 
 Kun ohjelma tulee monimutkaisemmaksi, ei aina ole järkevää sijoittaa kaikkea JavaScript-koodia samaan tiedostoon.
