@@ -36,3 +36,9 @@ RewriteRule ^/index\.php$ - [L,NC]
 
 RewriteRule . index.php [L]
 ```
+
+HUOM! Jos käytät XAMPP:ia, pitää htaccess-aktivoida. Avaa *http.conf*-tiedosto ja poista # merkki tämän rivin edestä, tallenna ja käynnistä Apache uudelleen:
+
+```cmd
+#LoadModule rewrite_module modules/mod_rewrite.so
+```

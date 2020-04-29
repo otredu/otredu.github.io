@@ -6,6 +6,8 @@ Palautetaan mieleen, että DOM on puumainen rakenne, jossa *textNode*:t roikkuva
 
 ### DOM-demo 2: jatko
 
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/82a90967-db82-4e78-9288-62c9db954415?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
 #### Elementtien luominen
 
 Koko HTML-dokumentin voi rakentaa käyttämällä JavaScriptiä. Aloitetaan siis lähes puhtaalta pöydältä, tallenna tämä tiedostoon *domdemo2.html*, ja avaa se selaimeen (tähän HTML-tiedostoon ei tehdä tämän jälkeen enää muutoksia):
