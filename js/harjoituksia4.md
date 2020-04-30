@@ -8,6 +8,10 @@ Tee sivulle JavaScriptin avulla viisi H1-tyylin otsikkoa, joissa lukee jotakin. 
 
 Lisää nappi joka palauttaa alkutilanteen (.show()), lisää siis sillekin tapahtumakuuntelija.
 
+Vinkki1: tee *callback*-funktioon ehtolause, joka tutkii tekstin väriä: jos se on musta, muutetaan väriä, muuten piilotetaan teksti
+
+Vinkki 2: jquery palauttaa värit rgb-muodossa eli musta on "rgb(0, 0, 0)" jne
+
 ### Tehtävä 2
 
 Tee JavaScriptin avulla sivu, jolla on kolme div:iä, joissa kussakin on teksti ja siihen liityvä kuva. Tee jQueryn avulla ohjelma, joka piilottaa sivulla näkyvät kuvat, ja näyttää ne vasta kun käyttäjä vie hiiren kuvaan liittyvän tekstin päälle.
