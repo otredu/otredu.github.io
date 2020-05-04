@@ -12,6 +12,20 @@ Tässä ohjeet asentamiseen ja käynnistämiseen:
 
 - [Asennus-ohjeet](https://github.com/otredu/news2020/blob/master/readme.md)
 
+### XAMPP:in konffaus (vain Linux)
+
+Jos käytät Linux:ia aktivoi MySQL-driver näiden ohjeiden mukaisesti (Windows-käyttäjillä MySQL on default:ina jo käytössä):
+
+1. kirjoita php -i | grep "Loaded Configuration File" terminaaliin
+
+2. sitten "sudo nano /etc/php/php.ini" nanon voi korvata muulla teksti editorilla ja reitti pitää olla viime komennon antama
+
+3. Etsi tiedostosta "Dynamic extensions" kohta ja poista puolipilkku niiden extension:eiden edestä joita tarvitset eli *extension=pdo_mysql* ja *extension=pdo_odbc*
+
+4. Tallenna tiedosto, jos käytit nanoa niin ctrl+x
+
+5. Vaihda *.env*-tiedostoon localhostin tilalle 127.0.0.1
+
 ### Demon toiminnallisuudet
 
 Demossa on ASPA-perustoiminnallisuudet:
