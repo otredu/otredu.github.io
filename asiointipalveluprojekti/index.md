@@ -28,6 +28,10 @@ Tee projektisuunnitelma github:in *project*-välilehdelle. Jaa projektiosatehtä
 
 - projekti toteutetaan oman suunnitelmansa mukaan käyttötapauksia ohjelmoimalla käyttöliittymäkoodia (frontend) sekä tietokantatoimintoja (backend)
 
+### PHP-demo
+
+Voit käyttää pohjana tätä [uutisdemoa](./news-demo.html).
+
 #### Osatehtävät jokaiseen käyttötapaukseet liittyen:
 
 - Tarkempi suunnittelu (näyttörakennekaavio, UML luokkakaavio)
@@ -45,7 +49,7 @@ Ohjeita [systeemitestaukseen](../testaus/index.html).
 
 ### Projektin hallinnasta
 
-- Ttnnit kirjataan joka päivä tuntiraportointi-Exceliin
+- Tunnit kirjataan joka päivä tuntiraportointi-Exceliin
 - tehtävien eteneminen rapoitoidaan github-projektiseinälle viikottain (siirretään tehtäviä työnalle ja valmiiksi)
 
 - kaikki koodi tallennetaan säännöllisesti github:iin
