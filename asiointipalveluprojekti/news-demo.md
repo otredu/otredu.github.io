@@ -81,20 +81,20 @@ Oma koodi kannattaa aloittaa hieman tyhjemmältä pohjalta. Tässä on repo, jon
 4. Muokkaa *demo.view.php* niin, että tiedot näyttävät hyvältä
 
     ```php
-    <?phprequire"partials/head.php"; ?>
+    <?php require "partials/head.php"; ?>
 
-    <h2class="centered">Testisivu</h2>
+    <h2 class="centered">Testisivu</h2>
 
-    <divclass = "news">
+    <div class = "news">
     <?php
-    echo"Hello World", "<br>";
-    echo"Kuvaus: ", $allinfo[0]["description"], "<br>";
-    echo"Aika: ", $allinfo[0]["date"], "<br>";
-    echo"Puhelin: ", $allinfo[0]["phonenumber"], "<br>";
+    echo "Hello World", "<br>";
+    echo "Kuvaus: ", $allinfo[0]["description"], "<br>";
+    echo "Aika: ", $allinfo[0]["date"], "<br>";
+    echo "Puhelin: ", $allinfo[0]["phonenumber"], "<br>";
     ?>
     </div>
 
-    <?phprequire"partials/footer.php"; ?>
+    <?php require "partials/footer.php"; ?>
     ```
 
 5. Jatka koodaamista...
