@@ -16,11 +16,24 @@ Tässä ohjeet asentamiseen ja käynnistämiseen:
 
 Jos käytät Linux:ia aktivoi MySQL-driver näiden ohjeiden mukaisesti (Windows-käyttäjillä MySQL on default:ina jo käytössä):
 
-1. kirjoita php -i | grep "Loaded Configuration File" terminaaliin
+1. etsi php-config-tiedosto, kirjoita terminaaliin
 
-2. sitten "sudo nano /etc/php/php.ini" nanon voi korvata muulla teksti editorilla ja reitti pitää olla viime komennon antama
+```cmd
+php -i | grep "Loaded Configuration File"
+```
 
-3. Etsi tiedostosta "Dynamic extensions" kohta ja poista puolipilkku niiden extension:eiden edestä joita tarvitset eli *extension=pdo_mysql* ja *extension=pdo_odbc*
+2. avaa php-config-tiedosto editoriin (esim. nano, reitin pitää olla viime komennon antama)
+
+```cmd
+sudo nano /etc/php/php.ini
+```
+
+3. Etsi tiedostosta "Dynamic extensions" kohta ja poista puolipilkku niiden extension:eiden edestä joita tarvitset eli
+
+```cmd
+extension=pdo_mysql
+extension=pdo_odbc
+```
 
 4. Tallenna tiedosto, jos käytit nanoa niin ctrl+x
 
