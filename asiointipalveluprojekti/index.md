@@ -24,6 +24,10 @@ Tee projektisuunnitelma github:in *project*-välilehdelle. Jaa projektiosatehtä
 
 ![kanba](./img/kanba.PNG)
 
+Tässä esimerkki miten voit jakaa ohjelmoinnin osatehtäviin:
+
+[- esimerkki: user stories](./userstories.html)
+
 ### Toteutus
 
 - projekti toteutetaan oman suunnitelmansa mukaan käyttötapauksia ohjelmoimalla käyttöliittymäkoodia (frontend) sekä tietokantatoimintoja (backend)
