@@ -10,6 +10,8 @@ jQuery-kirjaston avulla on hieman helpompaa käyttää DOM-rajapintaa. jQuery-ki
 
 jQuery-koodi on tavallista JavaScriptiä joten se kannattaa sijoittaa omaan *.js - tiedostoonsa.
 
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/4a536875-e4c0-423f-b222-2ba2e45a4819?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
 ### JQuery-syntaksi
 
 jQuery-funktiolle annetaan parametrina CSS-selektori ("p", ".test" tai "#test") tai *this*, ja se palauttaa jQuery-olion, joka voi sisältää yhden tai useamman DOM-elementin (jQuery-olio on siis taulukkomainen). *this* viittaa siihen olioon, jota ollaan käsittelemässä.
