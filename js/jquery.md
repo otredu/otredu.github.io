@@ -10,7 +10,13 @@ jQuery-kirjaston avulla on hieman helpompaa käyttää DOM-rajapintaa. jQuery-ki
 
 jQuery-koodi on tavallista JavaScriptiä joten se kannattaa sijoittaa omaan *.js - tiedostoonsa.
 
+Yleisesti jQuery:stä:
+
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/4a536875-e4c0-423f-b222-2ba2e45a4819?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+jQuery:n käyttö - demo:
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/18f7340d-6dff-4b8f-9b07-d48b64c2f4bd?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 ### JQuery-syntaksi
 
