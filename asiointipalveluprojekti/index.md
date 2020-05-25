@@ -43,6 +43,10 @@ Voit käyttää pohjana tätä [uutisdemoa](./news-demo.html).
 - Käyttöliittymän toteutus ja testaus
 - Integrointitestaus (kaikkien toteutettujen osien testaus yhdessä)
 
+### Sivuston julkaiseminen webhotellissa
+
+- Ohjeet sivuston siirtämiseen koulun [webhotelliin](./nodeeli.html)
+
 ### Testaus ja loppuraportti
 
 Lopussa toteutetaan systeemitestaus eli koko järjestelmän testaus loppukäyttäjän näkökulmasta.
