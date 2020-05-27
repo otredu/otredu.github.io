@@ -50,7 +50,7 @@ MySQL-tietokanta siirretään koulun webhotelliin siirtämällä tietokanta dump
 
 3. Avaa yhteys palvelimelle käyttäen opettajan antamia ftp-kirjautumistietoja (ftp-server, ftp-username, ftp-password, ftp-port):
 
-    ![winscp login](./img/winscp.PNG)
+    ![winscp login](./img/winscp.png)
 
 4. Siirrä tarpeelliset tiedostot (EI .git) palvelimelle hinaamalla ne vasemmalta oikealle. Huom! *index.php*:n pitää olla kansiossa nimeltä *public*.
 
