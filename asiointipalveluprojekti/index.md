@@ -53,6 +53,8 @@ Lopussa toteutetaan systeemitestaus eli koko järjestelmän testaus loppukäytt�
 
 Projektista kirjoitetaan [raportti](http://www.leeniemi.net/proj19/apumateriali/WebMagiaProjektin_loppuraportti.pdf) ja projektityöskentelystä [itsearviointi sekä vertaisarviointi](https://omaareena-my.sharepoint.com/:w:/g/personal/tiina_partanen_edu_tampere_fi/ETibQLkTNhRFrbnSgoavirABFVuNBW6edN2IRveorX6G6A?e=kcKW8v).
 
+Muista liittää projektiin mukaan sivustosi linkki webhotelliin, sekä mahdolliset testaustunnukset ja -salasanat.
+
 Ohjeita [systeemitestaukseen](../testaus/index.html).
 
 ### Projektin hallinnasta
