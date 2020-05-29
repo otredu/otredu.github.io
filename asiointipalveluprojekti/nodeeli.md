@@ -6,7 +6,7 @@ MySQL-tietokanta siirretään koulun webhotelliin siirtämällä tietokanta dump
 
 1. Ota tietokannastasi dumppi (vie), tallenna projektikansioon (database_dump)
 
-2. Konffaa XAMPP-tietokantasi käyttämämään remote-palvelinta (nodelli5.net)
+2. Konffaa XAMPP-tietokantasi käyttämämään remote-palvelinta (nodeeli5.net)
     - avaa tiedosto: *c:\xampp\phpMyAdmin\config.inc.php*
     - kirjoita sinne:
 

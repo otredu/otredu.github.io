@@ -45,7 +45,8 @@ Voit käyttää pohjana tätä [uutisdemoa](./news-demo.html).
 
 ### Sivuston julkaiseminen webhotellissa
 
-- Ohjeet sivuston siirtämiseen koulun [webhotelliin](./nodeeli.html)
+- Ohjeet sivuston siirtämiseen koulun [MySQL/PHP-sivuston siirto webhotelliin](./nodeeli.html)
+- Ohjeet WordPress:in asentamiseen koulun [WordPress:in asennus webhotelliin](./wordpress.html)
 
 ### Testaus ja loppuraportti
 
