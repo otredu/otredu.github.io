@@ -14,7 +14,7 @@ Tässä on hahmoteltu vaadittavia toiminnallisuuksia jonkinlaisessa tärkeys tai
 
 4. Käyttäjä kirjautuu sisälle, jotta voi varata kirpparipöydän
 
-5. Kirjautunut käyttäjä varaa kirpuutoripaikan (auto/viltti), jotta voi lisätä myytäviä tuotteita
+5. Kirjautunut käyttäjä varaa kirpuutoripaikan (auto/viltti), jotta voi lisätä myytäviä tuotteita. *Huom* riittää, että voi varata autopaikkoja ensimmäisessä versiossa.
 
 6. Kirjautunut käyttäjä lisää myytäviä tuotteita, jotta ihmiset voivat niitä selailla (tuotteen kuvaus, hinta, kuva)
 
