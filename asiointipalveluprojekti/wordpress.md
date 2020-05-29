@@ -23,7 +23,7 @@
 
 6. Siirrä kaikki WP-tiedostot palvelimelle *public*-kansion sisälle hinaamalla ne vasemmalta oikealle.
 
-    ![winscp tiedostojen siirto](./img/winscp_files1.PNG)
+    ![winscp tiedostojen siirto](./img/winscp_files2.PNG)
 
 7. Nyt wp-konffaussivun pitäisi aueta osoiteesta: *xxxx_username.nodeeli5.net*. Konffaa selaimessa WP-palvelimesi loppuun, tallenna huolella wp-admin-tunnus ja salasana!
 
