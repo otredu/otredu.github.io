@@ -1,7 +1,11 @@
 
 ## Tervetuloa otredu.github.io-sivuille
 
-Näiden sivujen kautta pääset käyttämään joitakin Tredun datanomien kurssimateriaaleja.
+Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotannon kurssimateriaaleja.
+
+### Kurssit syksy 2020
+- [Ohjelmointikielet (React, node.js)](./react/index.html)
+- [Testaaminen ja testiympäristöt](./testaus/index.html)
 
 ### Kurssit Kevät 2020
 
