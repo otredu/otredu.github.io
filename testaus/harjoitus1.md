@@ -42,9 +42,9 @@ Tee funktio, joka laskee tuotteen kokonaishinnan, kun sen parametrit ovat hinta,
 
 Jos asiakas on kanta-asiakas, ennen ALV:in lisäämistä hinnasta vähennetään alennus seuraavien ehtojen mukaisesti:
 
-- hinta on 50 - 150€ alennus 5%
-- hinta 150 - 250€ alennus 10%
-- yli on 250€ alennus 15%
+- hinta on 50 - 150€ alennus 2.5%
+- hinta 150 - 250€ alennus 5%
+- yli on 250€ alennus 10%
 
 Testaa kaikkien ehtolauseiden haarat.
 
@@ -56,7 +56,7 @@ jne
 
 Hinnan korotuksen (alv nostaa hintaa) prosenttikertoimen laskeminen:
 - jos alv on 24% --> prosenttikerroin on 1.24
-- jos alv on 14% --> prosenttikerroin on 1.19
+- jos alv on 14% --> prosenttikerroin on 1.14
 jne
 
 Lopullinen hinta lasketaan:
