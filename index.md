@@ -6,6 +6,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 ### Kurssit syksy 2020
 - [Ohjelmointikielet (React, node.js)](./react/index.html)
 - [Testaaminen ja testiympäristöt](./testaus/index.html)
+- [FullStack - itseopiskelumateriaali](./fullstack/index.html)
 
 ### Kurssit Kevät 2020
 
