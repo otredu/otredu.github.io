@@ -28,41 +28,23 @@ Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vä
 
 *Vinkki:* käytä else if rakennetta.
 
-### 4. Ympyrän pinta-ala
+### 4. Kolmion pinta-ala
 
-Tee funktio, joka laskee ympyrän pinta-alan (A=pi*r^2) ja pyöristää sen kahden desimaalin tarkkuuteen (esim. Math.round). Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista, negatiivisesta säteen (r) pituudesta jne). Testaa kaikkien ehtolauseiden haarat.
+Tee funktio, joka laskee kolmion pinta-alan ja pyöristää sen kahden desimaalin tarkkuuteen (esim. Math.round). Tee yksikkötestit kaikille mahdollisille syötteille (funktion tulee toipua vääränlaisesta syötteestä eli merkkijonoista, negatiivisesta sivun pituudesta jne). Testaa kaikkien ehtolauseiden haarat.
 
-*Vinkki 1:* kerro pyöristettävä luku ensin sadalla, pyöristä se ja jaa se sitten sadalla (näin saat pyöristysen 2 desimaalin tarkkuuteen).
-
-*Vinkki 2:* Math.PI
+*Vinkki:* kerro pyöristettävä luku ensin sadalla, pyöristä se ja jaa se sitten sadalla (näin saat pyöristysen 2 desimaalin tarkkuuteen).
 
 ### 5. Tuotteen hinta
 
-Tee funktio, joka laskee tuotteen kokonaishinnan, kun sen parametrit ovat hinta, kanta-asiakkuus (totuusarvo) ja alv-prosentti (esim. 24%, 14%).
+Tee funktio, joka laskee tuotteen kokonaishinnan, kun sen parametrit ovat hinta ja ALV-prosentti (desimaalilukuna). Ennen ALV:in lisäämistä hinnasta vähennetään alennus seuraavien ehtojen mukaisesti:
 
-Jos asiakas on kanta-asiakas, ennen ALV:in lisäämistä hinnasta vähennetään alennus seuraavien ehtojen mukaisesti:
-
-- hinta on 50 - 150€ alennus 5%
-- hinta 150 - 250€ alennus 10%
-- yli on 250€ alennus 15%
+- hinta on 100 - 200€ alennus 5%
+- hinta 201 - 500€ alennus 10%
+- hinta on 500€ alennus 15%
 
 Testaa kaikkien ehtolauseiden haarat.
 
-*Vinkki*:
-Alennuksen prosenttikertoimet laskeminen:
-- alennus on 10% --> prosenttikerroin on 0.9
-- alennus on 20% --> prosenttikerroin on 0.8
-jne
-
-Hinnan korotuksen (alv nostaa hintaa) prosenttikertoimen laskeminen:
-- jos alv on 24% --> prosenttikerroin on 1.24
-- jos alv on 14% --> prosenttikerroin on 1.19
-jne
-
-Lopullinen hinta lasketaan:
-hinta x alennuksen prosenttikerroin x alv:in prosenttikerroin
-
-### Lisätehtävä. Taulukon (array) muuttaminen merkkijonoksi
+### Lisätehtävä. Taulukon muuttaminen merkkijonoksi
 
 Laadi funktio, joka muuttaa taulukon alkiot yhdeksi merkkijonoksi, jossa alkioiden välissä on : -merkki. Sallittuja taulukon alkioita ovat: merkkijonot, luvut ja totuusarvot (taulukossa ei saa olla alkiona toista taulukkoa, oliota, undefined eikä null). Testaa kaikki mahdolliset syötteet.
 

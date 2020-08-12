@@ -17,8 +17,8 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [JS kertausta](../js/alkeita.html)
 - [JEST:in asennus](./jest.html)
 - [JEST alkeita](./jest-alkeet.html)
-- [JEST demo 1 (VIDEO)](./demo1.html)
-- [Harjoitukset 1](./harjoitus1.html)
+- [JEST demo 1](./demo1.html)
+- [Harjoitukset 1](./harjoitus1_arch.html)
 - [JEST bonustehtävät](./harjoitus_bonus.html)
 
 Lisäharjoituksia:

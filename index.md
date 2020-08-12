@@ -11,7 +11,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 
 - [Asiointipalvelujen rakentamisen tekniikka, JS](./js/index_k2020.html)
 - [Tuotantoversion toteutus : webframeworks](./frameworks/index.html)
-- [Testaaminen ja testiympäristöt](./testaus/index.html)
+- [Testaaminen ja testiympäristöt](./testaus/index_K2020.html)
 - [Asiointipalveluprojekti](./asiointipalveluprojekti/index.html)
 
 ### Kurssit syksy 2019

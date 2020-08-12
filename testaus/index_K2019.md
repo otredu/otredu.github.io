@@ -15,7 +15,7 @@ Materiaalia, joka täydentyy kurssin edetessä...
 - [JEST:in asennus](./jest.html)
 - [JEST alkeita](./jest-alkeet.html)
 - [JEST demo 1](./demo1.html)
-- [Harjoitukset 1](./harjoitus1.html)
+- [Harjoitukset 1](./harjoitus1_arch.html)
 
 ### Automatisoitu selaintestaus (Java)
 - [Selenium IDE](./seleniumide.html)

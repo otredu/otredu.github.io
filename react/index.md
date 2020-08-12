@@ -69,8 +69,14 @@ Backend keskustelee tietokannan kanssa. Käytetty tietokanta voi olla relaatioti
 - [Relaatiotietokannan (MySQL) luominen, migrations](../tietokannat/migrations.html)
 - [Relaatiotietokannan (MySQL) liittäminen backendiin](../tietokannat/db-testing-knex.md)
 
-- [NoSQL-tietokannan scheman luominen]()
+- [NoSQL-tietokannan (MongoDB) scheman luominen](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#skeema)
 - [NoSQL-tietokannan (MongoDB) liittäminen backendiin](https://fullstackopen.com/osa3/tietojen_tallettaminen_mongo_db_tietokantaan#frontendin-ja-backendin-yhteistoiminnallisuuden-varmistaminen)
+
+### Kirjautuminen, käyttäjähallinta, JSON webtoken
+
+Kun käyttäjä kirjautuu järjestelmään hän saa JSON webtoken:in tallenttavaksi selaimen muistiin. Token liitetään jokaiseen frontend:in tekemään pyyntöön. Webtoken:in sisään koodatun userid:n avulla backend tunnistaa kirjautuneen käyttäjän.
+
+- [Token-perustainen kirjautuminen](https://fullstackopen.com/osa4/token_perustainen_kirjautuminen)
 
 - [Harjoitukset 5: Notes-backend demo](../frameworks/node.html), tehdään yhdessä
 
