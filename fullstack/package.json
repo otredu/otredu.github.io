@@ -1,0 +1,73 @@
+{
+  "name": "fullstackhy-2020",
+  "description": "Full stack websovelluskehitys 2020",
+  "version": "1.0.0",
+  "author": "Houston Inc. Consulting Oy",
+  "dependencies": {
+    "anchorate": "^1.2.3",
+    "axios": "^0.18.0",
+    "gatsby": "^2.24.47",
+    "gatsby-image": "^2.4.16",
+    "gatsby-plugin-canonical-urls": "^2.3.10",
+    "gatsby-plugin-google-analytics": "^2.3.13",
+    "gatsby-plugin-i18n": "^0.4.2",
+    "gatsby-plugin-manifest": "^2.4.23",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-sharp": "^2.6.27",
+    "gatsby-plugin-sitemap": "^2.4.11",
+    "gatsby-remark-images": "^3.3.25",
+    "gatsby-remark-prismjs": "^3.5.10",
+    "gatsby-remark-relative-images": "^0.3.0",
+    "gatsby-remark-unwrap-images": "^1.0.1",
+    "gatsby-source-filesystem": "^2.3.24",
+    "gatsby-transformer-json": "^2.4.11",
+    "gatsby-transformer-remark": "^2.8.28",
+    "gatsby-transformer-sharp": "^2.5.13",
+    "html-react-parser": "^0.6.0",
+    "lodash": "^4.17.19",
+    "node-sass": "^4.11.0",
+    "prismjs": "^1.21.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-ga": "^2.5.7",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "fullstack",
+    "course",
+    "helsingin yliopisto",
+    "tietojenkäsittelytieteen osasto",
+    "mooc",
+    "mooc.fi",
+    "full stack",
+    "web-sovelluskehitys"
+  ],
+  "license": "Creative Commons BY-NC-SA 3.0",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "gatsby": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "publish": "gh-pages -u 'Matti Luukkainen <mluukkai@iki.fi>' -d public -b master"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-preset-gatsby": "^0.1.11",
+    "gh-pages": "^2.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullstack-hy2020/fullstack-hy2020.github.io"
+  }
+}
