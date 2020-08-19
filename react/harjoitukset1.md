@@ -19,7 +19,7 @@ Muuta komponentti ottamaan sen sisältämät tiedot parametreina eli propseina. 
 
 Tee komponentti, joka tulostaa ruudulle parametreina (props) annetut tiedot. Kutsu komponenttia kaksi kertaa eri tiedoilla.
 
-![tehtävä 1a](./img/tiedot.PNG)
+![tehtävä 1a](./img/course.PNG)
 
 ### Tehtävä 1b (DEMO)
 
@@ -30,7 +30,6 @@ Tee komponentti, joka tulostaa ruudulle parametreina (props) annetun opiskelija-
 ### Tehtävä 1c (DEMO)
 
 Tee komponentti, joka tulostaa ruudulle parametrina (props) annetun olioita sisältävän taulukon tiedot. Tämä tehdään käyttämällä tehtävän 1b komponenttia ja map:ia.
-
 
 ![tehtävä 1c](./img/ostudents.PNG)
 
