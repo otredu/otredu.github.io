@@ -71,9 +71,19 @@ Tee komponentti, joka tulostaa ruudulle alekkain parametrina annetut taidot (arr
 
 Vinkki, tarvitset useamman tilamuuttujan (*useState*). Yhteen tallennetaan kaikki *skills*-tiedot, toiseen tallennetaan ruudulla oleva *newSkill*. Tarvitset myös callback-funktiot näiden molempien muokkaamiseen (onChange- ja onSubmit-eventtien käsittelyn yhteyteen). Tässä tehtävässä kannattanee pitää tilamuuttujat *app.js*-tasolla ja välittää ne propseina komponenteille.
 
-### Tehtävä 7 
+### Tehtävä 7a
 
-Lisää tykkäys-nappi kuvan yhteyteen (tehtävä 3 ja 5). Näytä tykkäysten määrä kuvan yhteydessä. Jos et ole vielä tallentanut kuvatietoja tilamuuttujaan, tee se nyt. Aseta tilamuuttujan alkuarvoksi kovakoodatut kuvatiedot (tehtävä 3). Lisää tykkäysten määrä kuvaolioon, että voit tallentaa tykkäysten määrän samaan paikkaan kuvan muiden tietojen kanssa.
+Tee lomake, jonka avulla voit lisätä sivulle yhden div:in, jossa on sisällä linkki, linkin kuvaus ja tykkäysnappi. Näytä tykkäysten määrä linkin perässä.
+
+*Vinkki:* käytä tilamuuttujia, two-way bindingia, onSubmit ja onChange - eventhandlereitä.
+
+### Tehtävä 7b
+
+Lisää edelliseen tehtävään toiminnallisuus, että linkit lisääntyvät sivulle alekkain.
+
+### Tehtävä 7c 
+
+Toteuta edellinen tehtävä olioilla, niin että tykkäysten määrä tallennetaan olion attribuuttiin (oliot tilalamuuttujassa, taulukkona). Näin saadaan tykkäysten määrä samaan paikkaan kuin muutkin tiedot.
 
 ### Tehtävä 8
 
