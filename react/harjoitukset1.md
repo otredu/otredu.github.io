@@ -71,28 +71,40 @@ Tee komponentti, joka tulostaa ruudulle alekkain parametrina annetut taidot (arr
 
 Vinkki, tarvitset useamman tilamuuttujan (*useState*). Yhteen tallennetaan kaikki *skills*-tiedot, toiseen tallennetaan ruudulla oleva *newSkill*. Tarvitset myös callback-funktiot näiden molempien muokkaamiseen (onChange- ja onSubmit-eventtien käsittelyn yhteyteen). Tässä tehtävässä kannattanee pitää tilamuuttujat *app.js*-tasolla ja välittää ne propseina komponenteille.
 
-### Tehtävä 7a
+### Tehtävä 7a (DEMO)
 
-Tee lomake, jonka avulla voit lisätä sivulle yhden div:in, jossa on sisällä linkki, linkin kuvaus ja tykkäysnappi. Näytä tykkäysten määrä linkin perässä.
+Tee lomake, jonka avulla voit lisätä sivulle linkkejä ja niiden kuvauksia. Käytä tilamuuttujana oliota, jossa on kentät jokaiselle lomakkeen kentälle. Luo uusi uniikki id, jokaiselle uudelle oliolle. Tee erillinen komponentti pelkälle lomakkeelle ja toinen komponentti, joka renderöi linkkilistan.
 
-*Vinkki:* käytä tilamuuttujia, two-way bindingia, onSubmit ja onChange - eventhandlereitä.
+*Vinkki:* Voit luoda id:n luomalla isoja satunnaislukuja (Math.random).
 
-### Tehtävä 7b
+*Vinkki:* Kun teet onChange - eventhandleriä, välitä sille parametrina tieto siitä, mikä kenttä on muuttunut (kentän nimi merkkijonona).
 
-Lisää edelliseen tehtävään toiminnallisuus, että linkit lisääntyvät sivulle alekkain.
+### Tehtävä 7b (DEMO)
 
-### Tehtävä 7c 
+Lisää jokaiselle linkille tykkäysnappi ja tallenna tykkäysten määrä tilamuuttujassa olevaan olioon (esim. kenttään "likes").
 
-Toteuta edellinen tehtävä olioilla, niin että tykkäysten määrä tallennetaan olion attribuuttiin (oliot tilalamuuttujassa, taulukkona). Näin saadaan tykkäysten määrä samaan paikkaan kuin muutkin tiedot.
+*Vinkki:* Käytä hyväksesi linkin uniikkia id:tä, että tiedät mitä linkkiä on tykätty (välitä id parametrina esim. addLike-funktiolel, joka lisää tykkäyksen oikeaan olioon tilamuuttujassa).
 
-### Tehtävä 8
+### Tehtävä 7c (DEMO)
+
+Laske kaikkien linkkien saamat tykkäykset yhteen ja näytä ne sivulla.
+
+*Vinkki:* Voit poimia tykkäysten määrät tilamuuttujasta map:in avulla ja laskea ne yhteen käyttäen reduce:a.
+
+### Tehtävä 8 (harjoitus)
 
 Muokkaa .css - tiedostoa, että elementit myös näyttävät hyvältä.
 
-### Lisätehtävä 1
+### Lisätehtävä 1 (harjoitus)
 
-Tee uusi komponentti, jonka avulla voi lisätä uuden kuvan tiedot tykkäyslistalle.
+Tee nappi, joka järjestää linkit tykkäysten mukaiseen järjestykseen.
 
-Vinkki: tilamuuttuja voi olla myös olio. Katso ohjeita olion käytöstä tilamuuttujana täältä:
+*Vinkki:* Käytä filtteriä.
+
+### Lisätehtävä 2 (harjoitus)
+
+Tee komponentti joka näyttää maiden tiedot karusellissa. Tee nuolinapit joiden avulla voi selata maita yksi kerrallaan eteen- ja taaksepäin.
+
+*Vinkki:* Käytä tilamuuttujaa, johon tallennat näytöllä näkyvän maan indeksin.
 
 - [Tilamuuttujien käsittely](./immutable-state.html)
