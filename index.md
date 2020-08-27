@@ -34,6 +34,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 - [Github-ohjeita](./github/index.html)
 - [Visual Studio Code - ohjeita](./vscode/index.html)
 - [Docker-ohjeita](./docker/index.html)
+- [Java MOOC](./js-php/javamooc.html)
 
 ### Tredun OPS
 

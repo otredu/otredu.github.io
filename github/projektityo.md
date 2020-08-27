@@ -25,7 +25,7 @@ git checkout -b <your_name>/<your_feature>
 Kun toiminnallisuus on valmis, päivitä muutokset *github*:iin (add/commit/push). Jotta *push* toimii tee uusi *upstream*-haara *github*:iin:
 
 ```bash
-git push --set-upstream <your_name>/<your_feature>
+git push --set-upstream origin <your_name>/<your_feature>
 ```
 
 Voit tehdä *commit*:in myös suoraan *VSCode*-ohjelmassa. Silloin ei tarvitse tehdä *add*-vaihetta käsin (lisäys hoituu automaattisesti). Samoin *upstream*-syntyy automaattisesti.

@@ -20,4 +20,4 @@ Kurssimateriaali on Helsingin Yliopiston Java MOOC-materiaali ([linkki materiaal
 
 ### Ohjaus ja suoritusaika
 
-Kurssitehtäviä voi tehdä omassa tahdissa. Opettajalta voi kysyä apua luokassa tai muilta kurssia suorittavilta opiskelijoilta Telegram-ryhmässä (opettaja antaa ohjeet ryhmään liittymisestä). Jos haluat kurssin suorittamisesta todistuksen, se pitää saada valmiiksi ennen valmistumistasi.
+Kurssitehtäviä voi tehdä omassa tahdissa. Opettajalta voi kysyä apua luokassa tai Teams:issa. Jos haluat kurssin suorittamisesta todistuksen, se pitää saada valmiiksi ennen valmistumistasi.
