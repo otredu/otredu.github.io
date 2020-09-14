@@ -83,7 +83,7 @@ Tee lomake, jonka avulla voit lisätä sivulle linkkejä ja niiden kuvauksia. K�
 
 Lisää jokaiselle linkille tykkäysnappi ja tallenna tykkäysten määrä tilamuuttujassa olevaan olioon (esim. kenttään "likes").
 
-*Vinkki:* Käytä hyväksesi linkin uniikkia id:tä, että tiedät mitä linkkiä on tykätty (välitä id parametrina esim. addLike-funktiolel, joka lisää tykkäyksen oikeaan olioon tilamuuttujassa).
+*Vinkki:* Käytä hyväksesi linkin uniikkia id:tä, että tiedät mitä linkkiä on tykätty (välitä id parametrina esim. addLike-funktiolle, joka lisää tykkäyksen oikeaan olioon tilamuuttujassa).
 
 ### Tehtävä 7c (DEMO)
 
@@ -99,7 +99,7 @@ Muokkaa .css - tiedostoa, että elementit myös näyttävät hyvältä.
 
 Tee nappi, joka järjestää linkit tykkäysten mukaiseen järjestykseen.
 
-*Vinkki:* Käytä filtteriä.
+*Vinkki:* Käytä taulukon sort-metodia.
 
 ### Lisätehtävä 2 (harjoitus)
 
