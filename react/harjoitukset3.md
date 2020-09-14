@@ -1,13 +1,13 @@
 ## Harjoitukset 3
 
-### JSON-serverin asennus
+### JSON-serverin asennus ja käynnistys
 
-Tee uusi kansio demo2. Tee siihen *db.json*-tiedosto, kopioi sinne tämä [json-muotoinen *notes*-tieto:](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen).
+Tee uusi kansio notesdemo. Tee siihen *db.json*-tiedosto, kopioi sinne tämä [json-muotoinen *notes*-tieto:](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen).
 
-Asenna ja käynnistä json-serveri kansioon demo2.
+Asenna ja käynnistä json-serveri kansioon notesback.
 
 ```cmd
-> cd c:/users/oma.nimi/documents/react/demo2
+> cd c:/users/oma.nimi/documents/react/notesdemo/notesback
 > npx json-server --port=3001 --watch db.json
 ```
 
@@ -19,14 +19,25 @@ json-server toimii kehitysaikaisena backendinä. Oikean tietokannan sijaan tiedo
 
 Kun näissä tehtävissä viitataan *notes-backend*:iin, se tarkoittaa joko em. JSON-serveriä tai node/express:illä itse tehtyä backend:iä.
 
+### Tehtävä 0
+
+Tutustu REST-rajapinnan toimintaan JSON-serverin ja Postmanin avulla [Ohjeet täällä](../tietokannat/rest-json.html).
+Tee seuraavat operaatiot postmanin avulla (Harjoittele HTTP-metodien GET, POST, DELETE ja PUT käyttöä):
+
+1. Hae kaikki muistiinpanot
+2. Hae musitiinpano id:llä 1
+3. Lisää uusi muistiinpano
+4. Poista muistiinpano
+5. Muuta muistiinpanon tekstiä
+
 ### Tehtävä 1
 
 Tee uusi React-sovellus ajamalla create-react-app:
 
 ```cmd
 > cd c:/users/oma.nimi/documents/react/
-> npx create-react-app demo3
-> cd demo3
+> npx create-react-app notesfront
+> cd notesfront
 > npm start
 ```
 
@@ -62,20 +73,41 @@ Muista päivittää axis-kutsun jälkeen *notes*-tilamuuttuja, jotta ruutu päiv
 
 ### Tehtävä 5
 
-Lisää jokaiselle muistiinpanolle poista- ja päivitä-napit ja toteuta toiminnallisuus. Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).
+Lisää jokaiselle muistiinpanolle poistanappi.Lisää myös toiminnallisuus, jolla voi muuttaa muistiinpanon tärkeyttä (esim. klikkaamalla muistiinpanoa). Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).
 
 ### Tehtävä 6
 
 Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
 
-### Lisätehtävä 1 (node/express -backend)
+---
+### Tehtävä 7
+
+Tässä vaiheessa täytyy viimeistään siirtyä pois JSON-serverin käytöstä ja koodata varsinainen backend käyttäen node.js:ää. Toteuta edellä kuvattu toiminnallisuus tietokannan ja node.js:n avulla. [Ohjeita täällä](https://otredu.github.io/frameworks/node.html)
+
+### Tehtävä 8
 
 Toteuta käyttäjän rekisteröityminen ja kirjautuminen. Vain kirjautunut käyttäjä voi lisätä, muokata tai poistaa muistiinpanoja. Muistiinpanoja voi lukea ilman kirjautumista.
 
-*Huom* Tämä vaatii lisää koodia myös backendiin sekä muutoksen tietokantaan.
+*Huom* Tämä vaatii lisää koodia niin fronttiin kuin backendiinkin sekä muutoksen tietokantaan (users-taulu).
 
-### Lisätehtävä 2 (node/express -backend)
+### Tehtävä 9
 
-Lisää userid kenttä muistiinpanoon, niin että kirjatunut käyttäjä voi muokata ja poistaa vain omia muistiinpanojaan.
+Lisää userid-kenttä muistiinpanoon, niin että kirjatunut käyttäjä voi muokata ja poistaa vain omia muistiinpanojaan.
 
-*Huom* Tämä vaatii lisää koodia myös backendiin ja muutoksen tietokantaan.
+*Huom* Tämä vaatii lisää koodia myös backendiin ja muutoksen tietokantaan (relaatio users- ja notes-taulujen väliin).
+
+### Tehtävä 10
+
+Refaktoroi backend koodi niin, että se käyttää autentikointiin middlewareja.
+
+### Tehtävä 11
+
+Luo frontista build, siirrä se backendin static-kansioon. Testaa käynnistämällä vain backend.
+
+### Lisätehtävä 1
+
+Ota käyttöön POI-kirjasto ja lisää JSON-datan validointi sen avulla.
+
+### Lisätehtävä 2
+
+Deployaa notesdemo pyörimään webbihotelliin tai herokuun.

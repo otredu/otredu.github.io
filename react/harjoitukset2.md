@@ -27,7 +27,7 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
 
 2. Tuotteiden lisääminen ostoskoriin
 
-    Kun käyttäjä haluaa lisätä tietyn tuotteen ostoskoriin täytyy häneltä varmistaa myös kappalemäärä. Ostoskoriin lisätään haluttu määrä tuotetta ja kasvatetaan ostoskorin kokonaishintaa vastaavasti.
+    Kun käyttäjä haluaa lisätä tietyn tuotteen ostoskoriin täytyy häneltä varmistaa myös kappalemäärä. Ostoskoriin lisätään haluttu määrä tuotetta ja kasvatetaan ostoskorin kokonaishintaa vastaavasti. Määrän voi totetuttaa +/- napeilla tai lomakekentällä.
 
     - Ostoskori voi olla samalla sivulla, näytä sisältö mikäli tuotteita on lisätty ostoskoriin.
     - Tässä harjoituksessa keskeinen asia on tilamuuttujien käsittely (*useState*).
@@ -38,13 +38,15 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
 
 4. Tilauksen vahvistaminen
 
-    Käyttäjä voi painaa nappia "Vahvista tilaus". Käyttäjältä pyydetään tällöin yhteystiedot tilauksen lähettämistä varten. Vaaditut tiedot ovat sähköpostiosoite (email), nimi, lähiosoite, postiosoite sekä postitoimipaikka. Mikäli kaikki tiedot on syötetty käyttäjälle annetaan viesti "Paketti lähetetty!" ja kaikki henkilön sekä ostoskorin tiedot tyhjennetään.
+    Käyttäjä voi painaa nappia "Vahvista tilaus". Käyttäjältä pyydetään tällöin yhteystiedot tilauksen lähettämistä varten. Vaaditut tiedot ovat nimi, sähköpostiosoite, puhelinnumero sekä osoite, johon paketti toimitetaan (katuosoite, postinumero, postitoimipaikka).
+
+    Mikäli kaikki tiedot on syötetty käyttäjälle näytetään yhteenveto ostostapahtumasta (listataan tilatut tuotteet, lopullinen hinta sekä osoite, johon patetti toimitetaan) ja kiitetään tilauksesta. Lopuksi kaikki henkilön sekä ostoskorin tiedot tyhjennetään.
 
 5. Heroku:ssa käynnistäminen
 
-    Tee tili Herokuun ja liitä reposi siihen. Palauta linkki live-versioon.
+    Tee tili Herokuun ja liitä reposi siihen. Palauta linkki live-versioon reposi *read.me* - kentässä.
 
-### Edistyneet toiminnot
+### Edistyneet toiminnot (lisätehtävät)
 
 6. Alennus
 
@@ -56,7 +58,3 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
 7. Ostoskorin hallinta
 
     Käyttäjä voisi hallita ostoskorin tuotteita siten, että voidaan poistaa jokin tietty tuote kokonaan tai muuttaa tietyn tuotteen kappalemäärää.
-
-8. Kirjautuminen
-
-    Kun käyttäjä tulee ensimmäistä kertaa sivulle hänelle näytetään kirjautumissivu, jossa pyydetään käyttäjätunnus sekä salasana. Prototyypin tunnukset ovat "proto" ja salasana "proto". Mikäli tunnukset syötetään oikein näytetään käyttäjälle fanikaupan etusivu ja tuotteiden selailu.
