@@ -6,19 +6,19 @@ Käyttäjä voi kirjautumatta selata keikkoja, tykätä menneistä keikoista (1-
 
 Keikat näkyvät *menneet keikat* -osiossa, jos niiden päivämäärä on mennyt ja *tulevat keikat* -osiossa, jos ne tapahtuvat tulevaisuudessa.
 
-Käytä tiedon tallentamiseen [JSON-serveriä](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen), keskustele backendin kanssa [axios-kirjaston](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen#axios-ja-promiset) avulla.
-
-*Vinkki*: teemme kirjautumisen yhdessä. Tee toiminnallisuus ensin ilman sitä.
+Voit käyttää tiedon tallentamiseen [JSON-serveriä](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen), keskustele backendin kanssa [axios-kirjaston](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen#axios-ja-promiset) avulla.
 
 Tee harjoitusta varten uusi kansio *react*-kansion sisälle: esim. *musicinfo*.
 
-### Tehtävä 1
+### Tehtävä 1 (backend)
 
 Suunnittele json-tietorakenne, joka mallintaa keikkatietoa (*gigs*-kokoelma), tallenna muutama testikeikkatieto *db.json*-tiedostoon (voit käyttää samaa json-server-asennusta kuin *notes*-demossa). Käynnistä json-server ja testaa Postman:in avulla, että backendin virkaa ajava json-server toimii kuten pitääkin (get, post, delete, put).
 
 json-serverin pitäisi siis palauttaa kaikki keikat, kun kirjoitat selaimeen: *http://localhost:3001/gigs* (get).
 
 Katso mallia *notes*-demon *db.json*-tiedostosta.
+
+Voit myös suoraan tehdä node/express-backendin ja käyttää sitä. Toteuta vähintään GET ja POST tässä vaiheessa. Katso mallia notesdemo-backend:istä.
 
 ### Tehtävä 2
 
@@ -50,14 +50,14 @@ Vinkki: käytä *filter*-metodia keikkataulukolle.
 
 ### Lisätehtävä 1
 
-Toteuta tähtien lisääminen.
+Lisätään käyttäjänhallinta (rekisteröityminen ja kirjautuminen). Toteuta keikkojen lisääminen niin, että vain kirjautunut käyttäjä voi lisätä keikkoja.
 
-Huom! Tämä vaatii *likes*-kokoelman lisääminen *json*-serverille.
+Huom! Tässä vaiheessa siirry pois JSON-serveristä ja toteuta backend node/express:illä.
 
 ### Lisätehtävä 2
 
-Lisätään käyttäjänhallinta (rekisteröityminen ja kirjautuminen). Toteuta keikkojen lisääminen niin, että vain kirjautunut käyttäjä voi lisätä keikkoja.
+Lisää toiminnallisuus, että vain kirjautunut käyttäjä voi poistaa ja muuttaa vain itse lisäämiään keikkoja.
 
-Huom! Tämä vaatii *users*-kokoelman lisääminen *json-serverille*.
+### Lisätehtävä 3
 
-Katso ohje [täältä](https://www.npmjs.com/package/json-server-auth).
+Toteuta tykkäysten (tähtien) lisääminen. Tämä vaatii muutoksia tietokannassa, backendsisä ja frontissa.
