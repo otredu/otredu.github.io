@@ -18,7 +18,7 @@ json-serverin pitäisi siis palauttaa kaikki keikat, kun kirjoitat selaimeen: *h
 
 Katso mallia *notes*-demon *db.json*-tiedostosta.
 
-Voit myös suoraan tehdä node/express-backendin ja käyttää sitä. Toteuta vähintään GET ja POST tässä vaiheessa. Katso mallia notesdemo-backend:istä.
+Voit myös suoraan tehdä node/express-backendin ja käyttää sitä. Toteuta vähintään GET ja POST tässä vaiheessa. Katso mallia notesdemo-backend:istä. Muista testata REST-metodit esim. Postman:illa ennen kuin aloitat fronttia!
 
 ### Tehtävä 2
 
