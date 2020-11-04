@@ -42,9 +42,38 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
 
     Mikäli kaikki tiedot on syötetty käyttäjälle näytetään yhteenveto ostostapahtumasta (listataan tilatut tuotteet, lopullinen hinta sekä osoite, johon patetti toimitetaan) ja kiitetään tilauksesta. Lopuksi kaikki henkilön sekä ostoskorin tiedot tyhjennetään.
 
-5. Heroku:ssa käynnistäminen
+5. Projektin siirtäminen portfolioon
 
-    Tee tili Herokuun ja liitä reposi siihen. Palauta linkki live-versioon reposi *read.me* - kentässä.
+    Tee itsellesi github-pages repository (tavallinen public repo, jonka nimi on <githubtunnus>.github.io>). 
+    
+    Lisää fanikaupan package.json tiedostoon seuraava rivi:
+
+    ```js
+    "homepage": "https://<githubtunnus>.github.io/fanikauppa",
+    ```
+    
+    Tee fanikaupasta build:
+
+    ```cmd
+    npm run build
+    ```
+
+    Kopioi build-kansion sisältö github-pages repoosi kansioon "fanikauppa". Tee github-pages sivulle portfolion etusivu (index.html), ja linkkaa fanikauppasi siihen. Esim.
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <body>
+
+    <h1>Portfolio</h1>
+    <a href="/fanikauppa/index.html">Fanikauppa (react)</a>
+    </body>
+    </html>
+    ```
+
+    Vaihtoehtoisesti tee tili Herokuun ja liitä reposi siihen.
+
+    Palauta linkki live-versioon reposi *read.me* - kentässä.
 
 ### Edistyneet toiminnot (lisätehtävät)
 
