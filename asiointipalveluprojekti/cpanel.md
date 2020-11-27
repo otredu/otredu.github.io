@@ -2,7 +2,7 @@
 
 ### MySQL
 
-Tee itsellesi uusi MySQL-tietokanta (MySQL Database Wizard). Luo kaksi käyttäjää: user (lukuoikeudet) ja admin (kaikki oikeudet).
+Tee itsellesi uusi MySQL-tietokanta (MySQL Database Wizard). Luo sille käyttäjä  (kaikki oikeudet). Nimeä tietokanta ja käyttäjä niin, että nimestä selviää mihin projektiin ja kenelle ne kuuluvat (esim. tiipar_notes_db).
 
 Valitse juuri tekemäsi tietokanta ja tuo tiedot lokaalista PHPMyAdmin:ista SQL-tiedostona (*vienti -> tuonti*).
 

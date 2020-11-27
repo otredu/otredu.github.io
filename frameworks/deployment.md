@@ -4,7 +4,7 @@
 
 ### Tietokannan siirtäminen
 
-Luo webhotelliin uusi tietokanta MySQL-tietokannat -työkalun avulla. Lue sille uusi käyttäjä ja salasana. Anna käyttäjälle kaikki oikeudet.
+Luo webhotelliin uusi tietokanta MySQL-tietokannat -työkalun avulla. Luo sille uusi käyttäjä ja salasana. Anna käyttäjälle kaikki oikeudet. Nimeä tietokanta ja käyttäjä niin, että nimestä selviää mihin projektiin ja kenelle ne kuuluvat (esim. tiipar_notes_db).
 
 Muokkaa *knexfile.js*-tiedostoa niin, että se sisältää edellä luomasi tietokannan ja käyttäjän tiedot kohdassa: *production* (host, database, user ja password). *host*-osoitteen saat *cpanel*:in oikeasta yläkulmasta kohdasta *shared IP address*.
 
@@ -54,6 +54,18 @@ Vastaavasti aja *seed*:it tietokantaan:
 ```cmd
 npx knex --env production seed:run
 ```
+### Migrate ja seeds - scpritin avulla
+
+Jos et voit käyttää remote MySQL:ää tai portteja ei haluta tietoturvan takia avata, voit ajaa asennus scriptit myös cpanel:issa. Tämä vaatii sen, että database - kansio, jossa migrations ja seeds kansiot ovat, löytyy backend-kansion sisältä.
+
+Lisää seuraavat script-kohdat backend:in *package.json*:iin.
+
+```json
+   "migrate": "cd database && npx knex migrate:latest --env production",
+   "seeds": "cd database && npx knex seed:run"
+```
+
+Voit ajaa nämä scriptit, sen jälkeen kun tidostot on siirretty cpanel:iin ja npm install on ajettu. Katso scriptien käynnistys kohdasta *Node app:in konffaaminen*.
 
 ### React-build
 
@@ -73,7 +85,7 @@ Poista *backend*-kansiosta node_modules ja .env (näitä ei siirretä webhotelli
 
 Käytä [WinSCP-ohjelmaa](https://winscp.net/eng/downloads.php#additional), siirrä tiedostot webhotelliin. Valitse FTP-protokollaa (portti 21). Löydät WinSCP:n tarvitsemat tiedot webhotellin kohdasta *FTP-tilit* (*Määritä FTP-työasemaohjelma*).
 
-Siirrä backend-kansio webhotellin tiedostoihin (esim. tee node-niminen kansio, EI public_html:n sisälle).
+Siirrä backend-kansio webhotellin tiedostoihin (esim. tee cpanel:in tiedostopolun juureen node-niminen kansio, EI public_html:n sisälle).
 
 ### Alidomain
 
@@ -103,3 +115,9 @@ Huom! Tietokanta, database, user ja password ovat samat kuin *knexfile.js*:ssä 
 ![setup nodejs app:in env](./img/setupnodejs_3.png)
 
 Tallenna ympäristömuuttujat. Nyt voit käynnistää ohjelmasi ja kaiken pitäisi toimia kun avaat alidomain-osoitteen selaimessa.
+
+Jos et vielä alustanut tietokantaa, niin tee se nyt ajamalla em. scriptit:
+
+![run js](./img/startbutton.png)
+
+![run js scripts](./img/start_script.png)
