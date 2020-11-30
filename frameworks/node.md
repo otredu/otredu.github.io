@@ -603,66 +603,67 @@ Sen voi asentaa [täältä](https://marketplace.visualstudio.com/items?itemName=
 #### Register (rekisteröi käyttäjä)
 
 ```js
-POST http://localhost:3000/register HTTP/1.1
+POST http://localhost:3001/register HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Tiina Testaaja",
-    "username": "tester1",
-    "password": "justTesting"
+	"username": "tester13",
+	"password": "salasana",
+	"email": "vscode@testi.net"
 }
 ```
 
 #### Login (kirjaudu sisään)
 
 ```js
-POST http://localhost:3000/login HTTP/1.1
+POST http://localhost:3001/login HTTP/1.1
 content-type: application/json
 
 {
-    "username": "tester1",
-    "password": "justTesting"
+	"username": "tester1",
+	"password": "salasana"
 }
 ```
 
 #### GET (hae muistiinpanot)
 
 ```js
-GET http://localhost:3000/notes HTTP/1.1
-authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6MSwiaWF0IjoxNTc5NTkwNTA2fQ.NT8I4Aueks1EvSRGIv8zloO8amAdUjrnhlQ-LL-mwHQ
+GET http://localhost:3001/notes HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6NCwiaWF0IjoxNjA2NzI1MDA4fQ.diCumc1pPJZGSiFp7ysqaWc5lnoZvfpZ-mBsoXfiJ0c 
 ```
 
 #### POST (luo uusi muistiinpano)
 
 ```js
-POST http://localhost:3000/notes HTTP/1.1
-authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6MSwiaWF0IjoxNTc5NTkwNTA2fQ.NT8I4Aueks1EvSRGIv8zloO8amAdUjrnhlQ-LL-mwHQ
-content-type: application/json
+POST http://localhost:3001/notes HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6NCwiaWF0IjoxNjA2NzI1MDA4fQ.diCumc1pPJZGSiFp7ysqaWc5lnoZvfpZ-mBsoXfiJ0c
 
 {
-    "content":"uusi viesti",
-    "important": 1
+    "content": "Autentikoitu user1, vscode",
+    "date": "2020-09-11T08:49:31.098Z",
+    "important": true
 }
-
 ```
 
 #### DELETE (muistiinpanon poisto)
 
 ```js
-DELETE http://localhost:3000/notes/11 HTTP/1.1
-authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6MSwiaWF0IjoxNTc5NTkwNTA2fQ.NT8I4Aueks1EvSRGIv8zloO8amAdUjrnhlQ-LL-mwHQ
+DELETE http://localhost:3001/notes/8 HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6NCwiaWF0IjoxNjA2NzI1MDA4fQ.diCumc1pPJZGSiFp7ysqaWc5lnoZvfpZ-mBsoXfiJ0c
 ```
 
 #### PUT (muistiinpanon muuttaminen)
 
 ```js
-PUT http://localhost:3000/notes/11 HTTP/1.1
-authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6MSwiaWF0IjoxNTc5NTkwNTA2fQ.NT8I4Aueks1EvSRGIv8zloO8amAdUjrnhlQ-LL-mwHQ
-content-type: application/json
+PUT http://localhost:3001/notes/9 HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6NCwiaWF0IjoxNjA2NzI1MDA4fQ.diCumc1pPJZGSiFp7ysqaWc5lnoZvfpZ-mBsoXfiJ0c
 
 {
-    "content":"uusi viesti, jota on muutettu",
-    "important": 0,
-    "date": "2020-01-21T07:41:23.000Z"
+    "content": "Autentikoitu user1, vscode, MODIFIED",
+    "date": "2020-09-11T08:49:31.098Z",
+    "important": true,
+    "user_id": 10
 }
 ```
