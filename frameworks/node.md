@@ -18,16 +18,16 @@ Asenna nyt tarvittavat kirjastot:
 npm install
 ```
 
-Asenna lisäksi *nodemon*, *dotenv*, *knex*, *mysql*, *bcryptjs* ja *jsonwebtoken*.
+aAsenna lisäksi *nodemon*, *dotenv*, *knex*, *mysql*, *bcryptjs*, *jsonwebtoken* ja *ajv*.
 
 ```cmd
-npm install nodemon
-npm install dotenv
-npm install mysql
-npm install knex
-npm install bcryptjs
-npm install jsonwebtoken
-npm install express-joi-validation @hapi/joi
+npm install nodemon --save-dev
+npm install dotenv --save
+npm install mysql --save
+npm install knex --save
+npm install bcryptjs --save
+npm install jsonwebtoken --save
+npm install ajv --save
 ```
 
 Tarkista, että *.gitignore*:ssa, jossa on vähintään (lisää, jos ei ole):
@@ -198,50 +198,54 @@ module.exports = router;
 ### loginRouter
 
 ```js
-var express = require('express'); //uusi
-var router = express.Router();  //uusi
+var express = require('express');
+var router = express.Router();
 
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
 const config = require('../utils/config')
-
 const options = config.DATABASE_OPTIONS;
 const knex = require('knex')(options);
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
-// app => router:iksi, lisätään next
-router.post('/', (request, response, next) => {
-    const body = request.body
-    knex.from('users').select("*").where('username', '=', body.username)
-        .then((user) => {
-            if(user.length === 0){
-                return response.status(401).json(
-                    { error: 'invalid username or password, if' }
+router.post('/', (req, res, next) => {
+    const user = req.body;
+    console.log(user);
+
+    knex('users').select('*').where('username', '=', user.username)
+        .then((dbuser) => {
+            if (dbuser.length == 0) {
+                return res.status(401).json(
+                    { error: "invalid username or password" }
                 )
             }
-            const tempUser = user[0];
-            bcrypt.compare(body.password, tempUser.password)
+            const tempUser = dbuser[0];
+            bcrypt.compare(user.password, tempUser.password)
                 .then((passwordCorrect) => {
-                    if(!passwordCorrect){
-                        return response.status(401).json(
-                            { error: 'invalid username or password' }
+                    if (!passwordCorrect) {
+                        return res.status(401).json(
+                            { error: "invalid username or password" }
                         )
-                    }
+                    } 
+
                     const userForToken = {
                         username: tempUser.username,
                         id: tempUser.id
-                    }
+                    } 
+
                     const token = jwt.sign(userForToken, config.SECRET)
-                    response
-                        .status(200)
-                        .send({token, username: tempUser.username, name: tempUser.name})
-            })
-    })
-    .catch((err) => {
-        console.log(err);
-        return response.status(401).json(
-            { error: 'invalid username or password or database error' }
-        )
-    })
+
+                    res.status(200).send({
+                        token,
+                        username: tempUser.username,
+                        role: "regularuser"
+                    })
+                })
+        })
+        .catch((err) => {
+            res.status(500).json(
+                { error: err }
+            )
+        })
 })
 
 module.exports = router;
@@ -253,31 +257,32 @@ module.exports = router;
 var express = require('express');
 var router = express.Router();
 
-const bcrypt = require('bcryptjs')
 const config = require('../utils/config')
-
 const options = config.DATABASE_OPTIONS;
 const knex = require('knex')(options);
+const bcrypt = require('bcryptjs')
 
-router.post('/', (request, response, next) => {
-    const body = request.body
-    const saltRounds = 10
+router.post('/', (req, res, next) => {
+    const user = req.body;
+    const saltRounds = 10;
+    console.log(user);
 
-    bcrypt.hash(body.password, saltRounds)
+    bcrypt.hash(user.password, saltRounds)
         .then((passwordHash) => {
-            const user = {
-                username: body.username,
-                name: body.name,
-                password: passwordHash
+            const newUser = {
+                username: user.username,
+                password: passwordHash,
+                email: user.email
             }
-            knex('users').insert(user)
-                .then((id) => {
-                    response.status(204).end()
+    
+            knex('users').insert(newUser)
+                .then(() => {
+                    res.status(204).end()
                 })
                 .catch((err) => {
                     console.log(err);
-                    response.status(500).json(
-                        { error: 'database error in login' }
+                    res.status(500).json(
+                        { error: err }
                     )
                 })
         })
@@ -293,118 +298,95 @@ var express = require('express');
 var router = express.Router();
 
 const config = require('../utils/config')
-const jwt = require('jsonwebtoken')
-
 const options = config.DATABASE_OPTIONS;
 const knex = require('knex')(options);
 
-// poistettu getToken
+router.get('/', (req, res, next) => {
+    const decodedTokenId = res.locals.auth.userId; // NEW
 
-router.get('/', (request, response, next) => {
-
-     // poistettu autentikaatiokoodit
-     const userId = response.locals.auth.userId;
-
-    knex.from('notes').select("*").where('user_id', '=', userId/*decodedToken.id */)
+    knex('notes').select('*').where('user_id', '=', decodedTokenId /*NEW*/)
         .then((rows) => {
-            console.log("notes");
-            console.log(rows);
-            response.json(rows);
+            res.json(rows);
         })
         .catch((err) => {
-            console.log(err);
-            response.status(500).json(
-                { error: 'database error in get' }
-            )
-        });
-})
-
-router.delete('/:id', (request, response, next) => {
-
-    // poistettu autentikaatiokoodit
-    const userId = response.locals.auth.userId;
-
-    const id = request.params.id
-    console.log("delete alkaa!!!!", id)
-    knex.from('notes').select('*')
-        .where('user_id', '=' , userId/*decodedToken.id*/)
-        .andWhere('id', '=', id)
-        .del()
-        .then((rows) => {
-            console.log("delete")
-            response.status(204).end()
-        }).catch((err) => {
-            console.log(err);
-            response.status(500).json(
-                { error: 'database error in delete' }
+            console.log('SELECT * NOTES failed')
+            res.status(500).json(
+                { error: err }
             )
         })
 })
 
-router.post('/', (request, response, next) => {
-    const note = request.body
-    console.log(note)
+router.post('/', (req, res, next) => {
+    const note = req.body;
+    console.log(note);
 
-    if (!(note.content && (Number.isInteger(note.important)))) {
-        return response.status(400).json({
-            error: 'data missing'
-        })
+    note.user_id = res.locals.auth.userId; // NEW
+
+    const newNote = {
+        content: note.content,
+        important: note.important,
+        date: new Date(note.date),
+        user_id: note.user_id 
     }
 
-    // poistettu autentikaatiokoodit
-    const userId = response.locals.auth.userId;
-
-    note.user_id = userId; /*decodedToken.id*/
-    note.date = new Date();
-
-    knex('notes').insert(note)
-        .then((id) => {
-            console.log("more data inserted")
-            note.id = id[0];
-            response.json(note);
+    knex('notes').insert(newNote)
+        .then(id_arr => {
+            console.log(id_arr);
+            note.id = id_arr[0];
+            res.json(note);
         })
         .catch((err) => {
             console.log(err);
-            response.status(500).json(
-                { error: 'database error in insert' }
+            res.status(500).json(
+                { error: err }
             )
         })
 })
 
-router.put('/:id', (request, response, next) => {
+router.delete('/:id', (req, res, next) => {
+    const id = req.params.id;
+    console.log(id);
 
-    // poistettu autentikaatiokoodit
-    const userId = response.locals.auth.userId;
+    const decodedTokenId = res.locals.auth.userId; // NEW
 
-    const id = request.params.id
-    const note = request.body
-    console.log("put:", note, id);
-
-    if (!(note.content && note.date && (Number.isInteger(note.important)))) {
-        console.log("put failed")
-        return response.status(400).json({
-            error: 'data missing'
-        })
-    }
-
-    note.date = new Date(note.date);
-
-    console.log(note.date);
-
-    knex.from('notes')
-        .where('user_id', '=', userId /*decodedToken.id*/)
-        .andWhere('id', '=' , id)
-        .update(note, ['content', 'important', 'date'])
-        .then(() => {
-            console.log("update")
-            response.status(204).end()
+    knex('notes').where('user_id', "=", decodedTokenId).andWhere('id', '=', id).del()
+        .then(status => {
+            console.log("deleted ok")
+            res.status(204).end();
         })
         .catch((err) => {
             console.log(err);
-            response.status(500).json(
-                { error: 'database error in update' }
+            res.status(500).json(
+                { error: err }
             )
         })
+})
+
+router.put('/:id', (req, res, next) => {
+    const id = req.params.id;
+    const note = req.body;
+
+    const decodedTokenId = res.locals.auth.userId; // NEW
+
+    const updatedNote = {
+        content: note.content,
+        important: note.important,
+        date: new Date(note.date)
+        }
+
+    knex('notes').update(note).where('user_id', "=", decodedTokenId /*NEW*/)
+    .andWhere('id', '=', id)
+        .then((response) => {
+            console.log(response)
+            res.status(204).end();
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(
+                { error: err }
+            )
+        })
+
 })
 
 module.exports = router;
@@ -417,30 +399,42 @@ module.exports = router;
 const jwt = require('jsonwebtoken')
 const config = require('../utils/config')
 
-const getTokenFrom = request => {
-    const authorization = request.get('authorization')
-    console.log(authorization);
+const getTokenFrom = req => {
+    const authorization = req.get('authorization');
+    //console.log(authorization);
     if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
-      return authorization.substring(7)
+        return authorization.substring(7)
+    } else {
+        return null
     }
-    return null
-  }
+}
 
-const isAuthenticated = (request, response, next) => {
-        const token = getTokenFrom(request);
+const isAuthenticated = (req, res, next) => {
+    const token = getTokenFrom(req);
+    console.log(token);
 
-        if(!token){
-            return response.status(401).json( {error: 'token missing'});
-        }
+    if (!token) {
+        return res.status(401).json(
+            { error: "auth token missing" }
+        )
+    }
 
-        const decodedToken = jwt.verify(token, config.SECRET);
+    let decodedToken = null;
 
-        if(!decodedToken || !decodedToken.id){
-            return response.status(401).json( {error: 'token invalid'});
-        }
+    try {
+        decodedToken = jwt.verify(token, config.SECRET);
+    }
+    catch (error) {
+        console.log("jwt error")
+    }
 
-        response.locals.auth = { userId: decodedToken.id }; //uusi
-        next()      //uusi
+    if (!decodedToken || !decodedToken.id) {
+        return res.status(401).json(
+            { error: "invalid token" }
+        )
+    }
+    res.locals.auth = { userId: decodedToken.id }; // NEW
+    next(); // NEW
 }
 
 module.exports = isAuthenticated;
@@ -460,50 +454,126 @@ Otetaan *auth*-middleware käyttöön *notesRouter*:issa (poimitaan dekoodattu u
 
 ### JSON-body:n validointi
 
-Koska backendin pitää testata sille tuleva data (tietotyypit, kenttien pituudet yms.) kätevintä on käyttää siihen tarkoitettua middleware-kirjastoa (express-joi-validation). Kirjaston avulla voidaan tarkistaa myös request-parametrit, sekä query-parametrit.
+Koska backendin pitää testata sille tuleva data (tietotyypit, kenttien pituudet yms.) kätevintä on käyttää siihen tarkoitettua middleware-kirjastoa. Sellaisen voi tehdä myös itse. JSON-body:n sisällön vaatimukset voi esittää monella tavalla, mutta yksi standarditapa on käyttää [*JSON Schema*](https://json-schema.org/understanding-json-schema/reference/) - muotoa ja *regexp*-notaatiota. Sille on oma validaattorikirjastonsa *ajv*. 
 
-Jotta tarkistaminen voidaan tehdä pitää JSON-schemat määritellä. Tee uusi kansio *models* ja sinne seuraavat tiedosto:
+Koska tämä middleware tarvitsee eri scheman jokaiselle body:lle, se annetaan parametrina kutsuttaessa. 
 
-registerSchema.js ja loginSchema.js (ilman *name*:a)
+Tee ensin jokaiselle json-formaatille oma json-schema (omat tiedostot jokaiselle), laita nämä omaan kansioonsa *schemas*:
 
-```js
-const Joi = require('@hapi/joi');
+userschema.json:
+```json
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "user",
+    "type": "object",
+    "properties": {
+    "email": {
+    "type": "string",
+    "pattern": "^\\w+[\\w-\\.]*\\@\\w+((-\\w+)|(\\w*))\\.[a-z]{2,3}$",
+    "minLength": 1
+    },
+    "username": {
+    "type": "string",
+    "minLength": 6,
+    "maxLength": 32
+    },
+    "password": {
+    "type": "string",
+    "minLength": 8,
+    "maxLength": 32
+    },
+    "phonenumber": {
+        "type": "string",
+        "pattern": "\\+(9[976]\\d|8[987530]\\d|6[987]\\d|5[90]\\d|42\\d|3[875]\\d|2[98654321]\\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\\d{1,14}$",
+        "minLength": 8,
+        "maxLength": 32
+    }
+    },
+    "required": [
+    "username",
+    "password"
+    ]
+    }
+`` 
 
-const schema = Joi.object().keys({
-    username: Joi.string().required().min(6),
-    password: Joi.string().required().min(8),
-    name: Joi.string().required()
-});
-
-module.exports = schema;
+notesschema.json:
+```json
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "note",
+    "type": "object",
+    "properties": {
+    "content": {
+    "type": "string",
+    "minLength": 1,
+    "maxLength": 500
+    },
+    "date": {
+    "type": "string",
+    "pattern": "\\b[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}Z\\b"
+    },
+    "important": {
+        "type": "boolean"
+    },
+    "user_id": {
+        "type": "integer"
+    }
+    },
+    "required": [
+    "content",
+    "date",
+    "important"
+    ]
+    }
 ```
 
-notesSchema.js
+Lisää *app.js*:ään seuraavat *require*-lauseet:
 
 ```js
-const schema = Joi.object().keys({
-    content: Joi.string().required(),
-    date: Joi.date(),
-    important: Joi.boolean().required() 
-});
+var userschema = require('./schemas/userschema.json');
+var noteschema = require('./schemas/noteschema.json');
+var validateSchema = require('./middleware/validate');
 ```
 
-Lisää seuraava *app.js*-tiedostoon:
-
+Lisää *validateSchema*-middleware-reitteihin:
 ```js
-const Joi = require('@hapi/joi')
-const validator = require('express-joi-validation').createValidator({})
-
-const loginSchema = require('./models/loginSchema');
-const notesSchema = require('./models/notesSchema');
-const registerSchema = require('./models/registerSchema');
+app.use('/register', validateSchema(userschema), registerRouter);
+app.use('/login', validateSchema(userschema), loginRouter);
+app.use('/notes', isAuthenticated, validateSchema(noteschema), notesRouter);
 ```
 
-Lisää middleware kunkin *router*:in listaan:
+Varsinainen validateSchema-middleware käyttää *Ajv*-kirjastoa validointiin. Se saa scheman parametrina ja palauttaa varsinaisen middleware - funtion (return palauttaa nimettömän funktion määrittelyn):
 
+validate.js
 ```js
-app.use('/login', validator.body(loginSchema), loginRouter)
-...
+const Ajv = require('ajv');
+var ajv = new Ajv(); // options can be passed, e.g. {allErrors: true}
+
+const validateSchema = (schema) => {
+    return function(req, res, next){
+        console.log("starting middleware2")
+        const body = req.body;
+        var validate = ajv.compile(schema);
+        var valid = validate(body);
+        const reqmethod = req.method;
+
+        if(reqmethod === "post" || reqmethod === "put"){
+            if (!valid){
+                console.log(validate.errors);
+                return res.status(401).json(
+                    { error: "check json-data" })
+            } else {
+                console.log("json ok")
+                next();
+            }
+        }   
+        else {
+            next();
+        }  
+    }
+}
+
+module.exports = validateSchema;
 ```
 
 ### React-front (build)
