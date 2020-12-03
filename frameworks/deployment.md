@@ -104,7 +104,7 @@ Täytä kohdat:
 - Application startup file = bin/www tai index.js riippuen siitä, missä tiedostossa käynnistät webserverin
 - Passenger log file = errorlog-tiedosto
 
-![setup nodejs app](./img/setupnodejs_4.PNG)
+![setup nodejs app](./img/setupnodejs_4.png)
 
 Nyt asenna node_modules ajamalla npm (*Run NPM install*). Tallenna välillä.
 
@@ -112,7 +112,7 @@ Nyt lisää ohjelman tarvitsemat ympäristömuuttujat (samat kuin .env:ssä).
 
 Huom! Tietokanta, database, user ja password ovat samat kuin *knexfile.js*:ssä (host on localhost):
 
-![setup nodejs app:in env](./img/setupnodejs_3.PNG)
+![setup nodejs app:in env](./img/setupnodejs_3.png)
 
 Tallenna ympäristömuuttujat. Nyt voit käynnistää ohjelmasi ja kaiken pitäisi toimia kun avaat alidomain-osoitteen selaimessa.
 
