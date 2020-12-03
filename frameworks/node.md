@@ -38,7 +38,7 @@ node_modules/
 *.env
 /build
 build/
-knexfile.js
+knexfile.*
 ```
 
 ### .env:in konffaus
@@ -401,7 +401,6 @@ const config = require('../utils/config')
 
 const getTokenFrom = req => {
     const authorization = req.get('authorization');
-    //console.log(authorization);
     if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
         return authorization.substring(7)
     } else {
@@ -538,7 +537,7 @@ var validateSchema = require('./middleware/validate');
 Lisää *validateSchema*-middleware-reitteihin:
 ```js
 app.use('/register', validateSchema(userschema), registerRouter);
-app.use('/login', validateSchema(userschema), loginRouter);
+app.use('/login', loginRouter);
 app.use('/notes', isAuthenticated, validateSchema(noteschema), notesRouter);
 ```
 
@@ -557,13 +556,12 @@ const validateSchema = (schema) => {
         var valid = validate(body);
         const reqmethod = req.method;
 
-        if(reqmethod === "post" || reqmethod === "put"){
+        if(reqmethod === "POST" || reqmethod === "PUT"){
             if (!valid){
                 console.log(validate.errors);
                 return res.status(401).json(
                     { error: "check json-data" })
             } else {
-                console.log("json ok")
                 next();
             }
         }   
@@ -607,9 +605,9 @@ POST http://localhost:3001/register HTTP/1.1
 content-type: application/json
 
 {
-	"username": "tester13",
+	"username": "tester123",
 	"password": "salasana",
-	"email": "vscode@testi.net"
+	"email": "tester@test.net"
 }
 ```
 
@@ -620,7 +618,7 @@ POST http://localhost:3001/login HTTP/1.1
 content-type: application/json
 
 {
-	"username": "tester1",
+	"username": "tester123",
 	"password": "salasana"
 }
 ```
@@ -640,7 +638,7 @@ Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6NCwiaWF0IjoxNjA2NzI1MDA4fQ.diCumc1pPJZGSiFp7ysqaWc5lnoZvfpZ-mBsoXfiJ0c
 
 {
-    "content": "Autentikoitu user1, vscode",
+    "content": "Uusi viesti käyttäjältä tester123",
     "date": "2020-09-11T08:49:31.098Z",
     "important": true
 }
@@ -661,9 +659,8 @@ Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RlcjEiLCJpZCI6NCwiaWF0IjoxNjA2NzI1MDA4fQ.diCumc1pPJZGSiFp7ysqaWc5lnoZvfpZ-mBsoXfiJ0c
 
 {
-    "content": "Autentikoitu user1, vscode, MODIFIED",
+    "content": "Muutettu viesti käyttäjältä tester123",
     "date": "2020-09-11T08:49:31.098Z",
-    "important": true,
-    "user_id": 10
+    "important": true
 }
 ```

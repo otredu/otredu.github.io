@@ -23,7 +23,7 @@ module.exports = {
     client: 'mysql',
     connection: {
       port: 3306,
-      host: 127.0.0.1,
+      host: "123.123.123.123",
       database: user123_notes_db,
       user: user123_admin,
       password: secretPassword
@@ -46,13 +46,13 @@ Webhotelli ei hyväksy tietokantayhteyksiä kuin luotetuista lähteistä. Lisä�
 Nyt voit ajaa tietokantasi webhotellin MySQL-tietokantaan käyttäen knex-migrations-työkalua.
 
 ```cmd
-npx knex --env production migrate:latest
+npx knex migrate:latest --env production
 ```
 
 Vastaavasti aja *seed*:it tietokantaan:
 
 ```cmd
-npx knex --env production seed:run
+npx knex seed:run --env production
 ```
 ### Migrate ja seeds - scpritin avulla
 
@@ -62,7 +62,7 @@ Lisää seuraavat script-kohdat backend:in *package.json*:iin.
 
 ```json
    "migrate": "cd database && npx knex migrate:latest --env production",
-   "seeds": "cd database && npx knex seed:run"
+   "seeds": "cd database && npx knex seed:run --env"
 ```
 
 Voit ajaa nämä scriptit, sen jälkeen kun tidostot on siirretty cpanel:iin ja npm install on ajettu. Katso scriptien käynnistys kohdasta *Node app:in konffaaminen*.
