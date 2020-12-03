@@ -112,7 +112,7 @@ Nyt lisää ohjelman tarvitsemat ympäristömuuttujat (samat kuin .env:ssä).
 
 Huom! Tietokanta, database, user ja password ovat samat kuin *knexfile.js*:ssä (host on localhost):
 
-![setup nodejs app:in env](./img/setupnodejs_3.png)
+![setup nodejs app:in env](./img/setupnodejs_3.PNG)
 
 Tallenna ympäristömuuttujat. Nyt voit käynnistää ohjelmasi ja kaiken pitäisi toimia kun avaat alidomain-osoitteen selaimessa.
 
