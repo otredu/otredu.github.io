@@ -10,7 +10,7 @@ Voit käyttää tiedon tallentamiseen [JSON-serveriä](https://fullstackopen.com
 
 Tee harjoitusta varten uusi kansio *react*-kansion sisälle: esim. *musicinfo*.
 
-### Tehtävä 1 (backend)
+### Tehtävä 0 (db.json)
 
 Suunnittele json-tietorakenne, joka mallintaa keikkatietoa (*gigs*-kokoelma), tallenna muutama testikeikkatieto *db.json*-tiedostoon (voit käyttää samaa json-server-asennusta kuin *notes*-demossa). Käynnistä json-server ja testaa Postman:in avulla, että backendin virkaa ajava json-server toimii kuten pitääkin (get, post, delete, put).
 
@@ -20,29 +20,29 @@ Katso mallia *notes*-demon *db.json*-tiedostosta.
 
 Voit myös suoraan tehdä node/express-backendin ja käyttää sitä. Toteuta vähintään GET ja POST tässä vaiheessa. Katso mallia notesdemo-backend:istä. Muista testata REST-metodit esim. Postman:illa ennen kuin aloitat fronttia!
 
-### Tehtävä 2
+### Tehtävä 1
 
 Tee uusi React-app-pohja (create-react-app) ellet ole jo tehnyt sellaista (voit myös käyttää frontin pohjana bootsrap-demoa ja jatkaa siitä). Hae axioksen avulla keikkatiedot ja tallenna ne tilamuuttujaan (app:issa). Katso mallia *notes*-demossa luodusta *service*:stä.
 
 Tulosta saamasi keikkatiedot konsolille tilamuuttujasta.
 
-### Tehtävä 3
+### Tehtävä 2
 
 Tee komponentti, joka näyttää keikkatiedot ruudulla (keikkatiedot välitetään app:ista props:ina). Tee kaksi eri näkymää, joista toisessa näkyvät menneet keikat ja toisessa tulevat keikat (käytä komponentin sisäistä tilamuuttujaa).
 
 Vinkki: käytä *filter*-metodia keikkataulukolle.
 
-### Tehtävä 4
+### Tehtävä 3
 
 Tee komponentti, jonka avulla voi lisätä uuden keikan tiedot. Tallenna tiedot joko yhteen olio-muotoiseen tilamuuttujaan tai käytä jokaiselle kentälle omaa tilamuuttujaansa. Muista tehdä *input*-kentille *two-way-binding*. Tallenna uusi keikka *json-serverille* axioksen avulla (*handleSubmit*-callback kutsuu axiosta).
 
-### Tehtävä 5
+### Tehtävä 4
 
 Ota käyttöön [React-router](https://reacttraining.com/react-router/web/guides/quick-start).
 
 Sijoita keikkojen katseluun liittyvät toiminnot omaan komponenttiinsa esim. *<Home />* ja keikkojen lisääminen omaan komponenttinsa esim. *<AddGig />*.
 
-### Tehtävä 6
+### Tehtävä 5
 
 Lisää käyttöliittymään toiminnallisuus, jonka avulla käyttäjä voi valita filteröintiasetukset: paikkakunnat, kuukausi, tyylilaji (käytä esim. dropdown-valikkoa, valittavan listan ei tarvitse tulla tietokannasta). Valinnat tallennetaan tilamuuttujiin, joiden pohjalta näytölle rendeöitävä tieto filteröidään.
 
