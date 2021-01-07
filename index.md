@@ -4,7 +4,7 @@
 Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotannon kurssimateriaaleja.
 
 ### Kurssit kevät 2021
-- [Systeemityö](./systeemityo/index.html)
+- [Systeemityö](./systeemityo/index_2019.html)
 ### Kurssit syksy 2020
 - [Ohjelmointikielet (React, node.js)](./react/index.html)
 - [Testaaminen ja testiympäristöt](./testaus/index.html)

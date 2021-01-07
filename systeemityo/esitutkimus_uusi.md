@@ -19,18 +19,30 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
      - Tee luettelon avulla järjestelmän [ER-malli](http://appro.mit.jyu.fi/tiedonhallinta/luennot/luento2/#TOC1)
      ![ER-malli - esimerkki](../tietokannat/img/er_kaavio.jpg)
 
-4. Kokoa dokumentiksi
+4. Suunnittelu: tietokantasuunnitelma ja käyttöliittymän toiminnallinen suunnittelu
+
+ER-mallin avulla luodaan tietokannan rakennetta kuvaava tietokantakaavio. Tietokantakaavioita on erilaisia (Crows foot, UML). Tässä UML-tietokantakaavioesimerkki:
+
+    ![UML-tietokanta - esimerkki](img/uml_database.jpg)
+
+Use case - diagrammin pohjalta suunnitellaan 
+käyttöliittymän toiminta näyttörakennekaavion avulla:
+    ![UML näyttökartta - esimerkki](img/uml_nayttokaavio.jpg)
+
+5. Kokoa dokumentiksi
 
     Tee tiivis esitutkimusdokumentti, jossa kerrot:
     - Tuoteidean
     - Tuotteen taustan ja hyödyt
     - Tavoitteet ja vaatimukset (toiminnalliset vaatimukset, ei-toiminnalliset vaatimukset)
-    - Projektin karkea aikataulu
+    - Projektin karkea aikataulu (8.1. 19.3. n.6h viikossa)
 
     Liitteiksi tulevat:
     - käyttötapauskaavio (UML use case)
     - käsitteistö ja ER-kaavio
-    - käyttöliittymäehdotus (kevyt MockUP), liitä kuvina, lisää myös linkki MockUP:iin
+    - käyttöliittymäehdotus (kevyt MockUP), liitä kuvina, lisää myös linkki MockUP:iin (HTML)
+    - tietokantasuunnitelma (UML tai kukonaskel)
+    - näyttörakennekaavio
 
     - esimerkkidokumentti [esitutkimuksesta](http://www.leeniemi.net/syst19/materiaali/WebMagiaEsitutkimus.pdf).
 

@@ -13,7 +13,7 @@ Materiaali täydentyy kurssin edetessä
 
 - [Käytettävyys ja käytettävyystestaus](kaytettavyys.html)
 
-- [Esitutkimus](esitutkimus_uusi.html)
+- [Esitutkimus](esitutkimus.html)
 
 - [Toiminnallinen määrittely](toiminnallinen.html)
 
