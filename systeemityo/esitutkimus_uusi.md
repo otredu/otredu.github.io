@@ -17,15 +17,15 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
 3. Käsitteanalyysi ja ER-diagrammi
      - Tee järjestelmään liittyvistä käsitteistä käsiteluettelo
      - Tee luettelon avulla järjestelmän [ER-malli](http://appro.mit.jyu.fi/tiedonhallinta/luennot/luento2/#TOC1)
-     ![ER-malli - esimerkki](../tietokannat/img/er_kaavio.jpg)
+     ![ER-malli - esimerkki](img/er_kaavio.jpg)
 
 4. Suunnittelu: tietokantasuunnitelma ja käyttöliittymän toiminnallinen suunnittelu
 
 ER-mallin avulla luodaan tietokannan rakennetta kuvaava tietokantakaavio. Tietokantakaavioita on erilaisia (Crows foot, UML). Tässä UML-tietokantakaavioesimerkki:
 
-    ![UML-tietokanta - esimerkki](../tietokannat/img/uml_database.jpg)
+    ![UML-tietokanta - esimerkki](img/uml_database.jpg)
 
-Use case - diagrammin pohjalta suunnitellaan 
+Use case - diagrammin pohjalta suunnitellaan
 käyttöliittymän toiminta näyttörakennekaavion avulla:
     ![UML näyttökartta - esimerkki](img/uml_nayttokaavio.jpg)
 
