@@ -1,4 +1,4 @@
-### Esitutkimus
+### Esitutkimus ja alustava suunnittelu
 
 Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla. Ymmärtää vaatimukset paremmin.
 
