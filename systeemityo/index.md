@@ -1,7 +1,7 @@
 ## Ohjelmistojen suunnittelu ja määrittely
 
 Materiaali täydentyy kurssin edetessä
-
+- [Leenan syksyn 2020 toteutus](http://leeniemi.net/syst20/)
 ### Orientaatio
 
 - Mitä on systeemityö [PDF](http://www.leeniemi.net/syst19/materiaali/syst19.pdf)
