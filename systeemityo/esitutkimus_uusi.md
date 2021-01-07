@@ -22,12 +22,11 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
 4. Suunnittelu: tietokantasuunnitelma ja käyttöliittymän toiminnallinen suunnittelu
 
 ER-mallin avulla luodaan tietokannan rakennetta kuvaava tietokantakaavio. Tietokantakaavioita on erilaisia (Crows foot, UML). Tässä UML-tietokantakaavioesimerkki:
-
-    ![UML-tietokanta - esimerkki](img/uml_database.jpg)
+![UML-tietokanta - esimerkki](img/uml_database.jpg)
 
 Use case - diagrammin pohjalta suunnitellaan
 käyttöliittymän toiminta näyttörakennekaavion avulla:
-    ![UML näyttökartta - esimerkki](img/uml_nayttokaavio.jpg)
+![UML näyttökartta - esimerkki](img/uml_nayttokaavio.jpg)
 
 5. Kokoa dokumentiksi
 
