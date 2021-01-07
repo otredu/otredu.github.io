@@ -23,7 +23,7 @@ Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla.
 
 ER-mallin avulla luodaan tietokannan rakennetta kuvaava tietokantakaavio. Tietokantakaavioita on erilaisia (Crows foot, UML). Tässä UML-tietokantakaavioesimerkki:
 
-    ![UML-tietokanta - esimerkki](img/uml_database.jpg)
+    ![UML-tietokanta - esimerkki](../tietokannat/img/uml_database.jpg)
 
 Use case - diagrammin pohjalta suunnitellaan 
 käyttöliittymän toiminta näyttörakennekaavion avulla:
