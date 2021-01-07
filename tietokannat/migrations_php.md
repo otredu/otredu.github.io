@@ -32,6 +32,12 @@ Käynnistä XAMPP ja luo uusi tietokanta. Tallenna tietokannan nimi phinx.php-ti
         ],
 ```
 
+4. Tee projektin juureen *.gitignore* - tiedosto
+
+```cmd
+/vendor
+```
+
 ### Yhden taulun demo
 
 1. Luo migrations-tiedosto ensimmäiselle taululle
