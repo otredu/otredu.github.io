@@ -188,7 +188,7 @@
 
 6. Aja seedit tietokantaan
 
-HUOM! Jos rollback ei toimi, voit poistaa taulut käsin tietokannasta ja ajaa migrations:it uudelleen.
+    HUOM! Jos rollback ei toimi, voit poistaa taulut käsin tietokannasta ja ajaa migrations:it uudelleen.
 
 7. Tee itsellesi ohje *readme.md* projektin juureen, niin muistat tarvittavat komennot
 
