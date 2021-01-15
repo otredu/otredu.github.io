@@ -1,16 +1,16 @@
-## phinx - migrations tool
+## Phinx - migrations tool
 
-Phinx on kätevä tietokannan luomis- ja päivitystyökalu. 
+*Phinx* on kätevä tietokannan luomis- ja päivitystyökalu ([Phinx](https://phinx.org/)-dokumentaatio).
 
 ### Asennus
 
-1. Asenna phinx composerin avulla
+1. Asenna *phinx* composerin avulla (asenna [composer](https://getcomposer.org/download/, jos koneella ei ole sitä vielä)
 
     ```cmd
     composer require robmorgan/phinx
     ```
 
-2. Init luo tarvittavat kansiot (db/migrations, db/seeds) ja phinx.php tiedoston 
+2. Tee tarvittavat kansiot: db/migrations ja db/seeds ja aja *phinx*:in init-komento (luo *phinx.php* - konfiguraatiotiedoston):
 
     ```cmd
     vendor/bin/phinx init
@@ -18,13 +18,13 @@ Phinx on kätevä tietokannan luomis- ja päivitystyökalu.
 
 3. Konffaa tietokantayhteys
 
-    Käynnistä XAMPP ja luo uusi tietokanta. Tallenna tietokannan nimi phinx.php-tiedostoon:
+    Käynnistä *XAMPP* ja luo uusi tietokanta (*newsdemo_db*). Tallenna tietokannan nimi *phinx.php*-tiedostoon kohtaan *development*:
 
     ```php
     'development' => [
                 'adapter' => 'mysql',
                 'host' => 'localhost',
-                'name' => 'rentals',
+                'name' => 'newsdemo_db',
                 'user' => 'root',
                 'pass' => '',
                 'port' => '3306',
@@ -32,30 +32,31 @@ Phinx on kätevä tietokannan luomis- ja päivitystyökalu.
             ],
     ```
 
-4. Tee projektin juureen *.gitignore* - tiedosto
+4. Tee projektin juureen *.gitignore* - tiedosto (vendor sisältää muiden tekemää koodia, ja *phinx.php* salasanoja, joten emme halua näitä *github*:iin)
 
     ```cmd
     phinx.php
-    /vendor
+    vendor
     ```
 
 ### Yhden taulun demo
 
-1. Luo migrations-tiedosto ensimmäiselle taululle
+1. Luo migrations-tiedosto ensimmäiselle taululle. Taulun nimi pitää kirjoittaa isolla alkukirjaimella, koska tästä syntyy luokka (*class*).
 
     ```cmd
     vendor/bin/phinx create Users
     ```
 
-2. Määrittele taulun kentät *change()*-funktion sisällä, katso ohjeita [phinx:in dokumentaatiosta](https://book.cakephp.org/phinx/0/en/index.html)
+2. Määrittele taulun kentät *change()*-funktion sisällä, katso ohjeita [phinx:in dokumentaatiosta](https://book.cakephp.org/phinx/0/en/index.html).
 
-    ```php 
+*Huom!* phinx-tekee automaattisesti taululle *id*-nimisen *autoincrement primary key*:n, joten sitä ei tarvitse mainita. Käytä taulujen ja kenttien nimissä vain englantia ja pieniä kirjaimia sekä erikoismerkeistä vain _ viivaa).
+
+    ```php
     public function change()
         {
             // create the table
-            $table = $this->table('users',['id' => false, 'primary_key' => ['user_id']]);
-            $table->addColumn('user_id', 'integer',['identity' => true])
-                ->addColumn('created', 'datetime')
+            $table = $this->table('users');
+            $table->addColumn('created', 'datetime')
                 ->addColumn('username', 'string')
                 ->addColumn('password', 'string')
                 ->addIndex(['username'], [
@@ -71,10 +72,10 @@ Phinx on kätevä tietokannan luomis- ja päivitystyökalu.
     vendor/bin/phinx migrate -e development
     ```
 
-    Jos rakenne ei ollut haluttu voit vetää sen takaisin, korjata migrations-tiedostoa ja aja migrations uudelleen:
+    Jos rakenne ei ollut haluttu voit vetää sen takaisin, korjata *migrations*-tiedostoa ja aja *migrations* uudelleen:
 
     ```cmd
-    vendor/bin/phinx rollback -e production
+    vendor/bin/phinx rollback -e development
     ```
 
 4. Tee taululle tyhjä seeds-tiedosto
@@ -90,17 +91,17 @@ Phinx on kätevä tietokannan luomis- ja päivitystyökalu.
         {
             $data = [
                 [
-                    'user_id'    => 1,
+                    'id'    => 1,
                     'created' => date('Y-m-d H:i:s'),
                     'username' => 'tester1',
-                    'password' => 'hashed',
+                    'password' => password_hash('salasana1', PASSWORD_DEFAULT),
             
                 ],
                 [
-                    'user_id'    => 2,
+                    'id'    => 2,
                     'created' => date('Y-m-d H:i:s'),
                     'username' => 'tester2',
-                    'password' => 'hashed',
+                    'password' => password_hash('salasana2', PASSWORD_DEFAULT),
             
                 ]
             ];
@@ -122,22 +123,21 @@ Phinx on kätevä tietokannan luomis- ja päivitystyökalu.
 1. Luo migrations-tiedosto toiselle taululle
 
     ```cmd
-    vendor/bin/phinx create Notes
+    vendor/bin/phinx create News
     ```
 
-2. Määrittele taulun kentät *change()*-funktion sisällä (huom! *addForeignKey*) 
+2. Määrittele taulun kentät *change()*-funktion sisällä. Huomaa, että relaatio muodostetaan *addForeignKey*-lauseella. Hyvä tapa on nimetä *foregn key* tyyliin \<taulunnimi\>_id.
 
     ```php
         public function change(): void
         {
-            $table = $this->table('notes',['id' => false, 'primary_key' => ['notes_id']]);
-            $table->addColumn('notes_id', 'integer', ['identity' => true])
-                ->addColumn('title', 'string', ['limit' => 50])
+            $table = $this->table('news');
+            $table->addColumn('title', 'string', ['limit' => 50])
                 ->addColumn('content', 'string')
                 ->addColumn('created', 'datetime')
                 ->addColumn('expiry', 'datetime')
                 ->addColumn('user_id', 'integer')
-                ->addForeignKey('user_id', 'users', 'user_id', array('delete'=> 'CASCADE', 'update'=> 'NO_ACTION'))
+                ->addForeignKey('user_id', 'users', 'id', array('delete'=> 'CASCADE', 'update'=> 'NO_ACTION'))
                 ->save();
         }
     ```
@@ -147,7 +147,7 @@ Phinx on kätevä tietokannan luomis- ja päivitystyökalu.
 4. Tee taululle tyhjä seeds-tiedosto
 
     ```cmd
-    vendor/bin/phinx seed:create NotesSeeder
+    vendor/bin/phinx seed:create NewsSeeder
     ```
 
 5. Lisää *run()* - funktioon tietokantataulun data ja *getDependensies()*-funktioon taulut joihin viitataan
@@ -156,31 +156,31 @@ Phinx on kätevä tietokannan luomis- ja päivitystyökalu.
         public function getDependencies()
         {
             return [
-                'UserSeeder'
+                'UsersSeeder'
             ];
         }
         public function run()
         {
             $data = [
                 [
-                    'notes_id'    => 1,
-                    'title' => 'Hello',
-                    'content' => 'message',
+                    'id'    => 1,
+                    'title' => 'Talvi tuli',
+                    'content' => 'Nyt on kyllä kylmä ilma!',
                     'created' => date('Y-m-d H:i:s'),
                     'expiry' => date('2021-12-31 00:00:00'), 
                     'user_id' => 1,
                 ],
                 [
-                    'notes_id'    => 2,
-                    'title' => 'Hello 2',
-                    'content' => 'message 2',
+                    'id'    => 2,
+                    'title' => 'Bussi on myöhässä',
+                    'content' => 'Tästä ei hyvää seuraa!',
                     'created' => date('Y-m-d H:i:s'),
                     'expiry' => date('2021-12-31 00:00:00'), 
                     'user_id' => 2,
                 ]
             ];
 
-            $posts = $this->table('notes');
+            $posts = $this->table('news');
             $posts->insert($data)
                 ->saveData();
         }
@@ -189,3 +189,5 @@ Phinx on kätevä tietokannan luomis- ja päivitystyökalu.
 6. Aja seedit tietokantaan
 
 HUOM! Jos rollback ei toimi, voit poistaa taulut käsin tietokannasta ja ajaa migrations:it uudelleen.
+
+7. Tallenna *github*:iin.
