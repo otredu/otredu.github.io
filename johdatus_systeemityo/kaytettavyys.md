@@ -1,7 +1,5 @@
 ### Käytettävyys
 
-- Johdanto [PDF](http://www.leeniemi.net/syst19/materiaali/Kayt_orientaatio.pdf)
-- Käytettävyys ohjelmissa [PDF](http://www.leeniemi.net/syst19/materiaali/Kayt_ohjelmointi.pdf)
 - Heuristinen käyttöliittymän arvinointi, Nielsen [PDF](http://www.leeniemi.net/syst19/materiaali/Kayt_Nielsen.pdf)
 - Käytettävyystestaus [PDF](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/ETRPeMNsQL1NtRJwLaHRjGwBMxaCAp45JcncJ3gsjEv2lw?e=lRF3tS)
 

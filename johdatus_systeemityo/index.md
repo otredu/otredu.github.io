@@ -8,6 +8,8 @@
 
 - [Esitutkimus](esitutkimus.html)
 
+- [Käytettävyys](kaytettavyys.md)
+
 - Toiminnallinen määrittely
     - käyttöliittymä
     - tietokanta
