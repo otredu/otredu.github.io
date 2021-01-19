@@ -8,7 +8,7 @@
 
 - [Esitutkimus](esitutkimus.html)
 
-- [Käytettävyys](kaytettavyys.md)
+- [Käytettävyys](kaytettavyys.html)
 
 - Toiminnallinen määrittely
     - käyttöliittymä
