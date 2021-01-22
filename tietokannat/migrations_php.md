@@ -138,7 +138,7 @@
                 ->addColumn('expiry', 'datetime')
                 ->addColumn('user_id', 'integer')
                 ->addForeignKey('user_id', 'users', 'id', array('delete'=> 'CASCADE', 'update'=> 'NO_ACTION'))
-                ->change();
+                ->create();
         }
     ```
 
