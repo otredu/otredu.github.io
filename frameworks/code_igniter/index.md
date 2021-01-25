@@ -1,6 +1,13 @@
 ## Codeigniter 4
 
 Teemme tässä demossa news-sivuston, käytällä Codeigniter4 PHP-frameworkiä. Sovellamme [näitä ohjeita](https://codeigniter.com/user_guide/tutorial/index.html).
+
+### Miksi framework?
+
+Usean henkilön projektissa on hyödyllistä käyttää yhtenäistä arkkitehtuuria, jonka framework tarjoaa. LKun tietyt toiminnallisuudet sijoitetaan aina tietyntyyppisiin komponentteihin ja koodi tallennetaan sovitulla tavalla yhtenäiseen hakemistorakenteeseen sitä on helpompi hallita ja ymmärtää.
+
+Framework:eissä on sisäänrakennettuna tuki monelle [*security* - asialle](https://codeigniter.com/userguide3/general/security.html).
+
 ### Asennus
 
 Asenna CI-projekti repon juureen:
