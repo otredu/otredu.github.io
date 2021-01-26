@@ -26,6 +26,8 @@ Brändi-ideointi:
 
 3. Käyttöliittymäehdotus
 
+    Tutustu käyttöliittymän suunnitteluun [ohje](kayttoliittyman_suunnittelu.html).
+
     Tee karkea hahmotelma sivuston käyttöliittymäideasta tietokoneella sekä mobiililaitteella. Tee nopeasti muutama suuntaa-antava käyttöliittymäkuva AdobeXD-ohjelmalla (ei toimivaa navigointia, ei tarvitse olla kaikkia kenttiä vielä, eikä kaikkia näkymiä).
     - [Leenan ohje](http://www.leeniemi.net/syst19/index.php?sivu=hartyo2)
     - AdobeXD - prototyyppiharjoitus [ohje](http://www.leeniemi.net/syst19/index.php?sivu=xd)
