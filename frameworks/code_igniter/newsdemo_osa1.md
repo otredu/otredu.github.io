@@ -13,6 +13,13 @@ Ota käyttöön intl-lisäosa (c:\xampp\php\php.ini)
 extension=intl
 ```
 
+Siirry uuden projektin kansioon ja asenna vielä tarvittavat kirjastot:
+
+```cmd
+cd newsdemo
+composer install
+```
+
 Ota käyttöön kehitysympäristö (development), muokkaa *.env*-tiedostoon:
 
 ```cmd
