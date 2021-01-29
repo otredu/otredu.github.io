@@ -75,7 +75,7 @@ Tehdään oma tervetulosivu *views*-kansioon. Tee uusi tiedosto, jonka nimi on *
 Vaihda myös *Home-controller*, käyttämään sitä:
 
 ```php
-view('my_welcome)
+view('my_welcome')
 ```
 
 Jaa koodi vielä *footer*- ja *header*-osiin. Tee *templates* - kansio, ja sinne *header.php* ja *footer.php* - tiedostot.

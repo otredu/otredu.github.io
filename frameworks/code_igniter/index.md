@@ -6,7 +6,7 @@ Teemme tässä demossa news-sivuston, käytällä Codeigniter4 PHP-frameworkiä.
 
 Usean henkilön projektissa on hyödyllistä käyttää yhtenäistä arkkitehtuuria, jonka framework tarjoaa. Kun tietyt toiminnallisuudet sijoitetaan aina tietyntyyppisiin komponentteihin ja koodi tallennetaan sovitulla tavalla yhtenäiseen hakemistorakenteeseen sitä on helpompi hallita ja ymmärtää.
 
-Framework:eissä on yleensä myös sisäänrakennettuna parempi tuki [tietoturvalle](https://codeigniter.com/userguide3/general/security.html.
+Framework:eissä on yleensä myös sisäänrakennettuna parempi tuki [tietoturvalle](https://codeigniter.com/userguide3/general/security.html).
 
 ### Newsdemo
 
