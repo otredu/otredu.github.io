@@ -16,7 +16,17 @@ Harjoitukset:
     - ![UML käyttötapauskaavio - esimerkki](./img/uml_usecase.jpg)
     - Käyttötapaukset [UML use case](http://www.leeniemi.net/syst19/index.php?sivu=UML)
 
+---
+Brändi-ideointi:
+- luo kuvitteelliselle asunnonvuokrausyritykselle brändi-imago:
+    - keksi yritykselle nimi ja tee sille logo (PhotoShop:illa, Canva:lla tms.)
+- valitse logolle vähintään yksi väri, mieti sen muoto, tee siitä läpinäkyvä (mieti mitkä taustavärit sopivat sen kanssa yhteen)
+- jos logossa ei ole yrityksen nimeä, mieti myös sen kirjoitusasu ja fontti 
+--- 
+
 3. Käyttöliittymäehdotus
+
+    Tutustu käyttöliittymän suunnitteluun [ohje](kayttoliittyman_suunnittelu.html).
 
     Tee karkea hahmotelma sivuston käyttöliittymäideasta tietokoneella sekä mobiililaitteella. Tee nopeasti muutama suuntaa-antava käyttöliittymäkuva AdobeXD-ohjelmalla (ei toimivaa navigointia, ei tarvitse olla kaikkia kenttiä vielä, eikä kaikkia näkymiä).
     - [Leenan ohje](http://www.leeniemi.net/syst19/index.php?sivu=hartyo2)
