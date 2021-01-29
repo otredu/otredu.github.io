@@ -1,5 +1,4 @@
 ## CodeIgniter: Newsdemo osa 1
-
 ### 1. Asennus
 
 Asenna CI-projekti repon juureen:
