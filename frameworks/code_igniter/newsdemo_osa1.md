@@ -107,7 +107,7 @@ $data = [
     'name' => 'Tiina'
 ];
 echo view('templates/header', $data);
-echo view('my_news', $data);
+echo view('my_welcome', $data);
 echo view('templates/footer', $data);
 ```
 
@@ -171,6 +171,8 @@ Seuraavaksi tehdään uutisille kontrolleri. Tee *Controllers*-kansioon uusi tie
 
 ```php
 <?php namespace App\Controllers;
+
+use App\Models\NewsModel;
 
 class News extends BaseController
 {
