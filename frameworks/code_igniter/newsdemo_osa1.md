@@ -245,9 +245,11 @@ Ja muista lisätä *$data*:an myös aikaisempi lisätä parametri 'name':
 
 Ensimmäinen osa demoa on nyt valmis. Olet saanut tietokannasta uutiset ruudulle.
 
-Harjoituksia:
+---
 
-1) lisää ruudulle näkyville uutisen päivämäärä
-2) lisää nav-palkkiin linkki uutissivulle (a href="/news")
-3) tee CSS-tiedosto, muotoile uutissivu kauniiksi, erota uutiset omiin laakikoihin, muotoile nav-palkki
-4) lisää tietokantaan uutiselle kuva (url), ja renderöi myös se ruudulle
+### 8. Harjoituksia
+
+1. lisää ruudulle näkyville uutisen päivämäärä
+2. lisää nav-palkkiin linkki uutissivulle sekä takaisin pääsivulle (a href="/news")
+3. tee CSS-tiedosto (laita se kansioon /public/css), muotoile uutissivu kauniiksi, erota uutiset omiin laatikoihin, muotoile nav-palkki
+4. lisää tietokantaan uutiselle kuva (url), ja renderöi myös se ruudulle

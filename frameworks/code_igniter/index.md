@@ -19,4 +19,8 @@ Aiheet:
         - Controller-luokka ja routes
         - views
 
+- [osa 2](newsdemo_osa2.html)
 
+Aiheet:
+        - lomakkeen lisääminen
+        - tiedon tallentaminen tietokantaan
