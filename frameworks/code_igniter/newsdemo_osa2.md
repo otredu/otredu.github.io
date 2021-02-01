@@ -112,9 +112,9 @@ Lisää uusi metodi *NewsController*:iin:
 ```php
  public function delete($id = null)
     {
-        $model = new UserModel();
-        $data['user'] = $model->where('id', $id)->delete($id);
-        return redirect()->to(base_url('users'));
+        $model = new NewsModel();
+        $model->where('id', $id)->delete($id);
+        return redirect()->to(base_url('news'));
     }
 ```
 
@@ -139,7 +139,7 @@ Tee uusi muokkauslomake (*views/news/edit.php*):
     <?= csrf_field() ?>
 
     <label for="title">Otsikko</label>
-    <input type="input" name="title" value=<?= $news_item['title'] ?>/><br />
+    <input type="input" name="title" value="<?= $news_item['title'] ?>"/><br />
 
     <label for="content">Teksti</label>
     <textarea name="content"><?= $news_item['content'] ?></textarea><br />
