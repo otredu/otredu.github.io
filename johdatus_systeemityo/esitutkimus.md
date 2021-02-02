@@ -1,6 +1,8 @@
 ### Esitutkimus
 
-Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla. Tämän dokumentin tarkoitus on saada tuote myytyä asiakkaalle.
+Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla. 
+
+- Esitutkimusesimerkki [PDF](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/ETjoaWKPYDBBnzD9LiF0pDsB6orAgreIIk7BrdjfaW2KcA?e=0aitSH)
 
 ---
 
@@ -8,20 +10,24 @@ Harjoitukset:
 
 1. Käsitteanalyysi
 
-    Tutustu [projektikuvaukseen](http://www.leeniemi.net/syst19/materiaali/Asunnonvuokraus.pdf) ja tee järjestelmään liittyvistä käsitteistä käsitekartta esim. [Bubbl.us](http://bubbl.us) ohjelman avulla. Kokoa käsitteistä sanasto.[Leenan esimerkki](http://www.leeniemi.net/syst19/index.php?sivu=kasitemiellekartta)
+    Tutustu [projektikuvaukseen](http://www.leeniemi.net/syst19/materiaali/Asunnonvuokraus.pdf) ja tee järjestelmään liittyvistä käsitteistä käsitekartta esim. [Bubbl.us](http://bubbl.us) ohjelman avulla. Kokoa käsitteistä sanasto. [Leenan esimerkki](http://www.leeniemi.net/syst19/index.php?sivu=kasitemiellekartta)
 
 2. Käyttötapaukset
 
     Poimi järjestelmän toteutukselta vaaditut käyttötapaukset ja kokoa ne *UML use case* - malliksi.
-    - ![UML käyttötapauskaavio - esimerkki](./img/uml_usecase.jpg)
+    ![UML käyttötapauskaavio - esimerkki](./img/uml_usecase.jpg)
     - Käyttötapaukset [UML use case](http://www.leeniemi.net/syst19/index.php?sivu=UML)
 
 ---
+
 Brändi-ideointi:
-- luo kuvitteelliselle asunnonvuokrausyritykselle brändi-imago:
-    - keksi yritykselle nimi ja tee sille logo (PhotoShop:illa, Canva:lla tms.)
+
+Luo kuvitteelliselle asunnonvuokrausyritykselle brändi/imago:
+
+- keksi yritykselle nimi ja tee sille logo (PhotoShop:illa, Canva:lla. Figma:lla tms.)
 - valitse logolle vähintään yksi väri, mieti sen muoto, tee siitä läpinäkyvä (mieti mitkä taustavärit sopivat sen kanssa yhteen)
 - jos logossa ei ole yrityksen nimeä, mieti myös sen kirjoitusasu ja fontti 
+
 --- 
 
 3. Käyttöliittymäehdotus
@@ -53,9 +59,3 @@ Brändi-ideointi:
 6. Vertaisarviointi
 
     Arvioi toisen opiskelijan tekemä esitutkimus, käytä tätä [pohjaa](http://www.leeniemi.net/syst19/materiaali/Vertaisarviointi.dotx)
-
----
-
-Vanha (älä käytä, uusi tulossa):
-
-- Esitutkimusesimerkki [PDF](http://www.leeniemi.net/syst19/materiaali/WebMagiaEsitutkimus.pdf)
