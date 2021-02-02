@@ -35,8 +35,7 @@ Luo kuvitteelliselle asunnonvuokrausyritykselle brändi/imago:
     Tutustu käyttöliittymän suunnitteluun [ohje](kayttoliittyman_suunnittelu.html).
 
     Tee karkea hahmotelma sivuston käyttöliittymäideasta tietokoneella sekä mobiililaitteella. Tee nopeasti muutama suuntaa-antava käyttöliittymäkuva AdobeXD-ohjelmalla (ei toimivaa navigointia, ei tarvitse olla kaikkia kenttiä vielä, eikä kaikkia näkymiä).
-    - [Leenan ohje](http://www.leeniemi.net/syst19/index.php?sivu=hartyo2)
-    - AdobeXD - prototyyppiharjoitus [ohje](http://www.leeniemi.net/syst19/index.php?sivu=xd)
+    - AdobeXD - prototyyppiharjoitus [ohje](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/Ed5CvQCmpeBJvFeNZ_ZaI6EB6IqrZm1IRTw9ulXt_P1lqw?e=Xl0MSo)
 
 4. Tee käsiteanalyysin pohjalta ER-kaavio (chen)
 
