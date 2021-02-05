@@ -23,4 +23,13 @@ Aiheet:
 
 Aiheet:
         - lomakkeen lisääminen
-        - tiedon tallentaminen tietokantaan
+        - lomaketiedon tallentaminen tietokantaan
+        - tietueen poistaminen
+        - tietueen muokkaaminen
+
+- [osa 3](newsdemo_osa3.html)
+
+Aiheet:
+        - rekisteröityminen
+        - session hallinta (kirjautuminen, uloskirjautuminen)
+

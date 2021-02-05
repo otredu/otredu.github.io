@@ -113,7 +113,7 @@ Lisää uusi metodi *NewsController*:iin:
  public function delete($id = null)
     {
         $model = new NewsModel();
-        $model->where('id', $id)->delete($id);
+        $model->where('id', $id)->delete();
         return redirect()->to(base_url('news'));
     }
 ```
