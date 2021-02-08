@@ -197,11 +197,11 @@ Jotta CI-framework löytää tämän tiedoston, lisää se *Config/Validation.ph
 
 ```php
 public $ruleSets = [
-    \CodeIgniter\Validation\Rules::class,
-    \CodeIgniter\Validation\FormatRules::class,
-    \CodeIgniter\Validation\FileRules::class,
-    \CodeIgniter\Validation\CreditCardRules::class,
-    \App\Validation\UserRules::class,           // UUSI!
+    \\CodeIgniter\Validation\Rules::class,
+    \\CodeIgniter\Validation\FormatRules::class,
+    \\CodeIgniter\Validation\FileRules::class,
+    \\CodeIgniter\Validation\CreditCardRules::class,
+    \\App\Validation\UserRules::class,           // UUSI!
 ];
 ```
 
@@ -223,7 +223,7 @@ private function setUserSession($user){
 Session-muuttujaa voidaan käyttää *session()*-funktion avulla, palauttaa *session*-olion, jolla on käteviä apumetodeja. Jotta sessio syntyy, jokaisen requestin kohdalla pitää muistaa kutsua session alustusfunktiota. Oliomallissa tämä hoituu, kun seuraavan koodirivin ottaa käyttöön *BaseController*:issa (jonka kaikki kontrollerit perivät):
 
 ```php
-$this->session = \Config\Services::session();
+$this->session = \\Config\Services::session();
 ```
 
 ### 7. Routes
@@ -319,10 +319,10 @@ Jotta filteriä on helpompi käyttää annetaan sille lyhyempi *alias*. Lisää 
 
 ```php
 public $aliases = [
-    'csrf'     => \CodeIgniter\Filters\CSRF::class,
-    'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
-    'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-    'auth' => \App\Filters\Auth::class,   //TÄMÄ!!
+    'csrf'     => \\CodeIgniter\Filters\CSRF::class,
+    'toolbar'  => \\CodeIgniter\Filters\DebugToolbar::class,
+    'honeypot' => \\CodeIgniter\Filters\Honeypot::class,
+    'auth' => \\App\Filters\Auth::class,   //TÄMÄ!!
     ];
 ```
 
