@@ -252,7 +252,7 @@ $this->session = \Config\Services::session();
 
 Nyt kirjautumisen pitäisi toimia.
 
-8. Käyttäjän tunnistaminen (*user_id*)
+### 8. Käyttäjän tunnistaminen (*user_id*)
 
 Jotta uusi uutinen tallentuu tietokantaan oikean käyttäjän alle, käydään korjaamassa *News*-kontrollerin *create*-metodiin seuraava rivi. Kovakoodatun *user_id*:n tilalle haetaan kirjautuneen käyttäjän id *session*-muuttujasta:
 
@@ -264,7 +264,7 @@ $model->save([
 ]);
 ```
 
-9. Logout
+### 9. Logout
 
 Jotta voit testata kirjautumista, lisätään *User*-kontrolleriin *logout*-metodi:
 
@@ -281,7 +281,7 @@ Lisää sille myös reitti (*Conf/routes.php*):
 $routes->get('/user/logout', 'User::logout');
 ```
 
-10. Filters
+### 10. Filters
 
 Vaikka kirjautuminen periaatteessa toimii, tekemämme reitit eivät ole suojattuja. Jos avaat käsin osoitteen: */news* se aukeaa, vaikka käyttäjä ei ole kirjautuneena.
 
@@ -338,7 +338,7 @@ $routes->get('/news/update/(:num)', 'News::update/$1',['filter' => 'auth']);
 
 Nyt rekisteröityminen, kirjautuminen ja uloskirjautuminen toimivat.
 
-11. Session Flashdata
+### 11. Session Flashdata
 
 Jos haluat kertoa, että rekistöityminen onnistui, voit tallentaa tiedon *session*:n *flashData*:aan. Tähän voi tallentaa väliaikaista tietoa, joka näytetään seuraavan sivun yhteydessä eli *login*-sivulla.
 
@@ -355,3 +355,10 @@ Lisää myös *login*-view:iin:
     <?= session()->get('success') ?>
 <?php endif; ?>
 ```
+
+### Tehtäviä:
+
+- muuta kaikki virheilmoitukset suomenkielelle
+- lisää header:iin kirjautuneen käyttäjän käyttäjänimi
+- anna kirjautuneen käyttäjän muuttaa/poistaa vain omia uutisiaan
+- hae tietokannasta myös uutisen kirjoittaneen käyttäjänimi

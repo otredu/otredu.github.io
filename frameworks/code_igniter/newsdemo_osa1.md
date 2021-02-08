@@ -249,9 +249,9 @@ Ensimmäinen osa demoa on nyt valmis. Olet saanut tietokannasta uutiset ruudulle
 
 ---
 
-### 8. Harjoituksia
+### Tehtäviä:
 
-1. lisää ruudulle näkyville uutisen päivämäärä
-2. lisää nav-palkkiin linkki uutissivulle sekä takaisin pääsivulle (a href="/news")
-3. tee CSS-tiedosto (laita se kansioon /public/css), muotoile uutissivu kauniiksi, erota uutiset omiin laatikoihin, muotoile nav-palkki
-4. lisää tietokantaan uutiselle kuva (url), ja renderöi myös se ruudulle
+- lisää ruudulle näkyville uutisen päivämäärä
+- lisää nav-palkkiin linkki uutissivulle sekä takaisin pääsivulle (a href="/news")
+- tee CSS-tiedosto (laita se kansioon /public/css), muotoile uutissivu kauniiksi, erota uutiset omiin laatikoihin, muotoile nav-palkki
+- lisää tietokantaan uutiselle kuva (url), ja renderöi myös se ruudulle
