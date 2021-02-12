@@ -251,7 +251,10 @@ Ensimmäinen osa demoa on nyt valmis. Olet saanut tietokannasta uutiset ruudulle
 
 ### Tehtäviä:
 
-- lisää ruudulle näkyville uutisen päivämäärä
+- lisää ruudulle näkyville uutisen päivämäärä (muotoile local - muotoon)
 - lisää nav-palkkiin linkki uutissivulle sekä takaisin pääsivulle (a href="/news")
 - tee CSS-tiedosto (laita se kansioon /public/css), muotoile uutissivu kauniiksi, erota uutiset omiin laatikoihin, muotoile nav-palkki
+
+### Lisätehtäviä:
+
 - lisää tietokantaan uutiselle kuva (url), ja renderöi myös se ruudulle

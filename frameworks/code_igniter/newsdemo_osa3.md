@@ -359,6 +359,9 @@ Lisää myös *login*-view:iin:
 ### Tehtäviä:
 
 - muuta kaikki virheilmoitukset suomenkielelle
-- lisää header:iin kirjautuneen käyttäjän käyttäjänimi
+- lisää header:iin kirjautuneen käyttäjän käyttäjänimi (ks. session)
+
+### Lisätehtäviä:
+
 - anna kirjautuneen käyttäjän muuttaa/poistaa vain omia uutisiaan
-- hae tietokannasta myös uutisen kirjoittaneen käyttäjänimi
+- hae tietokannasta myös uutisen kirjoittaneen käyttäjän käyttäjänimi ruudulle
