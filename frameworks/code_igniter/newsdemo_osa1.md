@@ -145,6 +145,8 @@ database.default.password =
 database.default.DBDriver = MySQLi
 ```
 
+*Huom!* Jos olet hukannut koko .env - tiedoston, kopioi se [tästä](newsdemo_env.html). Tallenna se varmuuden muoksi repoon myös nimellä env_local.
+
 ### 4. *News-Model*
 
 CI-frameworkissa tietoa haetaan tietokannasta *Model*-luokan avulla. Tee siis *Models*-kansioon uusi tiedosto: *NewsModel.php* ja tallenna siihen seuraava koodi (vaihda taulun nimi tarvittaessa):
