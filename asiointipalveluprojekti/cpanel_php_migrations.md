@@ -4,7 +4,7 @@
 
 Kirjaudu cpanel:iin ja tee itsellesi uusi MySQL-tietokanta (MySQL Database Wizard). Luo sille käyttäjä  (kaikki oikeudet). Nimeä tietokanta ja käyttäjä niin, että nimestä selviää mihin projektiin ja kenelle ne kuuluvat (esim. tiipar_notes_db). Tallenna em. tiedot esim. muistioon.
 
-### Migrations/seeds
+### Phinx migrations/seeds
 
 - Aloita kloonaamalla repo, jossa tietokannan migrations/seeds on (esim. systeemityodemo)
 - siirry kansioon, jossa tietokanta on (esim. cd news)
@@ -12,7 +12,7 @@ Kirjaudu cpanel:iin ja tee itsellesi uusi MySQL-tietokanta (MySQL Database Wizar
 - aja vendor/bin/phinx init
 - tallenna edellä luodut tiedot phinx.php tiedostoon kohtaan "production" (name, user, pass)
 - etsi cpanel:ista host osoite (shared IP), tallenna phinx.php tiedostoon (host)
-- lisää koulun IP - osoite RemoteMySQL:in White listaan
+- lisää koulun IP - osoite RemoteMySQL:in White list:iin
 - aja migrate: vendor/bin/phinx migrate -e production
 - aja seeds: vendor/bin/phinx seed:run -e production
 
