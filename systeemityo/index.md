@@ -18,3 +18,5 @@ Materiaali täydentyy kurssin edetessä
 - [Ketterä ohjelmistokehitys](kettera.html)
 
 - [Projektityöskentely: toteutus](toteutus.html)
+
+- [CPANEL](../asiointipalveluprojekti/cpanel_php_migrations.html)
