@@ -1,10 +1,10 @@
 ## Web-hotellin käyttäminen (cpanel)
 
-### MySQL
+### Tietokannan ja käyttäjän luominen (MySQL)
 
 Kirjaudu cpanel:iin ja tee itsellesi uusi MySQL-tietokanta (MySQL Database Wizard). Luo sille käyttäjä  (kaikki oikeudet). Nimeä tietokanta ja käyttäjä niin, että nimestä selviää mihin projektiin ja kenelle ne kuuluvat (esim. tiipar_notes_db). Tallenna em. tiedot esim. muistioon.
 
-### Phinx migrations/seeds
+### Tietokannan alustus (Phinx migrations/seeds)
 
 - Aloita kloonaamalla repo, jossa tietokannan migrations/seeds on (esim. systeemityodemo)
 - siirry kansioon, jossa tietokanta on (esim. cd news)
@@ -16,7 +16,7 @@ Kirjaudu cpanel:iin ja tee itsellesi uusi MySQL-tietokanta (MySQL Database Wizar
 - aja migrate: vendor/bin/phinx migrate -e production
 - aja seeds: vendor/bin/phinx seed:run -e production
 
-### Testaa toimiiko remote tietokanta CI:n kanssa
+### Tietokannan testaus (remote database + CI)
 
 - siirry kansioon, jossa CI-koodi on (esim. cd ../newsdemo)
 - aja composer install
@@ -42,7 +42,7 @@ Saat FTP-yhteyden kirjautusmistiedot CPANEL:ista kohdasta *FTP-accounts*.
 
 Ota yhteys palvelimeen ja siirrä kaikki PHP-tiedostot subdomain-kansioosi.
 
-### .htaccess
+### .htaccess (Apache)
 
 HUOM! Tätä ei tarvita CI:n kanssa (on .htaccess on automaatisesti mukana).
 
