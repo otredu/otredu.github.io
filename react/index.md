@@ -11,3 +11,8 @@
 ### Deployment
 
 - [FullStack-ohjelman asentaminen verkkoon](./deployment.html)
+
+---
+Materiaalit:
+
+- [HY kurssimateriaali](../fullstack/index.html)
