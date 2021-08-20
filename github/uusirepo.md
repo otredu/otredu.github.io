@@ -19,7 +19,7 @@
 4. Lisää hakemistossa olevat tiedostot paikallisen repon versionhallintaan ajamalla:
 
     ```bash
-    git add ./*
+    git add *
     git commit -m "First update"  
     ```
     *First update* on kuvaus päivityksen sisällöstä.
@@ -41,7 +41,7 @@
 
 Jos *local*- ja *remote*-repo ovat olemassa, tiedostoja päivitetään Github:iin ajamalla:
 
-    git add ./*
+    git add *
     git commit -m "Second update"
     git push
 
