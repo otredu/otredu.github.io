@@ -1,26 +1,18 @@
-## Julkiset tietoverkot
-
-Jos olet pois oppitunneilta niin pidä huoli, että tutustut materiaaliin ja teet siinä olevat harjoitukset.
-
-### Kurssin sisältö ja aikataulu syksy 2019
-
-1. HTML alkeet (vk 33)
-
----
+## Web-sivujen toteutus
 ### HTML ja CSS alkeita
 
-- [Alkeet](./html_css_osa1.html)
+- [HTML ja CSS syntaksit, flexbox ja grid](./html_css_osa1.html)
 
 ### HTML ja CSS jatko
 
-- [Jatko](./html_css_osa2.html)
+- [Reaktiivisuus, lomakkeet, semanttiset elementit](./html_css_osa2.html)
 
 ### HTML ja CSS lisäherkut
 
 - [Boostrap ja animaatiot](./html_css_osa3.html)
 
 ---
-### Linkkejä hyödyllisiin materiaaleihin
+Linkkejä:
 
 - HTML-videotutoriaali [HTML Crash Course For Absolute Beginners](https://youtu.be/UB1O30fR-EE)
 

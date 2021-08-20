@@ -18,9 +18,9 @@ Materiaalin avulla käydään läpi ohjelmoinnin perusrakenteet sekä JavaScript
 
 - [JS jQuery:n avulla](./js_osa4.html)
 
---- 
+---
 
-### Linkkejä hyödyllisiin materiaaleihin
+Linkkejä:
 
 - JavaScript (ohjeita): [MDM JS Guide](https://developer.mozilla.org/bm/docs/Web/JavaScript)
 - JavaScript (manuaali): [MDM JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
