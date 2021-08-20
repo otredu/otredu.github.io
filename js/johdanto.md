@@ -24,9 +24,4 @@ Jotta esimerkit toimivat käytä uusinta Chrome-selainta, joka tukee hyvin ES6:s
 #### Codesandbox
 [Codesandbox.io](https://codesandbox.io/) on verkossa toimiva ohjelmointiympäristö, jonka avulla on helppo kokeilla selainohjelmointia. Toimii myös ilman tilin luomista. Käytämme tätä mahdollisesti kurssin loppupuolella.
 
-### Materiaalia
 
-- JavaScript (ohjeita): [MDM JS Guide](https://developer.mozilla.org/bm/docs/Web/JavaScript)
-- JavaScript (manuaali): [MDM JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
-- DOM-rajapinta (manuaali): [MDM DOM interface](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-- JavaScript-kirja: [Eloquent JavaScript](https://eloquentjavascript.net/)
