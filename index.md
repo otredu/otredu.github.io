@@ -5,6 +5,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 
 ### Materiaalit syksy 2021
 
+- [Orientaatio](./orientaatio/index.html)
 - [HTML ja CSS](./html-css/index.html)
 - [JS](./js/index.html)
 - [Testaaminen](./testaus/index.html)
