@@ -5,10 +5,10 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 
 ### Materiaalit syksy 2021
 
+- [HTML ja CSS](./html-css/index.html)
+- [JS](./js/index.html)
 - [Testaaminen](./testaus/index.html)
 - [React](./react/index.html)
-- [JS](./js/index.html)
-- [HTML ja CSS](./html-css/index.html)
 
 - [Github](./github/index.html)
 - [VSCode](./vscode/index.html)
