@@ -10,6 +10,8 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 - [Testaaminen](./testaus/index.html)
 - [React](./react/index.html)
 
+### Ohjeita
+
 - [Github](./github/index.html)
 - [VSCode](./vscode/index.html)
 - [Docker](./docker/index.html)
