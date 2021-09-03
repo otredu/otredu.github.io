@@ -30,11 +30,15 @@ Tee apufunktio, joka saa parametrina puhelinnumeron ja tarkistaa sen muodon ja t
 - mahdolliset sulut poistetaan
 - puhelinnumeron pituuden tulee olla välillä 3-20
 
-Testaa funktion toiminta erilaisilla syötteillä.
+Testaa funktion toiminta erilaisilla syötteillä. Jos numero ei ole oikeaa muotoa, heitä poikkeus, muussa tapauksessa palauta tarkistettu ja muokattu numero.
+
+*Vinkki 1:* Käytä numeron tarkistamiseen *regex*:iä ja *match*:iä, testaa tekemäsi *regex*-lauseke jollain online-testerillä (esim. [tällä](https://www.regextester.com/)).
+
+*Vinkki 2:* Merkkijonojen etsimiseen ja korvaamiseen (*replace*) voi käyttää myös *regexp*:iä. 
 
 ### Tehtävä 2
 
-Tee funktio, joka palauttaa uuden yhteystieto-olion (contact), jossa on seuraavat kentät:
+Tee funktio, joka saa henkilötiedot erillisinä parametreina ja palauttaa uuden yhteystieto-olion (contact) seuravilla kentillä:
 
 - firstname
 - lastname
@@ -44,7 +48,9 @@ Vain etunimi ja sukunimi ovat pakollisia kenttiä (heittää virheen, jos ei ole
 
 Testaa funktion toiminta erilaisilla syötteillä.
 
-Käytä testaukseen "equal" tai "strictequalt" -vertailua (toBe ei toimi olion kanssa).
+*Vinkki 1:* Käytä testaukseen "equal" tai "strictequalt" -vertailua (toBe ei toimi olion kanssa).
+
+*Vinkki 2:* Käytä *catch-try* -rakennetta puhelinnumeron testaamiseen. 
 
 ### Tehtävä 3
 
@@ -54,11 +60,15 @@ Testaa funktion toiminta erilaisilla syötteillä.
 
 ### Tehtävä 4
 
-Tee kolme yhteystieto-oliota sisältävä puhelinluettelo-taulukko (phonebook). Luo oliot tehtävässä 2 luodun funktion avulla.
+Tee testidataksi vähintään kolme yhteystieto-oliota sisältävä puhelinluettelo-taulukko eli array (phonebook). Voit käyttää testidatan luomiseen tehtävässä 2 tehtyä funktiota.
 
 Tee funktio, joka palauttaa puhelinluettelossa olevien henkilöiden nimet ja puhelinnumerot HTML-listana eli <ul></ul> - tägien sisälle luotuina, käytä apuna tehtävän 3 funktiota.
 
 Testaa funktion toiminta erilaisilla syötteillä.
+
+*Vinkki 1:* Käytä taulukon iterointiin *map*:ia.
+
+*Vinkki 2:* "map is not a function" tarkoittaa sitä, ennen pistettä ei ole taulukkoa (array).
 
 ### Tehtävä 5
 
@@ -66,17 +76,17 @@ Tee funktio, joka etsii puhelinluettelosta nimen perusteella puhelinnumeron ja p
 
 Testaa funktion toiminta erilaisilla syötteillä.
 
----
-
-Käytä tästä eteenpäin testipuhelinluetteloa, jonka yhteystiedoissa on uniikit id-kentät.
-
----
+*Vinkki:* toLowerCase()
 
 ### Tehtävä 6
 
-Tee funktio, jonka avulla annetun puhelinluettelon yhteystieto voidaan päivittää annetun id:n ja uuden puhelinnumeron avulla. Puhelinnumeron on oltava validi. Funktio palauttaa uuden päivitetyn puhelinluettelon tai heittää virheen, jos yhteystietoa ei löydy.
+Käytä tästä eteenpäin testipuhelinluetteloa, jonka yhteystiedoissa on uniikit *id*-kentät. Korjaa tehtävän 2 funktiota niin, että se luo myös *id*-kentän. Tee se niin, että uniikki *id*-kenttä luodaan vaikka sitä ei annetakaan parametrina.
+
+Tee funktio, jonka avulla annetun puhelinluettelon yhteystieto voidaan päivittää annetun id:n ja uuden puhelinnumeron avulla. Uuden puhelinnumeron on oltava validi. Funktio palauttaa uuden päivitetyn puhelinluettelon tai heittää virheen, jos yhteystietoa ei löydy.
 
 Testaa funktion toiminta erilaisilla syötteillä.
+
+*Vinkki:* Käytä *id*:n luomiseen muuttujaa, joka kasvaa jokaisella kutsulla yhdellä.
 
 ### Tehtävä 7
 
@@ -84,11 +94,15 @@ Tee funktio, joka poistaa yhteystiedon puhelinluettelosta, kun yhteystiedon etun
 
 Testaa funktion toiminta erilaisilla syötteillä.
 
+*Vinkki:* filter
+
 ### Tehtävä 8
 
 Tee funktio, joka tulostaa puhelinluettelon sukunimen mukaisesti aakkosjärjestyksessä HTML-listana (käytä apuna tehtävän 4 funktiota).
 
 Testaa funktion toiminta erilaisilla syötteillä.
+
+*Vinkki:* sort
 
 ### Tehtävä 9
 
@@ -96,11 +110,16 @@ Tee funktio, joka käy läpi puhelinluettelon, ja lisää yhteystieto-olioon ken
 
 Testaa funktion toiminta.
 
+*Vinkki:* map
+
 ### Tehtävä 10
 
-Tee funktio, joka kasvattaa *missed calls* kenttää yhdellä, kun yhteystiedon id annetaan parametrina. Funktio palauttaa uuden puhelinluettelon.
+Tee funktio, joka kasvattaa *missed calls* kenttää yhdellä, kun yhteystiedon id annetaan parametrina. Funktio palauttaa uuden puhelinluettelon. Alkuperäisiin olioihin ei saa tehdä muutoksia.
 
 Testaa funktion toiminta.
+
+*Vinkki 1:* map
+*Vinkki 2:* {...contact}
 
 ### Tehtävä 11
 
@@ -108,9 +127,12 @@ Tee funktio, joka laskee kaikista puhelinluettelon yhteystiedoista, montako *mis
 
 Testaa funktion toiminta.
 
+*Vinkki 1:* map
+*Vinkki 2:* reduce
+
 ### Tehtävä 12
 
-Tee funktio, joka laskee yhden puhelun keston, kun se saa parametrina *callLog*-olion, joka kuvaavaa yhden soitetun puhelun tietoja:
+Tee funktio, joka laskee yhden puhelun keston (sekunteina), kun se saa parametrina *callLog*-olion, joka kuvaavaa yhden soitetun puhelun tietoja:
 
 - yhteystiedon id johon soitettu
 - puhelun alkuaika *datetime*
@@ -124,6 +146,12 @@ Tee funktio, joka laskee kaikkien soitettujen puheluiden yhteiskeston sekunteina
 
 Testaa funktion toiminta.
 
+*Vinkki 1:* map
+*Vinkki 2:* reduce
+
 ### Tehtävä 14
 
 Tee funktio, joka etsii niiden henkilöiden nimet, joiden on *missed calls* -kentässä on nollasta poikkeava lukuarvo ja tulostaa tiedot HTML-listana (esim. <li>Etunimi Sukunimi, 6</li>).
+
+*Vinkki 1:* filter
+*Vinkki 2:* map
