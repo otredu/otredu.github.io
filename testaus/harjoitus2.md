@@ -48,7 +48,7 @@ Vain etunimi ja sukunimi ovat pakollisia kenttiä (heittää virheen, jos ei ole
 
 Testaa funktion toiminta erilaisilla syötteillä.
 
-*Vinkki 1:* Käytä testaukseen "equal" tai "strictequalt" -vertailua (toBe ei toimi olion kanssa).
+*Vinkki 1:* Käytä testaukseen "toEqual" tai "toStrictEqualt" -vertailua (toBe ei toimi olion kanssa).
 
 *Vinkki 2:* Käytä *catch-try* -rakennetta puhelinnumeron testaamiseen. 
 
@@ -76,7 +76,8 @@ Tee funktio, joka etsii puhelinluettelosta nimen perusteella puhelinnumeron ja p
 
 Testaa funktion toiminta erilaisilla syötteillä.
 
-*Vinkki:* toLowerCase()
+*Vinkki 1:* find
+*Vinkki 2:* toLowerCase()
 
 ### Tehtävä 6
 
