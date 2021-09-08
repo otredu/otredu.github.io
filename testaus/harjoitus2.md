@@ -77,6 +77,7 @@ Tee funktio, joka etsii puhelinluettelosta nimen perusteella puhelinnumeron ja p
 Testaa funktion toiminta erilaisilla syötteillä.
 
 *Vinkki 1:* find
+
 *Vinkki 2:* toLowerCase()
 
 ### Tehtävä 6
@@ -120,6 +121,7 @@ Tee funktio, joka kasvattaa *missed calls* kenttää yhdellä, kun yhteystiedon 
 Testaa funktion toiminta.
 
 *Vinkki 1:* map
+
 *Vinkki 2:* {...contact}
 
 ### Tehtävä 11
@@ -129,6 +131,7 @@ Tee funktio, joka laskee kaikista puhelinluettelon yhteystiedoista, montako *mis
 Testaa funktion toiminta.
 
 *Vinkki 1:* map
+
 *Vinkki 2:* reduce
 
 ### Tehtävä 12
@@ -148,6 +151,7 @@ Tee funktio, joka laskee kaikkien soitettujen puheluiden yhteiskeston sekunteina
 Testaa funktion toiminta.
 
 *Vinkki 1:* map
+
 *Vinkki 2:* reduce
 
 ### Tehtävä 14
@@ -155,4 +159,5 @@ Testaa funktion toiminta.
 Tee funktio, joka etsii niiden henkilöiden nimet, joiden on *missed calls* -kentässä on nollasta poikkeava lukuarvo ja tulostaa tiedot HTML-listana (esim. <li>Etunimi Sukunimi, 6</li>).
 
 *Vinkki 1:* filter
+
 *Vinkki 2:* map
