@@ -10,10 +10,7 @@
 
 - [Käytettävyys](kaytettavyys.html)
 
-- Toiminnallinen määrittely
-    - käyttöliittymä
-    - tietokanta
-    - järjestelmä
+- [Toiminnallinen](toiminnallinen.md)
 
 - Ketterä ohjelmistokehitys
     - versionhallinta
@@ -22,4 +19,6 @@
 - Testaus
     - systeemitestaus
     - yksikkötestaus
+
+- [Ohjelmiston dokumentointi](ohjelmiston_dokumentointi.md)
     
