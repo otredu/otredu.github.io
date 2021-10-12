@@ -12,6 +12,6 @@
 
 - [Toiminnallinen suunnittelu](toiminnallinen.md)
 
-- [Projetityöskentely](projektityoskentely.md)
+- [Projektityöskentely](projektityoskentely.md)
 
 - [Ohjelmiston dokumentointi](ohjelmiston_dokumentointi.md)
