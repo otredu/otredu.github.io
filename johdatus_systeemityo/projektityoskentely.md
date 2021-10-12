@@ -6,7 +6,7 @@ Kaikki projektin koodi, projektin seuranta sekä siihen liittyvät dokumentit ta
 
 Koodin main/master - haara suojataan niin, että siihen ei voi push:ata ilman, että joku toinen ryhmästä katselmoin koodin ensin. Jokainen työskentelee siis omassa haarassaan (branch) ja tuo koodia päähaaraan Pull Requestin (PR) avulla.
 
-[Lukekaa ohjeet projektirepon käyttöön](https://otredu.github.io/github/projektityo.html) ja harjoittelkaa PR:ien ja merge conflictien tekemistä readme.md - tiedoston avulla.
+Lukekaa [ohjeet projektirepon käyttöön](https://otredu.github.io/github/projektityo.html) ja harjoittelkaa PR:ien ja merge conflictien tekemistä readme.md - tiedoston avulla.
 
 ### Esitutkimusten katselmointi ja toteutettavan suunnitelman valinta
 
