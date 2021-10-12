@@ -8,4 +8,4 @@ Harjoitukset (Palautus Github-classroomiin):
 
 1. Benchmarking - harjoitus [ohje](../docs/benchmarking_harjoitustyo.pdf)
 
-2. Käytettävyystestaus - harjoitus [ohje](../docs/kaytettavyystestaus_ohje.pdf), [raportin malli](../docs/kaytettavyystestaus_ohje_esim.pdf)
+2. Käytettävyystestaus - harjoitus [ohje](../docs/kaytettavyystestaus_ohje.pdf), [raportin malli](../docs/kaytettavyystestaus_raportti_esim.pdf)
