@@ -13,17 +13,7 @@ Tutustu markdown-syntaksiin:
 
 ### Dokumentointi
 
-Dokumentoinnin tarkoitus on antaa nopeasti yleissilmäys ohjelmiston toteutuksesta, jotta joku muu pystyisi jatkamaan ohjelmiston kehittämistä hallitusti, eikä rikkoisi aikaisemmin tehtyjä raktaisuja.
-
-Dokumentissa olisi hyvä kuvata:
-
-- toteutetut user storyt (kuvia käyttöliittymästä)
-
-- tietokannan rakenne (kuva, josta käy ilmi taulut ja niiden relaatiot)
-
-- ohjelmiston arkkitehtuurista (kuva, josta käy ilmi koodimoduulit sekä niiden suhteet)
-
-- moduulien toiminnallisuus sekä rajapinnat (sekvenssidiagrammi)
+Dokumentoinnin tarkoitus on antaa nopeasti yleissilmäys ohjelmiston toteutuksesta, jotta joku muu pystyisi jatkamaan ohjelmiston kehittämistä hallitusti, eikä rikkoisi aikaisemmin tehtyjä ratkaisuja.
 
 ### Ohjelmistoarkkitehtuuri (SW Architecture)
 
@@ -46,3 +36,19 @@ Tässä sekvenssidiagrammiesimerkki rekisteröitymisestä:
 ### Tietokannan tallentamainen
 
 Muistakaa tallentaa versionhallintaan myös tietokanta-dump (SQL-koodi tietokannan luomiseen). Järjestelmän pystyttäminen ja jatkokehittäminen ei onnistu ilman oikeanlaista tietokantaa.
+
+---
+
+Tehtävä:
+
+Tee markdown:in avulla projektirepoon kuvaus yhden *user story*:n toteuttamisesta. 
+
+Esittele markdown-dokumentissa:
+
+- toteuttu user story (kuvia käyttöliittymästä)
+
+- tietokannan rakenne (kuva, josta käy ilmi taulut ja niiden relaatiot)
+
+- ohjelmiston arkkitehtuuri (kuva, josta käy ilmi koodimoduulit sekä niiden suhteet)
+
+- moduulien toiminnallisuus sekä rajapinnat (sekvenssidiagrammi)
