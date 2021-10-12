@@ -10,7 +10,7 @@ Harjoitukset:
 
 1. Käsitteanalyysi
 
-    Tutustu [projektikuvaukseen](../docs/asunnonvuokraus.pdf) ja tee järjestelmään liittyvistä käsitteistä käsitekartta esim. [Bubbl.us](http://bubbl.us) ohjelman avulla. Kokoa käsitteistä sanasto. [Leenan esimerkki](../docs/kasitekartta.pdf)
+    Tutustu [projektikuvaukseen](../docs/asunnonvuokraus.pdf) ja tee järjestelmään liittyvistä käsitteistä käsitekartta esim. [Bubbl.us](http://bubbl.us) ohjelman avulla. Kokoa käsitteistä sanasto. [lentopalloturnauksen käsitekartta](../docs/kasitekartta.pdf)
 
 2. Käyttötapaukset
 
@@ -53,4 +53,4 @@ Harjoitukset:
 
 7. Vertaisarviointi
 
-    Arvioi toisen opiskelijan tekemä esitutkimus, käytä tätä [pohjaa](../docs/vertaisarviointi.dotx)
+    Arvioi toisen opiskelijan tekemä esitutkimus, käytä tätä [pohjaa](../docs/vertaisarviointi.docx)
