@@ -33,7 +33,7 @@ Sprintin toiminallisuus testataan jokaisen sprintin lopussa. Jokainen kirjoittaa
 
 [Ohjeet](../docs/testitapaukset_ohje.pdf) testitapausten ja testausraportin laatimiseen Exceliin.
 
-Voitte käyttää tätä [pohjaa](../docs/esim_testitapaukset.pdf) mallina.
+Voitte käyttää tätä [pohjaa](../docs/testitapaukset_esim.pdf) mallina.
 
 HUOM! jos useampi ihminen tekee samaan tiedostoon testitapauksia ja suorittaa testausta, lisätkäa pohjaan sarakkeet *testaaja* ja *testaus pvm*!
 

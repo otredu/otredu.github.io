@@ -31,7 +31,7 @@ Ohjelmiston arkkitehtuurin tarkoitus on kuvata miten koodi on jaettu moduuleihin
 
 Arkkitehtuuri kuvasta selviää ohjelmiston sisäinen rakenne ja riippuvuudet (*dependencies*) sekä ohjelmiston käyttämät ulkoiset palvelut (kuten tietokanta). Riippuvuudet esitetään yleensä nuolten avulla (e.g. moduuli vaatii toisen moduuliin toimiakseen oikein).
 
-Tässä arkkitehtuuriesimerkki rekisteröitymiseen tarvittavista moduuleista:
+Tässä arkkitehtuuriesimerkki rekisteröitymiseen tarvittavista moduuleista (MVC-malli):
 
 ![SW Architecture](./img/arkkitehtuuri.png)
 

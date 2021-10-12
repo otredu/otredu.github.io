@@ -10,7 +10,7 @@ Harjoitukset:
 
 1. Käsitteanalyysi
 
-    Tutustu [projektikuvaukseen](http://www.leeniemi.net/syst19/materiaali/Asunnonvuokraus.pdf) ja tee järjestelmään liittyvistä käsitteistä käsitekartta esim. [Bubbl.us](http://bubbl.us) ohjelman avulla. Kokoa käsitteistä sanasto. [Leenan esimerkki](../docs/kasitekartta.pdf)
+    Tutustu [projektikuvaukseen](../docs/asunnonvuokraus.pdf) ja tee järjestelmään liittyvistä käsitteistä käsitekartta esim. [Bubbl.us](http://bubbl.us) ohjelman avulla. Kokoa käsitteistä sanasto. [Leenan esimerkki](../docs/kasitekartta.pdf)
 
 2. Käyttötapaukset
 
