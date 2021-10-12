@@ -70,6 +70,7 @@ Tehkää Excel-pohja tuntiseurantaa varten, ja jakakaa se ryhmän jäsenille.
 Voitte käyttää tätä [pohjaa](../docs/tyoajanseuranta.xlsx) tuntien seurantaan (muokatkaa pohjaa sopivaksi).
 
 Kirjatkaan tehdyt tunnit projektin tuntiseurantalistaan joka päivä.
+
 ---
 
 ### Daily meetings
