@@ -16,8 +16,9 @@ Ladatkaa aikaisemmin tekemänne esitutkimukset projektirepoon, katselmoikaa ne j
 
 Ketterässä ohjelmistokehityksessä vaatimukset kirjoitetaan user storyjen muotoon. Siinä kerrotaan tiivistetysti mitä hyötyä ohjelman toiminnosta on loppukäyttäjälle (yritykselle).
 
-    * As <ROLE> I want <ACTION> so that <BUSINESS VALUE> *
-    * As A STUDENT I want to SEARCH FOR APARTMENT so that I CAN RENT AN APARTMENT * 
+    As <ROLE> I want <ACTION> so that <BUSINESS VALUE>
+
+    As A STUDENT I want to SEARCH FOR APARTMENT so that I CAN RENT AN APARTMENT
 
 Projektiryhmä voi päättää kirjoitatteko user story:t suomeksi vai englanniksi. Projektin *backlog*:iin kirjoitetaan kuitenkin projektin alussa KAIKKI mahdolliset user story:t jotka alustavien vaatimusten pohjalta on identifioitu. User storyt kirjoitetaan projektiseinälle github:iin.
 
