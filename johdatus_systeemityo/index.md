@@ -6,19 +6,12 @@
 ---
 ### Sisältö
 
-- [Esitutkimus](esitutkimus.html)
+- [Käytettävyys](kaytettavyys.md)
 
-- [Käytettävyys](kaytettavyys.html)
+- [Esitutkimus](esitutkimus.md)
 
-- [Toiminnallinen](toiminnallinen.md)
+- [Toiminnallinen suunnittelu](toiminnallinen.md)
 
-- Ketterä ohjelmistokehitys
-    - versionhallinta
-    - sprintit
-
-- Testaus
-    - systeemitestaus
-    - yksikkötestaus
+- [Projetityöskentely](projektityoskentely.md)
 
 - [Ohjelmiston dokumentointi](ohjelmiston_dokumentointi.md)
-    

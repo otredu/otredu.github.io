@@ -1,4 +1,4 @@
-## Ohjelmisto dokumentointi
+## Ohjelmiston dokumentointi
 
 Projektin lopuksi dokumentoi toteuttamasi user story markdown:in avulla.
 
@@ -8,7 +8,7 @@ Markdown:in avulla voi nopeasti luoda web-sivuja, joten niitä on kätevä käyt
 
 Tutustu markdown-syntaksiin:
 
-1. [cheat-sheet](https://www.markdownguide.org/
+1. [cheat-sheet](https://www.markdownguide.org/)
 2. [markdown syntax](https://www.markdownguide.org/basic-syntax/)
 
 ### Dokumentointi
@@ -17,13 +17,13 @@ Dokumentoinnin tarkoitus on antaa nopeasti yleissilmäys ohjelmiston toteutukses
 
 Dokumentissa olisi hyvä kuvata:
 
-    - toteutetut user storyt (kuvia käyttöliittymästä)
+- toteutetut user storyt (kuvia käyttöliittymästä)
 
-    - tietokannan rakenne (kuva, josta käy ilmi taulut ja niiden relaatiot)
-    
-    - ohjelmiston arkkitehtuurista (kuva, josta käy ilmi koodimoduulit sekä niiden suhteet)
-    
-    - moduulien toiminnallisuus sekä rajapinnat (sekvenssidiagrammi)
+- tietokannan rakenne (kuva, josta käy ilmi taulut ja niiden relaatiot)
+
+- ohjelmiston arkkitehtuurista (kuva, josta käy ilmi koodimoduulit sekä niiden suhteet)
+
+- moduulien toiminnallisuus sekä rajapinnat (sekvenssidiagrammi)
 
 ### Ohjelmistoarkkitehtuuri (SW Architecture)
 
@@ -41,4 +41,4 @@ Sekvenssidiagrammin avulla voidaan kuvata arkkitehtuurikuvassa kuvattujen moduul
 
 Tässä sekvenssidiagrammiesimerkki rekisteröitymisestä:
 
-![sekvenssidiagrammi](./img/register_sekvenssi_MVC.PNG)
+![sekvenssidiagrammi](./img/register_sekvenssi_mvc.PNG)
