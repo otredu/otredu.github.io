@@ -1,56 +1,112 @@
-## Projektityöskentely
+## Projektityöskentely - ryhmätyö
+
+Tässä harjoituksessa toteutetaan asunnonvuokrausjärjestelmästä 1-2 sprinttiä ryhmätyönä.
 
 ### Projektirepo
 
-Kaikki projektin koodi, projektin seuranta sekä siihen liittyvät dokumentit tallennetaan projektin repo:on (projektiryhmän ja projektirepon kutsulinkin saat opettajalta).
+Kaikki projektin koodi, projektin seuranta sekä siihen liittyvät dokumentit tallennetaan projektin repo:on.
 
-Koodin main/master - haara suojataan niin, että siihen ei voi push:ata ilman, että joku toinen ryhmästä katselmoin koodin ensin. Jokainen työskentelee siis omassa haarassaan (branch) ja tuo koodia päähaaraan Pull Requestin (PR) avulla.
+Koodin main/master - haara suojataan niin, että siihen ei voi push:ata ilman, että joku toinen ryhmästä katselmoin koodin ensin. Jokainen työskentelee siis omassa haarassaan (*branch*) ja tuo koodia päähaaraan *Pull Request*:in (PR) avulla.
 
-Lukekaa [ohjeet projektirepon käyttöön](https://otredu.github.io/github/projektityo.html) ja harjoittelkaa PR:ien ja merge conflictien tekemistä readme.md - tiedoston avulla.
+---
+Tehtävä 1:
 
-### Esitutkimusten katselmointi ja toteutettavan suunnitelman valinta
+- Liittykää projektirepoon (kutsulinkki Moodlessa).
+- Lukekaa [ohjeet projektirepon käyttöön](https://otredu.github.io/github/projektityo.html), suojatkaa repo ja harjoittelkaa ryhmän kanssa *branch*:ien, *PR*:ien ja *merge conflict*:ien tekemistä *readme.md* - tiedoston avulla.
+
+---
+
+### Projektin aloitus
+
+Projektin alussa ryhmä pitää palaverin, jossa valitaan toteutettavat suunnitelmat.
+
+---
+
+Tehtävä 2:
 
 Ladatkaa aikaisemmin tekemänne esitutkimukset projektirepoon, katselmoikaa ne ja valitkaa toteutettava versio. Valitkaa myös tietokantasuunnitelma, jota lähdette toteuttamaan.
 
+--- 
 ### Projektin backlog
 
-Ketterässä ohjelmistokehityksessä vaatimukset kirjoitetaan user storyjen muotoon. Siinä kerrotaan tiivistetysti mitä hyötyä ohjelman toiminnosta on loppukäyttäjälle (yritykselle).
+Ketterässä ohjelmistokehityksessä vaatimukset kirjoitetaan *user story*:jen muotoon. Siinä kerrotaan tiivistetysti mitä hyötyä ohjelman toiminnosta on loppukäyttäjälle (yritykselle).
 
     As <ROLE> I want <ACTION> so that <BUSINESS VALUE>
 
-    As A STUDENT I want to SEARCH FOR APARTMENT so that I CAN RENT AN APARTMENT
+    As A STUDENT I want to SEARCH FOR APARTMENT so that I CAN RENT IT
 
-Projektiryhmä voi päättää kirjoitatteko user story:t suomeksi vai englanniksi. Projektin *backlog*:iin kirjoitetaan kuitenkin projektin alussa KAIKKI mahdolliset user story:t jotka alustavien vaatimusten pohjalta on identifioitu. User storyt kirjoitetaan projektiseinälle github:iin.
+Projektiryhmä voi päättää kirjoitatteko *user story*:t suomeksi vai englanniksi. Projektin *backlog*:iin kirjoitetaan projektin alussa KAIKKI mahdolliset user story:t jotka alustavien vaatimusten pohjalta on identifioitu.
+
+---
+
+Tehtävät 3:
+
+Luokaa projektin *github*-repoon uusi *Project* ja tehkää siihen oheisen kuvan mukainen projektiseinä. Kirjoittakaan projektiseinälle kaikki mahdolliset vuokraussivuston *user story*:t kohtaan *project backlog*.
 
 ![projektiseinä](./img/projektiseina.PNG)
 
+---
 ### Sprintin backlog
 
-Ensimmäisen sprintin backlog:iin valitaan sellaiset user story:t, joiden toteuttaminen on tärkeintä. Tässä vaiheessa siis priorisoidaan user storyjä. Niitä pitäisi valita sopiva määrä, että kaikilla projektitiimissä olisi riittävästi tekemistä. User storyt muutetaan *issue*:ksi, jolloin sille voi valita toteuttajan (*assign*). Kun sprintin sisältö on valittu, siitä ei poisteta mitään, eikä siihen lisätä mitään. Jos joku saa omat hommansa valmiiksi ennen muita, hän auttaa muita kunnes koko sprintin sisältö on valmiina ja testattuna.
+Ensimmäisen sprintin backlog:iin valitaan sellaiset *user story*:t, joiden toteuttaminen on tärkeintä. Tässä vaiheessa siis priorisoidaan *user story*:jä. Niitä pitäisi valita sopiva määrä, että kaikilla projektitiimissä olisi riittävästi tekemistä. Kun sprintin sisältö on valittu, siitä ei poisteta mitään, eikä siihen lisätä mitään. Jos joku saa omat hommansa valmiiksi ennen muita, hän auttaa muita kunnes koko sprintin sisältö on valmiina ja testattuna.
 
+---
+
+Tehtävä 4.
+
+Valitkaa ensimmäisen sprintin sisältö (hinatkaa *user story* kohtaan *Current sprint*). Muuttakaa *user story*:t *issue*:ksi, ja valitkaa niille toteuttaja (avaa *issue* ja valitse *assign*).
+
+---
+### Tuntiseuranta
+
+Projektissa kirjataan tunteja, jotta voidaan laskuttaa oikeaa asiakasta tehdystä työstä. Tuntiraportteja voidaan käyttää myös *sprinttien parempaan suunnitteluun jatkossa*. 
+
+---
+
+Tehtävä 5.
+
+Tehkää Excel-pohja tuntiseurantaa varten, ja jakakaa se ryhmän jäsenille.
+
+Voitte käyttää tätä [pohjaa](../docs/tyoajanseuranta.xlsx) tuntien seurantaan (muokatkaa pohjaa sopivaksi).
+
+Kirjatkaan tehdyt tunnit projektin tuntiseurantalistaan joka päivä.
+---
+
+### Daily meetings
+
+Jokaisen päivän alussa pidetään lyhyt palaveri siitä miten hommat etenevät. Jos joku on jumissa häntä autetaan, palaverissa ratkotaan myös mahdolliset epäselvyydet *user story*:jen tulkinnassa. Jos joku on saanut user storyn valmiiksi se siirretään kohtaan *Done* ja katsotaan mitä seuraavaksi pitäisi tehdä.
+
+---
+
+Tehtävä 6.
+
+Kirjatkaa projektiseinälle päivittäin palaverien päätökset ja havainnot.
 ### Systeemitestaus
 
-Sprintin toiminallisuus testataan jokaisen sprintin lopussa. Jokainen kirjoittaa testitapaukset omalle/omille user storylleen yhteiseen testipohjaan.
+Sprintin toiminallisuus testataan jokaisen sprintin lopussa, jotta voidaan varmistua koodin toiminnasta.
 
-[Ohjeet](../docs/testitapaukset_ohje.pdf) testitapausten ja testausraportin laatimiseen Exceliin.
+---
+
+Tehtävä 7.
+
+Sprintin lopussa jokaisen toteuttama koodi integroidaan (PR:t ja merge) main/master-haaraan ja koodille suoritetaan systeemitestaus. Ennen testausta muista tehdä *pull*, että koneellasi on varmasti uusin versio koodista.
+
+Lukekaa ohjeet [systeemitestaukseen](../docs/testitapaukset_ohje.pdf) ja tehkää riittävästi testitapauksia sekä suorittakaa testit. Selkeintä on, että jokainen kirjoittaa testitapaukset omalle/omille user storylleen yhteiseen testipohjaan ja suorittaa testit.
 
 Voitte käyttää tätä [pohjaa](../docs/testitapaukset_esim.pdf) mallina.
 
 HUOM! jos useampi ihminen tekee samaan tiedostoon testitapauksia ja suorittaa testausta, lisätkäa pohjaan sarakkeet *testaaja* ja *testaus pvm*!
 
-### Tuntiseuranta
-
-Projektitunnit kirjataan projektin tuntiseurantalistaan joka päivä.
-
-Voit käyttää tätä [pohjaa](../docs/tyoajanseuranta.xlsx) tuntien seurantaan. Jokaiselle projektitiimin jäsenelle oma tiedosto tai yhteisessä Excelissä oma välilehti.
-
+---
 ### Sprintin lopuksi
-
-Sprintin lopuksi jokaisen toteuttama koodi integroidaan (PR:t ja merge) main/master-haaraan ja testataan (ks. yllä). Ennen testausta muita tehdä pull, että koneellasi on koneellesi uusin versio koodista.
 
 Sprintin jälkeen pidetään sprintin loppupalaveri ja käydä läpi se miten tiimi selviytyi tehtävistä ja syntyikö laadukasta koodia.
 
-Loppupalaverin muistiossa (Word) pitäisi olla vähintään:
+---
+
+Tehtävä 8.
+
+Laatikaa loppupalaverista muistio (Word) ja kirjatkaa siihen:
 
 - milloin sprint alkoi, milloin loppui
 - mitkä user storyt saatiin valmiiksi
@@ -59,6 +115,6 @@ Loppupalaverin muistiossa (Word) pitäisi olla vähintään:
 - onko syntynyt koodi laadukasta (ei bugeja, selkeä rakenne että siitä on hyvä jatkaa)
 - mitä teette paremmin seuraavalla kerralla
 
-Loppupalaverimuistio ja testitapaukset on hyvä tallentaa repon dokumenttikansioon.
+Tallentakaa loppupalaverimuistio sekä testausraportti projektin repoon dokumenttikansioon.
 
 Sitten valitsette seuraavan sprintin user story:t, jaatte työt jne...
