@@ -14,6 +14,18 @@ Tehtävä 1:
 - Liittykää projektirepoon (kutsulinkki Moodlessa).
 - Lukekaa [ohjeet projektirepon käyttöön](https://otredu.github.io/github/projektityo.html), suojatkaa repo ja harjoittelkaa ryhmän kanssa *branch*:ien, *PR*:ien ja *merge conflict*:ien tekemistä *readme.md* - tiedoston avulla.
 
+Kehitysympäristö:
+
+- Koululla työskennellessa repo kannattaa kloonata K-levylle, kotona haluamaasi paikkaan C-levylle
+
+- Koululla työskennellessä opettaja antaa projektiryhmälle yhteisen tietokannan opetuspalvelimelta (pääset siihen avaamalla selaimessa osoitteen //samarium/phpmyadmin), kotona voit käyttää XAMPP:in tietokantaa
+
+- *PHP development server* käynnistetään siinä kansiossa, jossa index.php sijaitsee kirjoittamalla terminaaliin (avaa selaimessa osoite localhost:8888):
+
+```cmd
+php -S localhost:8888
+```
+
 ---
 
 ### Projektin aloitus
