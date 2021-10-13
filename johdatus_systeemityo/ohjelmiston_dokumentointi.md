@@ -33,7 +33,7 @@ Tässä sekvenssidiagrammiesimerkki rekisteröitymisestä:
 
 ![sekvenssidiagrammi](./img/register_sekvenssi_mvc.PNG)
 
-### Tietokannan tallentamainen
+### Tietokannan tallentaminen
 
 Muistakaa tallentaa versionhallintaan myös tietokanta-dump (SQL-koodi tietokannan luomiseen). Järjestelmän pystyttäminen ja jatkokehittäminen ei onnistu ilman oikeanlaista tietokantaa.
 
