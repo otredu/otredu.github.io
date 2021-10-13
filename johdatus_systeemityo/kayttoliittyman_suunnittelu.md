@@ -4,4 +4,4 @@
 - [Typografia](../docs/typografia.pdf)
 - [Värit](../docs/varit.pdf)
 - [Logo- ja tyyliopas](../docs/logo_tyyliopas.pdf)
-- [Suunnittelun vaiheet](../docs/webvaiheistus.pdf)
+- [Suunnittelun vaiheet](../docs/suunnittelun_vaiheet.pdf)
