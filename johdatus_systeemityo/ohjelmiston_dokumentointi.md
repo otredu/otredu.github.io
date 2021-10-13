@@ -39,7 +39,7 @@ Muistakaa tallentaa versionhallintaan myös tietokanta-dump (SQL-koodi tietokann
 
 ---
 
-Tehtävä:
+Tehtävä 1:
 
 Tee markdown:in avulla projektirepoon kuvaus yhden *user story*:n toteuttamisesta.
 
@@ -52,3 +52,7 @@ Esittele markdown-dokumentissa:
 - ohjelmiston arkkitehtuuri (kuva, josta käy ilmi koodimoduulit sekä niiden suhteet, tämän voi piirtää vaikka Power Pointilla)
 
 - kuvaa moduulien toiminta sekä rajapinnat tämän yhden user storyn toteutuksessa (e.g. piirrä siitä sekvenssidiagrammi)
+
+Tehtävä 2.
+
+Ota tietokannasta SQL dump (PhpMyAdmin -> vie/export) ja tallenna se koodirepoon kansioon databasedump. Olisi hyvä, että aina ennen uusia muutoksia tietokannasta otettaisiin varmuuskopio ja tallennettaisiin versionhallintaan, sillä uudet muutokset voivat rikkoa vanhoja toimintoja.
