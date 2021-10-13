@@ -1,6 +1,6 @@
 ### Esitutkimus
 
-Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla. 
+Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla. Esitutkimuksen tarkoitus on ymmärtää asiakkaan vaatimukset paremmin luomalla ensimmäiset käyttöliittymäluonnokset (MockUp) sekä tieto- ja käsitemallit (ER-kaavio). Dokumentin pohjalta voidaan keskustella asiakkaan kanssa vaatimuksista ja saada palautetta tuotteen tarkempaa suunnittelua ja toteutusta varten.
 
 - Esitutkimusesimerkki [PDF](../docs/lentopalloturnaus_esitutkimus.pdf)
 
