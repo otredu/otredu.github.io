@@ -131,3 +131,7 @@ Laatikaa loppupalaverista muistio (Word) ja kirjatkaa siihen:
 Tallentakaa loppupalaverimuistio sekä testausraportti projektin repoon dokumenttikansioon.
 
 Sitten valitsette seuraavan sprintin user story:t, jaatte työt jne...
+
+Tehtävä 9.
+
+Esittele ryhmäsi kanssa opettajalle projektiseinä, väliraportit sekä aikaan saatu sivusto (ei tarvitse olla valmis, tässä harjoituksessa tehdään vain 1-2 sprinttiä). Jokaisen sprintin jälkeen sivuston pitää kuitenkin olla toimiva, siis valitut user storyt pitää tehdä alusta loppuun (käyttöliittymä, tietokantayhteys sekä tietokanta).
