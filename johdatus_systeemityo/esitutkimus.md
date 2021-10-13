@@ -30,7 +30,7 @@ Harjoitukset:
 
     Tutustu käyttöliittymän suunnitteluun [ohje](kayttoliittyman_suunnittelu.html).
 
-    Tee karkea hahmotelma sivuston käyttöliittymäideasta tietokoneella sekä mobiililaitteella. Tee nopeasti muutama suuntaa-antava käyttöliittymäkuva AdobeXD-ohjelmalla (ei toimivaa navigointia, ei tarvitse olla kaikkia kenttiä vielä, eikä kaikkia näkymiä).
+    Tee karkea hahmotelma sivuston käyttöliittymäideasta tietokoneella sekä mobiililaitteella. Tee nopeasti muutama suuntaa-antava käyttöliittymäkuva AdobeXD-ohjelmalla (ei toimivaa navigointia, ei tarvitse olla kaikkia kenttiä vielä, eikä kaikkia näkymiä, 3 PC näkymää ja 3 tärkeintä mobiilinäkymää).
     - AdobeXD - prototyyppiharjoitus [ohje](../docs/adobe_xd_demo.pdf)
 
 5. Tee käsiteanalyysin pohjalta ER-kaavio (chen)
