@@ -27,7 +27,7 @@ Tässä arkkitehtuuriesimerkki rekisteröitymiseen tarvittavista moduuleista (MV
 
 ### Sekvenssidiagrammi
 
-Sekvenssidiagrammin avulla voidaan kuvata arkkitehtuurikuvassa kuvattujen moduulien yhteistoimintaa. Tässä oikealle kulkeva nuoli kuvaa viestiä (esim. HTTP GET), funktiokutsua (esim. postController()) tai muunlaista interaktiota moduulien välillä. Vasemmalle kulkevat viestit ovat paluuarvoja tai response-viestejä (200OK). Aika kulkee ylhäältä alas.
+Sekvenssidiagrammin avulla voidaan kuvata arkkitehtuurikuvassa kuvattujen moduulien yhteistoimintaa. Tässä oikealle kulkeva nuoli kuvaa viestiä (esim. HTTP GET), funktiokutsua (esim. postregisterontroller()) tai muunlaista interaktiota moduulien välillä. Vasemmalle kulkevat viestit ovat paluuarvoja tai response-viestejä (200 OK). Aika kulkee ylhäältä alas (e.g. ylin viesti lähetetään ensin).
 
 Tässä sekvenssidiagrammiesimerkki rekisteröitymisestä:
 
@@ -35,20 +35,20 @@ Tässä sekvenssidiagrammiesimerkki rekisteröitymisestä:
 
 ### Tietokannan tallentaminen
 
-Muistakaa tallentaa versionhallintaan myös tietokanta-dump (SQL-koodi tietokannan luomiseen). Järjestelmän pystyttäminen ja jatkokehittäminen ei onnistu ilman oikeanlaista tietokantaa.
+Muistakaa tallentaa versionhallintaan myös tietokanta-dump (SQL-koodi tietokannan luomiseen). Järjestelmän pystyttäminen ja jatkokehittäminen myöhemmin ei onnistu ilman oikeanlaista tietokantaa.
 
 ---
 
 Tehtävä:
 
-Tee markdown:in avulla projektirepoon kuvaus yhden *user story*:n toteuttamisesta. 
+Tee markdown:in avulla projektirepoon kuvaus yhden *user story*:n toteuttamisesta.
 
 Esittele markdown-dokumentissa:
 
-- toteuttu user story (kuvia käyttöliittymästä)
+- toteutettu user story (ml. ruudunkaappauskuvia käyttöliittymästä)
 
-- tietokannan rakenne (kuva, josta käy ilmi taulut ja niiden relaatiot)
+- tietokannan rakenne (kuva, josta käy ilmi tietokantataulut sekä niiden relaatiot)
 
-- ohjelmiston arkkitehtuuri (kuva, josta käy ilmi koodimoduulit sekä niiden suhteet)
+- ohjelmiston arkkitehtuuri (kuva, josta käy ilmi koodimoduulit sekä niiden suhteet, tämän voi piirtää vaikka Power Pointilla)
 
-- moduulien toiminnallisuus sekä rajapinnat (sekvenssidiagrammi)
+- kuvaa moduulien toiminta sekä rajapinnat tämän yhden user storyn toteutuksessa (e.g. piirrä siitä sekvenssidiagrammi)
