@@ -32,13 +32,13 @@ git push -u origin master
 
 9. Tarkista saitko tiedoston siirtymään remote repoon (katso remote repoa github:in websivulla).
 
-10. Jatka esittelyn kirjoittamista. Kerro itsestäsi, lisää profiilikuva, käytä markdown:ia. Katso tästä ohjeita:
+10. Jatka esittelyn kirjoittamista. Kerro itsestäsi, lisää profiilikuva, käytä markdown:ia. 
 
 ## Markdown ohjeita:
 
-1. [cheat-sheet](https://www.markdownguide.org/
+1. [cheat-sheet](https://www.markdownguide.org/)
 2. [markdown syntax](https://www.markdownguide.org/basic-syntax/)
 
 ## Github-ohjeita
 
--[otredun github-ohjeet](https://otredu.github.io/github/)
+- [otredun github-ohjeet](https://otredu.github.io/github/)
