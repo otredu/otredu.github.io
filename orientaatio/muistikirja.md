@@ -61,6 +61,6 @@ Tee itsellesi ohjeet K-levyn liittämiseen (kotihakemisto palvelimella `\\TREDUV
 
 **K-levylle ei pääse kukaan muu kuin sinä (ja windows-adminit).**
 
-Tee itsellesi ohjeet Z-levyn liittämiseen kuten yllä (omat sisäverkon web-sivut palvelimella `\\samarium\2108TiviPOk02\etunimi.sukunimi`).
+Tee itsellesi ohjeet Z-levyn liittämiseen kuten yllä (omat sisäverkon web-sivut palvelimella `\\samarium\www\2108TiviPOk02\etunimi.sukunimi`).
 
 **!!! Samarium:ille laitetut web-sivut näkyvät Tampereen kaupungin opetusverkossa KAIKILLE. !!!**
