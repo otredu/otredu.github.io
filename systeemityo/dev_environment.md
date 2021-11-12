@@ -27,7 +27,14 @@ php -r "unlink('composer-setup.php');"
 
 ![php8 ext](./img/php8.png)
 
+### .env
+
+Tarkista että sinulla on *.env* olemassa. Tässä CI-versio.
+
+[.env](env.text)
+
 ### Ajele menemään
 
 > php/php composer install
+
 
