@@ -20,3 +20,5 @@ Materiaali täydentyy kurssin edetessä
 - [Projektityöskentely: toteutus](toteutus.html)
 
 - [CPANEL](../asiointipalveluprojekti/cpanel_php_migrations.html)
+
+- [Composer:in ja PHP8:n asentaminen](dev_environment.html)

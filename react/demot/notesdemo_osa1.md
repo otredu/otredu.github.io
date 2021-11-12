@@ -72,7 +72,7 @@ Jotta tietoa voidaan muokata, saadut tiedot tallennetaan *notes*-tilamuuttuujaan
 
 ```js
 import axios from 'axios'
-
+import {useState} = 
 const App = () => {
 // tilamuuttuja:    
 const [notes, setNotes] = useState([]);
