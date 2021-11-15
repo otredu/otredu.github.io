@@ -19,6 +19,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 - [Github](./github/index.html)
 - [VSCode](./vscode/index.html)
 - [Docker](./docker/index.html)
+- [PHP - ympäristön asentaminen](./systeemityo/dev_environment.html)
 
 ---
 ### Vanhemmat materiaalit
