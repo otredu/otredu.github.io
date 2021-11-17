@@ -1,20 +1,5 @@
 ## Harjoitukset 1
 
-### Demo 1
-
-Tee uusi React-sovellus ajamalla create-react-app:
-
-```cmd
-> cd c:/users/oma.nimi/documents/react/
-> npx create-react-app harj1
-> cd harj1
-> npm start
-```
-
-Tee uusi komponentti, joka tulostaa ruudulle ensimmäisellä tunnilla opitut uudet asiat ranskalaisina viivoina.
-
-Muuta komponentti ottamaan sen sisältämät tiedot parametreina eli propseina. Välitä tiedot app-tasolta komponenttitasolle. Tuo opitutasiat taulukkomuodossa ja käytä map:ia.
-
 ### Tehtävä 1a (DEMO)
 
 Tee komponentti, joka tulostaa ruudulle parametreina (props) annetut tiedot. Kutsu komponenttia kaksi kertaa eri tiedoilla.

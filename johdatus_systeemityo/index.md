@@ -1,27 +1,17 @@
 ## Johdatus systeemityöhön
 
-- Mitä on systeemityö [PDF](http://www.leeniemi.net/syst19/materiaali/syst19.pdf)
-- Kurssiprojekti, jota työstetään tunneilla [PDF](http://www.leeniemi.net/syst19/materiaali/Asunnonvuokraus.pdf)
+- Mitä on systeemityö [PDF](../docs/systeemityo_esittely.pdf)
+- Kurssiprojekti, jota työstetään tunneilla [PDF](../docs/asunnonvuokraus.pdf)
 
 ---
 ### Sisältö
 
-- [Esitutkimus](esitutkimus.html)
+- [Käytettävyys](kaytettavyys.md)
 
-- [Käytettävyys](kaytettavyys.html)
+- [Esitutkimus](esitutkimus.md)
 
-- Toiminnallinen määrittely
-    - käyttöliittymä
-    - tietokanta
-    - järjestelmä
+- [Toiminnallinen suunnittelu](toiminnallinen.md)
 
-- Ketterä ohjelmistokehitys
-    - versionhallinta
-    - sprintit
+- [Projektityöskentely](projektityoskentely.md)
 
-- Testaus
-    - systeemitestaus
-
-- Dokumentointi
-
-    
+- [Ohjelmiston dokumentointi](ohjelmiston_dokumentointi.md)

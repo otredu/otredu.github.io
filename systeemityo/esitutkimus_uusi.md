@@ -1,6 +1,6 @@
 ### Esitutkimus ja alustava suunnittelu
 
-Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla. Ymmärtää vaatimukset paremmin.
+Tehdään esitutkimus, jonka tarkoitus on määritellä tuote korkealla tasolla eli ymmärtää vaatimukset paremmin.
 
 ---
 1. Käyttötapaukset
@@ -34,7 +34,7 @@ käyttöliittymän toiminta näyttörakennekaavion avulla:
     - Tuoteidean
     - Tuotteen taustan ja hyödyt
     - Tavoitteet ja vaatimukset (toiminnalliset vaatimukset, ei-toiminnalliset vaatimukset)
-    - Projektin karkea aikataulu (8.1. 19.3. n.6h viikossa)
+    - Projektin karkea aikataulu
 
     Liitteiksi tulevat:
     - käyttötapauskaavio (UML use case)

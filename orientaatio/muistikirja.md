@@ -57,10 +57,10 @@ kopioi |
 
 3. Tehtävä
 
-Tee itsellesi ohjeet K-levyn liittämiseen (kotihakemisto palvelimella `\\TREDUVMSTOR02\etunimi.sukunimi`). Kaappaa kuva, josta näkyy miten K-levy liitetään (HUOM! verkkolevyn osoitteen pitää näkyä kokonaan). Käytä *snip-tool*:ia tai *print-screen*:iä.
+Tee itsellesi ohjeet K-levyn liittämiseen (kotihakemisto palvelimella `\\TREDUVMSTOR02\etunimi.sukunimi`). Kaappaa kuva, josta näkyy miten K-levy liitetään (HUOM! verkkolevyn osoitteen pitää näkyä kokonaan). Käytä *snip-tool*:ia tai *print-screen*:iä. Liitä kuva tiedostoon *windows.md*.
 
 **K-levylle ei pääse kukaan muu kuin sinä (ja windows-adminit).**
 
-Tee itsellesi ohjeet Z-levyn liittämiseen kuten yllä (omat sisäverkon web-sivut palvelimella `\\samarium\2108TiviPOk02\etunimi.sukunimi`).
+Tee itsellesi ohjeet Z-levyn liittämiseen kuten yllä (omat sisäverkon web-sivut palvelimella `\\samarium\www\2108TiviPOk02\etunimi.sukunimi`).
 
 **!!! Samarium:ille laitetut web-sivut näkyvät Tampereen kaupungin opetusverkossa KAIKILLE. !!!**
