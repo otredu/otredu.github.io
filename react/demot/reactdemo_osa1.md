@@ -63,7 +63,7 @@ const App = () => {
       <h1>React alkeet demoja</h1>
       </header>
     </div>
-    <div className="demo">
+    <div>
         Hei, olen {name} ja olen {age}-vuotta.
     </div>
   )
@@ -90,9 +90,13 @@ const CourseInfo = () => {
         </div>
     )
 }
+
+export default CourseInfo;
 ```
 
 Tuo komponentti *App*:iin (*import*) ja kutsu sitä *App*:n *return*:in sisältä. Vaikka React-komponentti on nuolifunktio, sitä ei kursuta kuin normaalia funktiota, syntaksi muistuttaa enemmän HTML:ää (\<CourseInfo \/>).
+
+HUOM! Et voi käyttää *import*:ia ellei komponetin tiedostossa ole sitä vastaavaa *export*:ia (*export default*:ia käytetään kun halutaan exportata vain yksi komponetti).
 
 ```jsx
 import CourseInfo from './components/CourseInfo.js';
@@ -105,7 +109,7 @@ const App = () => {
       <h1>React alkeet demoja</h1>
       </header>
     </div>
-    <div className="demo">
+    <div>
        <CourseInfo />
     </div>
   )
@@ -115,7 +119,7 @@ const App = () => {
 
 ### React-props:it
 
-Nyt tehty komponetti ei ole kovin hyödyllinen, se tulostaa aina samat tiedot. Muutetaan sitä niin, että se ottaa sisäänsä parametreja eli React-kielellä *props*:eja. Tiedot välitetään komponentille *App*:issa. *Props*-koostuu sen nimestä ()
+Nyt tehty komponetti ei ole kovin hyödyllinen, se tulostaa aina samat tiedot. Muutetaan sitä niin, että se ottaa sisäänsä parametreja eli React-kielellä *props*:eja. Tiedot välitetään komponentille *App*:issa. *Props*-koostuu sen nimestä esim. *teacher* ja arvosta joka sijoitetaan siihen *"Tiina Partanen"*.
 
 ```jsx
   <CourseInfo teacher = "Tiina Partanen"
@@ -124,5 +128,46 @@ Nyt tehty komponetti ei ole kovin hyödyllinen, se tulostaa aina samat tiedot. M
               material = "http://otredu.github.io" />
 ```
 
-Muuta komponentti ottamaan sen sisältämät tiedot parametreina eli propseina. Välitä tiedot app-tasolta komponenttitasolle. Tuo opitutasiat taulukkomuodossa ja käytä map:ia.
+Komponettia muutetaan niin, että se saa tarvitsemansa tiedot propseina:
 
+```jsx
+const CourseInfo = (props) => {
+    return (
+        <div>
+            <h1>{props.course}</h1>
+            <p>Teacher: {props.teacher}</p>
+            <a href={props.material}>Linkki materiaaliin</a>
+        </div>
+    )
+}
+```
+
+Koska *props*-on JS-olio, sen voi "räjäyttää auki" aaltosulkujen avulla eli käyttää *object destructuring*-notaatiota. Näin voi viitata suoraan propseihin ilman *props*-sanaa:
+
+```jsx
+const CourseInfo = ({course, teacher, material}) => {
+    return (
+        <div>
+            <h1>{course}</h1>
+            <p>Teacher: {teacher}</p>
+            <a href={material}>Linkki materiaaliin</a>
+        </div>
+    )
+}
+```
+
+### React ja css
+
+CSS-muotoilut toimivat React:in kanssa normaalisti, ainoa ero HTML:ään on se että *class*:in tilalle pitää kirjoittaa *className*.
+
+```jsx
+<div className="demo1">
+      <h1>{course}</h1>
+</div>
+```
+
+### Jatka loppuun itse:
+
+1. Käytä nyt tehtyä komponenttia tulostamaan kaksi kurssia eri props:ien arvoilla.
+
+2. Lisää css-tiedostoon muotoilut *demo1*-luokalle (ks. tehtävässä oleva kuva)
