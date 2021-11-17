@@ -1,10 +1,14 @@
 ## Harjoitukset 1
 
+Opiskele React-perusasiat ensin täältä:
+
 ### Tehtävä 1a (DEMO)
 
 Tee komponentti, joka tulostaa ruudulle parametreina (props) annetut tiedot. Kutsu komponenttia kaksi kertaa eri tiedoilla.
 
 ![tehtävä 1a](./img/course.PNG)
+
+- [Demo1 - ohjeet](./demot/reactdemo_osa1.md)
 
 ### Tehtävä 1b (DEMO)
 
