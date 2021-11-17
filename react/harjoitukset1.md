@@ -30,7 +30,7 @@ Tee komponentti, joka tulostaa ruudulle parametrina (props) annetun olioita sis�
 
 ![tehtävä 1c](./img/ostudents.PNG)
 
-### Tehtävä 2 
+### Tehtävä 2
 
 Tee komponentti, joka tulostaa ruudulle taulukon muodossa parametrina annetun listan (array) kurssiolioita.
 
@@ -44,13 +44,14 @@ Lisää sivulle kuvia, kuvatekstejä sekä kuvan otsikkoja. Tallenna yhteen kuva
 
 Vinkki: Tee komponentti, joka näyttää yhden kuvan tiedot ja toinen komponentti, joka näyttää kaikkien kuvien tiedot (kutsuu ensimmäistä map:in avulla).
 
-HUOM! Tämän tehtävän voi tehdä myös [maademon datalla](https://otredu.github.io/js/maademo.html).
+HUOM! Tämän tehtävän voi tehdä [maademon datalla](./maademo_data.html).
 
 ![maademo](../js/img/maa_step4.PNG)
 
 ---
-## Demo 3 
+## Demot 3
 
+- [React demo 3](./demot/reactdemo_osa3.html)
 
 ---
 ## Tehtävät (demon 3 jälkeen)

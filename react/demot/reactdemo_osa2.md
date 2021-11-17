@@ -69,6 +69,36 @@ App.js:
 import {CourseObject, Courses} from './components/Courses';
 ```
 
+### React:in key-props
+
+Jotta React voi optimoida rendeöintiä (kuvan muodotaminen ruudulle HTML:n ja CSS:n avulla), sille antaa JSX:lla silmukassa map:in avulla generoiduille elementeille ns. *key*-props. Tämä on helpointa toteutaa niin, että olioille lisätään uniikki *id*-kenttä, joka annetaan *key*-props:issa:
+
+```jsx
+const course1 = { 
+            id = 1,
+            teacher = "Tiina Partanen",
+            course = "React",
+            classroom = "S2041",
+            material = "http://otredu.github.io"
+}
+```
+
+```jsx
+ courses.map(c => <CourseObject key={c.id} course={c} />)
+```
+
+Jos tätä ei tee, selaimen konsolille ilmestyy seuraavanlaisia virheilmoituksia:
+
+```cmd
+Warning: Each child in a list should have a unique "key" prop
+```
+
+Jos *id*-kenttää ei ole, virheilmoituksen saa pois käyttämällä taulukon indeksiä, mikä _ei_ _ole_ _suositeltavaa_, koska indeksi muuttuu, jos esim. taulukon järjestää:
+
+```jsx
+ courses.map((c, i) => <CourseObject key={i} course={c} />)
+```
+
 ### Jatka loppuun itse:
 
 1. Tee oliomuotoisille kursseille oma CSS niin erotat paremmin mikä osa sivusta on demo1 ja mikä demo2.
