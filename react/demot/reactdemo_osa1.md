@@ -95,8 +95,14 @@ Tuo komponentti *App*:iin (*import*) ja kutsu sitä *return*:in sisältä:
 
 ```js
 import CourseInfo from './components/CourseInfo.js';
+```
 
-
+```js
+return(
+    <div>
+        <CourseInfo />
+    </div>
+) 
 ```
 
 

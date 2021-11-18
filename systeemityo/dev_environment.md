@@ -1,10 +1,31 @@
 ## Lokaalin ohjelmistoympäristön asentaminen
 
-Jos koneessasi ei ole oikeaa versiota php:sta, tai composerista voit asentaa ne itse:
+Jos koneessasi ei ole oikeaa versiota php:sta, php on mutta se ei käynnity tai composer puuttuu voit asentaa/konffata ne itse:
+
+### PHP:in asentaminen polkuun
+
+Avaa Windows:in käynnistysvalikosta *ympäristömuuttujat* (kirjoita hakukentään "ymp"), valitse *tilin ympäristömuuttujat*:
+
+![ympäristömuuttujat](./img/environment.png)
+
+Valitse *path*, ja *muokkaa*. 
+
+![ympäristömuuttujat](./img/environment1.png)
+
+Valitse *uusi* ja kirjoita siihen puuttuvat polku:
+
+```cmd
+c:\xampp\php
+```
 
 ### Composer:in asentaminen
 
-1. Aja terminaalissa seuraavat komennot (ks. [uusin Composer](https://getcomposer.org/download/)):
+1. 
+Asenna uusin [uusin Composer](https://getcomposer.org/download/). Valitse "asenna vain minulle".
+
+TAI
+
+Aja terminaalissa seuraavat komennot (ks. [uusin Composer](https://getcomposer.org/download/)):
 
 ```cmd
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -13,11 +34,11 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
-2. Tämä lataa tiedoston composer.phar. Voit uudelleen nimetä sen *composer.phar -> composer*
+Tämä lataa tiedoston composer.phar. Voit uudelleen nimetä sen *composer.phar -> composer*
 
-### PHP 8:n asentaminen
+### PHP 8:n asentaminen lokaalisti
 
-1. Lataa php.zip ja pura se projektikansioosi
+1. Lataa [php.zip](https://windows.php.net/download/) ja pura se projektikansioosi kansioon *php8*
 2. Uudelleen nimeä tiedosto *php.ini-development -> php.ini*
 3. Aktivoi seuraava rivi (poista ;)
 
@@ -35,6 +56,4 @@ Tarkista että sinulla on *.env* olemassa. Tässä CI-versio.
 
 ### Ajele menemään
 
-> php/php composer install
-
-
+> php8/php composer install
