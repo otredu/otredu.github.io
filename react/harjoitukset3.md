@@ -1,6 +1,6 @@
 ## Harjoitukset 3
 
-![uusi tarkempi demo täällä](./demot/notesdemo_osa1.html)
+[uusi tarkempi demo täällä](./demot/notesdemo_osa1.html)
 
 ### JSON-serverin asennus ja käynnistys
 
