@@ -1,24 +1,36 @@
 ## Harjoitukset 1
 
-### Tehtävä 1a (DEMO)
+---
+## Demot 1 ja 2:
 
-Tee komponentti, joka tulostaa ruudulle parametreina (props) annetut tiedot. Kutsu komponenttia kaksi kertaa eri tiedoilla.
+Opiskele React-perusasiat ensin joko opettajan johdolla tai tee nämä demot 1 ja 2:
+
+- [React demo 1](./demot/reactdemo_osa1.md)
+- [React demo 2](./demot/reactdemo_osa2.md)
+### React demo 1 tehtävänanto
+
+Tee komponentti, joka tulostaa ruudulle parametreina (props) annetut tiedot. Kutsu komponenttia kaksi kertaa eri tiedoilla. Muotoile näyttämään tältä:
 
 ![tehtävä 1a](./img/course.PNG)
+### React demo 2, tehtävänanto
 
-### Tehtävä 1b (DEMO)
+Toteuta sama toiminallisuus kuin demo1:ssa mutta käytä parametreina olioita, taulukoita sekä silmukkaa (map).
+
+---
+## Tehtävät (demojen 1 ja 2 jälkeen):
+### Tehtävä 1a
 
 Tee komponentti, joka tulostaa ruudulle parametreina (props) annetun opiskelija-olion tiedot. Kutsu komponenttia kerran, että näet että se toimii. Voit käyttää opiskelijan kuvana placeholder:ia (url).
 
 ![tehtävä 1b](./img/ostudent.PNG)
 
-### Tehtävä 1c (DEMO)
+### Tehtävä 1b
 
 Tee komponentti, joka tulostaa ruudulle parametrina (props) annetun olioita sisältävän taulukon tiedot. Tämä tehdään käyttämällä tehtävän 1b komponenttia ja map:ia.
 
 ![tehtävä 1c](./img/ostudents.PNG)
 
-### Tehtävä 2 (harjoitus)
+### Tehtävä 2
 
 Tee komponentti, joka tulostaa ruudulle taulukon muodossa parametrina annetun listan (array) kurssiolioita.
 
@@ -26,16 +38,23 @@ Vinkki: tee alikomponentti, joka tekee yhden rivin ja kutsu sitä map:in avulla.
 
 ![tehtävä 2](./img/kurssit.PNG)
 
-### Tehtävä 3 (harjoitus)
+### Tehtävä 3
 
 Lisää sivulle kuvia, kuvatekstejä sekä kuvan otsikkoja. Tallenna yhteen kuvaan liittyvät tiedot olioon esim. attribuutteihin: *imageurl*, *title* ja *description*. Tallenna kuvatietoja sisältävät oliot taulukkoon erilliseen tiedostoon.
 
 Vinkki: Tee komponentti, joka näyttää yhden kuvan tiedot ja toinen komponentti, joka näyttää kaikkien kuvien tiedot (kutsuu ensimmäistä map:in avulla).
 
-HUOM! Tämän tehtävän voi tehdä myös [maademon datalla](https://otredu.github.io/js/maademo.html). 
+HUOM! Tämän tehtävän voi tehdä [maademon datalla](./maademo_data.html).
 
 ![maademo](../js/img/maa_step4.PNG)
 
+---
+## Demot 3
+
+- [React demo 3](./demot/reactdemo_osa3.html)
+
+---
+## Tehtävät (demon 3 jälkeen)
 ### Tehtävä 4 (DEMO)
 
 Lisää sivulle napit, joita painamalla tehtävä osion saa piiloon/näkyville.

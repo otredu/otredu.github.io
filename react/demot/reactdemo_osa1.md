@@ -8,6 +8,7 @@ Tee uusi React-sovellus ajamalla create-react-app consolilla:
 ```cmd
 > cd c:/users/oma.nimi/documents/react/
 > npx create-react-app alkeet
+```
 
 Tämä komento luo React-projektin kansioon alkeet. Siirry kansion sisään ja käynnistä react:in *development server*. 
 
@@ -24,7 +25,7 @@ Kaikki koodi sijaitsee kansiossa *src* (source). Uudet komponentit kannattaa teh
 
 Ohjelmasi pääkomponentti on määritelty tiedostossa *App.js* ja tyylitiedosto on *App.css*. Muokkaa pääkomponentti *App* - seuraavasti:
 
-```js
+```jsx
 const App = () => {
   return (
     <div className="App">
@@ -52,7 +53,7 @@ Muokkaa myös *css*:ää (pienennä header:in korkeutta):
 
 React on JavaScript:iä, joten muutujat määritellään kuten JavaScriptissä (*const* tai *let*). Jos JS-muuttujaan tai JS-funktioon viitataan *return*:in sisällä (JSX-syntaksi), koodin ympärille laitetaan aaltosulut *{ }*.
 
-```js
+```jsx
 const App = () => {
   const name = "Tiina";
   const age = 49;
@@ -62,7 +63,7 @@ const App = () => {
       <h1>React alkeet demoja</h1>
       </header>
     </div>
-    <div className="demo">
+    <div>
         Hei, olen {name} ja olen {age}-vuotta.
     </div>
   )
@@ -75,7 +76,7 @@ Kaikki koodi React:issa sijaitsee jossakin komponentissa. Jotta pääkomponentti
 
 Tee uusi komponentti *CourseInfo* kansioon *components* (CourseInfo.js), joka tulostaa kurssitiedot.
 
-```js
+```jsx
 const CourseInfo = () => {
     const teacher = "Tiina Partanen";
     const course = "React";
@@ -89,22 +90,85 @@ const CourseInfo = () => {
         </div>
     )
 }
+
+export default CourseInfo;
 ```
 
-Tuo komponentti *App*:iin (*import*) ja kutsu sitä *return*:in sisältä:
+Tuo komponentti *App*:iin (*import*) ja kutsu sitä *App*:n *return*:in sisältä. Vaikka React-komponentti on nuolifunktio, sitä ei kursuta kuin normaalia funktiota, syntaksi muistuttaa enemmän HTML:ää (\<CourseInfo \/>).
 
-```js
+HUOM! Et voi käyttää *import*:ia ellei komponetin tiedostossa ole sitä vastaavaa *export*:ia (*export default*:ia käytetään kun halutaan exportata vain yksi komponetti).
+
+```jsx
 import CourseInfo from './components/CourseInfo.js';
 ```
 
-```js
-return(
-    <div>
-        <CourseInfo />
+const App = () => {
+
+  return (
+    <div className="App">
+      <header className="App-header">
+      <h1>React alkeet demoja</h1>
+      </header>
     </div>
-) 
+    <div>
+       <CourseInfo />
+    </div>
+  )
+}
+
 ```
 
+### React-props:it
 
-Muuta komponentti ottamaan sen sisältämät tiedot parametreina eli propseina. Välitä tiedot app-tasolta komponenttitasolle. Tuo opitutasiat taulukkomuodossa ja käytä map:ia.
+Nyt tehty komponetti ei ole kovin hyödyllinen, se tulostaa aina samat tiedot. Muutetaan sitä niin, että se ottaa sisäänsä parametreja eli React-kielellä *props*:eja. Tiedot välitetään komponentille *App*:issa. *Props*-koostuu sen nimestä esim. *teacher* ja arvosta joka sijoitetaan siihen *"Tiina Partanen"*.
 
+```jsx
+  <CourseInfo teacher = "Tiina Partanen"
+              course = "React"
+              classroom = "S2041"
+              material = "http://otredu.github.io" />
+```
+
+Komponettia muutetaan niin, että se saa tarvitsemansa tiedot propseina:
+
+```jsx
+const CourseInfo = (props) => {
+    return (
+        <div>
+            <h1>{props.course}</h1>
+            <p>Teacher: {props.teacher}</p>
+            <a href={props.material}>Linkki materiaaliin</a>
+        </div>
+    )
+}
+```
+
+Koska *props*-on JS-olio, sen voi "räjäyttää auki" aaltosulkujen avulla eli käyttää *object destructuring*-notaatiota. Näin voi viitata suoraan propseihin ilman *props*-sanaa:
+
+```jsx
+const CourseInfo = ({course, teacher, material}) => {
+    return (
+        <div>
+            <h1>{course}</h1>
+            <p>Teacher: {teacher}</p>
+            <a href={material}>Linkki materiaaliin</a>
+        </div>
+    )
+}
+```
+
+### React ja css
+
+CSS-muotoilut toimivat React:in kanssa normaalisti, ainoa ero HTML:ään on se että *class*:in tilalle pitää kirjoittaa *className*.
+
+```jsx
+<div className="demo1">
+      <h1>{course}</h1>
+</div>
+```
+
+### Jatka loppuun itse:
+
+1. Käytä nyt tehtyä komponenttia tulostamaan kaksi kurssia eri props:ien arvoilla.
+
+2. Lisää css-tiedostoon muotoilut *demo1*-luokalle (ks. tehtävässä oleva kuva)
