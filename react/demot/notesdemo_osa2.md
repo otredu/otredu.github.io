@@ -69,7 +69,7 @@ export default NotesForm;
 
 Ota komponentti käyttöön *App.js*:ssä ja välitä sille *addNote*-funktio, joka toimii *submitHandler*:nä:
 
-```js
+```jsx
    <NotesForm submitHandler={addNote}/>
 ```
 
@@ -89,7 +89,7 @@ Tehtävä: tyhjennä lomakkeen kentät muistiinpanon lisäämisen jälkeen
 
 Lisää jokaiselle muistiinpanolle poistonappi *notes*-komponenttiin (map:in sisälle):
 
-```js
+```jsx
 <button onClick={e=>deleteHandler(e, note.id)}>Poista</button>
 ```
 
@@ -114,7 +114,7 @@ Tämä poistaa muistiinpanon, mutta ruudulla ei näy mitään ennen sivun päivi
 
 Lisää myös toiminnallisuus, jolla voi muuttaa muistiinpanon tärkeyttä klikkaamalla sitä.
 
-```js
+```jsx
  <li onClick={e=>updateHandler(e, note.id)}> {note.content} </li>
 ```
 
