@@ -74,7 +74,7 @@ Tallenna ylläolevat testit *test*-kansioon.
 Harjoitus: tee REST-testi, joka pyytää vain yhden tietyn muistiinpanon id:n avulla.
 
 Lisätietoa [REST-rajapinnasta](../../tietokannat/rest-json.html)
-### Tehtävä 1 (Tietojen hakeminen backendiltä)
+### Tehtävä 1: tietojen hakeminen backendiltä
 
 Tee uusi React-sovellus ajamalla create-react-app:
 
