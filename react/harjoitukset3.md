@@ -1,7 +1,9 @@
 ## Harjoitukset 3
 
-[uusi tarkempi demo täällä](./demot/notesdemo_osa1.html)
+Tarkemmat uudet ohjeet:
 
+- [Notesdemo, osa 1](./demot/notesdemo_osa1.html)
+- [Notesdemo, osa 2](./demot/notesdemo_osa2.html)
 ### JSON-serverin asennus ja käynnistys
 
 Tee uusi kansio notesdemo. Tee siihen *db.json*-tiedosto, kopioi sinne tämä [json-muotoinen *notes*-tieto:](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen).
