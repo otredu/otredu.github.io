@@ -161,11 +161,9 @@ Tee uusi komponentti, joka saa *prop*:ina edellisen tehtävän tilamuuttujaan ta
   <li className={note.important ? "important" : "normal"}>
 ```
 
-### Tehtävä 3: uuden muistiinpanon lähettäminen backendille
+### Tehtävä 3: uuden (kovakoodatun) muistiinpanon lähettäminen backendille
 
-Lähetä axioksen avulla backend:ille uusi, aluksi kovakoodattu, muistiinpano (*notes*-olio). Tee
-
-Katso json-serveriltä, että se ilmestyi myös *db.json*:iin.
+Lähetä axioksen avulla backend:ille uusi, aluksi kovakoodattu, muistiinpano (*notes*-olio). Tee uusi funktio *addNote*, ja liitä se "lisää muistiinpano" -nappiin.
 
 ```js
   const addNote = () => {
@@ -177,8 +175,13 @@ Katso json-serveriltä, että se ilmestyi myös *db.json*:iin.
   }
 ```
 
+```jsx
+<button onClick={addNote}>Lisää kovakoodattu</button>
+```
 
-*Huom* id-tulee serveriltä, älä lähetä sitä.'
+Katso konsolilta, mitä backend palautti. Katso myös, että uusi muistiinpano tallentui json-serverille (*db.json*).
+
+*Huom* id-tulee serveriltä, älä lähetä sitä.
 
 ![notes](../img/json_server.PNG)
 
