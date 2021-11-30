@@ -172,3 +172,7 @@ CSS-muotoilut toimivat React:in kanssa normaalisti, ainoa ero HTML:ään on se e
 1. Käytä nyt tehtyä komponenttia tulostamaan kaksi kurssia eri props:ien arvoilla.
 
 2. Lisää css-tiedostoon muotoilut *demo1*-luokalle (ks. tehtävässä oleva kuva)
+
+---
+
+---> [React demo 2](./demot/reactdemo_osa2.md)

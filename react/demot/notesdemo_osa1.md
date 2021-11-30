@@ -164,3 +164,7 @@ Välitä edellisen tehtävän *notes*-tilamuuttujaan tallennetut muistiinpanot u
 ```js
   <li className={note.important ? "important" : "normal"}>
 ```
+
+---
+
+---> [Notesdemo, osa 2](./demot/notesdemo_osa2.html)

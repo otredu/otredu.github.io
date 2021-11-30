@@ -104,3 +104,7 @@ Jos *id*-kenttää ei ole, virheilmoituksen saa pois käyttämällä taulukon in
 1. Tee oliomuotoisille kursseille oma CSS niin erotat paremmin mikä osa sivusta on demo1 ja mikä demo2.
 
 2. Jotta *App.js* ei kasva liian suureksi, siirrä käyttämäsi *courses*-data (array), omaan tiedostoonsa ja importtaa se sieltä. Tee uusi tiedosto *courseData.js* ja siirrä sinne *course*-oliot sekä *courses*-taulukko. Tee export ja import kuten tavalliselle komponentillekin.
+
+---
+
+---> [React demo 3](./demot/reactdemo_osa3.html)
