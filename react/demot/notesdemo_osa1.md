@@ -153,59 +153,14 @@ Voit laittaa toistaiseksi kaiken axios-koodin *apps.js*-tiedostoon.
 
 ### Tehtävä 2: haettujen tietojen renderöinti ruudulle
 
-Tee uusi komponentti, joka saa *prop*:ina edellisen tehtävän tilamuuttujaan tallennetut muistiinpanot ja tulostaa ne listana (li-elementteina). Tulosta lisäksi tärkeät muistiinpanot punaisella ja ei tärkeät sinisellä.
+Tee uusi komponentti, joka tulostaa ruudulle kaikki muistiinpanot ranskalaisilla viivoilla.
+
+![notes](../img/notes_server.PNG)
+
+Välitä edellisen tehtävän *notes*-tilamuuttujaan tallennetut muistiinpanot uudelle komponentille *props*:ina, käytä map:ia ja \<li\>-elementtejä. Tulosta lisäksi tärkeät muistiinpanot punaisella ja ei-tärkeät sinisellä.
 
 *Vinkki:* tee *App.css* - tiedostoon kaksi *class*:ia, *.important* ja *.normal*. Seuraava koodi valitsee näistä käytöön kulloinkin sopivimman:
 
 ```js
   <li className={note.important ? "important" : "normal"}>
 ```
-
-### Tehtävä 3: uuden (kovakoodatun) muistiinpanon lähettäminen backendille
-
-Lähetä axioksen avulla backend:ille uusi, aluksi kovakoodattu, muistiinpano (*notes*-olio). Tee uusi funktio *addNote*, ja liitä se "lisää muistiinpano" -nappiin.
-
-```js
-  const addNote = () => {
-    const note = {content: "uusi viesti", 
-                  date: new Date().toISOString(), important: false};
-    axios.post(baseURL, note).then(response => {
-      console.log(response.data)
-    })
-  }
-```
-
-```jsx
-<button onClick={addNote}>Lisää kovakoodattu</button>
-```
-
-Katso konsolilta, mitä backend palautti. Katso myös, että uusi muistiinpano tallentui json-serverille (*db.json*).
-
-*Huom* id-tulee serveriltä, älä lähetä sitä.
-
-![notes](../img/json_server.PNG)
-
-### Tehtävä 3
-
-Tee uusi komponentti, joka tulostaa ruudulle kaikki muistiinpanot ranskalaisilla viivoilla.
-
-![notes](../img/notes_server.PNG)
-
-### Tehtävä 4
-
-Tee lomakekomponentti, jonka avulla saadaan syötettyä uusi muistiinpano, sekä sen tärkeys (true/false) esim.*check-box*:in avulla. Tallenna lomakekentät tilamuuttujiin ja lähetä uusi *notes*-olio notes-backendille, kun lomake *submit*:oidaan.
-
-Muista päivittää axios-kutsun jälkeen *notes*-tilamuuttuja, jotta ruutu päivittyy!
-
-### Tehtävä 5
-
-Lisää jokaiselle muistiinpanolle poistanappi.Lisää myös toiminnallisuus, jolla voi muuttaa muistiinpanon tärkeyttä (esim. klikkaamalla muistiinpanoa). Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).
-
-### Tehtävä 6
-
-Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
-
----
-
-Toinen vaihtoehto on käyttää erillistä modulia *axios*-kirjaston kutsuille:
-[Ohjeet axios:en käyttöön löytyvät täältä (Axios ja promiset):](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) tai voit ladata valmiin koodin [täältä](./axios-service.html).
