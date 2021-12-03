@@ -10,6 +10,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 - [JS](./js/index.html)
 - [Testaaminen](./testaus/index.html)
 - [React](./react/index.html)
+- [Tietokannat](./tietokannat/index.html)
 
 ### Materiaalit kevät 2021
 - [Johdatus systeemityöhön](./johdatus_systeemityo/index.html)

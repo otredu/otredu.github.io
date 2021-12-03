@@ -24,7 +24,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 - [Asiointipalvelujen rakentamisen tekniikka](./js-php/index.html)
 - [React](./react/index_s2019.html)
 - [Systeemityö](./systeemityo/index_2019.html)
-- [Tietokannat](./tietokannat/index.html)
+- [Tietokannat](./tietokannat/index_2019.html)
 - [Asiointipalveluprojekti](./asiointipalveluprojekti/index_S2019.html)
 - [Testaaminen ja testiympäristöt](./testaus/index_S2019.html)
 

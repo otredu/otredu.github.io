@@ -1,6 +1,6 @@
 ## Tietokannat
 
-### Lämmittelytehtäviä
+### Lämmittelytehtävä
 
 1. Ensin itsearviointia opintojakson aluksi: Miten hyvin mielestäsi nyt osaat tietokanta-asiat (Access, terminologia, SQL)?
 2. Mikä on pääavain (Primary Key) ja mikä on sen merkitys relaatiotietokannoissa?

@@ -2,9 +2,9 @@
 
 ### Alkutoimet
 
-Käynnistä MySQL ja PHPMyAdmin Dockerin avulla [ohje](../docker/index.html).
+Käynnistä MySQL ja PHPMyAdmin Dockerin avulla [ohje](../docker/index.html) tai käytä [samariumin PhpMyAdmin:ia](http://samarium/phpmyadmin). Samariumin tietokantaan saat käyttäjätunnuksen ja salasanan opettajalta.
 
-Luo tietokanta *newsdb*.
+Luo tietokanta *newsdb* (tai käytä samariumin tietokantaa).
 
 ### CREATE
 
@@ -13,6 +13,8 @@ Luo taulu *news*, jossa ovat kentät *title*, *content*, *date*, *expirydate*, *
 Muista laittaa kaikille tauluille avainkentät, muuten kyselyitä ei pysty tekemään.
 
 Viisasta on myös määritellä merkistö (UTF-8, esim. swedish).
+
+Jos käytät samariumin tietokantaa, lisää tauluille myös etuliite, josta tiedät että ne kuuluvat tähän harjoitukseen (esim. *newsdb_news*, *newsdb_title* jne.)
 
 ### INSERT INTO
 
