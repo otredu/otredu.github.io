@@ -3,7 +3,7 @@
 ### Tietokantojen alkeet
 
 - Lämmittelytehtävä [ohje](harjoitus0.html)
-- Harjoitutus 1 [ohje](tietokannat_alkeet.html)
+- Harjoitutus 1 [ohje](tietokanta_alkeet.html)
 
 ### Tietokantataulun luominen ja SQL-kyselyt (newsdb)
 

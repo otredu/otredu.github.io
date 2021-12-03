@@ -6,16 +6,11 @@ Nämä tehtävät ovat viime keväältä 2019. Tee nämä jos et ole vielä tehn
 
 Tutustu MySQL-serveriin komentorividemon avulla [ohje](./mysql.html).
 
-### SQL-kielen varatut sanat
+### SQL-kielen varatut sanat ja SQL-kielen harjoittelua 3wSchool:in sivuilla
 
-Tutustu SQL-kielen varattuihin sanoihin [ohje](http://www.leeniemi.net/tietokanta18/index.php?sivu=sql_harjoituksia2).
+Tutustu SQL-kielen varattuihin sanoihin [tehtäväpohja](../docs/SQL_harjoitus_1_pohja.pdf) ja tee pyydetyt SQL-haut 3wSchool:in asiakastietokannasta selaimessa (Huom! käytä Chromea).
 
-### SQL-kielen harjoittelua
-
-Huom! Käytä selaimena Chromea!
-
-Tee selaimessa W3School:in SQL-harjoituksia [ohje](http://www.leeniemi.net/tietokanta18/index.php?sivu=sql_harjoituksia).
-
+[3wschool:in asiakaskietokanta](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
 ### Tietokannan hallintaohjelman käyttäminen
 
 #### a) PHPMyAdmin (MySQL)
