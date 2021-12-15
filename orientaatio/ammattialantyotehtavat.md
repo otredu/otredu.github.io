@@ -20,4 +20,3 @@ Luo palveluun sähköisen CV, kerro opinnoistasi sekä työkokemuksestasi, täss
 Tehtävä 3.
 
 Etsi LinkedIn:in *Jobs*-osiosta Tampereen seudun yrityksiä, jotka etsivät työntekijöitä. Etsi myös tehtävänimikkeitä, joita etsitään. Kerää löydetyt tiedot ryhmäsi jaettuun Word-tiedostoon.
-

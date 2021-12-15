@@ -8,6 +8,10 @@
 
 - [Koodieditorin ja versionhallinnan peruskäyttö](./markdown_versionhallinta.html)
 
-### Miten tästä selviää?
+- [Verkkolevyt, pikanäppäimet, git bash -komennot](./muistikirja.html)
 
-- [Muistikirja](./muistikirja.html)
+### ICT-alan työtehtävät
+
+- [LinkedIn työnhaussa](ammattialantyotehtavat-html)
+
+- [Projektityöskentely](projektityoskentely.html)
