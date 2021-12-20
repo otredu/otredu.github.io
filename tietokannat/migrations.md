@@ -38,7 +38,11 @@ Asenna vielä *mysql*:
 npm install mysql --save
 ```
 
-Käynnistä MySQL ja PHPMyAdmin dockerilla ja luo *my_rentals*-tietokanta.
+### Docker
+
+Docker:in avulla voidaan ajaa eri tietokantaversioita Linux-ympäristössä.
+
+Käynnistä [MySQL ja PHPMyAdmin dockerilla](https://otredu.github.io/docker/mysql.html) ja luo *my_rentals*-tietokanta.
 
 ### Taulujen luominen
 
