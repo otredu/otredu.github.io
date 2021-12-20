@@ -175,4 +175,4 @@ CSS-muotoilut toimivat React:in kanssa normaalisti, ainoa ero HTML:ään on se e
 
 ---
 
----> [React demo 2](./demot/reactdemo_osa2.md)
+---> [React demo 2](./reactdemo_osa2.html)

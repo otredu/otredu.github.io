@@ -167,4 +167,4 @@ Välitä edellisen tehtävän *notes*-tilamuuttujaan tallennetut muistiinpanot u
 
 ---
 
----> [Notesdemo, osa 2](./demot/notesdemo_osa2.html)
+---> [Notesdemo, osa 2](./notesdemo_osa2.html)

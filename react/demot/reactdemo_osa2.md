@@ -107,4 +107,4 @@ Jos *id*-kenttää ei ole, virheilmoituksen saa pois käyttämällä taulukon in
 
 ---
 
----> [React demo 3](./demot/reactdemo_osa3.html)
+---> [React demo 3](./reactdemo_osa3.html)
