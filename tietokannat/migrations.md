@@ -40,7 +40,7 @@ npm install mysql --save
 
 ### Docker
 
-Docker:in avulla voidaan ajaa eri tietokantaversioita Linux-ympäristössä.
+Docker:in avulla voidaan ajaa erilaisia tietokantaversioita ja kehitysympäristöjä ilman erillista asennusta. Tässä harjoituksessa opetellaan käyttämään Docker:ia lokaalin kehitysympäristön käynnistämiseen:
 
 Käynnistä [MySQL ja PHPMyAdmin dockerilla](https://otredu.github.io/docker/mysql.html) ja luo *my_rentals*-tietokanta.
 
