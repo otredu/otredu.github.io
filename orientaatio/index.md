@@ -16,6 +16,8 @@
 
 - [Projektityöskentely](projektityoskentely.html)
 
+- [Vierailijat](vierailut.html)
+
 ### UI/UX suunnittelu (AdobeXD)
 
 - [AdobeXD-demo](https://otredu.github.io/docs/adobe_xd_demo.pdf)
