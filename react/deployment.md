@@ -4,7 +4,7 @@ Koodi siirretään (*deploy*) joko koulun webhotelliin, tai Herokuun. Ensin Reac
 
 - [Sovelluksen siirtäminen internettiin](https://fullstackopen.com/osa3/sovellus_internetiin)
 
-- [Sovelluksen siirtäminen koulun webhotelliin](../webframeworks/deployment)
+- [Sovelluksen siirtäminen koulun webhotelliin](../webframeworks/deployment.html)
 
 ---
 
