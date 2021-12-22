@@ -24,6 +24,6 @@ Kun käyttäjä kirjautuu järjestelmään hän saa JSON webtoken:in tallenttava
 
 ---
 
-- [Harjoitukset 5: Notes-backend demo](../frameworks/node.html), tehdään yhdessä
+- [Harjoitukset 5: Notes-backend demo](./node-harjoitukset1.html), tehdään yhdessä
 
-- [Harjoitukset 6: fanikauppa 2](./harjoitukset5.html)
+- [Harjoitukset 6: Fanikauppa 2.0](./node-harjoitukset2.html)

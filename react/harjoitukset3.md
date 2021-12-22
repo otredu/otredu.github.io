@@ -80,39 +80,10 @@ Muista päivittää axis-kutsun jälkeen *notes*-tilamuuttuja, jotta ruutu päiv
 
 Lisää jokaiselle muistiinpanolle poistanappi.Lisää myös toiminnallisuus, jolla voi muuttaa muistiinpanon tärkeyttä (esim. klikkaamalla muistiinpanoa). Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).
 
-### Tehtävä 6
+### Lisätehtävä 1 
 
 Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
 
----
-### Tehtävä 7
-
-Tässä vaiheessa täytyy viimeistään siirtyä pois JSON-serverin käytöstä ja koodata varsinainen backend käyttäen node.js:ää. Toteuta edellä kuvattu toiminnallisuus tietokannan ja node.js:n avulla. [Ohjeita täällä](https://otredu.github.io/frameworks/node.html)
-
-### Tehtävä 8
-
-Toteuta käyttäjän rekisteröityminen ja kirjautuminen. Vain kirjautunut käyttäjä voi lisätä, muokata tai poistaa muistiinpanoja. Muistiinpanoja voi lukea ilman kirjautumista.
-
-*Huom* Tämä vaatii lisää koodia niin fronttiin kuin backendiinkin sekä muutoksen tietokantaan (users-taulu).
-
-### Tehtävä 9
-
-Lisää userid-kenttä muistiinpanoon, niin että kirjatunut käyttäjä voi muokata ja poistaa vain omia muistiinpanojaan.
-
-*Huom* Tämä vaatii lisää koodia myös backendiin ja muutoksen tietokantaan (relaatio users- ja notes-taulujen väliin).
-
-### Tehtävä 10
-
-Refaktoroi backend koodi niin, että se käyttää autentikointiin middlewareja.
-
-### Tehtävä 11
-
-Luo frontista build, siirrä se backendin static-kansioon. Testaa käynnistämällä vain backend.
-
-### Lisätehtävä 1
-
-Ota käyttöön POI-kirjasto ja lisää JSON-datan validointi sen avulla.
-
 ### Lisätehtävä 2
 
-Deployaa notesdemo pyörimään webbihotelliin tai herokuun.
+Seuraa näitä [ohjeita](https://www.npmjs.com/package/json-server-auth), ja toteuta rekisteröinti sekä kirjautuminen.
