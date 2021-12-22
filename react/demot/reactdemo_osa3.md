@@ -106,38 +106,32 @@ Tehdään lomake, jonka kenttä liitetään (lukeminen: *value* ja kirjoittamine
 </form>
 ```
 
-Jotta saadaan uuden ystävän nimi talteen taulukkoon *friends*, lisätään vielä *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-nappia painetaan.
+### React:in lomakkeen käsittely
+
+Jotta uuden ystävän nimi saadaan talteen taulukkoon, luodaan uusi tilamuuttuja *friends*, jonka alkuarvo on tyhjä taulukko:
+
+```jsx
+const [friends, setFriends] = useState([]); 
+```
+
+Lisätään *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-nappia painetaan.
 
 ```jsx
 <form onSubmit={e=>submitHandler(e, friend)}>
 ```
 
-Varsinainen *submitHandler* kannattaa määritellä *App.js*:ssä samoin kuin sen käyttämä tilamuuttuja, johon uusi ystävä tallennetaan. *e.preventDefault()* estää sivun latautumisen uudelleen (PHP-tyylisen lomakkeen käsittelyn).
+*submitHandler*:ia kutsutaan, kun lomake lähetetään *submit*-buttonilla. Ensimmäiseksi on estettävä PHP-tyylinen lomakkeen käsittelyn *e.preventDefault()*:in avulla. Sitten lisätään uusi ystävä listään *concat*:in avulla.
+
+Huom! vaikka *friends* on taulukko, älä käytä *push*-metodia, koska se muuttaa taulukkoa suoraan, käytä *concat*:ia (*unmutable*) ja setFriends-funktiota.
 
 ```jsx
-const [friends, setFriends] = useState([]); 
-
 const submitHandler = (e, friend) => {
     e.preventDefault();
     setFriends(friends.concat(friend))
 }
 ```
 
-Jotta *submitHandler*:ia voidaan kutsua *Friends*-komponentista, pitää se välittää sinne komponenttikutsussa:
-
-```jsx
-<Friends submitHandler={submitHandler} />
-```
-
-ja ottaa vastaan komponentin *props*:eissa:
-
-```jsx
-const Friends = ({submitHandler}) => {
-        ...
-}
-```
-
-Jotta ystävät saataisiin renderöityä myös ruudulle pitää vielä tehdä siihen oma komponenttinsa, ota se käyttöön *App.js*:ssä:
+Jotta ystävät saataisiin renderöityä myös ruudulle pitää vielä tehdä siihen oma komponenttinsa:
 
 ```jsx
 const FriendsList = ({friends}) => {
@@ -147,6 +141,12 @@ const FriendsList = ({friends}) => {
         </div>
     )
 }
+```
+
+Kutsu uutta komponenttia *Friends*-komponentissa heti lomakkeen jälkeen:
+
+```jsx
+    <FriendsList friends={friends}>
 ```
 
 ---> [React demo 4](./reactdemo_osa4.html)
