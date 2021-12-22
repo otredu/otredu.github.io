@@ -1,4 +1,4 @@
-## Notes-demo osa 4
+## React - demo 4
 
 ### Olioiden käsittely taulukossa id:n avulla
 

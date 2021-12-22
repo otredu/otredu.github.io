@@ -49,13 +49,14 @@ HUOM! Tämän tehtävän voi tehdä [maademon datalla](./maademo_data.html).
 ![maademo](../js/img/maa_step4.PNG)
 
 ---
-## Demot 3
+## Demo 3
 
+Opiskele React:in tilamuuttujien ja lomakkeiden toiminta opettajan kanssa tai tämän materiaalin avulla:
 - [React demo 3](./demot/reactdemo_osa3.html)
 
 ---
 ## Tehtävät (demon 3 jälkeen)
-### Tehtävä 4 (DEMO)
+### Tehtävä 4
 
 Lisää sivulle napit, joita painamalla tehtävä osion saa piiloon/näkyville.
 
@@ -63,11 +64,11 @@ Vinkki, tarvitset tässä tehtävässä tilamuuttujia (*useState*). Tarvitset my
 
 ![tehtävä 4](./img/piilota.PNG)
 
-### Tehtävä 5 (harjoitus)
+### Tehtävä 5
 
 Lisää tehtävään 3 toiminnallisuus, että ensin näytetään vain kuvan otsikko ja otsikkoa klikkaamalla näytetään kuva ja kuvateksti. Otsikkoa uudelleenklikkaamalla ne piilotetetaan.
 
-### Tehtävä 6 (DEMO)
+### Tehtävä 6
 
 Tee komponentti, joka tulostaa ruudulle alekkain parametrina annetut taidot (array). Sijoita ylimmäiseksi input-kenttä, jonka avulla voi lisätä uuden taidon listaan viimeiseksi.
 
@@ -75,7 +76,16 @@ Tee komponentti, joka tulostaa ruudulle alekkain parametrina annetut taidot (arr
 
 Vinkki, tarvitset useamman tilamuuttujan (*useState*). Yhteen tallennetaan kaikki *skills*-tiedot, toiseen tallennetaan ruudulla oleva *newSkill*. Tarvitset myös callback-funktiot näiden molempien muokkaamiseen (onChange- ja onSubmit-eventtien käsittelyn yhteyteen). Tässä tehtävässä kannattanee pitää tilamuuttujat *app.js*-tasolla ja välittää ne propseina komponenteille.
 
-### Tehtävä 7a (DEMO)
+---
+## Demo 4
+
+Opiskele React:in oliomuotoisten tilamuuttujien toiminta opettajan kanssa tai tämän materiaalin avulla:
+- [React demo 4](./demot/reactdemo_osa4.html)
+
+---
+
+## Tehtävät (demon 4 jälkeen)
+### Tehtävä 7a
 
 Tee lomake, jonka avulla voit lisätä sivulle linkkejä ja niiden kuvauksia. Käytä tilamuuttujana oliota, jossa on kentät jokaiselle lomakkeen kentälle. Luo uusi uniikki id, jokaiselle uudelle oliolle. Tee erillinen komponentti pelkälle lomakkeelle ja toinen komponentti, joka renderöi linkkilistan.
 
@@ -83,29 +93,29 @@ Tee lomake, jonka avulla voit lisätä sivulle linkkejä ja niiden kuvauksia. K�
 
 *Vinkki:* Kun teet onChange - eventhandleriä, välitä sille parametrina tieto siitä, mikä kenttä on muuttunut (kentän nimi merkkijonona).
 
-### Tehtävä 7b (DEMO)
+### Tehtävä 7b
 
 Lisää jokaiselle linkille tykkäysnappi ja tallenna tykkäysten määrä tilamuuttujassa olevaan olioon (esim. kenttään "likes").
 
 *Vinkki:* Käytä hyväksesi linkin uniikkia id:tä, että tiedät mitä linkkiä on tykätty (välitä id parametrina esim. addLike-funktiolle, joka lisää tykkäyksen oikeaan olioon tilamuuttujassa).
 
-### Tehtävä 7c (DEMO)
+### Tehtävä 7c
 
 Laske kaikkien linkkien saamat tykkäykset yhteen ja näytä ne sivulla.
 
 *Vinkki:* Voit poimia tykkäysten määrät tilamuuttujasta map:in avulla ja laskea ne yhteen käyttäen reduce:a.
 
-### Tehtävä 8 (harjoitus)
+### Tehtävä 8
 
 Muokkaa .css - tiedostoa, että elementit myös näyttävät hyvältä.
 
-### Lisätehtävä 1 (harjoitus)
+### Lisätehtävä 1
 
 Tee nappi, joka järjestää linkit tykkäysten mukaiseen järjestykseen.
 
 *Vinkki:* Käytä taulukon sort-metodia.
 
-### Lisätehtävä 2 (harjoitus)
+### Lisätehtävä 2
 
 Tee komponentti joka näyttää maiden tiedot karusellissa. Tee nuolinapit joiden avulla voi selata maita yksi kerrallaan eteen- ja taaksepäin.
 
