@@ -38,7 +38,7 @@ Tilamuuttujan voidaan päivittää erilaisten tapahtumien (*events*) yhteydessä
     )
 ```
 
-Ruudulla päivittyy vain toinen laskuri. Lisää *console.log* niin nähdään päivittyvätkö muuttujat. 
+Ruudulla päivittyy vain toinen laskuri. Lisää *console.log* niin nähdään päivittyvätkö muuttujat.
 
 HUOM! Jos nuolifunktiossa on useampi lauseke (*statement*) muodosta siitä koodiblokki aaltosulkujen avulla:
 
@@ -82,10 +82,71 @@ Lisätään nappi, josta tilamuuttujaa saadaan vaihdettua. ! eli "not" toteuttaa
 
 ### React:in input-kentät eli two-way binding
 
-Jotta 
+React:issa *input*-kenttien arvot pitää kierrättää tilamuuttujien kautta. Tätä toiminnallisuutta kutsutaan *two-way binding*:iksi. Input-kentän arvo (*value*) pitää sekä lukea, että kirjoittaa tilamuuttujaan. Tilamuuttujan arvo kirjoitetaan *set\<Muuttujannimi\>*-funktion avulla, lukeminen tapahtuu käyttämällä muuttujan nimä (käytetään kuten normaalia muuttujaa).
+
+Tehdään uusi komponentti lomakkeelle (components/Friends.js) ja alustetaan tarvitavat muuttujat:
 
 ```jsx
-const [name, setName] = useState("");
-const [friends, setFriends] = useState([]); 
+const Friends = () => {
+    const [name, setName] = useState("");
+    return (
+        <div>
+            Kaverit
+        </div>
+    )
+}
 ```
 
+Tehdään lomake, jonka kenttä liitetään (lukeminen: *value* ja kirjoittaminen *onChange*) tilamuuttujaan *name*:
+
+```jsx
+<form>
+    <input onChange={e=>setName(e.target.value)} type="text" value={name}/>
+    <input type="submit">
+</form>
+```
+
+Jotta saadaan uuden ystävän nimi talteen taulukkoon *friends*, lisätään vielä *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-nappia painetaan.
+
+```jsx
+<form onSubmit={e=>submitHandler(e, friend)}>
+```
+
+Varsinainen *submitHandler* kannattaa määritellä *App.js*:ssä samoin kuin sen käyttämä tilamuuttuja, johon uusi ystävä tallennetaan. *e.preventDefault()* estää sivun latautumisen uudelleen (PHP-tyylisen lomakkeen käsittelyn).
+
+```jsx
+const [friends, setFriends] = useState([]); 
+
+const submitHandler = (e, friend) => {
+    e.preventDefault();
+    setFriends(friends.concat(friend))
+}
+```
+
+Jotta *submitHandler*:ia voidaan kutsua *Friends*-komponentista, pitää se välittää sinne komponenttikutsussa:
+
+```jsx
+<Friends submitHandler={submitHandler} />
+```
+
+ja ottaa vastaan komponentin *props*:eissa:
+
+```jsx
+const Friends = ({submitHandler}) => {
+        ...
+}
+```
+
+Jotta ystävät saataisiin renderöityä myös ruudulle pitää vielä tehdä siihen oma komponenttinsa, ota se käyttöön *App.js*:ssä:
+
+```jsx
+const FriendsList = ({friends}) => {
+    return (
+        <div>
+            {friends.map((f,i) => <li key={i}>{f}</li>)}
+        </div>
+    )
+}
+```
+
+---> [React demo 4](./reactdemo_osa4.html)
