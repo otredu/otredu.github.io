@@ -87,6 +87,8 @@ Käytä [WinSCP-ohjelmaa](https://winscp.net/eng/downloads.php#additional), siir
 
 Siirrä backend-kansio webhotellin tiedostoihin (esim. tee cpanel:in tiedostopolun juureen node-niminen kansio, EI public_html:n sisälle).
 
+*Huom* Jos webhotellisissasi on terminaali, voit viedä koodit myös *.zip*-tiedostona ja purkaa paketin terminaalissa *unzip* + zip-paketin nimi.
+
 ### Alidomain
 
 Tee ohjelmaasi varten uusi alidomain käyttäen cpanel:in *Alitoimialueet*-toimintoa.
