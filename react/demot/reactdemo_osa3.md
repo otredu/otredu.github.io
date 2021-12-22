@@ -82,7 +82,10 @@ Lisätään nappi, josta tilamuuttujaa saadaan vaihdettua. ! eli "not" toteuttaa
 
 ### React:in input-kentät eli two-way binding
 
+Jotta 
+
 ```jsx
 const [name, setName] = useState("");
 const [friends, setFriends] = useState([]); 
 ```
+
