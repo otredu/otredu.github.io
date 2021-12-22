@@ -6,7 +6,7 @@ Näissä harjoituksissa muutetaan fanikauppa (harjoitukset 2) hakemaan ja tallen
 
 Toteuta json-serverin avulla fanikaupan backend. Toteuta tuotetiedot, tilaustiedot sekä asiakastiedot (ostoskorin tallentamisen tietokantaan voi jättää tässä vaiheessa pois). Testaa fanikauppa API:n toiminta REST-clientin:in avulla.
 
-Katso [ohje täältä](../tietokannat/json-rest.html).
+Katso [ohje täältä](../tietokannat/rest-json.html).
 
 ### Tehtävä 2
 
