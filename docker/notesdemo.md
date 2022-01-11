@@ -16,7 +16,7 @@ RUN cd front && npm install --silent && npm run build --silent && cd ..
 RUN cp -r front/build build && rm -r front
 COPY jsonserver . 
 RUN npm install
-CMD npx json-server -H 0.0.0.0 --static build --port=$3001 --watch db.json 
+CMD npx json-server -H 0.0.0.0 --static build --port=3001 --watch db.json 
 ```
 
 1. Aloita
