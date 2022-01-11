@@ -52,7 +52,7 @@ CMD npx json-server -H 0.0.0.0 --static build --port=3001 --watch db.json
 
     ![new app](img/new_app1.png)
 
-    ![new app, europe](img/new_app3.png)
+    ![new app, europe](img/new_app3.PNG)
 
 5. Asenna heroku cli
 
