@@ -80,7 +80,11 @@ Muista päivittää axis-kutsun jälkeen *notes*-tilamuuttuja, jotta ruutu päiv
 
 Lisää jokaiselle muistiinpanolle poistanappi.Lisää myös toiminnallisuus, jolla voi muuttaa muistiinpanon tärkeyttä (esim. klikkaamalla muistiinpanoa). Muista päivittää onnistuneen *axios*-kutsun jälkeen *notes*-tilamuuttuja vastaamaan notes-backend:in tilannetta (poistettu muistiinpano poistetaan myös notes-tilamuuttujasta, vanha muistiinpano korvataan muutetulla).
 
-### Lisätehtävä 1 
+### Tehtävä 6
+
+Julkaise ohjelmasi Dockerin avulla Herokussa (ks. [ohjeet](../docker/notesdemo.html)).
+
+### Lisätehtävä 1
 
 Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
 
