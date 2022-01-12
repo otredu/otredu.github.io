@@ -21,7 +21,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 
 ### Kurssit syksy 2019
 - [Julkiset tietoverkot](./html-css/index_s2019.html)
-- [Asiointipalvelujen rakentamisen tekniikka](./js-php/index.html)
+- [Asiointipalvelujen rakentamisen tekniikka](./js-php/index_old.html)
 - [React](./react/index_s2019.html)
 - [Systeemityö](./systeemityo/index_2019.html)
 - [Tietokannat](./tietokannat/index_2019.html)
