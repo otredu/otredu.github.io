@@ -8,23 +8,29 @@ Asenna konellesi MySQL-tietokanta ja PhpMyAdmin käyttäen docker-compose:a:
     version: '3.1'
 
     services:
-    db:
+      db:
         image: mysql:8.0.27
         restart: always
         environment:
-        MYSQL_ROOT_PASSWORD: mypass123
+          MYSQL_ROOT_PASSWORD: mypass123
 
-    phpmyadmin:
+      phpmyadmin:
         image: phpmyadmin
         restart: always
         ports:
-        - 8080:80
+          - 8080:80
         environment:
-        - PMA_ARBITRARY=1
+          - PMA_ARBITRARY=1
     ```
 
 2. Käynnistä CMD ja kirjoita:
 
+    ```cmd
+    docker-compose up
+    ```
+
+    Tai jos haluat, että se pyörii taustalla:
+    
     ```cmd
     docker-compose up -d 
     ```

@@ -25,7 +25,7 @@ PHP-tiedostot sijaitsevat yleensä web-palvelimella, mutta tiedoston voi ajaa lo
 > php omakoodi.php
 ```
 
-### Muuttujat ja niiden arvon tulostaminen
+### Muuttujat
 
 Muuttujiin voi tallentaa tietoa: lukuja, merkkijonoja, taulukoita jne. Muuttujan nimen eteen lisätään $-merkki sekä muuttujaan tallennettaessa, että siihen viitattaessa.
 
@@ -75,16 +75,21 @@ PHP-kieli on suunniteltu HTML-sivujen luomiseen dynaamisesti. Sitä voidaan liit
 
 <h1>Hello World</h1>
 <p>
+```
+```php
     <?php  
         $name = "Tampere";
         echo "Hello $name";
     ?>
     <br>
     <?= "How are you $name"?>
+```
+```html
 </p>
 
 </body>
 </html>
+```
 ```
 
 Koodissa on käytetty PHP-tägiä *<?=* se on lyhenne yhdistelmästä *<?php echo*.
@@ -140,7 +145,52 @@ PHP:ssä toimivat samat matemaattiset operaattorit kuin JavaScriptissäkin:
 $a = 3;
 $b = 4;
 echo "$a + $b=" . $a + $b;
-echo "$a *+* $b=" . $a * $b;
+echo "$a * $b=" . $a * $b;
 echo "$a / $b=" . $a / $b;
 echo "$a - $b=" . $a - $b;
+echo "$a % $b=" . $a % $b;
+```
+
+### Loogiset operaattorit
+
+PHP:ssä toimivat samat loogiset operaattorit kuin JavaScriptissäkin (and, or, not):
+
+| merkintä | merkitys |
+| ----------| --------|
+| $a && $b	| tosi, kun sekä $a että $b ovat tosia |
+| $a \|\| $b	| tosi, kun vähintään toinen ($a tai $b) on tosi |
+| !$a |	tosi, kun $a on epätosi |
+
+### Vertailuoperaattorit
+
+PHP:ssä toimivat samat vertailuoperaattorit kuin JavaScriptissäkin:
+
+| merkintä | merkitys |
+| ----------| --------|
+| $a == $b |	$a on yhtäsuuri kuin $b |
+|$a === $b	|$a on yhtäsuuri ja samaa |tietotyyppiä kuin $b |
+|$a != $b	|$a on erisuuri kuin $b|
+|$a !== $b	|$a on erisuuri kuin $b tai eri tietotyyppiä|
+|$a < $b	|$a on pienempi kuin $b|
+|$a > $b	|$a on suurempi kuin $b|
+|$a <= $b	|$a on pienempi tai yhtäsuuri kuin $b|
+|$a >= $b	|$a on suurempi tai yhtäsuuri kuin $b|
+
+### Kommenttimerkit
+
+PHP:ssä toimivat samat kommenttimerkit kuin JavaScriptissä:
+
+```php
+<?php
+// yhden rivin kommentti
+
+/* monen rivin
+kommentti */
+?>
+```
+
+Jos kommentti osuu HTML-osaan (php-tagien ulkopuolelle) se on:
+
+```html
+<!-- html kommmentti -->
 ```
