@@ -65,30 +65,6 @@ Jos haluaa vain katsoa taulukon sisällön eikä halua koodin jatkavan, voi käy
 ?>
 ```
 
-### Toistorakenteet
-
-PHP:ssa on samankaltaiset toistorakenteet kuin muissakin kielissä: for-silmukka ja foreach-rakenne.
-
-PHP-koodi voi olla HTML-koodin koodin kanssa sekaisin, esim. foreach-rakenteen voi laittaa "poikki", kirjoittaa väliin HTML:ää ja taas jatkaa PHP:tä. Kun ohjelmointirakenne katkaistaan sen perään laitetaan kaksoispiste (:)
-
-Tässä *foreach* ilman katkaisua:
-
-```php
-<?php
-    foreach ($names as $name){
-        echo "<li> $name </li>";
-    }
-?>
-```
-
-Tässä *foreach* katkaistuna niin, että välissä voi olla HTML-koodia:
-
-```php
- <?php foreach ($names as $name): ?>
-        <li> <?= $name ?></li>
- <?php endforeach ?>
-```
-
 ### Koodin jakaminen model- ja view-tiedostoihin
 
 Jotta koodista tulisi selkeämpää, helpommin ymmärrettävää ja ylläpidettävää sitä kannattaa jakaa eri tiedostoihin. Yksi tapa on erotella käsiteltävä tieto (*model*), toiminnallisuus (*controller*) ja näkymä (*view*) toisistaan.
@@ -131,7 +107,29 @@ require "index.view.php";
 ```
 
 Muuttuja *$names* on taulukko ja sen alkioihin voidaan viitata niiden indekseillä. Kun avaat *index3.php* selaimessa molempien tiedostojen sisältö muodostaa yhdessä sivun.
+### Toistorakenteet
 
+PHP:ssa on samankaltaiset toistorakenteet kuin muissakin kielissä: for-silmukka ja foreach-rakenne.
+
+PHP-koodi voi olla HTML-koodin koodin kanssa sekaisin, esim. foreach-rakenteen voi laittaa "poikki", kirjoittaa väliin HTML:ää ja taas jatkaa PHP:tä. Kun ohjelmointirakenne katkaistaan sen perään laitetaan kaksoispiste (:)
+
+Tässä *foreach* ilman katkaisua:
+
+```php
+<?php
+    foreach ($names as $name){
+        echo "<li> $name </li>";
+    }
+?>
+```
+
+Tässä *foreach* katkaistuna niin, että välissä voi olla HTML-koodia:
+
+```php
+ <?php foreach ($names as $name): ?>
+        <li> <?= $name ?></li>
+ <?php endforeach ?>
+```
 ### Funktioita merkkijonojen muokkaamiseen
 
 | Funktio  | Esimerkki  | Toiminta |
