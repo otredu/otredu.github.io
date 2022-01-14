@@ -12,7 +12,7 @@
 
 ### ICT-alan työtehtävät (LinkedIn, github, Drupal)
 
-- [LinkedIn työnhaussa](ammattialantyotehtavat-html)
+- [LinkedIn työnhaussa](ammattialantyotehtavat.html)
 
 - [Projektityöskentely](projektityoskentely.html)
 
