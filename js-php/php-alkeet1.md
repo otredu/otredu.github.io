@@ -194,3 +194,12 @@ Jos kommentti osuu HTML-osaan (php-tagien ulkopuolelle) se on:
 ```html
 <!-- html kommmentti -->
 ```
+
+
+---
+
+## Harjoitukset:
+
+1. Tee [w3schoolin PHP-harjoitukset](https://www.w3schools.com/php/php_exercises.asp)
+
+2. Tee [w3schoolin PHP-quiz](https://www.w3schools.com/php/php_quiz.asp)

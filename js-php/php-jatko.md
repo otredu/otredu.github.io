@@ -51,9 +51,9 @@ Lomakkeiden avulla saadaan käyttäjän antamat tiedot ohjelman käsiteltäväks
 Yksinkertainen HTML-lomake, joka käsittelee lomakkeeseen syötetyt arvot näyttäisi tältä (tiedoston nimi *h1.php*):
 
 ```php
-<?php require "head.php"; ?>
+<?php require "header.php"; ?>
 
-<h2>Harjoitus 1</h2>
+<h2>Harjoitus</h2>
 
 <form action="h1.php" method="get">
     Etunimi: <input type="text" name="name" maxlength=30><br>

@@ -1,6 +1,8 @@
 ## Harjoitukset 1
 
-Voit tehdä kaikki vastaukset samaan tiedostoon (demon alapuolelle), erota ne kuitenkin h3-tasoisilla otsikoilla.
+**Ennen näitä harjoituksia tutustu materiaaliin [PHP-alkeet 1](./php-alkeet1.html).**
+
+Voit tehdä kaikki vastaukset samaan tiedostoon *index.php* (demon alapuolelle), erota tehtävät toisistaan h3-tasoisilla otsikoilla esim. \<h3> Tehtävä 1 \</h3>
 
 ### Tehtävä 1
 
@@ -26,7 +28,9 @@ Tulosta vastaukset ymmärrettävällä tavalla ruudulle (vastaus kertoo mitä on
 
 ### Tehtävä 3
 
-Katso, että syntynyt sivu on validia HTML:ää (alku ja loppu!)
+**Tutustu materiaaliin [PHP-alkeet 2](./php-alkeet2.html).**
+
+Ja jaa tiedosto kolmeen osaan *header.php*. *footer.php* ja *index.php*. Tee myös *index.css*, jossa nämä osat erottuvat toisistaa. Tarkista, että syntynyt sivu on validia HTML:ää (alku ja loppu!)
 
 ### Tehtävä 4
 
