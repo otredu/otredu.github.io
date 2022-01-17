@@ -19,7 +19,9 @@ Aja *knex*-init, joka luo konffaustiedoston *knexfile.js*. Anna projektille nime
 npx knex init
 ```
 
-*knexfile.js:ssä pitäisi olla vähintään kirjautumistiedot localhost-mysql-tietokannan käyttöön. Päivitä *development* -tiedot seuraaviksi:
+*knexfile.js*:ssä pitäisi olla vähintään kirjautumistiedot localhost-tietokannan käyttöön.
+
+Jos käytät MySQL-tietokantaa, päivitä *development* -tiedot seuraaviksi:
 
 ```js
 module.exports = {
@@ -32,10 +34,30 @@ module.exports = {
 }
 ```
 
+Jos taas käytät Postgress-tietokantaa:
+
+```js
+module.exports = {
+  development: {
+    client: 'postgresql',
+    connection: {
+      user:'postgres',
+      password: 'mypass123',
+      database: 'my_rentals'
+    }
+}
+```
+
 Asenna vielä *mysql*:
 
 ```cmd
 npm install mysql --save
+```
+
+Tai *postgres*:
+
+```cmd
+npm install pg --save
 ```
 
 ### Docker
