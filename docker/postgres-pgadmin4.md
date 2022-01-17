@@ -55,6 +55,18 @@ Asenna konellesi Postgres-tietokanta ja Pgadmin4 käyttäen docker-compose:a:
         - käyttäjätunnus: postgres
         - salasana: mypass123
 
-5. Lisää uusi tietokanta
+---
+
+
+5. Jos teet oman tietokannan lisää uusi tietokanta
 
     Object -> Create -> Database
+
+    ![create db](./img/createdb.png)
+
+
+--- 
+
+5. Jos tietokanta on jo olemassa (esim. remote server), aseta sen nimi filteröintiehdoksi (DB restrictions):
+
+    ![default db](./img/select_db.PNG)
