@@ -6,9 +6,10 @@ Docker:in avulla voit käynnistää koneellesi kehitysympäristön ilman, että 
 
 ### Docker - asennusohjeita
 
-- [MySQL ja PHPMyAdmin, localhost, docker](mysql.html)
+- [MySQL ja PHPMyAdmin, localhost](mysql.html)
 - [MySQL ja PHPMyAdmin, localhost, docker-compose](mysql-phpmyadmin.html)
 - [PostgreSQL ja PHPPGAdmin, localhost](postgres.html)
+- [PostgreSQL ja PGAdmin4, localhost, docker-compose](postgres-pgadmin4.html)
 - [PHPPGAdmin, Heroku PostgreSQL](postgres-heroku.html)
 - [PHPMyAdmin, Azure](phpmyadmin-remote.html)
 - [CodeIgniter](codeigniter.html)

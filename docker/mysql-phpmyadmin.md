@@ -38,7 +38,7 @@ Asenna konellesi MySQL-tietokanta ja PhpMyAdmin käyttäen docker-compose:a:
 
 Tässä vaihtoehtoinen version docker-compose-tiedostosta:
 
-```cmd
+```yml
 version: '3'
 
 services:

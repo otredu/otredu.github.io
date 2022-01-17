@@ -4,7 +4,7 @@ Asenna konellesi Postgres-tietokanta ja Adminer käyttäen docker-compose:a:
 
 1. Tallenna seuraava teksti tiedostoon nimeltä docker-compose.yml:
 
-```cmd
+```yml
 version: '3.1'
 
 services:
