@@ -188,6 +188,30 @@ exports.seed = function(knex) {
 
 *knex* ajaa *seeds*-tiedostot aakkosjärjestyksessä, joten ne kannattaa numeroida, niin että ajojärjestys on haluttu.
 
+
+### Develoment vs. production
+
+Jos haluat ajaa tietokannan tuotantoympäristöön, muista lisätä *host*-tieto knex.js-tiedostoon (tässä on disabloitu SSL, ei sovellu tuotantokäyttöön):
+
+```js
+  production: {
+    client: 'postgresql',
+    connection: {
+      host: 'myremoteserver',
+      database: 'myremotedb',
+      user:     'myremoteuser',
+      password: 'myuremotepassword',
+      ssl:  { rejectUnauthorized: false }
+    }
+```
+
+Lisää käynnistykseen *--env* flag:
+
+```cmd
+npx knex migrate:latest --env production
+npx knex seed:run --env production
+```
+
 ### Lisätietoa:
 
 - [Knex migrations and seeding](https://gist.github.com/NigelEarle/70db130cc040cc2868555b29a0278261)
