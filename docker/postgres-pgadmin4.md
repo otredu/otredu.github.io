@@ -46,14 +46,14 @@ Asenna konellesi Postgres-tietokanta ja Pgadmin4 käyttäen docker-compose:a:
 
     1) Lisää serveri (add new server)
 
-        ![postgres add server](./img/pgadmin4_addnewserver.PNG)
+    ![postgres add server](./img/pgadmin4_addnewserver.PNG)
 
     2) Täytä kirjautumistiedot
 
-        ![postgres add server](./img/pgadmin4_config.PNG)
+    ![postgres add server](./img/pgadmin4_config.PNG)
 
-        - käyttäjätunnus: postgres
-        - salasana: mypass123
+    - käyttäjätunnus: postgres
+    - salasana: mypass123
 
 ---
 
