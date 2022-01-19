@@ -4,7 +4,7 @@
 
 Tee notes-demon juureen uusi tiedosto nimeltä *Dockerfile* ja tallenna siihen projektisi buildaus- ja käynnistysohjeet ks. alla (tässä oletetaan, että frontin koodi on hakemistossa "front" ja json-server:in tiedostot hakemistossa "jsonserver", mukaanlukien package.json, jossa json-server on mainittu dependencynä):
 
-```cmd
+```docker
 FROM ubuntu:18.04 
 
 WORKDIR /mydir  
@@ -75,13 +75,13 @@ CMD npx json-server -H 0.0.0.0 --static build --port=3001 --watch db.json
     CMD npx json-server -H 0.0.0.0 --static build --port=$PORT --watch db.json
     ```
 
-8. Nimeä (tag) kontti Herokun vaatimalla tavalla
+8. Nimeä (tag) kontti Herokun vaatimalla tavalla (Huom! vaihda "notesdemo-json":in tilalle oman app:isi nimi herokussa):
 
     ```cmd
     docker image tag notesdemo-jsonserv registry.heroku.com/notesdemo-json/web
     ```
 
-9. Lataa kontti Heroku container registryyn
+9. Lataa kontti Heroku container registryyn (Huom! vaihda "notesdemo-json":in tilalle oman app:isi nimi herokussa):
 
     ```cmd
      docker image push registry.heroku.com/notesdemo-json/web
