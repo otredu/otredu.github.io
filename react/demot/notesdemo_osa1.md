@@ -114,7 +114,8 @@ Jotta tietoa voidaan muokata, saadut tiedot tallennetaan *notes*-tilamuuttuujaan
 
 ```js
 import axios from 'axios'
-import {useState} = 
+import {useState} from 'react';
+
 const App = () => {
 // tilamuuttuja:    
 const [notes, setNotes] = useState([]);
@@ -122,8 +123,8 @@ const [notes, setNotes] = useState([]);
 axios
   .get('http://localhost:3001/notes')
   .then(response => {
-    const notes = response.data
-    console.log(notes)
+    const note = response.data
+    console.log(note)
     // tallennus tilamuuttujaan:
     setNotes(note)
   })
@@ -139,9 +140,9 @@ Nyt konsolille tulee sama tulostus monta kertaa! Korjataan se niin, että tiedot
 ```js
   const startHook = () => {
     axios.get('http://localhost:3001/notes').then(response => {
-    const notes = response.data
-    console.log(notes)
-    setNotes(notes);
+    const note = response.data
+    console.log(note)
+    setNotes(note);
     })}
 
   useEffect(startHook, []);
