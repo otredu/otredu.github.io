@@ -58,7 +58,7 @@ Voit laittaa toistaiseksi kaiken axios-koodin *apps.js*-tiedostoon. [Ohjeet axio
 
 ### Tehtävä 2
 
-Tallenna axioksen avulla json-servejille (tai notes-backendille) uusi kovakoodattu muistiinpano (*notes*-olio). Katso json-serveriltä, että se ilmestyi myös sinne.
+Tallenna axioksen avulla json-serverille (tai notes-backendille) uusi kovakoodattu muistiinpano (*notes*-olio). Katso json-serveriltä, että se ilmestyi myös sinne.
 
 *Huom* id-tulee serveriltä, älä lähetä sitä.'
 
