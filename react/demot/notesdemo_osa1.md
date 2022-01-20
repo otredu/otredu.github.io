@@ -163,7 +163,7 @@ Välitä edellisen tehtävän *notes*-tilamuuttujaan tallennetut muistiinpanot u
 *Vinkki:* tee *App.css* - tiedostoon kaksi *class*:ia, *.important* ja *.normal*. Seuraava koodi valitsee näistä käytöön kulloinkin sopivimman:
 
 ```js
-  <li className={note.important ? "important" : "normal"}>
+  <li id={note.id} className={note.important ? "important" : "normal"}>
 ```
 
 ---
