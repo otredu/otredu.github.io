@@ -98,7 +98,7 @@ Määrittele *Apps.js*:ssä *deleteNote*-funktio ja välitä se *props*:ina *Not
 ```js
 const deleteNote = (e, id) => {
     axios.delete(`${baseURL}/${id}`)
-    .then(reponse => {
+    .then(response => {
       console.log("poistettu:", id)
     })
   }
