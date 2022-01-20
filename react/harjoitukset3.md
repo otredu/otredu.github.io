@@ -60,7 +60,7 @@ Voit laittaa toistaiseksi kaiken axios-koodin *apps.js*-tiedostoon. [Ohjeet axio
 
 Tallenna axioksen avulla json-serverille (tai notes-backendille) uusi kovakoodattu muistiinpano (*notes*-olio). Katso json-serveriltä, että se ilmestyi myös sinne.
 
-*Huom* id-tulee serveriltä, älä lähetä sitä.'
+*Huom* id-tulee serveriltä, älä lähetä sitä.
 
 ![notes](./img/json_server.PNG)
 
