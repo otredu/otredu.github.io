@@ -8,6 +8,7 @@ Tee jokainen tehtävä omaan *.php*-tiedostoon ja tee palautussivusto, jonka yl�
 
 Huom! Pyöristä arvot [ohje](https://www.php.net/manual/en/function.round.php).
 
+---
 
 ### Tehtävä 1
 
@@ -22,6 +23,7 @@ Tulostus voisi näyttää esim. tältä:
 
 <img src="img/t1.PNG" alt="t1" width="200"/>
 
+---
 
 ### Tehtävä 2
 
@@ -33,6 +35,8 @@ Tulostus voisi näyttää esim. tältä:
 
 <img src="img/t2.PNG" alt="t2" width="200"/>
 
+---
+
 ### Tehtävä 3
 
 Laadi ohjelma, joka pyytää lomakkeella tuotteen hinnan ja arvonlisäveroprosentin, ja laskee sekä tulostaa arvonlisäveron euromäärän sekä verollisen hinnan.
@@ -42,6 +46,8 @@ Laadi ohjelma, joka pyytää lomakkeella tuotteen hinnan ja arvonlisäveroprosen
 Tulostus voisi näyttää esim. tältä:
 
 <img src="img/t3.PNG" alt="t3" width="200"/>
+
+---
 
 ### Tehtävä 4
 
@@ -55,6 +61,8 @@ Tulostus voisi näyttää esim. tältä:
 
 <img src="img/t4.PNG" alt="t4" width="200"/>
 
+---
+
 ### Tehtävä 5
 
 Laadi ohjelma, joka pyytää lomakkeella syötteenä viimeisen kokeen arvosanan (1 - 3).
@@ -66,6 +74,8 @@ Tulostus voisi näyttää esim. tältä:
 
 <img src="img/t5.PNG" alt="t5" width="200"/>
 
+---
+
 ### Tehtävä 6
 
 Laadi ohjelma, joka pyytää lomakkeella työntekijän työtunnit, tuntipalkan sekä ennakonpidätyksen veroprosentin, ja laskee ja tulostaa bruttopalkan, veron määrän ja nettopalkan.
@@ -76,6 +86,8 @@ Tulostus voisi näyttää esim. tältä:
 
 <img src="img/t6_lomake.PNG" alt="t6" width="200"/>
 
+---
+
 ### Tehtävä 7
 
 Laadi ohjelma, joka pyytää lomakkeella tuotteen yksikköhinnan ja tilatun määrän sekä alennusprosentin, ja laskee sekä tulostaa kokonaishinnan (ilman alennusta), alennuksen määrän sekä alennetun hinnan.
@@ -85,6 +97,8 @@ Laadi ohjelma, joka pyytää lomakkeella tuotteen yksikköhinnan ja tilatun mä�
 Tulostus voisi näyttää esim. tältä:
 
 <img src="img/t7.PNG" alt="t7" width="200"/>
+
+---
 
 ### Tehtävä 8
 
@@ -115,6 +129,8 @@ Voit tehdä toisen valituksi kirjoittamalla:
 suurempi: <input type="radio" name="valinta" value="suurempi" checked="checked">
 ```
 
+---
+
 ###  Lisätehtävä 1
 
 Laadi ohjelma, joka pyytää käyttäjää valitsemaan jonkun kysymyksen valmiista valintaluettelosta (dropdown). Käytä ratkaisussa switch - case-rakennetta. Keksi itse kysymykset ja vastaukset (tee vähintään viisi kysymystä/vastausta).
@@ -137,6 +153,8 @@ Jos haluat tulostaa jonkin valitun arvon lomakkeelle, käytä attribuuttia "sele
 <option value="4" selected="selected">Mikä päivä tänään on?</option>
 ```
 
+---
+
 ### Lisätehtävä 2
 
 Toteuta edellinen tehtävä niin, että se arpoo vastauksen.
@@ -145,8 +163,8 @@ Toteuta edellinen tehtävä niin, että se arpoo vastauksen.
 
 Laita vastausvaihtoehdot taulukkoon, käytä rand:ia ja taulukon indeksejä. 
 
+---
+
 ### Lisätehtävä 3
 
 Palauta tekstin sijaan kuva (esim. jokin meemi, emoji tai animoitu gif).
-
-
