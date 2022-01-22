@@ -74,17 +74,17 @@ Laadi ohjelma, joka pyytää lomakkeella työntekijän työtunnit, tuntipalkan s
 
 Tulostus voisi näyttää esim. tältä:
 
-<img src="img/t6_lomake.PNG" alt="t6" width="200"/>
+<img src="img/t6.PNG" alt="t6" width="200"/>
 
 ### Tehtävä 7
 
 Laadi ohjelma, joka pyytää lomakkeella tuotteen yksikköhinnan ja tilatun määrän sekä alennusprosentin, ja laskee sekä tulostaa kokonaishinnan (ilman alennusta), alennuksen määrän sekä alennetun hinnan.
 
-<img src="img/t7_lomake.PNG" alt="t7" width="200"/>
+<img src="img/t7a_lomake.PNG" alt="t7" width="200"/>
 
 Tulostus voisi näyttää esim. tältä:
 
-<img src="img/t7.PNG" alt="t7" width="200"/>
+<img src="img/t7a.PNG" alt="t7" width="200"/>
 
 ### Tehtävä 8
 
@@ -143,10 +143,8 @@ Toteuta edellinen tehtävä niin, että se arpoo vastauksen.
 
 *Vihje:*
 
-Laita vastausvaihtoehdot taulukkoon, käytä rand:ia ja taulukon indeksejä. 
+Laita vastausvaihtoehdot taulukkoon, käytä rand:ia ja taulukon indeksejä.
 
 ### Lisätehtävä 3
 
 Palauta tekstin sijaan kuva (esim. jokin meemi, emoji tai animoitu gif).
-
-

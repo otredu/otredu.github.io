@@ -78,12 +78,6 @@ Yksinkertainen HTML-lomake, joka käsittelee lomakkeeseen syötetyt arvot näytt
 
 <h2>Harjoitus</h2>
 
-<form action="lomakedemo.php" method="get">
-    Etunimi: <input type="text" name="name" maxlength=30><br>
-    Ikä:     <input type="number" name="age"><br>
-             <input type="submit" value="Lähetä">
-</form>
-
 <?php
     if(isset($_GET['name'], $_GET['age'])){
         $name = $_GET['name'];
@@ -91,6 +85,13 @@ Yksinkertainen HTML-lomake, joka käsittelee lomakkeeseen syötetyt arvot näytt
         echo "Mitä kuuluu  $name? ", "Olet $age vuotta vanha";
     }
 ?>
+
+<form action="lomakedemo.php" method="get">
+    Etunimi: <input type="text" name="name" maxlength=30><br>
+    Ikä:     <input type="number" name="age"><br>
+             <input type="submit" value="Lähetä">
+</form>
+
 
 <?php require "footer.php"; ?>
 ```
