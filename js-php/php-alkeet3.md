@@ -108,6 +108,8 @@ if(isset($_POST['name'], $_POST['age'])){
 ...
 ```
 
+*Huom!* Jos *action* kohdan jättää pois, default-arvo on ko. tiedosto itse. Jos *method*-kohdan jättää pois, default-arvo on *get*.
+
 Edellinen esimerkki toimii, mutta jos halutaan näyttää lomake vain, jos sitä ei vielä ole lähetetty voidaan tarkistaa onko kyseessä ensimmäinen latauskerta (eli lomaketta ei ole vielä kertaakaan lähetetty). Tätä varten lisätään erillinen piilotettu *hidden* kenttä, jonka arvoksi asetetaan 1:
 
 ```php
