@@ -45,23 +45,26 @@ PHP-ohjelman kannalta on oleellista testata lähettikö selain tietyt parametrit
 ```php
 <?php
     if(isset($_GET['name'])){
-        echo "Hello " . $_GET['name'];
-    } else {
-        echo "Hello, stranger";
-    } ?>
+        $name = htmlspecialchars($_GET['name']);
+        if(isset($name))
+            echo "Hello " . $name;
+        else 
+            echo "Hello, stranger";
+    }
+     ?>
 ```
 
 Tämän lyhyempi versio olisi:
 
 ```php
-    <?= isset($_GET['name']) ? "Hello {$_GET['name']}" : "Hello, stranger"; ?>
+    <?= isset($name) ? "Hello {$name}" : "Hello, stranger"; ?>
 ```
 
 Myös ehtolauseen voi katkaista ja kirjoittaa väliin HTML-koodia:
 
 ```php
-<?php if(isset($_GET['name'])) : ?>
-    <p> Hello <?= $_GET['name'] ?></p>
+<?php if(isset($name))) : ?>
+    <p> Hello <?= $name ?></p>
 <?php else : ?>
     <p> Hello, stranger </p>
 <?php endif?>
@@ -80,8 +83,8 @@ Yksinkertainen HTML-lomake, joka käsittelee lomakkeeseen syötetyt arvot näytt
 
 <?php
     if(isset($_GET['name'], $_GET['age'])){
-        $name = $_GET['name'];
-        $age = $_GET['age'];
+        $name = htmlspecialchars($_GET['name']);
+        $age = htmlspecialchars($_GET['age']);
         echo "Mitä kuuluu  $name? ", "Olet $age vuotta vanha";
     }
 ?>
@@ -111,8 +114,8 @@ Edellinen esimerkki toimii, mutta jos halutaan näyttää lomake vain, jos sitä
 <?php if (isset($_GET['form_submitted'])): ?>
     <?php
         if(isset($_GET['name'], $_GET['age'])){
-            $name = $_GET['name'];
-            $age = $_GET['age'];
+            $name = htmlspecialchars($_GET['name']);
+            $age = htmlspecialchars($_GET['age']);
             echo "Mitä kuuluu  $name? ", "Olet $age vuotta vanha";
         } else {
             echo "Et voi jätttää kenttiä tyhjäksi";
