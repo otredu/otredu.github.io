@@ -2,7 +2,7 @@
 
 ### Notesdemon full build
 
-Tee notes-demon juureen uusi tiedosto nimeltä *Dockerfile* ja tallenna siihen projektisi buildaus- ja käynnistysohjeet ks. alla (tässä oletetaan, että frontin koodi on hakemistossa "notesfront" ja backend:in tiedostot hakemistossa "notesback":
+Tee notes-demon juureen uusi tiedosto nimeltä *Dockerfile* ja tallenna siihen projektisi buildaus- ja käynnistysohjeet ks. alla (tässä oletetaan, että frontin koodi on hakemistossa "notesfront" ja backend:in tiedostot hakemistossa "notesback" (ja node/express -pohja on generoitu automaattisesti):
 
 ```docker
 FROM ubuntu:18.04 
@@ -35,20 +35,34 @@ Tee myös .dockerignore-tiedosto (näitä tiedostoja ei haluta kopioida kontin s
 Docker
 */readme.md
 ```
-### Build container
 
-Tee projektistasi Docker-kontti:
+1. Aloita
 
-```cmd
+    Käynnistä docker desktop, ellei jo ole käynnissä. Kirjaudu docker-hub:iin ja lataa ubuntu:
+
+    ```js
+    docker login
+    docker pull ubuntu:18.04
+    ```
+
+2. Buildaa kontti (container)
+
+    Tämä ajetaan projektin juuressa, jossa *Dockerfile* sijaitsee:
+
+    ```cmd
     docker build . -t notesdemo-full
-```
+    ```
 
-### Testaa lokaalisti
+3. Aja ja testaa lokaalisti
 
-Käynnistä kontti Docker:iin:
+    Käynnistä kontti dockeriin. Bash:in avulla voit tarkistaa, ettei ylimäärisiä tiedostoja mennyt buildiin, erityisesti .env ei saa olla mukana! Pääset siitä ulos kirjoittamalla 'exit':
 
-```cmd
+    ```cmd
     docker run -it -p 3000:3000 notesdemo-full bash
-```
+    ```
 
-Tarkista bash:issä, että mitään turha ei tullut mukaan. Erityisesti .env ei saa olla mukana!
+    Avaa selaimessa http://localhost:3000
+
+4. Nyt kontin voi julkaista joko Herokussa, AWS:ssa tai CPANEL:issa.
+
+- [Heroku-ohjeet](../deployment/heroku/container-deployment.html)
