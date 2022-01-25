@@ -16,7 +16,8 @@ Kirjaudu cpanel:iin ja tee itsellesi uusi MySQL-tietokanta (MySQL Database Wizar
 - aja migrate: vendor/bin/phinx migrate -e production
 - aja seeds: vendor/bin/phinx seed:run -e production
 
-### Tietokannan testaus (remote database + CI)
+### Tietokannan testaus (remote database + localhost)
+#### CodeIgniter käytössä:
 
 - siirry kansioon, jossa CI-koodi on (esim. cd ../newsdemo)
 - aja composer install
@@ -25,6 +26,11 @@ Kirjaudu cpanel:iin ja tee itsellesi uusi MySQL-tietokanta (MySQL Database Wizar
     2. vaihda development -> production
     3. muuta tietokannan tiedot samoiksi kuin phinx.php:ssa (host, database, username)
 - käynnistä: php spark serve --port 8888 (testaa toimiiko localhost + remote db)
+
+#### Muu PHP-koodi käytössä:
+
+- muuta tietokantayhteys käyttämään remote - tietokantaa
+- käynnistä: php -S localhost:8888
 
 ### Subdomain:in (alitoimialueen) luominen
 
@@ -44,7 +50,7 @@ Ota yhteys palvelimeen ja siirrä kaikki PHP-tiedostot subdomain-kansioosi.
 
 ### .htaccess (Apache)
 
-HUOM! Tätä ei tarvita CI:n kanssa (on .htaccess on automaatisesti mukana).
+HUOM! Tätä ei tarvita CodeIgniter-projektin kanssa (siinä on .htaccess on automaatisesti mukana).
 
 Jotta kaikki HTTP-pyynnöt ohjautuisivat reitittimellemme eli ohjelmamme *index.php*-tiedostolle, lisäämme *public*-kansioon vielä *.htaccess*-tiedoston, joka konffaa Apache-palvelimen toiminnan halutuksi.  
 
@@ -58,4 +64,3 @@ RewriteRule ^/index\.php$ - [L,NC]
 
 RewriteRule . index.php [L]
 ```
-

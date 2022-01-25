@@ -2,7 +2,7 @@
 
 ### Tietokannan luominen Herokuun
 
-Herokussa on mahdollisuus luoda ilmainen Postgres - tietokanta. Luo ensin uusi Heroku-app ja lisää sille uusi resurssi Heroku Postgres. Hyväksy "Hobby Dev - Free" - tilaus.
+Herokussa on mahdollisuus luoda ilmainen Postgres - tietokanta. Luo ensin uusi Heroku-app ja lisää sille uusi resurssi *Heroku Postgres*. Hyväksy "Hobby Dev - Free" - tilaus.
 
 ![heroku postgres](../img/heroku_postgres.PNG)
 
@@ -26,4 +26,9 @@ Muokkaa knex.js tietostoon em. tietokannan kirjautumistiedot kohtaan "production
     },
 ```
 
+Aja migrations ja seeds Herokuun:
 
+```cmd
+npx knex migrate:latest --env production
+npx knex seed:run --env production
+```

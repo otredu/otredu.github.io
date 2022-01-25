@@ -46,28 +46,7 @@ CMD npx json-server -H 0.0.0.0 --static build --port=3001 --watch db.json
 
     Avaa selaimessa http://localhost:3001
 
-4. Heroku-tilin luominen, uuuden app:in luominen
-
-    Tee tili heroku.com:iin, luo uusi app (valitse Eurooppa).
-
-    ![new app](img/new_app1.png)
-
-    ![new app, europe](img/new_app3.PNG)
-
-5. Asenna heroku cli
-
-    ```cmd
-    npm install -g heroku
-    ```
-
-6. Kirjaudu Herokuun (hyväksy selaimessa) sekä Heroku container registry:yn
-
-    ```cmd
-    heroku auth:login
-    heroku container:login
-    ```
-
-7. Tee Herokun vaatimat muutokset konttiin
+4. Jos julkaiset Herokussa tee sen vaatimat muutokset konttiin
 
     Heroku valitsee itse portin app:ille. Sen saa käyttöönsä $PORT - nimisen ympäristömuuttujan kautta, joten kontti pitää buildata vielä kerran (muuta seuraava rivi Dockerfile:ssä) ja tee uusi build:
 
@@ -75,20 +54,6 @@ CMD npx json-server -H 0.0.0.0 --static build --port=3001 --watch db.json
     CMD npx json-server -H 0.0.0.0 --static build --port=$PORT --watch db.json
     ```
 
-8. Nimeä (tag) kontti Herokun vaatimalla tavalla (Huom! vaihda "notesdemo-json":in tilalle oman app:isi nimi herokussa):
+5. Nyt kontin voi julkaista nyt joko Herokussa, AWS:ssa tai CPANEL:issa.
 
-    ```cmd
-    docker image tag notesdemo-jsonserv registry.heroku.com/notesdemo-json/web
-    ```
-
-9. Lataa kontti Heroku container registryyn (Huom! vaihda "notesdemo-json":in tilalle oman app:isi nimi herokussa):
-
-    ```cmd
-     docker image push registry.heroku.com/notesdemo-json/web
-     ```
-
-10. Julkaise Herokussa
-
-    ```cmd
-    heroku container:release web -a notesdemo-json
-    ```
+- [Heroku-ohjeet](../deployment/heroku/container-deployment.html)
