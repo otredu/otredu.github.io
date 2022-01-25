@@ -4,7 +4,7 @@
 
 Docker:in avulla voit käynnistää koneellesi kehitysympäristön ilman, että asennat ohjelmia. Eli voit esim. pyörittää haluaamaasi MySQL- tai PostgreSQL-tietokantaa.
 
-### Docker - asennusohjeita
+### Docker - lokaalit kehitysympäristöt
 
 - [MySQL ja PHPMyAdmin, localhost](mysql.html)
 - [MySQL ja PHPMyAdmin, localhost, docker-compose](mysql-phpmyadmin.html)
@@ -13,8 +13,11 @@ Docker:in avulla voit käynnistää koneellesi kehitysympäristön ilman, että 
 - [PHPPGAdmin, Heroku PostgreSQL](postgres-heroku.html)
 - [PHPMyAdmin, Azure](phpmyadmin-remote.html)
 - [CodeIgniter](codeigniter.html)
-- [Notesdemo - docker deployment](notesdemo.html)
 
+### Docker - deployment
+
+- [Notesdemo (simple) - docker deployment](notesdemo.html)
+- [Notesdemo (full) - docker deployment](notesdemofull.html)
 ### Docker-container:eiden hallinta
 
 Docker-container:it voidaan pysäyttää, uudelleen käynnistää ja poistaa koneelta:
