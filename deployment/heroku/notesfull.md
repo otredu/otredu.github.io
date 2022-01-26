@@ -94,14 +94,14 @@ Jos olet käyttänyt MySQL-tietokantaa tähän asti, siirtyminen Postgres:iin vo
 
 8. Docker-kontin luominen
 
-- Tee nyt ohjelmastasi Docker-kontti ([ohjeet Docker-kontin tekemiseen](../../docker/notesdemofull.html))
+    - Tee nyt ohjelmastasi Docker-kontti ([ohjeet Docker-kontin tekemiseen](../../docker/notesdemofull.html))
 
 9. Ympäristömuuttujien konffaaminen Herokussa
 
-Lisää tarvittavat ympäristömuuttujat Heroku-appiin (Config Vars):
+    Lisää tarvittavat ympäristömuuttujat Heroku-appiin (Config Vars):
 
-![heroku env](../img/heroku_env.PNG)
+    ![heroku env](../img/heroku_env.PNG)
 
 10. Siirrä kontti Herokuun
 
-- Siirrä kontti Herokuun [ohjeet Docker-kontin siirtämiseksi Herokuun](container-deployment.html)
+    - Siirrä kontti Herokuun [ohjeet Docker-kontin siirtämiseksi Herokuun](container-deployment.html)
