@@ -8,19 +8,20 @@ Jos olet käyttänyt MySQL-tietokantaa tähän asti, siirtyminen Postgres:iin vo
 
 1. Käynnistä lokaali Postgres ja luo sinne tietokanta (notes)
 
-- [Ohjeet Postgres:in käynnistämiseen ja tietokannan luomiseen](../../docker/postgres-pgadmin4.md)
+    - [Ohjeet Postgres:in käynnistämiseen ja tietokannan luomiseen](../../docker/postgres-pgadmin4.md)
 
 2. Muuta *knexfile.js* - käyttämään lokaalia Postgres-tietokantaan:
 
-    ```js
-    development: {
-        client: 'postgresql',
-        connection: {
-        user:'postgres',
-        password: 'mypass123',
-        database: 'notes'
-        }
-    },
+```js
+development: {
+    client: 'postgresql',
+    connection: {
+    user:'postgres',
+    password: 'mypass123',
+    database: 'notes'
+    }
+},
+```
 
 3. Aja migrations
 
