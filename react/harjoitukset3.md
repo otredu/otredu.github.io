@@ -7,7 +7,7 @@ Tarkemmat uudet ohjeet:
 - [Notesdemo, osa 3](./demot/notesdemo_osa3.html)
 ### JSON-serverin asennus ja käynnistys
 
-Tee uusi kansio notesdemo. Tee siihen *db.json*-tiedosto, kopioi sinne tämä [json-muotoinen *notes*-tieto:](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen).
+Tee uusi kansio notesdemo. Tee siihen *db.json*-tiedosto, kopioi sinne tämä [json-muotoinen *notes*-tieto](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen).
 
 Asenna ja käynnistä json-serveri kansioon notesback.
 
@@ -30,7 +30,7 @@ Tutustu REST-rajapinnan toimintaan JSON-serverin ja Postmanin avulla [Ohjeet tä
 Tee seuraavat operaatiot postmanin avulla (Harjoittele HTTP-metodien GET, POST, DELETE ja PUT käyttöä):
 
 1. Hae kaikki muistiinpanot
-2. Hae musitiinpano id:llä 1
+2. Hae muistiinpano id:llä 1
 3. Lisää uusi muistiinpano
 4. Poista muistiinpano
 5. Muuta muistiinpanon tekstiä
@@ -58,9 +58,9 @@ Voit laittaa toistaiseksi kaiken axios-koodin *apps.js*-tiedostoon. [Ohjeet axio
 
 ### Tehtävä 2
 
-Tallenna axioksen avulla json-servejille (tai notes-backendille) uusi kovakoodattu muistiinpano (*notes*-olio). Katso json-serveriltä, että se ilmestyi myös sinne.
+Tallenna axioksen avulla json-serverille (tai notes-backendille) uusi kovakoodattu muistiinpano (*notes*-olio). Katso json-serveriltä, että se ilmestyi myös sinne.
 
-*Huom* id-tulee serveriltä, älä lähetä sitä.'
+*Huom* id-tulee serveriltä, älä lähetä sitä.
 
 ![notes](./img/json_server.PNG)
 
