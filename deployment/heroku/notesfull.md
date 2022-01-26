@@ -68,7 +68,7 @@ Jos olet käyttänyt MySQL-tietokantaa tähän asti, siirtyminen Postgres:iin vo
 
 6. Tietokannan siirtäminen Herokuun
 
-    Siirrä nyt tietokanta Herokuun ([ohjeet Postgres-tietokannan siirtämiseksi Herokuun](heroku-migrations.html))
+    Siirrä nyt tietokanta Herokuun ([ohjeet Postgres-tietokannan siirtämiseksi Herokuun](knex-migrations.html))
 
 7. Heroku-tietokannan testaaminen
 
