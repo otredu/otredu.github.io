@@ -3,7 +3,7 @@
 ### Julkaiseminen Docker-konttien avulla
 
 - [Notesdemo (simple) + JSON-server](../docker/notesdemo.html)
-- [Notesdemo (full) + Postgres-tietokanta](../docker/notesdemofull.html)
+- [Notesdemo (full) + Postgres-tietokanta](heroku/notesdemofull.html)
 
 ### Julkaiseminen CPANEL:issa
 
