@@ -8,7 +8,7 @@ Jos olet käyttänyt MySQL-tietokantaa tähän asti, siirtyminen Postgres:iin vo
 
 1. Käynnistä lokaali Postgres ja luo sinne tietokanta (notes)
 
-- [Ohjeet Postgres:in käynnistämiseen ja tietokannan luomiseen](../docker/postgres-pgadmin4.md)
+- [Ohjeet Postgres:in käynnistämiseen ja tietokannan luomiseen](../../docker/postgres-pgadmin4.md)
 
 2. Muuta *knexfile.js* - käyttämään lokaalia Postgres-tietokantaan:
 
@@ -93,7 +93,7 @@ Jos olet käyttänyt MySQL-tietokantaa tähän asti, siirtyminen Postgres:iin vo
 
 8. Docker-kontin luominen
 
-- Tee nyt ohjelmastasi Docker-kontti ([ohjeet Docker-kontin tekemiseen](../docker/notesdemofull.html))
+- Tee nyt ohjelmastasi Docker-kontti ([ohjeet Docker-kontin tekemiseen](../../docker/notesdemofull.html))
 
 9. Ympäristömuuttujien konffaaminen Herokussa
 
