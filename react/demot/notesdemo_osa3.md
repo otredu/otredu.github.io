@@ -45,4 +45,4 @@ ja vastaava .css
 
 ### Harjoitukset
 
-1. Tee sivulle edellisen pohjalta uusi tilamuuttuja *errorMessage* ja sille oma *errorHook* ja virheelle soveltuava *css*.
+1. Tee sivulle edellisen pohjalta uusi tilamuuttuja *errorMessage* ja sille oma *errorHook* ja virheelle soveltuva *css*.
