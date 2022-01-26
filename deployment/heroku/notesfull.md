@@ -12,16 +12,16 @@ Jos olet käyttänyt MySQL-tietokantaa tähän asti, siirtyminen Postgres:iin vo
 
 2. Muuta *knexfile.js* - käyttämään lokaalia Postgres-tietokantaan:
 
-```js
-development: {
-    client: 'postgresql',
-    connection: {
-    user:'postgres',
-    password: 'mypass123',
-    database: 'notes'
-    }
-},
-```
+    ```js
+    development: {
+        client: 'postgresql',
+        connection: {
+        user:'postgres',
+        password: 'mypass123',
+        database: 'notes'
+        }
+    },
+    ```
 
 3. Aja migrations
 
