@@ -149,13 +149,17 @@ Jos haluat tulostaa jonkin valitun arvon lomakkeelle, käytä attribuuttia "sele
 ---
 ### Lisätehtävä 2
 
-Toteuta edellinen tehtävä niin, että se arpoo vastauksen.
+Laadi tietokoneaiheinen tietokilpailu (voit myös valita jonkin muun aiheen esim. sanakoe, päässälaskukoe):
 
-*Vihje:*
+Kysymyksiä on 5, jokaisesta voi saada enintään 2 pistettä.
 
-Laita vastausvaihtoehdot taulukkoon, käytä rand:ia ja taulukon indeksejä.
+Lomakkeessa on tekstikenttiä, radionappeja ja valintaluetteloita (miksi ei valintaruutuja?). Pisteitä kertyy jokaisesta kysymyksestä, mutta vertailutaulukko on seuraava:
 
----
-### Lisätehtävä 3
+pisteitä 1 - 3, arvosana on välttävä
+pisteitä 4 - 5, arvosana on tyydyttävä
+pisteitä 6 - 8, arvosana on hyvä
+pisteitä 9 - 10, arvosana on kiitettävä
 
-Palauta tekstin sijaan kuva (esim. jokin meemi, emoji tai animoitu gif).
+Peli näyttää arviointitaulukon ja antaa käyttäjälleen selkeän palautteen siitä mikä vastaus oli oikein ja paljonko siitä tuli pisteitä. Tee palaute switch-case-rakenteen avulla.
+
+Muotoile ulkoasusta hyvännäköinen.

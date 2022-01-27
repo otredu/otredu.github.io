@@ -2,66 +2,64 @@
 
 **Ennen näitä harjoituksia tutustu materiaaliin [PHP-alkeet 4](./php-alkeet4.html).**
 
-### Tehtävä 1
+### Tehtävä 1 
 
-Tee to-do-lista, joka tulostetaan ruudulle. Jokainen tehtävä (task) on assosiatiivinen taulukko, jossa avaimina on "tehtävä", "deadline", "vastuuhenkilö", "valmis" (true/false). Tee yksi tehtävä ja tulosta se sivulle. Muuta totuusarvo merkkijonoksi ennen tulostamista. Tulostus voisi näyttää tältä:
-
----
-
-- Tehtävä: Suunnittele tietokanta
-- Deadline: 2.5.2019
-- Vastuuhenkilö: Maija Mikkola
-- Valmis: valmis
-
----
+Laadi ohjelma, joka tulostaa nimesi 10 kertaa, käytä for-silmukkaa.
 
 ### Tehtävä 2
 
-Jatka edellistä harjoitusta ja tee taulukko, jossa on monta tehtävää ja tulosta ne sivulle silmukassa (*foreach* tai *for*). Muuta valmis/kesken tekstin tilalle ikoni [katso esimerkki](https://www.w3schools.com/charsets/ref_utf_dingbats.asp). Tulostus voisi näytää tältä:
-
----
-
-### Tehtävät:
-
-Tehtävä: Suunnittele tietokanta
-- Deadline: 2.5.2019
-- Vastuuhenkilö: Maija Mikkola
-- Valmis: ![valmis](./img/ok.PNG)
-
-Tehtävä: Tee käyttöliittymäsuunnitelma
-- Deadline: 12.7.2019
-- Vastuuhenkilö: Seija Järvinen
-- Valmis: ![valmis](./img/NOK.PNG)
-
----
+Laadi ohjelma, joka tulostaa seuraavat viisi vuotta kuvaruudulle. Nykyisen vuoden saat selville funktiolla date('Y');
 
 ### Tehtävä 3
 
-Tee PHP-ohjelma, joka saa osoiterivillä (*submit form*:in kautta) parametrinaan, joko puhelinnumeron tai nimen. Sivulle palautetaan haetun henkilön nimi ja puhelinnumero. Tallenna nimet ja numerot assosiatiiviseen taulukkoon. Käytä ehtolausetta kun tarkistat kumpi parametri on annettu  (*$_GET*). Voit etsiä parametrin arvoa *array_search*-funktion avulla.
-Tulostus voisi näyttää tältä:
+Tee while-silmukan avulla vuorovaikutteinen ohjelma, joka pyytää lomakkeen avulla suorakaiteen korkeuden ja leveyden sekä tulostaa "*"-merkeistä muodostuvan suorakaiteen. Jos syötteet ovat vaikka 3 ja 8, ohjelma tulostaa:
 
----
-
-Nimi: Janne Juvonen <br>
-Puhelinnumero: 010-10101010
-
----
+********
+********
+********
 
 ### Tehtävä 4
 
-Tee PHP-ohjelma, joka kysyy lomakkeen avulla alennusprosentin ja laskee assosiatiiviseen taulukoon tallennetuille tuotteille uudet alennetut hinnat. Ohjelma tulostaa tiedot taulukon muodossa. Tulostus voisi näyttää tältä:
+Esittele kaksi taulukkoa joista toisessa on etunimiä (vähintään viisi) ja toisessa sukunimiä (saman verran). Tulosta taulukoiden sisällöt li-elementtien sisälle php:n avulla.
 
----
+$etunimet = array("Timo", "Tero", "Tauno");
+$sukunimet = array("Virtanen", "Salonen", "Nieminen");
 
-Alennus: -25%
+Esimerkki:
 
-| Tuote  | Alkuperäinen hinta | Alennettu hinta |
-| --- | --- | --- |
-| Takki  | 100€  | 75€ |
-| Kengät  | 80€  | 60€ |
+Virtanen, Timo
+Salonen, Tero
+Nieminen, Tauno
 
----
+### Tehtävä 5
 
-### Lisätehtävä 1
+Käytä edellisen harjoituksen taulukoita myös tässä harjoituksessa. Arvo luku väliltä nolla - (taulukon koko - 1) ja tulosta satunnainen sukunimi ja satunnainen etunimi. Suorita arpominen nappia painamalla.
 
-Tee harjoitus 2 käyttäen olioita (*class*). Katso mallia [täältä](./php-luokat.html).
+Jotta voit tarkistaa php:ssa onko nappia painettu sinun täytyy määritellä myös submit-painikkeelle nimi:
+
+```php
+<?php
+if (isset($_POST["arvoNimi"])) {
+  echo "nappia painettu";
+}
+?>
+
+<form method="post">
+<input type="submit" value="Arvo nimi" name="arvoNimi" />
+</form>
+```
+
+### Tehtävä 6
+
+Määrittele koodissasi moniulotteinen taulukko joka sisältää vähintään viisi maata, kyseisten maiden pääkaupunkia ja maiden väkiluvut. Käytä maiden määrittelyyn assiatiivista taulukkoa. Tulosta kaupunkien tiedot taulukkoon.
+
+Esimerkki
+
+
+| Index	| Country	 | Capital |	Population |
+| -------- | ------- | ------ | ------- |
+| 0	| Finland |	Helsinki |	5528737 |
+| 1	 | Sweden |	Stockholm |	10377781 |
+| 2	| Norway  |	Oslo |	5372191 |
+| 3	| Denmark |	Copenhagen |	5809502 |
+| 4	| Iceland |	Reykjavik |	343518 |

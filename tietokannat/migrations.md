@@ -6,14 +6,15 @@ Jotta relaatiotietokannan taulujen rakenne saadaan pysymään koodin kanssa synk
 
 ### Knex:in asennus
 
-Tee itsellesi uusi kansio ja asenna siihen *knex*. Muista listätä myös *.gitignore*.
+Tee itsellesi uusi kansio nimeltä *database* projektisi juureen, siirry sen sisään ja asenna *knex*. Muista listätä myös *.gitignore* (ja lisää siihen knexfile.js sekä node_modules).
 
 ```cmd
+cd database
 npm init
-npm install knex --save-dev
+npm install knex --save
 ```
 
-Aja *knex*-init, joka luo konffaustiedoston *knexfile.js*. Anna projektille nimeksi esim. "vuokraus" ja paina *enter*-muihin kohtiin.
+Aja *knex*-init, joka luo konffaustiedoston *knexfile.js*. Anna projektille nimeksi esim. "notesdemo_db" ja paina *enter*-muihin kohtiin.
 
 ```cmd
 npx knex init
@@ -29,7 +30,7 @@ module.exports = {
     connection: {
       user: 'root',
       password: 'mypass123',
-      database: 'my_rentals'
+      database: 'notesdemo_db'
     }
 }
 ```
@@ -43,7 +44,7 @@ module.exports = {
     connection: {
       user:'postgres',
       password: 'mypass123',
-      database: 'my_rentals'
+      database: 'notesdemo_db'
     }
 }
 ```
@@ -64,14 +65,14 @@ npm install pg --save
 
 Docker:in avulla voidaan ajaa erilaisia tietokantaversioita ja kehitysympäristöjä ilman erillista asennusta. Tässä harjoituksessa opetellaan käyttämään Docker:ia lokaalin kehitysympäristön käynnistämiseen:
 
-Käynnistä [MySQL ja PHPMyAdmin dockerilla](https://otredu.github.io/docker/mysql.html) ja luo *my_rentals*-tietokanta.
+Käynnistä [MySQL ja PHPMyAdmin docker-compose:n avulla](https://otredu.github.io/docker/mysql-phpmyadmin.html) ja luo *notesdemo_db*-tietokanta.
 
 ### Taulujen luominen
 
 Luo uusi *migrations*-tiedosto:
 
 ```cmd
-npx knex migrate:make create_rental
+npx knex migrate:make create_notes
 ```
 
 Tämä tekee tyhjän migrations-tiedoston *migrations*-kansioon.
@@ -83,9 +84,8 @@ exports.up = function(knex, Promise) {
     return knex.schema
     .createTable('users', t => {
         t.increments('id').primary()
-        t.string('username').notNullable()
+        t.string('username').notNullable().unique()
         t.string('password').notNullable()
-        t.string('email')
         t.timestamps(false, true)
     })
   };
@@ -112,27 +112,29 @@ Tässä esimerkissä on luotu toinen taulu, ja taulujen välille relaatio:
 
 ```js
 exports.up = function(knex, Promise) {
-    return knex.schema
-    .createTable('users', t => {
-        t.increments('id').primary()
-        t.string('username').notNullable()
-        t.string('password').notNullable()
-        t.string('email')
-        t.timestamps(false, true)
-    })
-    .createTable('appartments', t => {
-        t.increments('id').primary()
-        t.string('address').notNullable()
-        t.integer('user_id').unsigned().references('id').inTable('users').notNull().onDelete('cascade');
-        t.timestamps(false, true)
-    })
-  };
-  
-  exports.down = function(knex, Promise) {
-    return knex.schema
-    .dropTableIfExists('appartments')
-    .dropTableIfExists('users')
-  };
+  return knex.schema
+  .createTable('users', t=> {
+    t.increments('id').primary()
+    t.string('username').notNullable().unique()
+    t.string('password').notNullable()
+    t.timestamps(false, true)
+  })
+  .createTable('notes', t => {
+      t.increments('id').primary()
+      t.string('content').notNullable()
+      t.datetime('date').notNullable()
+      t.boolean('important').notNullable()
+      t.integer('user_id').unsigned().references('id').inTable('users').notNull()
+      .onDelete('cascade')
+  })
+};
+
+exports.down = function(knex) {
+  return knex.schema
+  .dropTableIfExists('notes')
+  .dropTableIfExists('users')
+};
+
 ```
 
 Huomaa, että taulut on luotava tässä järjestyksessä ja poistettava päinvastaisessa järjestyksessä.
@@ -155,12 +157,33 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('users').insert([
-        {id: 1, username: 'fodark', password: "12", email: 'mock@email.com'},
-        {id: 2, username: 'john', password: "34", email: 'mock2@email.com'},
-        {id: 3, username: 'david', password: "56", email: 'mock3@email.com'}
+        {id: 1, username: 'tester1', password: "salasana"},
+        {id: 2, username: 'tester2', password: "salasana"},
       ]);
     });
 };
+```
+
+Koska salasanoja ei tietenkään saa tallentaa ilman niiden salaamista, käytetään *bcryptjs*:ää salasanan *hash*:aamiseen. Asenna bcryptjs:
+
+```cmd
+npm install bcryptjs --save
+```
+
+Lisää tämä *01_users.js* tiedoston alkuun:
+
+```js
+const testPassword = "salasana"
+
+var bcrypt = require('bcryptjs');
+var salt = bcrypt.genSaltSync(10);
+var hashedpassword = bcrypt.hashSync(testPassword, salt);
+```
+
+Ja korvaa merkkijonomuotoinen salasana *hasedpassword*:illä:
+
+```js
+    password: hashedpassword,
 ```
 
 Saat testidatan tietokantaan ajamalla:
@@ -169,25 +192,42 @@ Saat testidatan tietokantaan ajamalla:
 npx knex seed:run
 ```
 
-Toiseen tauluun voidaan lisätä niinikään tietoja (02_appartments.js):
+Toiseen tauluun voidaan lisätä niinikään tietoja (02_notes.js):
 
 ```js
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('appartments').del()
+  return knex('notes').del()
     .then(function () {
       // Inserts seed entries
-      return knex('appartments').insert([
-        {id: 1, address: 'Koulutie 1', user_id: 3},
-        {id: 2, address: 'Koulutie 2', user_id: 2},
-        {id: 3, address: 'Koulutie 3', user_id: 1}
+      return knex('notes').insert([
+        {
+          id: 1,
+          content: "HTML is easy",
+          date: new Date("2020-11-10T17:30:31.098Z"),
+          important: true,
+          user_id: 1
+        },
+        {
+          id: 2,
+          content: "Browser can execute only Javascript",
+          date: new Date("2020-11-10T18:39:34.091Z"),
+          important: false,
+          user_id: 1
+        },
+        {
+          id: 3,
+          content: "GET and POST are the most important methods of HTTP protocol",
+          date: new Date("2020-11-10T19:20:14.298Z"),
+          important: true,
+          user_id: 2
+        }
       ]);
     });
 };
 ```
 
 *knex* ajaa *seeds*-tiedostot aakkosjärjestyksessä, joten ne kannattaa numeroida, niin että ajojärjestys on haluttu.
-
 
 ### Develoment vs. production
 

@@ -25,7 +25,7 @@ Edellinen esimerkki toimii vain kun taulukossa on tasan kolme alkiota. Parempi o
 
 ### Toistorakenteet
 
-PHP:ssa on samankaltaiset toistorakenteet kuin muissakin kielissä: for-silmukka ja foreach-rakenne.
+PHP:ssa on samankaltaiset toistorakenteet kuin muissakin kielissä: for-silmukka, while-silmukka sekä foreach-rakenne.
 
 PHP-koodi voi olla HTML-koodin koodin kanssa sekaisin, esim. foreach-rakenteen voi laittaa "poikki", kirjoittaa väliin HTML:ää ja taas jatkaa PHP:tä. Kun ohjelmointirakenne katkaistaan sen perään laitetaan kaksoispiste (:)
 
@@ -50,11 +50,30 @@ Tässä *foreach* katkaistuna niin, että välissä voi olla HTML-koodia:
 Tässä sama *for* - silmukan  avulla:
 
 ```php
-<ul>
+<?php 
+    for ($i = 0; $i < count($names); $i++){
+            echo "<li> $names[$i] </li>";
+    }
+```
+
+Tässä *for* - katkaistuna niin, että välissä voi olla HTML-koodia:
+
+```php
 <?php for ($i = 0; $i < count($names); $i++): ?>
     <li><?= $names[$i] ?></li>
 <?php endfor ?> 
-</ul>
+```
+
+Tässä sama *while* - silmukan avulla: 
+
+```php
+<?php
+$i = 0;
+while($i < count($names)) {
+    echo "<li> $names[$i] </li>";
+    $i++;
+}
+?>
 ```
 
 ### Assosiatiivinen taulukko
