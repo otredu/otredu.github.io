@@ -31,7 +31,7 @@ const options = {
         host: '127.0.0.1',
         user: 'root',
         password: 'mypass123',
-        database: 'my_rentals'
+        database: 'notes_db'
     }
 }
 
@@ -45,16 +45,19 @@ knex.on('query', console.log);  // SQL-muoto
 Tietokantataulun saa ulos kokonaisuudessaa *select("*")*-metodikutsun avulla. Konsolille voi logittaa suoraan *Knex*:in palauttaman *rows*-taulukon, tai tulostaa tietueiden kentät *forEach*:in avulla.
 
 ```js
-knex.from('apartments').select("*")
+knex.from('notes').select("*")
     .then((rows) => {
-        console.log("starting apartments");
+        console.log("starting notes");
         console.log(rows);
-        rows.forEach(row => console.log(`Id: ${row['id']} Address: ${row['address']} User_id: ${row['user_id']}`));
+        rows.forEach(row => 
+            console.log(`Id: ${row['id']} Content: ${row['content']} User_id: ${row['user_id']}`));
     })
     .catch((err) => {
-        console.log( err); throw err })
+        console.log(err); 
+        throw err 
+    })
     .finally(() => {
-        console.log("destroyed 1")
+        console.log("close database connection")
         knex.destroy();
     });
 ```
@@ -64,11 +67,14 @@ knex.from('apartments').select("*")
 Yksittäisen tietueen tiedot saa *select().where()*-metodien avulla.
 
 ```js
-knex.from('apartments').select("address", "user_id").where('user_id', '>=', '2')
+knex.from('notes').select("content", "user_id").where('user_id', '=', '1')
     .then((rows) => {
         console.log(rows)
     })
-    .catch((err) => { console.log( err); throw err })
+    .catch((err) => { 
+        console.log(err); 
+        throw err
+    })
     .finally(() => {
         knex.destroy();
     });
@@ -79,11 +85,14 @@ knex.from('apartments').select("address", "user_id").where('user_id', '>=', '2')
 Tietueet saadaan haluttuun järjestykseen *select().orderBy()*-metodien avulla:
 
 ```js
-knex.from('apartments').select('address', 'user_id').orderBy('address', 'asc')
+knex.from('notes').select('notes', 'date', 'user_id').orderBy('date', 'asc')
     .then((rows) => {
         console.log("ordered")
         console.log(rows);
-    }).catch((err) => { console.log( err); throw err })
+    }).catch((err) => { 
+        console.log(err); 
+        throw err
+    })
     .finally(() => {
         knex.destroy();
     });
@@ -94,15 +103,20 @@ knex.from('apartments').select('address', 'user_id').orderBy('address', 'asc')
 Tietokantaan voi lisätä yhden tai useamman tietueen *insert*-metodin avulla:
 
 ```js
-const more_apartments = [
-    {address: 'Kissatie 2901', user_id: 3},
-    {address: 'Koiratie 3', user_id: 3},
-    {address: 'Karhutei 44', user_id: 3},
+const more_notes = [
+    {content: 'React is really cool', user_id: 2},
+    {content: 'Knex is better than sequalize', user_id: 2},
+    {content: 'Why are we not using nosql', user_id: 2},
     ]
 
-knex('apartments').insert(more_apartments)
-    .then(() => console.log("more data inserted"))
-    .catch((err) => { console.log(err); throw err })
+knex('notes').insert(more_notes)
+    .then(() => 
+        console.log("more data inserted")
+    )
+    .catch((err) => { 
+        console.log(err); 
+        throw err
+    })
     .finally(() => {
         knex.destroy();
     });
@@ -113,12 +127,16 @@ knex('apartments').insert(more_apartments)
 Tietueita voi poistaa *select().where().del().*-metodien avulla:
 
 ```js
-knex.from('apartments').select('*')
-    .where('user_id', 3)
+knex.from('notes').select('*')
+    .where('user_id', 2)
     .del()
     .then((rows) => {
         console.log("delete")
-    }).catch((err) => { console.log( err); throw err })
+    })
+    .catch((err) => { 
+        console.log( err); 
+        throw err
+    })
     .finally(() => {
         knex.destroy();
     });
@@ -129,13 +147,16 @@ knex.from('apartments').select('*')
 Tietueen tiedot voidaan päivittää *from().where().update()*-metodien avulla:
 
 ```js
-knex.from('apartments')
+knex.from('notes')
     .where({ id: 2 })
-    .update({ address: "Uusi huima osoite" }, ['id', 'address']) //how to addess these?
+    .update({ content: "Who needs Angular?" }, ['id', 'content']) 
     .then((returnvalue) => {
         console.log("update")
-        console.log("paluuarvo", returnvalue);
-    }).catch((err) => { console.log( err); throw err })
+        console.log("returnvalue", returnvalue);
+    })
+    .catch((err) => { 
+        console.log(err); 
+        throw err })
     .finally(() => {
         knex.destroy();
     });
@@ -147,12 +168,16 @@ Kahden taulun tiedot voidaan yhdistää *from().join().select()*-metodeilla:
 
 ```js
 knex.from('users')
-    .join('apartments', 'users.id', '=', 'apartments.user_id')
-    .select('users.id', 'users.username', 'apartments.address', 'users.email')
+    .join('notes', 'users.id', '=', 'notes.user_id')
+    .select('users.id', 'users.username', 'notes.content', 'notes.date')
     .then((rows) => {
         console.log("inner join")
         console.log(rows);
-    }).catch((err) => { console.log( err); throw err })
+    })
+    .catch((err) => { 
+        console.log(err); 
+        throw err
+    })
     .finally(() => {
         knex.destroy();
     });
@@ -199,7 +224,7 @@ Tämä kysely palauttaa siis:
 Huomaa, että mysql-kanta tallentaa päivämäärät ja ajat UTC-muodossa (*shows_showdate*), joten ne näyttävät hieman oudoilta *raw*-muodossa. Ajan saa muunnettua lokaaliksi luomalla *Date()*-olion ja tulostamalla sen *toLocaleDateString()*-metodin avulla:
 
 ```js
-rows.forEach((row) => console.log(new Date(row['shows_showdate']).toLocaleDateString()))
+rows.forEach((row) => console.log(new Date(row['date']).toLocaleDateString()))
 ```
 
 Tämä tulostaa päivämäärät seuraavassa muodossa:

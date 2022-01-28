@@ -36,7 +36,6 @@ Tulostus voisi näyttää esim. tältä:
 <img src="img/t2.PNG" alt="t2" width="200"/>
 
 ---
-
 ### Tehtävä 3
 
 Laadi ohjelma, joka pyytää lomakkeella tuotteen hinnan ja arvonlisäveroprosentin, ja laskee sekä tulostaa arvonlisäveron euromäärän sekä verollisen hinnan.
@@ -48,7 +47,6 @@ Tulostus voisi näyttää esim. tältä:
 <img src="img/t3.PNG" alt="t3" width="200"/>
 
 ---
-
 ### Tehtävä 4
 
 Laadi ohjelma, joka pyytää lomakkeella syötteenä luvun väliltä 1 - 10.
@@ -62,7 +60,6 @@ Tulostus voisi näyttää esim. tältä:
 <img src="img/t4.PNG" alt="t4" width="200"/>
 
 ---
-
 ### Tehtävä 5
 
 Laadi ohjelma, joka pyytää lomakkeella syötteenä viimeisen kokeen arvosanan (1 - 3).
@@ -75,7 +72,6 @@ Tulostus voisi näyttää esim. tältä:
 <img src="img/t5.PNG" alt="t5" width="200"/>
 
 ---
-
 ### Tehtävä 6
 
 Laadi ohjelma, joka pyytää lomakkeella työntekijän työtunnit, tuntipalkan sekä ennakonpidätyksen veroprosentin, ja laskee ja tulostaa bruttopalkan, veron määrän ja nettopalkan.
@@ -84,22 +80,20 @@ Laadi ohjelma, joka pyytää lomakkeella työntekijän työtunnit, tuntipalkan s
 
 Tulostus voisi näyttää esim. tältä:
 
-<img src="img/t6_lomake.PNG" alt="t6" width="200"/>
+<img src="img/t6.PNG" alt="t6" width="200"/>
 
 ---
-
 ### Tehtävä 7
 
 Laadi ohjelma, joka pyytää lomakkeella tuotteen yksikköhinnan ja tilatun määrän sekä alennusprosentin, ja laskee sekä tulostaa kokonaishinnan (ilman alennusta), alennuksen määrän sekä alennetun hinnan.
 
-<img src="img/t7_lomake.PNG" alt="t7" width="200"/>
+<img src="img/t7a_lomake.PNG" alt="t7" width="200"/>
 
 Tulostus voisi näyttää esim. tältä:
 
-<img src="img/t7.PNG" alt="t7" width="200"/>
+<img src="img/t7a.PNG" alt="t7" width="200"/>
 
 ---
-
 ### Tehtävä 8
 
 Laadi ohjelma, jossa käyttäjää pyydetään syöttämään kahteen lomakekenttään luvut ja radionapin avulla tiedon siitä, haluaako hän tulostettavaksi suuremman vai pienemmän luvun. Haluttu luku tulostetaan ruudulle.
@@ -130,7 +124,6 @@ suurempi: <input type="radio" name="valinta" value="suurempi" checked="checked">
 ```
 
 ---
-
 ###  Lisätehtävä 1
 
 Laadi ohjelma, joka pyytää käyttäjää valitsemaan jonkun kysymyksen valmiista valintaluettelosta (dropdown). Käytä ratkaisussa switch - case-rakennetta. Keksi itse kysymykset ja vastaukset (tee vähintään viisi kysymystä/vastausta).
@@ -154,17 +147,19 @@ Jos haluat tulostaa jonkin valitun arvon lomakkeelle, käytä attribuuttia "sele
 ```
 
 ---
-
 ### Lisätehtävä 2
 
-Toteuta edellinen tehtävä niin, että se arpoo vastauksen.
+Laadi tietokoneaiheinen tietokilpailu (voit myös valita jonkin muun aiheen esim. sanakoe, päässälaskukoe):
 
-*Vihje:*
+Kysymyksiä on 5, jokaisesta voi saada enintään 2 pistettä.
 
-Laita vastausvaihtoehdot taulukkoon, käytä rand:ia ja taulukon indeksejä. 
+Lomakkeessa on tekstikenttiä, radionappeja ja valintaluetteloita (miksi ei valintaruutuja?). Pisteitä kertyy jokaisesta kysymyksestä, mutta vertailutaulukko on seuraava:
 
----
+pisteitä 1 - 3, arvosana on välttävä
+pisteitä 4 - 5, arvosana on tyydyttävä
+pisteitä 6 - 8, arvosana on hyvä
+pisteitä 9 - 10, arvosana on kiitettävä
 
-### Lisätehtävä 3
+Peli näyttää arviointitaulukon ja antaa käyttäjälleen selkeän palautteen siitä mikä vastaus oli oikein ja paljonko siitä tuli pisteitä. Tee palaute switch-case-rakenteen avulla.
 
-Palauta tekstin sijaan kuva (esim. jokin meemi, emoji tai animoitu gif).
+Muotoile ulkoasusta hyvännäköinen.

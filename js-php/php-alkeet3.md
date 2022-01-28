@@ -45,23 +45,26 @@ PHP-ohjelman kannalta on oleellista testata lähettikö selain tietyt parametrit
 ```php
 <?php
     if(isset($_GET['name'])){
-        echo "Hello " . $_GET['name'];
-    } else {
-        echo "Hello, stranger";
-    } ?>
+        $name = htmlspecialchars($_GET['name']);
+        if(isset($name))
+            echo "Hello " . $name;
+        else 
+            echo "Hello, stranger";
+    }
+     ?>
 ```
 
 Tämän lyhyempi versio olisi:
 
 ```php
-    <?= isset($_GET['name']) ? "Hello {$_GET['name']}" : "Hello, stranger"; ?>
+    <?= isset($name) ? "Hello {$name}" : "Hello, stranger"; ?>
 ```
 
 Myös ehtolauseen voi katkaista ja kirjoittaa väliin HTML-koodia:
 
 ```php
-<?php if(isset($_GET['name'])) : ?>
-    <p> Hello <?= $_GET['name'] ?></p>
+<?php if(isset($name))) : ?>
+    <p> Hello <?= $name ?></p>
 <?php else : ?>
     <p> Hello, stranger </p>
 <?php endif?>
@@ -78,19 +81,20 @@ Yksinkertainen HTML-lomake, joka käsittelee lomakkeeseen syötetyt arvot näytt
 
 <h2>Harjoitus</h2>
 
+<?php
+    if(isset($_GET['name'], $_GET['age'])){
+        $name = htmlspecialchars($_GET['name']);
+        $age = htmlspecialchars($_GET['age']);
+        echo "Mitä kuuluu  $name? ", "Olet $age vuotta vanha";
+    }
+?>
+
 <form action="lomakedemo.php" method="get">
     Etunimi: <input type="text" name="name" maxlength=30><br>
     Ikä:     <input type="number" name="age"><br>
              <input type="submit" value="Lähetä">
 </form>
 
-<?php
-    if(isset($_GET['name'], $_GET['age'])){
-        $name = $_GET['name'];
-        $age = $_GET['age'];
-        echo "Mitä kuuluu  $name? ", "Olet $age vuotta vanha";
-    }
-?>
 
 <?php require "footer.php"; ?>
 ```
@@ -104,14 +108,16 @@ if(isset($_POST['name'], $_POST['age'])){
 ...
 ```
 
+*Huom!* Jos *action* kohdan jättää pois, default-arvo on ko. tiedosto itse. Jos *method*-kohdan jättää pois, default-arvo on *get*.
+
 Edellinen esimerkki toimii, mutta jos halutaan näyttää lomake vain, jos sitä ei vielä ole lähetetty voidaan tarkistaa onko kyseessä ensimmäinen latauskerta (eli lomaketta ei ole vielä kertaakaan lähetetty). Tätä varten lisätään erillinen piilotettu *hidden* kenttä, jonka arvoksi asetetaan 1:
 
 ```php
 <?php if (isset($_GET['form_submitted'])): ?>
     <?php
         if(isset($_GET['name'], $_GET['age'])){
-            $name = $_GET['name'];
-            $age = $_GET['age'];
+            $name = htmlspecialchars($_GET['name']);
+            $age = htmlspecialchars($_GET['age']);
             echo "Mitä kuuluu  $name? ", "Olet $age vuotta vanha";
         } else {
             echo "Et voi jätttää kenttiä tyhjäksi";

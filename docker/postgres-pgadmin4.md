@@ -57,8 +57,7 @@ Asenna konellesi Postgres-tietokanta ja Pgadmin4 käyttäen docker-compose:a:
 
 ---
 
-
-5. Jos teet oman tietokannan lisää uusi tietokanta
+- Jos teet oman tietokannan lisää uusi tietokanta
 
     Object -> Create -> Database
 
@@ -67,6 +66,6 @@ Asenna konellesi Postgres-tietokanta ja Pgadmin4 käyttäen docker-compose:a:
 
 --- 
 
-5. Jos tietokanta on jo olemassa (esim. remote server), aseta sen nimi filteröintiehdoksi (DB restrictions):
+- Jos tietokanta on jo olemassa (esim. remote server), aseta sen nimi filteröintiehdoksi (DB restrictions):
 
     ![default db](./img/select_db.PNG)
