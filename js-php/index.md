@@ -12,3 +12,4 @@ Tee tehtävät:
 - [Harjoitukset 1](./php-harjoitukset1.html)
 - [Harjoitukset 2](./php-harjoitukset2.html)
 - [Harjoitukset 3](./php-harjoitukset3.html)
+- [Harjoitukset 4](./php-harjoitukset4.html)
