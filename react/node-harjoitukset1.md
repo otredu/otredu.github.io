@@ -15,28 +15,22 @@ Tässä vaiheessa täytyy viimeistään siirtyä pois JSON-serverin käytöstä 
 
 ### Tehtävä 2
 
-Toteuta käyttäjän rekisteröityminen ja kirjautuminen. Vain kirjautunut käyttäjä voi lisätä, muokata tai poistaa muistiinpanoja. Muistiinpanoja voi lukea ilman kirjautumista. [Ohjeita täällä](./demot/notesdemo_osa5.html)
+Toteuta käyttäjän rekisteröityminen ja kirjautuminen. Kirjautunut käyttäjä voi lukea, lisätä, muokata tai poistaa vain omia muistiinpanojaan. [Ohjeita täällä](./demot/notesdemo_osa5.html)
 
-*Huom* Tämä vaatii lisää koodia niin fronttiin kuin backendiinkin sekä muutoksen tietokantaan (users-taulu).
+*Huom* Tämä vaatii lisää koodia niin fronttiin kuin backendiinkin. Tarkista myös, että tietokannassa on notes-taulun lisäksi users-taulun sekä relaatio näiden taulujen välillä.
 
 ### Tehtävä 3
-
-Lisää userid-kenttä muistiinpanoon, niin että kirjatunut käyttäjä voi muokata ja poistaa vain omia muistiinpanojaan.
-
-*Huom* Tämä vaatii lisää koodia myös backendiin ja muutoksen tietokantaan (relaatio users- ja notes-taulujen väliin).
-
-### Tehtävä 4
 
 Refaktoroi backend koodi niin, että se käyttää autentikointiin middlewareja.
 [Ohjeita täällä](https://otredu.github.io/frameworks/node.html)
 
-### Tehtävä 5
+### Tehtävä 4
 
 Luo frontista build, siirrä se backendin static-kansioon. Testaa käynnistämällä vain backend.
 
 ### Lisätehtävä 1
 
-JSON-datan validointi.
+Lisää JSON-datan validointi JSON-scheman avulla.
 
 ### Lisätehtävä 2
 
