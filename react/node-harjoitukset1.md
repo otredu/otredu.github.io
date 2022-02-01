@@ -11,11 +11,11 @@ Tutustu knex:in tietokantakyselyihin tekemällä nämä esimerkit:
 - [Relaatiotietokannan (MySQL) liittäminen backendiin](../tietokannat/db-testing-knex.md)
 ### Tehtävä 1
 
-Tässä vaiheessa täytyy viimeistään siirtyä pois JSON-serverin käytöstä ja koodata varsinainen backend käyttäen node.js:ää. Notes-demon toiminnallisuus MySQL-tietokannan ja node.js:n avulla. [Ohjeita täällä](./demot/notesdemo4.html)
+Tässä vaiheessa täytyy viimeistään siirtyä pois JSON-serverin käytöstä ja koodata varsinainen backend käyttäen node.js:ää. Notes-demon toiminnallisuus MySQL-tietokannan ja node.js:n avulla. [Ohjeita täällä](./demot/notesdemo_osa4.html)
 
 ### Tehtävä 2
 
-Toteuta käyttäjän rekisteröityminen ja kirjautuminen. Vain kirjautunut käyttäjä voi lisätä, muokata tai poistaa muistiinpanoja. Muistiinpanoja voi lukea ilman kirjautumista. [Ohjeita täällä](./demot/notesdemo5.html)
+Toteuta käyttäjän rekisteröityminen ja kirjautuminen. Vain kirjautunut käyttäjä voi lisätä, muokata tai poistaa muistiinpanoja. Muistiinpanoja voi lukea ilman kirjautumista. [Ohjeita täällä](./demot/notesdemo_osa5.html)
 
 *Huom* Tämä vaatii lisää koodia niin fronttiin kuin backendiinkin sekä muutoksen tietokantaan (users-taulu).
 
