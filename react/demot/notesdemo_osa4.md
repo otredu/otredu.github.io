@@ -324,3 +324,23 @@ Content-Type: application/json
 ### Testaus front:in kanssa
 
 Nyt tekemäsi backend:in pitäisi pystyä toimimaan React-front:in kanssa yhdessä. Käynnistä notesdemon React-osuus ja testaa sen toiminta uuden backend:in kanssa (HUOM! Älä käynnistä jsonserveriä enää).
+
+Notes-frontend ei tunnu saavan muistiinpanoja backendiltä vaan konsolille tulostuu vieheilmoitus:
+
+![cors error](../img/cors_policy.PNG)
+
+Tämä johtuu siitä, että frontend (http://localhost:3000) ja backend (http://localhost:3001) pyrivät eri osoitteissa ja tietoturvasyistä selain estään niiden keskustelun keskenään. CORS-tulee sanoista Cross-Origin-Resource Sharing. Tämän ongelman voimme ratkaista käyttämällä proxy:ä, jolloin selaimen kannalta frontend ja backend ovat samassa osoitteessa.
+
+Muuta react-frontend:in serviceURI:ksi:
+
+```js
+const serviceURI = '/notes';
+```
+
+ja lisää front:in package.json:iin:
+
+```json
+  "proxy": "http://localhost:3001",
+```
+
+Nyt yhteys front:in ja back:in välillä toimii. Palaamme CORS:iin vielä myöhemmin.
