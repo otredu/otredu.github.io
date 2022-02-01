@@ -344,3 +344,7 @@ ja lisää front:in package.json:iin:
 ```
 
 Nyt yhteys front:in ja back:in välillä toimii. Palaamme CORS:iin vielä myöhemmin.
+
+---
+
+---> [Notesdemo, osa 5](./notesdemo_osa5.html)
