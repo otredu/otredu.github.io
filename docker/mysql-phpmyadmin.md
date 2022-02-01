@@ -13,6 +13,8 @@ Asenna konellesi MySQL-tietokanta ja PhpMyAdmin käyttäen docker-compose:a:
         restart: always
         environment:
           MYSQL_ROOT_PASSWORD: mypass123
+        ports:
+          - 3306:3306
 
       phpmyadmin:
         image: phpmyadmin

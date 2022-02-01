@@ -22,11 +22,11 @@ npx knex init
 
 *knexfile.js*:ssä pitäisi olla vähintään kirjautumistiedot localhost-tietokannan käyttöön.
 
-Jos käytät MySQL-tietokantaa, päivitä *development* -tiedot seuraaviksi:
+Jos käytät MySQL-tietokantaa (MySQL 8 tai uudempi), päivitä *development* -tiedot seuraaviksi:
 
 ```js
 module.exports = {
-    client: 'mysql',
+    client: 'mysql2',
     connection: {
       user: 'root',
       password: 'mypass123',
@@ -49,10 +49,10 @@ module.exports = {
 }
 ```
 
-Asenna vielä *mysql*:
+Asenna vielä *mysql2*:
 
 ```cmd
-npm install mysql --save
+npm install mysql2 --save
 ```
 
 Tai *postgres*:
