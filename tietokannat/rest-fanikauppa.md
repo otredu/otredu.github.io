@@ -70,9 +70,9 @@ Kun rekisteröityminen ja kirjautuminen lisätään:
 Tee MySQL-tietokannalle *knex migrations*:eiden avulla ylläkuvattu tietokanta. Tee myös *seeds* - tiedostot. Luo testikyselyt *knex*:in avulla seuraaville tilanteille:
 
 - kaikkien tuotteiden pyytäminen tietokannasta
-- yhden tuotteen pyytäminen tietokannasta
+- yhden tuotteen pyytäminen tietokannasta tuotteen id:n avulla
 - uuden käyttäjän lisääminen tietokantaan
-- käyttäjän tietojen hakeminen tietokannasta
+- käyttäjän tietojen hakeminen tietokannasta käyttäjän id:n avulla
 - tuotteen lisääminen käyttäjän ostoskoriin
 - tietyn käyttäjän ostoskorin sisällön hakeminen tietokannasta
 - uuden tilauksen lisääminen tietokantaan
