@@ -26,12 +26,12 @@ Käynnistä MySQL ja PHPMyAdmin dockeriin. PHPMyAdmin:in avulla voit tarkistaa, 
 
 ```js
 const options = {
-    client: 'mysql',
+    client: 'mysql2',
     connection: {
         host: '127.0.0.1',
         user: 'root',
         password: 'mypass123',
-        database: 'notes_db'
+        database: 'notesdemo_db'
     }
 }
 
@@ -42,15 +42,13 @@ knex.on('query', console.log);  // SQL-muoto
 
 ### Select *
 
-Tietokantataulun saa ulos kokonaisuudessaa *select("*")*-metodikutsun avulla. Konsolille voi logittaa suoraan *Knex*:in palauttaman *rows*-taulukon, tai tulostaa tietueiden kentät *forEach*:in avulla.
+Tietokantataulun saa ulos kokonaisuudessaa *select("*")*-metodikutsun avulla. Konsolille voi logittaa suoraan *Knex*:in palauttaman *rows*-taulukon:
 
 ```js
 knex.from('notes').select("*")
     .then((rows) => {
         console.log("starting notes");
         console.log(rows);
-        rows.forEach(row => 
-            console.log(`Id: ${row['id']} Content: ${row['content']} User_id: ${row['user_id']}`));
     })
     .catch((err) => {
         console.log(err); 
