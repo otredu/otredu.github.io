@@ -2,7 +2,7 @@
 
 **Ennen näitä harjoituksia tutustu materiaaliin [PHP-alkeet 4](./php-alkeet4.html).**
 
-### Tehtävä 1 
+### Tehtävä 1
 
 Laadi ohjelma, joka tulostaa nimesi 10 kertaa, käytä for-silmukkaa.
 
@@ -12,11 +12,13 @@ Laadi ohjelma, joka tulostaa seuraavat viisi vuotta kuvaruudulle. Nykyisen vuode
 
 ### Tehtävä 3
 
-Tee while-silmukan avulla vuorovaikutteinen ohjelma, joka pyytää lomakkeen avulla suorakaiteen korkeuden ja leveyden sekä tulostaa "*"-merkeistä muodostuvan suorakaiteen. Jos syötteet ovat vaikka 3 ja 8, ohjelma tulostaa:
+Tee while-silmukan avulla vuorovaikutteinen ohjelma, joka pyytää lomakkeen avulla suorakaiteen korkeuden ja leveyden sekä tulostaa "*"-merkeistä muodostuvan suorakaiteen. Jos syötteet ovat vaikka korkeus 3 ja leveys 8, ohjelma tulostaa:
 
+```cmd
 ********
 ********
 ********
+```
 
 ### Tehtävä 4
 
@@ -63,3 +65,4 @@ Esimerkki
 | 2	| Norway  |	Oslo |	5372191 |
 | 3	| Denmark |	Copenhagen |	5809502 |
 | 4	| Iceland |	Reykjavik |	343518 |
+
