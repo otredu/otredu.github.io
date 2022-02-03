@@ -18,7 +18,7 @@ Backend keskustelee tietokannan kanssa. Käytetty tietokanta voi olla relaatioti
 
 ### Tietokantaharjoitukset
 
-- [Fanikauppa DB](../tietokannat/json-fanikauppa.html) 
+- [Fanikauppa DB](../tietokannat/rest-fanikauppa.html) 
 ### Kirjautuminen, käyttäjähallinta, JSON webtoken
 
 Kun käyttäjä kirjautuu järjestelmään hän saa JSON webtoken:in tallenttavaksi selaimen muistiin. Token liitetään jokaiseen frontend:in tekemään pyyntöön. Webtoken:in sisään koodatun userid:n avulla backend tunnistaa kirjautuneen käyttäjän.
