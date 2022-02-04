@@ -84,33 +84,19 @@ img {
 }
 ```
 
-### Webbiserverin asennus ja konffaus
+### Webbiserverin käynnistys
 
-Tämä demo tarvitsee toimiakseen webbiserverin, joten sinun täytyy asentaa koneellesi sellainen esim. XAMPP-paketissa tuleva Apache: [asenna XAMPP](https://www.apachefriends.org/download.html).
-
-Avaa XAMPP:in hallintapaneli ja sieltä *config*:in alta "httpd.config"-tiedosto. 
-
-![xamppconfig](./img/xampp_config.png)
-
-Vaihda serverin *root*-kansioksi käyttämäsi koodikansio "kurssit" (kommentoi vanha *root* pois käytöstä #-merkillä):
+Tämä demo tarvitsee toimiakseen webbiserverin (PHP-development server riittää), käynnistä se:
 
 ```cmd
-# DocumentRoot "C:/xampp/htdocs"
-DocumentRoot "C:/users/<etunimi>.<sukunimi>/documents/kurssit"
-
-# <Directory "C:/xampp/htdocs">
-<Directory "C:/users/<etunimi>.<sukunimi>/documents/kurssit">
+php -S localhost:8888
 ```
 
-Käynnistä Apache ja avaa sivusi webbiserverin kautta osoitteesta:
+Huom! Jos teet näitä tehtäviä kotona, [asenna XAMPP](https://www.apachefriends.org/download.html), sen mukana saat PHP-development server:in.
 
-```cmd
-http://localhost:80
-```
+### Plan B (jos et saa edellistä kohtaa toimimaan)
 
-### Plan B (jos et saa XAMPP:ia toimimaan)
-
-HUOM! Jos et saa XAMPP:ia toimimaan, voit tehdä tämän demon myös ilman koodimoduleja. Kopioi *countries*-taulukko suoraan countries.js-tiedoston alkuun (et siis tarvitse *countries-data.js* - tiedostoa). Kommentoi pois *export* ja *import* osuudet koodista:
+HUOM! Jos et saa PHP-development serveriä toimimaan, voit tehdä tämän demon myös ilman koodimoduleja. Kopioi *countries*-taulukko suoraan countries.js-tiedoston alkuun (et siis tarvitse *countries-data.js* - tiedostoa). Kommentoi pois *export* ja *import* osuudet koodista:
 
 ```js
 /*export*/ let coutries = ...
