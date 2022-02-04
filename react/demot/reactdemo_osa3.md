@@ -117,7 +117,7 @@ const [friends, setFriends] = useState([]);
 Lisätään *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-nappia painetaan.
 
 ```jsx
-<form onSubmit={e=>submitHandler(e, friend)}>
+<form onSubmit={e=>submitHandler(e, name)} />
 ```
 
 *submitHandler*:ia kutsutaan, kun lomake lähetetään *submit*-buttonilla. Ensimmäiseksi on estettävä PHP-tyylinen lomakkeen käsittelyn *e.preventDefault()*:in avulla. Sitten lisätään uusi ystävä listään *concat*:in avulla.
@@ -125,9 +125,9 @@ Lisätään *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-n
 Huom! vaikka *friends* on taulukko, älä käytä *push*-metodia, koska se muuttaa taulukkoa suoraan, käytä *concat*:ia (*unmutable*) ja setFriends-funktiota.
 
 ```jsx
-const submitHandler = (e, friend) => {
+const submitHandler = (e, name) => {
     e.preventDefault();
-    setFriends(friends.concat(friend))
+    setFriends(friends.concat(name))
 }
 ```
 

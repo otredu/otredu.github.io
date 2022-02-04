@@ -113,8 +113,9 @@ Promise on *asynkronisen* - kutsun käsittelyyn tarkoitettu tietorakenne JavaScr
 Jotta tietoa voidaan muokata, saadut tiedot tallennetaan *notes*-tilamuuttuujaan. Jotta osaamme lukea *data*-kentän oikealla hetkellä, jäämme odottamaan *response*-viestiä *then*-rakenteen avulla:
 
 ```js
-import axios from 'axios'
-import {useState} = 
+import axios from 'axios';
+import {useState} from 'react';
+
 const App = () => {
 // tilamuuttuja:    
 const [notes, setNotes] = useState([]);
