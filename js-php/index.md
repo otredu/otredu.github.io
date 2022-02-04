@@ -13,3 +13,18 @@ Tee tehtävät:
 - [Harjoitukset 2](./php-harjoitukset2.html)
 - [Harjoitukset 3](./php-harjoitukset3.html)
 - [Harjoitukset 4](./php-harjoitukset4.html)
+
+## JavaScript-ohjelmointia
+
+Opiskele nämä asiat:
+
+- [DOM alkeita](../js/dom.html)
+- [DOM jatko](../js/dom_jatko.html)
+- [jQuery](../js/jquery.html)
+
+Tee tehtävät:
+
+- [DOM harjoitukset 1](../js/harjoituksia2.html)
+- [DOM harjoitukset 2](../js/harjoituksia3.html)
+- [DOM harjoitukset 3 (jQuery)](../js/harjoituksia4.html)
+- [Lisätehtäviä](../js/harjoituksia5.html)
