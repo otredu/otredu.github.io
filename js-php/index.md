@@ -14,7 +14,7 @@ Tee tehtävät:
 - [Harjoitukset 3](./php-harjoitukset3.html)
 - [Harjoitukset 4](./php-harjoitukset4.html)
 
-## JavaScript-ohjelmointia
+## JavaScript-selainohjelmointia
 
 Opiskele nämä asiat:
 
