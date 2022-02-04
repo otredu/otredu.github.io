@@ -1,4 +1,4 @@
-## Harjoituksia 4
+## jQuery - harjoitukset
 
 Tee seuraavat harjoitukset käyttäen jQuery-kirjastoa. Tee vain pyydetyt osiot HTML:llä ja loput pelkällä JavaScriptillä, pidä HTML ja JavaScript omissa tiedostoissaan.
 
