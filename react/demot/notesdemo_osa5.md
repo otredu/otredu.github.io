@@ -136,6 +136,6 @@ content-type: application/json
 }
 ```
 
-### Kirjautuminen (frontend)
+---
 
-... tulossa ...
+---> [Notesdemo, osa 6](./notesdemo_osa6.html)
