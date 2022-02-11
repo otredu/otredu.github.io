@@ -131,7 +131,7 @@ POST http://localhost:3001/login HTTP/1.1
 content-type: application/json
 
 {
-    "username": "user1",
+    "username": "tester1",
     "password": "salasana"
 }
 ```

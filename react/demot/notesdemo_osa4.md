@@ -84,7 +84,7 @@ const options = {
         host: '127.0.0.1',
         user: 'root',
         password: 'mypass123',
-        database: 'notes_db'
+        database: 'notesdemo_db'
     }
 }
 const knex = require('knex')(options);
@@ -131,7 +131,7 @@ Tietokantasalasanoja ei saisi koskaan kovakoodata suoraan koodiin, koska koodia 
 DB_HOST = localhost
 DB_USER = root
 DB_PASS = mypass123
-DB_DATABASE = notes_db
+DB_DATABASE = notesdemo_db
 DB_TYPE = mysql2
 DB_PORT = 3306
 PORT = 3001
@@ -183,7 +183,7 @@ Tallenna kopio *.env* - tiedostosta nimellä *.env-local* (hyvä, että .env - t
 
 ### Tietokantayhteyden debuggaus
 
-Jos haluat näydä millaista SQL:ää knex generoi lisää tämä rivi tiedoston alkuun:
+Jos haluat näydä millaista SQL:ää knex generoi lisää tämä rivi tiedoston alkuun (const knex:in alapuolelle):
 
 ```js
 knex.on('query', console.log);  // DEBUG
@@ -239,7 +239,6 @@ Viedään uusi note vielä tietokantaan:
        newNote.id = id_arr[0];
        res.json(newNote);
    })
- })
 ```
 
 Lisää myös *catch*-haara.
