@@ -11,7 +11,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 - [Testaaminen](./testaus/index.html)
 - [React](./react/index.html)
 - [Tietokannat](./tietokannat/index.html)
-- [PHP](./js-php/index.html)
+- [ASPA (PHP, JS)](./js-php/index.html)
 
 ### Materiaalit kevät 2021
 - [Johdatus systeemityöhön](./johdatus_systeemityo/index.html)
