@@ -53,12 +53,18 @@ import notesService from './services/notes';
 
 Poista service URL, ja korvaa kaikki korvaa kaikki *axios*-kutsut sitä vastaavalla *notesService*-funktiolla, esim.
 
+Vanha:
+
 ```js
    axios
    .get(serviceURI)
 ```
 
+Uusi:
+
 ```js
     notesService
     .getAll()
 ```
+
+Korjaa myös *response.data* -> *response* (service palauttaa suoraan data-osan).
