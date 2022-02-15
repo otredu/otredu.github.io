@@ -153,3 +153,22 @@ Tallennetaan *authtoken* myös *notesService*:een, tehdään tämä *startHook*:
 ```js
 notesService.setToken(token.token)
 ```
+
+### Logout
+
+Toteuta uloskirjautumistoiminto (esim. logout-nappi). Siihen riittää selaimen muistissa olevan *authtoken*:in poistaminen ja ohjelman uudelleen lataaminen (tyhjentää kaikki tilamuuttujat).
+
+```js
+  const logout = () => {
+    window.localStorage.removeItem('loggedNotesAppUser')
+    window.location.reload()
+  }
+```
+
+### Tehtävä 1
+
+Toteuta rekisteröityminen käyttäen *userService*:ä. Tee rekisteröitymislomake, ota mallia kirjautumislomakkeesta.
+
+### Tehtävä 2
+
+Parantele käyttöliittymää niin, että jos käyttäjä on kirjautuneena hän voi käyttää toimintoja ja valita uloskirjautumisen, ei-kirjautuneena valittavissa on vain rekisteröitymisen tai kirjautumisen. Käytä tässä *token* - tilamuuttujaa.
