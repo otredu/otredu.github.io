@@ -1,6 +1,6 @@
 ## Axios - service 
 
-Tehdään uusi kirjasto *axios-service*. Tämän kirjaston tarkoitus on piilottaa muulta koodilta yksityskohta kuten serviceURL, axios-kirjasto, sekä tallentaa auth-token.
+Tehdään uusi kirjasto *axios-service*. Tämän kirjaston tarkoitus on piilottaa muulta koodilta yksityskohta kuten serviceURL, axios-kirjasto, sekä tallentaa authtoken.
 
 ```js
 import axios from 'axios';
@@ -10,7 +10,7 @@ const baseUrl = '/notes'
 let token = null;
 
 const setToken = newToken => {
-  token = `bearer ${newToken}`
+  token = newToken
 }
 
 const makeHeader = () => {
@@ -41,7 +41,8 @@ export default {
     getAll: getAll,
     add: add,
     update: update,
-    remove: remove
+    remove: remove,
+    setToken: setToken
 }
 ```
 

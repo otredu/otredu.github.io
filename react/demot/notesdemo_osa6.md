@@ -44,7 +44,7 @@ Lisätään vielä toiminnallisuus, jossa selaimen muistista tarkistetaan onko k
 
 ```js
   const userHook = () => {
-    const loggedUserJSON = window.localStorage.getItem('loggedNotesAppUser')
+    const loggedUserJSON = window.localStorage.getItem('notesdemouser')
     if (loggedUserJSON) {
       const user = JSON.parse(loggedUserJSON)
       setToken(user.token)
@@ -132,6 +132,8 @@ Nyt käyttäjän id on tallessa muuttujassa *decodedToken.id* joten sitä voidaa
 where('user_id', '=', decodedToken.id)
 ```
 
+*Huom!* Jos tarvitaan kaksi *where*-ehtoa käytä jälkimmäisessä *andWhere*.
+
 Sama varmistus pitää lisätä muistiinpanon poistoon ja muokkaukseen, että vain muistiinpanon luonut henkilö voi sitä muokata/poistaa.
 
 Vastaavasti uusi muistiinpano voidaan nyt liittää kirjautuneen käyttäjän id:hen (poista nyt siis aikaisemmin kovakoodattu id):
@@ -160,7 +162,7 @@ Toteuta uloskirjautumistoiminto (esim. logout-nappi). Siihen riittää selaimen 
 
 ```js
   const logout = () => {
-    window.localStorage.removeItem('loggedNotesAppUser')
+    window.localStorage.removeItem('notesdemouser')
     window.location.reload()
   }
 ```
