@@ -174,3 +174,7 @@ Toteuta rekisteröityminen käyttäen *userService*:ä. Tee rekisteröitymisloma
 ### Tehtävä 2
 
 Parantele käyttöliittymää niin, että jos käyttäjä on kirjautuneena hän voi käyttää toimintoja ja valita uloskirjautumisen, ei-kirjautuneena valittavissa on vain rekisteröitymisen tai kirjautumisen. Käytä tässä *token* - tilamuuttujaa.
+
+--- 
+
+---> [Notesdemo, osa 7](./notesdemo_osa7.html)
