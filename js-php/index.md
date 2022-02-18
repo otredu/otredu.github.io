@@ -1,4 +1,4 @@
-## PHP-ohjelmointia
+## PHP-ohjelmointia: alkeet
 
 Opiskele nämä asiat:
 
@@ -13,6 +13,16 @@ Tee tehtävät:
 - [Harjoitukset 2](./php-harjoitukset2.html)
 - [Harjoitukset 3](./php-harjoitukset3.html)
 - [Harjoitukset 4](./php-harjoitukset4.html)
+
+## PHP-ohjelmointia: jatko
+
+Opiskele nämä asiat:
+
+- [PDO-rajapinta: select, insert](./pdo-rajapinta.html)
+
+Tee tehtävät:
+
+- [Harjoitukset 1](./php-harjoitukset1.html)
 
 ## JavaScript-selainohjelmointia
 

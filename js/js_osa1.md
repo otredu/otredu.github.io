@@ -6,5 +6,5 @@
 
 ---
 
-- [Harjoitukset 1](../js-php/harjoituksia1.html)
-- [Harjoituksia 2](../js-php/harjoituksia2.html)
+- [Harjoitukset 1](./harjoitukset-perusrakenteet1.html)
+- [Harjoituksia 2](./harjoitukset-perusrakenteet2.html)
