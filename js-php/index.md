@@ -18,7 +18,7 @@ Tee tehtävät:
 
 Opiskele nämä asiat:
 
-- [PDO-rajapinta: select, insert](./pdo-rajapinta.html)
+- [PDO-rajapinta](./pdo-rajapinta.html)
 
 Tee tehtävät:
 
