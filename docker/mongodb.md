@@ -42,3 +42,51 @@ services:
 
     - käyttäjätunnus: root
     - salasana: mypass123
+
+4. Luo käyttöliittymästä uusi tietokanta (Database)
+
+5. Testaa yhteys esim. node:n avulla:
+
+    1) Asenna mongodb ja mongoose:
+
+    ```cmd
+    npm install mongodb
+    npm install mongoose
+    ```
+
+    2) Tee config.js - tiedosto:
+
+    ```js
+    module.exports = {
+    url: 'mongodb://localhost:27017/mydatabase',
+    user: 'root',
+    pwd: 'mypass123'
+    }
+    ```
+
+    3) Tee connectiontest.js - tiedosto:
+
+    ```js
+    const mongoose = require('mongoose');
+    const dbConfig = require('./config');
+
+    mongoose.Promise = global.Promise;
+
+    mongoose.connect(dbConfig.url, {
+        useNewUrlParser: true,
+        user: dbConfig.user,
+        pass: dbConfig.pwd,
+        authSource: "admin"
+    }).then(() => {
+        console.log('successfully connected to the database');
+    }).catch(err => {
+        console.log('error connecting to the database', err);
+        process.exit();
+    });
+    ```
+
+    4) Aja connectiontest.js
+
+    ```cmd
+    node connectiontest.js
+    ```
