@@ -38,7 +38,7 @@ Tee komponentti, jonka avulla voi lisätä uuden keikan tiedot. Tallenna tiedot 
 
 ### Tehtävä 4
 
-Ota käyttöön [React-router](https://reacttraining.com/react-router/web/guides/quick-start).
+Ota käyttöön [React-router](https://fullstackopen.com/osa7/react_router).
 
 Sijoita keikkojen katseluun liittyvät toiminnot omaan komponenttiinsa esim. *<Home />* ja keikkojen lisääminen omaan komponenttinsa esim. *<AddGig />*.
 
