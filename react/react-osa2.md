@@ -14,6 +14,7 @@ Materiaali:
 - [Tyylien lisääminen react sovellukseen](https://fullstackopen.com/osa2/tyylien_lisaaminen_react_sovellukseen)
 - [Effect-hooks](./effect-hooks.html)
 - [React-boostrap - demo](./react-bootstrap.html), voit käyttää boostrap-komponentteja harjoitusten tekemiseen, jos haluat
+- [React-router (docs)](https://reactrouter.com/docs/en/v6)
 - [React-router](https://www.w3schools.com/react/react_router.asp)
 
 ---
