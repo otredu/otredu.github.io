@@ -4,11 +4,13 @@
 
 ### Tehtävä 1
 
-Lisää uutistietokantaan uusi taulu *writers*. Luo muutama kirjoittaja tietokantaan. Tee uutisen ja taulun välille relaatio. Tee lomake, jonka avulla kirjoittajia voidaan listätä tietokantaan.
+Lisää uutistietokantaan uusi taulu *type*. Luo muutama uutistyyppi tietokantaan (urheilu, kotimaa, ulkomaa, alue, politiikka, kulttuuri, muu). Tee uutisen ja taulun välille relaatio. 
 
 ### Tehtävä 2
 
-Lisää uuden uutisen lomakkeeseen poistopäivä (valinta kalenterista) sekä drowdown valikko kirjoittajista. Lisää kaikki uutisen tiedot ruudulle ja muokkaa css:ää niin, että sivu näyttää hyvältä.
+Lisää uuden uutisen lomakkeeseen drowdown valikko, josta voi valita uutisen tyypin. Hae olemassa olevat tyypit tietokannasta ennen kuin luot lomakkeen. Lisää uutislistaukseen kaikki uutisen tiedot (myös tyyppi) ja muokkaa css:ää niin, että sivu näyttää hyvältä.
+
+*Vinkki*: muuta getAllNews - funktiota niin, että se käyttää inner join:ia ja hakee lisää tyypin uutisen mukaan type-taulusta.
 
 ### Tehtävä 3
 
