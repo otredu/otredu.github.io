@@ -12,6 +12,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 - [FullStack (React, node.js)](./react/index.html)
 - [Tietokannat](./tietokannat/index.html)
 - [ASPA (PHP, JS)](./js-php/index.html)
+- [Tietoturva](./tietoturva/index.html)
 
 ### Materiaalit kevät 2021
 
