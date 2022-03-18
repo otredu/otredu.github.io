@@ -23,6 +23,7 @@ Opiskele nämä asiat:
 Tee tehtävät:
 
 - [Harjoitukset 5](./php-jatko-harjoitukset1.html)
+- [Harjoitustyöt](./php-harjoitustyot.html)
 
 ## JavaScript-selainohjelmointia
 
