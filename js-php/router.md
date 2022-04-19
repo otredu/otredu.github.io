@@ -2,85 +2,103 @@
 
 ### Johdanto
 
-Sivuston rakenteesta saadaa selkeämpi ja ylläpidettävämpi, kun HTTP-request:eja (GET, POST) ei lähetetä suoraan tiedostoille, vaan ne ohjataan omalle käsittelijälleen (*request handler*). Tämän ohjauksen tekee reitittäjä eli *router*.
+Sivuston rakenteesta saadaa selkeämpi ja ylläpidettävämpi, kun HTTP-request:eja (GET, POST) ei lähetetä suoraan tiedostoille, vaan ne ohjataan omalle käsittelijälleen (*request handler*). Tämän ohjauksen tekee reitittäjä eli *router*. 
 
-Tässä erittäin yksinkertainen reititin:
+Routerin avulla on helpompi tehdä tietoturvallisempi ohjelmisto, koska router on selkeä keskitetty piste, jossa voidaan tarkistaa onko käyttäjä kirjautuneena, ja tarvittaessa pakottaa hänet kirjautumissivulle. Myös *session_start()* tulee varmemmin kutsuttua, kun se on vain yhdessä kohtaa koodia.
 
-- [How to build a basic server side routing system in PHP](https://medium.com/the-andela-way/how-to-build-a-basic-server-side-routing-system-in-php-e52e613cf241)
-
-Em. kirjastossa reiti määritellään näin (index.php-tiedostossa):
-
-```php
-require_once 'router/Request.php';
-require_once 'router/Router.php';
-
-$router = new Router(new Request);
-
-$router->get('/', function() {
-  require_once 'controllers/uutiset.php';
-});
-
-$router->get('/uutiset', function() {
-  require_once 'controllers/uutiset.php';
-});
-
-$router->get('/login', function($request) {
-  require_once 'controllers/login.php';
-});
-
-$router->post('/login', function($request) {
-  require_once 'controllers/login.php';
-});
-```
-
-### Reititys id:n avulla
-
-Kun halutaan esimerkiksi poistaa tai muokata tietokannan tietuetta, reitti sisältää usein ko. tietokantatietueen id:n.
-
-Esim. jos halutaan poistaa uutinen, reitti sisältää uutisen id:n "/poista_uutinen/2". Nämä linkit reititetään reitin alkuosan mukaan ja poimitaan reitin polusta id, jota käytetään edelleen tietokantapyynnöössä:
-
-```php
-$router->get('/poista_uutinen', function($request) {
-  $parts = explode("/", $request->requestUri);
-  
-  if(count($parts) === 3){
-    $id = $parts[2];
-    require_once 'controllers/poista_uutinen.php';
-  } else {
-    require_once 'controllers/uutiset.php';
-  }
-});
-```
-
-Koska käyttämämme yksinkertainen reititin ei tue tätä, muutetaan *Router*-luokan *formatRoute* tukemaan url:in alun perusteella:
-
-```php
-private function formatRoute($route)
-  {
-    $pieces = explode("/", $route);
-    if (count($pieces) == 0)
-    {
-      return '/';
-    }
-    return $pieces[1];
-  }
-```
-
-Kontrollerissa käytetään em. id:tä:
+Tässä erittäin yksinkertainen reititin (*news-demo*):
 
 ```php
 <?php
+session_start();
 
-require "database/database.php";
-$pdo = connectDB();
+$route = explode("?", $_SERVER["REQUEST_URI"])[0];
+$method = strtolower($_SERVER["REQUEST_METHOD"]);
 
-try {
-    deleteFrom($pdo, 'uutinen', ["id_name" => "uutinenID", "id_value" => $id]);
-    echo "Uutinen poistettu";
-} catch (PDOException $e){
-    echo "Virhe uutista poistettaessa: " . $e->getMessage();
+require_once "./utils/helpers.php";
+
+switch($route){
+    case "/":
+        require_once "./views/index_view.php";
+    break;
+    case "/newarticle":
+        if(isLoggedIn()){
+            if($method == "post" ){
+                require_once "./news/insertController.php";
+            } else { 
+                require_once "./news/newArticle.php";
+            }
+        } else { 
+            header("location: /login");
+        }
+    break;
+    case "/readnews":
+        require_once "./news/index.php";
+    break;
+    case "/register":
+        if($method == "post" ){
+            require_once "./news/registerController.php";
+        } else {
+            require_once "./news/register.php";
+        }
+    break;
+    case "/login":
+        if($method == "post" ){
+            require_once "./news/loginController.php";
+        } else {
+            require_once "./news/login.php";
+        }
+    break;
+    case "/logout":
+        require_once "./news/logoutController.php";
+    break;
+    case "/delete":
+        if(isLoggedIn()){
+            require_once "./news/deleteController.php";
+        } else {
+            header("location: /login");
+        }
+    break;
+    case "/updatearticle":
+        if(isLoggedIn()){
+            if($method == "post" ){
+                require_once "./news/updatePostController.php";
+            } else { 
+                require_once "./news/updateArticle.php";
+            }
+        } else { 
+            header("location: /login");
+        }
+    break;
+    default:
+        echo "404 page not found here";
+        
 }
-
-header("location: /uutiset");
-exit;
 ```
+
+### Muutokset koodiin
+
+Reitittimen lisäksi kaikki osoitteet koodissa pitää muuttaa käyttämään em. routeja (ei siis viitata enää *.php* - tiedostoihin.
+
+1. header(location "login.php") ---> header(location /login)
+2. href="login.php" ---> href="/login"
+3. action="login.php" ---> action="/login"
+4. *session_start()* poistetaan kaikista muista tiedostoista
+
+### .htaccess
+
+Edellä mainitut toimet eivät vielä estä tiedostoihin käsiksipääsyä suoraan, joten lisätään vielä tiedosto *.htaccess*, jonka avulla webserveri ohjaa kaikki pyynnöt *routerille*.
+
+```yaml
+# This file configures the Apache web server such that:
+#  - index.php is served
+#  - any other request is rerouted to index.php. 
+#AddType application/x-httpd-php5 .php
+AddType application/x-httpd-php .php
+RewriteEngine On
+RewriteRule ^/index\.php$ - [L,NC]
+
+RewriteRule . index.php [L]
+```
+
+
