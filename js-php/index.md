@@ -19,6 +19,8 @@ Tee tehtävät:
 Opiskele nämä asiat:
 
 - [PDO-rajapinta](./pdo-rajapinta.html)
+- [Router](./router.html)
+- [MVC-malli](./mvc-malli.html)
 
 Tee tehtävät:
 
