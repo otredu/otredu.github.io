@@ -67,6 +67,12 @@ Jos olet käyttänyt MySQL-tietokantaa tähän asti, siirtyminen Postgres:iin vo
     knex('notes').insert(newNote).returning('id') 
     ```
 
+    Tämän lisäksi palautettu id ei ole luku (kuten MySQL:ssä), vaan olio, joten lisää koodiin myös *.id*, jotta saat id:lle lukuarvon:
+
+    ```js
+    return_value[0].id
+    ```
+
 6. Tietokannan siirtäminen Herokuun
 
     Siirrä nyt tietokanta Herokuun ([ohjeet Postgres-tietokannan siirtämiseksi Herokuun](knex-migrations.html))
