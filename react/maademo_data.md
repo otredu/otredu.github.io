@@ -15,7 +15,7 @@ let countries = [
     {   name:"Norway",
         capital:"Oslo",
         population:5223256,
-        flag:"https://commons.wikimedia.org/wiki/File:Flag_of_Norway.svg"
+        flag:"https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg"
     },
     {   name:"Denmark",
         capital:"Copenhagen",
@@ -25,7 +25,7 @@ let countries = [
     {   name:"Iceland",
         capital:"Reykjavík",
         population:334300,
-        flag:"https://commons.wikimedia.org/wiki/File:Flag_of_Iceland.svg"
+        flag:"https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg"
     }]
 
 export default countries;
