@@ -19,7 +19,9 @@ RUN npm install
 CMD npx json-server -H 0.0.0.0 --static build --port=3001 --watch db.json 
 ```
 
-1. Aloita
+1. Aloita 
+    
+    (jos sinulla ei ole docker-tunnuksia, skippaa tämä kohta ja siirry kohtaan 2)
 
     Käynnistä docker desktop, ellei jo ole käynnissä. Kirjaudu docker-hub:iin ja lataa ubuntu:
 
