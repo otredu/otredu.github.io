@@ -26,12 +26,20 @@ Refaktoroi backend koodi niin, että se käyttää autentikointiin middlewareja.
 
 ### Tehtävä 4
 
-Luo frontista build, siirrä se backendin static-kansioon. Testaa käynnistämällä vain backend.
-
-### Lisätehtävä 1
-
 Lisää JSON-datan validointi JSON-scheman avulla.
+### Tehtävä 5a (CPANEL + nodetuki)
 
-### Lisätehtävä 2
+Luo frontista build, siirrä se backendin static-kansioon. Testaa lokaalisti käynnistämällä vain backend.
 
-Deployaa notesdemo pyörimään webbihotelliin tai herokuun.
+### Tehtävä 5b (Heroku + Docker-kontti)
+
+Porttaa MySQL-tietokanta käyttämään Postgres-tietokantaa. Tee frontista ja backista Docker-kontti ja testaa lokaalin tietokannan kanssa. [Ohjeita täällä}(../deployment/heroku/notesfull.html)
+
+### Tehtävä 6a (CPANEL + nodetuki)
+
+Deployaa notesdemo pyörimään webbihotelliin: aja migrates+seeds remote-tietokantaan, tee koodista zip-tiedosto ja siirrä se CPANEL:iin tekemäsi subdomainin alle.
+
+### Tehtävä 6b (Heroku + Docker-kontti)
+
+Deployaa notesdemo pyörimään Herokuun: aja migrates+seeds remote-tietokantaan, tee koodista Docker-kontti ja siirrä se Herokuun.
+[Ohjeita täällä}(../deployment/heroku/notesfull.html)

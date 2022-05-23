@@ -19,6 +19,7 @@ Backend keskustelee tietokannan kanssa. Käytetty tietokanta voi olla relaatioti
 ### Tietokantaharjoitukset
 
 - [Fanikauppa DB](../tietokannat/rest-fanikauppa.html) 
+- [MongoDB - demo](https://eermau.github.io/fullstack/mongo_demo.html)
 ### Kirjautuminen, käyttäjähallinta, JSON webtoken
 
 Kun käyttäjä kirjautuu järjestelmään hän saa JSON webtoken:in tallenttavaksi selaimen muistiin. Token liitetään jokaiseen frontend:in tekemään pyyntöön. Webtoken:in sisään koodatun userid:n avulla backend tunnistaa kirjautuneen käyttäjän.
@@ -30,3 +31,5 @@ Kun käyttäjä kirjautuu järjestelmään hän saa JSON webtoken:in tallenttava
 - [Harjoitukset 5: Notes-backend demo](./node-harjoitukset1.html), tehdään yhdessä
 
 - [Harjoitukset 6: Fanikauppa 2.0](./node-harjoitukset2.html)
+
+- [Harjoitukset 7: Keikkainfo 2.0](https://eermau.github.io/fullstack/mongo_harj_gigs2.html)
