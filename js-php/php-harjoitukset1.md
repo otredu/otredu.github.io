@@ -92,6 +92,6 @@ Jos luku ei ole 35, tulosta luku ja teksti "Ei 35"
 
 Tee seuraavat muunnokset ja vertailut. Tulosta vastauksen arvo ruudulle selitystekstin kera.
 
-kumpi on suurempi: neliöjuuri 146:sta vai 3 potenssiin 3
-kumpi on suurempi: 165 / 8 laskun jakojäännös vai hexadesimaaliluvun 03 arvo desimaalilukuna
-mikä on suurin: hexadesimaaliluvun AF arvo desimaalilukuna, 5 potenssiin 3 vai luku 155
+- kumpi on suurempi: neliöjuuri 146:sta vai 3 potenssiin 3
+- kumpi on suurempi: 165 / 8 laskun jakojäännös vai hexadesimaaliluvun 03 arvo desimaalilukuna
+- mikä on suurin: hexadesimaaliluvun AF arvo desimaalilukuna, 5 potenssiin 3 vai luku 155
