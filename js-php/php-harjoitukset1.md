@@ -8,15 +8,15 @@ Voit tehdä kaikki vastaukset samaan tiedostoon *index.php* (demon alapuolelle),
 
 Luo seuraavat muuttujat, anna niille järkevät arvot:
 
-$aidinika, esim. 30
-$isanika, esim. 34
-$lapsenika, esim 4
+- $aidinika, esim. 30
+- $isanika, esim. 34
+- $lapsenika, esim 4
 
 Laske seuraavat laskutoimitukset ja tulosta selityksineen vastaukset ruudulle (luo vastausta varten uusi muuttuja):
 
-Laske kaikkien kolmen iät yhteen
-Laske, minkä ikäinen äiti on ollut, kun on saanut lapsen
-Laske isän syntymävuosi (tarkkuus 1 vuosi, oletuksena $isanika pätee tänä vuonna)
+- Laske kaikkien kolmen iät yhteen
+- Laske, minkä ikäinen äiti on ollut, kun on saanut lapsen
+- Laske isän syntymävuosi (tarkkuus 1 vuosi, oletuksena $isanika pätee tänä vuonna)
 
 ### Tehtävä 2
 
@@ -59,17 +59,17 @@ Arpajaiset:olet järjestämässä arpajaisia. Arvat on numeroitu numeroin 1 - 10
 
 Tutki seuraavien funktioiden toiminta [w3schools](https://www.w3schools.com/php/php_math.asp):
 
-round
-ceil
-floor
+- round
+- ceil
+- floor
 
 Pyöristä luvut:
 
-1.5 alaspäin kokonaisluvuksi
-1.456 ylöpäin kahden desimaalin tarkkuudella
-68995 kymmenien tarkkuudella
-124.558 satojen tarkkudella
-3.14 ylöspäin kokonaisluvuksi
+- 1.5 alaspäin kokonaisluvuksi
+- 1.456 ylöpäin kahden desimaalin tarkkuudella
+- 68995 kymmenien tarkkuudella
+- 124.558 satojen tarkkudella
+- 3.14 ylöspäin kokonaisluvuksi
 
 Tulosta tulokset selityksineen.
 
