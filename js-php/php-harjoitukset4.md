@@ -17,7 +17,7 @@ Tee to-do-lista, joka tulostetaan ruudulle. Jokainen tehtävä (task) on assosia
 
 ### Tehtävä 2
 
-Jatka edellistä harjoitusta ja tee taulukko, jossa on monta tehtävää ja tulosta ne sivulle silmukassa (*foreach* tai *for*). Muuta valmis/kesken tekstin tilalle ikoni [katso esimerkki](https://www.w3schools.com/charsets/ref_utf_dingbats.asp). Tulostus voisi näytää tältä:
+Jatka edellistä harjoitusta ja tee vähintään 3 uutta task:ia ja kokoa ne taulukkoon. Tulosta taulukon sisältö käyttäen tehtävän 1 tulostusfunktiota sekä silmukkarakennetta (*foreach* tai *for*). Muuta valmis/kesken tekstin tilalle ikoni [katso esimerkki](https://www.w3schools.com/charsets/ref_utf_dingbats.asp) ehtolauseen avulla. Tulostus voisi näytää tältä:
 
 ---
 
@@ -37,7 +37,9 @@ Tehtävä: Tee käyttöliittymäsuunnitelma
 
 ### Tehtävä 3
 
-Tee PHP-ohjelma, joka saa osoiterivillä (*submit form*:in kautta) parametrinaan, joko puhelinnumeron tai nimen. Sivulle palautetaan haetun henkilön nimi ja puhelinnumero. Tallenna nimet ja numerot assosiatiiviseen taulukkoon. Käytä ehtolausetta kun tarkistat kumpi parametri on annettu  (*$_GET*). Voit etsiä parametrin arvoa *array_search*-funktion avulla.
+Tee PHP-ohjelma, joka hakee valmiista puhelinluettelosta tietoja nimen tai numeron perusteella. Jos sille annetaan lomakekentässä parametrina nimi, sivu palauttaa muistissa olevasta taulukosta ko. nimeä vastaavan puhelinnumero. Jos annetaan puhelinnumero, etsitään sitä vastaava nimi.
+
+Tallenna jokaisen puhelinluettelossa olevan henkilön nimi ja puhelinnumero assosiatiiviseen taulukkoon ja kokoa vähintän 5 henkilön tiedot puhelinluettelo-taulukkoon. Käytä ehtolausetta kun tarkistat kumpi parametreistä on annettu  (*$_GET*). Voit etsiä parametrin arvoa *array_search*-funktion avulla.
 Tulostus voisi näyttää tältä:
 
 ---
