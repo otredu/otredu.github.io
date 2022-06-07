@@ -4,11 +4,11 @@
 
 ### Tehtävä 1
 
-Laadi ohjelma, joka tulostaa nimesi 10 kertaa, käytä for-silmukkaa.
+Laadi ohjelma, joka tulostaa nimesi 10 kertaa, käytä *for*-silmukkaa.
 
 ### Tehtävä 2
 
-Laadi ohjelma, joka tulostaa seuraavat viisi vuotta kuvaruudulle. Nykyisen vuoden saat selville funktiolla date('Y');
+Laadi ohjelma, joka tulostaa seuraavat viisi vuotta kuvaruudulle. Nykyisen vuoden saat selville funktiolla *date('Y')*. Käytä *for*-silmukkaa.
 
 ### Tehtävä 3
 
@@ -22,7 +22,7 @@ Tee while-silmukan avulla vuorovaikutteinen ohjelma, joka pyytää lomakkeen avu
 
 ### Tehtävä 4
 
-Esittele kaksi taulukkoa joista toisessa on etunimiä (vähintään viisi) ja toisessa sukunimiä (saman verran). Tulosta taulukoiden sisällöt li-elementtien sisälle php:n avulla.
+Esittele kaksi taulukkoa joista toisessa on etunimiä (vähintään viisi) ja toisessa sukunimiä (saman verran). Tulosta taulukoiden sisällöt li-elementtien sisälle php:n avulla. Käytä *for*-, *while*- tai *foreach* - silmukkaa.
 
 $etunimet = array("Timo", "Tero", "Tauno");
 $sukunimet = array("Virtanen", "Salonen", "Nieminen");
@@ -53,7 +53,7 @@ if (isset($_POST["arvoNimi"])) {
 
 ### Tehtävä 6
 
-Määrittele koodissasi moniulotteinen taulukko joka sisältää vähintään viisi maata, kyseisten maiden pääkaupunkia ja maiden väkiluvut. Käytä maiden määrittelyyn assiatiivista taulukkoa. Tulosta kaupunkien tiedot taulukkoon.
+Määrittele koodissasi moniulotteinen taulukko joka sisältää vähintään viisi maata, kyseisten maiden pääkaupunkia ja maiden väkiluvut. Käytä maiden määrittelyyn assosiatiivista taulukkoa. Tulosta kaupunkien tiedot taulukkoon. Käytä *foreach*-silmukkaa.
 
 Esimerkki
 
