@@ -83,10 +83,10 @@ Tarkista, onko se parillinen vai pariton ja tulosta kumpi on kyseessä. Parillis
 
 Arvo satunnaisluku väliltä 1 - 100 muuttujaan.
 
-Jos luku on välillä 30 - 50, tulosta arvottu luku ja "Pienehkö"
-Jos luku on pienempi kuin 10 tai suurempi kuin 90, tulosta luku sekä teksti "ääriarvo"
-Jos luku on pienempi kuin 50 ja parillinen, tulosta sekä arvottu luku että teksti "Pieni ja parillinen".
-Jos luku ei ole 35, tulosta luku ja teksti "Ei 35"
+- Jos luku on välillä 30 - 50, tulosta arvottu luku ja "Pienehkö"
+- Jos luku on pienempi kuin 10 tai suurempi kuin 90, tulosta luku sekä teksti "ääriarvo"
+- Jos luku on pienempi kuin 50 ja parillinen, tulosta sekä arvottu luku että teksti "Pieni ja parillinen".
+- Jos luku ei ole 35, tulosta luku ja teksti "Ei 35"
 
 ### Tehtävä 9
 
