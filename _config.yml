@@ -5,7 +5,7 @@ title: otredu - Ohjelmointikurssien materiaaleja
 description: Tredun ohjelmistokehittäjien kurssimateriaaleja
 show_downloads: false
 github:
-  github.repository_url: https://otredu.github.io
+  repository_url: https://otredu.github.io
 relative_links:
   enabled: true
   collections: true
