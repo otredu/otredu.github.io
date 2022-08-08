@@ -1,6 +1,9 @@
-theme: jekyll-theme-time-machine
+remote_theme: pages-themes/leap-day@v0.2.0
 plugins:
-  - jekyll-relative-links
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+title: otredu - Ohjelmointikurssien materiaaleja
+description: Tredun ohjelmistokehittäjien kurssimateriaaleja
+show_downloads: false
 relative_links:
   enabled: true
   collections: true
