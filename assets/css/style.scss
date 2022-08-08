@@ -5,12 +5,13 @@
 
 #banner {
     background-color: #042546;
+    border: 1px solid #042546;
 }
 
-header {
+header > h1 {
     background-color: #0099CC;
 }
 
-body {
+.wrapper {
     background-color: #C2B6C0;
 }
