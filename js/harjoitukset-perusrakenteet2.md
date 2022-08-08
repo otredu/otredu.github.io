@@ -29,6 +29,7 @@ Lisää edelliseen taulukkoon kaksi uutta muistettavaa asiaa (käytä *push()*-m
 Tee olio, johon tallennat keksityn henkilön henkilötiedot: nimi, osoite, ikä, puhelinnumero ja sähköposti (esim. Aku Ankka). Tee funktio, joka ottaa parametrina henkilötieto-olion ja tulostaa konsolille sen sisältämät tiedot. Tulosta konsolille funktiosi avulla keksityn henkilön tiedot. Vinkki: rivinvaihto on \n.
 
 Tulostuksen malli:
+
 ![oliomalli](./img/oliotulostus.PNG)
 
 ### Tehtävä 4

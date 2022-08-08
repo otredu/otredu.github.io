@@ -37,7 +37,7 @@ Tee funktio, joka toimii yksinkertaisena nelilaskimena. Funktio saa parametrina 
 
 ### Tehtävä 7: Suurempi luku (Switch case)
 
-Muuta aikaisempi tehtävä 4. Suurempi luku ([Harjoitus2](harjoitukset-perusrakenteet2.html)) if-else-rakenteen sijaan switch–case-rakenteeksi
+Muuta edellisten harjoitusten tehtävä 4. Suurempi luku ([Harjoitus1](harjoitukset-perusrakenteet1.html)) if-else-rakenteen sijaan switch–case-rakenteeksi
 
 ### Tehtävä 8: Tuumat senteiksi
 
