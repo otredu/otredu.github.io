@@ -1,7 +1,7 @@
 
-## Tervetuloa otredu.github.io-sivuille
+## otredu.github.io
 
-Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotannon kurssimateriaaleja.
+Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehittäjien kurssimateriaaleja.
 
 ### Materiaalit syksy 2021
 
@@ -18,7 +18,8 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 
 - [Johdatus systeemityöhön](./johdatus_systeemityo/index.html)
 - [Systeemityö](./systeemityo/index.html)
-### Ohjeita
+
+### Ohjeita (Github, Docker...)
 
 - [Github](./github/index.html)
 - [VSCode](./vscode/index.html)
@@ -27,6 +28,6 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotann
 - [PHP - ympäristön asentaminen](./systeemityo/dev_environment.html)
 
 ---
-### Vanhemmat materiaalit
+### Vanhat
 
 - [Menneet kurssit](./index_old.html)
