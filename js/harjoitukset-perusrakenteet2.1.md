@@ -23,7 +23,7 @@ Tee funktio, joka saa parametrina ympyrän halkaisijan ja laskee ympyrän sätee
 
 *Vinkki 1:* Piin arvon saa tarkasti funktiolla Math.PI.
 
-*Vinkki 2:* Ympyrän ala lasketaan pii*r &#178, piiri lasketaan 2*pii*r, jossa r=säde. Säde puolestaan on halkaisija/2.
+*Vinkki 2:* Ympyrän ala lasketaan pii * r^2, piiri lasketaan 2 * pii * r, jossa r=säde. Säde puolestaan on halkaisija/2.
 
 ### Tehtävä 5: Tilikauden tulos
 
