@@ -14,6 +14,7 @@ Docker:in avulla voit käynnistää koneellesi kehitysympäristön ilman, että 
 - [PHPPGAdmin, Heroku PostgreSQL](postgres-heroku.html)
 - [PHPMyAdmin, Azure](phpmyadmin-remote.html)
 - [CodeIgniter](codeigniter.html)
+- [PHPMyAdmin, remote/CPANEL](phpmyadmin_remote.html)
 
 ### Docker - deployment
 
