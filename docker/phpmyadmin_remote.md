@@ -10,3 +10,7 @@ Projektissa käytetään yhtä yhteistä tietokantaa koko projektitiimin kanssa.
     ```
  
 ![kirjautumisikkuna](./img/remote_phpmyadmin.PNG)
+
+```js
+89.163.146.32
+```
