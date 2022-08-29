@@ -80,8 +80,8 @@
 5. Lisää ALB:iin HTTPS - listener, ja lisää siihen em. Target Group:in lisäksi edellä tehty sertifikaatti.
 
 6. Nyt voit rajoittaa serverin Security Group:in hyväksymään vain ALB:ilta tulevan liikenteen.
----
 
+---
 ### Vaihe 3. listään useampi käyttäjä ja docker-kontti
 
 1. Tehtään uusia käyttäjiä (yksi per tiimi) ja kotihakemistoja serverille, lisätään niille salasana ja lisää käyttäjät docker-käyttäjäryhmään:
