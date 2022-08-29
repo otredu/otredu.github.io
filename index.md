@@ -26,6 +26,8 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehitt�
 - [Docker](./docker/index.html)
 - [Deployment](./deployment/index.html)
 - [PHP - ympäristön asentaminen](./systeemityo/dev_environment.html)
+- [AWS-serverin konffaus](./devops/aws_setup.html)
+- [AWS-ohjeet](./devops/aws_teams.html)
 
 ---
 ### Vanhat

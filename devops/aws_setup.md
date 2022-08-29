@@ -2,10 +2,10 @@
 
 ### Vaihe 1. käynnistetään yksi docker-kontti AWS:ään:
 
-1. Luo uusi EC2 small instanssi Ubuntu 20.04, tallenna *.pem - file .ssh kansioon omaan profiiliisi (pidä tallessa, älä anna näitä kenellekään!). [ohjeet](https://www.clickittech.com/devops/deploy-nodejs-app-to-aws/). Huom! ei oteta käyttöön Aurora tietokantaa.
-2. Caraa Elastic IP ja liitä se serveriin
-3. Konfiguroi security group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (portti 80)
-4. Ota yhteys EC2 instansiin Bash:illä (SSH-connection ohjeet löytyvät AWS:stä)
+1. Luo uusi EC2 - instanssi (small) Ubuntu 20.04 ja tallenna *.pem - file .ssh - kansioon omaan profiiliisi (pidä tallessa, älä anna näitä kenellekään!). [ohjeet](https://www.clickittech.com/devops/deploy-nodejs-app-to-aws/). Huom! ei oteta käyttöön Aurora tietokantaa nyt.
+2. Varaa Elastic IP ja liitä se serveriin.
+3. Konfiguroi Security Group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (porttiin 80).
+4. Ota yhteys EC2-instansiin Bash:illä (SSH-connection - ohjeet löytyvät AWS:stä).
 
     ```cmd
     > ssh -i "my_indentity.pem" ubuntu@my_ec2_instance.compute.amazonas.com
@@ -24,11 +24,11 @@
     $ sudo docker run hello-world
     ```
 
-6. lisää docker group ja liitä käyttäjä siihen (niin ei tarvitse kirjoittaa aina sudo kun käytää dockeria)
+6. Lisää docker - group ja liitä käyttäjä siihen (niin ei tarvitse kirjoittaa aina sudo kun käytää dockeria).
 
     ```cmd
     $ sudo groupadd docker
-    $ sudo usermod -aG docker <your-user-name>
+    $ sudo usermod -aG docker ubuntu
     ```
 
 7. Asenna git
@@ -47,7 +47,7 @@
     $ cd ~
     ```
 
-    Kopioi *public key* hiiren oikealla ja tallenna avain github-repoon (Account Settings -> SSH -> Add key)
+    Kopioi *public key* hiiren oikealla ja tallenna avain github-repoon (Account Settings -> SSH -> Add key).
 
 9. Kloonaa repo käyttämällä SSH - osoitetta:
 
@@ -55,7 +55,7 @@
     $ git clone git@github.com:xxx/yyy.git
     ```
 
-10. Siirry repokansioon, aja Docker build ja käynnistä kontti, ennen tätä varmista että *.env*:ssä portti on 80.
+10. Siirry repokansioon, aja Docker - build ja käynnistä kontti, ennen tätä varmista että *.env*:ssä portti on 80 (voit editoidan nanolla).
 
     ```cmd
     $ cd yyy
@@ -63,27 +63,28 @@
     $ docker run -d -p 80:80 myapp
     ```
 
-11. Nyt pitäisi sivun aueta selaimesta Elastic IP-osoitteesta
+11. Nyt pitäisi sivun aueta selaimesta Elastic IP-osoitteesta.
 
 ---
 
 ### Vaihe 2. lisätään HTTPS ja oma domain:
 
-1. Luo EC2:een Application Load Balancer (ALB), jonka tehtävänä on ohjata liikennetä eri porteissa pyöriville dockerkonteille sekä terminoida HTTPS-liikenne.
+1. Luo EC2:een Application Load Balancer (ALB), jonka tehtävänä on ohjata liikennetä eri porteissa pyöriville docker-konteille sekä terminoida HTTPS-liikenne.
 
 2. Lisää yksi Target Group, liitä siihen em. serveri (portti 80).
 
-3. Lisää ALB:iin HTTP - listener, ja lisää em. Target Group default haaraan.
+3. Lisää ALB:iin HTTP - listener, ja lisää em. Target Group default - haaraan.
 
-4. Varaa dommain nimi, tilaa AWS:ltä sertifikaatti (*.mydomain.zz), linkitä domain edellä tehty ALB:in osoitteeseen, tilaa domainille sertifikaatti ja tallenna AWS:n antamat tiedot DNS-tietokantaan (näin varmistetaan, että omistat domainin).
+4. Varaa domain, linkitä domain edellä tehty ALB:in osoitteeseen, tilaa AWS:ltä sertifikaatti (*.mydomain.zz) ja tallenna AWS:n antamat tiedot DNS-tietokantaan (näin varmistetaan, että omistat domainin).
 
 5. Lisää ALB:iin HTTPS - listener, ja lisää siihen em. Target Group:in lisäksi edellä tehty sertifikaatti.
 
+6. Nyt voit rajoittaa serverin Security Group:in hyväksymään vain ALB:ilta tulevan liikenteen.
 ---
 
 ### Vaihe 3. listään useampi käyttäjä ja docker-kontti
 
-1. Tehtään uusia käyttäjiä ja kotihakemistoja Ubuntussa, lisätään niille salasana ja lisää ne docker-käyttäjäryhmään:
+1. Tehtään uusia käyttäjiä (yksi per tiimi) ja kotihakemistoja serverille, lisätään niille salasana ja lisää käyttäjät docker-käyttäjäryhmään:
 
     ```cmd
         $ sudo useradd -s /bin/bash -d /home/team1/ -m team1
@@ -98,21 +99,26 @@
     $ sudo systemctl restart sshd
     ```
 
-3. Nyt jokainen ryhmä voi ottaa SSH-yhteyden (kysyy salasanan):
+3. Nyt jokainen ryhmä voi ottaa SSH-yhteyden serverille (kysyy salasanan):
 
     ```cmd 
     $ ssh team1@my_ubuntu_ip
     ```
 
-4. Tiimi voi kloonata repon, tehdä buildin ja käynnistää sen. 
-Huom! Jokaisella tiimillä pitää olla eri portti, eli .env:iin tulee muokata ennen buildia käytössä oleva portti.
+4. Tiimi voi kloonata projektirepon, tehdä buildin ja käynnistää sen.
+Huom! Jokaisella tiimillä pitää olla eri portti, eli .env:iin tulee muokata ennen buildia käytössä oleva portti (tässä 81).
 
-5. Lisätään jokaiselle ryhmälle oma TargetGroup, jossa liikenne ohjataan ryhmän portiin. Lisätään myös uusi sääntö per tiimi ALB:in HTTPS-listenerille, eli esim. team1.my_domain.yy forward:ataan Target Group:iin, jossa serverin portti on 81,
+    ```cmd
+    > docker build . -t myapp
+    > docker run -d -p 81:81 myapp
+    ```
+
+5. Lisätään jokaiselle ryhmälle oma TargetGroup, jossa liikenne ohjataan ryhmän porttiin. Lisätään myös uusi sääntö per tiimi ALB:in HTTPS-listenerille, eli esim. team1.my_domain.yy forward:ataan Target Group:iin, jossa serverin portti on 81,
 team2.my_domain.yy portti 82 jne.
 
 6. Jotta käytettäisiin aina HTTPS:ää lisätään jokaiselle ryhmälle redirect-sääntö HTTP -> HTTPS 443.
 
-Nyt jokaisen ryhmän node.js applikaatio löytyy subdomainin alta esim.
+Nyt jokaisen ryhmän node.js - applikaatio löytyy subdomainin alta esim.
 
 https://team1.my_domain.yy
 https://team2.my_domain.yy
