@@ -55,15 +55,24 @@
     $ git clone git@github.com:xxx/yyy.git
     ```
 
-10. Siirry repokansioon, aja Docker - build ja käynnistä kontti, ennen tätä varmista että *.env*:ssä portti on 80 (voit editoidan nanolla).
+10. Jos käytät tietokantaa siirrä se verkossa olevalle tietokantapalvelimelle ja pidä huoli siitä, että serveri saa siihen yhteyden (esim. lisää serveri Remote MySQL white listalle).
+
+11. Jos käytät .env - tiedostoa, luo sellainen ja muokkaa ympäristömuuttujat siihen (DB nimi/käyttäjä/salasana jne.). Voit luoda tiedoston käyttämällä nanoa (tallennus Ctrl-x + yes):
+
+    ```cmd
+    $ cd backend
+    $ nano .env 
+    ```
+
+12. Siirry repokansioon, aja Docker - build ja käynnistä kontti.
 
     ```cmd
     $ cd yyy
     $ docker build . -t myapp
-    $ docker run -d -p 80:80 myapp
+    $ docker run -d -p 80:3000 myapp
     ```
 
-11. Nyt pitäisi sivun aueta selaimesta Elastic IP-osoitteesta.
+13. Nyt pitäisi sivun aueta selaimesta Elastic IP-osoitteesta.
 
 ---
 
