@@ -8,7 +8,7 @@ Kaikilla tiimeillä on oma käyttäjä/salasana sekä kotihakemisto yhteisellä 
 
 ### Ota yhteys AWS:n serverille
 
-1. Avaa Bash ja ota SSH-yhteys serverille (kysyy salasanan):
+1. Avaa Bash ja ota [SSH-yhteys](https://www.ssh.com/academy/ssh/protocol) serverille (kysyy salasanan):
 
     ```cmd 
     > ssh team1@my_ubuntu_ip
@@ -69,3 +69,7 @@ Jatkossa uuden version asentamiseen riittää:
     $ docker build . -t myapp
     $ docker run -d --name team1_sprint2 -p 81:3000 myapp
     ```
+
+### The big picture
+
+![AWS-infra](./img/AWS-infra.png)
