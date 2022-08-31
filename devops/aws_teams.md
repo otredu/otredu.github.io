@@ -32,7 +32,7 @@ Kaikilla tiimeillä on oma käyttäjä/salasana sekä kotihakemisto yhteisellä 
     $ git clone git@github.com:xxx/yyy.git
     ```
 
-4. Luo .env - tiedosto, ja muokkaa ympäristömuuttujat siihen (tietokannan host, DB nimi, käyttäjä ja salasana jne.). Voit luoda tiedoston käyttämällä nanoa (tallennus Ctrl-x + yes):
+4. Luo .env - tiedosto, ja muokkaa ympäristömuuttujat siihen (tietokannan host, DB nimi, käyttäjä ja salasana jne.). Voit luoda tiedoston käyttämällä nanoa (tallennus Ctrl-x + yes), voit kopioida ja liittää sisältöä hiiren oikealla napilla:
 
     ```cmd
     $ cd backend
