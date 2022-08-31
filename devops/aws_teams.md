@@ -18,12 +18,13 @@ Kaikilla tiimeillä on oma käyttäjä/salasana sekä kotihakemisto yhteisellä 
 
     ```cmd
     $ ssh-keygen
-    $ cd /home/ubuntu/.ssh
+    $ cd /home/team1/.ssh
+    $ ls -la
     $ cat id_rsa.pub
     $ cd ~
     ```
 
-    Kopioi *public key* hiiren oikealla ja tallenna avain github-projektin koodirepoon (Account Settings -> SSH -> Add key).
+    Kopioi *public key* hiiren oikealla ja tallenna avain github-projektin koodirepoon (Account Settings -> SSH -> Add key). 
 
 3. Kloonaa repo käyttämällä SSH - osoitetta:
 
@@ -44,7 +45,7 @@ Huom! poista .dockerignoresta .env (tässä haluamme sen mukaan).
 
     ```cmd
     $ docker build . -t myapp
-    $ docker run -d --name team1_sprint1 -p 81:3000 myapp
+    $ docker run -d --name team1_sprint1 -p 81:3001 myapp
     ```
 
     Nyt jokaisen ryhmän node.js - applikaatio löytyy oman subdomainin alta esim.

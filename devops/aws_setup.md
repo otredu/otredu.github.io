@@ -129,10 +129,30 @@ team2.my_domain.yy portti 82 jne.
 
 Nyt jokaisen ryhmän node.js - applikaatio löytyy subdomainin alta esim.
 
-https://team1.my_domain.yy
-https://team2.my_domain.yy
+    https://team1.my_domain.yy
+
+    https://team2.my_domain.yy
 
 ---
+
+### Vaihe 4. Otetaan käyttöön AWS postgres DB
+
+1. Käynnistä AWS RDS Postgres DB (micro, dev), ota talteen master tunnukset ja host address
+
+2. Asenna PostgresSQL - client serverille, ja ota yhteys tietokantaan (user: postgres, db: postgres)
+
+    ```cmd
+    $ sudo apt install postgresql-client
+    $ psql -h my_db_host_address -d my_db_name -U my_db_user
+    ```
+
+3. Tallenna tiedot .env:iin, aja migrates ja seeds ja aloita käyttö
+
+### Vaihtoehto 5. Asenna oma postgres server ubuntuun
+
+1. [Asennusohjeet](https://linuxhint.com/install-and-setup-postgresql-database-ubuntu-22-04/)
+
+2. 
 <!-- 
 ### Vaihe 4. Container Registry ja Container Service
 
