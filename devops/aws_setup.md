@@ -69,7 +69,7 @@
     ```cmd
     $ cd yyy
     $ docker build . -t myapp
-    $ docker run -d -p 80:3000 myapp
+    $ docker run -d -p 80:3001 myapp
     ```
 
 13. Nyt pitäisi sivun aueta selaimesta Elastic IP-osoitteesta.
@@ -115,11 +115,11 @@
     ```
 
 4. Tiimi voi kloonata projektirepon, tehdä buildin ja käynnistää sen.
-Huom! Jokaisella tiimillä pitää olla eri portti, eli .env:iin tulee muokata ennen buildia käytössä oleva portti (tässä 81).
+Huom! Jokaisella tiimillä pitää olla eri portti (tässä 81).
 
     ```cmd
     > docker build . -t myapp
-    > docker run -d -p 81:81 myapp
+    > docker run -d -p 81:3001 myapp
     ```
 
 5. Lisätään jokaiselle ryhmälle oma TargetGroup, jossa liikenne ohjataan ryhmän porttiin. Lisätään myös uusi sääntö per tiimi ALB:in HTTPS-listenerille, eli esim. team1.my_domain.yy forward:ataan Target Group:iin, jossa serverin portti on 81,
@@ -152,7 +152,6 @@ Nyt jokaisen ryhmän node.js - applikaatio löytyy subdomainin alta esim.
 
 1. [Asennusohjeet](https://linuxhint.com/install-and-setup-postgresql-database-ubuntu-22-04/)
 
-2. 
 <!-- 
 ### Vaihe 4. Container Registry ja Container Service
 

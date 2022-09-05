@@ -8,7 +8,7 @@ Kaikilla tiimeillä on oma käyttäjä/salasana sekä kotihakemisto yhteisellä 
 
 ### Ota yhteys AWS:n serverille
 
-1. Avaa Bash ja ota [SSH-yhteys](https://www.ssh.com/academy/ssh/protocol) serverille (kysyy salasanan):
+1. Avaa Bash ja ota [SSH-yhteys](https://www.ssh.com/academy/ssh/protocol) serverille (kysyy salasanan, Linux-käyttäjä: team1):
 
     ```cmd 
     > ssh team1@my_ubuntu_ip
@@ -24,7 +24,7 @@ Kaikilla tiimeillä on oma käyttäjä/salasana sekä kotihakemisto yhteisellä 
     $ cd ~
     ```
 
-    Kopioi *public key* hiiren oikealla ja tallenna avain github-projektin koodirepoon (Account Settings -> SSH -> Add key). 
+    Kopioi *public key* hiiren oikealla ja tallenna avain github-projektin koodirepoon (Account Settings -> SSH -> Add key).
 
 3. Kloonaa repo käyttämällä SSH - osoitetta:
 
@@ -68,7 +68,7 @@ Jatkossa uuden version asentamiseen riittää:
     $ docker stop team1_app
     $ docker rm team1_app
     $ docker build . -t myapp
-    $ docker run -d --name team1_sprint2 -p 81:3000 myapp
+    $ docker run -d --name team1_sprint2 -p 81:3001 myapp
     ```
 
 ### The big picture
