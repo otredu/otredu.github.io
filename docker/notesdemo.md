@@ -56,6 +56,8 @@ CMD npx json-server -H 0.0.0.0 --static build --port=3001 --watch db.json
     CMD npx json-server -H 0.0.0.0 --static build --port=$PORT --watch db.json
     ```
 
-5. Nyt kontin voi julkaista nyt joko Herokussa, AWS:ssa tai CPANEL:issa.
+5. Nyt kontin voi julkaista nyt jossakin container registry:ssä (Heroku, AWS, DockerHub).
 
+- [DockerHub-ohjeet](../deployment/dockerhub/container-deployment.html)
 - [Heroku-ohjeet](../deployment/heroku/container-deployment.html)
+

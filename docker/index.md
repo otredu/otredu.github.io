@@ -39,13 +39,31 @@ Docker-container:it voidaan pysäyttää, uudelleen käynnistää ja poistaa kon
 3. Voit uudelleen käynnistää Docker-container:in kirjoittamalla sen nimen:
 
     ```cmd
-    docker restart my_container
+    docker start my_container
     ```
 
-4. Kaikki Docker-containerit, jotka eivät ole käynnissä voi poistaa:
+4. Stopatun containerin voi poistaa
+
+    ```cmd
+    docker rm my_container
+    ```
+
+5. Kaikki Docker-containerit, jotka eivät ole käynnissä voi poistaa:
 
     ```cmd
     docker container prune
     ```
 
     *Huom!* Tämä tyhjentää tietokannan, eli jos haluat palauttaa tietokannan scheman ja sen datan tee tietokannasta *dump*-tiedosto (Vienti->Tuonti, Export->Import). Muista luoda tietokanta ennen import:ia (Luo tietokanta, Create database).
+
+6. Kaikki koneelta löytyvät imaget saa listattua
+
+    ```cmd
+    docker images
+    ```
+
+7. Imagen poistaminen 
+
+    ```cmd
+    docker image rm my_image
+    ```
