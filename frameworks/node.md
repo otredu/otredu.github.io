@@ -51,7 +51,7 @@ DB_USER=root
 DB_PASS=mypass123
 DB_HOST=localhost
 DB_PORT=3306
-DB_TYPE=mysql
+DB_TYPE=mysql2
 DB_DATABASE=notes_db
 SECRET=tosisalainensalasanainen
 
@@ -101,13 +101,13 @@ Lisää myös *package.json* -tiedostoon backendin käynnistyskomennot:
 
 ```js
     "start": "node /bin/www",
-    "watch": "nodemon /bin/www"
+    "startdev": "nodemon /bin/www"
 ```
 
 Nyt kokeile käynnistää backend konsolilta:
 
 ```cmd
-npm run watch
+npm run startdev
 ```
 
 Avaa selaimeen http://localhost:3000, ruudulla pitäisi selaimessa näkyä: *Express* ja osoitteesta Http://localhost:3000/users pitäisi ilmestyä viesti: *respond with a resource*.
@@ -468,8 +468,9 @@ userschema.json:
     "properties": {
     "email": {
     "type": "string",
-    "pattern": "^\\w+[\\w-\\.]*\\@\\w+((-\\w+)|(\\w*))\\.[a-z]{2,3}$",
-    "minLength": 1
+    "pattern": "^\\S+@\\S+\\.\\S+$",
+    "minLength": 5,
+    "maxLength": 50
     },
     "username": {
     "type": "string",
@@ -551,12 +552,11 @@ var ajv = new Ajv(); // options can be passed, e.g. {allErrors: true}
 const validateSchema = (schema) => {
     return function(req, res, next){
         console.log("starting middleware2")
-        const body = req.body;
-        var validate = ajv.compile(schema);
-        var valid = validate(body);
-        const reqmethod = req.method;
-
         if(reqmethod === "POST" || reqmethod === "PUT"){
+            const body = req.body;
+            var validate = ajv.compile(schema);
+            var valid = validate(body);
+            const reqmethod = req.method;
             if (!valid){
                 console.log(validate.errors);
                 return res.status(401).json(
@@ -591,6 +591,27 @@ Kopioi nyt koko *build*-kansio *notesmiddleware*:n juureen. Jos *express*-reitit
 ```js
 app.use(express.static(path.join(__dirname, 'build')));
 ```
+
+### React-router/node.js-router - ongelma ja F5
+
+Jos käytät frontissa React-routeria, kun selaimessa painaa F5, yrittää se ladata frontend:in sisäistä reittiä (route) backend:iltä. Tämä aiheuttaa virheen, koska sellaista reittiä ei löydy backendissä tai jos löytyykin niin se ei palauta mitään järkevää HTML-koodia selaimelle. Jotta frontin omat reitit eivät menisi sekaisin backend:in reittien kanssa, käytä backend:in reittien edessä liitettä /api eli tässä vaihessa olisi hyvä muutta backendin reitit, sama muutos vaaditaan frontin serviceen (*baseURL*):
+
+    ```js
+    app.use('/api/register', validateSchema(userschema), registerRouter);
+    app.use('/api/login', loginRouter);
+    app.use('/api/notes', isAuthenticated, validateSchema(noteschema), notesRouter);
+    ```
+
+Kaikki muut reitit (/* wildcard) pitäisi ohjata lataamaan react-build static-kansiosta, lisää tämä viimeiseksi default-reitiksi:
+
+    ```js
+    app.get('/*', function(req, res) {
+        res.sendFile(path.join(__dirname, 'build/index.html'), function(err) {
+        if (err) {
+            res.status(500).send(err)
+        }
+    })
+    ```
 
 ### REST-client
 

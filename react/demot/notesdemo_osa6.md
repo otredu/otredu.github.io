@@ -62,7 +62,7 @@ useEffect(startHook, [token]);
 Lisätään vielä *startHook*:iin tarkistus sille, että token ei ole null ennen muistiinpanojen hakemista:
 
 ```js
-    if (authToken === null) {
+    if (token === null) {
       return
     }
 ```

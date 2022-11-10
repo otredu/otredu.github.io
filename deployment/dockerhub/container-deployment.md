@@ -16,15 +16,17 @@
 
     ```cmd
     docker build -t my_dockerhub_user/my_repo:my_tag
+    ```
 
 4. Push:aa tehty image DockerHub:iin
 
     ```cmd
      docker push my_dockerhub_user/my_repo:my_tag
-     ```
+    ```
+
 5. Nyt sen voi ladata DockerHub:ista esim. Linux-serverille 
 
-Huom! Jos *tag* jätetään pois default on *latest*)
+    Huom! Jos *tag* jätetään pois default on *latest*)
 
     ```cmd
     docker pull my_dockerhub_user/my_repo:my_tag
@@ -36,7 +38,7 @@ Huom! Jos *tag* jätetään pois default on *latest*)
     docker run -d -p 80:3001 --name my_container my_dockerhub_user/my_repo:my_tag
     ```
 
-Huom! Portti 80 on HTTP.
+    Huom! Portti 80 on HTTP.
 
 
 

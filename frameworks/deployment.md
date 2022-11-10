@@ -11,7 +11,7 @@ Muokkaa *knexfile.js*-tiedostoa niin, että se sisältää edellä luomasi tieto
 ```js
 module.exports = {
   development: {
-    client: 'mysql',
+    client: 'mysql2',
     connection: {
       user: 'root',
       password: 'mypass123',
@@ -20,7 +20,7 @@ module.exports = {
   },
 
   production: {
-    client: 'mysql',
+    client: 'mysql2',
     connection: {
       port: 3306,
       host: "123.123.123.123",
