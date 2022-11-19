@@ -27,8 +27,9 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehitt�
 - [Deployment](./deployment/index.html)
 - [PHP - ympäristön asentaminen](./systeemityo/dev_environment.html)
 - [AWS-serverin konffaus](./devops/aws_setup.html)
-- [AWS-ohjeet](./devops/aws_teams.html)
-
+- [AWS-ohjeet tiimeille](./devops/aws_teams.html)
+- [CSC-serverin konffaus](./devops/csc_setup.html)
+- [CSC-ohjeet tiimeille](./devops/csc_teams.html)
 ---
 ### Vanhat
 
