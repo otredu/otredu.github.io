@@ -30,7 +30,9 @@ N채iden sivujen kautta p채채set k채ytt채m채채n joitakin Tredun ohjelmistokehitt�
 - [AWS-ohjeet tiimeille](./devops/aws_teams.html)
 - [CSC-serverin konffaus](./devops/csc_setup.html)
 - [CSC-ohjeet tiimeille](./devops/csc_teams.html)
+
 ---
+
 ### Vanhat
 
 - [Menneet kurssit](./index_old.html)
