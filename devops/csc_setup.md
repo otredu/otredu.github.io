@@ -66,15 +66,27 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
     
     $ sudo nano reverse-proxy.conf
     ```
-    Lisää tiedostoon haluamasi proxy-asetukset: (tallenna Ctrl-x, yes):
+    Lisää tiedostoon haluamasi proxy-asetukset, tässä käytetty polkua: (tallenna Ctrl-x, yes):
 
     ```cmd
     server {
-    listen 80;
-    location /team1/ {
+      listen 80;
+      location /team1/ {
         proxy_pass http://localhost:81/;
+      }
     }
-    }
+    ```
+
+    Jos käytössäsi on domain name, voit tehdä proxyn alidomaineille:
+
+    ```cmd
+    server {
+      listen 80;
+      server_name my_subdomain.my_domain.xy;
+      location / {
+        proxy_pass http://localhost:200;
+      }
+    } 
     ```
 
 2. Ota käyttöön samat proxy-asetukset myös *sites-enabled*-kansiossa) ja käynnistä uudelleen nginx:
@@ -85,7 +97,7 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
     $ sudo systemctl restart nginx
     ```
 
-3. Kontti pitää vielä build:ata uudelleen seuraavilla muutoksilla, koska applikaatio ei pyöri enää web-serverin juuressa:
+3. Jos käytät polku-proxia, kontti pitää vielä build:ata uudelleen seuraavilla muutoksilla, koska applikaatio ei pyöri web-serverin juuressa (tätä ei tarvita jos käytät *subdomain*:eja):
 
     - Lisää frontin package.json tiedostoon alla oleva "homepage"-asetus. Tämä tarvitaan, että static tiedostot (JS, CSS) latautuvat oikein web-serveriltä (. viittaa samaan polkuun kuin index.html).
 
@@ -104,12 +116,12 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
         }
         ```
 
-4. Push:aa uusi kontti dockerhub:iin ja tee pull ubuntu-serverillä. Stop:aa edellinen kontti ja käynnistä uusi. Nyt kontin pitäisi aueta osoitteesta:
+4. Push:aa uusi kontti dockerhub:iin ja tee pull ubuntu-serverillä. Stop:aa tarvittaessa edellinen kontti ja käynnistä uusi. Nyt kontin pitäisi aueta jommasta kummasta aueta osoitteesta riippuen kumpaa proxy-tapaa käytit:
 
     ```cmd
     http://my_server_ip/team1
+    http://my_subdomain.mydomain.xy
     ```
-
 ---
 
 ### Vaihe 3. lisätään HTTPS ja oma domain:
@@ -117,15 +129,15 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
 1. Hanki oma domain, esim. [Hostinpalvelu](https://www.hostingpalvelu.fi/)
 
 2. Ota käyttöön AWS:ssä Route53:ssa *hosted zone*, uudelle domainille. Lisää uusi *record*, joka reitittää kaikki \*.my_new_domain - osoiteet *reverse proxy*:n IP-osoiteeseen. Tallenna AWS:n nimipalvelinten osoiteet palveluun, josta ostit domain:in.
-*Huom.* Tämä vie 24h.
+*Huom.* DNS:n voimaan tulo voi kestää 24h.
 
-3. Hanki domainille sertifikaatti... jne.
+3. Hanki domainille Let's encrypt - sertifikaatti [ohjeet](https://www.scaleway.com/en/docs/tutorials/nginx-reverse-proxy/)
 
 ---
 
 ### Vaihe 4. listään useampi käyttäjä ja docker-kontti
 
-1. Tehtään uusia käyttäjiä (yksi per tiimi) ja kotihakemistoja serverille, lisätään niille salasana ja lisää käyttäjät docker-käyttäjäryhmään:
+1. Tehdään uusia käyttäjiä (yksi per tiimi) ja kotihakemistoja serverille, lisätään niille salasana ja lisää käyttäjät docker-käyttäjäryhmään:
 
     ```cmd
         $ sudo useradd -s /bin/bash -d /home/team1/ -m team1
@@ -156,12 +168,24 @@ Huom! Jokaisella tiimillä pitää olla eri portti (tässä 81).
 
 5. Nyt jokaisen ryhmän node.js - applikaatio löytyy oman polun alta esim.
 
-    https://my_domain.yy/team1
+    ```cmd
+    https://my_domain.xy/team1
+    https://my_domain.xy/team2
+    ```
 
-    https://my_domain.yy/team2
+    TAI 
+    ```cmd
+    https://team1.my_domain.xy
+    https://team2.my_domain.xy
+    ```
+
+[Ohje subdomainien reititykseen](https://ryan.himmelwright.net/post/nginx-subdomain-reverse-proxy/). Vaatii toimivan domainin.
 
 ---
 
 ### Vaihe 5. Asenna oma postgres server ubuntuun
 
 1. [Asennusohjeet](https://linuxhint.com/install-and-setup-postgresql-database-ubuntu-22-04/)
+
+---
+
