@@ -129,9 +129,9 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
 1. Hanki oma domain, esim. [Hostinpalvelu](https://www.hostingpalvelu.fi/)
 
 2. Ota käyttöön AWS:ssä Route53:ssa *hosted zone*, uudelle domainille. Lisää uusi *record*, joka reitittää kaikki \*.my_new_domain - osoiteet *reverse proxy*:n IP-osoiteeseen. Tallenna AWS:n nimipalvelinten osoiteet palveluun, josta ostit domain:in.
-*Huom.* DNS:n voimaan tulo voi kestää 24h.
+*Huom.* DNS:n päivitys voi kestää 24h.
 
-3. Hanki domainille Let's encrypt - sertifikaatti [ohjeet](https://www.scaleway.com/en/docs/tutorials/nginx-reverse-proxy/)
+3. Asenna certbot, joka luo Let's encrypt - sertifikaatit kaikille domaineillesi [ohjeet](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
 
 ---
 
