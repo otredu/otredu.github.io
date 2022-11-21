@@ -133,6 +133,12 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
 
 3. Asenna certbot, joka luo Let's encrypt - sertifikaatit kaikille domaineillesi [ohjeet](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
 
+    ```cmd
+    $ sudo snap install core; sudo snap refresh core
+    $ sudo snap install --classic certbot
+    $ sudo ln -s /snap/bin/certbot /usr/bin/certbot
+    $ sudo certbot --nginx
+    ```
 ---
 
 ### Vaihe 4. listään useampi käyttäjä ja docker-kontti
