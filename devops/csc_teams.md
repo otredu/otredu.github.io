@@ -32,26 +32,7 @@ Ota SSH-yhteys serverille (saat opettajalta linux-käyttäjätunnuksen ja salasa
 
     Kun *ssh-keygen* kysyy tiedoston nimeä, anna sellainen (esim. *fs_rsa_id*). Kopioi *fs_rsa_id.pub* - tiedoston sisältämä *public key* ja tallenna se serverille *import public key* - toiminnolla tai tuo se suoraan tiedostona.
 
-3. Koska applikaatio ei pyöri web-serverin juuressa, vaan ryhmäkohtaisessa polussa, kontti pitää vielä build:ata uudelleen seuraavilla muutoksilla, :
-
-    - Lisää frontin package.json tiedostoon alla oleva "homepage"-asetus. Tämä tarvitaan, että static tiedostot (JS, CSS) latautuvat oikein web-serveriltä (. viittaa samaan polkuun kuin index.html).
-
-        ```json
-        "homepage": ".",
-        ```
-    - Docker - tiedostoon lisätään seuraava ympäristömuuttuja, ennen frontin build-komentoa:
-        ```cmd
-        ENV NODE_ENV=production 
-        ```
-    - front:in koodissa määritellään *service URI* ottamaan huomioon sen, että *production*-versiossa *backend*:illä on serverillä uusi polku:
-        ```cmd
-        var serviceURI = '/notes';
-        if(process.env.NODE_ENV == 'production'){
-            serviceURI = window.location.pathname + serviceURI
-        }
-        ```
-
-4. Tee uusi build ja push:aa uusi image dockerhub:iin (Windows-koneella)
+3. Poista applikaatiostasi kaikki viittaukset *localhost*:iin (jos sellaisia siellä vielä on). Tee uusi build ja push:aa uusi image dockerhub:iin (Windows-koneella)
 
     ```cmd
     $ docker build . -t my_docker_user/my_app:my_tag
@@ -59,7 +40,7 @@ Ota SSH-yhteys serverille (saat opettajalta linux-käyttäjätunnuksen ja salasa
     $ docker push my_docker_user/my_app:my_tag
     ```
 
-5. Lataa uusi image dockerhubista ubuntuun (ssh-yhteyden avulla) ja käynnistä se opettajan antamaan porttiin (tässä 81):
+4. Lataa uusi image dockerhubista ubuntuun (ssh-yhteyden avulla) ja käynnistä se opettajan antamaan porttiin (tässä 81):
 
     ```cmd
     $ docker login
@@ -67,10 +48,12 @@ Ota SSH-yhteys serverille (saat opettajalta linux-käyttäjätunnuksen ja salasa
     $ docker run -d -p 81:3001 my_docker_user/my_app:my_tag
     ```
 
-Nyt jokaisen ryhmän applikaation pitäisi aueta osoitteesta:
+Nyt jokaisen ryhmän/opiskelijan applikaation pitäisi aueta osoitteesta:
 
     ```cmd
-    http://my_server_ip/team1
-    http://my_server_ip/team2
+    http://team1.my_server_ip
+    http://team2.my_server_ip
     jne.
     ```
+
+Huom! Opettaja on asentanut sertifikaatit, joten reverse-proxy pakottaa yhteyden HTTPS:ksi (suojattu yhteys).
