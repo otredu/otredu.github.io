@@ -6,7 +6,9 @@
 Huom! *.pem*-tiedosto ladataan kohdata *create keypair*
 2. Liitä public (floating) IP-osoite serveriin.
 3. Konfiguroi Security Group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (porttiin 80).
-4. Ota yhteys ubuntu-serveriin Bash:illä:
+4. Ota yhteys ubuntu-serveriin Bash:illä 
+
+    *Huom!* jos yrität ottaa yhteyden private IP-osoitteeseen, katso ohjeet [täältä](https://help.dreamhost.com/hc/en-us/articles/215879497-How-to-SSH-to-a-private-instance-without-a-public-IP-address)
 
     ```cmd
     $ ssh -i "my_indentity.pem" ubuntu@my_server_ip
@@ -195,3 +197,22 @@ Huom! Jokaisella tiimillä pitää olla eri portti (tässä 81).
 
 ---
 
+### Lisäohjeita:
+
+1. SSH-yhteys käyttäen toista ubuntu-serveriä proxynä:
+
+    ```cmd
+    Host jump
+      HostName xxx.xxx.xxx.xxx #Floating IP
+      User my_ubuntu_user
+      IdentityFile ~/.ssh/my_rsa_id
+    Host yyy.yyy.yyy.*  #Private IP
+      ProxyCommand ssh jump -W %h:%p
+      User ubuntu
+      IdentityFile ~/.ssh/my_rsa_id
+     ```
+    Nyt voi ottaa ssh-yhteyden suoraan kohdekoneeseen:
+
+    ```cmd
+    ssh yyy.yyy.yyy.*
+    ```
