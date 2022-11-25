@@ -24,6 +24,9 @@
     - privatekey/publickey, miten ne luodaan ja mihin ne tallennetaan
     - certificate authority, mikä se on ja mihin sitä tarvitaan
     - HTTPS/certificate, miten HTTPS enabloidaan webserverille
+    - sudo, missä tilanteissa tätä piti käyttää
+    - dockerhub, mikä se on ja mitä sen avulla tehdään
+    - docker, mikä se on ja mitä sen avulla voi tehdä
 
 3. Tehkää vastaava raportti/kuva siitä mitä AWS-demossa tehtiin [tässä työohje](https://container-workshop.juhala.people.aws.dev/). 
 
