@@ -2,9 +2,9 @@
 
 ### Vaihe 1. käynnistetään yksi docker-kontti AWS:ään:
 
-1. Luo CSC:hen uusi virtuaalikone (small) Ubuntu 20.04 ja tallenna *.pem - file .ssh - kansioon omaan profiiliisi (pidä tallessa, älä anna näitä kenellekään!). 
-Huom! *.pem*-tiedosto ladataan kohdata *create keypair*
-2. Liitä public (floating) IP-osoite serveriin.
+1. Luo CSC:llä uusi keypair kohdassa *create keypair*. Tarvitset näitä SSH-yhteyden muodostamiseen serverille. Tallenna ladatut kansioon ilmestynyt *.pem - file profiilisi .ssh - kansioon (koululla yleensä k-levyllä, pidä *.pem-file tallessa, älä anna sitä kenellekään!). 
+2. Luo CSC:hen uusi virtuaalikone (tiny) Ubuntu 20.04 ja valitse *security*-välilehdeltä edellä tehty keypair. 
+2. Liitä public (floating) IP-osoite serveriin (vain ensimmäiselle serverille, ei tarvita jatkossa).
 3. Konfiguroi Security Group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (porttiin 80).
 4. Ota yhteys ubuntu-serveriin Bash:illä 
 
@@ -36,7 +36,7 @@ Huom! *.pem*-tiedosto ladataan kohdata *create keypair*
     $ sudo usermod -aG docker ubuntu
     ```
 
-7. Lataa kokeeksi yksi kontainer dockerhub:ista ja käynnistä se:
+7. Lataa kokeeksi yksi container dockerhub:ista ja käynnistä se:
 
     ```cmd
     $ docker login
@@ -44,7 +44,7 @@ Huom! *.pem*-tiedosto ladataan kohdata *create keypair*
     $ docker run -d -p 80:3001 my_docker_user/my_app:my_tag
     ```
 
-8. Nyt selaimessa pitäisi näkyä kontin sisältämä appi serverin IP-osoiteessa. 
+8. Nyt selaimessa pitäisi näkyä kontin sisältämä appi serverin public IP-osoiteessa TAI subdomainissa. 
 
 --- 
 
