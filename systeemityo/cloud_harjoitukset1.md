@@ -2,19 +2,18 @@
 
 1. Web-serverin (reverse-proxy) ja dockerin konffaaminen ubuntu-serverille pareittain:
 
-    Kirjaudu parisi kanssa omalle ubuntu-serverillenne käyttäen SSH:tä. Asentakaa sinne docker sekä nginx (reverse-proxy). Konffatkaa se niin, että saatte serverille käyntiin docker-kontin, joka aukeaa osoitteesta (voit käyttää HTTP-porttia: 80) ja kertoo, että olet päässyt ryhmän sivulle:
+    Kirjaudu parisi kanssa omalle ubuntu-serverillenne käyttäen SSH:tä. Asentakaa sinne docker sekä nginx (reverse-proxyksi). Konffatkaa se niin, että saatte serverille käyntiin docker-kontin, joka aukeaa valitsemastanne subdomain-osoitteesta (voit alkuun testata yhtäkonttia portissa 80, sitten sulkea sen ja asentaa nginx:n):
 
-    - https://groupname.treok.eu/harjoitus1
+    - https://group_subdomain.treok.eu/
 
     Ohjeet:
     - serverin asennus: [ohje](https://otredu.github.io/devops/csc_setup.html) 
 
 2. Tehkää edellisestä set-up:ista arkkitehtuurikuva, sekä asennusohje, jossa selitätte järjestelmään liittyvät käsitteet sekä pystyttämänne järjestelmän tiedot:
 
-    - DHCP, mikä se on ja miten se toimii
-    - public IP address, IP osoite josta sivusi toimii
-    - private IP address, IP osoite josta sivusi toimii
-    - private IP address subnet mask, käyttämäsi aliverkon maski
+    - public IP address, IP osoite serverille, jonka kautta sivustosi toimii
+    - private IP address, IP osoite serverille, josta sivusi oikeasti tulee
+    - private IP address subnet mask, käyttämäsi virtuaalisen aliverkon maski
     - DNS + domain name, verkko-osoite josta sivusi toimii
     - subdomain, alidomain josta sivusi toimii
     - security group, asetukset, jotka pitää olla voimassa, että yhteydet toimivat
@@ -46,4 +45,4 @@
     - Task/service
     - Environmental variables
      
-Palauttakaa harjoitustyö systeemityön repoon. Liitä linkki konffaamaasi serveriin.
+Palauttakaa harjoitustyö systeemityön repoon. Liitä linkkit konffaamallasi serverillä oleviin applikaatioihin.
