@@ -12,5 +12,5 @@
     - [CSC-tehtävät](./cloud_harjoitukset1.html)
 
 - Robotframework 
-    - [QAutoFlow-selaintestaus, demo](rpa_demo.md)
+    - [QAutoFlow-selaintestaus, demo](../testaus/rpa_demo.html)
     
