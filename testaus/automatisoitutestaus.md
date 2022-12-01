@@ -8,3 +8,7 @@
 
 - [Selenium IDE](./seleniumide.html)
 - [Headless browser ja JUnit](./headlessbrowser.html)
+
+### QAutoFlow selaintestaus (RPA)
+
+- [QAutoFlow-demo](rpa_demo.md)
