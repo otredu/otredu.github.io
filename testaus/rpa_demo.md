@@ -71,7 +71,7 @@ Tässä demossa et tarvitse paljon Python-osaamista.
 
 9. Avaa VSCode:ssa tiedosto: robots/Demo1.robot ja lisää siihen seuraavat rivit:
 
-    ```robot
+    ```cmd
     new page windowed    https://notestest.node.treok.io/
     Log Data    title=Etusivu  msg=Avattiin etusivu
     Login    user1    salasana
