@@ -63,7 +63,7 @@ Tässä demossa et tarvitse paljon Python-osaamista.
 
 6. Jos tallentaminen onnistui, robottivälilehdelle ilmestuu kolme *actions step*:iä. Muuta kahden ensimmäisen action:in tyyppi *fill_text*:ksi, ja lisää Data-kenttään kirjautumistiedot. Nyt sivun pitäisi näyttää tältä:
 
-    ![qautoflow actions](./img/qautologin_actions.png).
+    ![qautoflow actions](./img/qautologin_actions.png)
 
 7. Anna komponentille nimi ja tiedoston nimi ja tallenna valitsemalla -> *Create Keyword*. Nyt tyhjennä actions-lista (punainen rasti) ja nauhoita logout.  Tallenna kuten edellä (Ctrl+Shift), valitse komponentin nimeksi Logout, ja tiedoston nimeksi Logout.py.
 
