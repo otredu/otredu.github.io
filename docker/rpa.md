@@ -48,7 +48,7 @@ Tee docker-compose.yml - tiedosto, jossa kerrot mikä image (myapp) testataan:
       DB_TYPE: mysql2
       DB_PORT: 3306
       PORT: 3001
-      SECRET: tosisalainensaiyvutfytdtretdrlasanainen
+      SECRET: tosisalainensalasanainen
     ports:
        - 3001:3001
    rpa:
