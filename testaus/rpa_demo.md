@@ -95,7 +95,11 @@ Tässä demossa et tarvitse paljon Python-osaamista.
 
 --- 
 
-## Tehtävä
+## Tehtävä 1
 
 Tee ohjelmistorobotti, joka testaa jotakin tekemääsi ohjelmaa, joka löytyy netistä. Ohjelma voi olla esim. notesdemo2 tai jokin projektityö. Palauta robotti koodi \*.zip - filenä systeemityön repoon.
+
+## Tehtävä 2
+
+Aja edellä tekemääsi testirobottia docker-compose:n avulla ([ohjeet](../docker/rpa.html).
 
