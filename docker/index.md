@@ -20,6 +20,11 @@ Docker:in avulla voit käynnistää koneellesi kehitysympäristön ilman, että 
 
 - [Notesdemo (simple) - docker deployment](notesdemo.html)
 - [Notesdemo (full) - docker deployment](notesdemofull.html)
+
+### Docker - test environment
+
+- [Robot framework](rpa.html)
+
 ### Docker-container:eiden hallinta
 
 Docker-container:it voidaan pysäyttää, uudelleen käynnistää ja poistaa koneelta:
