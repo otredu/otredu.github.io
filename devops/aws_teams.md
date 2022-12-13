@@ -17,8 +17,9 @@ Kaikilla tiimeillä on oma käyttäjä/salasana sekä kotihakemisto yhteisellä 
 2. Aseta Github SSH key:t projektin koodirepoon [ohjeet](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/GitHub-SSH-Key-Setup-Config-Ubuntu-Linux)
 
     ```cmd
+    $ mkdir .ssh
+    $ cd .ssh
     $ ssh-keygen
-    $ cd /home/team1/.ssh
     $ ls -la
     $ cat id_rsa.pub
     $ cd ~
