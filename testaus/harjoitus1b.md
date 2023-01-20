@@ -2,7 +2,7 @@
 
 Rakennetaan testisuite ensimmäisen vuoden JavaScript-harjoitusten testaukseen. Tehtävät tehdään siis ensimmäisen vuoden JavaScript - repoon.
 
-Tee repoon uusi branch: jest ja tee kaikki muutokset siihen (jestin asennus, testit sekä bugikorjaukset yms.)
+Tee repoon uusi branch: jest ja tee kaikki muutokset siihen (jestin asennus, testit sekä bugikorjaukset yms.). Tallenna jest-repoon linkki, jonka kautta tehtävät löytyvät.
 
 Saatat joutua muuttamaan koodia myös niin, että se palauttaa arvoja (korvaat console.log:it return:illa), että pystyt testaamaan funktiot.
 
