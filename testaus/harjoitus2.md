@@ -22,7 +22,7 @@ Demo:
 
 Harjoituksessa pyöritetään taulukoita, olioita, sekä taulukoita, jotka sisältävät olioita. Funktioiden paluuarvoina palautetaan aina uusi kopio koko muuttuvasta rakenteesta (taulukko, olio tai olioita sisältävä taulukko).
 
-### Tehtävä 1
+### Tehtävä 1 (DEMO)
 
 Tee apufunktio, joka saa parametrina puhelinnumeron ja tarkistaa sen muodon ja tarvittaessa muuttaa sen oikeaan muotoon:
 
@@ -62,7 +62,7 @@ Testaa funktion toiminta erilaisilla syötteillä.
 
 Tee testidataksi vähintään kolme yhteystieto-oliota sisältävä puhelinluettelo-taulukko eli array (phonebook). Voit käyttää testidatan luomiseen tehtävässä 2 tehtyä funktiota.
 
-Tee funktio, joka palauttaa puhelinluettelossa olevien henkilöiden nimet ja puhelinnumerot HTML-listana eli <ul></ul> - tägien sisälle luotuina, käytä apuna tehtävän 3 funktiota.
+Tee funktio, joka saa parametrina edellä tehdyn kontaktiolioita sisältävän puhelinluettelo-arrayn ja joka palauttaa puhelinluettelossa olevien henkilöiden nimet ja puhelinnumerot HTML-listana eli <ul></ul> - tägien sisälle luotuina <li></li> - elementteinä. Käytä apuna tehtävän 3 funktiota.
 
 Testaa funktion toiminta erilaisilla syötteillä.
 
