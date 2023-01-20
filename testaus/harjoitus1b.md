@@ -10,13 +10,11 @@ Tee testisuite seuraaville harjoituksille:
 
 ### Tehtävä 1
 
-Tee testisuite kaikille harjoituksen [2.4:n tehtäville](https://otredu.github.io/js/harjoitukset-perusrakenteet2.4.html)
+Tee testisuite harjoituksen [2.4:n tehtäville](https://otredu.github.io/js/harjoitukset-perusrakenteet2.4.html) 2-5.
 
 ### Lisätehtävä
 
-Tee testisuite kaikille niille funktioitlle joille se on mahdollista harjoituksessa [2.3:n tehtäville](https://otredu.github.io/js/harjoitukset-perusrakenteet2.3.html)
-
-Lisää repoon readme.md - tiedosto, jossa listaat tehtävät joita ei voi jestillä testätä, ja miksi.
+Tutki mille harjoitusten [2.3:n tehtäville](https://otredu.github.io/js/harjoitukset-perusrakenteet2.3.html) voi ylipäätään tehdä testit. Lisää repoon readme.md - tiedosto, jossa listaat tehtävät joita ei voi jestillä testata, ja miksi.
 
 
 
