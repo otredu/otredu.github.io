@@ -215,7 +215,7 @@ function newInfoDiv(country){
 }
 ```
 
-Jotta uusi *countryData*:n palauttama *div*-elementti saadaan mukaan, kutsutaan sitä (*countryDiv*-funktiossa) ja lisätään se append:illa otsikon perään:
+Jotta uusi *countryData*:n palauttama *div*-elementti saadaan mukaan, kutsutaan sitä (*newCountryDiv*-funktiossa) ja lisätään se append:illa otsikon perään:
 
 ```js
 let myInfoDiv = newInfoDiv(country);
