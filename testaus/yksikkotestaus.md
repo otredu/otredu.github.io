@@ -7,5 +7,7 @@
 
 ---
 
-- [Harjoitukset 1](./harjoitus1.html)
+- [Harjoitukset 1a](./harjoitus1.html)
+- [Harjoitukset 1b](./harjoitus1b.html)
+
 - [Harjoitukset 2](./harjoitus2.html)
