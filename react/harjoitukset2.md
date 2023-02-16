@@ -27,14 +27,14 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
 
 2. Tuotteiden lisääminen ostoskoriin
 
-    Kun käyttäjä haluaa lisätä tietyn tuotteen ostoskoriin täytyy häneltä varmistaa myös kappalemäärä. Ostoskoriin lisätään haluttu määrä tuotetta ja kasvatetaan ostoskorin kokonaishintaa vastaavasti. Määrän voi totetuttaa +/- napeilla tai lomakekentällä.
+    Kun käyttäjä haluaa lisätä tietyn tuotteen ostoskoriin, täytyy häneltä varmistaa myös kappalemäärä. Ostoskoriin lisätään haluttu määrä tuotetta ja kasvatetaan ostoskorin kokonaishintaa vastaavasti. Määrän voi totetuttaa +/- napeilla tai lomakekentällä.
 
     - Ostoskori voi olla samalla sivulla, näytä sisältö mikäli tuotteita on lisätty ostoskoriin.
     - Tässä harjoituksessa keskeinen asia on tilamuuttujien käsittely (*useState*).
 
 3. Ostoskorin tyhjentäminen
 
-    Käyttäjä voi tyhjentää ostoskorin sisällön eli tyhjentää kaikkien lisättyjen tuotteiden määrät. Tällöin myös tilauksen kokonaishinta tyhjennetään.
+    Käyttäjä voi tyhjentää ostoskorin sisällön eli tyhjentää kaikkien lisättyjen tuotteiden määrät kerrallaan. Tällöin myös tilauksen kokonaishinta tyhjennetään.
 
 4. Tilauksen vahvistaminen
 
@@ -71,8 +71,6 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
     </html>
     ```
 
-    Vaihtoehtoisesti tee tili Herokuun ja liitä reposi siihen.
-
     Palauta linkki live-versioon reposi *read.me* - kentässä.
 
 ### Edistyneet toiminnot (lisätehtävät)
@@ -84,6 +82,3 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
     - Kokonaissumma 250 €, alennus 4%
     - Kokonaissumma 500 €, alennus 10%
 
-7. Ostoskorin hallinta
-
-    Käyttäjä voisi hallita ostoskorin tuotteita siten, että voidaan poistaa jokin tietty tuote kokonaan tai muuttaa tietyn tuotteen kappalemäärää.
