@@ -24,21 +24,46 @@
      docker push my_dockerhub_user/my_repo:my_tag
     ```
 
-5. Nyt sen voi ladata DockerHub:ista esim. Linux-serverille 
+5. Nyt sen voi ladata DockerHub:ista esim. Linux-serverille
 
-    Huom! Jos *tag* jätetään pois default on *latest*)
+    Huom! Jos *tag* jätetään pois default on *latest*
 
     ```cmd
     docker pull my_dockerhub_user/my_repo:my_tag
     ```
 
-6. Containerin käynnistys:
+6. Containerin käynnistys 
 
-    ```cmd
-    docker run -d -p 80:3001 --name my_container my_dockerhub_user/my_repo:my_tag
+    Tee *docker-compose.yml* - tiedosto ja lisää siihen .env - tiedostossa olevat salasanat yms.
+
+    ```yml
+    version: '3.1'
+
+    services:
+        notesdemo:
+            image: my_dockerhub_user/my_repo:my_tag
+            environment:
+                DB_HOST: my_server
+                DB_USER: my_db_user
+                DB_PASS: my_pass
+                DB_DATABASE: my_db
+                DB_TYPE: mysql2
+                DB_PORT: 3306
+                PORT: 3001
+                SECRET: tosisalainensalasanainen
+            ports:
+                - my_port:3001
     ```
 
-    Huom! Portti 80 on HTTP.
+    Aja nyt samassa kansiossa docker-compose.yml-tiedoston kanssa:
+
+    ```cmd
+    docker-compose up -d
+    ```
+
+    Nyt kontti pyörii portissa *my_port* eli esim. http://localhost:my_port.
+
+
 
 
 

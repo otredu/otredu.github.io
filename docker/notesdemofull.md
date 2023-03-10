@@ -5,7 +5,7 @@
 Tee notes-demon juureen uusi tiedosto nimeltä *Dockerfile* ja tallenna siihen projektisi buildaus- ja käynnistysohjeet ks. alla (tässä oletetaan, että frontin koodi on hakemistossa "notesfront" ja backend:in tiedostot hakemistossa "notesback" (ja node/express -pohja on generoitu automaattisesti):
 
 ```docker
-FROM ubuntu:18.04 
+FROM ubuntu:20.04 
 
 WORKDIR /mydir  
 RUN apt-get update && apt-get install -y curl
@@ -38,11 +38,10 @@ Docker
 
 1. Aloita
 
-    Käynnistä docker desktop, ellei jo ole käynnissä. Kirjaudu docker-hub:iin ja lataa ubuntu:
+    Käynnistä docker desktop, ellei jo ole käynnissä. Kirjaudu docker-hub:iin:
 
     ```js
     docker login
-    docker pull ubuntu:18.04
     ```
 
 2. Buildaa kontti (container)
@@ -53,7 +52,7 @@ Docker
     docker build . -t notesdemo-full
     ```
 
-3. Aja ja testaa lokaalisti
+3. Tarkista kontin sisältö
 
     Käynnistä kontti dockeriin. Bash:in avulla voit tarkistaa, ettei ylimäärisiä tiedostoja mennyt buildiin, erityisesti .env ei saa olla mukana! Pääset siitä ulos kirjoittamalla 'exit':
 
@@ -61,8 +60,35 @@ Docker
     docker run -it -p 3000:3000 notesdemo-full bash
     ```
 
-    Avaa selaimessa http://localhost:3000
+4. Käynnistä kontti ja testaa sen toiminta lokaalisti
 
-4. Nyt kontin voi julkaista joko Herokussa, AWS:ssa tai CPANEL:issa.
+    Tee *docker-compose.yml* - tiedosto ja lisää siihen .env - tiedostossa olevat salasanat yms.
 
-- [Heroku-ohjeet](../deployment/heroku/container-deployment.html)
+    ```yml
+    version: '3.1'
+
+    services:
+        notesdemo:
+            image: notesdemo-full
+            environment:
+                DB_HOST: localhost
+                DB_USER: my_db_user
+                DB_PASS: my_pass
+                DB_DATABASE: my_db
+                DB_TYPE: mysql2
+                DB_PORT: 3306
+                PORT: 3001
+                SECRET: tosisalainensalasanainen
+            ports:
+                - my_port:3001
+    ```
+
+    Aja nyt samassa kansiossa *docker-compose.yml*-tiedoston kanssa:
+
+    ```cmd
+    docker-compose up -d
+    ```
+
+    Nyt kontti pyörii portissa *my_port* eli esim. http://localhost:my_port.
+
+5. Jos tämä toimii lokaalisti, voit julkaista apps:in joko Herokussa tai AWS:ssa.

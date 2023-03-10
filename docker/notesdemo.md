@@ -5,7 +5,7 @@
 Tee notes-demon juureen uusi tiedosto nimeltä *Dockerfile* ja tallenna siihen projektisi buildaus- ja käynnistysohjeet ks. alla (tässä oletetaan, että frontin koodi on hakemistossa "front" ja json-server:in tiedostot hakemistossa "jsonserver", mukaanlukien package.json, jossa json-server on mainittu dependencynä):
 
 ```docker
-FROM ubuntu:18.04 
+FROM ubuntu:20.04 
 
 WORKDIR /mydir  
 RUN apt-get update && apt-get install -y curl
@@ -27,7 +27,6 @@ CMD npx json-server -H 0.0.0.0 --static build --port=3001 --watch db.json
 
     ```js
     docker login
-    docker pull ubuntu:18.04
     ```
 
 2. Buildaa kontti (container)

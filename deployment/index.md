@@ -2,8 +2,9 @@
 
 ### Julkaiseminen Docker-konttien avulla
 
-- [Notesdemo (simple) + JSON-server](../docker/notesdemo.html)
-- [Notesdemo (full) + Postgres-tietokanta](heroku/notesfull.html)
+- [Notesdemo (simple) + JSON-server --> Heroku](../docker/notesdemo.html)
+- [Notesdemo (full) + Postgres-tietokanta --> Heroku](heroku/notesfull.html)
+- [Notesdemo (full) + MySQL-tietokanta --> AWS](aws/notesfull.html)
 
 ### Julkaiseminen CPANEL:issa
 
@@ -11,6 +12,3 @@
 - [PHP-projekti + MySQL phinx-migrations](../asiointipalveluprojekti/cpanel_php_migrations.html)
 - [PHP-projekti ja MySQL dump](../asiointipalveluprojekti/cpanel.html)
 
-### Julkaiseminen webhotellissa (ei CPANEL)
-
-- [PHP-projekti ja PHPMyAdmin](../asiointipalveluprojekti/nodeeli.html)

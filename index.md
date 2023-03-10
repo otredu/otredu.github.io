@@ -3,7 +3,7 @@
 
 Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehittäjien kurssimateriaaleja.
 
-### Materiaalit syksy 2022
+### Materiaalit kevät 2023
 
 - [HTML ja CSS](./html-css/index.html)
 - [JS](./js/index.html)
@@ -12,6 +12,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehitt�
 - [ASPA (PHP, JS)](./js-php/index.html)
 - [FullStack (React, node.js)](./react/index.html)
 - [Systeemityö](./systeemityo/index.html)
+- [Tietoturva](https://www.devseclab.io/)
 
 ### Materiaalit syksy 2021
 
@@ -33,6 +34,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehitt�
 - [AWS-ohjeet tiimeille](./devops/aws_teams.html)
 - [CSC-serverin konffaus](./devops/csc_setup.html)
 - [CSC-ohjeet tiimeille](./devops/csc_teams.html)
+- [AWS-SSO-CloudFormation-Deployment](./deployment/aws/notesfull.html)
 
 ---
 
