@@ -8,8 +8,8 @@
     - [notesdemo2](https://otredu.github.io/docker/notesdemofull.html)
 
 - Pilvipalvelut:
-    - [AWS-demo](https://container-workshop.juhala.people.aws.dev/)
     - [CSC-tehtävät](./cloud_harjoitukset1.html)
+    - [AWS-Azure-tehtävät](./cloud_harjoitukset_azure_aws.html)
 
 - Robotframework 
     - [QAutoFlow-selaintestaus, demo](../testaus/rpa_demo.html)
