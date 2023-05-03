@@ -2,17 +2,21 @@
 
 ### Vaihe 1. käynnistetään yksi docker-kontti pyörimään ubuntu-serverissä:
 
-1. Luo Azureen uusi virtuaalikone () Ubuntu 20.04 ja valitse *create security keys* (Tarvitset näitä SSH-yhteyden muodostamiseen serverille. Kun luot serverin, konellesi latautuu *.pem - file. Tallenna se profiilisi .ssh - kansioon (koululla yleensä k-levyllä, pidä *.pem-file tallessa, älä anna sitä kenellekään!). 
-2. Valitse myös *create new public IP-address*. Muuten et pysty ottamaan serveriisi yhteyttä Internetistä.
-3. Konfiguroi Security Group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (porttiin 80).
-4. Ota yhteys ubuntu-serveriin Bash:illä (my_user on *ubuntu*, ellet valinnut eri käyttäjää):
+1. Luo Azureen uusi virtuaalikone ([ohjeet](../devops/azure_virtuaalikone.html)):
+
+    - Valitse Ubuntu server 20.04 (ja mahdollisimman halpa kone)
+    - Valitse *create security keys*, tarvitset näitä SSH-yhteyden muodostamiseen serverille. Kun luot serverin, konellesi latautuu *.pem - file. Tallenna se profiilisi .ssh - kansioon (koululla yleensä k-levyllä, pidä *.pem-file tallessa, älä anna sitä kenellekään!). 
+    - Valitse myös *create new public IP-address*. Muuten et pysty ottamaan serveriisi yhteyttä Internetistä.
+    - Konfiguroi Security Group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (porttiin 80).
+
+2. Ota yhteys ubuntu-serveriin Bash:illä (my_user on *ubuntu*, ellet valinnut eri käyttäjää):
 
     ```cmd
     $ cd .ssh
     $ ssh -i "my_indentity.pem" my_user@my_server_ip
     ```
 
-5. Asenna ja configuroi HTTPS, docker sekä docker-compose [ohjeet](https://docs.docker.com/engine/install/ubuntu/)
+3. Asenna ja configuroi HTTPS, docker sekä docker-compose:
 
     ```cmd
     $ sudo apt-get update
@@ -28,7 +32,10 @@
     $ sudo docker run hello-world
     ```
 
-6. Lisää docker - group ja liitä käyttäjä siihen (niin ei tarvitse kirjoittaa aina sudo kun käytää dockeria).
+    Tarkemmat [ohjeet täällä](https://docs.docker.com/engine/install/ubuntu/)
+
+
+4. Lisää docker - group ja liitä käyttäjä siihen (niin ei tarvitse kirjoittaa aina sudo kun käytää dockeria).
 
     ```cmd
     $ sudo groupadd docker
@@ -37,14 +44,14 @@
 
     *Huom* Kirjaudu nyt uudelleen ubuntu-koneeseen, että edellä tehty muutos tulee voimaan (kirjoita *exit* ja tee uusi SSH-yhteys).
 
-7. Lataa kokeeksi yksi container dockerhub:ista ja käynnistä se:
+5. Lataa kokeeksi yksi container dockerhub:ista ja käynnistä se:
 
     ```cmd
     $ docker login
     $ docker pull my_docker_user/my_app:my_tag
     ```
 
-8. Luo uusi *nano*:lla tiedosto *docker-compose.yml* ja tallenna siihen tarvittavat ympäristömuuttujat (ENV), että saat ohjelmasi käyntiin. Liitä teksti hiiren oikealla ja tallenna *Ctrl-x* ja yes.
+6. Luo uusi *nano*:lla tiedosto *docker-compose.yml* ja tallenna siihen tarvittavat ympäristömuuttujat (ENV), että saat ohjelmasi käyntiin. Liitä teksti hiiren oikealla ja tallenna *Ctrl-x* ja yes.
 
     ```cmd
     $ nano docker-compose.yml
@@ -54,15 +61,16 @@
    
     ```
 
-9. Käynnistä kontti docker-compose:lla:
+7. Käynnistä kontti docker-compose:lla:
 
     ```cmd
     docker-compose up -d
     ```
 
-10. Nyt selaimessa pitäisi näkyä kontin sisältämä appi serverin public IP-osoiteessa (HTTP portissa 80).
+8. Nyt selaimessa pitäisi näkyä kontin sisältämä appi serverin public IP-osoiteessa (HTTP portissa 80).
 
     *Huom:* Jos ei näy, käy konffaamassa serverin portti 80 auki internettiin (security group).
+
 --- 
 
 ## Vaihe 2: Monta docker-konttia samalla serverillä
@@ -96,7 +104,7 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
     }
     ```
 
-2. Ota käyttöön samat proxy-asetukset myös *sites-enabled*-kansiossa ja käynnistä uudelleen nginx:
+3. Ota käyttöön samat proxy-asetukset myös *sites-enabled*-kansiossa ja käynnistä uudelleen nginx:
 
     ```cmd
     $ sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
@@ -104,7 +112,8 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
     $ sudo systemctl restart nginx
     ```
 
-3. Huomataan, että kontti ei täysin toimikaan tässä polussa (johtuu siitä, että frontti pitäisi buildata uudelleen käyttäen ["homepage" - asetusta](./build_with_path.http)). Ei tehdä sitä kuitenkaan nyt vaan siirrytään käyttämään omaa domainia (vaihe 3.) ja tehdään reverse-proxy:n konffaus sen avulla.
+4. Huomataan, että kontti ei mahdollisesti täysin toimikaan tässä polussa (frontti pitäisi buildata uudelleen käyttäen ["homepage" - asetusta](./build_with_path.html)). Ei tehdä sitä kuitenkaan nyt vaan siirrytään käyttämään omaa domainia (vaihe 3.) ja tehdään reverse-proxy:n konffaus sen avulla.
+
 ---
 
 ### Vaihe 3. lisätään HTTPS ja oma domain:
@@ -126,7 +135,7 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
 
 ### Vaihe 4. konffataan nginex käyttämään edellä tehtyä alidomainia
 
-1.   Jos käytössäsi on domain name, voit tehdä proxyn alidomaineille:
+1. Jos käytössäsi on domain name, voit tehdä proxyn alidomaineille:
 
     ```cmd
     server {
