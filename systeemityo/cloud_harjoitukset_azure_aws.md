@@ -38,9 +38,9 @@
 
 3. Web-serverin, reverse-proxy:n ja dockerin konffaaminen ubuntu-serverille:
 
-    1. Luo Azure:een yksi Ubuntu server. Tallenna pem-file K-levylle .ssh - kansioon. 
+    1. Luo Azure:een yksi Ubuntu server (Standard B1, North Europe). Tallenna pem-file K-levylle .ssh - kansioon. 
     2. Ota SSH-yhteys ubuntu-serverillenne käyttäen Bash:iä. 
-    3. Asenna koneeseen docker sekä nginx (reverse-proxyksi). 
+    3. Asenna koneeseen docker, docker-compose sekä nginx (reverse-proxyksi). 
     4. Konffaa se niin, että saat serverille käyntiin 2 docker-konttia (esim. notesdemo sekä fanikauppa), jotka aukeavat valitsemastasi subdomain-osoitteesta (voit alkuun testata yhtäkonttia portissa 80, sitten sulkea sen ja asentaa nginx:n):
 
     - https://myown_subdomain.azure-created-domain
