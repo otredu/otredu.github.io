@@ -12,15 +12,15 @@ Käynnistä itsellesi yksi Ubuntu - virtuaalikone ja lataa *.pem - file, joka si
 
 1. Avaa virtuaalikoneet (*Virtual machines*)
 
-![azure virtuaalikoneet](./img/azure_virtual1.PNG)
+![azure virtuaalikoneet](./img/azure_virtual1.png)
 
 2. Luo uusi virtuaalikone (*Create*)
 
-![azure virtuaalikoneet](./img/azure_virtual0.PNG)
+![azure virtuaalikoneet](./img/azure_virtual0.png)
 
 3. Valitse koneen koko (size): General purpose B1 (1 vCPU, 1 GiB RAM)
 
-![azure virtuaalikoneet](./img/azure_virtual2.PNG)
+![azure virtuaalikoneet](./img/azure_virtual2.png)
 
 4. Konfiguroi kone: 
     - anna koneelle nimi
