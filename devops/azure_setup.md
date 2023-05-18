@@ -1,8 +1,8 @@
 ## Ubuntu virtual server in Azure
 
-### Vaihe 1. käynnistetään yksi docker-kontti pyörimään ubuntu-serverissä:
+### Vaihe 1. käynnistetään yksi docker-kontti pyörimään ubuntu-serverissä, aukeaa public IP-osoitteesta:
 
-1. Luo Azureen uusi virtuaalikone () Ubuntu 20.04 ja valitse *create security keys* (Tarvitset näitä SSH-yhteyden muodostamiseen serverille. Kun luot serverin, konellesi latautuu *.pem - file. Tallenna se profiilisi .ssh - kansioon (koululla yleensä k-levyllä, pidä *.pem-file tallessa, älä anna sitä kenellekään!). 
+1. Luo Azureen uusi virtuaalikone (Ubuntu 20.04) ja valitse *create security keys* (Tarvitset näitä SSH-yhteyden muodostamiseen serverille. Kun luot serverin, konellesi latautuu *.pem - file. Tallenna se profiilisi .ssh - kansioon (koululla yleensä k-levyllä, pidä *.pem-file tallessa, älä anna sitä kenellekään!). 
 2. Valitse myös *create new public IP-address*. Muuten et pysty ottamaan serveriisi yhteyttä Internetistä.
 3. Konfiguroi Security Group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (porttiin 80).
 4. Ota yhteys ubuntu-serveriin Bash:illä (my_user on *ubuntu*, ellet valinnut eri käyttäjää):
@@ -50,9 +50,7 @@
     $ nano docker-compose.yml
     ```
 
-    ```yml
-   
-    ```
+    Katso docker-compose.yml rakenne [täältä](../docker/notesdemofull.html).
 
 9. Käynnistä kontti docker-compose:lla:
 
@@ -62,8 +60,12 @@
 
 10. Nyt selaimessa pitäisi näkyä kontin sisältämä appi serverin public IP-osoiteessa (HTTP portissa 80).
 
-    *Huom:* Jos ei näy, käy konffaamassa serverin portti 80 auki internettiin (security group).
+    *Huom:* Jos ei näy, käy konffaamassa Azuressa serverin portti 80 auki internettiin (security group).
 --- 
+
+## Vaihe 2: Varataan domain nimi ja konffataan sille HTTPS
+
+Pyydä opettajaa luomaan sinulle alidomainin
 
 ## Vaihe 2: Monta docker-konttia samalla serverillä
 
