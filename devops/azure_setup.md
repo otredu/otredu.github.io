@@ -2,17 +2,21 @@
 
 ### Vaihe 1. käynnistetään yksi docker-kontti pyörimään ubuntu-serverissä, aukeaa public IP-osoitteesta:
 
-1. Luo Azureen uusi virtuaalikone (Ubuntu 20.04) ja valitse *create security keys* (Tarvitset näitä SSH-yhteyden muodostamiseen serverille. Kun luot serverin, konellesi latautuu *.pem - file. Tallenna se profiilisi .ssh - kansioon (koululla yleensä k-levyllä, pidä *.pem-file tallessa, älä anna sitä kenellekään!). 
-2. Valitse myös *create new public IP-address*. Muuten et pysty ottamaan serveriisi yhteyttä Internetistä.
-3. Konfiguroi Security Group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (porttiin 80).
-4. Ota yhteys ubuntu-serveriin Bash:illä (my_user on *ubuntu*, ellet valinnut eri käyttäjää):
+1. Luo Azureen uusi virtuaalikone ([ohjeet](../devops/azure_virtuaalikone.html)):
+
+    - Valitse Ubuntu server 20.04 (ja mahdollisimman halpa kone)
+    - Valitse *create security keys*, tarvitset näitä SSH-yhteyden muodostamiseen serverille. Kun luot serverin, konellesi latautuu *.pem - file. Tallenna se profiilisi .ssh - kansioon (koululla yleensä k-levyllä, pidä *.pem-file tallessa, älä anna sitä kenellekään!). 
+    - Valitse myös *create new public IP-address*. Muuten et pysty ottamaan serveriisi yhteyttä Internetistä.
+    - Konfiguroi Security Group niin, että se sallii sisääntulevat SSH-yhteydet (portti 22) koulun opetusverkosta sekä kaiken HTTP-liikenteen (porttiin 80).
+
+2. Ota yhteys ubuntu-serveriin Bash:illä (my_user on *ubuntu*, ellet valinnut eri käyttäjää):
 
     ```cmd
     $ cd .ssh
     $ ssh -i "my_indentity.pem" my_user@my_server_ip
     ```
 
-5. Asenna ja configuroi HTTPS, docker sekä docker-compose [ohjeet](https://docs.docker.com/engine/install/ubuntu/)
+3. Asenna ja configuroi HTTPS, docker sekä docker-compose:
 
     ```cmd
     $ sudo apt-get update
@@ -28,7 +32,10 @@
     $ sudo docker run hello-world
     ```
 
-6. Lisää docker - group ja liitä käyttäjä siihen (niin ei tarvitse kirjoittaa aina sudo kun käytää dockeria).
+    Tarkemmat [ohjeet täällä](https://docs.docker.com/engine/install/ubuntu/)
+
+
+4. Lisää docker - group ja liitä käyttäjä siihen (niin ei tarvitse kirjoittaa aina sudo kun käytää dockeria).
 
     ```cmd
     $ sudo groupadd docker
@@ -37,14 +44,14 @@
 
     *Huom* Kirjaudu nyt uudelleen ubuntu-koneeseen, että edellä tehty muutos tulee voimaan (kirjoita *exit* ja tee uusi SSH-yhteys).
 
-7. Lataa kokeeksi yksi container dockerhub:ista ja käynnistä se:
+5. Lataa kokeeksi yksi container dockerhub:ista ja käynnistä se:
 
     ```cmd
     $ docker login
     $ docker pull my_docker_user/my_app:my_tag
     ```
 
-8. Luo uusi *nano*:lla tiedosto *docker-compose.yml* ja tallenna siihen tarvittavat ympäristömuuttujat (ENV), että saat ohjelmasi käyntiin. Liitä teksti hiiren oikealla ja tallenna *Ctrl-x* ja yes.
+6. Luo uusi *nano*:lla tiedosto *docker-compose.yml* ja tallenna siihen tarvittavat ympäristömuuttujat (ENV), että saat ohjelmasi käyntiin. Liitä teksti hiiren oikealla ja tallenna *Ctrl-x* ja yes.
 
     ```cmd
     $ nano docker-compose.yml
@@ -58,9 +65,10 @@
     docker-compose up -d
     ```
 
-10. Nyt selaimessa pitäisi näkyä kontin sisältämä appi serverin public IP-osoiteessa (HTTP portissa 80).
+8. Nyt selaimessa pitäisi näkyä kontin sisältämä appi serverin public IP-osoiteessa (HTTP portissa 80).
 
-    *Huom:* Jos ei näy, käy konffaamassa Azuressa serverin portti 80 auki internettiin (security group).
+    *Huom:* Jos ei näy, käy konffaamassa serverin portti 80 auki internettiin (security group).
+
 --- 
 
 ## Vaihe 2: Varataan domain nimi ja konffataan sille HTTPS
@@ -98,7 +106,38 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
     }
     ```
 
-    Jos käytössäsi on domain name, voit tehdä proxyn alidomaineille:
+3. Ota käyttöön samat proxy-asetukset myös *sites-enabled*-kansiossa ja käynnistä uudelleen nginx:
+
+    ```cmd
+    $ sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+
+    $ sudo systemctl restart nginx
+    ```
+
+4. Huomataan, että kontti ei mahdollisesti täysin toimikaan tässä polussa (frontti pitäisi buildata uudelleen käyttäen ["homepage" - asetusta](./build_with_path.html)). Ei tehdä sitä kuitenkaan nyt vaan siirrytään käyttämään omaa domainia (vaihe 3.) ja tehdään reverse-proxy:n konffaus sen avulla.
+
+---
+
+### Vaihe 3. lisätään HTTPS ja oma domain:
+
+1. Pyydä opettajalta oma alidomain Teams:illa serverisi public IP-osoitteelle. Hän konffaa sellaisen AWS:n Route 53:een. 
+
+    AWS:n Route53:ssa on *hosted zone* (domain: treok.eu), johon lisätään uusi *record*, joka reitittää kaikki \*.my_new_domain.treok.eu - osoiteet Azure serverisi public IP-osoiteeseen. 
+    *Huom.* DNS:n päivitys voi kestää 24h.
+
+2. Asenna certbot, joka luo Let's encrypt - sertifikaatit kaikille domaineillesi [ohjeet](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
+
+    ```cmd
+    $ sudo snap install core; sudo snap refresh core
+    $ sudo snap install --classic certbot
+    $ sudo ln -s /snap/bin/certbot /usr/bin/certbot
+    $ sudo certbot --nginx
+    ```
+---
+
+### Vaihe 4. konffataan nginex käyttämään edellä tehtyä alidomainia
+
+1. Jos käytössäsi on domain name, voit tehdä proxyn alidomaineille:
 
     ```cmd
     server {
@@ -109,8 +148,7 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
       }
     } 
     ```
-
-2. Ota käyttöön samat proxy-asetukset myös *sites-enabled*-kansiossa) ja käynnistä uudelleen nginx:
+2. Ota käyttöön samat proxy-asetukset myös *sites-enabled*-kansiossa ja käynnistä uudelleen nginx:
 
     ```cmd
     $ sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
@@ -118,120 +156,9 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
     $ sudo systemctl restart nginx
     ```
 
-3. Jos käytät polku-proxia, kontti pitää vielä build:ata uudelleen seuraavilla muutoksilla, koska applikaatio ei pyöri web-serverin juuressa (tätä ei tarvita jos käytät *subdomain*:eja):
-
-    - Lisää frontin package.json tiedostoon alla oleva "homepage"-asetus. Tämä tarvitaan, että static tiedostot (JS, CSS) latautuvat oikein web-serveriltä (. viittaa samaan polkuun kuin index.html).
-
-        ```json
-        "homepage": ".",
-        ```
-    - Docker - tiedostoon lisätään seuraava ympäristömuuttuja, ennen frontin build-komentoa:
-        ```cmd
-        ENV NODE_ENV=production 
-        ```
-    - front:in koodissa määritellään *service URI* ottamaan huomioon sen, että *production*-versiossa *backend*:illä on serverillä uusi polku:
-        ```cmd
-        var serviceURI = '/notes';
-        if(process.env.NODE_ENV == 'production'){
-            serviceURI = window.location.pathname + serviceURI
-        }
-        ```
-
-4. Push:aa uusi kontti dockerhub:iin ja tee pull ubuntu-serverillä. Stop:aa tarvittaessa edellinen kontti ja käynnistä uusi. Nyt kontin pitäisi aueta jommasta kummasta aueta osoitteesta riippuen kumpaa proxy-tapaa käytit:
-
-    ```cmd
-    http://my_server_ip/team1
-    http://my_subdomain.mydomain.xy
-    ```
 ---
 
-### Vaihe 3. lisätään HTTPS ja oma domain:
+Nyt sinulla pitäisi olla HTTPS:n kautta toiminnassa kaksi sovellusta joilla on molemmilla oma alidomain:
 
-1. Hanki oma domain, esim. [Hostinpalvelu](https://www.hostingpalvelu.fi/)
-
-2. Ota käyttöön AWS:ssä Route53:ssa *hosted zone*, uudelle domainille. Lisää uusi *record*, joka reitittää kaikki \*.my_new_domain - osoiteet *reverse proxy*:n IP-osoiteeseen. Tallenna AWS:n nimipalvelinten osoiteet palveluun, josta ostit domain:in.
-*Huom.* DNS:n päivitys voi kestää 24h.
-
-3. Asenna certbot, joka luo Let's encrypt - sertifikaatit kaikille domaineillesi [ohjeet](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
-
-    ```cmd
-    $ sudo snap install core; sudo snap refresh core
-    $ sudo snap install --classic certbot
-    $ sudo ln -s /snap/bin/certbot /usr/bin/certbot
-    $ sudo certbot --nginx
-    ```
----
-
-### Vaihe 4. listään useampi käyttäjä ja docker-kontti
-
-1. Tehdään uusia käyttäjiä (yksi per tiimi) ja kotihakemistoja serverille, lisätään niille salasana ja lisää käyttäjät docker-käyttäjäryhmään:
-
-    ```cmd
-        $ sudo useradd -s /bin/bash -d /home/team1/ -m team1
-        $ sudo passwd team1
-        4 sudo usermod -aG docker team1
-    ```
-
-2. Enabloidaan SSH password - autentikaatio (muokkaa: PasswordAuthentication yes, tallenna Ctrl-x + yes):
-
-    ```cmd
-    $ sudo nano /etc/ssh/sshd_config 
-    $ sudo systemctl restart sshd
-    ```
-
-3. Nyt jokainen ryhmä voi ottaa SSH-yhteyden serverille (kysyy salasanan):
-
-    ```cmd 
-    $ ssh -i "my_indentity.pem" team1@my_server_ip
-    ```
-
-4. Tiimi voi nyt ladata imagen ja käynnistää sen omaan porttiinsa.
-Huom! Jokaisella tiimillä pitää olla eri portti (tässä 81).
-
-    ```cmd
-    $ docker pull my_docker_user/my_app:my_tag
-    $ docker run -d -p 81:3001 my_docker_user/my_app:my_tag
-    ```
-
-5. Nyt jokaisen ryhmän node.js - applikaatio löytyy oman polun alta esim.
-
-    ```cmd
-    https://my_domain.xy/team1
-    https://my_domain.xy/team2
-    ```
-
-    TAI 
-    ```cmd
-    https://team1.my_domain.xy
-    https://team2.my_domain.xy
-    ```
-
-[Ohje subdomainien reititykseen](https://ryan.himmelwright.net/post/nginx-subdomain-reverse-proxy/). Vaatii toimivan domainin.
-
----
-
-### Vaihe 5. Asenna oma postgres server ubuntuun
-
-1. [Asennusohjeet](https://linuxhint.com/install-and-setup-postgresql-database-ubuntu-22-04/)
-
----
-
-### Lisäohjeita:
-
-1. SSH-yhteys käyttäen toista ubuntu-serveriä proxynä:
-
-    ```cmd
-    Host jump
-      HostName xxx.xxx.xxx.xxx #Floating IP
-      User my_ubuntu_user
-      IdentityFile ~/.ssh/my_rsa_id
-    Host yyy.yyy.yyy.*  #Private IP
-      ProxyCommand ssh jump -W %h:%p
-      User ubuntu
-      IdentityFile ~/.ssh/my_rsa_id
-     ```
-    Nyt voi ottaa ssh-yhteyden suoraan kohdekoneeseen:
-
-    ```cmd
-    ssh yyy.yyy.yyy.*
-    ```
+    https://myapp1.my_subdomain.treok.eu
+    https://myapp2.my_subdomain.treok.eu

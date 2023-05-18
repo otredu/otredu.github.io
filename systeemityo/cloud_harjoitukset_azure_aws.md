@@ -46,7 +46,8 @@
     - https://myown_subdomain.azure-created-domain
 
     Ohjeet:
-    - serverin asennus: [ohje](https://otredu.github.io/devops/azure_setup.html) 
+    - Linux-virtuaalikoneen käynnistys Azureen [ohje](../devops/azure_virtuaalikone.html)
+    - serverin asennus: [ohje](../devops/azure_setup.html) 
 
 4. Piirrä edellisestä set-up:ista arkkitehtuurikuva sekä kirjoita asennusohje, jonka avulla sen saisi tehtyä uudelleen. 
 
