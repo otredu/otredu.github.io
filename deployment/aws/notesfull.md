@@ -10,7 +10,7 @@
 
 3. Siirrä kontti dockerhubiin 
 
-    Siirrä kontti dockerhub:iin (public repo) ja testaa vielä kerran lokaalisti, että kaikki toimii ([ohjeet](../dockerbub/container-deployment.html)). 
+    Siirrä kontti dockerhub:iin (public repo) ja testaa vielä kerran lokaalisti, että kaikki toimii ([ohjeet](../dockerhub/container-deployment.html)). 
 
 4. Muokkaa .env - tiedosto AWS:n haluamaan muotoon
     - nimeä tiedosto niin, että se on esim. muotoa "notesdemo2.env" (pelkkä .env ei toimi)

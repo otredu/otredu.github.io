@@ -2,9 +2,9 @@
 
 1. Tee tili Docker-hub:iin ja luo uusi container registry (ilmaisella tilillä vain yksi private repo):
 
-    ![luo uusi repo](../img/dockerhubrepo.PNG)
+    ![luo uusi repo](../img/dockerhubrepo.png)
 
-    ![luo uusi repo](../img/dockerhubrepo2.PNG)
+    ![luo uusi repo](../img/dockerhubrepo2.png)
 
 2. Kirjaudu sisään DockerHub-tilisi
 
@@ -15,7 +15,7 @@
 3. Tee uusi build niin, että sillä on oikean lainen *tag* (tag on vapaaehtoinen)
 
     ```cmd
-    docker build -t my_dockerhub_user/my_repo:my_tag
+    docker build . -t my_dockerhub_user/my_repo:my_tag
     ```
 
 4. Push:aa tehty image DockerHub:iin
