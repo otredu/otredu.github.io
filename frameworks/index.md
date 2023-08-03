@@ -5,22 +5,22 @@ Web-kehitykseen on tarjolla paljon erilaisia kehitysympäristöjä eli *framewor
 Tässä muutama esimerkki:
 
 JavaScript:
-- [Node-express]()
-- [React]()
-- [Vue]()
-- [Angular]()
+- [Node-express](https://expressjs.com/)
+- [React](https://react.dev/)
+- [Vue](https://vuejs.org/)
+- [Angular](https://angular.io/)
 
 PHP:
-- [Laravel]()
-- [Lumen]()
-- [CodeIgniter]()
+- [Laravel](https://laravel.com/)
+- [Lumen](https://lumen.laravel.com/docs/10.x)
+- [CodeIgniter](https://codeigniter.com/user_guide/installation/)
 
 Muut:
-- [Spring]()
-- [Django]()
+- [Spring](https://spring.io/projects/spring-boot)
+- [Django](https://www.djangoproject.com/)
 
 Lue lisää:
-- [Best Webframeworks 2020](https://medium.com/front-end-weekly/10-most-popular-web-frameworks-in-2020-167b9103e08a)
+- [Best Webframeworks 2023](https://hackr.io/blog/web-development-frameworks)
 
 ### React - UI kirjastot
 
@@ -29,12 +29,11 @@ React ei varsinaisesti ole framework vaan UI-kirjasto. React-sovellukset rakentu
 Tässä muutama esimerkki:
 - [React-boostrap](https://react-bootstrap.github.io/)
 - [Material Kit React](https://github.com/creativetimofficial/material-kit-react)
-- [Grommet](https://www.npmjs.com/package/grommet)
 - [Flowbyte-Tailwind](https://flowbite.com/docs/getting-started/introduction/)
+- [Grommet](https://www.npmjs.com/package/grommet)
 
 Lue lisää:
 - [20+ Best React UI Component Libraries/Frameworks](https://www.codeinwp.com/blog/react-ui-component-libraries-frameworks/)
-- [Most popular React libraries 2019](https://x-team.com/blog/8-best-and-most-popular-react-libraries-in-2019/)
 
 ---
 

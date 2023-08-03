@@ -29,11 +29,10 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehitt�
 - [VSCode](./vscode/index.html)
 - [Docker](./docker/index.html)
 - [Deployment](./deployment/index.html)
+- [Web-frameworks](./frameworks/index.md)
 - [PHP - ympäristön asentaminen](./systeemityo/dev_environment.html)
 - [AWS-serverin konffaus](./devops/aws_setup.html)
 - [AWS-ohjeet tiimeille](./devops/aws_teams.html)
-- [CSC-serverin konffaus](./devops/csc_setup.html)
-- [CSC-ohjeet tiimeille](./devops/csc_teams.html)
 - [AWS-SSO-CloudFormation-Deployment](./deployment/aws/notesfull.html)
 
 ---
