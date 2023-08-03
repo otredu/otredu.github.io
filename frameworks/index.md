@@ -13,6 +13,7 @@ JavaScript:
 PHP:
 - [Laravel]()
 - [Lumen]()
+- [CodeIgniter]()
 
 Muut:
 - [Spring]()
@@ -26,9 +27,10 @@ Lue lisää:
 React ei varsinaisesti ole framework vaan UI-kirjasto. React-sovellukset rakentuvat komponenteista, joten tarjolla on lisäksi erilaisia komponenttikirjastoja:
 
 Tässä muutama esimerkki:
-- [React-boostrap]()
-- [Material Kit React]()
-- [Grommet]()
+- [React-boostrap](https://react-bootstrap.github.io/)
+- [Material Kit React](https://github.com/creativetimofficial/material-kit-react)
+- [Grommet](https://www.npmjs.com/package/grommet)
+- [Flowbyte-Tailwind](https://flowbite.com/docs/getting-started/introduction/)
 
 Lue lisää:
 - [20+ Best React UI Component Libraries/Frameworks](https://www.codeinwp.com/blog/react-ui-component-libraries-frameworks/)
@@ -42,10 +44,6 @@ Lue lisää:
 
 - [React bootstrap](../react/react-boostrap)
 
-### Deployment - demot:
+- [CodeIgniter](./code_igniter/index.md)
 
-- [React/node/MySql -sovelluksen siirtäminen Webhotelliin ](./deployment.html)
-
-### Proto- ja tuotantoversion
-
-- [Itsearviointilomake ja ohjeet raporttiin](https://omaareena-my.sharepoint.com/:b:/g/personal/tiina_partanen_edu_tampere_fi/EQ1N9q4_YO5JuF7UhNPsr_IBzlYhfzGu0KfOGpGI-nEFMg?e=UEMpMo)
+- [Laravel](./laravel/index.md)
