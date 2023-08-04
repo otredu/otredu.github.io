@@ -44,4 +44,4 @@ Jokaisen projektitunnin alussa, pidetään *daily meeting*, josta kirjataan muis
 
 ### Drupal - sivuston asennus
 
-- [Ohjeet](drupal_asennus.html) Drupal-sivuston asentamiseen samariumille
+- [Ohjeet](../frameworks/drupal/index.md) Drupal-sivuston asentamiseen cpanel:iin

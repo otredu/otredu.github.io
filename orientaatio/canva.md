@@ -7,11 +7,11 @@ Canva-ohjelmalla on helppoa tehdä näyttäviä CV:tä. Saat käyttöösi ilmais
 
 2. Valitse valmis mallipohja (kirjoita hakukenttään "ansioluettelot" tai "CV")
 
-    ![canha mallipohjat](./img/canva_cv.png)
+    ![canva mallipohjat](./img/canva_cv.png)
 
 3. Kerro itsestäsi (ominaisuuksistasi sekä taidoistasi), kiinnostuksistasi sekä siitä mitä haluaisit isona tehdä: olet tulevaisuuden toivo, joten keskity tulevaisuuteen. Merkitse huolellisesti mitä olet opiskellut ja merkitse teknisiin taitoihisi osaamisesi taso (oma arvio), jos mahdollista. Voit tehdä CV:n suomeksi tai englanniksi. Lisää kuva itsestäsi, jäät paremmin mieleen ja se konkretisoi henkilöä tekstin takana.
 
-    -[opettajan malli-cv](./docs/CV_Partanen_Tiina_2020.pdf)
-    -[opettajan malli-cv, eng](./docs/CV_Partanen_Tiina_2020_eng.pdf)
+    - [opettajan malli-cv](./docs/CV_Partanen_Tiina_2020.pdf)
+    - [opettajan malli-cv, eng](./docs/CV_Partanen_Tiina_2020_eng.pdf)
 
 
