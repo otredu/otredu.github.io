@@ -1,8 +1,6 @@
 ## Orientoituminen ammattialan työtehtäviin
 
-### ICT-alan työtehtävät (LinkedIn, github, Drupal)
-
-- [Projektityöskentely](projektityoskentely.html)
+### ICT-alan työtehtävät
 
 - [Vierailijat](vierailut.html)
 
@@ -14,6 +12,4 @@
 
 - [CV - Canva ohjelmalla](canva.html)
 
-### Portfolio
-
-- 
+- [Portfolio](portfolio.html)
