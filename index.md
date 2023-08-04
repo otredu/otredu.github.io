@@ -3,7 +3,7 @@
 
 Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehittäjien kurssimateriaaleja.
 
-### Materiaalit kevät 2023
+### Materiaalit
 
 - [HTML ja CSS](./html-css/index.html)
 - [JS](./js/index.html)
@@ -12,16 +12,7 @@ Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistokehitt�
 - [ASPA (PHP, JS)](./js-php/index.html)
 - [FullStack (React, node.js)](./react/index.html)
 - [Systeemityö](./systeemityo/index.html)
-- [Tietoturva](https://www.devseclab.io/)
-
-### Materiaalit syksy 2021
-
-- [Orientaatio](./orientaatio/index.html)
-
-### Materiaalit kevät 2021
-
-- [Johdatus systeemityöhön](./johdatus_systeemityo/index.html)
-- [Systeemityö](./systeemityo/index_2020.html)
+- [Orientaatio 2](./orientaatio/index.html)
 
 ### Ohjeita (Github, Docker...)
 
