@@ -18,12 +18,12 @@ Asenna nyt tarvittavat kirjastot:
 npm install
 ```
 
-aAsenna lisäksi *nodemon*, *dotenv*, *knex*, *mysql*, *bcryptjs*, *jsonwebtoken* ja *ajv*.
+Asenna lisäksi *nodemon*, *dotenv*, *knex*, *mysql2*, *bcryptjs*, *jsonwebtoken* ja *ajv*.
 
 ```cmd
 npm install nodemon --save-dev
 npm install dotenv --save
-npm install mysql --save
+npm install mysql2 --save
 npm install knex --save
 npm install bcryptjs --save
 npm install jsonwebtoken --save
@@ -46,7 +46,7 @@ knexfile.*
 Tee *.env*-tiedosto, jossa on kaikki ympäristömuuttujat. DEBUG-muuttuja aktivoi *debug*-tulostukset.
 
 ```cmd
-PORT=3000
+PORT=3001
 DB_USER=root
 DB_PASS=mypass123
 DB_HOST=localhost
@@ -100,8 +100,8 @@ require('dotenv').config()
 Lisää myös *package.json* -tiedostoon backendin käynnistyskomennot:
 
 ```js
-    "start": "node /bin/www",
-    "startdev": "nodemon /bin/www"
+    "start": "node ./bin/www",
+    "startdev": "nodemon ./bin/www"
 ```
 
 Nyt kokeile käynnistää backend konsolilta:
@@ -611,6 +611,12 @@ Kaikki muut reitit (/* wildcard) pitäisi ohjata lataamaan react-build static-ka
             res.status(500).send(err)
         }
     })
+    ```
+
+    Muista lisätä myös tämä (jos ei ole jo):
+
+    ```js
+    var path = require('path');
     ```
 
 ### REST-client
