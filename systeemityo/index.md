@@ -11,7 +11,10 @@
     - [AWS-Azure-tehtävät](./cloud_harjoitukset_azure_aws.html)
 
 - Testausautomaatio: 
-    - [Cypress](tulossa)
+    - [Cypress](https://www.cypress.io/)
+    
+- CI/CD:
+    - [Github-actions](to be done)
 
 - Tietoturva
     - [Introduction to cyber security](https://lms.netacad.com/course/view.php?id=2174201)
