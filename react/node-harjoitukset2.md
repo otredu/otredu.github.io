@@ -15,36 +15,28 @@ Jos et ole vielä tehnyt MySQL - tietokantaa fanikauppa2:lle tee sille migration
 
 ---
 
-HUOM!
-
-Voit päättää itse, teetkö ensin frontin koodia JSON-serveriä vasten (vrt. notesdemo), vai aloitatko tekemällä suoraan fanikauppa2 - backend:in (tehtävä 4). Jos teet ensin backend:in, testaa sen toiminta REST-testeillä, ennen frontin koodaamista!!
-
----
 ### Tehtävä 1
 
-Toteuta json-serverin avulla fanikaupan backend. Toteuta tuotetiedot, tilaustiedot sekä asiakastiedot (ostoskorin tallentamisen tietokantaan voi jättää tässä vaiheessa pois). Testaa fanikauppa API:n toiminta REST-clientin:in avulla.
+Toteuta fanikaupan backend käyttäen node/express:iä, käytä tietokantana kohdassa 0 tekemääsi MySQL-tietokantaa. Toteuta vähintään *GET /products* ja *POST /orders* -toiminnallisuudet. Testaa näiden toiminta REST-testeillä, ennen frontin koodaamista!
 
-Katso [ohje täältä](../tietokannat/rest-json.html).
+HUOM!
+Tässä vaiheessa ei vielä kannata toteuttaa rekisteröitymistä, kirjautumista ja tostoskorin tallentamista. Tee nämä jos jää aikaa.
 
 ### Tehtävä 2
 
-Muuta fanikauppa hakemaan tuotetiedot fanikauppa-backendiltä axioksen avulla (GET products). Tallenna tiedot tilamuuttujaan kuten aikaisemminkin.
+Muuta aikaisemmin tekemäsi fanikauppa-front hakemaan tuotetiedot fanikauppa-backenditä axioksen avulla (GET /products). Tallenna tiedot tilamuuttujaan kuten aikaisemminkin.
 
-*Huom!* Muista lisätä tilausmäärää kuvaava kenttä tietorakenteeseen, aseta se nollaksi (*amount*).
+*Huom!* Muista lisätä tilausmäärää kuvaava kenttä backendin antamaan tietorakenteeseen, aseta se nollaksi (*amount*).
 
 ### Tehtävä 3
 
-Muuta fanikauppasi lomakkeen käsittelijä tallentamaan tilaustiedot (sisältää tilatut tuotteet ja niiden määrät sekä asiakkaan tiedot) fanikauppa-backendille axioksen kautta (POST orders).
-
-### Tehtävä 4
-
-Toteuta fanikaupan backend käyttäen node/express:iä, käytä tietokantana kohdassa 0 tekemääsi MySQL-tietokantaa. Toteuta edellä käytetyt GET (products) ja POST (orders), toiminnallisuudet.
+Muuta fanikauppasi lomakkeen käsittelijä tallentamaan tilaustiedot (sisältää tilatut tuotteet, niiden määrät sekä asiakkaan tiedot) fanikauppa-backendille axioksen kautta (POST /orders).
 
 ### Lisätehtävä 1
 
-Muuta ohjelma toimimaan niin, että se vaatii rekisteröitymisen ja kirjautumisen ensin. Lisää backendiin reitit: register ja login. Rekisteröitymisessä tallennetaan käyttäjän kaikki tiedot lomakkeen avulla backendiin (voit uudelleenkäyttää aikaisemman lomakkeen tähän tarkoitukseen).
+Muuta ohjelma toimimaan niin, että käyttäjä voi halutessaan myös rekisteröityä ja kirjautua sivustolle. Nyt tilaaminen on kätevämpää, koska tilauslomakkeeseen ei tarvitse syöttää yhteystietoja, joka kerta tilausta tehdessä. Lisää backendiin reitit: register ja login. 
 
-*Huom!* Nyt tilauksen yhteydessä käyttäjän id viedään backendille *authtokenissa*
+*Huom!* Nyt tilauksen yhteydessä käyttäjän id viedään backendille *authtokenissa*. Tee rekisteröityneen käyttäjän tilausta varten uusi *endpoint* backendiin esim. /customer_orders.
 
 ### Lisätehtävä 2
 
@@ -52,4 +44,4 @@ Tallenna nyt myös reaaliajassa ostoskorin sisältö backendiin niin, että käy
 
 ### Lisätehtävä 3
 
-Toteuta toiminnallisuus, jossa kirjautunut käyttäjä voi tarkastella aikaisemmin tekemiään tilauksiaan.
+Toteuta toiminnallisuus, jossa kirjautunut käyttäjä voi tarkastella aikaisemmin tekemiään tilauksia.
