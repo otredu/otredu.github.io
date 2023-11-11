@@ -1,4 +1,4 @@
-## Notesdemon deployment docker:in avulla Herokuun
+## Notesdemon deployment docker:in avulla
 
 ### Notesdemon full build
 
@@ -13,7 +13,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
 RUN apt install -y nodejs
 COPY notesfront front
 RUN cd front && npm install --silent && npm run build --silent && cd .. 
-RUN cp -r front/build build && rm -r front
+RUN cp -r front/dist build && rm -r front
 COPY notesback . 
 RUN npm install
 CMD node ./bin/www 
@@ -52,7 +52,7 @@ Docker
     docker build . -t notesdemo-full
     ```
 
-3. Tarkista kontin sisältö
+3. Tarkista kontin sisältö (optional)
 
     Käynnistä kontti dockeriin. Bash:in avulla voit tarkistaa, ettei ylimäärisiä tiedostoja mennyt buildiin, erityisesti .env ei saa olla mukana! Pääset siitä ulos kirjoittamalla 'exit':
 
@@ -91,4 +91,4 @@ Docker
 
     Nyt kontti pyörii portissa *my_port* eli esim. http://localhost:my_port.
 
-5. Jos tämä toimii lokaalisti, voit julkaista apps:in joko Herokussa tai AWS:ssa.
+5. Jos tämä toimii lokaalisti, voit julkaista apps:in joko Herokussa, AWS:ssa tai Azure:ssa.
