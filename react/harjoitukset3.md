@@ -5,6 +5,7 @@ Tarkemmat uudet ohjeet:
 - [Notesdemo, osa 1](./demot/notesdemo_osa1.html)
 - [Notesdemo, osa 2](./demot/notesdemo_osa2.html)
 - [Notesdemo, osa 3](./demot/notesdemo_osa3.html)
+
 ### JSON-serverin asennus ja käynnistys
 
 Tee uusi kansio notesdemo. Tee siihen *db.json*-tiedosto, kopioi sinne tämä [json-muotoinen *notes*-tieto:](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen).
@@ -37,13 +38,14 @@ Tee seuraavat operaatiot postmanin avulla (Harjoittele HTTP-metodien GET, POST, 
 
 ### Tehtävä 1
 
-Tee uusi React-sovellus ajamalla create-react-app:
+Tee uusi React-sovellus ajamalla *vite*-scriptit:
 
 ```cmd
-> cd c:/users/oma.nimi/documents/react/
-> npx create-react-app notesfront
+> cd c:/users/oma.nimi/documents/react/notesdemo/
+> npm create vite@latest notesfront -- --template react
 > cd notesfront
-> npm start
+> npm install
+> npm run dev
 ```
 
 Asenna *axios*-kirjasto ja hae sen avulla *notes*-tiedot notes-backendiltä. Tulosta muistiinpanot consolille.
@@ -54,7 +56,7 @@ Asenna *axios*-kirjasto ja hae sen avulla *notes*-tiedot notes-backendiltä. Tul
 
 Tallenna saanut tiedot *notes*-tilamuuttuujaan. Muuta hakeminen *event*-hookiksi, joka suoritetaan vain kun *apps.js* renderöidään ensimmäisen kerran.
 
-Voit laittaa toistaiseksi kaiken axios-koodin *apps.js*-tiedostoon. [Ohjeet axios:en käyttöön löytyvät täältä (Axios ja promiset):](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) tai voit ladata valmiin koodin [täältä](./axios-service.html).
+Voit laittaa toistaiseksi kaiken axios-koodin *Apps.jsx*-tiedostoon. [Ohjeet axios:en käyttöön löytyvät täältä (Axios ja promiset):](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) tai voit ladata valmiin koodin [täältä](./axios-service.html).
 
 ### Tehtävä 2
 

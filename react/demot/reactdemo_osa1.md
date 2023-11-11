@@ -3,18 +3,19 @@
 ### React-ympäristön käynnistäminen
 
 Kloonaa *github-classroom* - repo ja siirry sen sisälle.
-Tee uusi React-sovellus ajamalla create-react-app consolilla:
+Tee uusi React-sovellus ajamalla seuraava vite-scripti consolilla:
 
 ```cmd
 > cd c:/users/oma.nimi/documents/react/
-> npx create-react-app alkeet
+> npm create vite@latest alkeet -- --template react
 ```
 
-Tämä komento luo React-projektin kansioon alkeet. Siirry kansion sisään ja käynnistä react:in *development server*. 
+Tämä komento luo React-projektin kansioon alkeet. Siirnpm ry kansion sisään, asenna tarvittavat kirjastot ja käynnistä react:in *development server*. 
 
 ```cmd
 > cd alkeet
-> npm start
+> npm install
+> npm run dev
 ```
 
 Nyt voit kirjoittaa react-koodia ja tehdyt muutokset näkyvät automaattisesti selaimessa (serveri ajaa *build*:in automaattisesti kun tiedostoja tallennetaan).
@@ -23,7 +24,7 @@ Kaikki koodi sijaitsee kansiossa *src* (source). Uudet komponentit kannattaa teh
 
 ![kansiot](../img/react_start.PNG)
 
-Ohjelmasi pääkomponentti on määritelty tiedostossa *App.js* ja tyylitiedosto on *App.css*. Muokkaa pääkomponentti *App* - seuraavasti:
+Ohjelmasi pääkomponentti on määritelty tiedostossa *App.jsx* ja tyylitiedosto on *App.css*. Muokkaa pääkomponentti *App* - seuraavasti:
 
 ```jsx
 const App = () => {
@@ -41,11 +42,18 @@ const App = () => {
 
 HUOM! React:issa komponentti - funktion nimen pitää alkaa isolla alkukirjaimella (*App* EI *app*).
 
-Muokkaa myös *css*:ää (pienennä header:in korkeutta):
+Muokkaa myös *App.css*:ää:
 
 ```css
 .App-header {
-  min-height: 20vh;
+  background-color: cadetblue;
+  font-size: 1.5em;
+  color: black;
+  padding: 1em;
+}
+
+body {
+  place-items: start !important;
 }
 ```
 
@@ -99,7 +107,7 @@ Tuo komponentti *App*:iin (*import*) ja kutsu sitä *App*:n *return*:in sisält�
 HUOM! Et voi käyttää *import*:ia ellei komponetin tiedostossa ole sitä vastaavaa *export*:ia (*export default*:ia käytetään kun halutaan exportata vain yksi komponetti).
 
 ```jsx
-import CourseInfo from './components/CourseInfo.js';
+import CourseInfo from './components/CourseInfo.jsx';
 ```
 
 const App = () => {

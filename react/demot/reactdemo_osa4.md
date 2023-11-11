@@ -2,7 +2,7 @@
 
 ### Olioiden käsittely taulukossa id:n avulla
 
-Muutetaan *friends*-tilamuuttuja käyttämään olioita, jotta saadaan ystävien kivi-paperi-sakset -pelissä saamat pisteet talteen. Kun tilamuuttujaan tallennetaan uusi ystävä, pisteet asetetaan nollaksi ja samalla luodaan uniikki id (riittävän iso satunnaisluku), jota tarvitaan pisteiden lisäämiseen. Muuta edellisen demon *submitHandler* luomaan yksittäisen nimen sijaan olioita:
+Muutetaan *friends*-tilamuuttuja käyttämään olioita, jotta saadaan ystävien kivi-paperi-sakset -pelissä saamat pisteet talteen. Kun tilamuuttujaan tallennetaan uusi ystävä, pisteet asetetaan nollaksi ja samalla luodaan uniikki id (riittävän iso satunnaisluku), jota tarvitaan pisteiden lisäämiseen. Muuta edellisen demon *submitHandler* luomaan yksittäisen nimen sijaan olioita. Muokkaa komponenttia *Friends* - seuraavasti: 
 
 ```jsx
 const submitHandler = (e, friend) => {
@@ -11,7 +11,7 @@ const submitHandler = (e, friend) => {
 }
 ```
 
-Muutetaan listan renderöinti käyttämään olioita ja näyttämään pisteet:
+Muutetaan listan renderöinti käyttämään olioita ja näyttämään pisteet. Muokkaa komponenttia *FriendsList* - seuraavasti: 
 
 ```jsx
     {friends.map((f,i) => <li key={i}>nimi: {f.name} pisteet: {f.points}</li>)}
@@ -27,7 +27,7 @@ Tehdään pisteiden lisäys - nappi, jokaiselle ystävälle (edellisen kohdan li
 
 Määritellään *addPoint()*-funktio (*Friends*-komponentin sisällä). Funktio käy *map*:in avulla läpi *friends*-taulukon. Kun se löytää *f.id*:n joka täsmää valittuun *id*:n kanssa, se kopioi olion `{...f}` ja kasvattaa sen points-kenttää yhdellä `points: f.points + 1`. `map` palauttaa aina uuden taulukon, joten se pitää tallentaa muuttujaan (tässä tempFriends) ja lopuksi päivittää tilamuuttujaan `setFriends(tempFriends)`.
 
-Huom! oliota ei saa React:issa muuttaa suoraan esim. `f.points++`, koska se muuttaisi kohteena olevaa oliota suoraan (mutable). Olio pitää kopioida aina ennen sen muuttamista. Spread-operaattori `{...f}` kopioi olion.
+Huom! oliota ei saa React:issa muuttaa suoraan esim. `f.points++`, koska se muuttaisi kohteena olevaa oliota suoraan (mutable). Olio pitää kopioida aina ennen sen muuttamista. Spread-operaattori `{...f}` kopioi olion. Muokkaa komponenttia *Friends* - seuraavasti (lisää tilamuuttujien alapuolelle): 
 
 ```jsx
 const addPoint = id => {
@@ -48,13 +48,13 @@ const addPoint = id => {
 }
 ```
 
-Välitä funktio vielä propsina *FriendsList*-komponentille (lisää uusi propsi):
+Välitä funktio vielä propsina *FriendsList*-komponentille (lisää uusi propsi). Muokkaa komponenttia *Friends* - seuraavasti: 
 
 ```jsx
-<Friends friends={friends} addPoint={addPoint} />
+    <FriendsList friends={friends} addPoint={addPoint} />
 ```
 
-ja ottaa se vastaavasti vastaan komponentin *props*:eissa:
+ja ota se vastaavasti vastaan komponentin *props*:eissa. Muokkaa komponenttia *FriendsList* - seuraavasti: 
 
 ```jsx
 const FriendsList = ({friends, addPoint}) => {
@@ -73,5 +73,5 @@ const totalPoints = points.reduce((a, b) => a + b, 0)
 
 ### Tehtävät:
 
-1. Tee funktio *setToZero()*, joka nollaa kaikkien ystävien pisteet, tee sille myös nappi
-2. Paketoi yllä oleva *map-reduce* koodi funktioksi, jota kutsutaan aina kun sivu renderöidään niin että ruudulla näkyvät kaikkien ystävien yhteispisteet
+1. Tee funktio *setToZero()*, joka nollaa kaikkien ystävien pisteet, tee sille myös nappi (komponenttiin *Friends*)
+2. Paketoi yllä oleva *map-reduce* koodi funktioksi, jota kutsutaan aina kun sivu renderöidään niin että ruudulla näkyvät kaikkien ystävien yhteispisteet (komponentissa *Friends*)

@@ -7,11 +7,13 @@ Opiskele React-perusasiat ensin joko opettajan johdolla tai tee nämä demot 1 j
 
 - [React demo 1](./demot/reactdemo_osa1.md)
 - [React demo 2](./demot/reactdemo_osa2.md)
+
 ### React demo 1 tehtävänanto
 
 Tee komponentti, joka tulostaa ruudulle parametreina (props) annetut tiedot. Kutsu komponenttia kaksi kertaa eri tiedoilla. Muotoile näyttämään tältä:
 
 ![tehtävä 1a](./img/course.PNG)
+
 ### React demo 2, tehtävänanto
 
 Toteuta sama toiminallisuus kuin demo1:ssa mutta käytä parametreina olioita, taulukoita sekä silmukkaa (map).

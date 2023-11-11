@@ -22,7 +22,7 @@ Voit myös suoraan tehdä node/express-backendin ja käyttää sitä. Toteuta v�
 
 ### Tehtävä 1
 
-Tee uusi React-app-pohja (create-react-app) ellet ole jo tehnyt sellaista (voit myös käyttää frontin pohjana bootsrap-demoa ja jatkaa siitä). Hae axioksen avulla keikkatiedot ja tallenna ne tilamuuttujaan (app:issa). Katso mallia *notes*-demossa luodusta *service*:stä.
+Tee uusi react-projekti (ks. *vite*-scprit) ellet ole jo tehnyt sellaista (voit myös käyttää frontin pohjana bootsrap-demoa ja jatkaa siitä). Hae axioksen avulla keikkatiedot ja tallenna ne tilamuuttujaan (app:issa). Katso mallia *notes*-demossa luodusta *service*:stä.
 
 Tulosta saamasi keikkatiedot konsolille tilamuuttujasta.
 

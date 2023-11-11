@@ -10,7 +10,7 @@ Tilamuuttuja ja sen muuttamiseen tarvittava funktio luodaan *useState*:in avulla
 import {useState} from 'react';
 ```
 
-Kun tilamuuttuja alustetaan sille annetaan alkuarvo, jonka pitää olla oikean tyyppinen. Tässä on alustettu tilamuuttuja *counter*, joka on luku, sitä muutetaan funktiolla *setCounter* ja sen alkuarvo on 0. Vertailun vuoksi alustetaan myös ns. tavallinen JS-muuttuja normalCounter. Molempien laskureiden arvot saadaan ruudulle samalla tavalla.
+Kun tilamuuttuja alustetaan sille annetaan alkuarvo, jonka pitää olla oikean tyyppinen. Tässä on alustettu tilamuuttuja *counter*, joka on luku, sitä muutetaan funktiolla *setCounter* ja sen alkuarvo on 0. Vertailun vuoksi alustetaan myös ns. tavallinen JS-muuttuja normalCounter. Molempien laskureiden arvot saadaan ruudulle samalla tavalla. Muokkaa pääkomponentti *App* - seuraavasti:
 
 ```jsx
 const App = () => {
@@ -25,7 +25,7 @@ const App = () => {
 }
 ```
 
-Tilamuuttujan voidaan päivittää erilaisten tapahtumien (*events*) yhteydessä. Lisätään molemmille nappi, jota painamalla laskurin arvoa kasvatetaan yhdellä. *onClick* tapahtumiin lisätään nimettömät *callBack*-funktiot (nuolifunktio, ()=>{...}).
+Tilamuuttujan voidaan päivittää erilaisten tapahtumien (*events*) yhteydessä. Lisätään molemmille nappi, jota painamalla laskurin arvoa kasvatetaan yhdellä. *onClick* tapahtumiin lisätään nimettömät *callBack*-funktiot (nuolifunktio, ()=>{...}). Muokkaa pääkomponentti *App* - seuraavasti:
 
 ```jsx
     return(
@@ -40,7 +40,7 @@ Tilamuuttujan voidaan päivittää erilaisten tapahtumien (*events*) yhteydessä
 
 Ruudulla päivittyy vain toinen laskuri. Lisää *console.log* niin nähdään päivittyvätkö muuttujat.
 
-HUOM! Jos nuolifunktiossa on useampi lauseke (*statement*) muodosta siitä koodiblokki aaltosulkujen avulla:
+HUOM! Jos nuolifunktiossa on useampi lauseke (*statement*) muodosta siitä koodiblokki aaltosulkujen avulla. Muokkaa pääkomponentti *App* - seuraavasti:
 
 ```jsx
     return(
@@ -61,30 +61,42 @@ Nyt nähdään, että molemmat muuttujat päivittyvät konsolille, mutta vain ti
 
 ### Ehdollinen renderöityminen
 
-Toiminnallisuus, jossa ruudulla saadaan jotain piiloon ja takaisin näkyviin voidaan toteuttaa ehdollisen renderöitymisen avulla. Siihen tarvitaan tilamuuttuja, jonka tyyppin on totuusarvo:
+Toiminnallisuus, jossa ruudulla saadaan jotain piiloon ja takaisin näkyviin voidaan toteuttaa ehdollisen renderöitymisen avulla. Siihen tarvitaan tilamuuttuja, jonka tyyppin on totuusarvo. Muokkaa pääkomponentti *App* - seuraavasti (lisää uusi muuttuja edellisen tilamuuttujan alapuolelle):
 
 ```jsx
  const [show, setShow] = useState(false);
 ```
 
-*and* (&&) operaattorin avulla voidaan toteuttaa yksinkertainen "ehtolause", jossa ei ole else haaraa. Kun muuttuja *show* on _true_, sen jälkeen oleva \<div\> näkyy, jos se on _false_ elementti jätetään pois. Tämä on normaalia and:in toimintaa, siinä evaluointia jatketaan kunnes törmätään ensimmäiseen _false_:en.
+*and* (&&) operaattorin avulla voidaan toteuttaa yksinkertainen "ehtolause", jossa ei ole else haaraa. Kun muuttuja *show* on _true_, sen jälkeen oleva \<div\> näkyy, jos se on _false_ elementti jätetään pois. Tämä on normaalia and:in toimintaa, siinä evaluointia jatketaan kunnes törmätään ensimmäiseen _false_:en. Muokkaa pääkomponentti *App* - seuraavasti:
 
 ```jsx
-{show && <div>Nyt se näkyy</div>}
+return(
+    <div>
+        ...
+         {show && <div>Nyt se näkyy</div>}
+        ...
+    </div>
+)
 ```
 
-Lisätään nappi, josta tilamuuttujaa saadaan vaihdettua. ! eli "not" toteuttaa *toggle*-toiminnallisuuden eli jokaisella painalluksena tilamuuttujan arvo vaihdetaan päinvastaiseksi true->false, false->true):
+Lisätään nappi, josta tilamuuttujaa saadaan vaihdettua. ! eli "not" toteuttaa *toggle*-toiminnallisuuden eli jokaisella painalluksena tilamuuttujan arvo vaihdetaan päinvastaiseksi true->false, false->true). Muokkaa pääkomponentti *App* - seuraavasti:
 
 ```jsx
-<button onClick={()=>setShow(!show)}>
+return(
+    <div>
+        ...
+        <button onClick={()=>setShow(!show)}>
           {show ? "Piilota" : "Näytä"} demo </button>
+        ...
+    </div>
+)      
 ```
 
 ### React:in input-kentät eli two-way binding
 
 React:issa *input*-kenttien arvot pitää kierrättää tilamuuttujien kautta. Tätä toiminnallisuutta kutsutaan *two-way binding*:iksi. Input-kentän arvo (*value*) pitää sekä lukea, että kirjoittaa tilamuuttujaan. Tilamuuttujan arvo kirjoitetaan *set\<Muuttujannimi\>*-funktion avulla, lukeminen tapahtuu käyttämällä muuttujan nimä (käytetään kuten normaalia muuttujaa).
 
-Tehdään uusi komponentti lomakkeelle (components/Friends.js) ja alustetaan tarvitavat muuttujat:
+Tehdään uusi komponentti lomakkeelle (components/Friends.jsx) ja alustetaan tarvitavat muuttujat:
 
 ```jsx
 const Friends = () => {
@@ -95,26 +107,42 @@ const Friends = () => {
         </div>
     )
 }
+
+export default Friends;
 ```
 
-Tehdään lomake, jonka kenttä liitetään (lukeminen: *value* ja kirjoittaminen *onChange*) tilamuuttujaan *name*:
+Ota tämä komponentti käyttöön *App*-pääkomponentissa:
 
 ```jsx
-<form>
-    <input onChange={e=>setName(e.target.value)} type="text" value={name}/>
-    <input type="submit">
-</form>
+return(
+    ...
+    <Friends />
+    ...
+)
+```
+
+Tehdään lomake, jonka kenttä liitetään tilamuuttujaan *name* (lukeminen: *value* ja kirjoittaminen *onChange*). Muokkaa komponenttia *Friends* - seuraavasti:
+
+```jsx
+return(
+    ...
+    <form>
+        <input onChange={e=>setName(e.target.value)} type="text" value={name}/>
+        <input type="submit">
+    </form>
+    ...
+)
 ```
 
 ### React:in lomakkeen käsittely
 
-Jotta uuden ystävän nimi saadaan talteen taulukkoon, luodaan uusi tilamuuttuja *friends*, jonka alkuarvo on tyhjä taulukko:
+Jotta uuden ystävän nimi saadaan talteen taulukkoon, luodaan uusi tilamuuttuja *friends*, jonka alkuarvo on tyhjä taulukko. Muokkaa komponenttia *Friends* - seuraavasti (lisää edellisen tilamuuttujan alapuolelle):
 
 ```jsx
 const [friends, setFriends] = useState([]); 
 ```
 
-Lisätään *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-nappia painetaan.
+Lisätään *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-nappia painetaan. Muokkaa komponenttia *Friends* - seuraavasti:
 
 ```jsx
 <form onSubmit={e=>submitHandler(e, name)} />
@@ -122,7 +150,7 @@ Lisätään *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-n
 
 *submitHandler*:ia kutsutaan, kun lomake lähetetään *submit*-buttonilla. Ensimmäiseksi on estettävä PHP-tyylinen lomakkeen käsittelyn *e.preventDefault()*:in avulla. Sitten lisätään uusi ystävä listään *concat*:in avulla.
 
-Huom! vaikka *friends* on taulukko, älä käytä *push*-metodia, koska se muuttaa taulukkoa suoraan, käytä *concat*:ia (*unmutable*) ja setFriends-funktiota.
+Huom! vaikka *friends* on taulukko, älä käytä *push*-metodia, koska se muuttaa taulukkoa suoraan, käytä *concat*:ia (*unmutable*) ja setFriends-funktiota. Muokkaa komponenttia *Friends* - seuraavasti (lisää tilamuuttujien alapuolelle):
 
 ```jsx
 const submitHandler = (e, name) => {
@@ -131,7 +159,7 @@ const submitHandler = (e, name) => {
 }
 ```
 
-Jotta ystävät saataisiin renderöityä myös ruudulle pitää vielä tehdä siihen oma komponenttinsa:
+Jotta ystävät saataisiin renderöityä myös ruudulle pitää vielä tehdä siihen oma komponenttinsa. Lisää tämä samaan tiedostoon *Friends*-komponentin kanssa:
 
 ```jsx
 const FriendsList = ({friends}) => {
@@ -143,10 +171,14 @@ const FriendsList = ({friends}) => {
 }
 ```
 
-Kutsu uutta komponenttia *Friends*-komponentissa heti lomakkeen jälkeen:
+Kutsu uutta komponenttia *Friends*-komponentissa. Muokkaa komponenttia *Friends* - seuraavasti (lisää heti lomakkeen jälkeen):
 
 ```jsx
+return(
+    ...
     <FriendsList friends={friends}>
+    ...
+)
 ```
 
 ---> [React demo 4](./reactdemo_osa4.html)

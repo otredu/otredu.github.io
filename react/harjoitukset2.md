@@ -4,7 +4,7 @@
 
 Tehtävänä on suunnitella prototyyppi fanikaupalle. Fanikauppa on ReactJS:llä toteutettava Single Page Application. Voit valita kaupan aiheen vapaasti. Kaupassa voidaan myydä esimerkiksi jonkin urheiluseuran tms. tuotteita.
 
-*Huom!* Aloita uusi projekti käyttämällä create_react_app:ia!
+*Huom!* Aloita uusi projekti käyttämällä *vite*-scriptiä!
 
 *Huom!* Käytä vain sellaisia tuotekuvia, joiden käyttöehdot sallivat uudelleen käytön ja julkaisemisen (projekti käynnistetään Herokussa).
 
@@ -58,7 +58,7 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
     npm run build
     ```
 
-    Kopioi build-kansion sisältö github-pages repoosi kansioon "fanikauppa". Tee github-pages sivulle portfolion etusivu (index.html), ja linkkaa fanikauppasi siihen. Esim.
+    Kopioi *dist*-kansion sisältö github-pages repoosi kansioon "fanikauppa". Tee github-pages sivulle portfolion etusivu (index.html), ja linkkaa fanikauppasi siihen. Esim.
 
     ```html
     <!DOCTYPE html>
