@@ -8,16 +8,12 @@
     - [notesdemo2](https://otredu.github.io/docker/notesdemofull.html)
 
 - Pilvipalvelut:
+    - [CSC-tehtävät](./cloud_harjoitukset1.html)
     - [AWS-Azure-tehtävät](./cloud_harjoitukset_azure_aws.html)
 
-- Testausautomaatio: 
-    - [Cypress](tulossa)
+- Robotframework 
+    - [QAutoFlow-selaintestaus, demo](../testaus/rpa_demo.html)
 
 - Tietoturva
-    - [Introduction to cyber security](https://lms.netacad.com/course/view.php?id=2174201)
     - [DevSecLab-kurssi](https://www.devseclab.io/)
-    - [Safebase](https://safebase.io/)
-
-- Tietoverkot
-    - [Networking essentials](https://lms.netacad.com/course/view.php?id=2171961)
     

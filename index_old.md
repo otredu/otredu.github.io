@@ -3,12 +3,14 @@
 
 Näiden sivujen kautta pääset käyttämään joitakin Tredun ohjelmistotuotannon kurssimateriaaleja.
 
-### Materiaalit syksy 2021
+### Kurssit syksy 2022
+- [Systeemityö](./systeemityo/index_2022.html)
+
+### Kurssit syksy 2021
 - [Orientaatio 1](./orientaatio/index_21.html)
 
 ### Kurssit kevät 2021
 - [Johdatus systeemityöhön](./johdatus_systeemityo/index.html)
-- [Systeemityö](./systeemityo/index.html)
 - [Testaaminen ja testiympäristöt](./testaus/index_K2021.html)
 
 ### Kurssit syksy 2020
