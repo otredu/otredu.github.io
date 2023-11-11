@@ -1,15 +1,19 @@
-### Koodin siirtäminen palvelimelle
+### Deployment 
 
-Koodi siirretään (*deploy*) joko koulun webhotelliin, tai Herokuun. Ensin React-frontend:istä tehdään *build*, joka sitten ladataan webserveriltä (backend).
+Web-ohjelma julkaistaan (*deploy*) koulun pilviympäristössä (AWS tai Azure). Teemme ensin docker:in avulla imagen, joka sisältää sekä buildatun React-frontend:in että node/express-backend:in. Image käynnistetään lopuksi koulun pilvipalveluun.  
 
-- [Sovelluksen siirtäminen internettiin](https://fullstackopen.com/osa3/sovellus_internetiin)
+- [Sovelluksen siirtäminen koulun pilviympäristöön](../deployment/aws/notesfull.html)
 
-- [Sovelluksen siirtäminen koulun webhotelliin](../frameworks/deployment.html)
+Web-ohjelman julkaiseminen voidaan tehdä myös käyttämällä PaaS-ratkaisuja (esim. Heroku, Fly.io tai Render). Osa näistä on maksullisia. 
+
+- [Sovelluksen siirtäminen internettiin](https://fullstackopen.com/osa3/sovellus_internetiin#sovellus-internetiin)
 
 ---
 
 Harjoitukset:
 
-1. Siirretään notesdemo koulun webhotelliin
+1. Siirretään notesdemo 2 koulun pilviympäristöön
 
-2. Siirrä fanikauppa (fullstack) koulun webhotelliin
+2. Siirretään fanikauppa 2 koulun pilviympäristöön
+
+3. Siirretään keikkainfo 2 koulun pilviympäristöön
