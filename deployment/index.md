@@ -8,7 +8,7 @@
 
 ### Julkaiseminen CPANEL:issa
 
-- [Node-projekti + MySQL knex-migrations](../frameworks/deployment.md)
+- [Node-projekti + MySQL knex-migrations](../frameworks/deployment_cpanel_with_node.md)
 - [PHP-projekti + MySQL phinx-migrations](../asiointipalveluprojekti/cpanel_php_migrations.html)
 - [PHP-projekti ja MySQL dump](../asiointipalveluprojekti/cpanel.html)
 
