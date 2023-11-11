@@ -9,7 +9,7 @@ Sisältö:
 Materiaali:
 - [Johdanto](../react/johdanto.html)
 - [Reactin alkeet](https://fullstackopen.com/osa1/reactin_alkeet)
-- [JavaScriptiä](https://fullstackopen.com/osa1/javascriptia)
+- [JavaScriptiä](https://fullstackopen.com/osa1/java_scriptia)
 - [Komponentin tila ja tapahtuman käsittely](https://fullstackopen.com/osa1/komponentin_tila_ja_tapahtumankasittely)
 - [Monimutkaisempi tila, debuggaus](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus)
 - [Kokoelmien renderöinti ja moduulit](https://fullstackopen.com/osa2/kokoelmien_renderointi_ja_moduulit)
