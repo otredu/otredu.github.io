@@ -12,6 +12,8 @@
 
 - Testausautomaatio: 
     - [Cypress](https://www.cypress.io/)
+    - [Testing your first application, Cypress](https://learn.cypress.io/testing-your-first-application)
+    - [Testattava sivusto](https://tiipar19notesdemo2v3.node.treok.io/)
     
 - CI/CD:
     - [Github-actions](to be done)
