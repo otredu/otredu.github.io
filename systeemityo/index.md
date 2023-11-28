@@ -11,7 +11,7 @@
     - [AWS-Azure-tehtävät](./cloud_harjoitukset_azure_aws.html)
 
 - Testausautomaatio: 
-    - [Cypress-demo](./testaus/cypress.html)
+    - [Cypress-demo](../testaus/cypress.html)
     - [Cypress](https://www.cypress.io/)
     - [Testing your first application, Cypress](https://learn.cypress.io/testing-your-first-application)
 
