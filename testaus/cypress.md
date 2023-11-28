@@ -20,11 +20,11 @@ Käynnistä Cypress:
 
 Cypress aukeaa, valitse *E2E* testaus (*end-to-end*).
 
-![Cypress start](img/cypress.PNG)
+![Cypress start](img/cypress.png)
 
 Valitse selaimeksi *Chrome* ja paina *Start testing*:
 
-![Cypress selain](img/cypress_selain.PNG)
+![Cypress selain](img/cypress_selain.png)
 
 ### Testien lisääminen
 
