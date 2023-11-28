@@ -11,9 +11,10 @@
     - [AWS-Azure-tehtävät](./cloud_harjoitukset_azure_aws.html)
 
 - Testausautomaatio: 
+    - [Cypress-demo](./testaus/cypress.html)
     - [Cypress](https://www.cypress.io/)
     - [Testing your first application, Cypress](https://learn.cypress.io/testing-your-first-application)
-    - [Testattava sivusto](https://tiipar19notesdemo2v4.node.treok.io/)
+
     
 - CI/CD:
     - [Github-actions](to be done)
