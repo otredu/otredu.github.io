@@ -35,7 +35,7 @@ Ensimmäinen testi avaa nettisivun:
 ```js
 describe('Notesdemo-test-demo', () => {
   it('Visits notesdemo-test-page', () => {
-    cy.visit('https://tiipar19notesdemo2v4.node.treok.io')
+    cy.visit('https://tiipar19notesdemotest.node.treok.io')
   })
 })
 ```
@@ -45,7 +45,7 @@ Koska tätä osoitetta joudutaan kirjoittamaan moneen kertaan. Lisätään se *c
 ```js
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://tiipar19notesdemo2v4.node.treok.io/',
+    baseUrl: 'https://tiipar19notesdemotest.node.treok.io/',
   },
 });
 ```
@@ -119,9 +119,9 @@ Huomaa, että tälle sivustolle on helppo lisätä automaatiota, koska kaikilla 
 
 ### Paremmat testit
 
-Edellä oleva testikoodi käy kyllä läpi joitakin sivuston toimintoja onnistuneesti mutta se ei testaa, että sivusto muuttuu halutulla tavalla. Lisätään paremmat/tarkemmat testit, jotka validoivat myös toiminnon lopputuloksen.
+Edellä oleva testikoodi käy kyllä läpi joitakin sivuston toimintoja onnistuneesti mutta se ei testaa, että sivusto muuttuu halutulla tavalla. Lisätään paremmat/tarkemmat testit, jotka validoivat myös toiminnon lopputuloksen. Jotta tätä voidaan testata luotettavasti, täytyy jokaisen testaajan rekisteröidä oma testikäyttäjä, muuten toisten tekemät lisäykset ja poistot sotkevat testien lopputuloksen. Rekisteröi itsellesi uusi testikäyttäjä ja muuta ko. tiedot *login*-metodiin.
 
-Testitiedostoon voi lisätä toiminnallisuuksia, jotka ajetaan ennen (*beforeEach*) ja jälkeen (*afterEach*) jokaisen yksittäisen testin. Siirretään sivuston avaaminen, kirjautuminen ja uloskirjautuminen näiden sisälle.
+Muutetaan myös testitiedosto rakennetta niin, että testien alussa hoidettavat muodollisuudet kuten sivuston avaaminen ja sisäänkirjautuminen ajetaan ennen (*beforeEach*) kutakin testiä. Tiedostoon loppuun lisätään toiminnallisuudet kuten uloskirjautuminen, jotka ajetaan jokaisen testin jälkeen (*afterEach*). 
 
 ```js
 describe('Notesdemo basic tests', () => {
@@ -138,7 +138,7 @@ describe('Notesdemo basic tests', () => {
 })
 ```
 
-Valmistetaan, että tärkeä muistiinpano saa oikean *class*:in:
+Tämä testi varmistaa, että tärkeä muistiinpano saa oikean *class*:in:
 
 ```js
   it('add new important', () => {
@@ -148,7 +148,7 @@ Valmistetaan, että tärkeä muistiinpano saa oikean *class*:in:
   })
 ```
 
-Varmistetaan, että tavallinen muistiinpano on myös oikeanlainen ruudulla:
+Tämä testi varmistaa, että tavallinen muistiinpano on myös oikeanlainen ruudulla:
 
 ```js
   it('add new basic', () => {
@@ -157,7 +157,7 @@ Varmistetaan, että tavallinen muistiinpano on myös oikeanlainen ruudulla:
   })
 ```
 
-Testataan muistiinpanon tärkeyden muuttaminen:
+Tämä testi testaa muistiinpanon tärkeyden muuttamisen:
 
 ```js
   it('change importance', () => {
@@ -166,7 +166,7 @@ Testataan muistiinpanon tärkeyden muuttaminen:
   })
 ```
 
-Testataan poistaminen (yksikin testi riittäisi mutta haluamme, että sivusto jää testien jälkeen samanlaiseksi kuin ennen testejä):
+Tämä testi testaa muistiinpanon poistamisen (yksikin testi riittäisi mutta haluamme, että sivusto jää testien jälkeen samanlaiseksi kuin ennen testejä):
 
 ```js
   it('delete important', () => {
@@ -183,6 +183,6 @@ Nyt sivuston perustoiminnallisuudet on testattu.
 
 ## Harjoitustehtävät:
 
-1. Testaa rekisteröityminen valideilla tiedoilla sekä puutteellisilla tiedoilla (ei saisi rekisteröityä, jos käyttäjänimi tai salasana on liian lyhyt tai tyhjä). 
+1. Kirjoita testi, jolla testataan rekisteröityminen valideilla tiedoilla sekä puutteellisilla tiedoilla (ei saisi rekisteröityä, eli jos käyttäjänimi tai salasana on liian lyhyt tai tyhjä). Tee tälle uusi testitiedosto eli *spec*. 
 
-2. Testaa rekisteröityminen myös niin ettei kahta samannimistä käyttäjää pysty lisäämään, ja että sivusto ilmoittaa oikean virheviestin.
+2. Testaa rekisteröityminen myös niin ettei kahta samannimistä käyttäjää pysty lisäämään, ja että sivusto ilmoittaa oikean virheviestin. Tämän voi lisätä edellisen kanssa samaan tiedostoon.
