@@ -115,4 +115,74 @@ Viimeisenä kirjaudutaan ulos:
     cy.get('button[id=logout]').click()
 ```
 
-Huomaa, että tätä sivustoa oli helppo testata, koska kaikilla UI-elementeillä oli *id*:t, joten niihin oli helppo viitata.
+Huomaa, että tälle sivustolle on helppo lisätä automaatiota, koska kaikilla UI-elementeillä on *id*:t, joten niihin on helppo viitata. 
+
+### Paremmat testit
+
+Edellä oleva testikoodi käy kyllä läpi joitakin sivuston toimintoja onnistuneesti mutta se ei testaa, että sivusto muuttuu halutulla tavalla. Lisätään paremmat/tarkemmat testit, jotka validoivat myös toiminnon lopputuloksen.
+
+Testitiedostoon voi lisätä toiminnallisuuksia, jotka ajetaan ennen (*beforeEach*) ja jälkeen (*afterEach*) jokaisen yksittäisen testin. Siirretään sivuston avaaminen, kirjautuminen ja uloskirjautuminen näiden sisälle.
+
+```js
+describe('Notesdemo basic tests', () => {
+  beforeEach(() => {
+      cy.visit('/') // defaults to baseURL in config-file
+      cy.login(username, password)
+    })
+
+...
+
+  afterEach(()=> {
+    cy.get('button[id=logout]').click()
+  })
+})
+```
+
+Valmistetaan, että tärkeä muistiinpano saa oikean *class*:in:
+
+```js
+  it('add new important', () => {
+    cy.get('input[id=importance]').click()
+    cy.get('input[id=newnote]').type(`${test_message} important{enter}`)
+    cy.get("p").contains("Cypress testing important").and('have.class', 'important')
+  })
+```
+
+Varmistetaan, että tavallinen muistiinpano on myös oikeanlainen ruudulla:
+
+```js
+  it('add new basic', () => {
+    cy.get('input[id=newnote]').type(`${test_message} normal{enter}`)
+    cy.get("p").contains("Cypress testing normal").and('have.class', 'basic')
+  })
+```
+
+Testataan muistiinpanon tärkeyden muuttaminen:
+
+```js
+  it('change importance', () => {
+    cy.get("p").contains("Cypress testing important").click()
+    cy.get("p").contains("Cypress testing important").and('have.class', 'basic')
+  })
+```
+
+Testataan poistaminen (yksikin testi riittäisi mutta haluamme, että sivusto jää testien jälkeen samanlaiseksi kuin ennen testejä):
+
+```js
+  it('delete important', () => {
+    cy.get("p").contains("Cypress testing important").and('have.class', 'basic').find('button').click()
+    cy.get("p").contains("Cypress testing important").should('not.exist')
+  })
+  it('delete normal', () => {
+    cy.get("p").contains("Cypress testing normal").and('have.class', 'basic').find('button').click()
+    cy.get("p").contains("Cypress testing normal").should('not.exist')
+  })
+```
+
+Nyt sivuston perustoiminnallisuudet on testattu. 
+
+## Harjoitustehtävät:
+
+1. Testaa rekisteröityminen valideilla tiedoilla sekä puutteellisilla tiedoilla (ei saisi rekisteröityä, jos käyttäjänimi tai salasana on liian lyhyt tai tyhjä). 
+
+2. Testaa rekisteröityminen myös niin ettei kahta samannimistä käyttäjää pysty lisäämään, ja että sivusto ilmoittaa oikean virheviestin.
