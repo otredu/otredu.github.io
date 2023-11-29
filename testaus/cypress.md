@@ -1,6 +1,6 @@
 ## Cypress - testaustyökalu
 
-*Cypress* on JavaScript-pohjainen testaustyökalu, jonka avulla voidaan testata web-applikaatioita (E2E) sekä backend-toiminnallisuuksia (REST API). Tässä demossa käytetään E2E 
+*Cypress* on JavaScript-pohjainen testaustyökalu, jonka avulla voidaan testata web-applikaatioita (E2E) sekä frontend-toiminnallisuuksia (*Component testing*). Tässä demossa tehdään E2E-testausta (frontend+backend). 
 
 ### Cypress:in asennus
 
