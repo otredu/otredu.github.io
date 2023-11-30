@@ -5,7 +5,7 @@ Kun testataan tietokannan kanssa, olisi aina ennen testejä oltava varma siitä,
 Kopioidaan *seeds*-kansio test-kansion sisään. Kopioidaan myös *.env*-tiedosto test-kansioon. Asennetaan test-kansiossa tarvittavat kirjastot:
 
 ```cmd
-npm i mysql2 dotenv bcryptjs --save-dev
+npm i knex mysql2 dotenv bcryptjs --save-dev
 ```
 
 Tehdään test-kansion juureen tiedosto *notesdemoseeds.js*, joka sisältää koodin jolla seed:it voidaan ajaa tietokantaan:
@@ -32,6 +32,8 @@ const seedNotesDB = async () => {
 module.exports = seedNotesDB;
 ```
 
+### Cypress - ohjeet:
+
 Lisätään *cypress.config.js* tiedostoon uusi NodeEvent *task*:
 
 ```js
@@ -56,4 +58,24 @@ Lopuksi lisätään *beforeEach*-osioon:
 cy.task('defaults:db') //seeds the database
 ```
 
+### Jest-ohjeet:
+
+Lisätään testitiedoston alkuun:
+
+```js
+const seedNotesDB = require('./notesdemoseeds.js')
+```
+
+Sekä *beforeAll*:n sisälle:
+
+```js
+await seedNotesDB();  //seeding
+```
+
+---
+
 Nyt jokainen testi lähtee tilanteesta, jossa tietokannan sisältö on tunnettu.
+
+*Huom!* Tässä viimeisessä voi olla jotain pielessä:
+
+*A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.*
