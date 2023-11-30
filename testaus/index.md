@@ -7,6 +7,7 @@
 ### Yksikkötestaus
 
 - [JS testausta JEST:illä](./yksikkotestaus.html)
+- [REST API testaus JEST:illä](./jestforrestapi.html)
 
 ### Systeemitestaus
 

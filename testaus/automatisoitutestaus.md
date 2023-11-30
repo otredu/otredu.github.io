@@ -9,6 +9,8 @@
 - [Selenium IDE](./seleniumide.html)
 - [Headless browser ja JUnit](./headlessbrowser.html)
 
-### QAutoFlow selaintestaus (RPA)
+### Cypress selaintestaus (JavaScript)
 
-- [QAutoFlow-demo](rpa_demo.md)
+- [Cypress-demo](../testaus/cypress.html)
+- [Cypress](https://www.cypress.io/)
+- [Testing your first application, Cypress](https://learn.cypress.io/testing-your-first-application)

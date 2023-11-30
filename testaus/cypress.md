@@ -181,8 +181,16 @@ Tämä testi testaa muistiinpanon poistamisen (yksikin testi riittäisi mutta ha
 
 Nyt sivuston perustoiminnallisuudet on testattu. 
 
+---
+
 ## Harjoitustehtävät:
 
 1. Kirjoita testi, jolla testataan rekisteröityminen valideilla tiedoilla sekä puutteellisilla tiedoilla (ei saisi rekisteröityä, eli jos käyttäjänimi tai salasana on liian lyhyt tai tyhjä). Tee tälle uusi testitiedosto eli *spec*. 
 
 2. Testaa rekisteröityminen myös niin ettei kahta samannimistä käyttäjää pysty lisäämään, ja että sivusto ilmoittaa oikean virheviestin. Tämän voi lisätä edellisen kanssa samaan tiedostoon.
+
+---
+Linkkejä:
+
+- [Cypress](https://www.cypress.io/)
+- [Testing your first application, Cypress](https://learn.cypress.io/testing-your-first-application)

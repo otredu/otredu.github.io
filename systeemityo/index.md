@@ -11,11 +11,9 @@
     - [AWS-Azure-tehtävät](./cloud_harjoitukset_azure_aws.html)
 
 - Testausautomaatio: 
-    - [Cypress-demo](../testaus/cypress.html)
-    - [Cypress](https://www.cypress.io/)
-    - [Testing your first application, Cypress](https://learn.cypress.io/testing-your-first-application)
+    - [E2E-testaus: Cypress](../testaus/cypress.html)
+    - [Backend-testaus: Jest & superttest](../testaus/jestforrestapi.html)
 
-    
 - CI/CD:
     - [Github-actions](to be done)
 
