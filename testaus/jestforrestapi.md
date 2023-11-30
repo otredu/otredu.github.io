@@ -144,7 +144,12 @@ Lisätään *authorize*-header + token jokaiseen kutsuun (viimeiseksi):
 
 Nyt kaiken pitäisi toimia myös kirjauneena.
 
+---
 
+Harjoitustehtäviä:
 
+1. Lisää testeihin tarkistuksia, niin että ei tarkisteta pelkkä HTTP-paluuarvo vaan myös saatu json-datan sisältö/tietokannan sisältö operaation jälkeen.
 
+2. Lisää testit kirjautumiselle: oikeat kirjautumistiedot (kirjautuminen onnistuu) sekä väärät kirjautumistiedot (kirjautuminen ei pitäisi onnistua).
 
+3. Tutustu siihen miten jest:in avulla ajetaan [*seed*:it tietokantaan](./cypress_seeds.md) ennen testejen tekemistä. Muuta ylläolevat testit toimimaan niin, että ennen testejä ajetaan seedit.
