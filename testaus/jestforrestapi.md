@@ -117,7 +117,7 @@ Kaikki testit menivät läpi!
 
 ![restapi ensimmäinen testi](./img/restapijest3.png)
 
-### Testaus kijautumisen kanssa
+### Testaus kirjautumisen kanssa
 
 Jotta voimme testata toimintoja kirjautuneena, meidän pitää kirjautua ennen testejä ja tallentaa *authtoken* käytettäväksi *authorize*-headerissä.
 
