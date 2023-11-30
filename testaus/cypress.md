@@ -189,6 +189,8 @@ Nyt sivuston perustoiminnallisuudet on testattu.
 
 2. Testaa rekisteröityminen myös niin ettei kahta samannimistä käyttäjää pysty lisäämään, ja että sivusto ilmoittaa oikean virheviestin. Tämän voi lisätä edellisen kanssa samaan tiedostoon.
 
+3. Tutustu siihen miten Cypress:in avulla ajetaan [*seed*:it tietokantaan](./cypress_seeds.md) ennen testejen tekemistä. Muuta ylläolevat testit toimimaan niin, että ennen testejä ajetaan seedit.
+
 ---
 Linkkejä:
 
