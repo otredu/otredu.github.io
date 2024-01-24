@@ -3,6 +3,9 @@
 
 ### Sisältö
 
+- Käytettävyys ja käytettävyystestaus
+    - [materiaali](./kaytettavyys.html)
+
 - Docker-kontit (docker build, docker-compose, docker hub):
     - [notesdemo1](https://otredu.github.io/docker/notesdemo.html)
     - [notesdemo2](https://otredu.github.io/docker/notesdemofull.html)
