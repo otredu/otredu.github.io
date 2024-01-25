@@ -14,7 +14,7 @@ const submitHandler = (e, friend) => {
 Muutetaan listan renderöinti käyttämään olioita ja näyttämään pisteet. Muokkaa komponenttia *FriendsList* - seuraavasti: 
 
 ```jsx
-    {friends.map((f,i) => <li key={i}>nimi: {f.name} pisteet: {f.points}</li>)}
+    {friends.map((f) => <li key={f.id}>nimi: {f.name} pisteet: {f.points}</li>)}
 ```
 
 Tehdään pisteiden lisäys - nappi, jokaiselle ystävälle (edellisen kohdan li-elementtien sisälle):
