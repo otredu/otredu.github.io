@@ -39,7 +39,7 @@ Kutsu komponenttia näin (muista tehdä ensin *import*):
 
 React:issa *return*:n sisällä ei voi käyttää *foreach*, *for* tai *while* - silmukkarakenteita, joska ne eivät palauta mitään. Siksi reaktissa käytetään *map*-rakennetta, joka käy automaattisesti läpi annetun taulukon (*array*), tekee sille parametrina annetun funktion toiminnat jokaiselle taulukon alkoille ja palauttaa uuden taulukon.
 
-Tee *App.jsx* tiedoston alukuun taulukko, jossa on muutama kurssiolio:
+Tee *App.jsx* tiedoston alukuun taulukko, jossa on muutama kurssiolio (tee myös course2 ja course3, katso mallia yllä):
 
 ```jsx
 const courses =  [course1, course2, course3];

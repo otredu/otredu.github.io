@@ -128,7 +128,7 @@ return(
     ...
     <form>
         <input onChange={e=>setName(e.target.value)} type="text" value={name}/>
-        <input type="submit">
+        <input type="submit" />
     </form>
     ...
 )
@@ -145,7 +145,7 @@ const [friends, setFriends] = useState([]);
 Lisätään *onSubmit*-eventille callback-funktio, jota kutsutaan kun *submit*-nappia painetaan. Muokkaa komponenttia *Friends* - seuraavasti:
 
 ```jsx
-<form onSubmit={e=>submitHandler(e, name)} />
+<form onSubmit={e=>submitHandler(e, name)}>
 ```
 
 *submitHandler*:ia kutsutaan, kun lomake lähetetään *submit*-buttonilla. Ensimmäiseksi on estettävä PHP-tyylinen lomakkeen käsittelyn *e.preventDefault()*:in avulla. Sitten lisätään uusi ystävä listään *concat*:in avulla.
@@ -176,7 +176,7 @@ Kutsu uutta komponenttia *Friends*-komponentissa. Muokkaa komponenttia *Friends*
 ```jsx
 return(
     ...
-    <FriendsList friends={friends}>
+    <FriendsList friends={friends}/>
     ...
 )
 ```

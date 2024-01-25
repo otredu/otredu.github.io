@@ -82,7 +82,7 @@ const App = () => {
 
 Kaikki koodi React:issa sijaitsee jossakin komponentissa. Jotta pääkomponentti ei "räjähdä" (tule liian isoksi), uudet toiminnallisuudet kannattaa sijoittaa omiin komponentteihinsa omiin tiedostoihinsa. Komponentit otetaan käyttöön (*import*) pääkomponentissa *App*.
 
-Tee uusi komponentti *CourseInfo* kansioon *components* (CourseInfo.js), joka tulostaa kurssitiedot.
+Tee uusi kansio *components* kansion *src*:n juureen. Tee sen sisälle uusi komponentti *CourseInfo* (CourseInfo.jsx), joka tulostaa kurssitiedot.
 
 ```jsx
 const CourseInfo = () => {
@@ -107,12 +107,12 @@ Tuo komponentti *App*:iin (*import*) ja kutsu sitä *App*:n *return*:in sisält�
 HUOM! Et voi käyttää *import*:ia ellei komponetin tiedostossa ole sitä vastaavaa *export*:ia (*export default*:ia käytetään kun halutaan exportata vain yksi komponetti).
 
 ```jsx
-import CourseInfo from './components/CourseInfo.jsx';
-```
+import CourseInfo from './components/CourseInfo';
 
 const App = () => {
 
   return (
+    <>
     <div className="App">
       <header className="App-header">
       <h1>React alkeet demoja</h1>
@@ -121,6 +121,7 @@ const App = () => {
     <div>
        <CourseInfo />
     </div>
+    </>
   )
 }
 
