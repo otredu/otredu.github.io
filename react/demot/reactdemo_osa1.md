@@ -66,14 +66,16 @@ const App = () => {
   const name = "Tiina";
   const age = 49;
   return (
-    <div className="App">
-      <header className="App-header">
-      <h1>React alkeet demoja</h1>
-      </header>
-    </div>
-    <div>
-        Hei, olen {name} ja olen {age}-vuotta.
-    </div>
+    <>
+      <div className="App">
+        <header className="App-header">
+        <h1>React alkeet demoja</h1>
+        </header>
+      </div>
+      <div>
+          Hei, olen {name} ja olen {age}-vuotta.
+      </div>
+    </>
   )
 }
 ```
@@ -82,7 +84,7 @@ const App = () => {
 
 Kaikki koodi React:issa sijaitsee jossakin komponentissa. Jotta pääkomponentti ei "räjähdä" (tule liian isoksi), uudet toiminnallisuudet kannattaa sijoittaa omiin komponentteihinsa omiin tiedostoihinsa. Komponentit otetaan käyttöön (*import*) pääkomponentissa *App*.
 
-Tee uusi kansio *components* kansion *src*:n juureen. Tee sen sisälle uusi komponentti *CourseInfo* (CourseInfo.jsx), joka tulostaa kurssitiedot.
+Tee uusi kansio *components*, kansion *src*:n juureen. Tee sen sisälle uusi komponentti *CourseInfo* (CourseInfo.jsx), joka tulostaa kurssitiedot.
 
 ```jsx
 const CourseInfo = () => {
@@ -129,7 +131,7 @@ const App = () => {
 
 ### React-props:it
 
-Nyt tehty komponetti ei ole kovin hyödyllinen, se tulostaa aina samat tiedot. Muutetaan sitä niin, että se ottaa sisäänsä parametreja eli React-kielellä *props*:eja. Tiedot välitetään komponentille *App*:issa. *Props*-koostuu sen nimestä esim. *teacher* ja arvosta joka sijoitetaan siihen *"Tiina Partanen"*.
+Nyt tehty komponetti ei ole kovin hyödyllinen, se tulostaa aina samat tiedot. Muutetaan sitä niin, että se ottaa sisäänsä parametreja eli React-kielellä *props*:eja. Tiedot välitetään komponentille *App*:issa. *Props*-koostuu sen nimestä esim. *teacher* ja arvosta joka sijoitetaan siihen *"Tiina Partanen"*. Muuta yllä tehty *CourseInfo* tällaiseksi (*teacher*, *course*, *classroom* ja *material* ovat *props*:ien nimiä)
 
 ```jsx
   <CourseInfo teacher = "Tiina Partanen"
@@ -138,7 +140,7 @@ Nyt tehty komponetti ei ole kovin hyödyllinen, se tulostaa aina samat tiedot. M
               material = "http://otredu.github.io" />
 ```
 
-Komponettia muutetaan niin, että se saa tarvitsemansa tiedot propseina:
+Komponettia CourseInfo (tiedostossa CourseInfo.jsx) muutetaan niin, että se saa tarvitsemansa tiedot propseina *props*:
 
 ```jsx
 const CourseInfo = (props) => {

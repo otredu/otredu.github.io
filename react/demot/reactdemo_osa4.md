@@ -20,7 +20,7 @@ Muutetaan listan renderöinti käyttämään olioita ja näyttämään pisteet. 
 Tehdään pisteiden lisäys - nappi, jokaiselle ystävälle (edellisen kohdan li-elementtien sisälle):
 
 ```jsx
-    <button onClick={e=>addPoint(id)}>lisää piste</button>
+    <button onClick={e=>addPoint(f.id)}>lisää piste</button>
 ```
 
 ### Olion kopiointi spread-operaattorin ... avulla
