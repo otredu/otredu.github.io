@@ -46,10 +46,10 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
 
     Tee itsellesi github-pages repository (tavallinen public repo, jonka nimi on <githubtunnus>.github.io>). 
     
-    Lisää fanikaupan package.json tiedostoon seuraava rivi:
+    Lisää fanikaupan *vite.config.js* tiedostoon seuraava rivi (jotta sivu osaa ladata *.js* sekä *.css* tiedostot oikeasta paikasta):
 
     ```js
-    "homepage": "https://<githubtunnus>.github.io/fanikauppa",
+        base: '/dist/',
     ```
     
     Tee fanikaupasta build:
@@ -71,7 +71,7 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
     </html>
     ```
 
-    Palauta linkki live-versioon reposi *read.me* - kentässä.
+    Palauta linkki live-versioon reposi *read.me* - kentässä sekä Teams:illa.
 
 ### Edistyneet toiminnot (lisätehtävät)
 
