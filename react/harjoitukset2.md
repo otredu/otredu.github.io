@@ -40,7 +40,7 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
 
     Käyttäjä voi painaa nappia "Vahvista tilaus". Käyttäjältä pyydetään tällöin yhteystiedot tilauksen lähettämistä varten. Vaaditut tiedot ovat nimi, sähköpostiosoite, puhelinnumero sekä osoite, johon paketti toimitetaan (katuosoite, postinumero, postitoimipaikka).
 
-    Mikäli kaikki tiedot on syötetty käyttäjälle näytetään yhteenveto ostostapahtumasta (listataan tilatut tuotteet, lopullinen hinta sekä osoite, johon patetti toimitetaan) ja kiitetään tilauksesta. Lopuksi kaikki henkilön sekä ostoskorin tiedot tyhjennetään.
+    Mikäli kaikki tiedot on syötetty käyttäjälle näytetään yhteenveto ostostapahtumasta (listataan tilatut tuotteet, lopullinen hinta sekä osoite, johon paketti toimitetaan) ja kiitetään tilauksesta. Lopuksi kaikki henkilön sekä ostoskorin tiedot tyhjennetään.
 
 5. Projektin siirtäminen portfolioon
 
@@ -49,7 +49,7 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
     Lisää fanikaupan *vite.config.js* tiedostoon seuraava rivi (jotta sivu osaa ladata *.js* sekä *.css* tiedostot oikeasta paikasta):
 
     ```js
-        base: '/dist/',
+        base: '/fanikauppa/',
     ```
     
     Tee fanikaupasta build:
