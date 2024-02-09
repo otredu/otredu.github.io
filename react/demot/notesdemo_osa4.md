@@ -333,13 +333,20 @@ Tämä johtuu siitä, että frontend (http://localhost:3000) ja backend (http://
 Muuta react-frontend:in serviceURI:ksi:
 
 ```js
-const serviceURI = '/notes';
+const baseURL = '/notes';
 ```
 
-ja lisää front:in package.json:iin:
+ja lisää front:in *vite.congig.js*:ään:
 
-```json
-  "proxy": "http://localhost:3001",
+```js
+server: {
+    proxy: {
+      '/notes': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+      }
+    }
+    }
 ```
 
 Nyt yhteys front:in ja back:in välillä toimii. Palaamme CORS:iin vielä myöhemmin.
