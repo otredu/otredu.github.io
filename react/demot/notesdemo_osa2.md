@@ -24,7 +24,7 @@ Lähetä axioksen avulla backend:ille uusi, aluksi kovakoodattu, muistiinpano (*
   }
 ```
 
-Lisää tämä *App.js*:n return:in sisälle:
+Lisää tämä *App.jsx*:n return:in sisälle:
 
 ```jsx
 <button onClick={addNote}>Lisää kovakoodattu muistiinpano</button>
@@ -67,7 +67,7 @@ const NotesForm = ({submitHandler}) => {
 export default NotesForm;
 ```
 
-Ota komponentti käyttöön *App.js*:ssä ja välitä sille *addNote*-funktio, joka toimii *submitHandler*:nä:
+Ota komponentti käyttöön *App.jsx*:ssä ja välitä sille *addNote*-funktio, joka toimii *submitHandler*:nä:
 
 ```jsx
    <NotesForm submitHandler={addNote}/>
@@ -148,12 +148,6 @@ Mitään ei taaskaan näy ruudulla, vaikka pyyntö menee backend:ille. Lisää (
 ### Lisätehtävä 1
 
 Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
-
-### Lisätehtävä 2
-
-Siirrä *axios*:seen liittyvät kutsut omaan tiedostoonsa (koodi [täällä](../axios-service.html)). Ota em. service käyttöön *App.js*:ssä. Koodissa käytetään asynkronisiin kutsuihin *async/await* - rakennetta. Se vastaa täysin *then*-rakennetta.
-
-[Ohjeet axios:en käyttöön löytyvät täältä (Axios ja promiset):](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen)
 
 ---
 

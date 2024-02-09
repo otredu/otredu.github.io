@@ -38,7 +38,7 @@ Tee komponentti, jonka avulla voi lisätä uuden keikan tiedot. Tallenna tiedot 
 
 ### Tehtävä 4
 
-Ota käyttöön [React-router](https://www.w3schools.com/react/react_router.asp).
+Ota käyttöön [React-router](https://www.w3schools.com/react/react_router.asp). Hyvä react-router-tutoriaali löytyy [täältä](https://reactrouter.com/en/main/start/tutorial).
 
 Sijoita keikkojen katseluun liittyvät toiminnot omaan komponenttiinsa esim. *<Home />* ja keikkojen lisääminen omaan komponenttinsa esim. *<AddGig />*.
 

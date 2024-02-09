@@ -4,7 +4,7 @@
 
 Kun *frontend* keskustelee *backend*:in kanssa, jotain voi mennä vikaan. Siksi on hyvä ilmoittaa siitä käyttäjälle dynaamisella viestillä, joka poistuu ruudulta tilanteen jälkeen.
 
-Tehdään *App.js*:aan uusi tilamuuttuja *message* viesteille:
+Tehdään *App.jsx*:aan uusi tilamuuttuja *message* viesteille:
 
 ```jsx
  const [message, setMessage] = useState("");

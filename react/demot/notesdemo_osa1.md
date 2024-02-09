@@ -76,25 +76,27 @@ Harjoitus: tee REST-testi, joka pyytää vain yhden tietyn muistiinpanon id:n av
 Lisätietoa [REST-rajapinnasta](../../tietokannat/rest-json.html)
 ### Tehtävä 1: tietojen hakeminen backendiltä
 
-Tee uusi React-sovellus ajamalla create-react-app:
+Tee uusi React-sovellus ajamalla *vite-script*:
 
 ```cmd
 > cd c:/users/oma.nimi/documents/react/
-> npx create-react-app notesfront
+> mkdir notesdemo
+> cd notesdemo
+> npm create vite@latest notesfront -- --template react
 > cd notesfront
-> npm start
+> npm i
+> npm run dev
 ```
 
 Asenna *axios*-kirjasto ja hae sen avulla *notes*-tiedot notes-backendiltä. Tulosta muistiinpanot consolille.
 
 ```cmd
-> cd notesfront
 > npm install axios --save
 ```
 
 Lisää app.js tiedostoon:
 
-```js
+```jsx
 import axios from 'axios'
 
 const App = () => {

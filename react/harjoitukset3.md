@@ -90,6 +90,3 @@ Julkaise ohjelmasi Dockerin avulla Herokussa (ks. [ohjeet](../docker/notesdemo.h
 
 Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
 
-### Lisätehtävä 2
-
-Seuraa näitä [ohjeita](https://www.npmjs.com/package/json-server-auth), ja toteuta rekisteröinti sekä kirjautuminen.

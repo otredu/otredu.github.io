@@ -28,3 +28,14 @@
 - Tietoverkot
     - [Networking essentials](https://lms.netacad.com/course/view.php?id=2171961)
     
+- Microsoft Azure Fundamentals
+    - [Kirjaudu MS Learn alustalle koulun @edu.tampere.fi tunnuksille ja valitse kurssi](https://learn.microsoft.com/en-us/training/student-hub/)    
+
+---
+<!-- MS Sertifikaatit:
+    - Tarkista onko mahdollista sertifioitua kyberturvallisuuden osalta 
+
+Tarkista mitä on: Azure Dev Tools for Teaching 
+Azure for student
+Azure for student starter (pienempi)-->
+
