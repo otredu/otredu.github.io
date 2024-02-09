@@ -24,7 +24,7 @@ Lähetä axioksen avulla backend:ille uusi, aluksi kovakoodattu, muistiinpano (*
   }
 ```
 
-Lisää tämä *App.js*:n return:in sisälle:
+Lisää tämä *App.jsx*:n return:in sisälle:
 
 ```jsx
 <button onClick={addNote}>Lisää kovakoodattu muistiinpano</button>
@@ -67,7 +67,7 @@ const NotesForm = ({submitHandler}) => {
 export default NotesForm;
 ```
 
-Ota komponentti käyttöön *App.js*:ssä ja välitä sille *addNote*-funktio, joka toimii *submitHandler*:nä:
+Ota komponentti käyttöön *App.jsx*:ssä ja välitä sille *addNote*-funktio, joka toimii *submitHandler*:nä:
 
 ```jsx
    <NotesForm submitHandler={addNote}/>
