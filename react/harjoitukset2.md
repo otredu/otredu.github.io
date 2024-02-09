@@ -73,6 +73,12 @@ Kannattaa tutustua taulukko- ja oliomuotoistaen tilamuuttujien käsittelyyn enne
 
     Palauta linkki live-versioon reposi *read.me* - kentässä sekä Teams:illa.
 
+    *Huom* Jos käytät *react-router*:ia, lisää myös *BrowserRouter*:iin *basename*:ksi "fanikauppa", muuten routing ei toimi oikein:
+
+    ```js
+        <BrowserRouter basename='/fanikauppa'>  
+    ```
+
 ### Edistyneet toiminnot (lisätehtävät)
 
 6. Alennus
