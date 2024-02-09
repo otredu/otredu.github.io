@@ -67,12 +67,10 @@ npx json-server --port=3001 --watch db.json
 
 ### Postman
 
-*REST*-rajapinnan testaaminen vaatii *REST*-client:in. Yksi sellainen on *Postman*. Asenna [*postman*-plugin](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=sv) selaimeen ja testaa fanikaupan API:a sen avulla.
+*REST*-rajapinnan testaaminen vaatii *REST*-client:in. Yksi sellainen on *Postman*. Asenna [*postman*](https://www.postman.com/downloads/) ja testaa fanikaupan API:a sen avulla.
 
 Postman:ia voi käyttää ilman tilin luomista mutta tilin avulla voidaan tallentaa API-kutsut, annetut parametrit sekä esimerkit palautuneesta datasta. Tätä voi käyttää eräänlaisena API-dokumentaationa projektityöskentelyssä.
 
 Jotta voit tallentaa *HTTP*-kutsut luo ensin *collection*. Tee kutsut ja paina *save response* ja *save as example*. Lopuksi valitse *share collection* ja *collection link*.
-
-[Linkki Postman-esimerkkeihin (vaatii Postman-pluginin)](https://www.getpostman.com/collections/15b27d53639e826c731e)
 
 ![Post order](./img/post_order.PNG)
