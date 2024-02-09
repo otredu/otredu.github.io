@@ -149,12 +149,6 @@ Mitään ei taaskaan näy ruudulla, vaikka pyyntö menee backend:ille. Lisää (
 
 Tee *dropdown*-valikko, jonka avulla filteröit ruudulle näkyviin vain tärkeät muistiinpanot.
 
-### Lisätehtävä 2
-
-Siirrä *axios*:seen liittyvät kutsut omaan tiedostoonsa (koodi [täällä](../axios-service.html)). Ota em. service käyttöön *App.js*:ssä. Koodissa käytetään asynkronisiin kutsuihin *async/await* - rakennetta. Se vastaa täysin *then*-rakennetta.
-
-[Ohjeet axios:en käyttöön löytyvät täältä (Axios ja promiset):](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen)
-
 ---
 
 ---> [Notesdemo, osa 3](./notesdemo_osa3.html)
