@@ -15,4 +15,4 @@
 ---
 Materiaalit:
 
-- [HY kurssimateriaali](../fullstack/index.html)
+- [HY kurssimateriaali](https://fullstackopen.com/)

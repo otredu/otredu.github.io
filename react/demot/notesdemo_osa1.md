@@ -6,12 +6,7 @@ Tässä harjoituksessa harjoitellaan tiedon hakemista palvelimelta (backend) sek
 
 Tee uusi kansio notesdemo. Tee siihen *db.json*-tiedosto, kopioi sinne tämä [json-muotoinen *notes*-tieto:](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen).
 
-Asenna ja käynnistä json-serveri kansioon notesback.
-
-```cmd
-> cd c:/users/oma.nimi/documents/react/notesdemo/notesback
-> npx json-server --port=3001 --watch db.json
-```
+Asenna ja käynnistä json-serveri kansioon notesback (katso [asennusohjeet](./json-server.html))
 
 Avaa selaimella osoite: http://localhost:3001/notes.
 
