@@ -330,7 +330,7 @@ Notes-frontend ei tunnu saavan muistiinpanoja backendiltä vaan konsolille tulos
 
 Tämä johtuu siitä, että frontend (http://localhost:3000) ja backend (http://localhost:3001) pyrivät eri osoitteissa ja tietoturvasyistä selain estään niiden keskustelun keskenään. CORS-tulee sanoista Cross-Origin-Resource Sharing. Tämän ongelman voimme ratkaista käyttämällä proxy:ä, jolloin selaimen kannalta frontend ja backend ovat samassa osoitteessa.
 
-Muuta react-frontend:in serviceURI:ksi:
+Muuta react-frontend:in baseURI:ksi:
 
 ```js
 const baseURL = '/notes';

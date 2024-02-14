@@ -115,9 +115,9 @@ Aina kun halutaan rajata jokin toiminto vain kirjautuneelle käyttäjälle, tark
     }
 ```
 
-Tämän koodin avulla voidaan esim. estää kirjautumatonta käyttäjää saamasta muistiinpanoja. Lisää ylläoleva koodi backendiin ja testaa, että se toimii (lähetä REST-clientillä pyyntö, jossa ei ole *authtoken*:ia ja jossa on validi *authtoken*).
+Tämän koodin avulla voidaan esim. estää kirjautumatonta käyttäjää saamasta muistiinpanoja. Lisää ylläoleva koodi backendiin (*app.get*-funtion sisään) ja testaa, että se toimii (lähetä REST-clientillä pyyntö, jossa ei ole *authtoken*:ia ja jossa on validi *authtoken*).
 
-Testipyynnön rakenne *authorization*-headerin kanssa on (*huom* tämä token ei toimi, vaihda siihen omasi):
+Testipyynnön rakenne *authorization*-headerin kanssa on (huom! vaihda alla olevaan viestiin login:issa saamasi token): 
 
 ```http
 GET http://localhost:3001/notes HTTP/1.1

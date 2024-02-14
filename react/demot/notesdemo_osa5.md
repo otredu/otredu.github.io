@@ -53,6 +53,8 @@ content-type: application/json
 }
 ```
 
+*Huom!* Jos tietokantasi *users*-taulussa ei vielä ole *email*-kenttää, lisää se sinne (ks. [migrations](https://otredu.github.io/tietokannat/migrations.html) )
+
 ### Kirjautuminen (backend)
 
 Kirjautumisen yhteydessä ensin etsitään löytyykö käyttäjä tietokannasta ja täsmääkö annettu salasana tietokannassa olevan *hash*:ätyn salasanan kanssa. Tähän käytetään samaa bcryptjs-kirjastoa kuin *hash*:in tekemiseenkin. Myös vertaaminen on hidasta, joten kutsu on asynkroninen.
@@ -77,7 +79,7 @@ Lisää *.env*:iin uusi ympäristömuuttuja:
 SECRET=tosisalainensalasanainen
 ```
 
-Lisää se myös *config.js*-tiedostoon:
+Lisää se myös *config.js*-tiedostoon (muista lisätä myös *module.exports*:iin):
 
 ```js
 let SECRET = process.env.SECRET
