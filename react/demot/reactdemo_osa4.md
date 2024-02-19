@@ -67,7 +67,7 @@ const FriendsList = ({friends, addPoint}) => {
 *map-reduce*-rakenteen avulla voidaan esim. poimia kaikkien ystävien pisteet taulukkoon (*points*) ja sitten laskea ne yhteen. *reduce* palauttaa aina yhden arvon, *map* palauttaa aina uuden taulukon.
 
 ```jsx
-const poinsts = friends.map(f => f.points)
+const points = friends.map(f => f.points)
 const totalPoints = points.reduce((a, b) => a + b, 0)
 ```
 
