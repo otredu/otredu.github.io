@@ -9,6 +9,7 @@
     -  [Digipalvelulaki](https://www.saavutettavuusvaatimukset.fi/digipalvelulain-vaatimukset/)
     -  [WCAG-kriteerit](https://www.saavutettavuusvaatimukset.fi/digipalvelulain-vaatimukset/tietoa-wcag-kriteereista/)
     - [WCAG 2.1: lain vaatimukset A- ja AA-tason kriteerit](https://www.saavutettavuusvaatimukset.fi/digipalvelulain-vaatimukset/wcag-2-1/)
+    - [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 
 - Screen reader - ohjelma (vaatii asennusoikeudet)
     - [NVDA](https://www.nvaccess.org/download/)
@@ -41,7 +42,7 @@ Harjoitukset:
         ![axedevtools/scanall](./img/axedevtools2.png)
 
         ![axedevtools/totalissues](./img/axedevtools3.png)
-        
+
         ![axedevtools/details](./img/axedevtools4.png)
 
     - Kirjaa ThingLink:iin myös nämä havainnot tagien taakse (10 kriittisintä havaintoa eri sivuilta ja miten ne korjattaisiin). 
