@@ -22,7 +22,9 @@ Harjoitukset:
 
     - Tehkää yhteenveto havainnoista, positiivisista sekä negatiivisista käyttämällä [ThingLink](https://www.thinglink.com/):iä.
         1. Kirjaudu valitsemalla Microsoft-kirjautuminen (käytä koulun *edu.tampere.fi*-tunnuksia). 
+
         ![mskirjautuminen](./img/thinglink.png)
+
         2. Ottakaa tutkitusta sivusta ruudunkaappauskuva (*snip*-toolilla), tuokaa se ThingLink:iin ja liittäkää ongelmalliseen kohtaa uusi *tagi*. Kerro tagi-tekstissä havaitsemastasi ongelmasta ja mihin Nielsenin sääntöön se liittyy (jotain jokaisesta 10 Nielsenin säännöstä).
         3. Kootkaa havainnot yhteen linkkaamalla erilliset ThingLink-sivut yhteen. Palauttakaa opettajalle linkki työn etusivulle.
 
@@ -33,9 +35,13 @@ Harjoitukset:
     - Avaa testattava sivu, avaa Chromen *Developer tools* (*Ctrl-Shift-i*), valitse *axeDevTools*
 
         ![axedevtoolls](./img/axedevtools.png)
+
     - Käynnistä *Scan ALL of my page* ja tutki mitä ongelmia sivustolla on saavutettavuuteen liittyen
+
         ![axedevtools/scanall](./img/axedevtools2.png)
+
         ![axedevtools/totalissues](./img/axedevtools3.png)
+        
         ![axedevtools/details](./img/axedevtools4.png)
 
     - Kirjaa ThingLink:iin myös nämä havainnot tagien taakse (10 kriittisintä havaintoa eri sivuilta ja miten ne korjattaisiin). 
