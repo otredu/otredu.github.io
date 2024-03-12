@@ -23,6 +23,7 @@
 - Tietoturva
     - [Introduction to cyber security](https://lms.netacad.com/course/view.php?id=2174201)
     - [DevSecLab-kurssi](https://www.devseclab.io/)
+    - [Web Security Academy](https://portswigger.net/web-security/learning-paths)
     - [Safebase](https://safebase.io/)
 
 - Tietoverkot
