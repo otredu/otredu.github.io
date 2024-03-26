@@ -19,7 +19,7 @@ Jos kontti on jo käynnissä pääset terminaaliin:
 Asenna Ubuntuun tarvittavia työkaluja:
 
     ```bash
-    apt-get update && apt -y install whois netbase iputils-ping traceroute curl man-db net-tools
+    apt-get update && apt -y install whois netbase iputils-ping traceroute curl man-db net-tools nano
     unminimize
     ```
 
