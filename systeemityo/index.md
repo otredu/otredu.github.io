@@ -24,6 +24,8 @@
     - [Introduction to cyber security](https://lms.netacad.com/course/view.php?id=2174201)
     - [DevSecLab-kurssi](https://www.devseclab.io/)
     - [Web Security Academy](https://portswigger.net/web-security/learning-paths)
+    - [Try Hack Me](https://tryhackme.com/)
+    - [Cyberlab-setup](https://medium.com/@damipedia/building-your-first-cybersecurity-lab-with-docker-a-beginners-guide-to-setting-up-a-vulnerable-5222f5563884)
     - [Safebase](https://safebase.io/)
 
 - Tietoverkot
@@ -31,6 +33,23 @@
     
 - Microsoft Azure Fundamentals
     - [Kirjaudu MS Learn alustalle koulun @edu.tampere.fi tunnuksille ja valitse kurssi](https://learn.microsoft.com/en-us/training/student-hub/)    
+
+--- 
+### Linux
+
+    - Linux-terminaalin avaaminen dockeriin (Bash)
+
+    ```bash
+    docker pull ubuntu
+    winpty docker run -it ubuntu bash
+    ```
+    - Linux-terminaalin avaaminen uudelleen (kun kontti on jo käynnissä)
+
+    ```bash
+    winpty docker exec -it <container_id> bash
+    ```
+
+    - [The 60 Most Commonly Used Linux Commands](https://www.hostinger.com/tutorials/linux-commands)
 
 ---
 <!-- MS Sertifikaatit:
