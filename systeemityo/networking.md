@@ -19,13 +19,18 @@ Jos kontti on jo käynnissä pääset terminaaliin:
 Asenna Ubuntuun tarvittavia työkaluja:
 
     ```bash
-    apt-get update && apt -y install whois netbase iputils-ping traceroute curl man-db
+    apt-get update && apt -y install whois netbase iputils-ping traceroute curl man-db net-tools
     unminimize
     ```
 
+Testaa niitä:
+
     ```bash 
+    curl ifconfig.me
     traceroute --icmp 8.8.8.8
     ```
+
+
 
 
 
