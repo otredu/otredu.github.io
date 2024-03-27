@@ -28,7 +28,12 @@ Testaa niitä:
     ```bash 
     curl ifconfig.me
     traceroute --icmp 8.8.8.8
+    ping 8.8.8.8
+    whois google.com
     ```
+
+*whois* ei toimi toimi koulun verkossa, koska palomuuri estää portiin 43 liikennöinnin. Voit sen sijaan tarkistaa saman asian täältä [whois.com](https://www.whois.com/whois)
+
 
 
 
