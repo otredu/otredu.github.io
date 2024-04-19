@@ -27,9 +27,11 @@ Muokkaa testiscriptiksi *package.json*-tiedostossa *jest*:
 
 ```json
   "scripts": {
-    "test": "jest"
+        "test": "jest --runInBand"
   },
 ```
+
+*Huom!* Flag *runInBand* on tärke'. Sen avulla testisuitet ajetaan peräkkäin, muuten tietokannan tilanne ei ole ennakoitavissa ja testit eivät mene läpi. Myöskään seedaus ei toimi oikein ilman sitä. 
 
 Testit ajetaan terminaalissa:
 
