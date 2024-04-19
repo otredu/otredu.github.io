@@ -26,7 +26,8 @@ const knex = require('knex')(options);
 
 const seedNotesDB = async () => {
     console.log(options)
-    return await knex.seed.run();
+    await knex.seed.run();          
+    return await knex.destroy();   
 }
 
 module.exports = seedNotesDB;
