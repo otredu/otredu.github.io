@@ -71,11 +71,7 @@
 
 --- 
 
-## Vaihe 2: Varataan domain nimi ja konffataan sille HTTPS
-
-Pyydä opettajaa luomaan sinulle alidomainin
-
-## Vaihe 2: Monta docker-konttia samalla serverillä
+## Vaihe 2: Monta docker-konttia samalla serverillä (HTTP)
 
 Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asennetaan nginx *reverse proxy*:ksi. [Ohjeet nginx:in asennukseen](https://www.hostinger.com/tutorials/how-to-set-up-nginx-reverse-proxy/)
 
@@ -118,21 +114,13 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
 
 ---
 
-### Vaihe 3. lisätään HTTPS ja oma domain:
+### Vaihe 3. lisätään oma alidomain:
 
 1. Pyydä opettajalta oma alidomain Teams:illa serverisi public IP-osoitteelle. Hän konffaa sellaisen AWS:n Route 53:een. 
 
     AWS:n Route53:ssa on *hosted zone* (domain: treok.eu), johon lisätään uusi *record*, joka reitittää kaikki \*.my_new_domain.treok.eu - osoiteet Azure serverisi public IP-osoiteeseen. 
     *Huom.* DNS:n päivitys voi kestää 24h.
 
-2. Asenna certbot, joka luo Let's encrypt - sertifikaatit kaikille domaineillesi [ohjeet](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
-
-    ```cmd
-    $ sudo snap install core; sudo snap refresh core
-    $ sudo snap install --classic certbot
-    $ sudo ln -s /snap/bin/certbot /usr/bin/certbot
-    $ sudo certbot --nginx
-    ```
 ---
 
 ### Vaihe 4. konffataan nginex käyttämään edellä tehtyä alidomainia
@@ -156,6 +144,18 @@ Jotta saadaan useampaan porttiin eri applikaatioita omissa konteissaan, asenneta
     $ sudo systemctl restart nginx
     ```
 
+### Vaihe 5. Otetaan käyttoon HTTPS
+
+1. Asenna certbot, joka luo Let's encrypt - sertifikaatit kaikille domaineillesi [ohjeet](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal)
+
+    ```cmd
+    $ sudo snap install core; sudo snap refresh core
+    $ sudo snap install --classic certbot
+    $ sudo ln -s /snap/bin/certbot /usr/bin/certbot
+    $ sudo certbot --nginx
+    ```
+
+*Huom!* Muista avata portti 443 liikenteelle Azuressa (networking->network settings->create port rule)
 ---
 
 Nyt sinulla pitäisi olla HTTPS:n kautta toiminnassa kaksi sovellusta joilla on molemmilla oma alidomain:
