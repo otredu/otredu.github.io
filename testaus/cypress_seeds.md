@@ -26,7 +26,8 @@ const knex = require('knex')(options);
 
 const seedNotesDB = async () => {
     console.log(options)
-    return await knex.seed.run();
+    await knex.seed.run();          
+    return await knex.destroy();   
 }
 
 module.exports = seedNotesDB;
@@ -75,7 +76,3 @@ await seedNotesDB();  //seeding
 ---
 
 Nyt jokainen testi lähtee tilanteesta, jossa tietokannan sisältö on tunnettu.
-
-*Huom!* Tässä viimeisessä voi olla jotain pielessä:
-
-*A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.*

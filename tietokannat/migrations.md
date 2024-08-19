@@ -26,11 +26,13 @@ Jos käytät MySQL-tietokantaa (MySQL 8 tai uudempi), päivitä *development* -t
 
 ```js
 module.exports = {
-    client: 'mysql2',
-    connection: {
-      user: 'root',
-      password: 'mypass123',
-      database: 'notesdemo_db'
+   development: {
+      client: 'mysql2',
+      connection: {
+        user: 'root',
+        password: 'mypass123',
+        database: 'notesdemo_db'
+      }
     }
 }
 ```
@@ -204,21 +206,21 @@ exports.seed = function(knex) {
         {
           id: 1,
           content: "HTML is easy",
-          date: new Date("2020-11-10T17:30:31.098Z"),
+          date: new Date("2020-11-10T17:30:31.000Z"),
           important: true,
           user_id: 1
         },
         {
           id: 2,
           content: "Browser can execute only Javascript",
-          date: new Date("2020-11-10T18:39:34.091Z"),
+          date: new Date("2020-11-10T18:39:34.000Z"),
           important: false,
           user_id: 1
         },
         {
           id: 3,
           content: "GET and POST are the most important methods of HTTP protocol",
-          date: new Date("2020-11-10T19:20:14.298Z"),
+          date: new Date("2020-11-10T19:20:14.000Z"),
           important: true,
           user_id: 2
         }
