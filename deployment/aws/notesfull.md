@@ -55,6 +55,13 @@
     https://MyNameMyApp.node.treok.io eli [esimerkin kontti](https://tiipar19notesdemo2.node.treok.io/).
 
 
+---
+Ohjeita AWS-adminille:
+
+    - [uuden ECS Runnerin asentaminen](./aws_ecs_setup.md)
+
+
+
 
 
 
