@@ -7,6 +7,7 @@
 - [Github:in käyttäminen kahdella tai useammalla eri käyttäjätilillä samalta koneelta](./useampitili.md)
 - [Github:in liittäminen Heroku:un](./heroku.html)
 - [Projektissa työskenteleminen](./projektityo.html)
+- [Hae tehtävärepon muutokset omaan repoosi](./pullfromfork.html)
 
 ## Hyödyllisiä linkkejä
 
