@@ -19,7 +19,7 @@ Harjoitukset:
 
 1. Sivuston käytettävyyden arviointi Nielsenin ohjeistuksen mukaan (parityö)
 
-    - Käykää pareittain läpi viime syksyn PHP-harjoitustyö (mielellään jonkun muun ryhmän tekemä) ja arvioikaa sivuston käytettävyyttä Nilsenin käytettävyysohjeiden perusteella [PDF](https://otredu.github.io/docs/nielsen.pdf)
+    - Käykää pareittain läpi opettajan antama sivusto tai viime syksyn PHP-harjoitustyö (mielellään jonkun muun ryhmän tekemä) ja arvioikaa sivuston käytettävyyttä Nilsenin käytettävyysohjeiden perusteella [PDF](https://otredu.github.io/docs/nielsen.pdf)
 
     - Tehkää yhteenveto havainnoista, positiivisista sekä negatiivisista käyttämällä [ThingLink](https://www.thinglink.com/):iä.
         1. Kirjaudu valitsemalla Microsoft-kirjautuminen (käytä koulun *edu.tampere.fi*-tunnuksia). 

@@ -1,12 +1,14 @@
 ## Systeemityö
 
+
 ### Sisältö
 
 - Käytettävyys ja käytettävyystestaus
     - [materiaali](./kaytettavyys.html)
 
-- Johdatus kyberturvallisuuteen
-    - [cybersecurity](./cybersecurity.md)
+- Docker-kontit (docker build, docker-compose, docker hub):
+    - [notesdemo1](https://otredu.github.io/docker/notesdemo.html)
+    - [notesdemo2](https://otredu.github.io/docker/notesdemofull.html)
 
 - Pilvipalvelut:
     - [AWS-Azure-tehtävät](./cloud_harjoitukset_azure_aws.html)
@@ -15,14 +17,12 @@
     - [E2E-testaus: Cypress](../testaus/cypress.html)
     - [Backend-testaus: Jest & superttest](../testaus/jestforrestapi.html)
 
-- Docker-kontit (docker build, docker-compose, docker hub):
-    - [notesdemo1](https://otredu.github.io/docker/notesdemo.html)
-    - [notesdemo2](https://otredu.github.io/docker/notesdemofull.html)
-
----
-### Lisää linkkejä:
+- CI/CD:
+    - [Github-actions](to be done)
 
 - Tietoturva
+    - [Introduction to cyber security](https://lms.netacad.com/course/view.php?id=2174201)
+    - [DevSecLab-kurssi](https://www.devseclab.io/)
     - [Web Security Academy](https://portswigger.net/web-security/learning-paths)
     - [Try Hack Me](https://tryhackme.com/)
     - [Cyberlab-setup](https://medium.com/@damipedia/building-your-first-cybersecurity-lab-with-docker-a-beginners-guide-to-setting-up-a-vulnerable-5222f5563884)
