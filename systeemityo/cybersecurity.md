@@ -27,7 +27,16 @@
     docker run -it -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 -e TZ=Europe/Helsinki webgoat/webgoat
     ```
     - Tee itsellesi käyttäjä, ja tee pyydetyt harjoitukset
-    
+
+4. DVWA - harjoitukset 
+
+    - Käynnistä DVWA dockeriin:
+
+    ```cmd
+    docker run --rm -it -p 80:80 vulnerables/web-dvwa
+    ```
+    - Kirjaudu: Username: admin, Password: password, ja tee pyydetyt harjoitukset
+
 --- 
 
 Linkkejä:
