@@ -2,7 +2,7 @@
 
 ### Cyber security lab - asennus
 
-1. Asenna _Oracle Virtual Box_ [lataa](https://www.virtualbox.org/)
+1. Asenna _Oracle Virtual Box_ [lataa](https://www.virtualbox.org/). Huom! Koululla asennus Yritysportaalin kautta.
 2. Lataa Netacad:in sivulta _Ethical hacker Kali Linux VM_ [lataa](https://www.netacad.com/resources/lab-downloads?courseLang=en-US)
 3. Tuo Kali Linux VM Virtual Box:iin:
     - Avaa VirtualBox

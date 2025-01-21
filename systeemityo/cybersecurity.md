@@ -11,11 +11,18 @@
 
 2. Netacad - Ethical Hacker 
 
-    Asenna näiden ohjeiden mukaisesti [Kali Linux VM](./owasp_kali.md). Kirjaudu sitten Netacad:in Ethical Hacker - kurssille. Rekisteröityessäsi käytä koulun google-tunnuksia.
+    - Kirjaudu Netacad:in Ethical Hacker - kurssille [linkki](https://www.netacad.com/). Rekisteröityessäsi käytä koulun google-tunnuksia.
 
     Huom! Saat opettajalta kutsulinkin kurssille, käytä sitä ensimmäisellä kerralla.
 
-    - Ethical Hacker - kurssi, osa 6 [linkki](https://www.netacad.com/)
+    - Kurssista tehdään vain seuraavat osiot:
+        - 6.1. Overview of Web Application-Based Attacks for Security Professionals and the OWASP Top 10 (EI labs)
+        - 6.4 Understanding Injection-Based Vulnerabilities (WebGoat harjoitukset, DVWA labra)
+        - 6.5. Exploiting Authentication-Based Vulnerabilities 
+        - 6.6. Exploiting Authorization-Based Vulnerabilities 
+        - 6.7. Understanding Cross-Site Scripting (XSS) Vulnerabilities (WebGoat harjoitukset, DVWA labra)
+        - 6.8. Understanding Cross-Site Request Forgery (CSRF/XSRF) and Server-Side Request Forgery Attacks
+        - 6.12. Exploiting Insecure Code Practices
 
     Kun olet suorittanut osion, näytä suoritusmerkintä opettajalle.
 
@@ -28,7 +35,7 @@
     ```
     - Tee itsellesi käyttäjä, ja tee pyydetyt harjoitukset
 
-4. DVWA - harjoitukset 
+4. DVWA - harjoitukset
 
     - Käynnistä DVWA dockeriin:
 
@@ -37,6 +44,10 @@
     ```
     - Kirjaudu: Username: admin, Password: password, ja tee pyydetyt harjoitukset
 
+5. Kali Linux - asennus
+
+    - Asenna näiden ohjeiden mukaisesti [Kali Linux VM](./owasp_kali.md). 
+    
 --- 
 
 Linkkejä:
