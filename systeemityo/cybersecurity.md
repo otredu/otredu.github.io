@@ -23,6 +23,7 @@
         - 6.7. Understanding Cross-Site Scripting (XSS) Vulnerabilities (WebGoat harjoitukset, DVWA labra)
         - 6.8. Understanding Cross-Site Request Forgery (CSRF/XSRF) and Server-Side Request Forgery Attacks
         - 6.12. Exploiting Insecure Code Practices
+        Lisätehtävä: Final Capstone Activity
 
     Kun olet suorittanut osion, näytä suoritusmerkintä opettajalle.
 
