@@ -10,28 +10,24 @@
 
     Näytä opettajalle, että olet saanut pelin tähän pisteeseen.
 
-2.  Piirrä kuva web-palvelusta, joka on toteutettu AWS:ään käyttämällä yhtä VPC:tä, yhtä EC2-serveriä sekä yhtä RDS-tietokantaa. Palvelu on toteutettu tietoturvasyistä niin, ettei EC2-serveriin eikä RDS-tietokantaan pääse suoraan internetin kautta (private subnet), vaan liikenne serverille ohjataan ALB:in kautta (HTTPS-sertifikaatti on sidottu ALB:iin). Palvelujen toimivuus on lisäksi varmistettu käyttämällä kahta availability zonea. Merkitse kuvaan: VPC, ALB, EC2-serveri, RDS-tietokanta, private subnet, public subnet, IGW, NAT GW sekä vaaditut 2 availability zonea.  
+2.  Piirrä kuva web-palvelusta, joka on toteutettu AWS:ään käyttämällä yhtä VPC:tä, yhtä EC2-serveriä sekä yhtä RDS-tietokantaa. Palvelu on toteutettu tietoturvasyistä niin, ettei EC2-serveriin eikä RDS-tietokantaan pääse suoraan internetin kautta (private subnet), vaan liikenne serverille ohjataan ALB:in kautta (HTTPS-sertifikaatti on sidottu ALB:iin). Palvelujen toimivuus on lisäksi varmistettu käyttämällä kahta availability zonea. Merkitse kuvaan: VPC, ALB, EC2-serveri, RDS-tietokanta, private subnet, public subnet, IGW, NAT GW sekä vaaditut 2 availability zonea. Piirrä kuva käyttämällä [Figmaa](https://www.figma.com/). Lataa sinne [AWS ikonit](https://www.figma.com/community/file/989585391556898521/aws-cloud-diagram)
 
-    Ota selvää mitä seuraavat AWS - termit tarkoittavat, ja tee niistä raportti: 
-        - S3
-        - region
-        - VPC
-        - availability zone
-        - ALB
-        - NAT gateway
-        - security group
-        - network access control lists
-        - public/private subnet
-        - internet gateway
-        - route table
-        - RDS 
-        - EC2
-        - Cloud Formation
-        - ECR
-        - ECS
-        - Task/service
-        - Environmental variables
-        - Autoscaling
+Liitä tekemäsi kuva Word-tiedostoon. Lisää kuvan alle lyhyet selitykset seuraavista AWS-komponenteista ja niiden käyttötarkoituksista (palaa tarvittaessa peliin tai etsi tietoa netistä).
+
+    - S3
+    - region
+    - VPC
+    - availability zone
+    - ALB
+    - NAT gateway
+    - security group
+    - network access control lists
+    - public/private subnet
+    - internet gateway
+    - route table
+    - RDS 
+    - EC2
+    - Autoscaling
 
     Palauta harjoitustyö systeemityön repoon. Liitä mukaan kuvankaappaus pelin lopputilanteesta.
 
@@ -80,4 +76,12 @@
     - dockerhub, mikä se on ja mitä sen avulla tehdään
     - docker, mikä se on ja mitä sen avulla voi tehdä
      
-    Palauttakaa harjoitustyö systeemityön repoon. Liitä linkkit konffaamallasi serverillä oleviin applikaatioihin.
+5. Cloudformation (AWS) harjoitus
+
+    - Cloud Formation
+    - ECR
+    - ECS
+    - Task/service
+    - Environmental variables
+
+Palauttakaa harjoitustyö systeemityön repoon. 
