@@ -25,13 +25,13 @@ Nyt konsolille pitäisi tulla näkyviin backend:in tuottama *authtoken*. Jotta h
 Lisää App.js:ään uusi tilamuuttuja:
 
 ```js
-const [token, setToken] = useState(null);
+const [user, setUser] = useState(null);
 ```
 
 Ja tallenna token siihen *loginHandler*:in *.then* - haarassa:
 
 ```js
-setToken(response.data)
+setUser(response.data)  //HUOM! tämä sisältää olion, jossa on kolme kenttää: {token, username, role}
 ```
 
 Jotta käyttäjä myös pysyy sisäänkirjautumeena tallennetaan *authtoken* myös selaimen muistiin. Ennen sitä se pitää muuttaa mekkijonoksi *JSON.stringify*:llä (selaimen *localstorage*:een voi tallentaa vain merkkijonoja):
@@ -47,7 +47,7 @@ Lisätään vielä toiminnallisuus, jossa selaimen muistista tarkistetaan onko k
     const loggedUserJSON = window.localStorage.getItem('notesdemouser')
     if (loggedUserJSON) {
       const user = JSON.parse(loggedUserJSON)
-      setToken(user.token)
+      setUser(user)
     }
   }
 ```
@@ -56,13 +56,13 @@ Ajetaan tämä kerran käynnistymisen yhteydessä ja muutetaan initHook käynnis
 
 ```js
 useEffect(userHook, []);
-useEffect(startHook, [token]);
+useEffect(startHook, [user]);
 ```
 
-Lisätään vielä *startHook*:iin tarkistus sille, että token ei ole null ennen muistiinpanojen hakemista:
+Lisätään vielä *startHook*:iin tarkistus sille, että user ei ole null ennen muistiinpanojen hakemista:
 
 ```js
-    if (token === null) {
+    if (user === null) {
       return
     }
 ```
@@ -148,13 +148,22 @@ Testaa nyt nämä backend toiminnallisuudet REST - testeillä (kirjautuneena sek
 
 Jotta saadaan koodiin hieman selkeämpi rakenne, keskitetään kaikki *axios*:een, *serviceURL*:eihin ja *authtoken*:iin liittyvä yhteen moduliin *notesServices*. Tee *services* - kansio *components* - kansion rinnalle, ja tee sinne uusi tiedosto: *notesService.js*. Tehdään sinne apufunktiot, jotka lisäävät *authtoken*:in jokaiseen *axios*-kutsuun. Katso ohjetta [täältä](axios-service-token.html).
 
-Tee myös *userService.js* ja luodaan sinne vastaavat login ja register funktiot.
+Huomaa, että uusi notesService palauttaa valmiiksi *response.data*:n, eli muuta tämä *startHook*:issa sekä *addNote*-funktiossa.
+ 
+Jotta service pystyy lisäämään tokenin jokaiseen viestiin, se pitää alustaa oikein. Lisää siis userHook:iin sekä loginHandleriin *notesService.setToken()*.
 
-Tallennetaan *authtoken* myös *notesService*:een, tehdään tämä *startHook*:issa, ennen kuin *notesService*:ä kutsutaan ensimmäisen kerran:
-
+userHook:
 ```js
-notesService.setToken(token.token)
+  notesService.setToken(user.token)
 ```
+
+loginHandler:
+```js
+setUser(response.data)
+notesService.setToken(response.data.token)
+```
+
+Tee myös *userService.js* ja luo sinne vastaavat login ja register funktiot.
 
 ### Logout
 
