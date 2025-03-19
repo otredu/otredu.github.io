@@ -131,9 +131,9 @@ router.get('/', function(req, res, next) {
 });
 ```
 
-### Tietokantayhteyden muodostus omaan tiedostoon
+### Tietokantayhteyden muodostus
 
-Tietokantayhteys muodostetaan vain kerran, joten nyt kun koodia jaetaan useampaan router-tiedostoon, tämä asia pitää ottaa huomioon. Tehdään siis uusi tiedosto /*utils*-kansioon: *dbConnection.js*, joka sisältää tietokantayhdeyden muodostamisen. 
+Tietokantayhteys muodostetaan vain kerran, joten nyt kun koodia jaetaan useampaan router-tiedostoon, tämä asia pitää ottaa huomioon. Tehdään siis uusi tiedosto *utils/dbConnection.js*, joka sisältää tietokantayhdeyden muodostamisen: 
 
 ```js
 const config = require('./config.js')
