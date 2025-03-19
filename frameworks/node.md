@@ -148,7 +148,7 @@ Tätä käytetään jatkossa, jokaisessa router:issa.
 const knex = require('../utils/dbConnection');
 ```
 
-### Notesdemo:n
+### Notesdemo:n koodin jakaminen tiedostoihin
 
 Siirretään nyt *notesdemon* koodi erillisiin *router*-tiedostoihin. Rekisteröityminen *registerRouter.js*, kirjautuminen *loginRouter.js* ja muut tiedostoon *notesRouter.js*:
 
