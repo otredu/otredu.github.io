@@ -170,6 +170,7 @@ loginRouter.js ja registerRouter.js sisältävät nyt:
 var express = require('express');
 var router = express.Router();
 const knex = require('../utils/dbConnection');
+const config = require('../utils/config.js')
 
 router.post('/', (request, response, next) => {
     // koodia...
