@@ -131,6 +131,23 @@ router.get('/', function(req, res, next) {
 });
 ```
 
+### Tietokantayhteyden muodostus omaan tiedostoon
+
+Tietokantayhteys muodostetaan vain kerran, joten nyt kun koodia jaetaan useampaan router-tiedostoon, tämä asia pitää ottaa huomioon. Tehdään siis uusi tiedosto /*utils*-kansioon: *dbConnection.js*, joka sisältää tietokantayhdeyden muodostamisen. 
+
+```js
+const config = require('./config.js')
+const options = config.DATABASE_OPTIONS;
+const db = require('knex')(options)
+module.exports = db;
+```
+
+Tätä käytetään jatkossa, jokaisessa router:issa.
+
+```js
+const knex = require('../utils/dbConnection');
+```
+
 ### Notesdemo:n
 
 Siirretään nyt *notesdemon* koodi erillisiin *router*-tiedostoihin. Rekisteröityminen *registerRouter.js*, kirjautuminen *loginRouter.js* ja muut tiedostoon *notesRouter.js*:
@@ -152,10 +169,7 @@ loginRouter.js ja registerRouter.js sisältävät nyt:
 ```js
 var express = require('express');
 var router = express.Router();
-
-const config = require('../utils/config')
-const options = config.DATABASE_OPTIONS;
-const knex = require('knex')(options);
+const knex = require('../utils/dbConnection');
 
 router.post('/', (request, response, next) => {
     // koodia...
@@ -167,12 +181,9 @@ module.exports = router;
 notesRouter.js sisältää nyt:
 
 ```js
-var express = require('express'); //uusi
-var router = express.Router();  //uusi
-
-const config = require('../utils/config')
-const options = config.DATABASE_OPTIONS;
-const knex = require('knex')(options);
+var express = require('express'); 
+var router = express.Router();  
+const knex = require('../utils/dbConnection');
 
 router.get('/', (request, response, next) => {
     // koodia
@@ -200,10 +211,8 @@ module.exports = router;
 ```js
 var express = require('express');
 var router = express.Router();
+const knex = require('../utils/dbConnection');
 
-const config = require('../utils/config')
-const options = config.DATABASE_OPTIONS;
-const knex = require('knex')(options);
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
@@ -256,10 +265,8 @@ module.exports = router;
 ```js
 var express = require('express');
 var router = express.Router();
+const knex = require('../utils/dbConnection');
 
-const config = require('../utils/config')
-const options = config.DATABASE_OPTIONS;
-const knex = require('knex')(options);
 const bcrypt = require('bcryptjs')
 
 router.post('/', (req, res, next) => {
@@ -296,15 +303,12 @@ module.exports = router;
 ```js
 var express = require('express');
 var router = express.Router();
-
-const config = require('../utils/config')
-const options = config.DATABASE_OPTIONS;
-const knex = require('knex')(options);
+const knex = require('../utils/dbConnection');
 
 router.get('/', (req, res, next) => {
-    const decodedTokenId = res.locals.auth.userId; // NEW
+    const decodedTokenId = res.locals.auth.userId; 
 
-    knex('notes').select('*').where('user_id', '=', decodedTokenId /*NEW*/)
+    knex('notes').select('*').where('user_id', '=', decodedTokenId)
         .then((rows) => {
             res.json(rows);
         })
@@ -320,7 +324,7 @@ router.post('/', (req, res, next) => {
     const note = req.body;
     console.log(note);
 
-    note.user_id = res.locals.auth.userId; // NEW
+    note.user_id = res.locals.auth.userId; 
 
     const newNote = {
         content: note.content,
@@ -347,7 +351,7 @@ router.delete('/:id', (req, res, next) => {
     const id = req.params.id;
     console.log(id);
 
-    const decodedTokenId = res.locals.auth.userId; // NEW
+    const decodedTokenId = res.locals.auth.userId; 
 
     knex('notes').where('user_id', "=", decodedTokenId).andWhere('id', '=', id).del()
         .then(status => {
@@ -366,7 +370,7 @@ router.put('/:id', (req, res, next) => {
     const id = req.params.id;
     const note = req.body;
 
-    const decodedTokenId = res.locals.auth.userId; // NEW
+    const decodedTokenId = res.locals.auth.userId; 
 
     const updatedNote = {
         content: note.content,
@@ -374,7 +378,7 @@ router.put('/:id', (req, res, next) => {
         date: new Date(note.date)
         }
 
-    knex('notes').update(updatedNote).where('user_id', "=", decodedTokenId /*NEW*/)
+    knex('notes').update(updatedNote).where('user_id', "=", decodedTokenId)
     .andWhere('id', '=', id)
         .then((response) => {
             console.log(response)
@@ -434,8 +438,8 @@ const isAuthenticated = (req, res, next) => {
             { error: "invalid token" }
         )
     }
-    res.locals.auth = { userId: decodedToken.id }; // NEW
-    next(); // NEW
+    res.locals.auth = { userId: decodedToken.id }; 
+    next(); 
 }
 
 module.exports = isAuthenticated;
