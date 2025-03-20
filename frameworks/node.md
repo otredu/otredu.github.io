@@ -213,6 +213,7 @@ module.exports = router;
 var express = require('express');
 var router = express.Router();
 const knex = require('../utils/dbConnection');
+const config = require('../utils/config.js')
 
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
